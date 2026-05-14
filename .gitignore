@@ -34,6 +34,7 @@ Thumbs.db
 logs/
 tmp/
 temp/
+local_runs/
 
 # Raw/heavy geospatial assets
 *.tif

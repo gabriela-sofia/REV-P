@@ -25,46 +25,52 @@ def read_csv(path: Path) -> list[dict[str, str]]:
 
 
 def test_v1fu_script_creates_review_only_dino_manifest() -> None:
-    subprocess.run([sys.executable, str(SCRIPT)], cwd=ROOT, check=True)
+    tracked_outputs = [MANIFEST, SUMMARY, QA, STATUS]
+    snapshots = {path: path.read_bytes() for path in tracked_outputs if path.exists()}
+    try:
+        subprocess.run([sys.executable, str(SCRIPT)], cwd=ROOT, check=True)
 
-    for path in (MANIFEST, SUMMARY, QA, STATUS):
-        assert path.exists(), path
+        for path in tracked_outputs:
+            assert path.exists(), path
 
-    for dirname in FORBIDDEN_DIRS:
-        assert not (ROOT / dirname).exists(), dirname
+        for dirname in FORBIDDEN_DIRS:
+            assert not (ROOT / dirname).exists(), dirname
 
-    forbidden_files = [
-        path
-        for path in ROOT.rglob("*")
-        if ".git" not in path.parts and path.is_file() and path.suffix.lower() in FORBIDDEN_EXTENSIONS
-    ]
-    assert forbidden_files == []
+        forbidden_files = [
+            path
+            for path in ROOT.rglob("*")
+            if ".git" not in path.parts and path.is_file() and path.suffix.lower() in FORBIDDEN_EXTENSIONS
+        ]
+        assert forbidden_files == []
 
-    v1ft_ready = read_csv(V1FT_READY)
-    expected_sentinel = [
-        row
-        for row in v1ft_ready
-        if row.get("modality") == "sentinel_raster_path_only"
-        and row.get("config_status") == "READY_SENTINEL_FIRST_REVIEW_ONLY"
-    ]
-    manifest = read_csv(MANIFEST)
+        v1ft_ready = read_csv(V1FT_READY)
+        expected_sentinel = [
+            row
+            for row in v1ft_ready
+            if row.get("modality") == "sentinel_raster_path_only"
+            and row.get("config_status") == "READY_SENTINEL_FIRST_REVIEW_ONLY"
+        ]
+        manifest = read_csv(MANIFEST)
 
-    if len(expected_sentinel) == 128:
-        assert len(manifest) == 128
+        if len(expected_sentinel) == 128:
+            assert len(manifest) == 128
 
-    assert {row["label_status"] for row in manifest} == {"NO_LABEL"}
-    assert {row["target_status"] for row in manifest} == {"NO_TARGET"}
-    assert {row["pixel_read_status"] for row in manifest} == {"NOT_READ__FUTURE_DINO_ENCODING_ONLY"}
-    assert {row["encoder_mode"] for row in manifest} == {"frozen_encoder"}
-    assert {row["dino_scope"] for row in manifest} == {"SENTINEL_FIRST_EMBEDDING_INPUT"}
-    assert all(row["claim_scope"] == "REVIEW_ONLY_NO_PREDICTIVE_CLAIM" for row in manifest)
-    assert all("classification" not in row["claim_scope"].lower() for row in manifest)
-    assert all("performance" not in row["claim_scope"].lower() for row in manifest)
+        assert {row["label_status"] for row in manifest} == {"NO_LABEL"}
+        assert {row["target_status"] for row in manifest} == {"NO_TARGET"}
+        assert {row["pixel_read_status"] for row in manifest} == {"NOT_READ__FUTURE_DINO_ENCODING_ONLY"}
+        assert {row["encoder_mode"] for row in manifest} == {"frozen_encoder"}
+        assert {row["dino_scope"] for row in manifest} == {"SENTINEL_FIRST_EMBEDDING_INPUT"}
+        assert all(row["claim_scope"] == "REVIEW_ONLY_NO_PREDICTIVE_CLAIM" for row in manifest)
+        assert all("classification" not in row["claim_scope"].lower() for row in manifest)
+        assert all("performance" not in row["claim_scope"].lower() for row in manifest)
 
-    qa_rows = read_csv(QA)
-    assert qa_rows
-    assert {row["status"] for row in qa_rows} == {"PASS"}
+        qa_rows = read_csv(QA)
+        assert qa_rows
+        assert {row["status"] for row in qa_rows} == {"PASS"}
 
-    status_rows = {row["field"]: row["value"] for row in read_csv(STATUS)}
-    assert status_rows["status"] == "PASS"
-    assert status_rows["actual_sentinel_count"] == "128"
+        status_rows = {row["field"]: row["value"] for row in read_csv(STATUS)}
+        assert status_rows["status"] == "PASS"
+        assert status_rows["actual_sentinel_count"] == "128"
+    finally:
+        for path, content in snapshots.items():
+            path.write_bytes(content)
