@@ -1,0 +1,79 @@
+﻿# Local/private agent state
+.claude/
+.codex/
+.cursor/
+.vscode/
+.idea/
+AGENTS.md
+CLAUDE.md
+
+# Python/cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Environments/secrets
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs/temp
+*.log
+logs/
+tmp/
+temp/
+
+# Raw/heavy geospatial assets
+*.tif
+*.tiff
+*.vrt
+*.aux.xml
+*.ovr
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+
+# ML/heavy arrays/models
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.pkl
+*.joblib
+*.npy
+*.npz
+*.parquet
+
+# Heavy/private folders
+archive_drive/
+patches/
+data/
+outputs/
+docs/
+models/
+model_cache/
+.cache/
+.cache_huggingface/
+huggingface/
+
+# Legacy/removed material
+*cbers*
+*CBERS*
+generate_*.py
+validate_v1q3*.py
+investigate_v1q3b.py

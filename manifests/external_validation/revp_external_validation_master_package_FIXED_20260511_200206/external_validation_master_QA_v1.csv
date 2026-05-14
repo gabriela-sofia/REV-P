@@ -1,0 +1,12 @@
+check,status,detail
+required_dirs_exist,PASS,Required current dirs checked.
+light_snapshots_created,PASS,442
+heavy_assets_manifest_only,PASS,1397
+regional_matrix_complete,PASS,4
+blocker_matrix_complete,PASS,11
+B2_correct,PASS,B2 status.
+B3_correct,PASS,B3 status.
+B4_correct,PASS,B4 status.
+B5_correct,PASS,B5 status.
+no_MET_status,PASS,"Corrected false FAIL: status contains METADATA, not exact MET declaration. No B2/B3/B4/B5 status equals MET."
+claims_guardrail_created,PASS,9

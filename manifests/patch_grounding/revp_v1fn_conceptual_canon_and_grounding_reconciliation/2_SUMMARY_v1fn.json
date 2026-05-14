@@ -1,0 +1,64 @@
+{
+  "version": "v1fn",
+  "date": "2026-05-11T22:47:17.910588",
+  "phase": "CONCEPTUAL_CANON_AND_PATCH_GROUNDING_RECONCILIATION",
+  "status": "COMPLETE_METADATA_ONLY",
+  "patch_counts": {
+    "total": 59,
+    "curitiba": 14,
+    "petropolis": 27,
+    "recife": 18,
+    "mapped": 52,
+    "placeholder_only": 7
+  },
+  "grounding_status": {
+    "raw_geometry_present": 52,
+    "tif_designated_candidates": 20,
+    "tif_unresolved": 32,
+    "placeholder_only": 7
+  },
+  "gates_status": {
+    "all_gates": "10/10 BLOCKED",
+    "patch_bound_validated": "0/59 LOCKED",
+    "spatial_preflight_ready": "0/59 LOCKED"
+  },
+  "blockers_met": {
+    "b1_external_crs": false,
+    "b2_curitiba_evidence": true,
+    "b3_petropolis_evidence": true,
+    "b4_recife_evidence": true,
+    "b5_crs_evidence": true,
+    "b6_patch_readiness": false,
+    "b7_reviewer": false
+  },
+  "reconciliations": {
+    "v1fk_superseded": "Petropolis region normalization; Recife ext/bg acknowledged",
+    "v1fl_corrections": "Binding inventory; region name fix",
+    "v1fm_refined": "Designation table; terminology clarification needed",
+    "v1fn_new": "Conceptual canon (12 terms); authority by domain clarified (no final binding authority); allowed/forbidden claims",
+    "v1fn_corrections": "Next action changed from SGB document request to REC_EXT_BG_AND_RAW_GEOMETRY_BINDING_RECONCILIATION; v1d authority clarified as raw_geometry_source (not final binding); authority hierarchy replaced with authority by domain"
+  },
+  "files_created": [
+    "patch_grounding_authority_matrix_v1fn.csv",
+    "v1fk_v1fl_v1fm_supersession_audit_v1fn.csv",
+    "raw_geometry_registry_v1d_authority_audit_v1fn.csv",
+    "recife_ext_bg_reconciliation_v1fn.csv",
+    "allowed_forbidden_claims_v1fn.csv",
+    "next_phase_decision_matrix_v1fn.csv",
+    "revp_conceptual_canon_v1fn.csv",
+    "revp_conceptual_canon_v1fn.md",
+    "1_RELATORIO_v1fn.md",
+    "2_SUMMARY_v1fn.json",
+    "3_QA_v1fn.csv",
+    "4_STATUS_v1fn.csv"
+  ],
+  "forbidden_operations": [
+    "spatial_ops: 0",
+    "pixel_reads: 0",
+    "canonical_writes: 0",
+    "crs_promotion: 0",
+    "gate_opening: 0",
+    "patch_bound_validated_increment: 0",
+    "overclaiming: 0"
+  ]
+}

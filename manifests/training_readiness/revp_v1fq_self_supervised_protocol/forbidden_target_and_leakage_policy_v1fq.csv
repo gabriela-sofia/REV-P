@@ -1,0 +1,6 @@
+forbidden_item,why_forbidden_now,leakage_or_overclaim_risk,allowed_alternative
+observed-flood class target,No observed-flood ground truth exists in current REV-P state.,Would create unsupported binary claims.,Document absence and design truth-acquisition protocol.
+coherent/partial/rejected/pending/status as labels,"These are review/evidence states, not event labels or negatives.",Status leakage and false supervision.,Use only for audit stratification and reporting.
+official CRS/bounds/header evidence as target,"This evidence supports grounding review, not susceptibility/event truth.",Circular validation if source evidence becomes both feature and target.,Keep in manifest as evidence_source/scientific_role metadata.
+random patch split,"Spatial, regional, tile and source leakage risks are high.",Inflated embedding or downstream evaluation signals.,Grouped split by region/source/tile/raster lineage.
+model performance claims,No training or target evaluation is authorized.,Would imply readiness and validation not present.,Only sanity checks and exploratory embedding diagnostics after review.

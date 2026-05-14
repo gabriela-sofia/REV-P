@@ -1,0 +1,14 @@
+check,status,details
+outputs exist,PASS,All required v1ft outputs found.
+211 eligible assets preserved or justified,PASS,v1fs_ready=211
+142 blocked assets preserved,PASS,blocked=142
+Recife imbalance audit executed,PASS,discovery_rows=502
+discovery CSV non-empty,PASS,rows=502
+Recife one-stack state explained,PASS,linked_stacks=1
+recovery candidates not promoted,PASS,All recovery rows remain review-only.
+Sentinel balance explicit,PASS,sentinel=128
+multimodal imbalance explicit,PASS,stack_hold=83
+dangerous terms absent in summary,PASS,Summary avoids unsafe phrasing.
+script has no training/model/extraction/prohibited calls,PASS,Checked exact code patterns.
+guardrails zero,PASS,Numeric guardrails are zero.
+CBERS ignored,PASS,CBERS ignored.

@@ -1,0 +1,13 @@
+metric,value,target,status
+phase,v1fn: Conceptual Canon + Patch Grounding Reconciliation,COMPLETE_METADATA_ONLY,COMPLETE
+total_patches_evaluated,59,59,PASS
+patch_bound_validated,0/59,0/59 (LOCKED),PASS
+gates_status,10/10 BLOCKED,ALL BLOCKED until B1+B7,PASS
+spatial_ops_performed,0,0,PASS
+pixel_reads_performed,0,0,PASS
+canonical_writes_performed,0,0,PASS
+conceptual_canon_terms_defined,12,≥10,PASS
+authority_by_domain_clarified,5 domains (v1fa/v1d/v1fl/v1fm/v1fn); no final binding authority,each file has distinct scope,PASS
+v1fk_refinements,2 (Petropolis normalization; Recife ext/bg acknowledgment),documented,PASS
+v1fm_terminology_clarifications,1 (DESIGNATED -> CANDIDATE designation),documented,PASS
+v1fn_language_corrections,3 (next_action; v1d_authority; authority_structure),language_correction_v1fn.csv,PASS

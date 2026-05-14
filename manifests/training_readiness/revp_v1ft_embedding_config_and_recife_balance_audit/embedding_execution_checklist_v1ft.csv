@@ -1,0 +1,7 @@
+step,required,status,reason
+reviewer_approval,yes,pending,No extraction before review.
+sentinel_first_config_selected,yes,drafted,Most balanced current route.
+recife_stack_recovery_decision,yes_for_multimodal,pending,Recife stack imbalance remains.
+grouped_split_locked,yes,drafted,Avoid region/source leakage.
+labels_targets_absent,yes,enforced,Review-only self-supervised scope.
+no_training_or_extraction,yes_in_v1ft,enforced,Config lock only.

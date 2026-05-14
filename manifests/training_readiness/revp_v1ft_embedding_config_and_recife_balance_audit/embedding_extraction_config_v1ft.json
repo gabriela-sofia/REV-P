@@ -1,0 +1,36 @@
+{
+  "version": "v1ft",
+  "config_status": "LOCKED_DRAFT_REVIEW_ONLY",
+  "recommended_start": "Sentinel-first review-only embedding extraction after reviewer approval",
+  "multimodal_stack_status": "conditional_hold_until_recife_stack_recovery",
+  "ready_asset_count": 128,
+  "conditional_or_excluded_asset_count": 83,
+  "recife_reconstruction_needed_count": 36,
+  "encoder_policy": {
+    "recommended": "pretrained_encoder_or_geospatial_pretrained_encoder_future_only",
+    "encoder_loading_now": false,
+    "extract_embeddings_now": false
+  },
+  "guardrails": {
+    "training": 0,
+    "embedding_extraction": 0,
+    "model_loading": 0,
+    "downloads": 0,
+    "labels": 0,
+    "targets": 0,
+    "weak_supervision": 0,
+    "model_metrics": 0,
+    "performance_claims": 0,
+    "canonical_writes": 0,
+    "gate_promotion": 0,
+    "crs_promotion": 0,
+    "patch_bound_validated_promotion": 0,
+    "preflight_ready_promotion": 0,
+    "raster_pixel_reads": 0,
+    "band_reads": 0,
+    "raster_summary_metrics": 0,
+    "spatial_ops": 0,
+    "coordinate_transform_ops": 0,
+    "cbers": "ignored"
+  }
+}

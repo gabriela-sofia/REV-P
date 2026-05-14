@@ -1,0 +1,14 @@
+check,status,details
+v1fp category sum verified,PASS,"Observed={'SELF_SUPERVISED_CANDIDATE_NEEDS_REVIEW': 128, 'BLOCKED_UNRESOLVED_TIF_BINDING': 14, 'NOT_TRAINABLE_NO_LABEL': 20, 'BLOCKED_NO_GEOMETRY': 7, 'BLOCKED_REC_EXT_BG_NAMING': 18}"
+v1fp total candidates verified,PASS,Rows=187
+CBERS ignored,PASS,No CBERS path in v1fp asset inventory.
+no labels created,PASS,v1fq creates policy/protocol fields only; no label columns or target values.
+no targets created,PASS,No target generation or target semantics created.
+no training executed,PASS,No ML libraries imported; no model fit/predict calls.
+no gate promotion,PASS,All gates remain blocked/review-only.
+no CRS promotion,PASS,CRS remains evidence/status metadata only.
+every candidate asset has allowed_use,PASS,All v1fq rows have allowed_use.
+every candidate asset has forbidden_use,PASS,All v1fq rows have forbidden_use.
+leakage flags present,PASS,All v1fq rows flag leakage controls.
+no raster pixel reads,PASS,"Path/manifest only; no rasterio/GDAL, no array/raster opening."
+patch_bound/preflight remain locked,PASS,patch_bound_validated=0/59 and preflight_ready=0/59 recorded in summary/report.

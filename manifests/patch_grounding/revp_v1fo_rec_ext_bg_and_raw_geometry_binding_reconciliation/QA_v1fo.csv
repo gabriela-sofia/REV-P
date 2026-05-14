@@ -1,0 +1,11 @@
+assertion,passed,detail
+total_patches_evaluated,True,59/59 PASS
+recife_patches,True,18/18 PASS
+ext_bg_documented,True,ext/bg naming documented
+no_pixel_reads,True,Header-only; zero ds.read() calls
+no_spatial_ops,True,"zero reprojection, clipping, alignment, sampling"
+no_canonical_writes,True,"v1cv, v1cx, v1en read-only"
+patch_bound_validated_locked,True,0/59 LOCKED confirmed
+no_gate_opening,True,10/10 gates remain BLOCKED
+no_overclaiming,True,"No 'confirmed', 'validated', 'final' used for patches"
+rec_ext_bg_unresolved_marked,True,18/18 Recife ext/bg marked unresolved

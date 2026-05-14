@@ -1,0 +1,10 @@
+field,value
+phase,v1fp
+status,COMPLETE
+qa_status,PASS
+pytest_status,PASS: 118 passed in 3.78s with python -m pytest -q --ignore=archive_drive
+binary_training_status,BLOCKED_NO_OBSERVED_TRUTH_NO_BINARY_LABELS
+weak_supervision_status,BLOCKED_NEEDS_PROTOCOL
+self_supervised_status,CONDITIONAL_REVIEW_ONLY_PLANNING
+raster_pixel_reads,0
+cbers,IGNORED

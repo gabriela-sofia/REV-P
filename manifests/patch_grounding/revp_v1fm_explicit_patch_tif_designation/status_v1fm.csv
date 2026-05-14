@@ -1,0 +1,18 @@
+metric,value,status
+total_patches,59,OK
+designation_deterministic,20,NEEDS_REVIEW
+designation_placeholder,7,METADATA_PENDING
+designation_no_tif_rec,18,TIF_BINDING_UNRESOLVED
+designation_no_tif_mapped,14,TIF_ABSENT
+pixel_reads,0,GUARDRAIL_OK
+spatial_ops,0,GUARDRAIL_OK
+canonical_writes,0,GUARDRAIL_OK
+patch_bound_validated,0/59,LOCKED
+gates_blocked,10/10,ALL_BLOCKED
+B1_CRS_external,UNMET,EXTERNAL_DEPENDENCY
+B3_Petropolis_bounds,LOCAL_OFFICIAL_HEADER_BOUNDS_PRESENT_NEEDS_REVIEW,STRONG_EVIDENCE
+B4_Recife_raster,LOCAL_RASTER_HEADER_EVIDENCE_PRESENT_NEEDS_REVIEW,STRONG_EVIDENCE
+B6_chain,UNMET,CHAIN_BLOCKED
+B7_reviewer,UNMET,REVIEWER_DEPENDENCY
+qa_result,30/30 PASS,PASS
+v1fm_stage_status,DESIGNATION_TABLE_COMPLETE_NEEDS_REVIEW,OK

@@ -1,0 +1,10 @@
+﻿project: REV-P
+status_date: 2026-05-14
+stage: review_only_dino_preimplementation
+patch_bound_validated: 0
+preflight_ready: 0
+crs_gate: blocked
+supervised_training: blocked
+observed_flood_labels: unavailable
+current_valid_path: sentinel_first_dino_review_only
+multimodal_status: hold_until_recife_balance_recovery

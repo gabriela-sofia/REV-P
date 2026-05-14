@@ -1,0 +1,6 @@
+field_or_modality,feature_role,may_be_used_as_input,may_be_used_as_target,leakage_risk,required_guardrail
+RGB preview PNG,visual QA/explanation feature only; possible review-only embedding input if approved,yes_review_only,no,preview may encode region/source artifacts,group by region/source; never interpret as observed event truth
+Sentinel TIF path,candidate raster input path for future pretext/representation experiments,yes_after_binding_review,no,same raster/tile/date/source leakage,no pixel read in v1fq; future split by raster/source/tile
+Multimodal stack NPY path,candidate stack input path for future pretext/representation experiments,yes_after_scope_review,no,stack provenance and source family shortcuts,do not read arrays in v1fq; future split by source group
+external_evidence_class / grounding_category / CRS / bounds status,audit/status evidence only,no_for_model_training,no,critical if converted into labels or features,report-only; never status-as-target
+region,split/control metadata,no,no,regional shortcut,"use as grouped split variable, not model feature"

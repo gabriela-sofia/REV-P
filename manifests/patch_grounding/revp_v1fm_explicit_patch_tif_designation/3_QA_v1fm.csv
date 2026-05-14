@@ -1,0 +1,31 @@
+assertion_id,description,result,expected,passed,notes
+QA01,Total designation rows = 59,59,59,PASS,
+QA02,Curitiba rows = 14,14,14,PASS,
+QA03,Petropolis rows = 27,27,27,PASS,
+QA04,Recife rows = 18,18,18,PASS,
+QA05,PLACEHOLDER_ONLY_NO_TIF count = 7,7,7,PASS,
+QA06,All REC rows = NO_MATCHING_SENTINEL_TIF,True,True,PASS,
+QA07,CUR_01-07 are not PLACEHOLDER_ONLY,True,True,PASS,
+QA08,CUR_08-14 all PLACEHOLDER_ONLY_NO_TIF,True,True,PASS,
+QA09,All rows: pixel_reads = 0,True,True,PASS,
+QA10,All rows: spatial_ops = 0,True,True,PASS,
+QA11,All rows: patch_bound_validated = 0/59 LOCKED,True,True,PASS,
+QA12,All DETERMINISTIC rows have raw_patch_id,True,True,PASS,
+QA13,All DETERMINISTIC rows have tif_filename,True,True,PASS,n_deterministic=20
+QA14,All DETERMINISTIC rows have tif_bounds_left,True,True,PASS,
+QA15,All rows: v1d_bbox_crs = WGS84_DEGREES,True,True,PASS,
+QA16,No row claims patch_bound_validated incremented (LOCKED present),True,True,PASS,
+QA17,No row labels SIG Petropolis as TRUNCATED (without negation),0,0,PASS,SIG zip correctly labeled SIG_ZIP_VALID_CONTENT_LISTED_SIZE_MISMATCH_NEEDS_REVIEW
+QA18,canonical_patch_id unique across all 59 rows,59,59,PASS,
+QA19,raw_patch_id unique across all 59 rows,59,59,PASS,
+QA20,All REC raw_patch_id start with 'recife_',True,True,PASS,v1d has recife_ext_XXXX (6) and recife_bg_XXXX (12) variants
+QA21,All CUR raw_patch_id start with 'curitiba_',True,True,PASS,
+QA22,All PET raw_patch_id start with 'petropolis_',True,True,PASS,
+QA23,CUR_08-14 PLACEHOLDER rows: tif_filename is empty,True,True,PASS,
+QA24,Sum of all designation status counts = 59,59,59,PASS,
+QA25,designation_source references v1d,True,True,PASS,
+QA26,No forbidden overclaims in notes,0,0,PASS,clean
+QA27,CANONICAL_WRITES = 0,0,0,PASS,
+QA28,SPATIAL_OPS = 0,0,0,PASS,
+QA29,PIXEL_READS = 0,0,0,PASS,
+QA30,All DETERMINISTIC PET rows have v1d centroid values,True,True,PASS,

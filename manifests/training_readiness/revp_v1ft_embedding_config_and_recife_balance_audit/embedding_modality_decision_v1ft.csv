@@ -1,0 +1,5 @@
+modality,decision,asset_count,reason,blocking_or_caveat
+Sentinel,SENTINEL_FIRST_REVIEW_ONLY_CONFIG_LOCK,128,Most balanced available modality across regions; still review-only.,No training/extraction until reviewer approves config.
+Multimodal stack,CONDITIONAL_HOLD_UNTIL_RECIFE_STACK_RECOVERY_REVIEW,83,Curitiba/Petrópolis have many stacks but Recife has only one linked stack.,Run RECIFE_MULTIMODAL_STACK_RECOVERY planning before full multimodal extraction.
+PNG preview,VISUAL_EXPLANATION_ONLY,83,Previews explain material availability and QA; not training input for v1ft.,Keep out of embedding config unless future visual-QA-only protocol is approved.
+Recife stack recovery,SUBPHASE_REQUIRED,1,Existing Recife stack evidence is insufficiently balanced for full multimodal plan.,Metadata-only reconciliation or future reconstruction required.

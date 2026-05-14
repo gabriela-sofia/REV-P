@@ -1,0 +1,5 @@
+patch_category,current_status,next_action,blocker,timeline_promise
+GEOMETRY_AND_TIF_DESIGNATED_NEEDS_REVIEW (20 patches),Medium confidence binding; row order not spatially verified,Await reviewer approval (B7); then spatial preflight (Gate 3),B7 (reviewer); B1 (CRS),NONE; stakeholder-controlled
+RAW_GEOMETRY_PRESENT_TIF_UNRESOLVED (14 patches),Geometry present (v1d); TIF binding unresolved (14 CUR/PET),Track as TIF candidates when/if additional metadata acquired,Metadata acquisition,NONE
+UNRESOLVED_REC_EXT_BG_NAMING (18 REC patches),Geometry present (v1d); ext/bg naming distinct from sentinel TIF; PE3D metadata required,Await PE3D metadata extraction + TIF naming convention clarification (B4),B4 (PE3D metadata); B1 (CRS),NONE
+PLACEHOLDER_ONLY_NO_GEOMETRY (7 patches),CUR_08–CUR_14; METADATA_PENDING in canonical status,External metadata acquisition (GeoCuritiba or IPPUC),External source,NONE

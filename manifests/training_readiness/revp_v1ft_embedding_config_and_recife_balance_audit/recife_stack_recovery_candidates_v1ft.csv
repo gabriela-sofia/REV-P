@@ -1,0 +1,2 @@
+path,inferred_patch_id,inferred_raw_patch_id,naming_family,candidate_link_status,recovery_status,what_is_missing,forbidden_action
+patches/stacks/recife/patch_recife_00289.npy,REC_00289,recife_00289,patch_recife,LINKED_EXISTING_STACK_READY_FOR_REVIEW,NEEDS_REVIEW_ALREADY_LINKED,review only; do not promote automatically,no automatic manifest correction or embedding extraction in v1ft

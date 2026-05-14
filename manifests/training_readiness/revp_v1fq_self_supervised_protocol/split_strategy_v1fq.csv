@@ -1,0 +1,5 @@
+split_level,recommendation,rationale,implementation_note
+region,primary hard grouping,Prevents Recife/Curitiba/Petrópolis source and landscape shortcuts.,Use region as outer holdout or blocked fold; never simple random split.
+source_family,secondary hard grouping,Official source families and Sentinel/stack provenance may leak acquisition artifacts.,"Group by Sentinel TIF, stack lineage, PE3D/MDE, GeoCuritiba, SGB/RIGeo where available."
+tile_or_parent_raster,mandatory when parent source is known,Patches from same raster/tile share texture and processing artifacts.,No train/test split sharing parent raster or stack source.
+time_or_acquisition,required when date metadata becomes available,Date/source artifacts can be shortcuts.,Add acquisition-date group before any future experiment.

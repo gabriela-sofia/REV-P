@@ -1,0 +1,5 @@
+transform,allowed_scope,condition,forbidden_extension
+resize,future review-only embedding inputs,only after asset-scope approval; deterministic config recorded,"no target creation, no event class interpretation"
+center_or_random_crop,future no-target visual pretext augmentation,same transform policy across grouped splits,no crop selected by evidence/status outcome
+generic_normalization,future pretrained encoder input preparation,use fixed published/pretrained constants or documented per-modality constants,no fit on held-out groups
+color_jitter_or_blur,future contrastive/pretext augmentation only,reviewed augmentation range; no semantic claim,no class balancing or target proxy
