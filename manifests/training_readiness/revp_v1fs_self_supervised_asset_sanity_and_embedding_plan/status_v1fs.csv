@@ -1,0 +1,12 @@
+field,value
+phase,v1fs
+status,COMPLETE
+qa_status,PASS
+pytest_status,PASS: 118 passed in 8.49s with python -m pytest -q --ignore=archive_drive
+embedding_review_only_ready_assets,211
+rebased_or_blocked_assets,0
+duplicate_or_conflict_rows,0
+training_runs,0
+labels_targets_created,0
+raster_pixel_reads,0
+cbers,IGNORED

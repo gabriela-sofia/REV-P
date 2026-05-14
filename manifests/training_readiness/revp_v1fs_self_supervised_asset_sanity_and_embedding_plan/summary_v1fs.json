@@ -1,0 +1,56 @@
+{
+  "phase": "v1fs",
+  "phase_name": "SELF_SUPERVISED_ASSET_SANITY_AND_EMBEDDING_EXTRACTION_PLAN",
+  "created_utc": "2026-05-12T19:27:40.178307+00:00",
+  "v1fr_safe_input_rows": 211,
+  "v1fr_blocked_rows": 142,
+  "eligible_input_rows": 211,
+  "blocked_reference_rows": 142,
+  "readiness_status_counts": {
+    "EMBEDDING_REVIEW_ONLY_READY": 211
+  },
+  "eligible_by_modality": {
+    "multimodal_stack_path_only": 83,
+    "sentinel_raster_path_only": 128
+  },
+  "ready_by_region_modality": {
+    "Curitiba|multimodal_stack_path_only": 43,
+    "Curitiba|sentinel_raster_path_only": 43,
+    "Petrópolis|multimodal_stack_path_only": 39,
+    "Petrópolis|sentinel_raster_path_only": 48,
+    "Recife|multimodal_stack_path_only": 1,
+    "Recife|sentinel_raster_path_only": 37
+  },
+  "reduced_or_blocked_by_v1fs": 0,
+  "duplicate_or_conflict_rows": 0,
+  "blocked_promotions": 0,
+  "next_phase_recommendation": "review_embedding_extraction_config_before_any_run",
+  "locks": {
+    "event_truth": "absent",
+    "binary_supervised_status": "blocked",
+    "supervised_status": "blocked",
+    "patch_bound_validated": "0/59",
+    "preflight_ready": "0/59",
+    "gates": "blocked",
+    "cbers": "ignored"
+  },
+  "guardrails": {
+    "training_runs": 0,
+    "labels_created": 0,
+    "targets_created": 0,
+    "weak_supervision_runs": 0,
+    "model_metrics": 0,
+    "model_claims": 0,
+    "canonical_writes": 0,
+    "gate_promotion": 0,
+    "crs_promotion": 0,
+    "patch_bound_validated_promotion": 0,
+    "preflight_ready_promotion": 0,
+    "raster_pixel_reads": 0,
+    "band_reads": 0,
+    "raster_summary_metrics": 0,
+    "spatial_ops": 0,
+    "coordinate_transform_ops": 0
+  },
+  "pytest_status": "PASS: 118 passed in 8.49s with python -m pytest -q --ignore=archive_drive"
+}

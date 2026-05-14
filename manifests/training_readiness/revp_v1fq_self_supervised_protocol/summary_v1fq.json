@@ -1,0 +1,48 @@
+{
+  "phase": "v1fq",
+  "phase_name": "SELF_SUPERVISED_MULTIMODAL_PROTOCOL_AND_MANIFEST_REFINEMENT",
+  "created_utc": "2026-05-12T18:40:59.621570+00:00",
+  "v1fp_candidate_count": 187,
+  "v1fp_asset_inventory_count": 2340,
+  "v1fp_trainability_counts": {
+    "BLOCKED_NO_GEOMETRY": 7,
+    "BLOCKED_REC_EXT_BG_NAMING": 18,
+    "BLOCKED_UNRESOLVED_TIF_BINDING": 14,
+    "NOT_TRAINABLE_NO_LABEL": 20,
+    "SELF_SUPERVISED_CANDIDATE_NEEDS_REVIEW": 128
+  },
+  "self_supervised_manifest_rows": 353,
+  "scientific_role_counts": {
+    "BLOCKED_NO_GEOMETRY": 7,
+    "BLOCKED_NO_LABEL": 20,
+    "BLOCKED_RECIFE_EXT_BG_NAMING": 18,
+    "BLOCKED_UNRESOLVED_BINDING": 14,
+    "SELF_SUPERVISED_REPRESENTATION_REVIEW_ONLY": 211,
+    "VISUAL_EXPLANATION_ONLY": 83
+  },
+  "decision": {
+    "visual_explanation": "allowed",
+    "self_supervised_representation": "review_only_planning",
+    "supervised_binary_training": "blocked",
+    "weak_supervision_real_training": "blocked",
+    "segmentation_detection": "blocked"
+  },
+  "locks": {
+    "observed_flood_ground_truth": "absent",
+    "binary_labels": "absent",
+    "patch_bound_validated": "0/59",
+    "preflight_ready": "0/59",
+    "gates": "blocked",
+    "cbers": "ignored"
+  },
+  "guardrails": {
+    "canonical_writes": 0,
+    "gate_promotion": 0,
+    "crs_promotion": 0,
+    "labels_created": 0,
+    "targets_created": 0,
+    "training_runs": 0,
+    "raster_pixel_reads": 0
+  },
+  "pytest_status": "PASS: 118 passed in 2.12s with python -m pytest -q --ignore=archive_drive"
+}

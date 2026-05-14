@@ -1,0 +1,13 @@
+region,asset_type,modality,safe_for_review_only,blocked,total
+Curitiba,MULTIMODAL_STACK_NPY,multimodal_stack_path_only,43,0,43
+Curitiba,NO_ASSET_PATH,none,0,14,14
+Curitiba,RGB_PREVIEW_PNG,rgb_preview,0,43,43
+Curitiba,SENTINEL_TIF_ASSET,sentinel_raster_path_only,43,0,43
+Petrópolis,MULTIMODAL_STACK_NPY,multimodal_stack_path_only,39,0,39
+Petrópolis,NO_ASSET_PATH,none,0,27,27
+Petrópolis,RGB_PREVIEW_PNG,rgb_preview,0,39,39
+Petrópolis,SENTINEL_TIF_ASSET,sentinel_raster_path_only,48,0,48
+Recife,MULTIMODAL_STACK_NPY,multimodal_stack_path_only,1,0,1
+Recife,NO_ASSET_PATH,none,0,18,18
+Recife,RGB_PREVIEW_PNG,rgb_preview,0,1,1
+Recife,SENTINEL_TIF_ASSET,sentinel_raster_path_only,37,0,37

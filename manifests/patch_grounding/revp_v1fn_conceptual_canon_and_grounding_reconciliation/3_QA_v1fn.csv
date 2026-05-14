@@ -1,0 +1,14 @@
+assertion,passed,detail
+total_patches_in_matrix,True,59/59 PASS
+curitiba_patches,True,14/14 PASS
+petropolis_patches,True,27/27 PASS
+recife_patches,True,18/18 PASS
+placeholder_only_count,True,7/7 PASS
+no_forbidden_ops,True,spatial_ops=0; pixel_reads=0; canonical_writes=0
+gates_all_blocked,True,10/10 BLOCKED confirmed
+patch_bound_validated_locked,True,0/59 LOCKED confirmed
+no_crs_promotion,True,All CRS remain CANDIDATE status
+no_overclaiming,True,"No 'validated', 'confirmed', 'final' used for patches"
+recife_ext_bg_unresolved,True,18/18 unresolved TIF naming
+v1fk_refined_petropolis,True,Petropolis region normalization corrected; 27 now show TIF available
+v1fm_terminology_clarified,True,"DESIGNATED_BY_DETERMINISTIC marked as CANDIDATE, not confirmed"

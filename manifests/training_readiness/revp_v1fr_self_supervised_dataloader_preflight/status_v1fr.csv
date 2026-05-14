@@ -1,0 +1,11 @@
+field,value
+phase,v1fr
+status,COMPLETE
+final_state,SELF_SUPERVISED_DATALOADER_PREFLIGHT_READY_FOR_REVIEW
+qa_status,PASS
+pytest_status,PASS: 118 passed in 3.59s with python -m pytest -q --ignore=archive_drive
+eligible_review_only_assets,211
+blocked_assets,142
+labels_targets_created,0
+raster_pixel_reads,0
+cbers,IGNORED

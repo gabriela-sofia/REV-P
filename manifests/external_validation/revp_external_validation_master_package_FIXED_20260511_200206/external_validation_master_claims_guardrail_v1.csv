@@ -1,0 +1,10 @@
+claim_type,claim
+ALLOWED,B2/B3/B4/B5 have strong official/local evidence for reviewer evaluation.
+ALLOWED,The external validation block is mastered for review.
+FORBIDDEN,B2/B3/B4/B5 are MET.
+FORBIDDEN,Any gate is open.
+FORBIDDEN,patch_bound_validated > 0.
+FORBIDDEN,preflight_ready > 0.
+FORBIDDEN,CRS promotion has been applied.
+FORBIDDEN,PRJ proves bounds.
+FORBIDDEN,"Header metadata validates pixels, alignment, or patch coverage."

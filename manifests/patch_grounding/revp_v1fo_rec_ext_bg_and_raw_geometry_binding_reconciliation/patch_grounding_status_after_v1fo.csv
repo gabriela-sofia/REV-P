@@ -1,0 +1,5 @@
+status,count,percentage,implication
+GEOMETRY_AND_TIF_DESIGNATED_NEEDS_REVIEW,20,33.9%,No spatial ops; awaits reviewer
+UNRESOLVED_REC_EXT_BG_NAMING,18,30.5%,Metadata-only tracking
+RAW_GEOMETRY_PRESENT_TIF_UNRESOLVED,14,23.7%,Metadata-only tracking
+PLACEHOLDER_ONLY_NO_GEOMETRY,7,11.9%,No action possible

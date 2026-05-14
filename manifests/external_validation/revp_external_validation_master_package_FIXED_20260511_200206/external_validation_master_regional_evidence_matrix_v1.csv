@@ -1,0 +1,5 @@
+region,blocker,master_status,evidence_strength,basis,caveat
+Curitiba,B2,STRONG_METADATA_EXTENT_EVIDENCE_PRESENT_NEEDS_REVIEW,STRONG,"GeoCuritiba ArcGIS metadata: 169 records, 169 extent_present, 167 explicit coords.",MDS WKT without numeric WKID; CUR_08-CUR_14 placeholder-only; not patch-bound validated.
+Petrópolis,B3,LOCAL_OFFICIAL_HEADER_BOUNDS_PRESENT_NEEDS_REVIEW,STRONG,SGB/RIGeo SHP binary headers + ESRI GRID header-only bounds.,"Dataset envelope, not individual PET_XX footprint; not MET."
+Petrópolis,B5,CRS_EVIDENCE_PRESENT_READY_FOR_REVIEW,STRONG,CRS-by-role PRJ/sidecar evidence.,"PRJ is CRS-only, never bounds; no CRS promotion."
+Recife,B4,LOCAL_RASTER_HEADER_EVIDENCE_PRESENT_NEEDS_REVIEW,STRONG,66 PE3D rasters header-open; 66 EPSG:31985; 66 dataset.bounds.,Header evidence does not validate pixels/alignment/patch coverage/provenance review.

@@ -1,0 +1,51 @@
+{
+  "phase": "v1fp",
+  "phase_name": "MULTIMODAL_TRAINING_READINESS_AND_DATASET_MANIFEST_AUDIT",
+  "created_utc": "2026-05-12T18:25:11.373337+00:00",
+  "candidate_manifest_rows": 187,
+  "asset_inventory_rows": 2340,
+  "trainability_counts": {
+    "BLOCKED_NO_GEOMETRY": 7,
+    "BLOCKED_REC_EXT_BG_NAMING": 18,
+    "BLOCKED_UNRESOLVED_TIF_BINDING": 14,
+    "NOT_TRAINABLE_NO_LABEL": 20,
+    "SELF_SUPERVISED_CANDIDATE_NEEDS_REVIEW": 128
+  },
+  "grounding_category_counts": {
+    "ASSET_PRESENT_OUTSIDE_CANONICAL_59_REVIEW_REQUIRED": 128,
+    "GEOMETRY_AND_TIF_DESIGNATED_NEEDS_REVIEW": 20,
+    "PLACEHOLDER_ONLY_NO_GEOMETRY": 7,
+    "RAW_GEOMETRY_PRESENT_TIF_UNRESOLVED": 14,
+    "UNRESOLVED_REC_EXT_BG_NAMING": 18
+  },
+  "region_counts": {
+    "Curitiba": 57,
+    "Petrópolis": 75,
+    "Recife": 55
+  },
+  "global_state": {
+    "target": "external_susceptibility_coherence",
+    "observed_flood_truth": "absent",
+    "binary_labels": "absent",
+    "patch_bound_validated": "0/59",
+    "preflight_ready": "0/59",
+    "gates": "blocked",
+    "cbers": "ignored"
+  },
+  "guardrails": {
+    "canonical_writes": 0,
+    "gate_promotion": 0,
+    "crs_promotion": 0,
+    "binary_labels_created": 0,
+    "training_readiness_promotion": 0,
+    "raster_pixel_reads": 0,
+    "training_runs": 0
+  },
+  "decision": {
+    "binary_supervised_training": "blocked",
+    "weak_proxy_training": "blocked_until_protocol",
+    "self_supervised_pretraining": "conditional_review_only_planning",
+    "visual_explanation": "allowed_as_current_evidence_scope"
+  },
+  "pytest_status": "PASS: 118 passed in 3.78s with python -m pytest -q --ignore=archive_drive"
+}

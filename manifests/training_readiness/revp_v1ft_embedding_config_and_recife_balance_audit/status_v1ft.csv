@@ -1,0 +1,11 @@
+field,value
+phase,v1ft
+status,COMPLETE
+qa_status,PASS
+pytest_status,PASS: 118 passed in 5.65s with python -m pytest -q --ignore=archive_drive
+sentinel_ready_review_only_assets,128
+multimodal_stack_conditional_hold,83
+recife_linked_stack_count,1
+recife_reconstruction_needed_rows,36
+recommended_decision,SENTINEL_FIRST_REVIEW_ONLY__MULTIMODAL_AFTER_RECIFE_RECOVERY
+guardrails,ZERO_TRAINING_ZERO_EXTRACTION_ZERO_LABELS_ZERO_TARGETS

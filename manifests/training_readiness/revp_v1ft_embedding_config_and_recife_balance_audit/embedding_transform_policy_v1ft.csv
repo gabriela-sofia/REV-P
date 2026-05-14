@@ -1,0 +1,6 @@
+field,value,scope,guardrail
+resize,allowed_after_review,Sentinel-first embeddings,fixed deterministic config
+normalization,allowed_after_review,encoder input preparation,do not derive from held-out groups
+crop,allowed_after_review,pretext augmentation,not outcome/status driven
+mask_or_target_generation,forbidden,all,no labels or targets
+status_as_feature_or_target,forbidden,all,external evidence remains audit metadata

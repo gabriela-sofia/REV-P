@@ -1,0 +1,6 @@
+risk,control,status,reason
+region leakage,hard split by region,REQUIRED_FOR_FUTURE_EXPERIMENT,Regions encode landscape and source differences.
+source family leakage,group by Sentinel/stack/official evidence family,REQUIRED_FOR_FUTURE_EXPERIMENT,Source family can become shortcut signal.
+duplicate or derivative asset leakage,duplicate groups must stay within the same split,REQUIRED_FOR_FUTURE_EXPERIMENT,Same visual content across splits inflates evaluation.
+neighboring patch leakage,spatially grouped split after reviewed geometry is available,BLOCKED_UNTIL_GEOMETRY_REVIEW,Patch-bound validation remains 0/59.
+official evidence used as outcome,evidence/status fields are never model outcomes,ENFORCED_IN_V1FR,Prevents circular evidence leakage.

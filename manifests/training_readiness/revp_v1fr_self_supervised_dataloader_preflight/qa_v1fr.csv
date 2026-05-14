@@ -1,0 +1,12 @@
+check,status,details
+all expected outputs exist,PASS,All v1fr required output files found.
+category counts valid,PASS,v1fq=353; dl=353
+dangerous positive claims absent,PASS,Terms such as labels/targets are used only as forbidden/zero/blocked policy language.
+canonical writes absent,PASS,"Script writes only v1fr outputs, report, script and CLAUDE.md delta."
+script has no prohibited raster/training calls,PASS,Checked exact prohibited call/text patterns.
+zero training,PASS,No training executed.
+zero labels,PASS,No labels created.
+zero targets,PASS,No targets created.
+zero raster pixel read,PASS,No raster pixels read.
+zero promotions,PASS,No gate/CRS promotion.
+CBERS ignored,PASS,CBERS remains ignored.
