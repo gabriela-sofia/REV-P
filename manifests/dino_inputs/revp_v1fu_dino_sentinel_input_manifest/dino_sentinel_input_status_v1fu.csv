@@ -1,0 +1,11 @@
+field,value
+phase,v1fu
+phase_name,DINO_SENTINEL_INPUT_MANIFEST
+status,PASS
+expected_sentinel_count,128
+actual_sentinel_count,128
+encoder_mode,frozen_encoder
+label_status,NO_LABEL
+target_status,NO_TARGET
+pixel_read_status,NOT_READ__FUTURE_DINO_ENCODING_ONLY
+claim_scope,REVIEW_ONLY_NO_PREDICTIVE_CLAIM

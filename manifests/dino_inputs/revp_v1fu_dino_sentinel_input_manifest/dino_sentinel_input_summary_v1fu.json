@@ -1,0 +1,47 @@
+{
+  "phase": "v1fu",
+  "phase_name": "DINO_SENTINEL_INPUT_MANIFEST",
+  "created_utc": "2026-05-14T13:53:48.180033+00:00",
+  "source_manifest": "manifests/training_readiness/revp_v1ft_embedding_config_and_recife_balance_audit/embedding_ready_assets_v1ft.csv",
+  "expected_sentinel_count": 128,
+  "actual_sentinel_count": 128,
+  "qa_status": "PASS",
+  "region_counts": {
+    "Curitiba": 43,
+    "Petrópolis": 48,
+    "Recife": 37
+  },
+  "encoder_mode": "frozen_encoder",
+  "dino_scope": "SENTINEL_FIRST_EMBEDDING_INPUT",
+  "guardrails": {
+    "training": 0,
+    "embedding_extraction": 0,
+    "model_loading": 0,
+    "downloads": 0,
+    "labels": 0,
+    "targets": 0,
+    "weak_supervision": 0,
+    "model_metrics": 0,
+    "performance_claims": 0,
+    "canonical_writes": 0,
+    "gate_promotion": 0,
+    "crs_promotion": 0,
+    "patch_bound_validated_promotion": 0,
+    "preflight_ready_promotion": 0,
+    "raster_pixel_reads": 0,
+    "band_reads": 0,
+    "raster_file_opens": 0,
+    "external_path_validation": 0,
+    "raw_data_copy": 0
+  },
+  "references": {
+    "project_state": "configs/project_state.yaml",
+    "dino_config": "configs/dino_review_only.yaml",
+    "embedding_extraction_config": "manifests/training_readiness/revp_v1ft_embedding_config_and_recife_balance_audit/embedding_extraction_config_v1ft.json",
+    "split_config": "manifests/training_readiness/revp_v1ft_embedding_config_and_recife_balance_audit/embedding_split_config_v1ft.csv",
+    "transform_policy": "manifests/training_readiness/revp_v1ft_embedding_config_and_recife_balance_audit/embedding_transform_policy_v1ft.csv",
+    "output_schema": "manifests/training_readiness/revp_v1ft_embedding_config_and_recife_balance_audit/embedding_output_schema_v1ft.csv",
+    "dl_input_manifest": "manifests/training_readiness/revp_v1fr_self_supervised_dataloader_preflight/dl_input_manifest_v1fr.csv",
+    "v1fs_readiness": "manifests/training_readiness/revp_v1fs_self_supervised_asset_sanity_and_embedding_plan/embedding_extraction_readiness_v1fs.csv"
+  }
+}
