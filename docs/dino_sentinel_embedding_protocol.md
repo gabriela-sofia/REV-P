@@ -32,6 +32,7 @@ DINOv2 with registers is the preferred backbone because register tokens are desi
 | v1ga | `scripts/dino/revp_v1ga_dino_embedding_structural_consistency_analysis.py` | Structural consistency analysis across regions, neighbors, clusters, and seeds | v1fz local manifest and embeddings | `local_runs/dino_embeddings/v1ga/` | consistency, centroid, cluster stability, outlier QA | implemented |
 | v1gb | `scripts/dino/revp_v1gb_dino_embedding_local_visual_structural_review.py` | Local visual structural review of embeddings, medoids, neighbors, and outliers | v1fz local manifest and embeddings | `local_runs/dino_embeddings/v1gb/` | visual panels, spatial consistency, multiscale checks, medoids, outlier taxonomy | implemented |
 | v1gc | `scripts/dino/revp_v1gc_dino_embedding_geo_structural_diagnostics.py` | Geo-structural diagnostics linking local patch geometry with embedding neighborhoods | v1fz local manifest and embeddings | `local_runs/dino_embeddings/v1gc/` | geo-distance comparisons, graph topology, cross-region bridges, transition candidates | implemented |
+| v1gd | `scripts/dino/revp_v1gd_dino_embedding_perturbation_robustness_diagnostics.py` | Perturbation robustness diagnostics for local Sentinel DINO embeddings | v1fz local manifest and embeddings | `local_runs/dino_embeddings/v1gd/` | controlled perturbations, drift, neighbor persistence, graph robustness, regional robustness | implemented |
 
 ## Inputs and outputs
 
@@ -78,6 +79,7 @@ The analysis layer supports:
 - local visual review panels for nearest neighbors, medoids, edge cases, region exemplars, and outliers
 - local spatial consistency diagnostics and multiscale structural sanity checks
 - geo-structural diagnostics comparing embedding neighborhoods with patch centroids, local graph topology, and cross-region bridge candidates
+- perturbation robustness diagnostics under small controlled image changes, without creating training augmentations
 
 These outputs are structural diagnostics for review. They are not semantic classes, not flood labels, and not model performance evidence.
 
@@ -93,11 +95,18 @@ v1gc compares embedding relationships with local spatial geometry when centroid 
 
 The graph layer is diagnostic only: nodes are patches, edges are embedding-nearest-neighbor relations, and cross-region bridges are candidates for human review. They are not classes, not labels, not validation targets, and not evidence of predictive performance. Topology metrics depend on the current corpus size, coordinate availability, and chosen top-k neighborhood; they should be treated as audit aids for selecting examples for later manual inspection.
 
+## Perturbation robustness diagnostics
+
+v1gd applies small reversible perturbations to local Sentinel renderings to measure whether DINO embedding relationships are structurally stable. The perturbations include light Gaussian noise, brightness scaling, contrast scaling, blur, crop jitter, and optional band dropout. They are used only for sensitivity audit and are not saved as a training set.
+
+The robustness outputs compare original versus perturbed embeddings through cosine drift, nearest-neighbor persistence, cluster-assignment stability, medoid persistence, graph edge persistence, bridge persistence, hub stability, and regional drift summaries. These diagnostics support manual review of sensitivity and do not establish predictive reliability, class membership, or supervised performance.
+
 ## Current limitations
 
 - The balanced corpus is intentionally small and exploratory.
 - Visual review panels are local QA aids and should not be interpreted as semantic cluster explanations.
 - Geo-structural graph diagnostics are sensitive to local corpus size, coordinate provenance, and nearest-neighbor settings.
+- Perturbation diagnostics are local sensitivity audits; they are not training augmentations and do not validate operational robustness.
 - CPU execution is acceptable for smoke and audit runs, but full runs may be slow.
 - DINO embeddings depend on local availability or explicitly allowed model download.
 - Multimodal assets remain excluded from the active path.
