@@ -31,6 +31,7 @@ DINOv2 with registers is the preferred backbone because register tokens are desi
 | v1fz | `scripts/dino/revp_v1fz_dino_balanced_embedding_corpus.py` | Balanced Sentinel embedding subset by region | v1fu manifest, v1fv preflight, DINO config | `local_runs/dino_embeddings/v1fz/` | balanced selection, embeddings, PCA/clustering/neighbors/regions | implemented |
 | v1ga | `scripts/dino/revp_v1ga_dino_embedding_structural_consistency_analysis.py` | Structural consistency analysis across regions, neighbors, clusters, and seeds | v1fz local manifest and embeddings | `local_runs/dino_embeddings/v1ga/` | consistency, centroid, cluster stability, outlier QA | implemented |
 | v1gb | `scripts/dino/revp_v1gb_dino_embedding_local_visual_structural_review.py` | Local visual structural review of embeddings, medoids, neighbors, and outliers | v1fz local manifest and embeddings | `local_runs/dino_embeddings/v1gb/` | visual panels, spatial consistency, multiscale checks, medoids, outlier taxonomy | implemented |
+| v1gc | `scripts/dino/revp_v1gc_dino_embedding_geo_structural_diagnostics.py` | Geo-structural diagnostics linking local patch geometry with embedding neighborhoods | v1fz local manifest and embeddings | `local_runs/dino_embeddings/v1gc/` | geo-distance comparisons, graph topology, cross-region bridges, transition candidates | implemented |
 
 ## Inputs and outputs
 
@@ -76,6 +77,7 @@ The analysis layer supports:
 - cluster stability across seeds and K values
 - local visual review panels for nearest neighbors, medoids, edge cases, region exemplars, and outliers
 - local spatial consistency diagnostics and multiscale structural sanity checks
+- geo-structural diagnostics comparing embedding neighborhoods with patch centroids, local graph topology, and cross-region bridge candidates
 
 These outputs are structural diagnostics for review. They are not semantic classes, not flood labels, and not model performance evidence.
 
@@ -85,10 +87,17 @@ v1gb adds local-only visual panels to support later human review of structural e
 
 The medoid and representative selections are structural conveniences only. They indicate positions in an embedding space for inspection, not real-world class membership, not flood occurrence, and not validation evidence. Visual QA is also limited by the current local corpus size, available Sentinel patch rendering, and the fact that image panels are derived from local runtime reads rather than versioned raw data.
 
+## Geo-structural diagnostics
+
+v1gc compares embedding relationships with local spatial geometry when centroid coordinates or raster metadata bounds are available. It produces distance-vs-similarity tables, regional overlap metrics, compactness summaries, graph components, hubs, bridge candidates, transition candidates, and topology continuity checks.
+
+The graph layer is diagnostic only: nodes are patches, edges are embedding-nearest-neighbor relations, and cross-region bridges are candidates for human review. They are not classes, not labels, not validation targets, and not evidence of predictive performance. Topology metrics depend on the current corpus size, coordinate availability, and chosen top-k neighborhood; they should be treated as audit aids for selecting examples for later manual inspection.
+
 ## Current limitations
 
 - The balanced corpus is intentionally small and exploratory.
 - Visual review panels are local QA aids and should not be interpreted as semantic cluster explanations.
+- Geo-structural graph diagnostics are sensitive to local corpus size, coordinate provenance, and nearest-neighbor settings.
 - CPU execution is acceptable for smoke and audit runs, but full runs may be slow.
 - DINO embeddings depend on local availability or explicitly allowed model download.
 - Multimodal assets remain excluded from the active path.
