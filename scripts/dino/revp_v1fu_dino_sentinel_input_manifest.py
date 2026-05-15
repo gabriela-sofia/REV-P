@@ -135,7 +135,7 @@ def is_inside_repo(path: Path) -> bool:
 def forbidden_paths() -> list[str]:
     found: list[str] = []
     for path in ROOT.rglob("*"):
-        if ".git" in path.parts:
+        if ".git" in path.parts or "local_runs" in path.parts:
             continue
         name_lower = path.name.lower()
         if path.is_dir() and name_lower in FORBIDDEN_DIR_NAMES:

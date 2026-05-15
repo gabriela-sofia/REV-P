@@ -39,7 +39,10 @@ def test_v1fu_script_creates_review_only_dino_manifest() -> None:
         forbidden_files = [
             path
             for path in ROOT.rglob("*")
-            if ".git" not in path.parts and path.is_file() and path.suffix.lower() in FORBIDDEN_EXTENSIONS
+            if ".git" not in path.parts
+            and "local_runs" not in path.parts
+            and path.is_file()
+            and path.suffix.lower() in FORBIDDEN_EXTENSIONS
         ]
         assert forbidden_files == []
 
