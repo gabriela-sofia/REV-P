@@ -30,6 +30,7 @@ DINOv2 with registers is the preferred backbone because register tokens are desi
 | v1fy | `scripts/dino/revp_v1fy_dino_embedding_corpus_analysis.py` | Exploratory corpus analysis from local embeddings | v1fx local embedding manifest and metadata | `local_runs/dino_embeddings/v1fy/` | corpus, PCA, clustering, neighbors, region diagnostics | implemented |
 | v1fz | `scripts/dino/revp_v1fz_dino_balanced_embedding_corpus.py` | Balanced Sentinel embedding subset by region | v1fu manifest, v1fv preflight, DINO config | `local_runs/dino_embeddings/v1fz/` | balanced selection, embeddings, PCA/clustering/neighbors/regions | implemented |
 | v1ga | `scripts/dino/revp_v1ga_dino_embedding_structural_consistency_analysis.py` | Structural consistency analysis across regions, neighbors, clusters, and seeds | v1fz local manifest and embeddings | `local_runs/dino_embeddings/v1ga/` | consistency, centroid, cluster stability, outlier QA | implemented |
+| v1gb | `scripts/dino/revp_v1gb_dino_embedding_local_visual_structural_review.py` | Local visual structural review of embeddings, medoids, neighbors, and outliers | v1fz local manifest and embeddings | `local_runs/dino_embeddings/v1gb/` | visual panels, spatial consistency, multiscale checks, medoids, outlier taxonomy | implemented |
 
 ## Inputs and outputs
 
@@ -73,12 +74,21 @@ The analysis layer supports:
 - outlier diagnostics
 - region centroids, dispersion, and intra/inter-region similarity
 - cluster stability across seeds and K values
+- local visual review panels for nearest neighbors, medoids, edge cases, region exemplars, and outliers
+- local spatial consistency diagnostics and multiscale structural sanity checks
 
 These outputs are structural diagnostics for review. They are not semantic classes, not flood labels, and not model performance evidence.
+
+## Visual structural review
+
+v1gb adds local-only visual panels to support later human review of structural embedding behavior. The panels are intended to make nearest-neighbor relationships, reciprocal pairs, medoids, edge cases, isolated embeddings, and regional exemplars auditable without turning clusters into labels.
+
+The medoid and representative selections are structural conveniences only. They indicate positions in an embedding space for inspection, not real-world class membership, not flood occurrence, and not validation evidence. Visual QA is also limited by the current local corpus size, available Sentinel patch rendering, and the fact that image panels are derived from local runtime reads rather than versioned raw data.
 
 ## Current limitations
 
 - The balanced corpus is intentionally small and exploratory.
+- Visual review panels are local QA aids and should not be interpreted as semantic cluster explanations.
 - CPU execution is acceptable for smoke and audit runs, but full runs may be slow.
 - DINO embeddings depend on local availability or explicitly allowed model download.
 - Multimodal assets remain excluded from the active path.
