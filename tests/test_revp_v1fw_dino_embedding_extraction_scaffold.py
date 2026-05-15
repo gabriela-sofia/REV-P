@@ -130,6 +130,6 @@ def test_v1fw_dry_run_writes_plan_summary_qa_schema_without_embeddings(tmp_path:
 
     schema_columns = {row["column"] for row in read_csv(schema_path)}
     assert {"cls_embedding", "patch_mean_embedding"}.issubset(schema_columns)
-    for dirname in ("data", "outputs", "docs"):
+    for dirname in ("data", "outputs"):
         assert not (ROOT / dirname).exists()
     assert "local_runs/" in (ROOT / ".gitignore").read_text(encoding="utf-8")

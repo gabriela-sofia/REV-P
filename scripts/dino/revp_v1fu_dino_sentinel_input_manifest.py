@@ -70,7 +70,7 @@ INPUT_FILES = [
     V1FS_READINESS,
 ]
 
-FORBIDDEN_DIR_NAMES = {".claude", ".codex", "data", "outputs", "docs", "patches", "archive_drive"}
+FORBIDDEN_DIR_NAMES = {".claude", ".codex", "data", "outputs", "patches", "archive_drive"}
 FORBIDDEN_FILE_NAMES = {"AGENTS.md", "CLAUDE.md"}
 FORBIDDEN_EXTENSIONS = {
     ".tif",

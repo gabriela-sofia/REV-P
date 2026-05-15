@@ -46,7 +46,7 @@ OUTPUT_FIELDS = [
     "notes",
 ]
 
-FORBIDDEN_REPO_DIRS = {"data", "outputs", "docs"}
+FORBIDDEN_REPO_DIRS = {"data", "outputs"}
 FORBIDDEN_HEAVY_EXTENSIONS = {
     ".npy",
     ".npz",

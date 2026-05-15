@@ -79,7 +79,7 @@ EMBEDDING_MANIFEST_FIELDS = [
     "claim_scope",
 ]
 
-FORBIDDEN_REPO_DIRS = {"data", "outputs", "docs"}
+FORBIDDEN_REPO_DIRS = {"data", "outputs"}
 FORBIDDEN_VERSIONED_EXTENSIONS = {".npy", ".npz", ".parquet", ".pt", ".pth", ".ckpt", ".safetensors", ".index"}
 REVIEW_ONLY_CLAIM = "REVIEW_ONLY_NO_PREDICTIVE_CLAIM"
 

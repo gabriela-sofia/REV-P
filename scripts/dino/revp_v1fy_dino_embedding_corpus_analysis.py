@@ -24,7 +24,7 @@ DEFAULT_SMOKE_METADATA = ROOT / "local_runs" / "dino_embeddings" / "v1fx" / "din
 DEFAULT_INPUT_MANIFEST = ROOT / "manifests" / "dino_inputs" / "revp_v1fu_dino_sentinel_input_manifest" / "dino_sentinel_input_manifest_v1fu.csv"
 DEFAULT_OUTPUT_DIR = ROOT / "local_runs" / "dino_embeddings" / "v1fy"
 
-FORBIDDEN_REPO_DIRS = {"data", "outputs", "docs"}
+FORBIDDEN_REPO_DIRS = {"data", "outputs"}
 FORBIDDEN_VERSIONED_EXTENSIONS = {".npy", ".npz", ".parquet", ".pt", ".pth", ".ckpt", ".safetensors", ".index"}
 REVIEW_ONLY_CLAIM = "REVIEW_ONLY_NO_PREDICTIVE_CLAIM"
 

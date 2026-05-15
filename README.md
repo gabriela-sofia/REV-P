@@ -34,3 +34,7 @@ Bloqueado:
 ## Direção atual
 
 A próxima etapa técnica é implementar DINO como encoder congelado, Sentinel-first, para extração de embeddings e agrupamento exploratório dos patches elegíveis.
+
+## Protocolo DINO Sentinel-first
+
+A documentação técnica auditável do fluxo DINO Sentinel-first está em `docs/dino_sentinel_embedding_protocol.md`.

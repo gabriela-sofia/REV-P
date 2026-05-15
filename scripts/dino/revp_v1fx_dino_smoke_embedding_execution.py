@@ -74,7 +74,7 @@ MODEL_ATTEMPT_FIELDS = ["order", "candidate", "backend", "status", "details"]
 CLUSTER_FIELDS = ["cluster_id", "count", "method", "notes"]
 NN_FIELDS = ["dino_input_id", "nearest_dino_input_id", "distance", "notes"]
 
-FORBIDDEN_REPO_DIRS = {"data", "outputs", "docs"}
+FORBIDDEN_REPO_DIRS = {"data", "outputs"}
 FORBIDDEN_VERSIONED_EXTENSIONS = {".npy", ".npz", ".parquet", ".pt", ".pth", ".ckpt", ".safetensors", ".index"}
 REVIEW_ONLY_CLAIM = "REVIEW_ONLY_NO_PREDICTIVE_CLAIM"
 

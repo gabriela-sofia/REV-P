@@ -15,7 +15,7 @@ QA = OUT_DIR / "dino_sentinel_input_qa_v1fu.csv"
 STATUS = OUT_DIR / "dino_sentinel_input_status_v1fu.csv"
 V1FT_READY = ROOT / "manifests" / "training_readiness" / "revp_v1ft_embedding_config_and_recife_balance_audit" / "embedding_ready_assets_v1ft.csv"
 
-FORBIDDEN_DIRS = {"data", "outputs", "docs"}
+FORBIDDEN_DIRS = {"data", "outputs"}
 FORBIDDEN_EXTENSIONS = {".tif", ".tiff", ".zip", ".npy", ".npz", ".pt", ".pth", ".ckpt", ".safetensors", ".parquet"}
 
 

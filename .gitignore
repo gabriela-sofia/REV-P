@@ -65,7 +65,6 @@ archive_drive/
 patches/
 data/
 outputs/
-docs/
 models/
 model_cache/
 .cache/
