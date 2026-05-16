@@ -33,6 +33,9 @@ DINOv2 with registers is the preferred backbone because register tokens are desi
 | v1gb | `scripts/dino/revp_v1gb_dino_embedding_local_visual_structural_review.py` | Local visual structural review of embeddings, medoids, neighbors, and outliers | v1fz local manifest and embeddings | `local_runs/dino_embeddings/v1gb/` | visual panels, spatial consistency, multiscale checks, medoids, outlier taxonomy | implemented |
 | v1gc | `scripts/dino/revp_v1gc_dino_embedding_geo_structural_diagnostics.py` | Geo-structural diagnostics linking local patch geometry with embedding neighborhoods | v1fz local manifest and embeddings | `local_runs/dino_embeddings/v1gc/` | geo-distance comparisons, graph topology, cross-region bridges, transition candidates | implemented |
 | v1gd | `scripts/dino/revp_v1gd_dino_embedding_perturbation_robustness_diagnostics.py` | Perturbation robustness diagnostics for local Sentinel DINO embeddings | v1fz local manifest and embeddings | `local_runs/dino_embeddings/v1gd/` | controlled perturbations, drift, neighbor persistence, graph robustness, regional robustness | implemented |
+| v1ge | `scripts/dino/revp_v1ge_dino_expanded_sentinel_embedding_corpus.py` | Expanded Sentinel embedding corpus run with resume and regional balancing | v1fu manifest, v1fv preflight, DINO config | `local_runs/dino_embeddings/v1ge/` | embedding consistency, hashes, failures by region, resume/skip audit | implemented |
+| v1gf | `scripts/dino/revp_v1gf_dino_structural_evidence_index.py` | Integrated structural evidence index for manual review triage | local v1fz/v1ge and v1ga-v1gd outputs | `local_runs/dino_embeddings/v1gf/` | guardrails, review priority summary, no-label/no-target QA | implemented |
+| v1gg | `scripts/dino/revp_v1gg_dino_human_review_package.py` | Local-only human review package for medoids, outliers, bridges, and representatives | v1gf structural evidence index and local visual manifests | `local_runs/dino_embeddings/v1gg/` | review manifest, batches, local README, human review guardrails | implemented |
 
 ## Inputs and outputs
 
@@ -80,6 +83,9 @@ The analysis layer supports:
 - local spatial consistency diagnostics and multiscale structural sanity checks
 - geo-structural diagnostics comparing embedding neighborhoods with patch centroids, local graph topology, and cross-region bridge candidates
 - perturbation robustness diagnostics under small controlled image changes, without creating training augmentations
+- expanded local corpus execution with resume/skip-existing support
+- integrated structural evidence indexing for review triage
+- local-only human review packaging for later manual inspection
 
 These outputs are structural diagnostics for review. They are not semantic classes, not flood labels, and not model performance evidence.
 
@@ -101,12 +107,22 @@ v1gd applies small reversible perturbations to local Sentinel renderings to meas
 
 The robustness outputs compare original versus perturbed embeddings through cosine drift, nearest-neighbor persistence, cluster-assignment stability, medoid persistence, graph edge persistence, bridge persistence, hub stability, and regional drift summaries. These diagnostics support manual review of sensitivity and do not establish predictive reliability, class membership, or supervised performance.
 
+## Expanded corpus and human review triage
+
+v1ge expands Sentinel-first embedding execution beyond the initial small balanced corpus when local compute and model availability allow it. The run remains local-only and supports `--limit`, `--per-region-limit`, `--resume`, and `--skip-existing` so partial execution can be audited without overwriting previous local embeddings.
+
+v1gf consolidates structural diagnostics into a single evidence index per patch. The `review_priority` field is a deterministic triage cue for human inspection only. It is not a label, not a class, not a target, and not evidence that a patch has any flood or susceptibility status.
+
+v1gg packages local references for future human review of medoids, outliers, bridges, robust/unstable embeddings, reciprocal-neighbor examples, and region representatives. It does not copy raw rasters and does not version local images. Human notes are intentionally blank until manual inspection occurs.
+
 ## Current limitations
 
 - The balanced corpus is intentionally small and exploratory.
 - Visual review panels are local QA aids and should not be interpreted as semantic cluster explanations.
 - Geo-structural graph diagnostics are sensitive to local corpus size, coordinate provenance, and nearest-neighbor settings.
 - Perturbation diagnostics are local sensitivity audits; they are not training augmentations and do not validate operational robustness.
+- Expanded corpus execution is still constrained by local model availability, CPU/GPU speed, and private asset access.
+- `review_priority` and human-review package entries are audit workflow aids only.
 - CPU execution is acceptable for smoke and audit runs, but full runs may be slow.
 - DINO embeddings depend on local availability or explicitly allowed model download.
 - Multimodal assets remain excluded from the active path.
