@@ -38,3 +38,7 @@ A próxima etapa técnica é implementar DINO como encoder congelado, Sentinel-f
 ## Protocolo DINO Sentinel-first
 
 A documentação técnica auditável do fluxo DINO Sentinel-first está em `docs/dino_sentinel_embedding_protocol.md`.
+
+Documentos de fechamento da trilha DINO:
+- `docs/dino_sentinel_scientific_evidence_summary.md`
+- `docs/dino_command_registry.md`

@@ -39,6 +39,7 @@ DINOv2 with registers is the preferred backbone because register tokens are desi
 | v1gh | `scripts/dino/revp_v1gh_dino_longitudinal_structural_diagnostics.py` | Longitudinal comparison of structural diagnostics across DINO phases | local v1fz-v1gg outputs | `local_runs/dino_embeddings/v1gh/` | neighbor, outlier, medoid, bridge, review-priority, and regional stability | implemented |
 | v1gi | `scripts/dino/revp_v1gi_dino_structural_provenance_tracker.py` | Patch-to-embedding-to-diagnostic provenance tracking | local v1fz-v1gg outputs | `local_runs/dino_embeddings/v1gi/` | provenance index, diagnostic history, review traceability | implemented |
 | v1gj | `scripts/dino/revp_v1gj_multimodal_readiness_audit.py` | Multimodal readiness audit without multimodal execution | v1fu/v1fv Sentinel manifests and local DINO outputs | `local_runs/dino_embeddings/v1gj/` | readiness table, blockers, asset inventory, multimodal-disabled guardrails | implemented |
+| v1gk | `scripts/dino/revp_v1gk_dino_pipeline_reproducibility_audit.py` | Final reproducibility audit for the DINO Sentinel-first pipeline | versioned scripts, configs, docs, and local-output presence | `local_runs/dino_embeddings/v1gk/` | scripts/configs/docs existence, guardrails, local-only policy, forbidden artifact audit | implemented |
 
 ## Inputs and outputs
 
@@ -92,6 +93,7 @@ The analysis layer supports:
 - longitudinal stability checks across DINO diagnostic phases
 - provenance tracing from patch to embedding to review package
 - multimodal readiness audit while multimodal execution remains disabled
+- final reproducibility audit and command registry for local reruns
 
 These outputs are structural diagnostics for review. They are not semantic classes, not flood labels, and not model performance evidence.
 
@@ -131,6 +133,15 @@ v1gi records patch-to-embedding-to-diagnostic provenance. It tracks which versio
 
 v1gj audits structural readiness for future multimodal work without activating multimodal execution. It records Sentinel availability, local preflight status, known blocker categories, asset inventory, and guardrails. Readiness does not equal execution: `multimodal_execution_enabled=false` and `multimodal_training_enabled=false` remain active constraints.
 
+## Reproducibility closure
+
+v1gk audits the versioned scripts, required configs, documentation, local output presence, `.gitignore` protection, deterministic flags, and methodological guardrails. The audit is lightweight and does not rerun embedding extraction or other heavy operations.
+
+The final command and scientific summaries are versioned separately:
+
+- `docs/dino_command_registry.md`
+- `docs/dino_sentinel_scientific_evidence_summary.md`
+
 ## Current limitations
 
 - The balanced corpus is intentionally small and exploratory.
@@ -141,6 +152,7 @@ v1gj audits structural readiness for future multimodal work without activating m
 - `review_priority` and human-review package entries are audit workflow aids only.
 - Longitudinal stability is diagnostic persistence across local outputs, not environmental time-series inference.
 - Multimodal readiness is a blocker audit and compatibility preparation layer, not fusion, stack generation, or multimodal training.
+- Reproducibility audit checks pipeline structure and local evidence availability; it does not replace rerunning the full local workflow.
 - CPU execution is acceptable for smoke and audit runs, but full runs may be slow.
 - DINO embeddings depend on local availability or explicitly allowed model download.
 - Multimodal assets remain excluded from the active path.
