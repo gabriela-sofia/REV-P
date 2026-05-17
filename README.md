@@ -25,12 +25,18 @@ requirements.txt  Dependências Python do projeto
 
 Dados brutos, GeoTIFFs, shapefiles, GeoJSONs convertidos, embeddings `.npz`, outputs locais em `local_runs/`, caches, modelos pesados e arquivos locais de desenvolvimento não são versionados nem enviados ao repositório público.
 
+## Linhagem dos patches
+
+Os patches são recortes territoriais pré-existentes sobre áreas urbanas de Curitiba (14), Petrópolis (27) e Recife (18), com bounding boxes originadas de bases externas anteriores ao pipeline DINO. O DINO opera sobre imagens Sentinel associadas a esses patches — não define nem requalifica os limites territoriais.
+
+Detalhes em [docs/patch_lineage_and_grounding.md](docs/patch_lineage_and_grounding.md).
+
 ## Trilha DINO Sentinel-first
 
 O pipeline segue a ordem:
 
-1. Manifesto Sentinel (v1fu) — inventário canônico de patches elegíveis
-2. Preflight local (v1fv) — verificação de assets antes da extração
+1. Manifesto Sentinel (v1fu) — inventário de 128 TIFs Sentinel elegíveis nas três regiões
+2. Preflight local (v1fv) — verificação de quais referências são acessíveis no workspace privado
 3. Execução smoke de embeddings (v1fx) — leitura real de pixels, extração local
 4. Análise estrutural (v1fy–v1gi) — PCA, clustering, vizinhos, outliers, proveniência
 5. Auditorias operacionais (v1gn–v1gp) — saúde, orquestração, prontidão para release
@@ -50,6 +56,7 @@ Todos os outputs de execução ficam exclusivamente em `local_runs/`.
 
 ## Documentação técnica
 
+- [docs/patch_lineage_and_grounding.md](docs/patch_lineage_and_grounding.md) — linhagem territorial dos patches, vinculação Sentinel, claims permitidos e proibidos
 - [docs/dino_sentinel_embedding_protocol.md](docs/dino_sentinel_embedding_protocol.md) — protocolo completo do pipeline DINO
 - [docs/dino_command_registry.md](docs/dino_command_registry.md) — registro de comandos para reprodução local
 - [docs/dino_sentinel_scientific_evidence_summary.md](docs/dino_sentinel_scientific_evidence_summary.md) — resumo de evidências científicas
