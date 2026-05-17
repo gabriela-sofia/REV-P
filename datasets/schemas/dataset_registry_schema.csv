@@ -1,0 +1,13 @@
+field,type,description,example
+dataset_id,string,Identificador único do dataset no projeto,sentinel_patches_canonical
+dataset_name,string,Nome descritivo do dataset,Corpus canônico de patches Sentinel
+category,string,"Categoria: patches | embeddings | evidence | manifest | audit",patches
+region,string,"Região geográfica: Curitiba | Petrópolis | Recife | All",All
+source_layer_or_pipeline,string,Estágio ou fonte que produziu o dataset,v1fm / v1fu
+public_status,string,"STATUS: PUBLIC | SUMMARY_ONLY | LOCAL_ONLY | SCHEMA_ONLY",SUMMARY_ONLY
+local_status,string,"STATUS: EXISTS | PARTIAL | MISSING | ESTIMATED",EXISTS
+versionable_status,string,"Se pode ser commitado: YES | NO | SCHEMA_ONLY",NO
+scientific_role,string,Papel metodológico no projeto,Corpus de entrada para extração DINO
+limitations,string,Limitações explícitas do dataset,patch_bound_validated=0/59
+related_docs,string,Docs relacionados (separados por ponto e vírgula),docs/metodologia_cientifica/patch_lineage_and_grounding.md
+related_scripts,string,Scripts relacionados (separados por ponto e vírgula),scripts/dino/revp_v1fu_dino_sentinel_input_manifest.py

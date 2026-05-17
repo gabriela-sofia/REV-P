@@ -54,10 +54,21 @@ Todos os outputs de execução ficam exclusivamente em `local_runs/`.
 - DINO não prediz vulnerabilidade
 - `review_only=true`
 
+## Datasets auditáveis e artefatos de pesquisa
+
+O projeto produziu manifests públicos, registros de corpus e documentação de
+evidências externas sem versionar dados pesados (rasters, embeddings, shapefiles).
+
+- [`datasets/`](datasets/) — registros estruturados de datasets, corpora e evidências externas
+- [`datasets/dataset_registry.csv`](datasets/dataset_registry.csv) — inventário geral de artefatos
+- [`datasets/patch_corpus_registry.csv`](datasets/patch_corpus_registry.csv) — corpora de patches por estágio
+- [`datasets/external_evidence_registry.csv`](datasets/external_evidence_registry.csv) — evidências GIS por região
+- [`docs/metodologia_cientifica/research_datasets_and_artifacts.md`](docs/metodologia_cientifica/research_datasets_and_artifacts.md) — narrativa metodológica dos datasets
+
 ## Documentação técnica
 
-- [docs/patch_lineage_and_grounding.md](docs/patch_lineage_and_grounding.md) — linhagem territorial dos patches, vinculação Sentinel, claims permitidos e proibidos
-- [docs/dino_sentinel_embedding_protocol.md](docs/dino_sentinel_embedding_protocol.md) — protocolo completo do pipeline DINO
-- [docs/dino_command_registry.md](docs/dino_command_registry.md) — registro de comandos para reprodução local
-- [docs/dino_sentinel_scientific_evidence_summary.md](docs/dino_sentinel_scientific_evidence_summary.md) — resumo de evidências científicas
+- [docs/metodologia_cientifica/patch_lineage_and_grounding.md](docs/metodologia_cientifica/patch_lineage_and_grounding.md) — linhagem territorial dos patches, vinculação Sentinel, claims permitidos e proibidos
+- [docs/metodologia_cientifica/dino_sentinel_embedding_protocol.md](docs/metodologia_cientifica/dino_sentinel_embedding_protocol.md) — protocolo completo do pipeline DINO
+- [docs/metodologia_cientifica/dino_command_registry.md](docs/metodologia_cientifica/dino_command_registry.md) — registro de comandos para reprodução local
+- [docs/metodologia_cientifica/dino_sentinel_scientific_evidence_summary.md](docs/metodologia_cientifica/dino_sentinel_scientific_evidence_summary.md) — resumo de evidências científicas
 - [docs/estado_metodologico_revp.md](docs/estado_metodologico_revp.md) — estado e limitações metodológicas atuais

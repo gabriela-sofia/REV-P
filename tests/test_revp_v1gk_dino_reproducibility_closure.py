@@ -32,9 +32,9 @@ def test_v1gk_reproducibility_audit(tmp_path: Path) -> None:
 
 
 def test_final_dino_docs_and_guardrails_exist() -> None:
-    summary = ROOT / "docs" / "dino_sentinel_scientific_evidence_summary.md"
-    registry = ROOT / "docs" / "dino_command_registry.md"
-    protocol = ROOT / "docs" / "dino_sentinel_embedding_protocol.md"
+    summary = ROOT / "docs" / "metodologia_cientifica" / "dino_sentinel_scientific_evidence_summary.md"
+    registry = ROOT / "docs" / "metodologia_cientifica" / "dino_command_registry.md"
+    protocol = ROOT / "docs" / "metodologia_cientifica" / "dino_sentinel_embedding_protocol.md"
     assert summary.exists()
     assert registry.exists()
     assert protocol.exists()

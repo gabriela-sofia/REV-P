@@ -1,0 +1,16 @@
+field,type,description,example
+corpus_id,string,Identificador único do corpus,v1fu_sentinel_128
+pipeline_stage,string,Estágio do pipeline que gerou este corpus,v1fu
+corpus_name,string,Nome descritivo,Manifest Sentinel entrada DINO
+n_patches,integer,Número de patches no corpus,128
+regions,string,Regiões presentes (separadas por barra),Curitiba / Petrópolis / Recife
+region_counts,string,Contagem por região,Curitiba=43 Petrópolis=48 Recife=37
+modality,string,"Modalidade dos assets: sentinel | multimodal | mixed",sentinel
+public_manifest,string,Manifest público disponível neste repositório (caminho relativo ou N/A),manifests/dino_inputs/revp_v1fu_dino_sentinel_input_manifest/
+local_assets_status,string,"Status dos assets locais: EXISTS | PARTIAL | MISSING",EXISTS
+qa_status,string,Status QA do corpus,PASS
+pixel_reads,string,"Pixels lidos em estágio público: YES | NO",NO
+embeddings_extracted,string,"Embeddings extraídos: YES | NO | PARTIAL",NO
+embeddings_location,string,Localização dos embeddings (se existirem),local_runs/dino_embeddings/ (não versionado)
+limitations,string,Limitações explícitas,asset_path_reference é caminho relativo; arquivo real fica local
+related_manifest_file,string,Arquivo manifest principal,dino_sentinel_input_manifest_v1fu.csv

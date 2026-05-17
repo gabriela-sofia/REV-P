@@ -34,9 +34,9 @@ REQUIRED_CONFIGS = [
     "configs/project_state.yaml",
 ]
 REQUIRED_DOCS = [
-    "docs/dino_sentinel_embedding_protocol.md",
-    "docs/dino_sentinel_scientific_evidence_summary.md",
-    "docs/dino_command_registry.md",
+    "docs/metodologia_cientifica/dino_sentinel_embedding_protocol.md",
+    "docs/metodologia_cientifica/dino_sentinel_scientific_evidence_summary.md",
+    "docs/metodologia_cientifica/dino_command_registry.md",
 ]
 FORBIDDEN_VERSIONED_EXTENSIONS = {".npy", ".npz", ".parquet", ".pt", ".pth", ".ckpt", ".safetensors", ".index", ".tif", ".tiff"}
 GUARDRAIL_TERMS = [
@@ -127,7 +127,7 @@ def run(args: argparse.Namespace) -> int:
     for doc in REQUIRED_DOCS:
         path = ROOT / doc
         rows.append({"audit_item": Path(doc).name, "item_type": "doc", "path": doc, "exists": str(path.exists()).lower(), "local_output_path": "", "local_output_exists": "", "status": "PASS" if path.exists() else "FAIL", "details": "required versioned doc"})
-    protocol = ROOT / "docs" / "dino_sentinel_embedding_protocol.md"
+    protocol = ROOT / "docs" / "metodologia_cientifica" / "dino_sentinel_embedding_protocol.md"
     guardrails_present = file_has_any(protocol, ["review_only=true", "multimodal_execution_enabled=false"])
     rows.append({"audit_item": "methodological_guardrails", "item_type": "guardrails", "path": protocol.as_posix(), "exists": str(protocol.exists()).lower(), "local_output_path": "", "local_output_exists": "", "status": "PASS" if guardrails_present else "FAIL", "details": "review_only / sem execução multimodal"})
     seeds_flags_present = all((ROOT / "scripts" / "dino" / SCRIPT_BY_PHASE[phase]).exists() and "--seed" in (ROOT / "scripts" / "dino" / SCRIPT_BY_PHASE[phase]).read_text(encoding="utf-8", errors="ignore") for phase in ["v1fw", "v1fy", "v1fz", "v1ga", "v1gb", "v1gc", "v1gd", "v1ge"])

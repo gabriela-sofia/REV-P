@@ -1,0 +1,16 @@
+field,type,description,example
+evidence_id,string,Identificador único da evidência,recife_pe3d_mde
+source_name,string,Nome da fonte,PE3D/MDE rasters
+region,string,"Região: Curitiba | Petrópolis | Recife",Recife
+evidence_type,string,"Tipo: terrain | drainage | land_use | administrative | crs_metadata",terrain
+institutional_origin,string,Instituição ou programa de origem,Programa PE3D (Pernambuco 3D)
+format,string,Formato dos arquivos,GeoTIFF (raster)
+local_status,string,"Status local: EXISTS_PARTIAL | EXISTS_COMPLETE | MISSING | INDEXED_ONLY",EXISTS_PARTIAL
+public_status,string,"Status público: SUMMARY_ONLY | SCHEMA_ONLY | LOCAL_ONLY",SUMMARY_ONLY
+header_evidence,string,Se metadados/headers foram inspecionados,66 headers confirmados EPSG:31985
+spatial_coverage,string,Cobertura geográfica conhecida,Região metropolitana do Recife
+patch_coverage,string,Quantos patches a fonte potencialmente cobre,18 (Recife canônico)
+evidence_tier,string,"Tier metodológico: STRONG | CONTEXTUAL | EXPLORATORY",STRONG
+limitations,string,Limitações explícitas da fonte,Stack parcial; sem temporal-ready; não valida pixels individuais
+role_in_pipeline,string,Papel no pipeline de validação,Evidência topográfica externa para revisão humana
+related_manifest,string,Manifest relacionado,manifests/external_validation/revp_external_validation_master_package_FIXED_20260511_200206/
