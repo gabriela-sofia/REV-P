@@ -1,0 +1,73 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Ambientes locais e variáveis de ambiente
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+
+# Sistema operacional e editores
+.DS_Store
+Thumbs.db
+.vscode/
+.cursor/
+.idea/
+
+# Logs, cache e execuções locais
+*.log
+logs/
+tmp/
+temp/
+local_runs/
+
+# Dados brutos e artefatos geoespaciais pesados
+*.tif
+*.tiff
+*.vrt
+*.aux.xml
+*.ovr
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+
+# Artefatos de modelo e matrizes pesadas
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.pkl
+*.joblib
+*.npy
+*.npz
+*.parquet
+
+# Diretórios locais não versionáveis
+archive_drive/
+patches/
+data/
+outputs/
+models/
+model_cache/
+.cache/
+.cache_huggingface/
+huggingface/
+
+# Materiais legados removidos do escopo atual
+*cbers*
+*CBERS*
+generate_*.py
+validate_v1q3*.py
+investigate_v1q3b.py

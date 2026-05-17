@@ -1,0 +1,56 @@
+{
+  "phase": "v1fr",
+  "phase_name": "SELF_SUPERVISED_DATALOADER_PREFLIGHT_AND_EXPERIMENT_SCAFFOLD",
+  "created_utc": "2026-05-12T19:00:06.966822+00:00",
+  "input_v1fq_rows": 353,
+  "dl_input_rows": 353,
+  "preflight_status_counts": {
+    "BLOCKED": 142,
+    "SAFE_FOR_REVIEW_ONLY": 211
+  },
+  "asset_type_counts": {
+    "MULTIMODAL_STACK_NPY": 83,
+    "NO_ASSET_PATH": 59,
+    "RGB_PREVIEW_PNG": 83,
+    "SENTINEL_TIF_ASSET": 128
+  },
+  "modality_counts": {
+    "multimodal_stack_path_only": 83,
+    "none": 59,
+    "rgb_preview": 83,
+    "sentinel_raster_path_only": 128
+  },
+  "blocked_rows": 142,
+  "split_groups": 353,
+  "master_visual_catalog_used": true,
+  "master_visual_report_used": true,
+  "final_state": "SELF_SUPERVISED_DATALOADER_PREFLIGHT_READY_FOR_REVIEW",
+  "locks": {
+    "observed_flood_claim": "absent",
+    "binary_training_ready": "no",
+    "supervised_training_ready": "no",
+    "patch_bound_validated": "0/59",
+    "preflight_ready": "0/59",
+    "gates": "blocked",
+    "cbers": "ignored"
+  },
+  "guardrails": {
+    "training_runs": 0,
+    "labels_created": 0,
+    "targets_created": 0,
+    "weak_supervision_runs": 0,
+    "model_metrics": 0,
+    "performance_claims": 0,
+    "canonical_writes": 0,
+    "gate_promotion": 0,
+    "crs_promotion": 0,
+    "patch_bound_validated_promotion": 0,
+    "preflight_ready_promotion": 0,
+    "raster_pixel_reads": 0,
+    "band_reads": 0,
+    "raster_summary_metrics": 0,
+    "spatial_ops": 0,
+    "coordinate_transform_ops": 0
+  },
+  "pytest_status": "PASS: 118 passed in 3.59s with python -m pytest -q --ignore=archive_drive"
+}

@@ -1,0 +1,36 @@
+{
+  "version": "external_validation_master_package_FIXED_v1",
+  "created_at": "2026-05-11T20:02:31.572495",
+  "root": "C:\\Users\\gabriela\\Documents\\PROJETO",
+  "output_folder": "C:\\Users\\gabriela\\Documents\\PROJETO\\outputs\\external_validation\\revp_external_validation_master_package_FIXED_20260511_200206",
+  "state": "EXTERNAL_VALIDATION_MASTERED_FOR_REVIEW_NOT_MET",
+  "regional_status": {
+    "Curitiba_B2": "STRONG_METADATA_EXTENT_EVIDENCE_PRESENT_NEEDS_REVIEW",
+    "Petropolis_B3": "LOCAL_OFFICIAL_HEADER_BOUNDS_PRESENT_NEEDS_REVIEW",
+    "Petropolis_B5": "CRS_EVIDENCE_PRESENT_READY_FOR_REVIEW",
+    "Recife_B4": "LOCAL_RASTER_HEADER_EVIDENCE_PRESENT_NEEDS_REVIEW"
+  },
+  "remaining_blockers": {
+    "B1": "UNMET",
+    "B6": "0/59 C1-C10 not evaluated",
+    "B7": "reviewer dependency unmet",
+    "B8": "blocked on B7",
+    "B9": "blocked on CRS gate",
+    "B10_B11": "downstream deferred"
+  },
+  "copied_light_evidence_files": 442,
+  "official_heavy_assets_indexed": 1397,
+  "QA": {
+    "pass": 11,
+    "fail": 0
+  },
+  "guardrails": [
+    "No gate opened",
+    "No canonical writes",
+    "No CRS promotion",
+    "No spatial operations",
+    "No raster/pixel reads",
+    "No labels/targets/training/metrics",
+    "Heavy files manifest-only"
+  ]
+}

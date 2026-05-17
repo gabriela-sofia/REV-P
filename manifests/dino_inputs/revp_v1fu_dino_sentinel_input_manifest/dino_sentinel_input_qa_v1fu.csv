@@ -1,0 +1,12 @@
+check,status,details
+input files exist inside repo,PASS,9/9 required inputs present
+project_state confirms review_only / sentinel_first_dino_review_only,PASS,stage=review_only_dino_preimplementation; current_valid_path=sentinel_first_dino_review_only
+dino config blocks supervised classification,PASS,blocked supervised flood classification and predictive performance claims; mode frozen_encoder
+no raw/heavy outputs created,PASS,v1fu writes csv/json metadata only
+no forbidden directories created,PASS,none found
+no forbidden extensions created,PASS,none found
+expected Sentinel count = 128,PASS,actual=128 expected=128
+no label/target columns promoted as truth,PASS,label_status and target_status are constant review-only guardrails
+output CSV has required columns,PASS,20 required columns checked
+status CSV summarizes PASS/FAIL,PASS,status is derived from QA checks after all output rows are built
+embedding config remains future-only,PASS,no embeddings generated in v1fu

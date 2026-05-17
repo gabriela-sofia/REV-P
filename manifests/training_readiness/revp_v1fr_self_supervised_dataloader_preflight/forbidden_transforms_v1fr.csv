@@ -1,0 +1,6 @@
+operation,reason,blocked_scope
+derive event class from evidence/status,"Evidence/status fields are review metadata, not targets.",all supervised or weak-supervised use
+"create masks, boxes or detection targets",No accepted patch footprint or event mask exists.,segmentation and detection
+use official CRS/bounds/header evidence as model outcome,Would create circular evidence leakage.,all model objectives
+random split by row,"Spatial, regional, source and derivative leakage risk.",all future experiments
+report accuracy/F1/AUC for event detection,No valid event truth or supervised task is available.,all reports until protocol changes

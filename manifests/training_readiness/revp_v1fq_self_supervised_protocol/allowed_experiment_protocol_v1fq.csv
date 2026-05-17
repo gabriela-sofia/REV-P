@@ -1,0 +1,4 @@
+experiment_mode,allowed_now,objective,architecture_or_method,allowed_evaluation,forbidden_evaluation
+visual/material explanation,yes,"Explain real assets, evidence dossiers and grounding status.","static panels, retrieval-by-path, manual QA","completeness, legibility, audit traceability",event classification metrics
+self-supervised representation planning,review_only_planning,Plan embeddings/pretext learning without labels.,transfer learning embeddings or pretrained encoder; not CNN from scratch,"embedding sanity checks, clustering exploration, visual retrieval, modality separation","flood accuracy, F1, AUC, positive/negative labels"
+blocked smoke-test design,design_only,Specify how a future no-label pipeline would run after approval.,small frozen-backbone embedding extraction plan,runtime smoke QA only after reviewer approval,scientific performance claims

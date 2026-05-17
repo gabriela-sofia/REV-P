@@ -1,0 +1,10 @@
+column,type,required,description
+asset_id,string,yes,Stable input asset id from v1fs.
+candidate_id,string,yes,Candidate identifier; not a validated patch claim.
+region,string,yes,Split/control metadata only.
+modality,string,yes,Input modality.
+split_group,string,yes,Grouped split key.
+embedding_vector,array<float>,future_only,Future artifact; not generated in v1ft.
+encoder_config_id,string,future_only,Reviewed encoder/config reference.
+label,not_allowed,no,Labels are forbidden in this track.
+target,not_allowed,no,Targets are forbidden in this track.

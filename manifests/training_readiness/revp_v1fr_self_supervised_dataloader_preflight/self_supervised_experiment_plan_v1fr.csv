@@ -1,0 +1,6 @@
+experiment,status,objective,method,inputs,allowed_outputs,forbidden_outputs
+visual_embedding_review_only,ALLOWED_FOR_FUTURE_REVIEW_ONLY,"Learn visual/material embeddings, not event detection.",pretrained encoder embeddings or transfer-learning feature extraction; no CNN from scratch,SAFE_FOR_REVIEW_ONLY RGB/stack/TIF assets after reviewer approval,"embedding vectors, retrieval examples, clustering sanity plots","event labels, supervised metrics, readiness claims"
+contrastive_or_pretext_review_only,ALLOWED_FOR_FUTURE_REVIEW_ONLY,No-target representation sanity check.,contrastive/pretext objective with grouped split,approved asset groups only,"loss trace for runtime QA, embeddings for inspection",event classification claims
+visual_retrieval_similarity,ALLOWED_FOR_FUTURE_REVIEW_ONLY,Inspect whether visually similar assets retrieve together.,nearest-neighbor retrieval in embedding space,approved embeddings only,qualitative retrieval panels,performance claims
+binary_classification,BLOCKED,Not permitted.,none,none,none,binary ready claim or event metrics
+segmentation_detection_or_weak_labels,BLOCKED,Not permitted.,none,none,none,"masks, boxes, weak labels, supervised metrics"

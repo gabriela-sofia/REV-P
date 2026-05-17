@@ -1,0 +1,8 @@
+claim_type,allowed,forbidden
+Geometry,52 patches have raw_patch_geometry (v1d bbox WGS84 degrees),52 patches have patch_bound_validated; geometry is spatial-validated; final bounds
+TIF Binding,20 patches have TIF designation (medium confidence; v1d row order),20 patches have confirmed TIF binding; binding is spatial-verified; TIF binding is final
+Patch Bounds,"OFFICIAL_DATASET_BOUNDS (GeoCuritiba SERVICE_LAYER, SGB envelope, PE3D coverage)",Individual patch footprints are validated; dataset bounds = patch bounds; spatial ops approved
+CRS,CRS candidate (EPSG:31982/31983/31985); external decision pending (B1),CRS is finalized; SIRGAS 2000 is confirmed; WGS84 UTM is operational; CRS promoted
+Status,CANDIDATE_ONLY_NOT_VALIDATED; METADATA_VERIFIED_CANDIDATE (v1fk language),validated; confirmed; final; ground truth; flood observed; detected events; patch_bound_validated
+Gates,Gates 1-10 are BLOCKED; evidence B2+B3+B4+B5 compiled and awaiting review,Gates will open after CRS decisions; implicit gate opening promised; timeline predicted
+Spatial Ops,PLANNING: dry-run reprojection scenarios; no actual spatial ops performed,"Spatial operations: reprojection, clipping, alignment, spatial join, pixel sampling, feature extraction"

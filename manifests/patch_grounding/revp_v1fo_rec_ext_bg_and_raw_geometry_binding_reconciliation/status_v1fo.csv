@@ -1,0 +1,11 @@
+metric,value,target,status
+phase,v1fo: Recife ext/bg and Raw Geometry Binding Reconciliation,COMPLETE_METADATA_ONLY,COMPLETE
+total_patches_evaluated,59,59,PASS
+recife_ext_bg_inventory,18,18,PASS
+canonical_raw_geometry_reconciliation,18,18 REC,PASS
+patch_grounding_status_classifications,4,4 categories,PASS
+unresolved_patches_inventory,32,All unresolved documented,PASS
+patch_bound_validated,0/59,0/59 (LOCKED),PASS
+spatial_ops_performed,0,0,PASS
+pixel_reads_performed,0,0,PASS
+canonical_writes_performed,0,0,PASS

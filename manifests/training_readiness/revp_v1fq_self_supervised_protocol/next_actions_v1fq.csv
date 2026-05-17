@@ -1,0 +1,5 @@
+priority,action,purpose,guardrail
+1,Reviewer approval of self-supervised asset scope,Decide which of the 128 review-only candidates may enter a future no-label pretext manifest.,Do not treat candidates as validated patches.
+2,Resolve or exclude blocked grounding groups,"Keep Recife ext/bg naming, unresolved TIF binding and placeholders out of training manifests.",No automatic inclusion from path presence alone.
+3,Define grouped split table,Attach region/source/tile/raster lineage groups before any future experiment.,No simple random split.
+4,Draft optional no-label smoke-test spec,Prepare transfer-learning embedding extraction plan after review.,"No labels, no target metrics, no model performance claims."

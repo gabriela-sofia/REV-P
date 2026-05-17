@@ -1,0 +1,5 @@
+case,status,blocking_reason,required_before_revisit
+supervised binary training,blocked,No observed-flood ground truth and no valid binary labels.,"Truth source, label policy, patch-bound validation, anti-leakage split, reviewer approval."
+weak supervision real training,blocked,No formal weak-label protocol and risk of using evidence/status as target.,"Protocol defining target semantics, source separation, leakage controls and claims."
+segmentation/detection,blocked,No accepted masks/targets and patch_bound_validated=0/59.,Reviewer-approved geometry/masks/targets and preflight readiness.
+random split evaluation,forbidden,High spatial/regional/source leakage risk.,Grouped split design by region/source/tile/raster lineage.

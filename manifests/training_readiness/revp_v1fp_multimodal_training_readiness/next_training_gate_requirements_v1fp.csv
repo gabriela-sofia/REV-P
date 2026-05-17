@@ -1,0 +1,7 @@
+training_path,minimum_requirement,current_status,required_action
+A_supervised_binary_real,Independent observed event truth or accepted label source.,missing,Acquire/define reviewer-approved truth source; document semantics and scope.
+A_supervised_binary_real,Patch-bound and preflight readiness.,patch_bound_validated=0/59; preflight_ready=0/59,"Resolve patch-to-TIF/stack binding, geometry, CRS and gate QA before any training."
+B_weak_proxy,Formal weak-label protocol.,not yet defined,"Specify proxy target, source separation, leakage controls and allowed claims."
+B_weak_proxy,Review of unresolved grounding categories.,20 designated-needs-review; 18 Recife naming unresolved; 14 TIF unresolved; 7 placeholders.,Resolve or explicitly exclude blocked categories before any dataset release.
+C_self_supervised_representation,Frozen asset manifest with no labels.,"candidate assets exist, but scope needs review.","Approve manifest, exclude placeholders/unresolved naming, and use grouped anti-leakage split."
+C_self_supervised_representation,No target promotion and no scientific class claims.,required guardrail,Document pretext objective and QA-only interpretation before smoke test.

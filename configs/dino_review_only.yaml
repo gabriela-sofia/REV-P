@@ -1,0 +1,26 @@
+﻿encoder:
+  primary_candidate: dinov2_reg
+  alternative_candidate: dinov3
+  mode: frozen_encoder
+  level: patch_embeddings
+
+scope:
+  allowed:
+    - sentinel_first_embedding_extraction
+    - pca
+    - umap
+    - faiss_knn
+    - clustering
+    - visual_review
+    - outlier_review
+  blocked:
+    - supervised_flood_classification
+    - binary_susceptibility_target
+    - weak_label_promotion
+    - predictive_performance_claims
+
+data_policy:
+  commit_raw_rasters: false
+  commit_npy_npz: false
+  commit_checkpoints: false
+  commit_heavy_archives: false

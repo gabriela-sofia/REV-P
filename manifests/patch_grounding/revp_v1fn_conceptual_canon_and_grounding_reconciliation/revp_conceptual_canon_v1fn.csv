@@ -1,0 +1,12 @@
+term,meaning,current_status,correct_use,forbidden_use,implication,related_blocker
+EXTERNAL_VALIDATION_MASTERED_FOR_REVIEW_NOT_MET,Evidence collected for all 3 regions; assembly complete; reviewer decision pending on B1+B7.,,,,No automatic gate opening; all spatial ops remain forbidden.,
+OFFICIAL_DATASET_BOUNDS,"Geographic extent of official dataset (GeoCuritiba service layer, SGB envelope, PE3D coverage).",,,,,
+RAW_PATCH_GEOMETRY,Bounding box from v1d (WGS84 degrees); source=external sidecar CSV files.,PRESENT in v1d for 52 MAPPED patches; ABSENT for 7 placeholders (CUR_08-14).,,,,
+TIF_HEADER_COORDS,"UTM bounds + EPSG from sentinel TIF headers (rasterio.open, 0 pixel reads).",,,,,
+PATCH_TO_TIF_DESIGNATION,Association of canonical patch_id to raw_patch_id (from v1d row order).,52 DESIGNATED candidates; 7 PLACEHOLDER_ONLY; 0 confirmed.,,,,
+PATCH_TO_TIF_CONFIRMED,Designation verified by spatial overlap (footprint intersection); requires Gate 3.,"0/59 (LOCKED). Gate 3 = SPATIAL_PREFLIGHT, currently BLOCKED.",,,,
+PATCH_BOUND_VALIDATED,Pixel-level alignment + coverage verified; raster mosaic consistency checked.,0/59 (LOCKED). Downstream of Gate 3.,,,,
+SPATIAL_PREFLIGHT_READY,All C1-C10 criteria met; gate reevaluation approved; spatial ops permitted.,0/59 (LOCKED). Depends on B1+B6+B7.,,,,
+MET,,,B2/B3/B4/B5 evidence 'MET' (collected and compiled).,NEVER apply to patch grounding status until gate reevaluation approved.,,
+REVIEWER_DEPENDENCY,Decision pending from REV-P manual review (not automatic gate).,,,,,
+CRS_PROMOTION,,,,,,

@@ -1,0 +1,49 @@
+{
+  "version": "v1fo",
+  "date": "2026-05-11T23:59:27.160853",
+  "phase": "REC_EXT_BG_AND_RAW_GEOMETRY_BINDING_RECONCILIATION",
+  "status": "COMPLETE_METADATA_ONLY",
+  "patch_counts": {
+    "total": 59,
+    "recife": 18,
+    "recife_ext": 6,
+    "recife_bg": 12
+  },
+  "patch_grounding_after_v1fo": {
+    "placeholder_only_no_geometry": 7,
+    "geometry_and_tif_designated_needs_review": 20,
+    "raw_geometry_present_tif_unresolved": 14,
+    "unresolved_rec_ext_bg_naming": 18
+  },
+  "recife_findings": {
+    "ext_bg_inventory_rows": 18,
+    "canonical_reconciliation_rows": 18,
+    "unresolved_count": 18,
+    "next_action": "Await PE3D metadata extraction (B4); determine TIF naming convention"
+  },
+  "gates_status": {
+    "all_gates": "10/10 BLOCKED",
+    "patch_bound_validated": "0/59 LOCKED",
+    "spatial_preflight_ready": "0/59 LOCKED"
+  },
+  "forbidden_operations": {
+    "spatial_ops": 0,
+    "pixel_reads": 0,
+    "canonical_writes": 0,
+    "crs_promotion": 0,
+    "gate_opening": 0,
+    "overclaiming": 0
+  },
+  "files_created": [
+    "recife_ext_bg_inventory_v1fo.csv",
+    "recife_canonical_raw_geometry_reconciliation_v1fo.csv",
+    "raw_geometry_to_stack_tif_candidates_v1fo.csv",
+    "patch_grounding_status_after_v1fo.csv",
+    "unresolved_after_v1fo.csv",
+    "next_action_matrix_v1fo.csv",
+    "QA_v1fo.csv",
+    "status_v1fo.csv",
+    "summary_v1fo.json",
+    "report_v1fo.md"
+  ]
+}

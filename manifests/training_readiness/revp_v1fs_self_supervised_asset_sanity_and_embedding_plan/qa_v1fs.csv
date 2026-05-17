@@ -1,0 +1,13 @@
+check,status,details
+outputs exist,PASS,All required v1fs outputs are present.
+v1fr counts preserved,PASS,safe=211; blocked=142
+eligible rows accounted,PASS,eligible=211
+blocked rows preserved,PASS,blocked=142
+no blocked entry promoted,PASS,No v1fr blocked row is marked ready in v1fs.
+dangerous terms absent in summary,PASS,Checked summary text for forbidden phrasing.
+script has no training loop or prohibited calls,PASS,Checked exact code patterns for training/pixel-read calls.
+zero training,PASS,No training executed.
+zero labels and targets,PASS,No labels/targets created.
+zero raster pixel reads,PASS,Header/path only.
+zero promotions,PASS,No gate/CRS promotion.
+CBERS ignored,PASS,CBERS remains ignored.

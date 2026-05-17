@@ -1,0 +1,67 @@
+{
+  "stage": "v1fm",
+  "task": "EXPLICIT_PATCH_TIF_DESIGNATION_TABLE",
+  "date": "2026-05-11",
+  "status": "DESIGNATION_TABLE_COMPLETE_NEEDS_REVIEW",
+  "protocol": "A_METADATA_ONLY",
+  "total_patches": 59,
+  "designation_counts": {
+    "NO_MATCHING_SENTINEL_TIF_MAPPED": 14,
+    "DESIGNATED_BY_DETERMINISTIC_ORDER_NEEDS_REVIEW": 20,
+    "PLACEHOLDER_ONLY_NO_TIF": 7,
+    "NO_MATCHING_SENTINEL_TIF": 18
+  },
+  "tif_bearing_patches": 20,
+  "placeholder_only_patches": 7,
+  "no_matching_tif_mapped_patches": 14,
+  "no_matching_tif_rec_patches": 18,
+  "designation_method_primary": "DESIGNATED_BY_DETERMINISTIC_ORDER_NEEDS_REVIEW",
+  "designation_source": "patch_geometry_registry_v1d.csv (row order = canonical sequence)",
+  "designation_confidence": "MEDIUM -- row order not spatially verified",
+  "region_breakdown": {
+    "Curitiba": {
+      "NO_MATCHING_SENTINEL_TIF_MAPPED": 4,
+      "DESIGNATED_BY_DETERMINISTIC_ORDER_NEEDS_REVIEW": 3,
+      "PLACEHOLDER_ONLY_NO_TIF": 7
+    },
+    "Petropolis": {
+      "DESIGNATED_BY_DETERMINISTIC_ORDER_NEEDS_REVIEW": 17,
+      "NO_MATCHING_SENTINEL_TIF_MAPPED": 10
+    },
+    "Recife": {
+      "NO_MATCHING_SENTINEL_TIF": 18
+    }
+  },
+  "guardrails": {
+    "pixel_reads": 0,
+    "spatial_ops": 0,
+    "canonical_writes": 0,
+    "patch_bound_validated": "0/59 LOCKED",
+    "gates_blocked": "10/10 BLOCKED"
+  },
+  "caveats": [
+    "CUR_08-14: PLACEHOLDER_ONLY_NO_TIF -- canonical status is METADATA_PENDING even if physical TIF exists",
+    "REC: NO_MATCHING_SENTINEL_TIF -- recife_ext_XXXX naming does not match sentinel TIF naming (recife_XXXXX)",
+    "SIG Petropolis zip: SIG_ZIP_VALID_CONTENT_LISTED_SIZE_MISMATCH_NEEDS_REVIEW -- NOT truncated",
+    "TIF EPSG: CUR=32722, PET=32723, REC=32725 (WGS84 UTM); official candidates use SIRGAS 2000 -- CRS discrepancy is part of B1",
+    "v1d bbox in WGS84 degrees; TIF bounds in UTM meters -- different CRS, not comparable without reprojection",
+    "Designation is NEEDS_REVIEW: reviewer must accept row-order binding before advancing to spatial preflight"
+  ],
+  "blockers_unchanged": {
+    "B1": "UNMET -- external CRS decisions pending",
+    "B6": "UNMET -- 0/59 patches at C1-C10",
+    "B7": "UNMET -- cannot request until B6 met"
+  },
+  "outputs_created": [
+    "patch_designation_table_v1fm.csv",
+    "designation_status_summary_v1fm.csv",
+    "region_designation_breakdown_v1fm.csv",
+    "placeholder_audit_v1fm.csv",
+    "tif_bearing_patches_v1fm.csv",
+    "unresolved_patches_v1fm.csv",
+    "2_SUMMARY_v1fm.json",
+    "3_QA_v1fm.csv",
+    "status_v1fm.csv",
+    "ready_for_next_step.md"
+  ]
+}

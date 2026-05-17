@@ -1,0 +1,18 @@
+phase: v1fw
+backbone: dinov2_vitb14_reg
+fallback_backbones:
+  - dinov2_vitb14
+  - dinov2_vits14_reg
+tokens:
+  - cls
+  - patch_mean
+image_size: 224
+batch_size: 8
+seed: 42
+device: auto
+normalization: imagenet
+sentinel_composite_policy: first_three_bands_or_available
+robust_percentile_scaling: [2, 98]
+output_format: npz_local_only
+review_only: true
+supervised_training: false

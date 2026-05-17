@@ -1,0 +1,6 @@
+item,ready_for_review,remaining_caveat
+B2 Curitiba,YES,Not MET; not individual patch-bound validation.
+B3 Petrópolis,YES,Not MET; dataset envelope not individual PET_XX footprint.
+B4 Recife,YES,Not MET; no pixel/alignment/coverage validation.
+B5 Petrópolis CRS,YES,No CRS promotion.
+Gate reevaluation,NO,B1/B7/B6 still unresolved.

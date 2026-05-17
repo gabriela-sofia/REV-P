@@ -1,0 +1,3 @@
+# Example only. Keep real private paths out of versioned files.
+private_project_root: "C:/path/to/private/PROJETO"
+default_dino_asset_preflight_output_dir: "local_runs/dino_asset_preflight/v1fv"

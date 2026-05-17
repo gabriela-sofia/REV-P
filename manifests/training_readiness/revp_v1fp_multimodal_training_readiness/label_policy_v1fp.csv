@@ -1,0 +1,6 @@
+item,policy,current_status,allowed_claims,prohibited_claims
+Observed event truth,"Can become label only if independently sourced, event-specific, documented, and reviewer-approved.",absent,None for supervised event labeling at this stage.,Do not claim observed flood occurrence or final binary target.
+External susceptibility coherence status,Evidence for review; not a binary class.,present as REV-P evidence/status.,Supports methodological coherence review.,Do not convert coherent/partial/background/requires_check into positive/negative classes.
+Metadata/header/bounds/CRS evidence,Can document asset readiness and grounding support; cannot be target label.,"present for Recife, Curitiba, Petrópolis in review-only form.",Evidence present for review; no promotion.,"Do not claim gate pass, CRS promotion, or patch acceptance."
+RGB previews and visual panels,Can support explanation and QA; cannot define scientific target.,present for part of dataset and master package.,Visual/material artifacts exist.,Do not treat preview appearance as event truth.
+Weak/proxy targets,Only after formal weak-label protocol and anti-leakage design.,not defined.,Protocol design can begin.,Do not train weak-label model yet.

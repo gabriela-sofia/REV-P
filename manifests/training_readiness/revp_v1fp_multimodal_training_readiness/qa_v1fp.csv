@@ -1,0 +1,11 @@
+check,status,details
+zero canonical writes,PASS,"Script writes only docs, script, and outputs/training_readiness."
+zero gate promotion,PASS,All gate language remains blocked/review-only.
+zero CRS promotion,PASS,CRS evidence is reported as review-only/not promoted.
+zero binary labels created,PASS,Every row has can_use_for_binary_supervised_training=false.
+zero training readiness promotion,PASS,Only conditional review-only/self-supervised candidates are marked.
+zero raster pixel reads,PASS,No rasterio/GDAL imports; no TIF opens; path/stat inventory only.
+CBERS ignored,PASS,Any path containing CBERS was skipped.
+all counts internally consistent,PASS,Manifest rows=187.
+every trainability status has blocking reason,PASS,Blocking reason populated for every candidate row.
+unsafe/stale claims avoided or explicitly negated,PASS,Report scopes observed-flood truth and binary training only as absent/blocked; no positive final-status claim.
