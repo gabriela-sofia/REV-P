@@ -41,8 +41,8 @@ def test_final_dino_docs_and_guardrails_exist() -> None:
     summary_text = summary.read_text(encoding="utf-8").lower()
     registry_text = registry.read_text(encoding="utf-8").lower()
     protocol_text = protocol.read_text(encoding="utf-8").lower()
-    assert "does not create labels" in summary_text
-    assert "not a scientific label" in summary_text
+    assert "não cria rótulos" in summary_text
+    assert "não é um rótulo científico" in summary_text
     assert "multimodal_execution_enabled=false" in registry_text
     assert "local_runs/" in registry_text
     assert "v1gk" in protocol_text
