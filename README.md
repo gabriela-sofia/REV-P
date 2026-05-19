@@ -73,11 +73,14 @@ A camada de referência contextual foi refinada pelo Protocolo C, que organiza e
 
 - [docs/metodologia_cientifica/protocolo_c_construcao_referencia_operacional.md](docs/metodologia_cientifica/protocolo_c_construcao_referencia_operacional.md) — Protocolo C: critérios de promoção, bloqueadores e relação com a literatura
 - [docs/metodologia_cientifica/protocolo_c_aquisicao_ground_reference.md](docs/metodologia_cientifica/protocolo_c_aquisicao_ground_reference.md) — etapa de aquisição: registro metadata-only de eventos candidatos e vínculos patch-evento-fonte
+- [docs/metodologia_cientifica/protocolo_c_plano_aquisicao_evidencias_observacionais.md](docs/metodologia_cientifica/protocolo_c_plano_aquisicao_evidencias_observacionais.md) — plano de aquisição de evidências observacionais por região (v1hl): fontes-alvo, prioridades, força metodológica e readiness regional
+- [docs/metodologia_cientifica/protocolo_c_pacote_operacional_aquisicao_evidencias.md](docs/metodologia_cientifica/protocolo_c_pacote_operacional_aquisicao_evidencias.md) — pacote operacional de aquisição (v1hm): princípios, fluxo, intake, licenciamento, staging local e bloqueios
+- [docs/metodologia_cientifica/protocolo_c_runbook_aquisicao_evidencias.md](docs/metodologia_cientifica/protocolo_c_runbook_aquisicao_evidencias.md) — runbook passo a passo para coleta futura de evidências (v1hm)
 - [docs/metodologia_cientifica/protocolo_c_fechamento_evidencias_ground_reference.md](docs/metodologia_cientifica/protocolo_c_fechamento_evidencias_ground_reference.md) — etapa de fechamento: gates de promoção, níveis de evidência e matriz de lacunas por região
 - [docs/metodologia_cientifica/protocolo_c_revisao_humana_referencia.md](docs/metodologia_cientifica/protocolo_c_revisao_humana_referencia.md) — protocolo de revisão humana: decisões possíveis, critérios de bloqueio e registro obrigatório
 - [docs/metodologia_cientifica/camada_referencia_contextual_validada.md](docs/metodologia_cientifica/camada_referencia_contextual_validada.md) — hierarquia de status e guardrails por patch
 
-O Protocolo C agora inclui fechamento de evidências, revisão humana e decisão de promoção, formando uma trilha auditável para eventual ground reference. Ground truth operacional permanece não estabelecido. O objetivo é identificar lacunas reais para aquisição futura — não treinar modelo.
+O Protocolo C agora inclui pacote operacional de aquisição/intake (v1hm), que define como receber, registrar, licenciar e triar evidências. O GitHub continua contendo apenas metadados públicos seguros — dados brutos permanecem local-only. Licença e proveniência bloqueiam promoção quando insuficientes. Multimodal permanece em hold. Ground truth operacional permanece não estabelecido.
 
 ### Datasets das etapas de aquisição e fechamento
 

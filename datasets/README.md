@@ -58,6 +58,16 @@ executado, qual QA foi aprovado antes da extração de embeddings.
 | `schemas/ground_reference_gap_matrix_schema.csv` | Schema de campos de ground_reference_gap_matrix.csv |
 | `schemas/human_reference_review_schema.csv` | Schema de campos de human_reference_review_registry.csv |
 | `schemas/reference_promotion_decision_schema.csv` | Schema de campos de reference_promotion_decision_registry.csv |
+| `observational_evidence_acquisition_plan.csv` | Plano de aquisição de evidências observacionais por região (v1hl): fontes-alvo, prioridades, força metodológica, gates relacionados e acesso esperado |
+| `schemas/observational_evidence_acquisition_plan_schema.csv` | Schema de campos de observational_evidence_acquisition_plan.csv |
+| `regional_ground_reference_readiness.csv` | Prontidão regional para ground reference (v1hl): status de gates por região, evidência mais forte, lacunas críticas, risco metodológico e allowed/forbidden claims |
+| `schemas/regional_ground_reference_readiness_schema.csv` | Schema de campos de regional_ground_reference_readiness.csv |
+| `evidence_acquisition_tracker.csv` | Tracker de aquisição (v1hm): estado atual de cada fonte-alvo por região — acquisition_status, license_status, current_blocker, next_action e forbidden_use |
+| `schemas/evidence_acquisition_tracker_schema.csv` | Schema de campos de evidence_acquisition_tracker.csv |
+| `evidence_source_intake_registry.csv` | Intake registry (v1hm): fontes acessadas ou em processo — event_link_status, intake_decision, blocked_reason, allowed_use e forbidden_use por entrada |
+| `schemas/evidence_source_intake_schema.csv` | Schema de campos de evidence_source_intake_registry.csv |
+| `evidence_license_provenance_registry.csv` | Registry de licença e proveniência (v1hm): license_status, redistribution_status, raw_data_publication_allowed, local_only_required e use_for_operational_ground_truth_allowed por fonte |
+| `schemas/evidence_license_provenance_schema.csv` | Schema de campos de evidence_license_provenance_registry.csv |
 
 ## Protocolo C e camada de referência
 
@@ -72,6 +82,10 @@ Veja [`docs/metodologia_cientifica/protocolo_c_construcao_referencia_operacional
 A etapa de fechamento de evidências adiciona mais três registros metadata-only: `ground_reference_gap_matrix.csv` mapeia os gates de promoção abertos por região com evidência faltante e risco metodológico; `human_reference_review_registry.csv` organiza revisões humanas executadas ou placeholders com decisão e claims; e `reference_promotion_decision_registry.csv` registra decisões formais de promoção com `protocol_b_reassessment_allowed=false` em todas as linhas atuais. O Protocolo C agora inclui fechamento de evidências, revisão humana e decisão de promoção — formando trilha auditável para eventual ground reference. Ground truth operacional permanece não estabelecido. Veja [`protocolo_c_fechamento_evidencias_ground_reference.md`](../docs/metodologia_cientifica/protocolo_c_fechamento_evidencias_ground_reference.md) e [`protocolo_c_revisao_humana_referencia.md`](../docs/metodologia_cientifica/protocolo_c_revisao_humana_referencia.md).
 
 A etapa de aquisição adiciona dois registros metadata-only: `flood_event_candidate_registry.csv` organiza eventos candidatos por região (com status de confirmação e elegibilidade), e `patch_event_reference_link_registry.csv` registra os vínculos entre patches, eventos e fontes com alinhamentos e bloqueadores explícitos. No estado atual, nenhum evento tem `eligible_for_reference_search=true` e nenhum vínculo tem `promotion_allowed=true`. Veja [`docs/metodologia_cientifica/protocolo_c_aquisicao_ground_reference.md`](../docs/metodologia_cientifica/protocolo_c_aquisicao_ground_reference.md) para a justificativa metodológica desta etapa.
+
+A camada de plano de aquisição (v1hl) transforma metodologia em roteiro real: `observational_evidence_acquisition_plan.csv` organiza fontes-alvo por região, classifica pela força metodológica, documenta prioridades de aquisição e mapeia quais gates cada fonte pode fechar. `regional_ground_reference_readiness.csv` registra a prontidão regional para cada gate, identifica a evidência mais forte já disponível, descreve as lacunas críticas, e documenta allowed/forbidden claims por região. Essa camada continua metadata-only e não treina, prediz ou declara ground truth.
+
+A camada de aquisição operacional (v1hm) coloca o plano em prática: `evidence_acquisition_tracker.csv` rastreia o estado atual de cada fonte-alvo, com acquisition_status, license_status, current_blocker e forbidden_use. `evidence_source_intake_registry.csv` registra fontes acessadas ou em processo com decisão de intake (ACCEPT_METADATA_ONLY, BLOCK_USE, REQUEST_MORE_INFORMATION). `evidence_license_provenance_registry.csv` documenta licença, redistribuição e proveniência para cada fonte, garantindo que raw_data_publication_allowed=false quando redistribuição não for explicitamente pública e que use_for_operational_ground_truth_allowed=FALSE em todas as linhas atuais. O GitHub continua contendo apenas metadados públicos seguros — dados brutos permanecem local-only.
 
 ## O que não está aqui
 

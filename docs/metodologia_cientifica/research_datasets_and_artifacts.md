@@ -139,6 +139,32 @@ metodológico). Estado: mastered for review — pacote pronto, revisão humana n
 
 ↓
 
+**Plano de aquisição de evidências observacionais (v1hl)**
+Protocolo C evolui de aquisição de eventos candidatos para plano real de aquisição de
+evidências por região. Documento `protocolo_c_plano_aquisicao_evidencias_observacionais.md`
+organiza fontes-alvo (Defesa Civil, CPRM, Sentinel pós-evento, GFM, anotação especializada),
+classifica pela força metodológica e mapeia quais gates cada fonte pode fechar. Registros
+`observational_evidence_acquisition_plan.csv` (12+ linhas por região; HIGH, MEDIUM, LOW,
+METHOD_REFERENCE_ONLY) e `regional_ground_reference_readiness.csv` (uma linha por região)
+documentam prontidão para cada gate, lacunas críticas, risco metodológico e allowed/forbidden
+claims. Estado: metadata-only, nenhuma aquisição executada, nenhuma evidência baixada. Plano
+não treina, prediz ou declara ground truth.
+
+↓
+
+**Pacote operacional de aquisição e intake (v1hm)**
+O Protocolo C agora tem camada operacional de aquisição. Documento
+`protocolo_c_pacote_operacional_aquisicao_evidencias.md` define princípios (metadata-first,
+public registry local-only, licença documentada, nenhuma promoção automática) e fluxo de 9
+passos. Runbook `protocolo_c_runbook_aquisicao_evidencias.md` é guia operacional passo a passo
+para coleta futura. Templates de solicitação formal e checklist de triagem em `docs/templates/`.
+Registros `evidence_acquisition_tracker.csv`, `evidence_source_intake_registry.csv` e
+`evidence_license_provenance_registry.csv` rastreiam estado, intake e licença/proveniência por
+fonte. GitHub contém apenas metadados públicos seguros; dados brutos permanecem local-only;
+licença e proveniência insuficientes bloqueiam promoção; multimodal permanece em hold.
+
+↓
+
 **Governança multimodal**
 Multimodal explicitamente em hold. Condição de desbloqueio: recuperação do stack
 Recife, balanceamento regional, aprovação de revisor. Decisão documentada em v1ft,

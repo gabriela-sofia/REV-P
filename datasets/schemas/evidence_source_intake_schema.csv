@@ -1,0 +1,28 @@
+field_name,field_type,required,description,controlled_values,example
+intake_id,string,yes,Unique identifier for this intake record,user-generated,INT_REC_DC_2021_001
+acquisition_id,string,yes,Reference to tracker acquisition ID,user-provided,ACQ_REC_DC_001
+source_id,string,yes,Unique identifier for this source,user-generated,SRC_REC_DC_2021
+region,string,yes,REV-P region,"RECIFE,PETROPOLIS,CURITIBA",RECIFE
+source_name,string,yes,Descriptive name of the source,user-provided,Defesa Civil Recife - Relatório 2021
+source_family,string,yes,Type/family of source,"CIVIL_DEFENSE_RECORD,MUNICIPAL_GIS_LAYER,OFFICIAL_OBSERVED_FLOOD_MAP,OPERATIONAL_FLOOD_PRODUCT,HIGH_RESOLUTION_IMAGE,EXPERT_ANNOTATION,ACADEMIC_DATASET,HYDROGEOMORPHOLOGICAL_CONTEXT,SENTINEL_EVENT_IMAGE,DINO_STRUCTURAL_SUPPORT,METHOD_REFERENCE",CIVIL_DEFENSE_RECORD
+source_type,string,yes,Specific type within family,user-provided,Post-event flood report with affected area polygon
+provider,string,yes,Institution or provider,user-provided,COMPDEC Recife
+event_id,string,yes,Associated event ID or NOT_LINKED,user-provided,EVT_REC_2021_FLOOD
+event_link_status,string,yes,Status of event link,"LINKED,PARTIAL,NOT_LINKED,NOT_ASSESSED,METHOD_REFERENCE_ONLY",NOT_ASSESSED
+acquisition_date,string,yes,Date of access/acquisition or PENDING,date or PENDING,PENDING
+source_date_or_period,string,yes,Date or period of the original source,user-provided,2021-05
+geometry_available,string,yes,Is geometry available?,"TRUE,FALSE,PARTIAL,UNKNOWN,METHOD_REFERENCE_ONLY",UNKNOWN
+crs_available,string,yes,Is CRS documented?,"TRUE,FALSE,UNKNOWN,METHOD_REFERENCE_ONLY",UNKNOWN
+temporal_information_available,string,yes,Is temporal information available?,"TRUE,FALSE,PARTIAL,UNKNOWN,METHOD_REFERENCE_ONLY",PARTIAL
+spatial_coverage_status,string,yes,Spatial coverage of REV-P patches,user-provided,REGION_LEVEL_UNKNOWN
+uncertainty_available,string,yes,Is uncertainty/accuracy documented?,"TRUE,FALSE,UNKNOWN,METHOD_REFERENCE_ONLY",UNKNOWN
+license_status,string,yes,License status,"PUBLIC_REUSE_ALLOWED,PUBLIC_VIEW_ONLY,REQUEST_REQUIRED,RESTRICTED,UNKNOWN,METHOD_REFERENCE_ONLY",UNKNOWN
+redistribution_status,string,yes,Redistribution status,"PUBLIC_METADATA_ONLY,PUBLIC_REUSABLE,LOCAL_ONLY_LICENSED,REDISTRIBUTION_FORBIDDEN,UNKNOWN,METHOD_REFERENCE_ONLY",UNKNOWN
+local_asset_status,string,yes,Status of local asset,"NONE,METADATA_ONLY,RAW_LOCAL_ONLY,DERIVED_LOCAL_ONLY,METHOD_REFERENCE_ONLY",NONE
+public_registry_safe,boolean,yes,Safe for publication in public repository?,"true,false",true
+protocol_c_gates_supported,string,yes,Gates this source can support,user-provided (gates or METHOD_REFERENCE_ONLY),G1_EVENT_CONFIRMATION;G2_SOURCE_AVAILABILITY
+intake_decision,string,yes,Intake decision,"ACCEPT_METADATA_ONLY,ACCEPT_LOCAL_ONLY,REQUEST_MORE_INFORMATION,BLOCK_USE,METHOD_REFERENCE_ONLY",REQUEST_MORE_INFORMATION
+blocked_reason,string,no (required if BLOCK_USE),Specific reason for blocking,user-provided,LICENSE_UNKNOWN
+allowed_use,string,yes,Permitted uses of this source,user-provided,Event confirmation support pending formal access; contextual reference only
+forbidden_use,string,yes,Explicitly forbidden uses,"OPERATIONAL_GROUND_TRUTH_DECLARATION,SUPERVISED_TRAINING,FLOOD_LABEL_CREATION,FLOOD_DETECTION_SOLO,FLOOD_PREDICTION","OPERATIONAL_GROUND_TRUTH_DECLARATION,SUPERVISED_TRAINING,FLOOD_LABEL_CREATION,FLOOD_DETECTION_SOLO,FLOOD_PREDICTION"
+notes,string,no,Additional context or commentary,user-provided,Formal request to COMPDEC required; no data received yet

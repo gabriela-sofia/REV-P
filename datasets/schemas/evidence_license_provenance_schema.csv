@@ -1,0 +1,21 @@
+field_name,field_type,required,description,controlled_values,example
+provenance_id,string,yes,Unique identifier for this provenance record,user-generated,PROV_REC_DC_001
+source_id,string,yes,Reference to source ID,user-provided,SRC_REC_DC_2021
+acquisition_id,string,yes,Reference to acquisition tracker ID,user-provided,ACQ_REC_DC_001
+source_name,string,yes,Name of the source,user-provided,Defesa Civil Recife - Relatório 2021
+provider,string,yes,Institution or provider,user-provided,COMPDEC Recife
+license_status,string,yes,License status,"PUBLIC_REUSE_ALLOWED,PUBLIC_VIEW_ONLY,REQUEST_REQUIRED,RESTRICTED,UNKNOWN,METHOD_REFERENCE_ONLY",UNKNOWN
+redistribution_status,string,yes,Redistribution status,"PUBLIC_METADATA_ONLY,PUBLIC_REUSABLE,LOCAL_ONLY_LICENSED,REDISTRIBUTION_FORBIDDEN,UNKNOWN,METHOD_REFERENCE_ONLY",UNKNOWN
+citation_required,boolean,yes,Is citation required when using this source?,"true,false,unknown",unknown
+citation_text_placeholder,string,no,Placeholder for required citation (not actual data),user-provided,[To be completed upon access: institution name, year, title, access date]
+public_metadata_allowed,boolean,yes,Can metadata be in public registry?,"true,false",true
+raw_data_publication_allowed,boolean,yes,Can raw data be published in public repository?,"true,false",false
+derived_data_publication_allowed,string,yes,Can derived data/analysis be published?,user-provided,UNKNOWN - depends on license clarification
+local_only_required,boolean,yes,Must raw data remain local-only?,"true,false",true
+sensitive_content_risk,string,yes,Risk of sensitive content in this source,"NONE_IDENTIFIED,POSSIBLE_SENSITIVE_INFRASTRUCTURE,POSSIBLE_PERSONAL_DATA,RESTRICTED_PUBLICATION,UNKNOWN,METHOD_REFERENCE_ONLY",UNKNOWN
+provenance_completeness,string,yes,Completeness of provenance documentation,"COMPLETE,PARTIAL,INSUFFICIENT,METHOD_REFERENCE_ONLY",INSUFFICIENT
+use_in_public_repo_allowed,boolean,yes,Can metadata be referenced in public repository?,"true,false",true
+use_for_reference_candidate_allowed,string,yes,Can this source be used to support reference candidate?,user-provided,BLOCKED_PENDING_LICENSE_CLARIFICATION
+use_for_operational_ground_truth_allowed,string,yes,Can this source be used as operational ground truth?,"FALSE,FUTURE_REVIEW_REQUIRED",FALSE
+blocked_reason,string,no,Reason why use is currently blocked,user-provided,LICENSE_UNKNOWN
+notes,string,no,Additional context or commentary,user-provided,Provenance is incomplete until formal access obtained; all uses blocked until license clarified

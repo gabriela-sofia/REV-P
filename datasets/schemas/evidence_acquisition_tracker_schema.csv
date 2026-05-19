@@ -1,0 +1,24 @@
+field_name,field_type,required,description,controlled_values,example
+acquisition_id,string,yes,Unique identifier for this acquisition target,user-generated,ACQ_REC_DC_001
+region,string,yes,REV-P region,"RECIFE,PETROPOLIS,CURITIBA",RECIFE
+target_source_name,string,yes,Name of the target source,user-provided,Defesa Civil Municipal de Recife
+source_family,string,yes,Type/family of source,"CIVIL_DEFENSE_RECORD,MUNICIPAL_GIS_LAYER,OFFICIAL_OBSERVED_FLOOD_MAP,OPERATIONAL_FLOOD_PRODUCT,HIGH_RESOLUTION_IMAGE,EXPERT_ANNOTATION,ACADEMIC_DATASET,HYDROGEOMORPHOLOGICAL_CONTEXT,SENTINEL_EVENT_IMAGE,DINO_STRUCTURAL_SUPPORT,METHOD_REFERENCE",CIVIL_DEFENSE_RECORD
+institution_or_provider,string,yes,Organization responsible or hosting source,user-provided,COMPDEC Recife
+acquisition_status,string,yes,Current acquisition status,"NOT_STARTED,IDENTIFIED,REQUEST_REQUIRED,REQUESTED,RECEIVED_METADATA_ONLY,RECEIVED_RAW_LOCAL_ONLY,REJECTED,BLOCKED,METHOD_REFERENCE_ONLY",IDENTIFIED
+access_mode,string,yes,How access is expected,"PUBLIC_DOWNLOAD,PUBLIC_PORTAL_REVIEW,FORMAL_REQUEST,MANUAL_REVIEW,FUTURE_ACQUISITION,METHOD_REFERENCE_ONLY,UNKNOWN",PUBLIC_PORTAL_REVIEW
+request_required,boolean,yes,Is a formal request required to access this source?,"true,false",false
+request_status,string,no,Status of formal request if applicable,"NOT_APPLICABLE,PENDING,SENT,ACKNOWLEDGED,RECEIVED,REJECTED,UNKNOWN",NOT_APPLICABLE
+source_reference,string,no,URL or bibliographic reference (public only; no private paths),user-provided,https://portal.cprm.gov.br
+expected_event_link,string,no,Event ID or description this source is expected to link to,user-provided,EVT_REC_2021_FLOOD
+expected_gate_closure,string,no,Gate(s) this source is expected to help close (controlled values),"G1_EVENT_CONFIRMATION,G2_SOURCE_AVAILABILITY,G3_TEMPORAL_ALIGNMENT,G4_SPATIAL_ALIGNMENT,G5_SOURCE_STRENGTH,G6_UNCERTAINTY_AND_LIMITATIONS,G7_HUMAN_REVIEW,G8_INDEPENDENT_CORROBORATION,G9_PROMOTION_DECISION,MULTIPLE_GATES,METHOD_REFERENCE_ONLY",G1_EVENT_CONFIRMATION;G2_SOURCE_AVAILABILITY
+expected_artifact_type,string,no,Type of artifact expected from this acquisition,user-provided,Event map polygon; PDF report
+raw_data_expected,boolean,yes,Is raw data (raster/shapefile/heavy file) expected?,"true,false",false
+local_only_required,boolean,yes,Must raw data remain local-only?,"true,false",true
+public_metadata_allowed,boolean,yes,Can metadata be published in public registry?,"true,false",true
+license_status,string,yes,License status of this source,"PUBLIC_REUSE_ALLOWED,PUBLIC_VIEW_ONLY,REQUEST_REQUIRED,RESTRICTED,UNKNOWN,METHOD_REFERENCE_ONLY",UNKNOWN
+redistribution_status,string,yes,Redistribution status of this source,"PUBLIC_METADATA_ONLY,PUBLIC_REUSABLE,LOCAL_ONLY_LICENSED,REDISTRIBUTION_FORBIDDEN,UNKNOWN,METHOD_REFERENCE_ONLY",UNKNOWN
+privacy_or_sensitivity_status,string,yes,Privacy or sensitivity risk assessment,"NONE_IDENTIFIED,POSSIBLE_SENSITIVE_INFRASTRUCTURE,POSSIBLE_PERSONAL_DATA,RESTRICTED_PUBLICATION,UNKNOWN,METHOD_REFERENCE_ONLY",UNKNOWN
+current_blocker,string,no,Current blocker preventing advancement,user-provided or NONE,LICENSE_UNKNOWN
+next_action,string,yes,Next action required for this acquisition,user-provided,Contact COMPDEC to request event maps for 2021
+forbidden_use,string,yes,Explicitly forbidden uses of this source,user-provided,"OPERATIONAL_GROUND_TRUTH_DECLARATION,SUPERVISED_TRAINING,FLOOD_LABEL_CREATION,FLOOD_DETECTION_SOLO,FLOOD_PREDICTION"
+notes,string,no,Additional context or commentary,user-provided,Priority acquisition for 2021 event evidence
