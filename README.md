@@ -63,10 +63,20 @@ evidências externas sem versionar dados pesados (rasters, embeddings, shapefile
 - [`datasets/dataset_registry.csv`](datasets/dataset_registry.csv) — inventário geral de artefatos
 - [`datasets/patch_corpus_registry.csv`](datasets/patch_corpus_registry.csv) — corpora de patches por estágio
 - [`datasets/external_evidence_registry.csv`](datasets/external_evidence_registry.csv) — evidências GIS por região
+- [`datasets/contextual_reference_layer_registry.csv`](datasets/contextual_reference_layer_registry.csv) — camada de referência contextual: status de evidência e claims por patch
+- [`datasets/ground_reference_evidence_source_registry.csv`](datasets/ground_reference_evidence_source_registry.csv) — inventário de fontes de referência categorizado pelo Protocolo C
 - [`docs/metodologia_cientifica/research_datasets_and_artifacts.md`](docs/metodologia_cientifica/research_datasets_and_artifacts.md) — narrativa metodológica dos datasets
+
+## Protocolo C — construção de referência operacional
+
+A camada de referência contextual foi refinada pelo Protocolo C, que organiza evidências externas, critérios de promoção e bloqueadores de operacionalização de forma auditável. O protocolo distingue explicitamente contexto, proxy, candidato de referência e validação operacional — sem declarar ground truth onde ele não existe. Ground truth operacional continua bloqueado no estado atual.
+
+- [docs/metodologia_cientifica/protocolo_c_construcao_referencia_operacional.md](docs/metodologia_cientifica/protocolo_c_construcao_referencia_operacional.md) — Protocolo C: critérios de promoção, bloqueadores e relação com a literatura
+- [docs/metodologia_cientifica/camada_referencia_contextual_validada.md](docs/metodologia_cientifica/camada_referencia_contextual_validada.md) — hierarquia de status e guardrails por patch
 
 ## Documentação técnica
 
+- [docs/metodologia_cientifica/camada_referencia_contextual_validada.md](docs/metodologia_cientifica/camada_referencia_contextual_validada.md) — hierarquia de evidências e claims permitidos/proibidos por status
 - [docs/metodologia_cientifica/patch_lineage_and_grounding.md](docs/metodologia_cientifica/patch_lineage_and_grounding.md) — linhagem territorial dos patches, vinculação Sentinel, claims permitidos e proibidos
 - [docs/metodologia_cientifica/dino_sentinel_embedding_protocol.md](docs/metodologia_cientifica/dino_sentinel_embedding_protocol.md) — protocolo completo do pipeline DINO
 - [docs/metodologia_cientifica/dino_command_registry.md](docs/metodologia_cientifica/dino_command_registry.md) — registro de comandos para reprodução local

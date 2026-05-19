@@ -1,0 +1,20 @@
+field,type,description,example
+reference_id,string,Identificador único da referência contextual de um patch,recife_rec_01_pe3d
+patch_id,string,ID canônico do patch (CUR_XX | PET_XX | REC_XX),REC_01
+region,string,"Região: Curitiba | Petrópolis | Recife",Recife
+reference_status,string,"Status de referência: CONTEXTUAL_EVIDENCE | AUDITABLE_REFERENCE_PROXY | STRONG_REFERENCE_CANDIDATE | OPERATIONAL_GROUND_TRUTH_BLOCKED | INSUFFICIENT_REFERENCE",CONTEXTUAL_EVIDENCE
+crs_status,string,"Status de CRS: COMPATIBLE | INCOMPATIBLE | UNRESOLVED | UNKNOWN",INCOMPATIBLE
+coordinate_audit_status,string,"Status de auditoria de coordenadas: AUDITED_COMPLETE | AUDITED_PARTIAL | UNAUDITED | UNRESOLVABLE",UNAUDITED
+patch_lineage_status,string,"Status de linhagem do patch: GROUNDED_EXTERNAL | PLACEHOLDER | ORPHANED",GROUNDED_EXTERNAL
+external_source_type,string,"Tipo de fonte: terrain | drainage | land_use | administrative | embedding_proxy | gis_index | other",terrain
+external_source_name,string,Nome da fonte externa ou índice,PE3D/MDE rasters
+external_source_status,string,"Status local: EXISTS_COMPLETE | EXISTS_PARTIAL | MISSING | INDEXED_ONLY",EXISTS_PARTIAL
+hydrogeomorphological_coherence,string,"Coerência hidrogeomorfológica: STRONG | MODERATE | WEAK | UNVERIFIED | BLOCKED",STRONG
+sentinel_coherence,string,"Coerência Sentinel-embedding: ALIGNED | DIVERGENT | UNVERIFIED | NOT_APPLICABLE",UNVERIFIED
+temporal_alignment_status,string,"Status de alinhamento temporal: COMPATIBLE | INCOMPATIBLE | UNKNOWN | NO_EVENT_DATA",UNKNOWN
+human_review_status,string,"Status de revisão humana: NOT_REVIEWED | PENDING | REVIEWED_APPROVED | REVIEWED_REJECTED | PARTIAL_FEEDBACK",NOT_REVIEWED
+promotion_allowed,boolean,Se este patch pode ser elevado de status (true/false),false
+blocked_reason,string,Se promotion_allowed=false; razão específica,CRS reconciliation pending (B1); spatial overlap unverified; no event temporal data
+allowed_claim,string,"Claim metodológico permitido (ex: contextual pattern indicator)",This patch exhibits strong topographic gradient per PE3D; context supports low-lying terrain classification; PE3D source limitation: partial stack coverage and no pixel-level validation
+forbidden_claim,string,"Claims categóricamente proibidos neste status (exemplos de lo que NÃO afirmar)","flood prediction | operational ground truth | detected suscetibilidade | training label | supervised class"
+notes,string,Notas adicionais / rastreabilidade,Related to v1gq GIS index; awaiting CRS reconciliation (v1xx TBD); PE3D stack incomplete per v1gv coverage audit; no event correspondence in Sentinel archive

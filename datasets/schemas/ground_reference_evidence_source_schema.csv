@@ -1,0 +1,25 @@
+field,type,description,controlled_values,example
+source_id,string,Identificador único da fonte de referência,,pe3d_recife_mde
+source_name,string,Nome completo da fonte,,PE3D/MDE rasters — Programa Pernambuco 3D
+source_family,string,Família metodológica da fonte,"FIELD_OBSERVATION | OFFICIAL_OBSERVED_FLOOD_MAP | EXPERT_ANNOTATED_HIGH_RES_IMAGE | OPERATIONAL_FLOOD_PRODUCT | MODELLED_SUSCEPTIBILITY_LAYER | HYDROGEOMORPHOLOGICAL_CONTEXT | SENTINEL_STRUCTURAL_EVIDENCE | HUMAN_REVIEW_EVIDENCE",HYDROGEOMORPHOLOGICAL_CONTEXT
+source_type,string,Tipo técnico da fonte,"terrain | drainage | land_use | administrative | remote_sensing_product | gis_index | embedding_analysis | field_report | other",terrain
+region,string,"Região de aplicação: Curitiba | Petrópolis | Recife | All | N/A","Curitiba | Petrópolis | Recife | All | N/A",Recife
+event_specific,boolean,A fonte documenta um evento específico? (true/false),,false
+event_name,string,Nome ou identificação do evento (se event_specific=true); senão N/A,,N/A
+event_date_start,string,Data de início do evento em ISO 8601 (YYYY-MM-DD); N/A se não aplicável,,N/A
+event_date_end,string,Data de fim do evento em ISO 8601 (YYYY-MM-DD); N/A se não aplicável,,N/A
+acquisition_date,string,Data de aquisição/coleta da fonte (YYYY-MM-DD ou YYYY ou RANGE); UNKNOWN se não documentado,,UNKNOWN
+spatial_resolution_m,string,"Resolução espacial em metros; UNKNOWN se não documentado; N/A para dados vetoriais/administrativos","número | UNKNOWN | N/A | VARIES",UNKNOWN
+geometry_type,string,"Tipo de geometria: raster | vector_polygon | vector_line | vector_point | tabular | mixed | N/A","raster | vector_polygon | vector_line | vector_point | tabular | mixed | N/A",raster
+observed_or_modeled,string,Grau de observação da fonte,"OBSERVED | EXPERT_INTERPRETED | OPERATIONAL_ALGORITHMIC | MODELLED | CONTEXTUAL | UNKNOWN",CONTEXTUAL
+human_interpreted,boolean,Conteúdo foi interpretado por humano/especialista? (true/false),,false
+expert_reviewed,boolean,Conteúdo foi revisado por especialista qualificado? (true/false),,false
+uncertainty_documented,boolean,Incerteza ou limitações da fonte estão documentadas? (true/false),,true
+temporal_alignment_required,boolean,Uso como referência exige alinhamento temporal com evento? (true/false),,false
+spatial_alignment_required,boolean,Uso como referência exige verificação de sobreposição espacial com patch? (true/false),,true
+compatible_reference_status,string,Status máximo compatível com uso desta fonte como referência,"CONTEXTUAL_EVIDENCE | AUDITABLE_REFERENCE_PROXY | STRONG_REFERENCE_CANDIDATE | EVENT_OBSERVED_REFERENCE_ELIGIBLE",CONTEXTUAL_EVIDENCE
+local_acquisition_status,string,"Status de aquisição local: EXISTS_COMPLETE | EXISTS_PARTIAL | NOT_ACQUIRED | INDEXED_ONLY | METHODOLOGICAL_REFERENCE_ONLY","EXISTS_COMPLETE | EXISTS_PARTIAL | NOT_ACQUIRED | INDEXED_ONLY | METHODOLOGICAL_REFERENCE_ONLY",EXISTS_PARTIAL
+allowed_use,string,"O que esta fonte permite afirmar quando usada como referência",,"Contexto geomorfológico e topográfico da região; exposição estrutural ao relevo; comparação relativa entre patches de terreno"
+forbidden_use,string,"O que esta fonte NÃO permite afirmar",,"Ground truth de inundação; label de enchente; predição de suscetibilidade operacional; validação preditiva"
+limitations,string,Limitações explícitas da fonte,,"Stack parcial; CRS incompatível com patches (SIRGAS 31985 vs WGS84 32722); sem leitura pixel-level por patch; sem dado de evento; header não valida cobertura individual"
+notes,string,Notas adicionais e rastreabilidade,,"Acessado via programa PE3D Pernambuco 3D; parte do pacote de validação externa v1gv; headers inspecionados localmente"

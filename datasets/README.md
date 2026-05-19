@@ -41,9 +41,23 @@ executado, qual QA foi aprovado antes da extração de embeddings.
 | `dataset_registry.csv` | Registro geral de datasets e corpora do projeto |
 | `patch_corpus_registry.csv` | Registro dos corpora de patches Sentinel por estágio |
 | `external_evidence_registry.csv` | Registro das evidências GIS externas por região |
+| `contextual_reference_layer_registry.csv` | Camada de referência contextual validada: status de evidência e claims permitidos/proibidos por patch |
+| `ground_reference_evidence_source_registry.csv` | Inventário de fontes de referência categorizado pelo Protocolo C: tipo, grau de observação, allowed_use, forbidden_use |
 | `schemas/dataset_registry_schema.csv` | Schema de campos de dataset_registry.csv |
 | `schemas/patch_corpus_schema.csv` | Schema de campos de patch_corpus_registry.csv |
 | `schemas/external_evidence_schema.csv` | Schema de campos de external_evidence_registry.csv |
+| `schemas/contextual_reference_layer_schema.csv` | Schema de campos de contextual_reference_layer_registry.csv |
+| `schemas/ground_reference_evidence_source_schema.csv` | Schema de campos de ground_reference_evidence_source_registry.csv |
+
+## Protocolo C e camada de referência
+
+A camada de referência contextual foi refinada pelo Protocolo C, que organiza a distinção entre evidência contextual, proxy auditável, candidato de referência e validação operacional. Ground truth operacional continua bloqueado no estado atual.
+
+O `contextual_reference_layer_registry.csv` registra o status de evidência e os claims permitidos/proibidos por patch.
+
+O `ground_reference_evidence_source_registry.csv` é o inventário de fontes de referência: classifica cada fonte por family (ex.: HYDROGEOMORPHOLOGICAL_CONTEXT, OPERATIONAL_FLOOD_PRODUCT), grau de observação (CONTEXTUAL, OPERATIONAL_ALGORITHMIC, EXPERT_INTERPRETED), e registra o allowed_use e forbidden_use de cada fonte. Fontes não adquiridas localmente são marcadas como NOT_ACQUIRED ou METHODOLOGICAL_REFERENCE_ONLY e não podem ser usadas como referência aplicada a patches.
+
+Veja [`docs/metodologia_cientifica/protocolo_c_construcao_referencia_operacional.md`](../docs/metodologia_cientifica/protocolo_c_construcao_referencia_operacional.md) para a formulação completa do Protocolo C.
 
 ## O que não está aqui
 

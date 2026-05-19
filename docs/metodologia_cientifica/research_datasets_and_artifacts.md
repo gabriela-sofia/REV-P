@@ -160,11 +160,21 @@ desta fase — não mais, não menos.
 
 ---
 
+## Protocolo C e construção de referência operacional
+
+A camada de referência contextual validada foi refinada pelo Protocolo C. O protocolo organiza a diferença entre evidência contextual, proxy auditável, candidato forte de referência e validação operacional — e registra, por patch e por fonte, onde cada evidência se situa. Ground truth operacional continua bloqueado: faltam, para todos os patches, evento observado documentado, alinhamento temporal, sobreposição espacial confirmada e revisão humana ou de especialista.
+
+O inventário de fontes (`ground_reference_evidence_source_registry.csv`) classifica cada fonte por grau de observação, tipo, allowed_use e forbidden_use. Fontes não adquiridas localmente são marcadas como METHODOLOGICAL_REFERENCE_ONLY e não podem ser usadas como referência aplicada. A distinção importa porque fontes metodológicas (como Sen1Floods11 ou Copernicus GFM) informam o design do Protocolo C sem substituir evidência local.
+
 ## Referências internas
 
 - [`datasets/dataset_registry.csv`](../../datasets/dataset_registry.csv) — registro geral de datasets
 - [`datasets/patch_corpus_registry.csv`](../../datasets/patch_corpus_registry.csv) — corpora de patches por estágio
 - [`datasets/external_evidence_registry.csv`](../../datasets/external_evidence_registry.csv) — evidências externas por região
+- [`datasets/contextual_reference_layer_registry.csv`](../../datasets/contextual_reference_layer_registry.csv) — status de referência e claims por patch
+- [`datasets/ground_reference_evidence_source_registry.csv`](../../datasets/ground_reference_evidence_source_registry.csv) — inventário de fontes de referência pelo Protocolo C
+- [`docs/metodologia_cientifica/protocolo_c_construcao_referencia_operacional.md`](protocolo_c_construcao_referencia_operacional.md) — Protocolo C: formulação completa
+- [`docs/metodologia_cientifica/camada_referencia_contextual_validada.md`](camada_referencia_contextual_validada.md) — hierarquia de status e guardrails por patch
 - [`docs/metodologia_cientifica/patch_lineage_and_grounding.md`](patch_lineage_and_grounding.md) — linhagem territorial dos patches
 - [`docs/estado_metodologico_revp.md`](../estado_metodologico_revp.md) — estado e limitações metodológicas
 - [`manifests/external_validation/`](../../manifests/external_validation/) — pacote de validação externa
