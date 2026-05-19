@@ -277,9 +277,14 @@ O resultado do Protocolo C não é um modelo treinado, um mapa de inundação ou
 
 ## Referências internas
 
+- [`docs/metodologia_cientifica/protocolo_c_fechamento_evidencias_ground_reference.md`](protocolo_c_fechamento_evidencias_ground_reference.md) — etapa de fechamento: gates de promoção (G0–G9), níveis de evidência, matriz de lacunas e relação com revisão humana e Protocolo B
+- [`docs/metodologia_cientifica/protocolo_c_revisao_humana_referencia.md`](protocolo_c_revisao_humana_referencia.md) — protocolo de revisão humana: decisões possíveis, critérios de bloqueio, registro obrigatório e relação com anotação futura
+- [`docs/metodologia_cientifica/protocolo_c_aquisicao_ground_reference.md`](protocolo_c_aquisicao_ground_reference.md) — etapa de aquisição: qualificação metadata-only de eventos candidatos e vínculos patch-evento-fonte
 - [`docs/metodologia_cientifica/camada_referencia_contextual_validada.md`](camada_referencia_contextual_validada.md) — hierarquia de status e guardrails por patch
 - [`datasets/contextual_reference_layer_registry.csv`](../../datasets/contextual_reference_layer_registry.csv) — registro de referências por patch
 - [`datasets/ground_reference_evidence_source_registry.csv`](../../datasets/ground_reference_evidence_source_registry.csv) — inventário de fontes de referência
+- [`datasets/flood_event_candidate_registry.csv`](../../datasets/flood_event_candidate_registry.csv) — registro de eventos candidatos (etapa de aquisição)
+- [`datasets/patch_event_reference_link_registry.csv`](../../datasets/patch_event_reference_link_registry.csv) — vínculos patch-evento-fonte (etapa de aquisição)
 - [`datasets/schemas/ground_reference_evidence_source_schema.csv`](../../datasets/schemas/ground_reference_evidence_source_schema.csv) — schema de campos do inventário de fontes
 - [`docs/metodologia_cientifica/patch_lineage_and_grounding.md`](patch_lineage_and_grounding.md) — linhagem e bloqueadores por patch
 - [`docs/metodologia_cientifica/research_datasets_and_artifacts.md`](research_datasets_and_artifacts.md) — cadeia de rastreabilidade geral

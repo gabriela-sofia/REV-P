@@ -1,0 +1,20 @@
+field,type,description,controlled_values,example
+gap_id,string,Identificador único da linha na matriz de lacunas,,rec_region_gap_01
+region,string,"Região do REV-P ou N/A para referências metodológicas","Curitiba | Petrópolis | Recife | N/A",Recife
+patch_scope,string,"Escopo de patches coberto por esta linha: patch específico, conjunto regional ou referência metodológica","ALL_REGIONAL_PATCHES | PATCH_SPECIFIC | METHOD_REFERENCE_ONLY",ALL_REGIONAL_PATCHES
+patch_id,string,"ID canônico do patch (CUR_XX | PET_XX | REC_XX) ou escopo regional ou N/A",,REC_01-18
+event_id,string,ID do evento candidato no flood_event_candidate_registry ou N/A,,recife_flood_search_placeholder
+source_id,string,ID da fonte no ground_reference_evidence_source_registry ou N/A,,pe3d_recife_mde
+current_reference_status,string,Status atual de candidatura de referência,"CONTEXTUAL_EVIDENCE | AUDITABLE_REFERENCE_PROXY | STRONG_REFERENCE_CANDIDATE | OPERATIONAL_GROUND_TRUTH_NOT_ESTABLISHED | METHOD_REFERENCE_ONLY",CONTEXTUAL_EVIDENCE
+current_closure_level,string,Nível atual de fechamento de evidências,"EVIDENCE_OPEN | EVIDENCE_PARTIALLY_CLOSED | REFERENCE_CANDIDATE_READY_FOR_REVIEW | STRONG_REFERENCE_READY_FOR_EXTERNAL_VALIDATION | OPERATIONAL_GROUND_TRUTH_NOT_ESTABLISHED",EVIDENCE_OPEN
+missing_gate,string,Gate(s) crítico(s) aberto(s) impedindo promoção,"G0_PATCH_LINEAGE | G1_EVENT_CONFIRMATION | G2_SOURCE_AVAILABILITY | G3_TEMPORAL_ALIGNMENT | G4_SPATIAL_ALIGNMENT | G5_SOURCE_STRENGTH | G6_UNCERTAINTY_AND_LIMITATIONS | G7_HUMAN_REVIEW | G8_INDEPENDENT_CORROBORATION | G9_PROMOTION_DECISION | MULTIPLE_GATES | NOT_ASSESSED",MULTIPLE_GATES
+missing_evidence,string,Descrição da evidência faltante para fechar os gates,,evento confirmado; janela temporal; cobertura espacial; revisão humana
+required_action,string,Ação concreta necessária para avançar o fechamento de evidências,,buscar evento de inundação confirmado para Recife com data específica
+evidence_priority,string,Prioridade de aquisição de evidência,"HIGH | MEDIUM | LOW | METHOD_REFERENCE_ONLY",HIGH
+methodological_risk,string,Risco metodológico de promover sem fechar os gates atuais,"LOW | MODERATE | HIGH | CRITICAL | METHOD_REFERENCE_ONLY",HIGH
+expected_artifact,string,Tipo de artefato esperado para satisfazer os gates críticos,,relatório de defesa civil ou produto Copernicus GFM com evento específico
+allowed_next_step,string,Próximo passo permitido — sempre busca/aquisição/revisão nunca treino,,busca de evento externo; verificação de produto Copernicus GFM para datas compatíveis
+forbidden_next_step,string,Próximo passo proibido no estado atual,,classificação supervisionada; Protocolo B; treino de modelo; ground truth operacional
+promotion_blocked,boolean,Se a promoção está bloqueada no estado atual (true/false),,true
+blocked_reason,string,Razão explícita do bloqueio quando promotion_blocked=true,,G1 não satisfeito; G3 não satisfeito; G4 não satisfeito; G7 não satisfeito; G9 não satisfeito
+notes,string,Notas adicionais e contexto metodológico,,bloqueio total no estado atual; busca de referência pendente

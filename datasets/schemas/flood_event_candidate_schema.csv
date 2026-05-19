@@ -1,0 +1,19 @@
+field,type,description,controlled_values,example
+event_id,string,Identificador único do evento candidato,,recife_flood_candidate_2022_placeholder
+event_name,string,Nome descritivo do evento,,Episódio de chuvas intensas Recife — placeholder metodológico
+region,string,Região do REV-P,"Curitiba | Petrópolis | Recife | All | N/A",Recife
+municipality,string,Município principal do evento; N/A se não definido,,Recife
+event_date_start,string,Data de início do evento em ISO 8601 (YYYY-MM-DD); UNKNOWN se não documentado; METHOD_REFERENCE_ONLY se for referência externa,,UNKNOWN
+event_date_end,string,Data de fim do evento em ISO 8601 (YYYY-MM-DD); UNKNOWN ou METHOD_REFERENCE_ONLY,,UNKNOWN
+event_confirmation_status,string,Status de confirmação do evento,"CONFIRMED | PARTIALLY_CONFIRMED | REPORTED_UNVERIFIED | METHOD_REFERENCE_ONLY | UNKNOWN",UNKNOWN
+confirming_source_name,string,Nome da fonte que confirma o evento,,UNKNOWN
+confirming_source_type,string,Tipo da fonte confirmatória,"CIVIL_DEFENSE | OFFICIAL_REPORT | ACADEMIC_DATASET | NEWS_REPORT | OPERATIONAL_PRODUCT | MUNICIPAL_RECORD | METHOD_REFERENCE | UNKNOWN",UNKNOWN
+event_spatial_extent_available,string,Extensão espacial do evento disponível?,"TRUE | FALSE | PARTIAL | UNKNOWN",UNKNOWN
+event_spatial_extent_type,string,"Tipo de extensão espacial disponível, se houver","polygon | bounding_box | point | raster | N/A | UNKNOWN",UNKNOWN
+event_temporal_precision,string,Precisão temporal do registro do evento,"EXACT_DATE | DATE_RANGE | MONTH_ONLY | YEAR_ONLY | UNKNOWN",UNKNOWN
+known_impacts,string,Impactos conhecidos do evento (texto livre); UNKNOWN se não documentado,,UNKNOWN
+source_url_or_reference,string,URL ou referência da fonte; UNKNOWN ou METHOD_REFERENCE_ONLY se não verificado,,UNKNOWN
+local_asset_status,string,Status de aquisição de asset local do evento,"AVAILABLE_LOCAL | NOT_ACQUIRED | METHOD_REFERENCE_ONLY | PENDING_REVIEW",NOT_ACQUIRED
+eligible_for_reference_search,boolean,Este evento é elegível para busca de referência para o REV-P? (true/false),,false
+blocked_reason,string,Razão do bloqueio se eligible_for_reference_search=false,,Evento não confirmado; data desconhecida; nenhum asset local; placeholder metodológico
+notes,string,Notas adicionais,,Placeholder metodológico para região Recife; linha criada para organizar a estrutura de busca

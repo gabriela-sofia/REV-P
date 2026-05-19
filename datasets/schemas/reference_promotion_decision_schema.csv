@@ -1,0 +1,19 @@
+field,type,description,controlled_values,example
+decision_id,string,Identificador único da decisão de promoção,,rpd_recife_region_01
+link_id,string,ID do vínculo patch-evento-fonte no patch_event_reference_link_registry ou N/A,,rec_01_flood_search_pe3d
+review_id,string,ID da revisão humana no human_reference_review_registry ou N/A,,hrr_placeholder_recife_01
+patch_id,string,"ID canônico do patch (CUR_XX | PET_XX | REC_XX) ou escopo regional ou N/A",,REC_01
+region,string,"Região do REV-P ou N/A","Curitiba | Petrópolis | Recife | N/A",Recife
+event_id,string,ID do evento candidato no flood_event_candidate_registry ou N/A,,recife_flood_search_placeholder
+source_id,string,ID da fonte no ground_reference_evidence_source_registry ou N/A,,pe3d_recife_mde
+gate_summary,string,Resumo textual dos gates satisfeitos e falhados,,G0 parcialmente satisfeito; G1-G4 e G7 falhados
+passed_gates,string,Lista de gates satisfeitos separados por ponto-e-vírgula ou NONE,,G0_PATCH_LINEAGE
+failed_gates,string,Lista de gates falhados separados por ponto-e-vírgula ou NONE,,G1_EVENT_CONFIRMATION; G3_TEMPORAL_ALIGNMENT; G4_SPATIAL_ALIGNMENT; G7_HUMAN_REVIEW; G9_PROMOTION_DECISION
+final_reference_status,string,Status final de candidatura de referência resultado desta decisão,"CONTEXTUAL_EVIDENCE | AUDITABLE_REFERENCE_PROXY | STRONG_REFERENCE_CANDIDATE | OPERATIONAL_GROUND_TRUTH_NOT_ESTABLISHED | INSUFFICIENT_REFERENCE | METHOD_REFERENCE_ONLY",CONTEXTUAL_EVIDENCE
+promotion_allowed,boolean,Se esta decisão permite promoção a referência operacional (true/false),,false
+decision_reason,string,Justificativa detalhada da decisão de promoção ou bloqueio,,G1 não satisfeito; G3 não satisfeito; G4 não satisfeito; G7 não satisfeito; G9 não satisfeito; bloqueio total no estado atual
+minimum_missing_evidence,string,Evidência mínima necessária para desbloquear promoção futura,,evento de inundação confirmado para a região com data específica e fonte rastreável
+allowed_claim,string,Claim metodológico permitido derivado desta decisão formal,,patch está em região com contexto físico-ambiental documentado; nenhum vínculo evento-fonte confirmado
+forbidden_claim,string,Claims categoricamente proibidos derivado desta decisão formal,,"flood detection; flood prediction; ground truth operacional; operational ground truth; flood label; label de enchente"
+protocol_b_reassessment_allowed,boolean,Se o Protocolo B pode ser reavaliado com base nesta decisão (true/false),,false
+notes,string,Notas adicionais sobre a decisão,,bloqueio total; Protocolo B permanece bloqueado; nenhum gate crítico satisfeito

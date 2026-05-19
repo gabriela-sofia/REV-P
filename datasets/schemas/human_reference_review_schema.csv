@@ -1,0 +1,23 @@
+field,type,description,controlled_values,example
+review_id,string,Identificador único da revisão humana,,hrr_placeholder_recife_01
+link_id,string,ID do vínculo patch-evento-fonte no patch_event_reference_link_registry,,rec_01_flood_search_pe3d
+patch_id,string,"ID canônico do patch (CUR_XX | PET_XX | REC_XX) ou N/A",,REC_01
+region,string,"Região do REV-P ou N/A","Curitiba | Petrópolis | Recife | N/A",Recife
+event_id,string,ID do evento candidato no flood_event_candidate_registry ou N/A,,recife_flood_search_placeholder
+source_id,string,ID da fonte no ground_reference_evidence_source_registry ou N/A,,pe3d_recife_mde
+reviewer_role,string,Papel metodológico do revisor (sem identificação pessoal),"METHODOLOGICAL_REVIEWER | DOMAIN_REVIEWER | GIS_REVIEWER | REMOTE_SENSING_REVIEWER | FUTURE_EXTERNAL_REVIEWER | NOT_EXECUTED",METHODOLOGICAL_REVIEWER
+review_date,string,Data da revisão em ISO 8601 (YYYY-MM-DD) ou NOT_EXECUTED se revisão não executada,,NOT_EXECUTED
+reviewed_materials,string,Lista dos materiais consultados durante a revisão ou descrição de ausência,,patch Sentinel; fonte contextual; nenhum evento confirmado disponível
+temporal_consistency,string,Avaliação de alinhamento temporal entre imagem e evento,"CONSISTENT | PARTIAL | INCONSISTENT | NOT_ASSESSED | METHOD_REFERENCE_ONLY",NOT_ASSESSED
+spatial_consistency,string,Avaliação de sobreposição espacial entre patch e fonte,"CONSISTENT | PARTIAL | INCONSISTENT | NOT_ASSESSED | METHOD_REFERENCE_ONLY",NOT_ASSESSED
+source_consistency,string,Avaliação de coerência da fonte com o evento candidato,"CONSISTENT | PARTIAL | INCONSISTENT | NOT_ASSESSED | METHOD_REFERENCE_ONLY",NOT_ASSESSED
+visual_consistency,string,Avaliação de consistência visual da imagem Sentinel com o fenômeno candidato,"CONSISTENT | PARTIAL | INCONSISTENT | NOT_ASSESSED | METHOD_REFERENCE_ONLY",NOT_ASSESSED
+dino_support_used,boolean,DINO foi consultado como suporte (true/false),,false
+dino_support_limitation,string,Limitação explícita do uso de DINO se dino_support_used=true; N/A se false,,DINO não cria label nem ground truth; embedding estrutural não substitui evento observado
+review_decision,string,Decisão da revisão humana,"ACCEPT_AS_CONTEXTUAL_REFERENCE | ACCEPT_AS_AUDITABLE_PROXY | MARK_AS_STRONG_REFERENCE_CANDIDATE | BLOCK_OPERATIONAL_PROMOTION | REQUEST_ADDITIONAL_EVIDENCE | REJECT_AS_INSUFFICIENT | METHOD_REFERENCE_ONLY",BLOCK_OPERATIONAL_PROMOTION
+confidence_level,string,Nível de confiança do revisor na decisão,"LOW | MODERATE | HIGH | NOT_APPLICABLE | METHOD_REFERENCE_ONLY",NOT_APPLICABLE
+promotion_allowed,boolean,Se esta revisão permite promoção a referência operacional (true/false),,false
+blocked_reason,string,Razão do bloqueio quando promotion_allowed=false,,revisão humana não executada; sem evento confirmado; sem fonte compatível rastreável
+allowed_claim,string,Claim metodológico permitido derivado desta revisão,,nenhum claim de referência permitido no estado atual
+forbidden_claim,string,Claims categoricamente proibidos derivado desta revisão,,"ground truth operacional; flood label; flood detection; flood prediction; operational ground truth; label de enchente"
+notes,string,Notas adicionais sobre a revisão ou seu placeholder,,placeholder de revisão humana; revisão só pode ser executada após evento confirmado e fonte compatível adquirida

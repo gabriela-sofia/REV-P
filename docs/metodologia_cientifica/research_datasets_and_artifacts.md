@@ -166,6 +166,25 @@ A camada de referência contextual validada foi refinada pelo Protocolo C. O pro
 
 O inventário de fontes (`ground_reference_evidence_source_registry.csv`) classifica cada fonte por grau de observação, tipo, allowed_use e forbidden_use. Fontes não adquiridas localmente são marcadas como METHODOLOGICAL_REFERENCE_ONLY e não podem ser usadas como referência aplicada. A distinção importa porque fontes metodológicas (como Sen1Floods11 ou Copernicus GFM) informam o design do Protocolo C sem substituir evidência local.
 
+### Etapa de aquisição — qualificação de candidatos (metadata-only)
+
+A etapa de aquisição do Protocolo C cria dois registros adicionais que organizam os candidatos a ground reference sem declarar evidência operacional:
+
+- `flood_event_candidate_registry.csv` — eventos candidatos por região (Recife, Petrópolis, Curitiba), todos com `eligible_for_reference_search=false` no estado atual. Referências metodológicas externas (Sen1Floods11, Kuro Siwo, UFO, Copernicus GFM) registradas como METHOD_REFERENCE_ONLY.
+- `patch_event_reference_link_registry.csv` — vínculos patch-evento-fonte com status de alinhamento temporal, espacial, CRS, cobertura e bloqueadores ativos. Todos os vínculos têm `promotion_allowed=false`. Vínculos com DINO têm `dino_used_as_support_only=true`.
+
+Esta etapa é explicitamente metadata-only: não baixa rasters, não executa pipeline espacial, não gera labels supervisionados e não desbloqueia o Protocolo B. Veja [`protocolo_c_aquisicao_ground_reference.md`](protocolo_c_aquisicao_ground_reference.md) para a justificativa metodológica completa.
+
+### Etapa de fechamento — gates de promoção e decisão formal (metadata-only)
+
+A etapa de fechamento do Protocolo C define como as lacunas identificadas na etapa de aquisição serão resolvidas e como uma referência pode eventualmente ser promovida. Ela adiciona três registros:
+
+- `ground_reference_gap_matrix.csv` — matriz de lacunas: para cada região, quais gates (G0–G9) estão abertos, qual evidência falta, qual é o risco metodológico e quais são os próximos passos permitidos e proibidos. Todas as linhas têm `promotion_blocked=true` no estado atual.
+- `human_reference_review_registry.csv` — registry de revisões humanas ou placeholders: decisão (BLOCK_OPERATIONAL_PROMOTION para todos os placeholders), materiais revisados, consistency checks e claims. Todas as linhas têm `promotion_allowed=false` no estado atual.
+- `reference_promotion_decision_registry.csv` — decisões formais de promoção: gates satisfeitos/falhados, `final_reference_status`, `promotion_allowed=false` e `protocol_b_reassessment_allowed=false` em todas as linhas atuais.
+
+O Protocolo C agora inclui fechamento de evidências, revisão humana e decisão de promoção, formando uma trilha auditável para eventual ground reference. Ground truth operacional permanece não estabelecido. O objetivo desta etapa é identificar lacunas reais para aquisição futura — não treinar modelo. Veja [`protocolo_c_fechamento_evidencias_ground_reference.md`](protocolo_c_fechamento_evidencias_ground_reference.md) e [`protocolo_c_revisao_humana_referencia.md`](protocolo_c_revisao_humana_referencia.md) para as justificativas metodológicas.
+
 ## Referências internas
 
 - [`datasets/dataset_registry.csv`](../../datasets/dataset_registry.csv) — registro geral de datasets
@@ -173,7 +192,15 @@ O inventário de fontes (`ground_reference_evidence_source_registry.csv`) classi
 - [`datasets/external_evidence_registry.csv`](../../datasets/external_evidence_registry.csv) — evidências externas por região
 - [`datasets/contextual_reference_layer_registry.csv`](../../datasets/contextual_reference_layer_registry.csv) — status de referência e claims por patch
 - [`datasets/ground_reference_evidence_source_registry.csv`](../../datasets/ground_reference_evidence_source_registry.csv) — inventário de fontes de referência pelo Protocolo C
+- [`datasets/flood_event_candidate_registry.csv`](../../datasets/flood_event_candidate_registry.csv) — registro de eventos candidatos (etapa de aquisição)
+- [`datasets/patch_event_reference_link_registry.csv`](../../datasets/patch_event_reference_link_registry.csv) — vínculos patch-evento-fonte (etapa de aquisição)
+- [`datasets/ground_reference_gap_matrix.csv`](../../datasets/ground_reference_gap_matrix.csv) — matriz de lacunas por região (etapa de fechamento)
+- [`datasets/human_reference_review_registry.csv`](../../datasets/human_reference_review_registry.csv) — registry de revisões humanas (etapa de fechamento)
+- [`datasets/reference_promotion_decision_registry.csv`](../../datasets/reference_promotion_decision_registry.csv) — decisões formais de promoção (etapa de fechamento)
 - [`docs/metodologia_cientifica/protocolo_c_construcao_referencia_operacional.md`](protocolo_c_construcao_referencia_operacional.md) — Protocolo C: formulação completa
+- [`docs/metodologia_cientifica/protocolo_c_aquisicao_ground_reference.md`](protocolo_c_aquisicao_ground_reference.md) — etapa de aquisição: justificativa e registros metadata-only
+- [`docs/metodologia_cientifica/protocolo_c_fechamento_evidencias_ground_reference.md`](protocolo_c_fechamento_evidencias_ground_reference.md) — etapa de fechamento: gates de promoção e matriz de lacunas
+- [`docs/metodologia_cientifica/protocolo_c_revisao_humana_referencia.md`](protocolo_c_revisao_humana_referencia.md) — protocolo de revisão humana
 - [`docs/metodologia_cientifica/camada_referencia_contextual_validada.md`](camada_referencia_contextual_validada.md) — hierarquia de status e guardrails por patch
 - [`docs/metodologia_cientifica/patch_lineage_and_grounding.md`](patch_lineage_and_grounding.md) — linhagem territorial dos patches
 - [`docs/estado_metodologico_revp.md`](../estado_metodologico_revp.md) — estado e limitações metodológicas

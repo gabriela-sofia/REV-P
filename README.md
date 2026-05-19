@@ -72,7 +72,20 @@ evidências externas sem versionar dados pesados (rasters, embeddings, shapefile
 A camada de referência contextual foi refinada pelo Protocolo C, que organiza evidências externas, critérios de promoção e bloqueadores de operacionalização de forma auditável. O protocolo distingue explicitamente contexto, proxy, candidato de referência e validação operacional — sem declarar ground truth onde ele não existe. Ground truth operacional continua bloqueado no estado atual.
 
 - [docs/metodologia_cientifica/protocolo_c_construcao_referencia_operacional.md](docs/metodologia_cientifica/protocolo_c_construcao_referencia_operacional.md) — Protocolo C: critérios de promoção, bloqueadores e relação com a literatura
+- [docs/metodologia_cientifica/protocolo_c_aquisicao_ground_reference.md](docs/metodologia_cientifica/protocolo_c_aquisicao_ground_reference.md) — etapa de aquisição: registro metadata-only de eventos candidatos e vínculos patch-evento-fonte
+- [docs/metodologia_cientifica/protocolo_c_fechamento_evidencias_ground_reference.md](docs/metodologia_cientifica/protocolo_c_fechamento_evidencias_ground_reference.md) — etapa de fechamento: gates de promoção, níveis de evidência e matriz de lacunas por região
+- [docs/metodologia_cientifica/protocolo_c_revisao_humana_referencia.md](docs/metodologia_cientifica/protocolo_c_revisao_humana_referencia.md) — protocolo de revisão humana: decisões possíveis, critérios de bloqueio e registro obrigatório
 - [docs/metodologia_cientifica/camada_referencia_contextual_validada.md](docs/metodologia_cientifica/camada_referencia_contextual_validada.md) — hierarquia de status e guardrails por patch
+
+O Protocolo C agora inclui fechamento de evidências, revisão humana e decisão de promoção, formando uma trilha auditável para eventual ground reference. Ground truth operacional permanece não estabelecido. O objetivo é identificar lacunas reais para aquisição futura — não treinar modelo.
+
+### Datasets das etapas de aquisição e fechamento
+
+- [`datasets/flood_event_candidate_registry.csv`](datasets/flood_event_candidate_registry.csv) — eventos candidatos por região (`eligible_for_reference_search=false` no estado atual)
+- [`datasets/patch_event_reference_link_registry.csv`](datasets/patch_event_reference_link_registry.csv) — vínculos patch-evento-fonte com alinhamentos e bloqueadores (`promotion_allowed=false` no estado atual)
+- [`datasets/ground_reference_gap_matrix.csv`](datasets/ground_reference_gap_matrix.csv) — matriz de lacunas: gates abertos, evidência faltante e próximo passo por região (`promotion_blocked=true` no estado atual)
+- [`datasets/human_reference_review_registry.csv`](datasets/human_reference_review_registry.csv) — registry de revisões humanas ou placeholders (`promotion_allowed=false` no estado atual)
+- [`datasets/reference_promotion_decision_registry.csv`](datasets/reference_promotion_decision_registry.csv) — decisões formais de promoção (`promotion_allowed=false`, `protocol_b_reassessment_allowed=false` no estado atual)
 
 ## Documentação técnica
 
