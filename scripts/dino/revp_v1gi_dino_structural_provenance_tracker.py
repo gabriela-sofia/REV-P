@@ -69,6 +69,7 @@ def run(args: argparse.Namespace) -> int:
     manifest_path = base / "v1ge" / "dino_expanded_embedding_manifest_v1ge.csv"
     if not manifest_path.exists():
         manifest_path = base / "v1fz" / "dino_balanced_embedding_manifest_v1fz.csv"
+    manifest_source = "v1ge" if "v1ge" in manifest_path.parts else "v1fz"
     manifest = [row for row in read_csv(manifest_path) if row.get("success") in {"SUCCESS", "SKIPPED_EXISTING"}]
     sources = {
         "v1fz": by_id(read_csv(base / "v1fz" / "dino_balanced_embedding_manifest_v1fz.csv")),
@@ -100,9 +101,10 @@ def run(args: argparse.Namespace) -> int:
         patch_id = row.get("patch_id") or row.get("canonical_patch_id", "")
         touched = []
         diagnostics = []
-        if sources["v1fz"].get(dino_id):
+        touched.append(manifest_source)
+        diagnostics.append("embedding")
+        if sources["v1fz"].get(dino_id) and manifest_source != "v1fz":
             touched.append("v1fz")
-            diagnostics.append("embedding")
         if sources["v1ga_outlier"].get(dino_id):
             touched.append("v1ga")
             diagnostics.append("structural_outlier")
@@ -134,6 +136,8 @@ def run(args: argparse.Namespace) -> int:
         if sources["v1gg_review"].get(dino_id):
             review = sources["v1gg_review"][dino_id][0]
             trace.append({"review_item_id": review.get("review_item_id", ""), "patch_id": patch_id, "dino_input_id": dino_id, "evidence_sources": review.get("evidence_sources", ""), "traceability_status": "TRACEABLE"})
+        else:
+            trace.append({"review_item_id": "", "patch_id": patch_id, "dino_input_id": dino_id, "evidence_sources": "NONE", "traceability_status": "NOT_IN_REVIEW_PACKAGE"})
     qa = make_qa(provenance, history, trace, len(seen_keys) == len(provenance))
     qa_status = "PASS" if all(row["status"] == "PASS" for row in qa) else "FAIL"
     write_csv(output_dir / "structural_provenance_index.csv", provenance, ["patch_id", "dino_input_id", "region", "embedding_path", "versions_touched", "diagnostics_produced", "visualization_count", "qa_passed_versions", "medoid_participation", "bridge_participation", "outlier_participation", "review_package_participation", "label_status", "target_status", "claim_scope"])

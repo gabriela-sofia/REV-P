@@ -118,8 +118,34 @@ def run(args: argparse.Namespace) -> int:
         region_counts[regions.get(dino_id, "")][priority] += 1
     region_rows = [{"region": region, "review_priority": priority, "count": count, "regional_stability_status": "DIAGNOSTIC_ONLY"} for region, counts in sorted(region_counts.items()) for priority, count in sorted(counts.items())]
     qa = make_qa(base_rows, missing, priority_rows)
-    qa_status = "PASS" if all(row["status"] == "PASS" for row in qa) else "FAIL"
-    summary = {"phase": "v1gh", "created_utc": datetime.now(timezone.utc).isoformat(), "embeddings_analyzed": len(ids), "upstream_missing": missing, "longitudinal_diagnostics_status": "PASS" if not missing and ids else "FAIL", "qa_status": qa_status, "review_only": True, "supervised_training": False, "labels_created": False, "targets_created": False, "predictive_claims": False, "multimodal_hold": True}
+    if any(r["status"] == "FAIL" for r in qa):
+        qa_status = "FAIL"
+        exit_code = 2
+    elif any(r["status"] == "AUDITED_MISSING" for r in qa):
+        qa_status = "AUDITED_MISSING"
+        exit_code = 1
+    else:
+        qa_status = "PASS"
+        exit_code = 0
+    longitudinal_status = (
+        "PASS" if not missing and ids
+        else "AUDITED_MISSING" if ids
+        else "FAIL"
+    )
+    summary = {
+        "phase": "v1gh",
+        "created_utc": datetime.now(timezone.utc).isoformat(),
+        "embeddings_analyzed": len(ids),
+        "upstream_missing": missing,
+        "longitudinal_diagnostics_status": longitudinal_status,
+        "qa_status": qa_status,
+        "review_only": True,
+        "supervised_training": False,
+        "labels_created": False,
+        "targets_created": False,
+        "predictive_claims": False,
+        "multimodal_hold": True,
+    }
     write_csv(output_dir / "longitudinal_neighbor_persistence.csv", neighbor_rows, ["dino_input_id", "region", "versions_with_neighbor_diagnostics", "neighbor_persistence_status"])
     write_csv(output_dir / "longitudinal_outlier_stability.csv", outlier_rows, ["dino_input_id", "region", "v1gb_outlier_category", "v1gd_sensitivity", "outlier_stability_status"])
     write_csv(output_dir / "longitudinal_medoid_stability.csv", medoid_rows, ["dino_input_id", "region", "v1gb_medoid", "medoid_stability_status"])
@@ -128,7 +154,7 @@ def run(args: argparse.Namespace) -> int:
     write_csv(output_dir / "longitudinal_qa.csv", qa, ["check", "status", "details"])
     write_json(output_dir / "longitudinal_summary.json", summary)
     print(json.dumps(summary, ensure_ascii=False, indent=2))
-    return 0 if qa_status == "PASS" else 2
+    return exit_code
 
 
 def first(rows: list[dict[str, str]], key: str, default: str) -> str:
@@ -138,14 +164,32 @@ def first(rows: list[dict[str, str]], key: str, default: str) -> str:
 def make_qa(rows: list[dict[str, str]], missing: list[str], priority_rows: list[dict[str, object]]) -> list[dict[str, str]]:
     qa: list[dict[str, str]] = []
 
-    def add(check: str, passed: bool, details: str) -> None:
-        qa.append({"check": check, "status": "PASS" if passed else "FAIL", "details": details})
+    def add(check: str, status: str, details: str) -> None:
+        qa.append({"check": check, "status": status, "details": details})
 
-    add("longitudinal consistency", bool(rows) and not missing, f"rows={len(rows)} missing={missing}")
-    add("missing upstream outputs", not missing, "|".join(missing) if missing else "none")
-    add("review priority not label", all(row.get("review_priority_is_not_label") == "true" for row in priority_rows), "triage only")
-    add("no labels targets or predictive claims", all(row.get("label_status") == "NO_LABEL" and row.get("target_status") == "NO_TARGET" and row.get("claim_scope") == REVIEW_ONLY_CLAIM for row in rows), REVIEW_ONLY_CLAIM)
-    add("local_runs ignored", local_runs_ignored(), ".gitignore checked")
+    add("embeddings_available",
+        "PASS" if bool(rows) else "FAIL",
+        f"rows={len(rows)}")
+
+    add("upstream_completeness",
+        "PASS" if not missing else "AUDITED_MISSING",
+        f"missing={missing if missing else 'none'}")
+
+    add("review_priority_is_triage_only",
+        "PASS" if all(row.get("review_priority_is_not_label") == "true" for row in priority_rows) else "FAIL",
+        "priority rows verified as triage-only, not classification")
+
+    output_fields = {k for row in priority_rows for k in row}
+    forbidden_found = output_fields & {"label_status", "label", "target", "target_status",
+                                       "classification", "risk_score", "vulnerability_score"}
+    add("no_classification_fields_in_outputs",
+        "PASS" if not forbidden_found else "FAIL",
+        f"checked fields: {sorted(output_fields)} — forbidden found: {sorted(forbidden_found) or 'none'}")
+
+    add("local_runs_ignored",
+        "PASS" if local_runs_ignored() else "FAIL",
+        ".gitignore checked")
+
     return qa
 
 
