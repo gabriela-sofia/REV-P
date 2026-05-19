@@ -1,0 +1,12 @@
+field_name,field_type,required,controlled_values,description
+backlog_id,string,true,,Identificador único da entrada no backlog (ex: BKL_REC_2021_DC)
+screening_id,string,true,,Referência ao screening_id em event_candidate_screening_registry.csv
+region,string,true,"RECIFE,PETROPOLIS,CURITIBA,METHOD_REFERENCE",Região do REV-P
+source_name,string,true,,Nome da fonte a pesquisar
+source_family,string,true,"CIVIL_DEFENSE_RECORD,OFFICIAL_OBSERVED_FLOOD_MAP,SENTINEL_EVENT_IMAGE,OPERATIONAL_FLOOD_PRODUCT,MUNICIPAL_GIS_LAYER,DINO_STRUCTURAL_SUPPORT,METHOD_REFERENCE",Família da fonte
+institution,string,false,,Instituição responsável pela fonte
+access_mode,string,true,"FORMAL_REQUEST,PUBLIC_PORTAL_REVIEW,PUBLIC_DOWNLOAD,METHOD_REFERENCE_ONLY",Modo de acesso previsto
+search_status,string,true,"NOT_STARTED,IN_PROGRESS,SOURCE_FOUND,SOURCE_NOT_FOUND,BLOCKED",Status da busca
+gates_this_source_could_support,string,false,,Gates do Protocolo C que esta fonte poderia ajudar a fechar
+acquisition_tracker_ref,string,false,,Referência ao acquisition_id em evidence_acquisition_tracker.csv (se já rastreado)
+notes,string,false,,Observações sobre a busca ou bloqueador

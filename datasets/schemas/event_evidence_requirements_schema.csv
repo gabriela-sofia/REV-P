@@ -1,0 +1,17 @@
+field_name,field_type,required,controlled_values,description
+requirement_id,string,true,,Identificador único do requisito (ex: REQ_REC_2021_G1)
+dossier_id,string,true,,Referência ao dossier_id em event_evidence_dossier_registry.csv
+region,string,true,"RECIFE,PETROPOLIS,CURITIBA,METHOD_REFERENCE",Região do REV-P
+candidate_event_name,string,true,,Nome descritivo do evento candidato
+requirement_type,string,true,"EVENT_CONFIRMATION,TEMPORAL_EVIDENCE,SPATIAL_EVIDENCE,SOURCE_TRACEABILITY,SOURCE_STRENGTH,UNCERTAINTY_DOCUMENTATION,LICENSE_PROVENANCE,PATCH_RELATION,HUMAN_REVIEW,INDEPENDENT_CORROBORATION,PROMOTION_DECISION",Tipo de requisito de evidência
+required_evidence,string,true,,Descrição da evidência específica necessária para satisfazer este requisito
+target_gate,string,true,,Gate do Protocolo C que este requisito endereça (ex: G1_EVENT_CONFIRMATION)
+required_source_strength,string,true,"DIRECT_OBSERVATION,OFFICIAL_DOCUMENTATION,EXPERT_ANNOTATION,OPERATIONAL_ALGORITHMIC,MODELLED_CONTEXT,STRUCTURAL_CONTEXT,METHOD_REFERENCE_ONLY",Força mínima de fonte necessária para satisfazer o requisito
+minimum_acceptance_criteria,string,false,,Critérios mínimos para que o requisito seja considerado satisfeito
+current_status,string,true,"SATISFIED,PARTIAL,MISSING,NOT_ASSESSED,METHOD_REFERENCE_ONLY",Status atual do requisito
+blocking_if_missing,string,true,"true,false",A ausência deste requisito bloqueia promoção do evento?
+acquisition_path,string,false,,Caminho de aquisição sugerido (ex: solicitação formal; portal público)
+review_needed,string,true,"true,false",Revisão humana é necessária para satisfazer este requisito?
+allowed_if_satisfied,string,false,,O que fica permitido se este requisito for satisfeito
+forbidden_if_missing,string,false,,O que permanece proibido enquanto este requisito não for satisfeito
+notes,string,false,,Observações adicionais

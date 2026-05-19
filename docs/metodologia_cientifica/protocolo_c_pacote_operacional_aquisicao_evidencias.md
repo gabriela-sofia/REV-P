@@ -213,3 +213,7 @@ A etapa v1hm produz os seguintes artefatos públicos (metadados apenas):
 - **Runbook de aquisição** (documento): guia passo a passo para execução futura
 - **Regras de staging local** (neste documento, seção 6): estrutura local-only sem path privado
 - **Bloqueios explícitos** (em cada registry): `forbidden_use`, `blocked_reason`, `intake_decision=BLOCK_USE`
+
+## Etapas subsequentes
+
+A triagem de eventos candidatos (v1hn) e os dossiês de evidência (v1ho) complementam este pacote com camadas mais específicas sobre o que buscar e o que é necessário por evento. Os dossiês especificam o pacote mínimo de evidências, requisitos críticos e decisões de continuidade com `can_reassess_protocol_b=false` e `can_start_multimodal=false`. Veja [`protocolo_c_triagem_eventos_candidatos.md`](protocolo_c_triagem_eventos_candidatos.md) e [`protocolo_c_dossies_eventos_candidatos.md`](protocolo_c_dossies_eventos_candidatos.md).

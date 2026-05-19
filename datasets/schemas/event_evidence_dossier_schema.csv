@@ -1,0 +1,29 @@
+field_name,field_type,required,controlled_values,description
+dossier_id,string,true,,Identificador único do dossiê (ex: DOS_REC_2021_FLOOD)
+screening_id,string,true,,Referência ao screening_id em event_candidate_screening_registry.csv
+region,string,true,"RECIFE,PETROPOLIS,CURITIBA,METHOD_REFERENCE",Região do REV-P
+municipality,string,false,,Município principal do evento candidato
+candidate_event_name,string,true,,Nome descritivo do evento candidato
+candidate_event_period,string,false,,Período candidato do evento (YYYY-MM ou YYYY-MM/YYYY-MM)
+event_status,string,true,"EVENT_SEARCH_TARGET,PENDING_SOURCE_REVIEW,CONFIRMED_BY_SOURCE,BLOCKED,METHOD_REFERENCE_ONLY",Status do evento candidato herdado do screening registry
+dossier_status,string,true,"DOSSIER_NOT_STARTED,DOSSIER_OPEN,DOSSIER_PARTIAL,DOSSIER_READY_FOR_SOURCE_REVIEW,DOSSIER_READY_FOR_HUMAN_REVIEW,DOSSIER_BLOCKED,METHOD_REFERENCE_ONLY",Status atual do dossiê de evidência
+minimum_temporal_evidence_status,string,true,"AVAILABLE,PARTIAL,MISSING,NOT_ASSESSED,METHOD_REFERENCE_ONLY",Status da evidência temporal mínima (data ou janela confirmada por fonte)
+minimum_spatial_evidence_status,string,true,"AVAILABLE,PARTIAL,MISSING,NOT_ASSESSED,METHOD_REFERENCE_ONLY",Status da evidência espacial mínima (geometria ou cobertura sobre patches)
+minimum_source_traceability_status,string,true,"TRACEABLE,PARTIAL,MISSING,NOT_ASSESSED,METHOD_REFERENCE_ONLY",Status da rastreabilidade mínima de fonte (instituição ou produto identificável)
+expected_primary_source_family,string,false,,Família da fonte primária esperada (ex: CIVIL_DEFENSE_RECORD)
+expected_secondary_source_family,string,false,,Família da fonte secundária esperada (ex: SENTINEL_EVENT_IMAGE)
+expected_sensor_or_product,string,false,,Sensor ou produto esperado para evidência técnica (ex: Sentinel-2 L2A; GFM Copernicus)
+patch_scope,string,false,,Identificadores dos patches do corpus no perímetro de busca (separados por ponto e vírgula)
+related_protocol_c_gates,string,false,,Gates G1–G9 que este evento pode potencialmente endereçar (separados por ponto e vírgula)
+missing_evidence_summary,string,false,,Resumo das evidências mínimas ausentes
+current_blocker,string,false,,Bloqueador ativo principal; NONE se não houver
+next_action,string,false,,Próxima ação recomendada para avançar o dossiê
+can_advance_to_source_review,string,true,"true,false",Existe fonte-alvo clara no backlog que permite iniciar busca de fonte?
+can_advance_to_human_review,string,true,"true,false",Evidência suficiente foi adquirida para iniciar revisão humana? Sempre false nesta etapa
+can_support_ground_reference_candidate,string,true,"false",Evento pode apoiar ground reference candidate? Sempre false no estado atual
+operational_ground_truth_status,string,true,"NOT_ESTABLISHED,BLOCKED_PENDING_EVIDENCE,FUTURE_ELIGIBILITY_ONLY,METHOD_REFERENCE_ONLY",Status do ground truth operacional
+protocol_b_status,string,true,"BLOCKED,FUTURE_REASSESSMENT_ONLY,METHOD_REFERENCE_ONLY",Status do Protocolo B
+multimodal_status,string,true,"HOLD,FUTURE_READINESS_ONLY,METHOD_REFERENCE_ONLY",Status do pipeline multimodal
+allowed_claim,string,false,,Claims metodológicos permitidos para este dossiê
+forbidden_claim,string,false,,Claims explicitamente proibidos
+notes,string,false,,Observações adicionais

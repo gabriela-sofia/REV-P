@@ -165,6 +165,16 @@ licença e proveniência insuficientes bloqueiam promoção; multimodal permanec
 
 ↓
 
+**Triagem de eventos candidatos (v1hn)**
+Triagem metadata-only de eventos candidatos de inundação/alagamento por região. Cinco eventos candidatos organizados em `event_candidate_screening_registry.csv`: Recife 2021 e 2022 (EVENT_SEARCH_TARGET, HIGH), Petrópolis fev/2022 (PENDING_SOURCE_REVIEW, HIGH), Curitiba 2022 (EVENT_SEARCH_TARGET, HIGH) e 2023 (EVENT_SEARCH_TARGET, MEDIUM). `event_source_search_backlog.csv` conecta cada evento às fontes-alvo já rastreadas em v1hm. `event_patch_screening_scope.csv` registra quais patches do corpus DINO estão no perímetro de busca de cada evento candidato — com `spatial_overlap_assessed=false`, `temporal_alignment_assessed=false` e `promotion_allowed=false` em todas as entradas. DINOv2 permanece review-only e não fecha gate de evento, temporalidade, espacialidade ou ground truth. Nenhum dado foi baixado.
+
+↓
+
+**Dossiês de evidência por evento candidato (v1ho)**
+Para cada um dos cinco eventos candidatos da triagem, um dossiê especifica o pacote mínimo de evidências necessário. `event_evidence_dossier_registry.csv`: cinco dossiês com status (DOSSIER_OPEN para EVENT_SEARCH_TARGET; DOSSIER_PARTIAL para PENDING_SOURCE_REVIEW), lacunas de evidência mínima e `can_support_ground_reference_candidate=false`. `event_evidence_requirements_registry.csv`: 25 requisitos mínimos (cinco por evento: EVENT_CONFIRMATION, TEMPORAL_EVIDENCE, SPATIAL_EVIDENCE, HUMAN_REVIEW, PROMOTION_DECISION) com `current_status=MISSING` ou `PARTIAL` e `blocking_if_missing=true` para requisitos críticos. `event_dossier_decision_registry.csv`: uma decisão por dossiê (CONTINUE_SOURCE_SEARCH, REQUEST_FORMAL_SOURCE, READY_FOR_SOURCE_REVIEW ou WAIT_FOR_ACQUISITION) com `can_reassess_protocol_b=false` e `can_start_multimodal=false`. Nenhum gate foi fechado. Nenhum dado foi baixado.
+
+↓
+
 **Governança multimodal**
 Multimodal explicitamente em hold. Condição de desbloqueio: recuperação do stack
 Recife, balanceamento regional, aprovação de revisor. Decisão documentada em v1ft,
@@ -223,6 +233,14 @@ O Protocolo C agora inclui fechamento de evidências, revisão humana e decisão
 - [`datasets/ground_reference_gap_matrix.csv`](../../datasets/ground_reference_gap_matrix.csv) — matriz de lacunas por região (etapa de fechamento)
 - [`datasets/human_reference_review_registry.csv`](../../datasets/human_reference_review_registry.csv) — registry de revisões humanas (etapa de fechamento)
 - [`datasets/reference_promotion_decision_registry.csv`](../../datasets/reference_promotion_decision_registry.csv) — decisões formais de promoção (etapa de fechamento)
+- [`datasets/event_candidate_screening_registry.csv`](../../datasets/event_candidate_screening_registry.csv) — eventos candidatos por região (v1hn)
+- [`datasets/event_source_search_backlog.csv`](../../datasets/event_source_search_backlog.csv) — backlog de fontes a pesquisar por evento candidato (v1hn)
+- [`datasets/event_patch_screening_scope.csv`](../../datasets/event_patch_screening_scope.csv) — escopo de triagem por patch (v1hn)
+- [`datasets/event_evidence_dossier_registry.csv`](../../datasets/event_evidence_dossier_registry.csv) — dossiês de evidência por evento candidato (v1ho)
+- [`datasets/event_evidence_requirements_registry.csv`](../../datasets/event_evidence_requirements_registry.csv) — requisitos mínimos de evidência por evento (v1ho)
+- [`datasets/event_dossier_decision_registry.csv`](../../datasets/event_dossier_decision_registry.csv) — decisões de continuidade por dossiê (v1ho)
+- [`docs/metodologia_cientifica/protocolo_c_dossies_eventos_candidatos.md`](protocolo_c_dossies_eventos_candidatos.md) — Protocolo C: dossiês de evidência por evento candidato (v1ho)
+- [`docs/metodologia_cientifica/protocolo_c_triagem_eventos_candidatos.md`](protocolo_c_triagem_eventos_candidatos.md) — Protocolo C: triagem de eventos candidatos (v1hn)
 - [`docs/metodologia_cientifica/protocolo_c_construcao_referencia_operacional.md`](protocolo_c_construcao_referencia_operacional.md) — Protocolo C: formulação completa
 - [`docs/metodologia_cientifica/protocolo_c_aquisicao_ground_reference.md`](protocolo_c_aquisicao_ground_reference.md) — etapa de aquisição: justificativa e registros metadata-only
 - [`docs/metodologia_cientifica/protocolo_c_fechamento_evidencias_ground_reference.md`](protocolo_c_fechamento_evidencias_ground_reference.md) — etapa de fechamento: gates de promoção e matriz de lacunas

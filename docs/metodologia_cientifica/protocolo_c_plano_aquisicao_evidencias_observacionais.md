@@ -483,3 +483,7 @@ Multimodal só deve ser retomado quando:
 - CPRM/SGB documentation on post-event geological assessment.
 - Copernicus Emergency Management Service (CEMS) methodology and disclaimers.
 
+## Etapas subsequentes
+
+A triagem de eventos candidatos (v1hn) e os dossiês de evidência (v1ho) complementam este plano com camadas operacionais mais específicas: a triagem prioriza eventos por região e conecta-os ao backlog de fontes; os dossiês especificam o pacote mínimo de evidências por evento, os requisitos críticos e as decisões de continuidade. Ground truth operacional, Protocolo B e multimodal permanecem bloqueados/hold. Veja [`protocolo_c_triagem_eventos_candidatos.md`](protocolo_c_triagem_eventos_candidatos.md) e [`protocolo_c_dossies_eventos_candidatos.md`](protocolo_c_dossies_eventos_candidatos.md).
+

@@ -78,12 +78,20 @@ A camada de referência contextual foi refinada pelo Protocolo C, que organiza e
 - [docs/metodologia_cientifica/protocolo_c_runbook_aquisicao_evidencias.md](docs/metodologia_cientifica/protocolo_c_runbook_aquisicao_evidencias.md) — runbook passo a passo para coleta futura de evidências (v1hm)
 - [docs/metodologia_cientifica/protocolo_c_fechamento_evidencias_ground_reference.md](docs/metodologia_cientifica/protocolo_c_fechamento_evidencias_ground_reference.md) — etapa de fechamento: gates de promoção, níveis de evidência e matriz de lacunas por região
 - [docs/metodologia_cientifica/protocolo_c_revisao_humana_referencia.md](docs/metodologia_cientifica/protocolo_c_revisao_humana_referencia.md) — protocolo de revisão humana: decisões possíveis, critérios de bloqueio e registro obrigatório
+- [docs/metodologia_cientifica/protocolo_c_triagem_eventos_candidatos.md](docs/metodologia_cientifica/protocolo_c_triagem_eventos_candidatos.md) — triagem de eventos candidatos por região (v1hn): status, prioridade de busca, backlog de fontes, escopo por patch e gates do Protocolo C
+- [docs/metodologia_cientifica/protocolo_c_dossies_eventos_candidatos.md](docs/metodologia_cientifica/protocolo_c_dossies_eventos_candidatos.md) — dossiês de evidência por evento candidato (v1ho): pacote mínimo de evidências, estados do dossiê, critérios de bloqueio e decisões de continuidade
 - [docs/metodologia_cientifica/camada_referencia_contextual_validada.md](docs/metodologia_cientifica/camada_referencia_contextual_validada.md) — hierarquia de status e guardrails por patch
 
 O Protocolo C agora inclui pacote operacional de aquisição/intake (v1hm), que define como receber, registrar, licenciar e triar evidências. O GitHub continua contendo apenas metadados públicos seguros — dados brutos permanecem local-only. Licença e proveniência bloqueiam promoção quando insuficientes. Multimodal permanece em hold. Ground truth operacional permanece não estabelecido.
 
-### Datasets das etapas de aquisição e fechamento
+### Datasets das etapas de aquisição, fechamento e triagem
 
+- [`datasets/event_evidence_dossier_registry.csv`](datasets/event_evidence_dossier_registry.csv) — dossiês de evidência (v1ho): status do dossiê, lacunas, decisão de continuidade (`can_support_ground_reference_candidate=false` no estado atual)
+- [`datasets/event_evidence_requirements_registry.csv`](datasets/event_evidence_requirements_registry.csv) — requisitos mínimos de evidência por evento candidato (v1ho): status por gate, blocking_if_missing e forbidden_if_missing
+- [`datasets/event_dossier_decision_registry.csv`](datasets/event_dossier_decision_registry.csv) — decisões de continuidade por dossiê (v1ho): `can_reassess_protocol_b=false`, `can_start_multimodal=false`
+- [`datasets/event_candidate_screening_registry.csv`](datasets/event_candidate_screening_registry.csv) — triagem de eventos candidatos (v1hn): status, prioridade de busca e gates por evento (`promotion_allowed=false` no estado atual)
+- [`datasets/event_source_search_backlog.csv`](datasets/event_source_search_backlog.csv) — backlog de fontes a pesquisar por evento candidato (v1hn): fonte, família, status da busca
+- [`datasets/event_patch_screening_scope.csv`](datasets/event_patch_screening_scope.csv) — escopo de triagem por patch (v1hn): perímetro de busca, `spatial_overlap_assessed=false` e `promotion_allowed=false`
 - [`datasets/flood_event_candidate_registry.csv`](datasets/flood_event_candidate_registry.csv) — eventos candidatos por região (`eligible_for_reference_search=false` no estado atual)
 - [`datasets/patch_event_reference_link_registry.csv`](datasets/patch_event_reference_link_registry.csv) — vínculos patch-evento-fonte com alinhamentos e bloqueadores (`promotion_allowed=false` no estado atual)
 - [`datasets/ground_reference_gap_matrix.csv`](datasets/ground_reference_gap_matrix.csv) — matriz de lacunas: gates abertos, evidência faltante e próximo passo por região (`promotion_blocked=true` no estado atual)

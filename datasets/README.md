@@ -68,6 +68,18 @@ executado, qual QA foi aprovado antes da extração de embeddings.
 | `schemas/evidence_source_intake_schema.csv` | Schema de campos de evidence_source_intake_registry.csv |
 | `evidence_license_provenance_registry.csv` | Registry de licença e proveniência (v1hm): license_status, redistribution_status, raw_data_publication_allowed, local_only_required e use_for_operational_ground_truth_allowed por fonte |
 | `schemas/evidence_license_provenance_schema.csv` | Schema de campos de evidence_license_provenance_registry.csv |
+| `event_evidence_dossier_registry.csv` | Dossiês de evidência por evento candidato (v1ho): status do dossiê, lacunas de evidência mínima, decisão de continuidade e guardrails de promoção |
+| `schemas/event_evidence_dossier_schema.csv` | Schema de campos de event_evidence_dossier_registry.csv |
+| `event_evidence_requirements_registry.csv` | Requisitos mínimos de evidência por evento candidato (v1ho): tipo de requisito, gate alvo, status atual, blocking_if_missing e forbidden_if_missing |
+| `schemas/event_evidence_requirements_schema.csv` | Schema de campos de event_evidence_requirements_registry.csv |
+| `event_dossier_decision_registry.csv` | Decisões de continuidade por dossiê (v1ho): decision_status, próximos passos permitidos/proibidos, can_reassess_protocol_b=false e can_start_multimodal=false |
+| `schemas/event_dossier_decision_schema.csv` | Schema de campos de event_dossier_decision_registry.csv |
+| `event_candidate_screening_registry.csv` | Eventos candidatos por região (v1hn): status, prioridade de busca, gates potencialmente endereçáveis e guardrails de promoção e ground truth |
+| `schemas/event_candidate_screening_schema.csv` | Schema de campos de event_candidate_screening_registry.csv |
+| `event_source_search_backlog.csv` | Backlog de fontes a pesquisar por evento candidato (v1hn): fonte, família, modo de acesso, status da busca e gates que a fonte poderia suportar |
+| `schemas/event_source_search_backlog_schema.csv` | Schema de campos de event_source_search_backlog.csv |
+| `event_patch_screening_scope.csv` | Escopo de triagem por patch (v1hn): quais patches do corpus estão no perímetro de busca de cada evento candidato, com guardrails de sobreposição espacial e promoção |
+| `schemas/event_patch_screening_scope_schema.csv` | Schema de campos de event_patch_screening_scope.csv |
 
 ## Protocolo C e camada de referência
 
@@ -86,6 +98,10 @@ A etapa de aquisição adiciona dois registros metadata-only: `flood_event_candi
 A camada de plano de aquisição (v1hl) transforma metodologia em roteiro real: `observational_evidence_acquisition_plan.csv` organiza fontes-alvo por região, classifica pela força metodológica, documenta prioridades de aquisição e mapeia quais gates cada fonte pode fechar. `regional_ground_reference_readiness.csv` registra a prontidão regional para cada gate, identifica a evidência mais forte já disponível, descreve as lacunas críticas, e documenta allowed/forbidden claims por região. Essa camada continua metadata-only e não treina, prediz ou declara ground truth.
 
 A camada de aquisição operacional (v1hm) coloca o plano em prática: `evidence_acquisition_tracker.csv` rastreia o estado atual de cada fonte-alvo, com acquisition_status, license_status, current_blocker e forbidden_use. `evidence_source_intake_registry.csv` registra fontes acessadas ou em processo com decisão de intake (ACCEPT_METADATA_ONLY, BLOCK_USE, REQUEST_MORE_INFORMATION). `evidence_license_provenance_registry.csv` documenta licença, redistribuição e proveniência para cada fonte, garantindo que raw_data_publication_allowed=false quando redistribuição não for explicitamente pública e que use_for_operational_ground_truth_allowed=FALSE em todas as linhas atuais. O GitHub continua contendo apenas metadados públicos seguros — dados brutos permanecem local-only.
+
+A camada de dossiês de evidência (v1ho) especifica o que precisa ser encontrado por evento candidato: `event_evidence_dossier_registry.csv` tem um dossiê por evento com status (DOSSIER_OPEN para EVENT_SEARCH_TARGET, DOSSIER_PARTIAL para PENDING_SOURCE_REVIEW), lacunas de evidência mínima e `can_support_ground_reference_candidate=false` em todas as linhas. `event_evidence_requirements_registry.csv` registra os requisitos críticos por gate (EVENT_CONFIRMATION, TEMPORAL_EVIDENCE, SPATIAL_EVIDENCE, HUMAN_REVIEW, PROMOTION_DECISION) com `current_status=MISSING` ou `PARTIAL` e `blocking_if_missing=true` para requisitos críticos. `event_dossier_decision_registry.csv` tem uma decisão por dossiê com `can_reassess_protocol_b=false` e `can_start_multimodal=false` em todas as linhas. Ground truth operacional, Protocolo B e multimodal permanecem bloqueados/hold.
+
+A triagem de eventos candidatos (v1hn) organiza eventos candidatos reais por região em três registros metadata-only: `event_candidate_screening_registry.csv` lista cinco eventos candidatos (Recife 2021, Recife 2022, Petrópolis fev/2022, Curitiba 2022, Curitiba 2023) com status (EVENT_SEARCH_TARGET ou PENDING_SOURCE_REVIEW), prioridade de busca e gates potencialmente endereçáveis. `event_source_search_backlog.csv` organiza as fontes a pesquisar por evento candidato, com referência cruzada ao tracker (v1hm). `event_patch_screening_scope.csv` registra quais patches do corpus DINO estão no perímetro de busca de cada evento candidato — com `spatial_overlap_assessed=false` e `promotion_allowed=false` em todas as linhas. Nenhum dado foi baixado, nenhum gate foi fechado e DINOv2 permanece review-only.
 
 ## O que não está aqui
 

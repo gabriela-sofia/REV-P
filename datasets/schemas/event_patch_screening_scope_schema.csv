@@ -1,0 +1,12 @@
+field_name,field_type,required,controlled_values,description
+scope_id,string,true,,Identificador único da entrada de escopo (ex: SCP_REC_2021_P001)
+screening_id,string,true,,Referência ao screening_id em event_candidate_screening_registry.csv
+patch_id,string,true,,Identificador do patch no corpus (ex: REC_P001)
+region,string,true,"RECIFE,PETROPOLIS,CURITIBA",Região do REV-P
+in_search_perimeter,string,true,"true,false",O patch está no perímetro de busca para este evento candidato?
+perimeter_rationale,string,false,,Justificativa para inclusão ou exclusão do perímetro
+spatial_overlap_assessed,string,true,"false",Sobreposição espacial patch-evento foi avaliada? Sempre false nesta etapa (metadata-only)
+temporal_alignment_assessed,string,true,"false",Alinhamento temporal patch-Sentinel foi avaliado? Sempre false nesta etapa
+dino_used_as_support_only,string,true,"true",DINOv2 é apenas suporte estrutural e não fecha gate? Sempre true
+promotion_allowed,string,true,"false",Promoção a referência operacional permitida? Sempre false nesta etapa
+notes,string,false,,Observações sobre o escopo de triagem para este patch

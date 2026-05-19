@@ -1,0 +1,19 @@
+field_name,field_type,required,controlled_values,description
+screening_id,string,true,,Identificador único do evento candidato (ex: SCR_REC_2021_FLOOD)
+region,string,true,"RECIFE,PETROPOLIS,CURITIBA,METHOD_REFERENCE",Região do REV-P
+event_label,string,true,,Rótulo descritivo do evento candidato
+event_period_start,string,false,,Data ou período de início estimado (YYYY-MM ou YYYY-MM-DD); UNKNOWN se não identificado
+event_period_end,string,false,,Data ou período de fim estimado (YYYY-MM ou YYYY-MM-DD); UNKNOWN se não identificado
+event_type,string,true,"FLOOD_URBAN,FLOOD_FLUVIAL,LANDSLIDE_ASSOCIATED,INUNDATION_COASTAL,MULTI_HAZARD,UNKNOWN,METHOD_REFERENCE_ONLY",Tipo de evento candidato
+candidate_status,string,true,"EVENT_SEARCH_TARGET,PENDING_SOURCE_REVIEW,CONFIRMED_BY_SOURCE,BLOCKED,METHOD_REFERENCE_ONLY",Status atual do evento candidato
+search_priority,string,true,"HIGH,MEDIUM,LOW,METHOD_REFERENCE_ONLY",Prioridade de busca de fonte para este evento
+institutional_context,string,false,,Contexto institucional que motivou a inclusão deste evento candidato
+expected_source_types,string,false,,Tipos de fonte esperados separados por ponto e vírgula
+gates_potentially_addressable,string,false,,Gates do Protocolo C que este evento pode eventualmente ajudar a fechar (separados por ponto e vírgula)
+gates_not_addressable_by_dino,string,true,,Gates que o DINOv2 não pode fechar (confirmação; sempre inclui todos os gates G1–G9)
+operational_ground_truth_status,string,true,"NOT_ESTABLISHED,BLOCKED_PENDING_EVIDENCE",Status do ground truth operacional para este evento
+promotion_allowed,string,true,"false",Promoção a referência operacional permitida nesta etapa? Sempre false
+protocol_b_status,string,true,"BLOCKED",Status do Protocolo B para este evento
+multimodal_status,string,true,"HOLD",Status do pipeline multimodal
+dino_gate_closure_allowed,string,true,"false",DINOv2 pode fechar gate de evento/temporalidade/espacialidade/ground truth? Sempre false
+notes,string,false,,Observações adicionais
