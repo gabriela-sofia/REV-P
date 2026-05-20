@@ -175,6 +175,16 @@ Para cada um dos cinco eventos candidatos da triagem, um dossiê especifica o pa
 
 ↓
 
+**Busca externa e solicitação regional (v1hp)**
+Os dossiês são transformados em ação concreta por quatro registros metadata-only. `regional_external_search_plan.csv`: onze planos de busca por região (Recife 5, Petrópolis 3, Curitiba 3) com fonte-alvo, gate alvo, modo de busca (PUBLIC_PORTAL_REVIEW ou FORMAL_REQUEST), prioridade e status atual — todos com `forbidden_use` bloqueando declaração de ground truth, flood label, training label, flood detection e flood prediction. `source_request_package_registry.csv`: sete pacotes de solicitação formal a instituições (COMPDEC Recife, CPRM, Defesa Civil Petrópolis, Defesa Civil Curitiba, GeoCuritiba) com `cannot_establish_ground_truth_alone=true` em todas as linhas e dado bruto local-only quando recebido. `gate_search_question_registry.csv`: 17 perguntas de busca distribuídas por região e gate (Recife 6, Petrópolis 6, Curitiba 5), com `blocking_if_unanswered=true` para perguntas de G1, G3, G4 e G7, e `forbidden_if_unanswered` bloqueando promoção em todas as perguntas críticas. `regional_request_priority_matrix.csv`: quatro entradas consolidando a prioridade de solicitação por evento e região, com `protocol_b_status=BLOCKED` e `multimodal_status=HOLD` em todas as linhas. Nenhum dado foi baixado. Nenhuma fonte foi acessada. Nenhum gate foi fechado.
+
+↓
+
+**Referências observacionais candidatas (v1hq)**
+Primeira camada documental de eventos observados candidatos. `observed_event_reference_candidate_registry.csv`: 9 eventos (3 por região) com G1/G2/G3 fechados documentalmente por fonte primária rastreável e G4 em triagem espacial — prova de existência do evento, fonte e temporalidade; não prova ground truth operacional, não cria label. Todos têm `operational_ground_truth_status=NOT_ESTABLISHED`, `protocol_b_status=BLOCKED`, `multimodal_status=HOLD`, `dino_usage_status=SUPPORT_ONLY`, `can_be_used_as_training_label=false` e `can_reopen_protocol_b=false`. `observed_event_reference_gap_registry.csv`: 43 lacunas organizadas por evento — patch overlay não executado, revisão humana não feita, licença pendente, geometria ausente, separação de fenômenos pendente em Petrópolis. `observed_event_reference_decision_registry.csv`: uma decisão por evento com `can_promote_to_ground_reference=false` e `can_generate_training_label=false` em todas as linhas; PET_2024_03_21_28 tem NEEDS_MORE_SPATIAL_EVIDENCE por G4 parcial. `manual_external_evidence_needed_registry.csv`: inventário de dados externos que precisam ser trazidos manualmente por região — decretos, boletins, mapas, shapefiles, séries pluviométricas, fotos oficiais, separação de fenômenos — com `cannot_establish_ground_truth_alone=true` em todas as entradas. G4 nesta etapa é apenas triagem espacial, não overlay patch-level. Nenhum dado foi baixado.
+
+↓
+
 **Governança multimodal**
 Multimodal explicitamente em hold. Condição de desbloqueio: recuperação do stack
 Recife, balanceamento regional, aprovação de revisor. Decisão documentada em v1ft,
@@ -221,6 +231,17 @@ A etapa de fechamento do Protocolo C define como as lacunas identificadas na eta
 
 O Protocolo C agora inclui fechamento de evidências, revisão humana e decisão de promoção, formando uma trilha auditável para eventual ground reference. Ground truth operacional permanece não estabelecido. O objetivo desta etapa é identificar lacunas reais para aquisição futura — não treinar modelo. Veja [`protocolo_c_fechamento_evidencias_ground_reference.md`](protocolo_c_fechamento_evidencias_ground_reference.md) e [`protocolo_c_revisao_humana_referencia.md`](protocolo_c_revisao_humana_referencia.md) para as justificativas metodológicas.
 
+### Pré-ligação evento–patch (v1hr)
+
+A etapa v1hr prepara as condições para patch-linking sem executá-lo. É metadata-only: nenhum overlay foi executado, nenhuma geocodificação foi realizada, nenhuma coordenada foi criada, nenhum dado bruto foi baixado.
+
+- `event_patch_linking_preflight_registry.csv` — 9 linhas REGION_LEVEL (uma por evento observado candidato) com `promotion_allowed=false`, `can_create_training_label=false`, `protocol_b_status=BLOCKED` e `multimodal_status=HOLD` em todas. Status de pré-ligação: READY_FOR_MANUAL_GEOCODING (Recife e Curitiba), READY_FOR_SOURCE_GEOMETRY_REVIEW (Petrópolis 2022) ou NOT_READY_FOR_PATCH_LINKING (Petrópolis 2024, G4=PARTIAL).
+- `manual_geocoding_target_registry.csv` — 22 localidades a geocodificar manualmente por evento e região: 7 Recife (Jardim Uchôa, Areias, Sítio dos Macacos, Milagres, Rio Tejipió, CAIC Barro, Jardim Monte Verde), 10 Petrópolis (Alto da Serra, Centro, Chácara Flora, Morin, Caxambu, São Sebastião, Quitandinha, Castelânea, Valparaíso, Floresta), 5 Curitiba (Caximba, Tatuquara, Cajuru, Rua Miguel Pedro Abib, Rua Alice Vilas Boas da Conceição). Todas com `geocoding_status=NOT_GEOCODED` ou `NEEDS_MANUAL_REVIEW`, sem coordenadas, `requires_official_confirmation=true`, `cannot_establish_ground_truth_alone=true`.
+- `event_sentinel_temporal_window_registry.csv` — 9 janelas temporais (uma por evento): pré-evento (14 dias antes), evento e pós-evento (14 dias depois). `sentinel_1_relevance=HIGH` para todos (SAR penetra nuvem), `sentinel_2_relevance=MEDIUM`, `expected_cloud_risk=HIGH`, `acquisition_status=NOT_ACQUIRED`, `cannot_establish_ground_truth_alone=true`. Nenhum asset foi buscado nem baixado.
+- `patch_linking_dependency_registry.csv` — 48 dependências metodológicas: 5 por evento para Recife e Curitiba (SOURCE_GEOMETRY, MANUAL_GEOCODING, LICENSE_PROVENANCE, SENTINEL_TEMPORAL_SEARCH, HUMAN_REVIEW), 6 por evento para Petrópolis (mais PHENOMENON_SEPARATION). Todas com `current_status=OPEN` e `required_before_ground_reference=true`. Nenhuma dependência fechada nesta etapa.
+
+O Protocolo B permanece BLOCKED. O pipeline multimodal permanece HOLD. DINO permanece SUPPORT_ONLY. Esta etapa não cria as condições para promoção a ground reference, label de treino, supervised training, flood detection, flood prediction ou reabertura do Protocolo B.
+
 ## Referências internas
 
 - [`datasets/dataset_registry.csv`](../../datasets/dataset_registry.csv) — registro geral de datasets
@@ -239,7 +260,18 @@ O Protocolo C agora inclui fechamento de evidências, revisão humana e decisão
 - [`datasets/event_evidence_dossier_registry.csv`](../../datasets/event_evidence_dossier_registry.csv) — dossiês de evidência por evento candidato (v1ho)
 - [`datasets/event_evidence_requirements_registry.csv`](../../datasets/event_evidence_requirements_registry.csv) — requisitos mínimos de evidência por evento (v1ho)
 - [`datasets/event_dossier_decision_registry.csv`](../../datasets/event_dossier_decision_registry.csv) — decisões de continuidade por dossiê (v1ho)
+- [`datasets/regional_external_search_plan.csv`](../../datasets/regional_external_search_plan.csv) — planos de busca externa por região (v1hp)
+- [`datasets/source_request_package_registry.csv`](../../datasets/source_request_package_registry.csv) — pacotes de solicitação formal a instituições (v1hp)
+- [`datasets/gate_search_question_registry.csv`](../../datasets/gate_search_question_registry.csv) — perguntas de busca por gate e região (v1hp)
+- [`datasets/regional_request_priority_matrix.csv`](../../datasets/regional_request_priority_matrix.csv) — matriz de prioridade regional de solicitação (v1hp)
 - [`docs/metodologia_cientifica/protocolo_c_dossies_eventos_candidatos.md`](protocolo_c_dossies_eventos_candidatos.md) — Protocolo C: dossiês de evidência por evento candidato (v1ho)
+- [`docs/metodologia_cientifica/protocolo_c_busca_externa_solicitacao_regional.md`](protocolo_c_busca_externa_solicitacao_regional.md) — Protocolo C: busca externa e solicitação regional (v1hp)
+- [`datasets/observed_event_reference_candidate_registry.csv`](../../datasets/observed_event_reference_candidate_registry.csv) — 9 eventos observados candidatos (v1hq)
+- [`datasets/event_patch_linking_preflight_registry.csv`](../../datasets/event_patch_linking_preflight_registry.csv) — preflight de pré-ligação evento–patch (v1hr)
+- [`datasets/manual_geocoding_target_registry.csv`](../../datasets/manual_geocoding_target_registry.csv) — alvos de geocodificação manual (v1hr)
+- [`datasets/event_sentinel_temporal_window_registry.csv`](../../datasets/event_sentinel_temporal_window_registry.csv) — janelas temporais Sentinel por evento (v1hr)
+- [`datasets/patch_linking_dependency_registry.csv`](../../datasets/patch_linking_dependency_registry.csv) — dependências para patch-linking real (v1hr)
+- [`docs/metodologia_cientifica/protocolo_c_pre_ligacao_evento_patch.md`](protocolo_c_pre_ligacao_evento_patch.md) — Protocolo C: pré-ligação evento–patch (v1hr)
 - [`docs/metodologia_cientifica/protocolo_c_triagem_eventos_candidatos.md`](protocolo_c_triagem_eventos_candidatos.md) — Protocolo C: triagem de eventos candidatos (v1hn)
 - [`docs/metodologia_cientifica/protocolo_c_construcao_referencia_operacional.md`](protocolo_c_construcao_referencia_operacional.md) — Protocolo C: formulação completa
 - [`docs/metodologia_cientifica/protocolo_c_aquisicao_ground_reference.md`](protocolo_c_aquisicao_ground_reference.md) — etapa de aquisição: justificativa e registros metadata-only

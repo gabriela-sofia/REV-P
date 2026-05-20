@@ -1,0 +1,23 @@
+field_name,field_type,required,controlled_values,description
+temporal_window_id,string,true,,Identificador único da janela temporal (ex: STW_REC_2022_05_24_30)
+observed_event_id,string,true,,Referência ao observed_event_id em observed_event_reference_candidate_registry.csv
+region,string,true,"Recife,Petrópolis,Curitiba",Região do REV-P
+event_name,string,true,,Nome descritivo do evento observado candidato
+event_date_start,string,true,,Data de início do evento (YYYY-MM-DD)
+event_date_end,string,true,,Data de fim do evento (YYYY-MM-DD)
+pre_event_window_start,string,true,,Início da janela pré-evento (YYYY-MM-DD) — 14 dias antes de date_start
+pre_event_window_end,string,true,,Fim da janela pré-evento (YYYY-MM-DD) — 1 dia antes de date_start
+event_window_start,string,true,,Início da janela do evento (YYYY-MM-DD) — igual a date_start
+event_window_end,string,true,,Fim da janela do evento (YYYY-MM-DD) — igual a date_end
+post_event_window_start,string,true,,Início da janela pós-evento (YYYY-MM-DD) — 1 dia depois de date_end
+post_event_window_end,string,true,,Fim da janela pós-evento (YYYY-MM-DD) — 14 dias depois de date_end
+sentinel_1_relevance,string,true,"HIGH,MEDIUM,LOW",Relevância do Sentinel-1 SAR para este evento (HIGH para eventos de chuva intensa)
+sentinel_2_relevance,string,true,"HIGH,MEDIUM,LOW",Relevância do Sentinel-2 óptico (MEDIUM quando risco de nuvem é alto)
+expected_cloud_risk,string,true,"HIGH,MEDIUM,LOW,UNKNOWN",Risco esperado de cobertura de nuvem na janela do evento
+temporal_alignment_status,string,true,"PREPARED_METADATA_ONLY,NEEDS_IMAGE_SEARCH,BLOCKED,NOT_ASSESSED",Status do alinhamento temporal — PREPARED_METADATA_ONLY significa que janela está definida mas imagem não foi buscada
+acquisition_status,string,true,"NOT_ACQUIRED,FUTURE_SEARCH_REQUIRED,METHOD_REFERENCE_ONLY",Status de aquisição do asset Sentinel; sempre NOT_ACQUIRED nesta etapa
+can_support_future_review,string,true,"true,false",Esta janela pode suportar revisão futura de Sentinel; sempre true
+cannot_establish_ground_truth_alone,string,true,"true",A janela temporal Sentinel não estabelece ground truth operacional; sempre true
+required_next_action,string,true,,Próximo passo para busca de asset Sentinel na janela definida
+forbidden_use,string,true,,Usos explicitamente proibidos — deve bloquear ground truth operacional; flood detection; flood prediction; flood label; training label; supervised training
+notes,string,false,,Observações sobre risco de nuvem ou disponibilidade esperada

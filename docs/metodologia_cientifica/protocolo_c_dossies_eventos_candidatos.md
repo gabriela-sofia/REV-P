@@ -155,3 +155,11 @@ Esta etapa (v1ho) explicitamente não faz:
 Esses três registros são metadata-only. Nenhum dado bruto é referenciado. Nenhuma aquisição é executada.
 
 Os templates em `docs/templates/` documentam como preencher um dossiê e registrar uma busca manual futura.
+
+## Próxima etapa
+
+A etapa v1hp complementa os dossiês com a camada de busca externa e solicitação regional: transforma cada dossiê em plano de busca concreto, pacote de solicitação formal a instituições, perguntas de busca mapeadas a gates G1–G9 e matriz de prioridade regional. Veja [`protocolo_c_busca_externa_solicitacao_regional.md`](protocolo_c_busca_externa_solicitacao_regional.md).
+
+A etapa v1hq inicia a primeira camada documental de eventos observados candidatos: 9 eventos (3 por região) com G1/G2/G3 fechados documentalmente e G4 em triagem espacial. Ground truth operacional não está estabelecido. Protocolo B permanece bloqueado. Multimodal permanece hold. Dados externos brutos necessários estão catalogados em `datasets/manual_external_evidence_needed_registry.csv`. Veja [`protocolo_c_referencias_observacionais_candidatas.md`](protocolo_c_referencias_observacionais_candidatas.md).
+
+A etapa v1hr prepara as condições para patch-linking: geocodificação manual de 22 localidades, janelas temporais Sentinel metadata-only e registro de 48 dependências metodológicas. Veja [`protocolo_c_pre_ligacao_evento_patch.md`](protocolo_c_pre_ligacao_evento_patch.md).

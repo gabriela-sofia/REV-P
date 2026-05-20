@@ -1,0 +1,29 @@
+field_name,field_type,required,controlled_values,description
+preflight_id,string,true,,Identificador único da linha de preflight (ex: PFL_REC_2022_05_P001)
+observed_event_id,string,true,,Referência ao observed_event_id em observed_event_reference_candidate_registry.csv
+region,string,true,"Recife,Petrópolis,Curitiba",Região do REV-P
+event_name,string,true,,Nome descritivo do evento observado candidato
+patch_scope,string,true,"REGION_LEVEL,PATCH_LEVEL,PATCH_GROUP,NOT_ASSESSED",Nível de escopo da linha: REGION_LEVEL para triagem regional; PATCH_LEVEL para patch específico; PATCH_GROUP para grupo
+patch_id,string,false,,Identificador do patch (ex: REC_P001); vazio se patch_scope=REGION_LEVEL
+patch_region_match,string,true,"TRUE,FALSE,NOT_ASSESSED",O patch pertence à mesma região do evento?
+event_date_start,string,true,,Data de início do evento (YYYY-MM-DD)
+event_date_end,string,true,,Data de fim do evento (YYYY-MM-DD)
+event_temporal_precision,string,true,"EXACT_DATE,SHORT_WINDOW,MULTI_DAY_WINDOW",Precisão temporal do evento conforme v1hq
+event_spatial_precision,string,true,"MUNICIPAL,DISTRICT,NEIGHBORHOOD,STREET_OR_POINT,RIVER_CORRIDOR,TECHNICAL_MAP,PARTIAL",Precisão espacial do evento conforme v1hq
+spatial_evidence_available,string,true,"TRUE,PARTIAL,FALSE,NOT_ASSESSED",Existe evidência espacial documental para esta linha
+spatial_evidence_type,string,true,"MUNICIPAL_LOCALITY,NEIGHBORHOOD,STREET_OR_POINT,RIVER_CORRIDOR,TECHNICAL_MAP,COPERNICUS_REGIONAL_PRODUCT,NONE,NOT_ASSESSED",Tipo de evidência espacial disponível
+source_geometry_available,string,true,"TRUE,PARTIAL,FALSE,NOT_ASSESSED",Existe geometria vetorial de fonte disponível ou identificada
+source_geometry_status,string,true,"NOT_ACQUIRED,PUBLIC_REVIEW_REQUIRED,FORMAL_REQUEST_REQUIRED,LICENSE_REVIEW_REQUIRED,LOCAL_ONLY_REQUIRED,NOT_ASSESSED",Status de aquisição da geometria da fonte
+crs_status,string,true,"KNOWN,UNKNOWN,NOT_APPLICABLE,NOT_ASSESSED",Status do sistema de referência de coordenadas da geometria disponível
+patch_overlay_status,string,true,"NOT_EXECUTED,FUTURE_REQUIRED,BLOCKED_PENDING_GEOMETRY,BLOCKED_PENDING_CRS,BLOCKED_PENDING_LICENSE",Status do overlay patch-level; nunca EXECUTED nesta etapa
+patch_event_relation_status,string,true,"NO_RELATION_ESTABLISHED,REGION_LEVEL_ONLY,POSSIBLE_RELATION_PENDING_GEOMETRY,POSSIBLE_RELATION_PENDING_OVERLAY,BLOCKED",Status da relação patch-evento nesta etapa
+pre_link_status,string,true,"NOT_READY_FOR_PATCH_LINKING,READY_FOR_MANUAL_GEOCODING,READY_FOR_SOURCE_GEOMETRY_REVIEW,READY_FOR_FUTURE_OVERLAY,BLOCKED_PENDING_GEOMETRY,BLOCKED_PENDING_LICENSE",Status de pré-ligação para este evento/patch
+required_next_action,string,true,,Próximo passo necessário antes de qualquer overlay ou validação
+promotion_allowed,string,true,"false",Promoção a referência operacional permitida? Sempre false nesta etapa
+can_create_training_label,string,true,"false",Label de treino pode ser criado? Sempre false nesta etapa
+protocol_b_status,string,true,"BLOCKED",Status do Protocolo B; sempre BLOCKED
+multimodal_status,string,true,"HOLD",Status do pipeline multimodal; sempre HOLD
+dino_usage_status,string,true,"SUPPORT_ONLY",Uso autorizado de DINOv2; sempre SUPPORT_ONLY
+allowed_claim,string,true,,Claims metodológicos conservadores permitidos para esta linha
+forbidden_claim,string,true,,Claims explicitamente proibidos — deve incluir ground truth operacional; flood detection; flood prediction; flood label; training label; supervised training
+notes,string,false,,Observações metodológicas adicionais

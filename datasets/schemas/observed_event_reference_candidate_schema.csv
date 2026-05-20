@@ -1,0 +1,36 @@
+field_name,field_type,required,controlled_values,description
+observed_event_id,string,true,,Identificador único do evento observado candidato (ex: REC_2022_05_24_30)
+region,string,true,"Recife,Petrópolis,Curitiba",Região do REV-P
+event_name,string,true,,Nome descritivo do evento observado candidato
+event_type,string,true,"chuva_extrema_alagamento,chuva_extrema_inundacao,desastre_hidrometeorologico,evento_misto",Tipo do evento
+date_start,string,true,,Data de início do evento (YYYY-MM-DD)
+date_end,string,true,,Data de fim do evento (YYYY-MM-DD); igual à data de início se evento de um dia
+temporal_precision_level,string,true,"EXACT_DATE,SHORT_WINDOW,MULTI_DAY_WINDOW",Nível de precisão temporal documentado pela fonte primária
+spatial_precision_level,string,true,"MUNICIPAL,DISTRICT,NEIGHBORHOOD,STREET_OR_POINT,RIVER_CORRIDOR,TECHNICAL_MAP,PARTIAL",Nível de precisão espacial documentado pela fonte primária
+primary_source_type,string,true,"OFFICIAL_MUNICIPAL,OFFICIAL_STATE,TECHNICAL_REPORT,ACADEMIC_PAPER,COPERNICUS_PRODUCT,LOCAL_NEWS,OFFICIAL_FEDERAL,METHOD_REFERENCE",Tipo da fonte primária
+primary_source_name,string,true,,Nome ou instituição da fonte primária
+primary_source_url,string,true,,URL da fonte primária (NOT_ACQUIRED_PUBLIC_REVIEW_REQUIRED se não adquirida)
+secondary_source_type,string,false,"OFFICIAL_MUNICIPAL,OFFICIAL_STATE,TECHNICAL_REPORT,ACADEMIC_PAPER,COPERNICUS_PRODUCT,LOCAL_NEWS,OFFICIAL_FEDERAL,METHOD_REFERENCE",Tipo da fonte secundária
+secondary_source_name,string,false,,Nome ou instituição da fonte secundária
+secondary_source_url,string,false,,URL da fonte secundária (NOT_ACQUIRED_PUBLIC_REVIEW_REQUIRED se não adquirida)
+observed_event_confirmed,string,true,"true,false",Evento confirmado documentalmente por fonte primária rastreável
+source_traceable,string,true,"true,false",Fonte primária rastreável e acessível publicamente
+temporal_alignment_status,string,true,"CLOSED,PARTIAL,BLOCKED,NOT_ASSESSED",Status de alinhamento temporal documental
+spatial_alignment_triage_status,string,true,"CLOSED,PARTIAL,BLOCKED,NOT_ASSESSED",Status de triagem espacial documental (não é overlay patch-level)
+g1_event_confirmation,string,true,"CLOSED,PARTIAL,BLOCKED,NOT_ASSESSED",Status do gate G1 (confirmação documental do evento)
+g2_source_availability,string,true,"CLOSED,PARTIAL,BLOCKED,NOT_ASSESSED",Status do gate G2 (disponibilidade de fonte rastreável)
+g3_temporal_alignment,string,true,"CLOSED,PARTIAL,BLOCKED,NOT_ASSESSED",Status do gate G3 (alinhamento temporal documental)
+g4_spatial_alignment_triage,string,true,"CLOSED,PARTIAL,BLOCKED,NOT_ASSESSED",Status do gate G4 em nível de triagem (não é overlay patch-level)
+priority_level,string,true,"HIGH,MEDIUM,LOW",Prioridade do evento para aquisição de fonte e ligação patch-evento
+ground_reference_candidate_status,string,true,"CANDIDATE_FOR_SOURCE_REVIEW,CANDIDATE_WITH_PARTIAL_SPATIAL_EVIDENCE,NOT_READY",Status de candidatura a referência observacional; não implica ground truth operacional
+operational_ground_truth_status,string,true,"NOT_ESTABLISHED",Status do ground truth operacional; sempre NOT_ESTABLISHED nesta etapa
+protocol_b_status,string,true,"BLOCKED",Status do Protocolo B; sempre BLOCKED nesta etapa
+multimodal_status,string,true,"HOLD",Status do pipeline multimodal; sempre HOLD nesta etapa
+dino_usage_status,string,true,"SUPPORT_ONLY",Uso autorizado de DINOv2; sempre SUPPORT_ONLY nesta etapa
+can_advance_to_source_review,string,true,"true,false",Evento pode avançar para revisão de fonte primária
+can_advance_to_patch_linking,string,true,"true,false",Evento pode avançar para ligação patch-evento (false sem geometria e overlay)
+can_be_used_as_training_label,string,true,"true,false",Evento pode ser usado como label de treino; sempre false nesta etapa
+can_reopen_protocol_b,string,true,"true,false",Evento pode reabrir Protocolo B; sempre false nesta etapa
+requires_human_review,string,true,"true,false",Evento exige revisão humana antes de qualquer promoção; sempre true
+missing_evidence,string,true,,Lista de evidências faltantes para avançar
+notes,string,false,,Observações metodológicas adicionais

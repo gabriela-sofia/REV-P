@@ -1,0 +1,20 @@
+field_name,field_type,required,controlled_values,description
+needed_id,string,true,,Identificador único do item de evidência necessário (ex: NEED_REC_2022_05_001)
+region,string,true,"Recife,Petrópolis,Curitiba",Região do REV-P
+observed_event_id,string,true,,Referência ao observed_event_id associado (ou ALL_REGION se for regional)
+evidence_item,string,true,,Descrição específica do item de evidência necessário
+evidence_category,string,true,"DECREE,CIVIL_DEFENSE_BULLETIN,MUNICIPAL_OCCURRENCE_LOG,OFFICIAL_FLOOD_MAP,TECHNICAL_REPORT,SHAPEFILE_OR_GEOJSON,HYDROMET_SERIES,OFFICIAL_PHOTO_WITH_CAPTION,COPERNICUS_PRODUCT_DETAIL,SENTINEL_EVENT_IMAGE,LICENSE_CLARIFICATION,HUMAN_REVIEW_INPUT",Categoria do item de evidência
+target_provider,string,true,,Instituição ou sistema esperado como provedor do item
+expected_format,string,true,,Formato esperado do dado (ex: PDF; CSV; Shapefile; GeoJSON; JPEG com legenda)
+expected_spatial_detail,string,true,,Nível de detalhe espacial esperado (ex: municipal; bairro; ponto georreferenciado)
+expected_temporal_detail,string,true,,Nível de detalhe temporal esperado (ex: data exata; janela de 48h; série diária)
+priority_level,string,true,"HIGH,MEDIUM,LOW",Prioridade de aquisição deste item
+acquisition_mode,string,true,"PUBLIC_DOWNLOAD,PUBLIC_PORTAL_REVIEW,FORMAL_REQUEST,MANUAL_REVIEW,FUTURE_ACQUISITION,UNKNOWN",Modo esperado de aquisição
+local_only_if_acquired,string,true,"true,false",O dado bruto deve permanecer local-only se adquirido
+public_metadata_allowed,string,true,"true,false",Apenas metadados (URL; nome; data de acesso; licença) podem ser publicados no GitHub
+license_review_required,string,true,"true,false",Revisão de licença e proveniência obrigatória antes de qualquer uso operacional
+can_help_close_gate,string,true,,Gate(s) do Protocolo C que este item pode ajudar a fechar (ex: G1; G4; G7)
+cannot_establish_ground_truth_alone,string,true,"true",Este item isolado não pode estabelecer ground truth operacional; sempre true
+current_status,string,true,"NOT_ACQUIRED,PUBLIC_REVIEW_REQUIRED,FORMAL_REQUEST_REQUIRED,LICENSE_REVIEW_REQUIRED,LOCAL_ONLY_REQUIRED,METHOD_REFERENCE_ONLY",Status atual de aquisição
+forbidden_use,string,true,,Usos explicitamente proibidos deste item mesmo após aquisição
+notes,string,false,,Observações metodológicas adicionais

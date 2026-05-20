@@ -1,0 +1,20 @@
+field_name,field_type,required,controlled_values,description
+geocoding_target_id,string,true,,Identificador único do alvo de geocodificação (ex: GCT_REC_2022_05_001)
+observed_event_id,string,true,,Referência ao observed_event_id em observed_event_reference_candidate_registry.csv
+region,string,true,"Recife,Petrópolis,Curitiba",Região do REV-P
+event_name,string,true,,Nome descritivo do evento observado candidato
+locality_name,string,true,,Nome da localidade conforme citada na fonte (sem transformação)
+locality_type,string,true,"MUNICIPALITY,NEIGHBORHOOD,COMMUNITY,STREET,RIVER,DISTRICT,TECHNICAL_AREA,OCCURRENCE_POINT,UNKNOWN",Tipo de localidade
+locality_source,string,true,,Nome da fonte que cita a localidade (ex: Prefeitura do Recife; DRM-RJ; boletim COMPDEC)
+source_url,string,true,,URL da fonte que cita a localidade
+evidence_role,string,true,"EVENT_LOCALIZATION,FLOOD_RELATED_LOCALITY,IMPACT_LOCALITY,RIVER_OVERFLOW_CONTEXT,TECHNICAL_REPORT_LOCALITY,OPERATIONAL_PRODUCT_AREA,SUPPORTING_CONTEXT",Papel da localidade na evidência do evento
+geocoding_status,string,true,"NOT_GEOCODED,NEEDS_MANUAL_REVIEW,NEEDS_OFFICIAL_GEOMETRY,BLOCKED_PENDING_SOURCE,METHOD_REFERENCE_ONLY",Status atual de geocodificação; nunca GEOCODED nesta etapa
+expected_geometry_type,string,true,"POINT,LINE,POLYGON,AREA_APPROXIMATION,UNKNOWN",Tipo de geometria esperada para esta localidade
+spatial_precision_expected,string,true,"HIGH,MEDIUM,LOW,UNKNOWN",Nível de precisão espacial esperado da geocodificação
+requires_official_confirmation,string,true,"true",Geocodificação exige confirmação por fonte oficial antes de uso; sempre true
+license_review_required,string,true,"true,false",Revisão de licença da fonte de geocodificação é obrigatória
+can_support_patch_linking_after_review,string,true,"true,false",Esta localidade pode suportar patch-linking após geocodificação e revisão humana
+cannot_establish_ground_truth_alone,string,true,"true",Esta localidade geocodificada não estabelece ground truth operacional sozinha; sempre true
+required_next_action,string,true,,Próximo passo necessário para avançar
+forbidden_use,string,true,,Usos explicitamente proibidos — deve bloquear ground truth operacional; flood detection; flood prediction; flood label; training label; supervised training
+notes,string,false,,Observações metodológicas adicionais

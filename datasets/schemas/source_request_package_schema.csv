@@ -1,0 +1,23 @@
+field_name,field_type,required,controlled_values,description
+request_package_id,string,true,,Identificador único do pacote de solicitação (ex: PKG_REC_COMPDEC_2021_2022)
+region,string,true,"RECIFE,PETROPOLIS,CURITIBA,METHOD_REFERENCE",Região do REV-P
+municipality,string,false,,Município do evento candidato
+candidate_event_name,string,false,,Nome descritivo do evento candidato coberto pelo pacote
+candidate_event_period,string,false,,Período do evento candidato
+target_institution,string,true,,Instituição-alvo da solicitação
+target_source_family,string,true,"CIVIL_DEFENSE_RECORD,MUNICIPAL_GIS_LAYER,OFFICIAL_OBSERVED_FLOOD_MAP,OPERATIONAL_FLOOD_PRODUCT,TECHNICAL_REPORT,EVENT_OCCURRENCE_RECORD,SENTINEL_EVENT_IMAGE,HIGH_RESOLUTION_IMAGE,ACADEMIC_DATASET,NEWS_OR_REPORT_DOCUMENTATION,METHOD_REFERENCE",Família da fonte-alvo
+request_type,string,true,"REQUEST_CIVIL_DEFENSE_RECORDS,REQUEST_MUNICIPAL_GIS_LAYER,REQUEST_OFFICIAL_FLOOD_MAP,REQUEST_TECHNICAL_REPORT,REQUEST_EVENT_OCCURRENCE_RECORDS,REQUEST_LICENSE_CLARIFICATION,PUBLIC_PORTAL_REVIEW_PACKAGE,METHOD_REFERENCE_PACKAGE",Tipo de solicitação
+requested_evidence,string,true,,Descrição da evidência solicitada
+related_search_plan_id,string,false,,Referência ao search_plan_id em regional_external_search_plan.csv
+related_dossier_id,string,false,,Referência ao dossier_id em event_evidence_dossier_registry.csv
+target_protocol_c_gate,string,true,,Gates do Protocolo C que esta solicitação visa endereçar (separados por ponto e vírgula)
+request_status,string,true,"NOT_SENT,READY_TO_PREPARE,READY_FOR_REVIEW,WAITING_SOURCE_DETAILS,BLOCKED,METHOD_REFERENCE_ONLY",Status atual do pacote de solicitação
+expected_artifact,string,false,,Artefato esperado ao receber a resposta
+expected_license_status,string,false,,Status de licença esperado
+raw_data_expected,string,true,"true,false",Dado bruto é esperado como resposta?
+local_only_if_received,string,true,"true,false",Dado bruto deve permanecer local-only se recebido?
+public_metadata_allowed,string,true,"true,false",Metadados públicos (não dado bruto) podem ser publicados no repositório?
+can_close_gate_if_received,string,true,,Gate(s) que pode(m) ser fechado(s) SE evidência for recebida e revisada; never_alone_for_ground_truth se não puder fechar ground truth sozinho
+cannot_establish_ground_truth_alone,string,true,"true",Esta fonte sozinha não pode estabelecer ground truth operacional? Sempre true
+forbidden_use,string,true,,Usos explicitamente proibidos para dado recebido por esta solicitação
+notes,string,false,,Observações adicionais

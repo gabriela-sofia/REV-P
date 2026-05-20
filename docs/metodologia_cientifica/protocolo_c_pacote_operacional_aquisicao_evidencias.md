@@ -217,3 +217,7 @@ A etapa v1hm produz os seguintes artefatos públicos (metadados apenas):
 ## Etapas subsequentes
 
 A triagem de eventos candidatos (v1hn) e os dossiês de evidência (v1ho) complementam este pacote com camadas mais específicas sobre o que buscar e o que é necessário por evento. Os dossiês especificam o pacote mínimo de evidências, requisitos críticos e decisões de continuidade com `can_reassess_protocol_b=false` e `can_start_multimodal=false`. Veja [`protocolo_c_triagem_eventos_candidatos.md`](protocolo_c_triagem_eventos_candidatos.md) e [`protocolo_c_dossies_eventos_candidatos.md`](protocolo_c_dossies_eventos_candidatos.md).
+
+A camada de busca externa e solicitação regional (v1hp) transforma os dossiês em ação concreta: planos de busca por região com fonte-alvo, gate e modo de acesso; pacotes de solicitação formal a instituições; perguntas de busca mapeadas a gates G1–G9; e matriz de prioridade regional consolidando a ordem de execução. Veja [`protocolo_c_busca_externa_solicitacao_regional.md`](protocolo_c_busca_externa_solicitacao_regional.md).
+
+A etapa v1hq inicia a primeira camada documental de eventos observados candidatos: 9 eventos (3 por região) com G1/G2/G3 fechados documentalmente e G4 em triagem espacial. Ground truth operacional não está estabelecido. Protocolo B permanece bloqueado. Multimodal permanece hold. Dados externos brutos que precisam ser trazidos manualmente estão catalogados em `datasets/manual_external_evidence_needed_registry.csv`.

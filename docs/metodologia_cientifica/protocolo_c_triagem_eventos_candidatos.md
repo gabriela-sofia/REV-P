@@ -136,6 +136,10 @@ Multimodal permanece em hold. A triagem de eventos candidatos não altera essa c
 
 Esses três registros são metadata-only. Nenhum dado bruto é referenciado. Nenhuma aquisição é executada.
 
-## Próxima etapa
+## Próximas etapas
 
 A etapa v1ho complementa a triagem com dossiês de evidência por evento candidato: especifica o pacote mínimo de evidências necessário, o estado atual de cada requisito crítico e a decisão de continuidade. Veja [`protocolo_c_dossies_eventos_candidatos.md`](protocolo_c_dossies_eventos_candidatos.md).
+
+A etapa v1hp transforma os dossiês em ação concreta: organiza planos de busca externa por região, pacotes de solicitação formal a instituições, perguntas de busca mapeadas a gates G1–G9 e matriz de prioridade regional. Veja [`protocolo_c_busca_externa_solicitacao_regional.md`](protocolo_c_busca_externa_solicitacao_regional.md).
+
+A etapa v1hq inicia a primeira camada documental de eventos observados candidatos: 9 eventos (3 por região) com G1/G2/G3 fechados documentalmente e G4 em triagem espacial. Esta etapa fecha evidência de existência do evento e fonte rastreável, mas mantém bloqueados ground truth operacional, Protocolo B, multimodal e labels supervisionados. Os dados externos brutos necessários estão catalogados em `datasets/manual_external_evidence_needed_registry.csv`. Veja [`protocolo_c_referencias_observacionais_candidatas.md`](protocolo_c_referencias_observacionais_candidatas.md).

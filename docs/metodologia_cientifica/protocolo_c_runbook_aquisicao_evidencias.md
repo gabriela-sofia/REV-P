@@ -209,3 +209,11 @@ Fontes que satisfazem todos os critérios relevantes devem ter:
 **license_status**: PUBLIC_REUSE_ALLOWED, PUBLIC_VIEW_ONLY, REQUEST_REQUIRED, RESTRICTED, UNKNOWN, METHOD_REFERENCE_ONLY
 
 **redistribution_status**: PUBLIC_METADATA_ONLY, PUBLIC_REUSABLE, LOCAL_ONLY_LICENSED, REDISTRIBUTION_FORBIDDEN, UNKNOWN, METHOD_REFERENCE_ONLY
+
+---
+
+## Relação com a camada de busca externa (v1hp)
+
+A camada de busca externa e solicitação regional (v1hp) complementa este runbook com estruturas prontas para ação: planos de busca por região (`regional_external_search_plan.csv`), pacotes de solicitação formal a instituições (`source_request_package_registry.csv`), perguntas de busca mapeadas a gates G1–G9 (`gate_search_question_registry.csv`) e matriz de prioridade regional (`regional_request_priority_matrix.csv`). Ao executar os passos deste runbook, use esses registros para identificar qual fonte consultar primeiro, qual formulário enviar e qual pergunta específica precisa ser respondida para fechar o gate alvo. Veja [`protocolo_c_busca_externa_solicitacao_regional.md`](protocolo_c_busca_externa_solicitacao_regional.md).
+
+A etapa v1hq inicia a primeira camada documental de eventos observados candidatos: 9 eventos (3 por região) com G1/G2/G3 fechados documentalmente e G4 em triagem espacial. O inventário de dados externos que precisam ser trazidos manualmente está em `datasets/manual_external_evidence_needed_registry.csv`. Ground truth operacional não está estabelecido. Protocolo B permanece bloqueado. Multimodal permanece hold.

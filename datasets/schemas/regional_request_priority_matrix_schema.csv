@@ -1,0 +1,18 @@
+field_name,field_type,required,controlled_values,description
+priority_id,string,true,,Identificador único da entrada na matriz de prioridade (ex: PRI_REC_001)
+region,string,true,"RECIFE,PETROPOLIS,CURITIBA,METHOD_REFERENCE",Região do REV-P
+candidate_event_name,string,false,,Nome descritivo do evento candidato de maior prioridade para a região
+priority_rank,string,true,,Rank de prioridade dentro da região (ex: 1; 2; HIGH; MEDIUM)
+priority_reason,string,true,,Justificativa da prioridade
+strongest_expected_source,string,false,,Fonte com maior potencial de evidência para a região
+weakest_current_gap,string,false,,Lacuna mais crítica no estado atual
+target_gate_to_close_first,string,false,,Gate prioritário a fechar para avançar a cadeia
+request_package_id,string,false,,Referência ao request_package_id prioritário em source_request_package_registry.csv
+search_plan_id,string,false,,Referência ao search_plan_id prioritário em regional_external_search_plan.csv
+expected_next_artifact,string,false,,Artefato esperado ao completar a busca/solicitação de maior prioridade
+current_blocker,string,false,,Bloqueador principal no estado atual; NONE se não houver
+protocol_b_status,string,true,"BLOCKED,FUTURE_REASSESSMENT_ONLY,METHOD_REFERENCE_ONLY",Status do Protocolo B para esta região
+multimodal_status,string,true,"HOLD,FUTURE_READINESS_ONLY,METHOD_REFERENCE_ONLY",Status do pipeline multimodal para esta região
+allowed_claim,string,true,,Claims metodológicos permitidos para esta região no estado atual
+forbidden_claim,string,true,,Claims explicitamente proibidos
+notes,string,false,,Observações adicionais

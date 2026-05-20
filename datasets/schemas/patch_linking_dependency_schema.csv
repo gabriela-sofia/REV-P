@@ -1,0 +1,14 @@
+field_name,field_type,required,controlled_values,description
+dependency_id,string,true,,Identificador único da dependência (ex: DEP_REC_2022_05_001)
+observed_event_id,string,true,,Referência ao observed_event_id em observed_event_reference_candidate_registry.csv
+region,string,true,"Recife,Petrópolis,Curitiba",Região do REV-P
+dependency_type,string,true,"SOURCE_GEOMETRY,MANUAL_GEOCODING,CRS_CONFIRMATION,LICENSE_PROVENANCE,PATCH_MANIFEST_REVIEW,SENTINEL_TEMPORAL_SEARCH,HUMAN_REVIEW,PHENOMENON_SEPARATION,INDEPENDENT_CORROBORATION",Tipo de dependência metodológica
+dependency_description,string,true,,Descrição específica da dependência para este evento
+required_before_overlay,string,true,"true,false",Esta dependência deve ser resolvida antes de qualquer overlay patch-level
+required_before_human_review,string,true,"true,false",Esta dependência deve ser resolvida antes de revisão humana formal
+required_before_ground_reference,string,true,"true,false",Esta dependência deve ser resolvida antes de qualquer promoção a ground reference
+current_status,string,true,"OPEN,PARTIAL,BLOCKED,NOT_ASSESSED",Status atual da dependência; nenhuma está fechada nesta etapa
+priority_level,string,true,"HIGH,MEDIUM,LOW",Prioridade de resolução da dependência
+responsible_review_role,string,true,"METHODOLOGICAL_REVIEWER,GIS_REVIEWER,REMOTE_SENSING_REVIEWER,FUTURE_EXTERNAL_REVIEWER",Função responsável pela resolução (sem dado pessoal)
+forbidden_if_missing,string,true,,O que fica bloqueado enquanto esta dependência permanecer aberta — deve incluir patch-linking validado; ground reference; ground truth operacional; label
+notes,string,false,,Observações adicionais

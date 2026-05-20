@@ -1,0 +1,22 @@
+field_name,field_type,required,controlled_values,description
+search_plan_id,string,true,,Identificador único do plano de busca (ex: SP_REC_2021_COMPDEC)
+region,string,true,"RECIFE,PETROPOLIS,CURITIBA,METHOD_REFERENCE",Região do REV-P
+municipality,string,false,,Município principal do evento candidato
+candidate_event_name,string,false,,Nome descritivo do evento candidato; pode ser NOT_EVENT_SPECIFIC para fontes de contexto
+candidate_event_period,string,false,,Período candidato do evento; UNKNOWN se não aplicável
+search_goal,string,true,,Descrição do objetivo da busca
+target_gate,string,true,"G1_EVENT_CONFIRMATION,G2_SOURCE_AVAILABILITY,G3_TEMPORAL_ALIGNMENT,G4_SPATIAL_ALIGNMENT,G5_SOURCE_STRENGTH,G6_UNCERTAINTY_AND_LIMITATIONS,G7_HUMAN_REVIEW,G8_INDEPENDENT_CORROBORATION,G9_PROMOTION_DECISION,MULTIPLE_GATES",Gate principal do Protocolo C que esta busca visa endereçar
+target_source_family,string,true,"CIVIL_DEFENSE_RECORD,MUNICIPAL_GIS_LAYER,OFFICIAL_OBSERVED_FLOOD_MAP,OPERATIONAL_FLOOD_PRODUCT,TECHNICAL_REPORT,EVENT_OCCURRENCE_RECORD,SENTINEL_EVENT_IMAGE,HIGH_RESOLUTION_IMAGE,ACADEMIC_DATASET,NEWS_OR_REPORT_DOCUMENTATION,METHOD_REFERENCE",Família da fonte-alvo
+target_provider_or_institution,string,false,,Provedor ou instituição da fonte-alvo
+expected_evidence_type,string,false,,Tipo de evidência esperada ao encontrar a fonte
+expected_temporal_information,string,false,,Informação temporal esperada (ex: data do evento; janela de imagem)
+expected_spatial_information,string,false,,Informação espacial esperada (ex: polígono de área afetada; mapa com CRS)
+expected_license_status,string,false,,Status esperado de licença; UNKNOWN se não confirmado
+expected_uncertainty_information,string,false,,Documentação de incerteza esperada; NOT_APPLICABLE se a fonte não for produto operacional
+search_priority,string,true,"HIGH,MEDIUM,LOW,BLOCKED,METHOD_REFERENCE_ONLY",Prioridade de busca
+search_mode,string,true,"PUBLIC_PORTAL_REVIEW,FORMAL_REQUEST,MANUAL_SEARCH,FUTURE_ACQUISITION,METHOD_REFERENCE_ONLY,UNKNOWN",Modo de acesso previsto
+current_status,string,true,"NOT_STARTED,READY_FOR_SEARCH,READY_FOR_REQUEST,WAITING_LICENSE_CLARIFICATION,BLOCKED,METHOD_REFERENCE_ONLY",Status atual do plano de busca
+dependency,string,false,,Dependência de outra busca ou gate antes de iniciar
+allowed_output,string,true,,Output permitido ao encontrar a fonte (ex: metadata_registry_only; intake_record_local_only)
+forbidden_use,string,true,,Usos explicitamente proibidos para qualquer dado encontrado nesta busca
+notes,string,false,,Observações adicionais

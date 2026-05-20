@@ -1,0 +1,15 @@
+field_name,field_type,required,controlled_values,description
+decision_id,string,true,,Identificador único da decisão (ex: DEC_REC_2022_05_24_30)
+observed_event_id,string,true,,Referência ao observed_event_id em observed_event_reference_candidate_registry.csv
+region,string,true,"Recife,Petrópolis,Curitiba",Região do REV-P
+decision_level,string,true,"EVENT_LEVEL_ONLY,SOURCE_REVIEW_READY,PATCH_LEVEL_BLOCKED",Nível da decisão metodológica atual
+decision_status,string,true,"ACCEPT_AS_OBSERVED_EVENT_CANDIDATE,NEEDS_MORE_SPATIAL_EVIDENCE,BLOCKED_FOR_OPERATIONAL_USE",Status da decisão para este evento
+decision_reason,string,true,,Justificativa da decisão metodológica
+gates_closed,string,true,,Gates do Protocolo C fechados para este evento nesta etapa (separados por ponto e vírgula)
+gates_partial,string,false,,Gates parcialmente fechados ou com lacunas residuais
+can_promote_to_ground_reference,string,true,"true,false",Evento pode ser promovido a ground reference; sempre false nesta etapa
+can_generate_training_label,string,true,"true,false",Evento pode gerar label de treino; sempre false nesta etapa
+can_reopen_protocol_b,string,true,"true,false",Evento pode reabrir Protocolo B; sempre false nesta etapa
+next_required_step,string,true,,Próximo passo necessário antes de qualquer promoção ou uso operacional
+review_owner,string,true,"METHODOLOGICAL_REVIEWER,GIS_REVIEWER,REMOTE_SENSING_REVIEWER,FUTURE_EXTERNAL_REVIEWER",Função responsável pela revisão futura (sem dado pessoal)
+notes,string,false,,Observações adicionais
