@@ -1,0 +1,28 @@
+field_name,field_type,required,description,allowed_values,notes
+repository_candidate_id,string,true,ID único do recurso auditado,,Ex: RIGEO_REC_001
+repository_name,string,true,Nome do repositório,,RIGeo; CKAN Recife; GeoCuritiba; etc
+institution,string,true,Instituição responsável,,SGB/CPRM; Prefeitura Recife; IPPUC; etc
+region,string,true,Região alvo,PET;REC;CTB,
+event_id,string,false,Evento alvo para vínculo temporal,,Ex: PET_2022_02_15
+search_term,string,true,Termo de busca usado,,inundacao; alagamento; cicatriz; etc
+query_url_or_api,string,true,URL de consulta ou endpoint API,,https://dados.recife.pe.gov.br/api/3/...
+dataset_title,string,true,Título oficial do dataset/pacote no repositório,,
+dataset_url,string,true,URL do dataset no repositório,,
+resource_name,string,true,Nome do recurso/arquivo específico,,
+resource_url,string,true,URL do recurso (download ou API),,
+resource_format,string,true,Formato do recurso,SHP;ZIP;GeoJSON;KML;KMZ;CSV;XLSX;GPKG;API;PDF;UNKNOWN;OTHER,
+download_attempted,string,true,Tentativa de download realizada,YES;NO,
+download_status,string,true,Status do download,SUCCESS;FAILED;PARTIAL;NOT_ATTEMPTED;ACCESS_DENIED;TOO_LARGE;PERMISSION_REQUIRED,
+local_audit_status,string,true,Status da auditoria local,AUDITED;NOT_AUDITED;AUDIT_FAILED;INVALID_FORMAT,
+geometry_available,string,true,Geometria vetorial disponível,YES;NO;PARTIAL;NOT_APPLICABLE,
+crs_available,string,true,CRS documentado,YES;NO;UNKNOWN;NOT_APPLICABLE,
+event_date_available,string,true,Data de evento/levantamento presente,YES;NO;PARTIAL;NOT_APPLICABLE,
+event_date_compatible,string,true,Data compatível com evento alvo,PASS;FAIL;UNKNOWN;NOT_APPLICABLE,
+phenomenon_available,string,true,Campo de fenômeno/tipo presente,YES;NO;NOT_APPLICABLE,
+observed_not_risk,string,true,É ocorrência observada (não risco/modelo),YES;NO;UNKNOWN;NOT_APPLICABLE,
+phenomenon_separable,string,true,Fenômenos (hidrológico/massa) separáveis,YES;NO;NOT_APPLICABLE;UNKNOWN,
+patch_level_candidate,string,true,Adequado para patch-level binding,YES;NO;MUNICIPAL_ONLY;POINT_ONLY;UNKNOWN,
+classification_status,string,true,Classificação final,OBSERVED_VECTOR_GROUND_TRUTH_CANDIDATE;OBSERVED_VECTOR_EVENT_REFERENCE;GEOCODED_EVENT_TABLE_CANDIDATE;EVENT_CONFIRMATION_ONLY;RISK_SUSCEPTIBILITY_ONLY;MODELLED_LAYER_ONLY;CARTOGRAPHIC_LEAD_ONLY;DOCUMENTARY_ONLY;BLOCKED_NO_GEOMETRY;BLOCKED_NO_DATE;BLOCKED_NO_PHENOMENON;BLOCKED_NOT_OBSERVED_EVENT;BLOCKED_NOT_PATCH_LEVEL;NOT_USABLE,
+blocking_reason,string,false,Motivo do bloqueio,,Ex: event_date_not_compatible; resource_format_pdf
+next_repository_action,string,false,Próxima ação necessária,,
+notes,string,false,Notas adicionais de auditoria,,
