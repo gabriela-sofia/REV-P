@@ -1,0 +1,19 @@
+field_name,field_type,description,allowed_values,mandatory,notes
+patch_binding_candidate_id,string,Identificador unico do candidato preflight,PATCH_NNN ou STATUS_REPORT,YES,Gerado sequencialmente ou status report se nenhum passou
+consolidated_candidate_id,string,Referencia para consolidated_observed_event_vector_candidate_registry,V1IF_NNN; V1IH_NNN; V1II_NNN; N/A,YES,Linkage para candidato consolidado
+region,string,Regiao geografica,PET; REC; CTB; GLOBAL,YES,GLOBAL se nenhum candidato passou
+event_id,string,ID do evento-alvo,PET_2022_02_15; REC_2022_05_24_30; N/A,YES,N/A se preflight nao gerado
+asset_name,string,Nome do ativo,qualquer; NO_CANDIDATE_PASSED_MINIMUM_PATCH_BINDING_GATES,YES,Ou mensagem de status se nenhum passou
+geometry_available,string,Geometria presente,YES; NO,YES,Requerido = YES para patch binding
+crs,string,Sistema de referencia,EPSG:4326; EPSG:31983; etc; vazio,YES,Requerido para calculo de overlay
+event_date_compatible,string,Data compativel com evento,PASS; FAIL,YES,Requerido = PASS para preflight
+phenomenon_group,string,Grupo de fenomeno,hydrological; mass_movement; mixed; unknown,NO,Documentacao do fenomeno
+observed_not_risk,string,Eh ocorrencia observada,YES; NO,YES,Requerido = YES para preflight
+phenomenon_separable,string,Fenomenos separaveis,YES; NO; NOT_APPLICABLE,YES,Importa para interpretacao de overlay
+spatial_unit_usable,string,Unidade espacial eh patch-level,YES; NO; UNKNOWN,YES,Requerido para preflight
+preflight_status,string,Status do preflight,CANDIDATE_FOR_OVERLAY_ASSESSMENT; NO_CANDIDATE_PASSED,YES,Se candidato passou gates (sim) ou nao (nao)
+blocking_reason,string,Razao se bloqueado,qualquer; vazio,NO,Detalhes se blocked
+overlay_allowed,string,Overlay com patches eh permitido,YES; NO,YES,YES apenas se todos os gates minimos passaram
+label_creation_allowed,string,Criacao de label de treinamento,NO,YES,Sempre NO - nunca criamos labels
+next_required_action,string,Proxima acao tecnica,qualquer; vazio,YES,Instrucoes para o proximo passo (avaliar overlay; etc)
+notes,string,Notas livres,qualquer,NO,Referencia a consolidated_candidate_id; source_stage; etc

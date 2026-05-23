@@ -64,6 +64,7 @@ model_cache/
 .cache/
 .cache_huggingface/
 huggingface/
+local_only/
 
 # Materiais legados removidos do escopo atual
 *cbers*

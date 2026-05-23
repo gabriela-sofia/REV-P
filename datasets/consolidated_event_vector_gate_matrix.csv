@@ -1,0 +1,19 @@
+candidate_id,gate_official_or_traceable_source,gate_vector_or_georeferenced_table,gate_crs_or_coordinate_reference,gate_event_date_available,gate_event_date_compatible,gate_phenomenon_available,gate_observed_not_risk,gate_phenomenon_separable,gate_spatial_unit_usable,gate_patch_binding_preflight_allowed,overall_status,blocking_gate,blocking_reason
+V1IF_000,PASS,FAIL,PASS,FAIL,FAIL,FAIL,FAIL,UNKNOWN,PASS,NO,BLOCKED,gate_02_no_geometry,gate_02_no_geometry; gate_04_no_event_date
+V1IF_001,PASS,FAIL,PASS,FAIL,FAIL,FAIL,FAIL,UNKNOWN,PASS,NO,BLOCKED,gate_02_no_geometry,gate_02_no_geometry; gate_04_no_event_date
+V1IF_002,PASS,FAIL,PASS,FAIL,FAIL,FAIL,FAIL,UNKNOWN,PASS,NO,BLOCKED,gate_02_no_geometry,gate_02_no_geometry; gate_04_no_event_date
+V1IF_003,PASS,FAIL,PASS,FAIL,FAIL,FAIL,FAIL,UNKNOWN,PASS,NO,BLOCKED,gate_02_no_geometry,gate_02_no_geometry; gate_04_no_event_date
+V1IF_004,PASS,FAIL,PASS,FAIL,FAIL,FAIL,FAIL,UNKNOWN,PASS,NO,BLOCKED,gate_02_no_geometry,gate_02_no_geometry; gate_04_no_event_date
+V1IF_005,PASS,FAIL,PASS,FAIL,FAIL,FAIL,FAIL,UNKNOWN,PASS,NO,BLOCKED,gate_02_no_geometry,gate_02_no_geometry; gate_04_no_event_date
+V1II_000,PASS,FAIL,PASS,PASS,PASS,PASS,FAIL,UNKNOWN,PASS,NO,BLOCKED,gate_02_no_geometry,gate_02_no_geometry; gate_07_risk_not_observed
+V1II_001,PASS,PASS,PASS,FAIL,FAIL,PASS,PASS,UNKNOWN,PASS,NO,BLOCKED,gate_04_no_event_date,gate_04_no_event_date; gate_05_date_incompatible
+V1II_002,PASS,PASS,PASS,FAIL,FAIL,PASS,FAIL,UNKNOWN,PASS,NO,BLOCKED,gate_04_no_event_date,gate_04_no_event_date; gate_05_date_incompatible
+V1II_003,PASS,PASS,PASS,PASS,PASS,FAIL,PASS,UNKNOWN,PASS,NO,BLOCKED,gate_06_no_phenomenon,gate_06_no_phenomenon
+V1II_004,PASS,FAIL,PASS,FAIL,FAIL,FAIL,FAIL,UNKNOWN,PASS,NO,BLOCKED,gate_02_no_geometry,gate_02_no_geometry; gate_04_no_event_date
+V1II_005,PASS,FAIL,PASS,FAIL,FAIL,FAIL,FAIL,UNKNOWN,PASS,NO,BLOCKED,gate_02_no_geometry,gate_02_no_geometry; gate_04_no_event_date
+V1II_006,PASS,FAIL,PASS,PASS,PASS,FAIL,FAIL,UNKNOWN,PASS,NO,BLOCKED,gate_02_no_geometry,gate_02_no_geometry; gate_06_no_phenomenon
+V1II_007,PASS,PASS,PASS,FAIL,FAIL,PASS,FAIL,UNKNOWN,PASS,NO,BLOCKED,gate_04_no_event_date,gate_04_no_event_date; gate_05_date_incompatible
+V1II_008,PASS,FAIL,PASS,FAIL,FAIL,FAIL,FAIL,UNKNOWN,PASS,NO,BLOCKED,gate_02_no_geometry,gate_02_no_geometry; gate_04_no_event_date
+V1II_009,PASS,FAIL,PASS,PASS,PASS,PASS,FAIL,UNKNOWN,PASS,NO,BLOCKED,gate_02_no_geometry,gate_02_no_geometry; gate_07_risk_not_observed
+V1II_010,PASS,FAIL,PASS,PASS,PASS,PASS,FAIL,UNKNOWN,PASS,NO,BLOCKED,gate_02_no_geometry,gate_02_no_geometry; gate_07_risk_not_observed
+V1II_011,PASS,FAIL,PASS,FAIL,FAIL,FAIL,FAIL,UNKNOWN,PASS,NO,BLOCKED,gate_02_no_geometry,gate_02_no_geometry; gate_04_no_event_date

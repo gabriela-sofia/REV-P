@@ -1,36 +1,8 @@
-field_name,field_type,required,description,allowed_values,notes
-asset_id,string,true,Identificador único do ativo auditado,,Ex: PET_LOCAL_001
-event_id,string,true,Identificador do evento alvo,,Ex: PET_2022_02_15
-event_date_target,string,true,Data alvo do evento para vínculo temporal,,YYYY-MM-DD
-region,string,true,Região do evento,PET;REC;CTB,
-source_institution,string,true,Instituição responsável pelo ativo,,SGB/CPRM; SECED; GeoCuritiba; etc.
-source_repository,string,true,Repositório ou portal de origem,,RIGeo; Dados Abertos Recife; etc.
-source_portal_or_url,string,true,URL pública de referência (sem path privado),,
-asset_name,string,true,Nome do arquivo ou subproduto específico,,
-asset_type,string,true,Tipo do ativo,VECTOR_SHP;VECTOR_GPKG;VECTOR_GEOJSON;VECTOR_KML;VECTOR_KMZ;CSV_TABLE;PDF_REPORT;UNKNOWN,
-acquisition_mode,string,true,Modo de aquisição,LOCAL_PROJETO;DOWNLOAD_OFFICIAL_URL;MANUAL_REQUEST;PENDING,
-official_source_url_reference,string,false,URL de referência pública para acesso,,
-raw_asset_versioning_status,string,true,Status de versionamento,NOT_VERSIONED_LOCAL_ONLY;NOT_APPLICABLE;METADATA_ONLY_PUBLIC,
-geometry_available,string,true,Geometria vetorial disponível,YES;NO;PARTIAL;NOT_APPLICABLE,
-geometry_type,string,false,Tipo de geometria,POLYGON;POINT;LINESTRING;MULTIPOLYGON;MULTIPOINT;MULTILINESTRING;MIXED;UNKNOWN;NOT_APPLICABLE,
-crs,string,false,Sistema de referência de coordenadas,,Ex: SIRGAS2000; WGS84; SIRGAS2000_UTM_23S
-feature_count,integer,false,Número de feições no vetor,,0 se nenhuma
-has_coordinates,string,true,Coordenadas de localização presentes,YES;NO;NOT_APPLICABLE,
-has_event_date,string,true,Campo de data presente,YES;NO;NOT_APPLICABLE,
-event_date_field,string,false,Nome do campo de data,,
-event_date_values_sample,string,false,Amostra de valores de data,,Primeiros 3-5 valores
-event_date_compatible,string,true,Data compatível com evento alvo,PASS;FAIL;UNKNOWN;NOT_APPLICABLE,Gate 5
-has_phenomenon,string,true,Campo de fenômeno presente,YES;NO;NOT_APPLICABLE,
-phenomenon_field,string,false,Nome do campo de fenômeno,,
-phenomenon_values_sample,string,false,Amostra de valores únicos do fenômeno,,Separados por ponto-e-vírgula
-phenomenon_group,string,false,Classificação do fenômeno,HYDROLOGICAL;MASS_MOVEMENT;MIXED;UNKNOWN;NOT_APPLICABLE,
-observed_or_modelled_status,string,true,Natureza do dado,OBSERVED_EVENT;RISK_MAP;SUSCEPTIBILITY_MAP;SCAR;CARTOGRAPHIC;UNDETERMINED,
-risk_susceptibility_status,string,true,É apenas risco/suscetibilidade?,YES;NO;UNKNOWN,Gate 7
-hydrological_observed_count,integer,false,Contagem de feições hidrológicas observadas,,
-mass_movement_observed_count,integer,false,Contagem de feições de movimento de massa observadas,,
-mixed_unknown_count,integer,false,Contagem de feições de fenômeno misto/desconhecido,,
-patch_level_candidate,string,true,Adequado para patch-level binding,YES;NO;MUNICIPAL_ONLY;UNKNOWN,Gate 9
-ground_truth_candidate_status,string,true,Status de candidato a ground truth,OBSERVED_VECTOR_GROUND_TRUTH_CANDIDATE;OBSERVED_VECTOR_EVENT_REFERENCE;EVENT_CONFIRMATION_ONLY;CARTOGRAPHIC_LEAD_ONLY;RISK_SUSCEPTIBILITY_ONLY;MODELLED_SUSCEPTIBILITY_ONLY;BLOCKED_NO_DATE;BLOCKED_NO_GEOMETRY;BLOCKED_NO_PHENOMENON;BLOCKED_MIXED_PHENOMENON;BLOCKED_NOT_OBSERVED_EVENT;BLOCKED_NOT_PATCH_LEVEL;NOT_USABLE,Resultado dos 10 gates
-blocking_gate,string,false,Gate(s) que bloquearam o candidato,,Ex: gate_04; gate_07_observed_not_risk
-next_required_action,string,false,Próxima ação técnica necessária,,
-notes,string,false,Notas adicionais de auditoria,,
+field_name,field_type,description,allowed_values,mandatory,notes
+source_asset_id,string,Identificador único do asset em fonte local/oficial,V1IF_*; V1IH_*; V1II_*,YES,Referência cruzada com consolidação
+event_id,string,Identificador de evento-alvo,PET_2022_02_15; REC_2022_05_24_30; etc,YES,Data ou período de evento
+region,string,Região ou sigla,PET; REC; CTB; etc,YES,Código de região
+source_asset_name,string,Nome do arquivo/recurso em repositório,*.shp; *.geojson; etc,YES,Nome público do asset
+source_asset_type,string,Tipo de dado,VECTOR_SHP; VECTOR_GEOJSON; TABULAR_CSV; etc,YES,Classificação técnica
+ground_truth_status,string,Status como candidato a ground truth,OBSERVED_VECTOR_GROUND_TRUTH_CANDIDATE; BLOCKED_NO_DATE; etc,YES,Resultado da auditoria de gates
+blocking_gate,string,Gate(s) que impedem avanço,gate_01; gate_02; gate_03; etc,NO,Separado por ponto-e-vírgula se múltiplos

@@ -1,0 +1,15 @@
+field_name,field_type,description,allowed_values,mandatory,gate_number,blocking_behavior,notes
+candidate_id,string,Identificador consolidado do candidato,V1IF_NNN; V1IH_NNN; V1II_NNN,YES,N/A,N/A,Referencia para consolidated_observed_event_vector_candidate_registry
+gate_official_or_traceable_source,string,Gate 1: Fonte oficial ou rastreavel,PASS; FAIL; UNKNOWN,YES,1,FAIL bloqueia,Instituicao oficial ou fonte publica rastreavel
+gate_vector_or_georeferenced_table,string,Gate 2: Vetor ou tabela georref,PASS; FAIL; UNKNOWN,YES,2,FAIL bloqueia,Geometria presente em SHP; GeoJSON; GPKG; etc
+gate_crs_or_coordinate_reference,string,Gate 3: CRS ou sistema coord,PASS; FAIL; UNKNOWN,YES,3,FAIL pode bloquear,Sistema de referencia espacial explicito
+gate_event_date_available,string,Gate 4: Data de evento disponivel,PASS; FAIL; UNKNOWN,YES,4,FAIL bloqueia,Campo ou metadado com data do evento
+gate_event_date_compatible,string,Gate 5: Data compativel com evento,PASS; FAIL; UNKNOWN,YES,5,FAIL bloqueia,Data dentro da janela do evento-alvo (naot anterior; nao muito posterior)
+gate_phenomenon_available,string,Gate 6: Fenomeno disponivel,PASS; FAIL; UNKNOWN,YES,6,FAIL bloqueia,Campo ou evidencia de deslizamento/inundacao/etc
+gate_observed_not_risk,string,Gate 7: Eh ocorrencia observada nao risco,PASS; FAIL; UNKNOWN,YES,7,FAIL bloqueia,Nao e mapa de risco/suscetibilidade; e dado de ocorrencia real
+gate_phenomenon_separable,string,Gate 8: Fenomenos separaveis,PASS; FAIL; UNKNOWN,YES,8,FAIL pode nao bloquear,Se multiplos fenomenos; conseguem ser distinguidos
+gate_spatial_unit_usable,string,Gate 9: Unidade espacial usavel,PASS; FAIL; UNKNOWN,YES,9,FAIL bloqueia,Patch-level ou melhor; nao apenas municipal/point
+gate_patch_binding_preflight_allowed,string,Gate 10: Allowed para patch binding preflight,YES; NO,YES,10,NO bloqueia,Resultado combinado de gates 2;3;4;5;6;7;9
+overall_status,string,Status geral consolidado,CANDIDATE_FOR_PATCH_BINDING; BLOCKED,YES,N/A,N/A,CANDIDATE se todos os gates minimos=PASS; BLOCKED caso contrario
+blocking_gate,string,Gate principal bloqueador,gate_01; gate_02; gate_04; gate_05; gate_06; gate_07; gate_09; vazio,NO,N/A,N/A,Qual gate teve primeira falha (prioridade: 2; 4; 5; 6; 7; 9)
+blocking_reason,string,Razao textual de bloqueio,qualquer,NO,N/A,N/A,Detalhes de qual gate ou gates falharam (ate 2)

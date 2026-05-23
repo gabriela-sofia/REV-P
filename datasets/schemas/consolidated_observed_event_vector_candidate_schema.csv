@@ -1,0 +1,30 @@
+field_name,field_type,description,source_stages,mandatory,allowed_values,notes
+consolidated_candidate_id,string,Identificador unico consolidado,v1if;v1ih;v1ii,YES,"V1IF_NNN; V1IH_NNN; V1II_NNN",Gerado sequencialmente por stage
+source_stage,string,Estagio de origem,v1if;v1ih;v1ii,YES,"v1if; v1ih; v1ii",Qual estago consolidou este candidato
+source_candidate_id,string,ID original no registry de origem,v1if;v1ih;v1ii,YES,qualquer,ID interno da fonte original
+region,string,Regiao geografica alvo,v1if;v1ih;v1ii,YES,"PET; REC; CTB; outras",Sigla de regiao
+event_id,string,ID canonico do evento,v1if;v1ih;v1ii,YES,"PET_2022_02_15; REC_2022_05_24_30",ID do evento-alvo
+event_date_candidate,string,Data candidata do evento,v1if;v1ih;v1ii,NO,"YYYY-MM-DD ou vazio",Deve ser compativel com event_id target
+source_institution,string,Instituicao proprietaria,v1if;v1ih;v1ii,YES,qualquer,SGB/CPRM; DRM-RJ; etc
+source_name,string,Nome do repositorio ou portal,v1if;v1ih;v1ii,YES,qualquer,RIGeo; Dados Abertos RJ; etc
+asset_name,string,Nome do ativo/arquivo/dataset,v1if;v1ih;v1ii,YES,qualquer,Cicatriz_Area_A.shp; etc
+asset_format,string,Formato original,v1if;v1ih;v1ii,YES,"SHP; GeoJSON; GPKG; KML; KMZ; PDF; ZIP; CSV; XLSX; API; UNKNOWN",Classificado por _classify_format
+geometry_available,string,Geometry ja verificada,v1if;v1ih;v1ii,YES,"YES; NO; PARTIAL; UNKNOWN",Resultado de auditoria geometrica
+geometry_type,string,Tipo de geometria,v1if;v1ih;v1ii,NO,"Point; LineString; Polygon; MultiPolygon; vazio",Apenas se geometry_available=YES
+crs,string,Sistema de referencia,v1if;v1ih;v1ii,NO,"EPSG:4326; EPSG:31983; vazio",CRS explicito ou vazio se desconhecido
+feature_count,integer,Numero de features,v1if;v1ih;v1ii,NO,"0; 1; 444; etc",Contagem real ou 0 se desconhecido
+has_event_date,string,Campo de data de evento presente,v1if;v1ih;v1ii,YES,"YES; NO; UNKNOWN",Resultado de auditoria de schema
+event_date_compatible,string,Data compativel com event_id,v1if;v1ih;v1ii,YES,"PASS; FAIL; UNKNOWN",Validacao de data contra event_id target
+has_phenomenon,string,Campo de fenomeno presente,v1if;v1ih;v1ii,YES,"YES; NO; UNKNOWN",Deslizamento; inundacao; misto; etc
+phenomenon_group,string,Grupo de fenomeno,v1if;v1ih;v1ii,NO,"hydrological; mass_movement; mixed; unknown; vazio",Classificacao do fenomeno
+observed_not_risk,string,Eh ocorrencia observada nao risco,v1if;v1ih;v1ii,YES,"YES; NO; UNKNOWN",Resultado de auditoria de conteudo
+risk_susceptibility_status,string,Status se risco/suscetibilidade,v1if;v1ih;v1ii,NO,"RISK_ONLY; SUSCEPTIBILITY_ONLY; RISK_AND_SUSCEPTIBILITY; vazio",Classificacao se nao e ocorrencia observada
+phenomenon_separable,string,Fenomenos separaveis,v1if;v1ih;v1ii,YES,"YES; NO; NOT_APPLICABLE; UNKNOWN",Se multiplos fenomenos presentes
+patch_level_candidate,string,Candidato para patch-level,v1if;v1ih;v1ii,YES,"YES; NO; UNKNOWN; MUNICIPAL_ONLY; POINT_ONLY",Spatial unit usability
+ground_truth_candidate_status,string,Status de candidato ground truth,v1if;v1ih;v1ii,YES,"OBSERVED_VECTOR_GROUND_TRUTH_CANDIDATE; BLOCKED",Resultado final de gates consolidados
+blocking_gate,string,Gate principal bloqueador,v1if;v1ih;v1ii,NO,"gate_01; gate_02; gate_04; gate_05; gate_06; gate_07; vazio",Qual gate bloqueou (se blockeado)
+blocking_reason,string,Razao textual de bloqueio,v1if;v1ih;v1ii,NO,qualquer,Detalhes de por que foi bloqueado
+metadata_enrichment_status,string,Status de enriquecimento,v1if;v1ih;v1ii,YES,"NOT_ATTEMPTED; ENRICHED_WITH_DOCUMENTED_EVENT_DATE; ENRICHED_WITH_SOURCE_METADATA; NO_METADATA_SUPPORT_FOUND; BLOCKED_AMBIGUOUS_METADATA",Resultado de tentativa de enriquecimento
+can_advance_to_patch_binding_preflight,string,Pode avancar para preflight,v1if;v1ih;v1ii,YES,"YES; NO",Se passou todos os gates minimos
+can_create_training_label,string,Pode ser label de treinamento,v1if;v1ih;v1ii,YES,"NO",Sempre NO - nao criamos labels
+notes,string,Notas livres,v1if;v1ih;v1ii,NO,qualquer,Documentacao adicional ou referencias internas

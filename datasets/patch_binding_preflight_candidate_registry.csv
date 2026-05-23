@@ -1,0 +1,2 @@
+patch_binding_candidate_id,consolidated_candidate_id,region,event_id,asset_name,geometry_available,crs,event_date_compatible,phenomenon_group,observed_not_risk,phenomenon_separable,spatial_unit_usable,preflight_status,blocking_reason,overlay_allowed,label_creation_allowed,next_required_action,notes
+STATUS_REPORT,N/A,GLOBAL,N/A,NO_CANDIDATE_PASSED_MINIMUM_PATCH_BINDING_GATES,NO,,NO,,NO,NO,NO,NO_CANDIDATE_PASSED,"All candidates blocked by missing event date, geometry, phenomenon, or risk status",NO,NO,,

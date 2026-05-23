@@ -1,0 +1,33 @@
+field_name,field_type,description,allowed_values,mandatory,notes
+temporal_review_id,string,Identificador unico da revisao temporal,TREV_NNN,YES,Gerado sequencialmente
+consolidated_candidate_id,string,Referencia para candidato consolidado,V1IF_NNN; V1IH_NNN; V1II_NNN,YES,Linkage para v1ij
+source_candidate_id,string,ID original no registry de origem,qualquer,YES,ID interno da fonte original
+region,string,Regiao geografica,PET; REC; CTB; outras,YES,Sigla de regiao
+event_id,string,ID canonico do evento,PET_2022_02_15; REC_2022_05_24_30,YES,ID do evento-alvo
+asset_name,string,Nome do ativo/arquivo,Cicatriz_Area_A.shp; etc,YES,Asset revisado
+asset_format,string,Formato original,SHP; GeoJSON; GPKG; etc,YES,Formato versionado
+geometry_available,string,Geometria presente,YES; NO; PARTIAL,YES,De v1ij
+crs,string,Sistema de referencia,EPSG:4326; EPSG:31983; vazio,YES,De v1ij
+phenomenon_group,string,Grupo de fenomeno,hydrological; mass_movement; mixed; unknown,NO,De v1ij
+observed_not_risk,string,Eh ocorrencia observada nao risco,YES; NO; UNKNOWN,YES,De v1ij
+previous_blocking_gate,string,Gate que bloqueava anteriormente,gate_04; gate_05; gate_06; vazio,YES,De v1ij
+previous_blocking_reason,string,Razao original de bloqueio,qualquer,NO,De v1ij
+temporal_evidence_source_type,string,Tipo de fonte de evidencia temporal,sidecar; registry; document; local; vazio,YES,Onde a evidencia veio
+temporal_evidence_source_name,string,Nome da fonte,oficial_observed_event_vector_registry; .prj; readme; vazio,NO,Qual arquivo/registry
+temporal_evidence_field,string,Campo ou local da evidencia,qualquer,NO,Ex: metadata.date; crs field
+temporal_evidence_value,string,Valor da evidencia encontrado,qualquer; vazio,NO,Ex: 2022-02-15; EPSG:31983
+temporal_evidence_strength,string,Forca da evidencia encontrada,STRONG_DOCUMENTED_EVENT_DATE; STRONG_DOCUMENTED_SURVEY_DATE; MODERATE_DOCUMENTED_EVENT_WINDOW; MODERATE_SOURCE_LINKAGE; WEAK_FILE_OR_FOLDER_HINT; INVALID_FILE_SYSTEM_DATE; INSUFFICIENT_EVIDENCE; CONTRADICTORY_EVIDENCE,YES,Classificacao de confianca
+event_date_candidate_before,string,Data candidata de evento antes,YYYY-MM-DD ou vazio,YES,De v1ij
+event_date_candidate_after,string,Data candidata de evento apos revisao,YYYY-MM-DD ou vazio,YES,Resultado de auditoria temporal
+event_date_compatible_after_review,string,Data compativel com evento apos revisao,PASS; FAIL; UNKNOWN,YES,Resultado de validacao
+temporal_confidence,string,Nivel de confianca temporal,LOW; MODERATE; HIGH,YES,Baseado em evidencia
+accepted_as_event_date,string,Data aceita como data do evento,YES; NO,YES,So se data de evento explicita
+accepted_as_survey_date,string,Data aceita como data de levantamento,YES; NO,YES,So se data de levantamento explicita
+accepted_as_context_only,string,Data aceita como contexto apenas,YES; NO,YES,So se data de publicacao ou indireta
+temporal_status_after_review,string,Status temporal apos revisao,TEMPORAL_GATE_PASSED_BUT_NOT_LABEL_READY; TEMPORAL_CONTEXT_STRENGTHENED_STILL_BLOCKED; TEMPORAL_GATE_BLOCKED_NO_DATE; TEMPORAL_GATE_BLOCKED_WEAK_HINT_ONLY; TEMPORAL_GATE_BLOCKED_NOT_EVENT_SPECIFIC; TEMPORAL_GATE_BLOCKED_CONTRADICTORY_EVIDENCE,YES,Resultado final da auditoria
+ground_truth_candidate_status_after_review,string,Status ground truth apos revisao,BLOCKED; CANDIDATE_OBSERVED_GROUND_TRUTH; vazio,YES,Se avancos no status
+patch_binding_preflight_status_after_review,string,Status preflight apos revisao,BLOCKED; CANDIDATE_FOR_OVERLAY_ASSESSMENT; vazio,YES,Se avancos no status
+can_create_training_label,string,Pode criar label de treinamento,NO,YES,Sempre NO
+limitations,string,Limitacoes de proveniencia identificadas,qualquer,NO,Detalha bloqueios persistentes
+next_required_action,string,Proxima acao tecnica recomendada,qualquer,YES,Passos para desbloquear
+notes,string,Notas livres,qualquer,NO,Referencias internas ou interpretacoes

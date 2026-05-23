@@ -1,0 +1,18 @@
+field_name,field_type,description,allowed_values,mandatory,notes
+candidate_id,string,Identificador consolidado do candidato,V1IF_NNN; V1IH_NNN; V1II_NNN,YES,Referencia para candidato consolidado
+has_explicit_event_date,string,Tem data de evento explicita,YES; NO,YES,Data documentada do evento-alvo
+has_explicit_survey_date,string,Tem data de levantamento/coleta explicita,YES; NO,YES,Data documentada da aquisicao/coleta
+has_event_window,string,Tem janela de evento documentada,YES; NO,YES,Intervalo de tempo documentado
+has_documentary_linkage,string,Tem vínculo documentado com evento,YES; NO,YES,Referencia em documento/publicacao/repositorio
+has_registry_cross_reference,string,Tem referencia cruzada em registry,YES; NO,YES,Encontrado em outro registry
+has_sidecar_metadata,string,Tem metadados em sidecars locais,YES; NO,YES,.prj; .xml; .dbf; etc
+only_file_or_folder_hint,string,Tem apenas pista em nome de pasta/arquivo,YES; NO,YES,Pista fraca; nunca STRONG
+only_file_system_date,string,Tem apenas data de arquivo/download/modificacao,YES; NO,YES,Rejeitado como data de evento
+contradictory_temporal_evidence,string,Tem evidencias temporais contraditorias,YES; NO,YES,Multiplas datas conflitantes
+event_date_compatible,string,Data compativel com evento-alvo,PASS; FAIL; UNKNOWN,YES,Validacao de data contra janela
+survey_date_usable_as_context,string,Data de levantamento usavel como contexto,YES; NO,YES,Pode ajudar interpretacao mas nao e data do evento
+temporal_gate_status,string,Status do gate temporal,BLOCKED; PARTIAL_CONTEXT; PASSED,YES,Resultado da auditoria
+temporal_blocking_reason,string,Razao de bloqueio temporal,qualquer,NO,Detalha o que falta ou e inconsistente
+can_reopen_patch_binding_preflight,string,Pode reabrir preflight de patch binding,YES; NO,YES,Se gate temporal passou E outras condicoes met
+can_reopen_ground_truth_candidate,string,Pode reabrir candidato ground truth,YES; NO,YES,Se gate temporal passou E geometria/CRS/fenomeno OK
+can_create_training_label,string,Pode criar label de treinamento,NO,YES,Sempre NO - nunca criamos labels
