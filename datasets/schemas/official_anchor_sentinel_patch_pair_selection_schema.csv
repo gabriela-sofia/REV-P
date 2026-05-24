@@ -1,0 +1,26 @@
+field,description
+selection_id,REV-P v1iz Sentinel patch pair selection field: selection_id.
+anchor_id,REV-P v1iz Sentinel patch pair selection field: anchor_id.
+pre_scene_id_sanitized,REV-P v1iz Sentinel patch pair selection field: pre_scene_id_sanitized.
+pre_scene_date,REV-P v1iz Sentinel patch pair selection field: pre_scene_date.
+post_scene_id_sanitized,REV-P v1iz Sentinel patch pair selection field: post_scene_id_sanitized.
+post_scene_date,REV-P v1iz Sentinel patch pair selection field: post_scene_date.
+pre_cloud_metadata_global,REV-P v1iz Sentinel patch pair selection field: pre_cloud_metadata_global.
+post_cloud_metadata_global,REV-P v1iz Sentinel patch pair selection field: post_cloud_metadata_global.
+pre_local_cloud_fraction,REV-P v1iz Sentinel patch pair selection field: pre_local_cloud_fraction.
+post_local_cloud_fraction,REV-P v1iz Sentinel patch pair selection field: post_local_cloud_fraction.
+cloud_mask_source,REV-P v1iz Sentinel patch pair selection field: cloud_mask_source.
+pre_valid_pixel_fraction,REV-P v1iz Sentinel patch pair selection field: pre_valid_pixel_fraction.
+post_valid_pixel_fraction,REV-P v1iz Sentinel patch pair selection field: post_valid_pixel_fraction.
+bands_available,REV-P v1iz Sentinel patch pair selection field: bands_available.
+spectral_indices_status,REV-P v1iz Sentinel patch pair selection field: spectral_indices_status.
+final_pair_status,REV-P v1iz Sentinel patch pair selection field: final_pair_status.
+can_be_reference_patch_candidate,REV-P v1iz Sentinel patch pair selection field: can_be_reference_patch_candidate.
+can_be_multimodal_reference_candidate,REV-P v1iz Sentinel patch pair selection field: can_be_multimodal_reference_candidate.
+can_be_operational_ground_truth,REV-P v1iz Sentinel patch pair selection field: can_be_operational_ground_truth.
+can_create_training_label,REV-P v1iz Sentinel patch pair selection field: can_create_training_label.
+can_train_model,REV-P v1iz Sentinel patch pair selection field: can_train_model.
+can_reopen_protocol_b,REV-P v1iz Sentinel patch pair selection field: can_reopen_protocol_b.
+primary_blocker,REV-P v1iz Sentinel patch pair selection field: primary_blocker.
+minimum_evidence_needed,REV-P v1iz Sentinel patch pair selection field: minimum_evidence_needed.
+notes,REV-P v1iz Sentinel patch pair selection field: notes.
