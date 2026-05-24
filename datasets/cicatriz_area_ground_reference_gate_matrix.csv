@@ -1,0 +1,2 @@
+candidate_id,gate_geometry,gate_crs,gate_observed_status,gate_source_authority,gate_document_vector_linkage,gate_event_or_survey_date,gate_region_match,gate_phenomenon_match,overall_reference_status,blocking_gate,minimum_evidence_needed
+CICATRIZ_AREA_A_DOSSIER_V1IQ_R2,PASS,PASS,PASS,PASS,WEAK,FAIL,STRONG,STRONG,STRONG_COMPOSITE_REFERENCE_BUT_TEMPORAL_LINK_WEAK,gate_event_or_survey_date,Confirmação explícita de que Cicatriz_Area_A.shp inclui feições mapeadas especificamente após 2022-02-15 em documento of
