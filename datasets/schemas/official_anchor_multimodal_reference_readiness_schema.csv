@@ -1,0 +1,5 @@
+field,description
+gate,REV-P v1ja multimodal readiness gate field: gate.
+status,REV-P v1ja multimodal readiness gate field: status.
+detail,REV-P v1ja multimodal readiness gate field: detail.
+blocking_reason,REV-P v1ja multimodal readiness gate field: blocking_reason.

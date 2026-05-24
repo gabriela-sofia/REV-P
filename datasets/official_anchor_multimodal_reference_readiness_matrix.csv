@@ -1,0 +1,11 @@
+gate,status,detail,blocking_reason
+official_anchor,PASS,ANCHOR_PET2022_CPRM_ANEXOII_19022022,
+documented_event,PASS,CPRM ANEXO-II documented event unit,
+explicit_coordinate,PASS,"-22.484251,-43.211257",
+sentinel_pair_selected,PASS,v1iz PATCH_PAIR_USABLE_FOR_REVIEW,
+sentinel_pair_quality,PASS,local cloud resolved by SCL/QA60 and alternative pre scene,
+dino_embedding_generated,PASS,true,
+dino_embedding_quality,PASS,768D finite embeddings,
+gis_context_available,WARN,"Context exists, but no operational ground truth is created.",GROUND_TRUTH_NOT_OPERATIONAL
+multimodal_reference_status,PASS,MULTIMODAL_REFERENCE_CANDIDATE_REVIEW_ONLY,
+blocking_reason,PASS,NONE,

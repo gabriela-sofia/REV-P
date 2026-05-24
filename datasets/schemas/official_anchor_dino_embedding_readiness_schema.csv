@@ -1,0 +1,25 @@
+field,description
+embedding_record_id,REV-P v1ja DINO embedding readiness registry field: embedding_record_id.
+anchor_id,REV-P v1ja DINO embedding readiness registry field: anchor_id.
+reference_patch_id,REV-P v1ja DINO embedding readiness registry field: reference_patch_id.
+temporal_relation_to_event,REV-P v1ja DINO embedding readiness registry field: temporal_relation_to_event.
+scene_date,REV-P v1ja DINO embedding readiness registry field: scene_date.
+sensor,REV-P v1ja DINO embedding readiness registry field: sensor.
+bands_used_for_visual_input,REV-P v1ja DINO embedding readiness registry field: bands_used_for_visual_input.
+dino_model_name,REV-P v1ja DINO embedding readiness registry field: dino_model_name.
+embedding_dim,REV-P v1ja DINO embedding readiness registry field: embedding_dim.
+embedding_generated,REV-P v1ja DINO embedding readiness registry field: embedding_generated.
+embedding_quality_status,REV-P v1ja DINO embedding readiness registry field: embedding_quality_status.
+pre_post_pair_available,REV-P v1ja DINO embedding readiness registry field: pre_post_pair_available.
+cosine_similarity,REV-P v1ja DINO embedding readiness registry field: cosine_similarity.
+euclidean_distance,REV-P v1ja DINO embedding readiness registry field: euclidean_distance.
+structural_change_status,REV-P v1ja DINO embedding readiness registry field: structural_change_status.
+can_be_review_embedding,REV-P v1ja DINO embedding readiness registry field: can_be_review_embedding.
+can_be_multimodal_reference_candidate,REV-P v1ja DINO embedding readiness registry field: can_be_multimodal_reference_candidate.
+can_be_operational_ground_truth,REV-P v1ja DINO embedding readiness registry field: can_be_operational_ground_truth.
+can_create_training_label,REV-P v1ja DINO embedding readiness registry field: can_create_training_label.
+can_train_model,REV-P v1ja DINO embedding readiness registry field: can_train_model.
+can_reopen_protocol_b,REV-P v1ja DINO embedding readiness registry field: can_reopen_protocol_b.
+primary_blocker,REV-P v1ja DINO embedding readiness registry field: primary_blocker.
+minimum_evidence_needed,REV-P v1ja DINO embedding readiness registry field: minimum_evidence_needed.
+notes,REV-P v1ja DINO embedding readiness registry field: notes.
