@@ -1,0 +1,29 @@
+field_name,field_type,description
+documented_event_unit_id,string,ID único da unidade de evento
+source_document_name_sanitized,string,Nome do documento (sem path privado)
+source_institution,string,"Instituição (CPRM, SGB, DRM)"
+region,string,Região (PET = Petrópolis)
+municipality,string,Município
+locality_text_sanitized,string,Bairro/rua documentada no relatório
+event_date,string,Data exata da vistoria (DD/MM/YYYY)
+event_window,string,Janela temporal se não houver data exata
+temporal_precision,string,EXACT_DATE | EVENT_WINDOW | MONTH_YEAR | YEAR_ONLY | UNKNOWN
+phenomenon_group,string,MOVEMENT_OF_MASS | FLOODING | EROSION | RISK_AREA_MIXED
+phenomenon_text_sanitized,string,Fenômenos encontrados no texto
+spatial_precision,string,EXACT_COORDINATE | STREET_OR_LOCALITY | NEIGHBORHOOD | MUNICIPAL_ONLY | UNKNOWN
+coordinate_available,string,YES se coordenada explicitamente documentada
+coordinate_source,string,Origem da coordenada (nunca inferida)
+coordinate_lat,string,"Latitude (string, da documentação oficial)"
+coordinate_lon,string,"Longitude (string, da documentação oficial)"
+document_excerpt_sanitized,string,"Trecho do documento (sanitizado, sem paths)"
+page_reference,string,Página de origem
+official_source_status,string,Status de fonte oficial
+ground_reference_candidate_status,string,CANDIDATE_WITH_DOCUMENTED_COORDINATE | CANDIDATE_DOCUMENTARY_ONLY | INSUFFICIENT_EVIDENCE
+can_be_ground_reference_candidate,string,YES_DOCUMENTARY | NO
+can_be_operational_ground_truth,string,SEMPRE NO — requer validação de campo (Protocolo B não iniciado)
+can_create_training_label,string,SEMPRE NO — invariante absoluto
+can_train_model,string,SEMPRE NO — invariante absoluto
+can_reopen_protocol_b,string,SEMPRE NO — invariante absoluto
+blocking_reason,string,Razão de bloqueio se não for candidato
+minimum_evidence_needed,string,Evidência mínima para próximo passo
+notes,string,Notas técnicas

@@ -1,0 +1,11 @@
+field_name,field_type,description
+unit_id,string,ID da unidade de evento
+source_official,string,PASS | FAIL — fonte é CPRM/SGB/DRM?
+event_date_or_window,string,PASS | FAIL — data ou janela documentada?
+phenomenon_explicit,string,PASS | FAIL — fenômeno descrito no texto?
+location_explicit,string,PASS | FAIL — localidade descrita?
+spatial_precision_sufficient,string,PASS | FAIL — bairro ou melhor?
+document_excerpt_available,string,PASS | FAIL — há trecho verificável?
+coordinate_documented,string,PASS | ABSENT — coordenada no documento?
+ground_reference_status,string,Status de candidato
+blocking_reason,string,Razão de bloqueio
