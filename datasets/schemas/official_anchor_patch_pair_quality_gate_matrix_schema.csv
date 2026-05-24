@@ -1,0 +1,5 @@
+field,description
+gate,REV-P v1iy Sentinel patch pair quality gate field: gate.
+status,REV-P v1iy Sentinel patch pair quality gate field: status.
+detail,REV-P v1iy Sentinel patch pair quality gate field: detail.
+blocking_reason,REV-P v1iy Sentinel patch pair quality gate field: blocking_reason.
