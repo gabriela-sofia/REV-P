@@ -1,0 +1,22 @@
+field,description
+event_id,v1jn ground reference event registry: event_id.
+source_event_unit_id,v1jn ground reference event registry: source_event_unit_id.
+source_institution,v1jn ground reference event registry: source_institution.
+source_document_sanitized,v1jn ground reference event registry: source_document_sanitized.
+region,v1jn ground reference event registry: region.
+municipality,v1jn ground reference event registry: municipality.
+locality_text_sanitized,v1jn ground reference event registry: locality_text_sanitized.
+event_or_survey_date,v1jn ground reference event registry: event_or_survey_date.
+temporal_precision,v1jn ground reference event registry: temporal_precision.
+phenomenon_group,v1jn ground reference event registry: phenomenon_group.
+coordinate_status,v1jn ground reference event registry: coordinate_status.
+latitude,v1jn ground reference event registry: latitude.
+longitude,v1jn ground reference event registry: longitude.
+spatial_precision,v1jn ground reference event registry: spatial_precision.
+source_confidence,v1jn ground reference event registry: source_confidence.
+c_level,v1jn ground reference event registry: c_level.
+c_level_reason,v1jn ground reference event registry: c_level_reason.
+can_be_ground_reference_event,v1jn ground reference event registry: can_be_ground_reference_event.
+can_be_operational_ground_truth,v1jn ground reference event registry: can_be_operational_ground_truth.
+can_create_training_label,v1jn ground reference event registry: can_create_training_label.
+notes,v1jn ground reference event registry: notes.

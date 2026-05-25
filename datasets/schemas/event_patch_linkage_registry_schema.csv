@@ -1,0 +1,23 @@
+field,description
+linkage_id,v1jn event patch linkage registry: linkage_id.
+event_id,v1jn event patch linkage registry: event_id.
+anchor_id,v1jn event patch linkage registry: anchor_id.
+patch_candidate_id,v1jn event patch linkage registry: patch_candidate_id.
+sensor_stack,v1jn event patch linkage registry: sensor_stack.
+pre_scene_date,v1jn event patch linkage registry: pre_scene_date.
+post_scene_date,v1jn event patch linkage registry: post_scene_date.
+temporal_window_pre_days,v1jn event patch linkage registry: temporal_window_pre_days.
+temporal_window_post_days,v1jn event patch linkage registry: temporal_window_post_days.
+spatial_center_error_m,v1jn event patch linkage registry: spatial_center_error_m.
+s2_pair_status,v1jn event patch linkage registry: s2_pair_status.
+s1_pair_status,v1jn event patch linkage registry: s1_pair_status.
+dem_status,v1jn event patch linkage registry: dem_status.
+dino_status,v1jn event patch linkage registry: dino_status.
+cloud_local_status,v1jn event patch linkage registry: cloud_local_status.
+qa_status,v1jn event patch linkage registry: qa_status.
+linkage_strength,v1jn event patch linkage registry: linkage_strength.
+c_level_after_linkage,v1jn event patch linkage registry: c_level_after_linkage.
+can_be_review_patch,v1jn event patch linkage registry: can_be_review_patch.
+can_be_training_sample,v1jn event patch linkage registry: can_be_training_sample.
+blocking_reason,v1jn event patch linkage registry: blocking_reason.
+notes,v1jn event patch linkage registry: notes.

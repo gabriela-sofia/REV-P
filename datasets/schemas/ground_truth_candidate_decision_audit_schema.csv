@@ -1,0 +1,23 @@
+field,description
+decision_id,v1jn candidate decision audit: decision_id.
+event_id,v1jn candidate decision audit: event_id.
+anchor_id,v1jn candidate decision audit: anchor_id.
+c_level,v1jn candidate decision audit: c_level.
+positive_reference_status,v1jn candidate decision audit: positive_reference_status.
+negative_evidence_status,v1jn candidate decision audit: negative_evidence_status.
+pseudo_absence_status,v1jn candidate decision audit: pseudo_absence_status.
+split_leakage_status,v1jn candidate decision audit: split_leakage_status.
+training_gate_status,v1jn candidate decision audit: training_gate_status.
+allowed_use,v1jn candidate decision audit: allowed_use.
+forbidden_use,v1jn candidate decision audit: forbidden_use.
+can_be_review_only,v1jn candidate decision audit: can_be_review_only.
+can_be_pu_sandbox,v1jn candidate decision audit: can_be_pu_sandbox.
+can_be_positive_label,v1jn candidate decision audit: can_be_positive_label.
+can_be_negative_label,v1jn candidate decision audit: can_be_negative_label.
+can_create_training_label,v1jn candidate decision audit: can_create_training_label.
+can_train_model,v1jn candidate decision audit: can_train_model.
+can_unfreeze_dino_for_scientific_claim,v1jn candidate decision audit: can_unfreeze_dino_for_scientific_claim.
+decision,v1jn candidate decision audit: decision.
+blocking_reason,v1jn candidate decision audit: blocking_reason.
+minimum_evidence_needed,v1jn candidate decision audit: minimum_evidence_needed.
+notes,v1jn candidate decision audit: notes.
