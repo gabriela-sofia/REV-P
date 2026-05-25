@@ -1,0 +1,12 @@
+field,description
+candidate_search_id,v1jo formal negative evidence search queue: candidate_search_id.
+target_region,v1jo formal negative evidence search queue: target_region.
+target_event_context,v1jo formal negative evidence search queue: target_event_context.
+required_evidence_type,v1jo formal negative evidence search queue: required_evidence_type.
+acceptable_source_type,v1jo formal negative evidence search queue: acceptable_source_type.
+forbidden_inference,v1jo formal negative evidence search queue: forbidden_inference.
+priority,v1jo formal negative evidence search queue: priority.
+query_terms_or_registry_targets,v1jo formal negative evidence search queue: query_terms_or_registry_targets.
+expected_output,v1jo formal negative evidence search queue: expected_output.
+can_unlock_c4,v1jo formal negative evidence search queue: can_unlock_c4.
+notes,v1jo formal negative evidence search queue: notes.

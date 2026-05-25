@@ -1,0 +1,12 @@
+field,description
+anchor_id,v1jo S1 completion queue: anchor_id.
+event_id,v1jo S1 completion queue: event_id.
+current_s1_status,v1jo S1 completion queue: current_s1_status.
+needed_s1_asset,v1jo S1 completion queue: needed_s1_asset.
+pre_window,v1jo S1 completion queue: pre_window.
+post_window,v1jo S1 completion queue: post_window.
+gee_or_local_possible,v1jo S1 completion queue: gee_or_local_possible.
+priority,v1jo S1 completion queue: priority.
+would_unlock_c4,v1jo S1 completion queue: would_unlock_c4.
+would_strengthen_c3,v1jo S1 completion queue: would_strengthen_c3.
+notes,v1jo S1 completion queue: notes.

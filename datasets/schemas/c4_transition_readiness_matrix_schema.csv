@@ -1,0 +1,18 @@
+field,description
+confirmed_c3_events,v1jo C4 transition readiness matrix: confirmed_c3_events.
+c4_ready_events,v1jo C4 transition readiness matrix: c4_ready_events.
+formal_negative_count,v1jo C4 transition readiness matrix: formal_negative_count.
+pseudo_absence_count,v1jo C4 transition readiness matrix: pseudo_absence_count.
+background_unlabeled_count,v1jo C4 transition readiness matrix: background_unlabeled_count.
+strong_control_count,v1jo C4 transition readiness matrix: strong_control_count.
+s1_complete_pair_count,v1jo C4 transition readiness matrix: s1_complete_pair_count.
+s1_partial_pair_count,v1jo C4 transition readiness matrix: s1_partial_pair_count.
+split_leakage_status,v1jo C4 transition readiness matrix: split_leakage_status.
+pu_sandbox_status,v1jo C4 transition readiness matrix: pu_sandbox_status.
+supervised_training_status,v1jo C4 transition readiness matrix: supervised_training_status.
+next_best_programming_step,v1jo C4 transition readiness matrix: next_best_programming_step.
+next_best_scientific_step,v1jo C4 transition readiness matrix: next_best_scientific_step.
+can_create_training_label,v1jo C4 transition readiness matrix: can_create_training_label.
+can_train_model,v1jo C4 transition readiness matrix: can_train_model.
+can_unfreeze_dino_for_scientific_claim,v1jo C4 transition readiness matrix: can_unfreeze_dino_for_scientific_claim.
+summary_decision,v1jo C4 transition readiness matrix: summary_decision.

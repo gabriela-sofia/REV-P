@@ -1,0 +1,11 @@
+field,description
+precondition_id,v1jo split/leakage precondition queue: precondition_id.
+required_positive_count,v1jo split/leakage precondition queue: required_positive_count.
+required_negative_count,v1jo split/leakage precondition queue: required_negative_count.
+current_positive_c3_count,v1jo split/leakage precondition queue: current_positive_c3_count.
+current_formal_negative_count,v1jo split/leakage precondition queue: current_formal_negative_count.
+split_unit,v1jo split/leakage precondition queue: split_unit.
+spatial_buffer_needed,v1jo split/leakage precondition queue: spatial_buffer_needed.
+temporal_rule_needed,v1jo split/leakage precondition queue: temporal_rule_needed.
+status,v1jo split/leakage precondition queue: status.
+notes,v1jo split/leakage precondition queue: notes.

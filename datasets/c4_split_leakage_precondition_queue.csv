@@ -1,0 +1,3 @@
+precondition_id,required_positive_count,required_negative_count,current_positive_c3_count,current_formal_negative_count,split_unit,spatial_buffer_needed,temporal_rule_needed,status,notes
+SPLIT_LEAKAGE_FORMAL_LABEL_PRECONDITION,9,9,9,0,DOCUMENTED_EVENT_UNIT_PLUS_ANCHOR_PAIR,true,true,BLOCKED_WAITING_FORMAL_POSITIVE_AND_NEGATIVE_LABELS,C3 references are not operational labels; split/leakage closure becomes actionable only after formal labels exist.
+SPLIT_LEAKAGE_SAME_ANCHOR_PAIR_RULE,9,9,9,0,SAME_ANCHOR_PRE_POST_PAIR,true,true,DESIGN_READY_REVIEW_ONLY_NOT_TRAINING_READY,Pre/post material from the same anchor must stay together if a later label protocol is approved.

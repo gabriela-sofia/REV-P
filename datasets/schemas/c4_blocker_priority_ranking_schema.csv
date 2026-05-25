@@ -1,0 +1,13 @@
+field,description
+rank,v1jo C4 blocker priority ranking: rank.
+blocker,v1jo C4 blocker priority ranking: blocker.
+affected_event_count,v1jo C4 blocker priority ranking: affected_event_count.
+severity,v1jo C4 blocker priority ranking: severity.
+blocks_c4,v1jo C4 blocker priority ranking: blocks_c4.
+resolvable_with_existing_data,v1jo C4 blocker priority ranking: resolvable_with_existing_data.
+requires_new_data,v1jo C4 blocker priority ranking: requires_new_data.
+programming_action_available,v1jo C4 blocker priority ranking: programming_action_available.
+scientific_action_required,v1jo C4 blocker priority ranking: scientific_action_required.
+recommended_next_step,v1jo C4 blocker priority ranking: recommended_next_step.
+expected_effect,v1jo C4 blocker priority ranking: expected_effect.
+notes,v1jo C4 blocker priority ranking: notes.
