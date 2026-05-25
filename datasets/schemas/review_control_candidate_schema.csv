@@ -1,0 +1,15 @@
+field,description
+control_candidate_id,REV-P v1jc review control candidate field: control_candidate_id.
+control_type,REV-P v1jc review control candidate field: control_type.
+source,REV-P v1jc review control candidate field: source.
+region,REV-P v1jc review control candidate field: region.
+relation_to_anchor,REV-P v1jc review control candidate field: relation_to_anchor.
+coordinate_available,REV-P v1jc review control candidate field: coordinate_available.
+patch_available,REV-P v1jc review control candidate field: patch_available.
+buffer_rule_status,REV-P v1jc review control candidate field: buffer_rule_status.
+absence_claim_made,REV-P v1jc review control candidate field: absence_claim_made.
+can_be_negative_label,REV-P v1jc review control candidate field: can_be_negative_label.
+can_be_review_control,REV-P v1jc review control candidate field: can_be_review_control.
+can_create_training_label,REV-P v1jc review control candidate field: can_create_training_label.
+blocking_reason,REV-P v1jc review control candidate field: blocking_reason.
+notes,REV-P v1jc review control candidate field: notes.

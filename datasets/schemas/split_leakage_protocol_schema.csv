@@ -1,0 +1,13 @@
+field,description
+protocol_id,REV-P v1jj split and leakage field: protocol_id.
+split_unit,REV-P v1jj split and leakage field: split_unit.
+spatial_buffer_rule,REV-P v1jj split and leakage field: spatial_buffer_rule.
+temporal_rule,REV-P v1jj split and leakage field: temporal_rule.
+same_anchor_pair_rule,REV-P v1jj split and leakage field: same_anchor_pair_rule.
+control_rule,REV-P v1jj split and leakage field: control_rule.
+cross_region_rule,REV-P v1jj split and leakage field: cross_region_rule.
+leakage_risk_status,REV-P v1jj split and leakage field: leakage_risk_status.
+split_readiness_status,REV-P v1jj split and leakage field: split_readiness_status.
+can_train_model,REV-P v1jj split and leakage field: can_train_model.
+blocking_reason,REV-P v1jj split and leakage field: blocking_reason.
+notes,REV-P v1jj split and leakage field: notes.

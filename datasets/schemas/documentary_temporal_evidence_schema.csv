@@ -1,0 +1,24 @@
+field_name,field_type,description
+evidence_id,string,unique identifier
+source_document_id,string,reference to document
+source_document_name_sanitized,string,sanitized filename
+source_institution,string,SGB/CPRM/etc
+region,string,PET/REC/CTB
+event_id,string,event identifier
+candidate_asset_name,string,candidate if linkage found
+evidence_text_excerpt_sanitized,string,context text (max 200 chars)
+temporal_expression,string,extracted date/period
+temporal_expression_type,string,DATE/MONTH_YEAR/YEAR/WINDOW/CONTEXT
+temporal_precision_level,string,EXACT/WINDOW
+phenomenon_mentioned,string,phenomenon type or NONE
+location_mentioned,string,region code or NONE
+candidate_linkage_type,string,YES/IMPLICIT/NONE
+evidence_strength,string,STRONG_EXPLICIT_EVENT_DATE/STRONG_EXPLICIT_SURVEY_DATE/MODERATE_EVENT_WINDOW/MODERATE_DOCUMENTARY_CONTEXT/WEAK_TEXTUAL_HINT/INSUFFICIENT/CONTRADICTORY
+accepted_as_event_date,string,YES/NO/PARTIAL
+accepted_as_survey_date,string,YES/NO
+accepted_as_context_only,string,YES/NO
+can_update_temporal_gate,string,YES/NO
+can_update_ground_truth_readiness,string,YES/NO
+can_create_training_label,string,always NO
+blocking_reason,string,explanation if cannot update gate
+notes,string,additional context

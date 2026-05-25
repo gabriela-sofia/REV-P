@@ -1,0 +1,18 @@
+field,description
+sandbox_id,REV-P v1jk review-only sandbox field: sandbox_id.
+feature_count,REV-P v1jk review-only sandbox field: feature_count.
+anchor_count,REV-P v1jk review-only sandbox field: anchor_count.
+control_candidate_count,REV-P v1jk review-only sandbox field: control_candidate_count.
+dino_available_count,REV-P v1jk review-only sandbox field: dino_available_count.
+spectral_available_count,REV-P v1jk review-only sandbox field: spectral_available_count.
+dem_available_count,REV-P v1jk review-only sandbox field: dem_available_count.
+one_class_sandbox_status,REV-P v1jk review-only sandbox field: one_class_sandbox_status.
+prototype_analysis_status,REV-P v1jk review-only sandbox field: prototype_analysis_status.
+scientific_claim_status,REV-P v1jk review-only sandbox field: scientific_claim_status.
+supervised_training_status,REV-P v1jk review-only sandbox field: supervised_training_status.
+can_create_training_label,REV-P v1jk review-only sandbox field: can_create_training_label.
+can_train_model,REV-P v1jk review-only sandbox field: can_train_model.
+can_unfreeze_dino_for_scientific_claim,REV-P v1jk review-only sandbox field: can_unfreeze_dino_for_scientific_claim.
+primary_blocker,REV-P v1jk review-only sandbox field: primary_blocker.
+minimum_evidence_needed,REV-P v1jk review-only sandbox field: minimum_evidence_needed.
+notes,REV-P v1jk review-only sandbox field: notes.

@@ -1,0 +1,13 @@
+field_name,field_type,description,allowed_values,mandatory,notes
+missing_candidate_id,string,ID único de candidato missing,,YES,
+target_name,string,Nome-alvo procurado,,YES,Ex: Cicatriz_Ponto_P.shp
+target_reason,string,Razão de estar missing,,YES,Por que não entrou na consolidação
+found_status,string,Status de localização,FOUND;NOT_FOUND;FOUND_INCOMPLETE,YES,
+found_as_asset_name,string,Nome do ativo encontrado,,NO,Se FOUND
+found_asset_format,string,Formato do ativo encontrado,,NO,Se FOUND
+candidate_recovery_decision,string,Decisão de recuperação,RECOVER_IF_COMPLETE_BUNDLE;CANNOT_RECOVER,YES,
+can_enter_next_consolidation,string,Pode entrar em v1ij/v1ik,YES;NO,YES,Sempre NO inicialmente
+can_create_training_label,string,Pode criar label de treinamento,NO,YES,Sempre NO
+blocking_reason,string,Razão de bloqueio,,NO,Se não pode entrar
+next_required_action,string,Próxima ação,,YES,
+notes,string,Notas livres,,NO,

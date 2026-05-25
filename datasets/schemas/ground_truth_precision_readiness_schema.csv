@@ -1,0 +1,13 @@
+field_name,field_type,description,allowed_values,mandatory,notes
+candidate_id,string,ID do candidato,,YES,
+source_authority_gate,string,Gate de autoridade de fonte,PASS;FAIL;UNKNOWN,YES,
+geometry_gate,string,Gate de geometria,PASS;FAIL;UNKNOWN,YES,
+temporal_gate,string,Gate temporal,PASS;FAIL;UNKNOWN,YES,
+phenomenon_gate,string,Gate de fenômeno,PASS;FAIL;UNKNOWN,YES,
+overall_ground_truth_readiness,string,Prontidão geral,READY_FOR_REFERENCE;NOT_READY,YES,
+can_be_ground_reference_candidate,string,Pode ser ground reference,YES;NO,YES,Sempre NO nesta etapa
+can_be_operational_ground_truth,string,Pode ser ground truth operacional,NO,YES,Sempre NO
+can_create_training_label,string,Pode criar label,NO,YES,Sempre NO
+blocking_gate,string,Gate que bloqueia,source_authority;geometry;temporal;phenomenon;etc,NO,
+blocking_reason,string,Razão exata de bloqueio,,NO,Muito específica
+minimum_evidence_needed,string,Evidência mínima necessária,,YES,Exatamente o que falta

@@ -1,0 +1,13 @@
+field_name,field_type,description
+stage_id,string,"v1if, v1ii, ..., v1io"
+stage_name,string,nome da etapa
+evidence_type,string,tipo de evidência auditado
+assets_or_sources_audited,integer,número de ativos/fontes
+candidates_found,integer,candidatos encontrados
+candidates_improved,integer,candidatos melhorados
+ground_reference_candidates,integer,candidatos ready
+primary_blocking_gate,string,gate que bloqueia
+primary_blocking_reason,string,razão do bloqueio
+can_create_training_label,string,sempre NO
+can_reopen_protocol_b,string,sempre NO
+notes,string,observações adicionais

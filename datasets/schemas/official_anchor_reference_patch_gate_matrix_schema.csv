@@ -1,0 +1,22 @@
+field,dtype,description
+matrix_id,string,ID único da avaliação
+anchor_id,string,ID do anchor oficial
+event_date,string,Data do evento
+official_anchor_gate,"enum[PASS,FAIL]",Anchor oficial existe
+coordinate_gate,"enum[PASS,FAIL]",Coordenadas GPS válidas
+local_raster_coverage_gate,"enum[PASS,FAIL]",Raster local cobre anchor
+band_availability_gate,"enum[PASS,FAIL]",Bandas disponíveis localmente
+patch_generation_gate,"enum[PASS,FAIL,NOT_APPLICABLE]",Patch foi gerado
+patch_centering_gate,"enum[PASS,FAIL,NOT_APPLICABLE]",Patch centrado no anchor
+pixel_quality_gate,"enum[PASS,FAIL,NOT_APPLICABLE]",Qualidade de pixel suficiente
+metadata_publication_gate,"enum[PASS,FAIL]",Metadados podem ser publicados
+reference_patch_status,string,Status final do patch de referência
+blocking_reason,string,Razão do bloqueio se houver
+rasters_scanned,integer,Total de rasters Sentinel escaneados
+rasters_covering_anchor,integer,Rasters que cobrem o anchor
+band_groups_formed,integer,Grupos de bandas formados
+patches_generated,integer,Patches gerados
+can_create_training_label,"enum[YES,NO,ALWAYS_NO]",Pode criar label de treino
+can_train_model,"enum[YES,NO,ALWAYS_NO]",Pode treinar modelo
+can_reopen_protocol_b,"enum[YES,NO,ALWAYS_NO]",Pode reabrir Protocolo B
+timestamp,string,Timestamp ISO 8601

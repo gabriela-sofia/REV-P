@@ -1,0 +1,15 @@
+field_name,field_type,description,allowed_values,mandatory,notes
+recovery_asset_id,string,ID único de ativo recuperado,ASSET_*,YES,
+sanitized_asset_name,string,Nome do arquivo sem paths privados,,YES,
+asset_family,string,Família de ativo,shapefile_bundle;standalone_vector;zip_archive;other,YES,
+asset_format,string,Formato do ativo,SHP;GEOJSON;GPKG;KML;KMZ;ZIP;RASTER,YES,
+region_hint,string,Hint de região,PET;REC;CTB;UNKNOWN,YES,
+event_hint,string,Hint de evento,PET_2022_02_15;HYDROLOGICAL_EVENT;MASS_MOVEMENT_EVENT;UNKNOWN,YES,
+matched_terms,string,Termos de busca que combinaram,,NO,Separados por vírgula
+candidate_type_hint,string,Tipo de candidato,PRIORITY_TARGET;SECONDARY,YES,
+geometry_likely_available,string,Geometria provavelmente disponível,YES;NO;UNKNOWN,YES,
+crs_likely_available,string,CRS provavelmente disponível,YES;NO;UNKNOWN,YES,
+recovery_status,string,Status de recuperação,FOUND_LOCAL;NOT_FOUND,YES,
+public_versioning_status,string,Status de versionamento público,METADATA_ONLY,YES,
+next_required_action,string,Próxima ação técnica,,YES,
+notes,string,Notas livres,,NO,

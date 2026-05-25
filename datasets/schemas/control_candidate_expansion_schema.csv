@@ -1,0 +1,19 @@
+field,description
+control_candidate_id,REV-P v1jj control candidate field: control_candidate_id.
+control_type,REV-P v1jj control candidate field: control_type.
+source_layer,REV-P v1jj control candidate field: source_layer.
+region,REV-P v1jj control candidate field: region.
+nearest_anchor_id,REV-P v1jj control candidate field: nearest_anchor_id.
+distance_to_nearest_anchor_m,REV-P v1jj control candidate field: distance_to_nearest_anchor_m.
+buffer_status,REV-P v1jj control candidate field: buffer_status.
+s2_available,REV-P v1jj control candidate field: s2_available.
+s1_available,REV-P v1jj control candidate field: s1_available.
+dem_available,REV-P v1jj control candidate field: dem_available.
+dino_available,REV-P v1jj control candidate field: dino_available.
+absence_claim_made,REV-P v1jj control candidate field: absence_claim_made.
+can_be_review_control,REV-P v1jj control candidate field: can_be_review_control.
+can_be_negative_label,REV-P v1jj control candidate field: can_be_negative_label.
+can_create_training_label,REV-P v1jj control candidate field: can_create_training_label.
+leakage_risk_status,REV-P v1jj control candidate field: leakage_risk_status.
+blocking_reason,REV-P v1jj control candidate field: blocking_reason.
+notes,REV-P v1jj control candidate field: notes.

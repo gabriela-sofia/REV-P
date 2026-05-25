@@ -1,0 +1,9 @@
+field_name,field_type,description,allowed_values,mandatory,notes
+linkage_id,string,ID único,,YES,
+candidate_id,string,ID do candidato,,YES,
+source_id,string,ID da fonte,,YES,
+supports_geometry,string,Fonte suporta geometria,YES;NO,YES,
+supports_event_date,string,Fonte suporta data de evento,YES;NO,YES,
+supports_phenomenon,string,Fonte suporta fenômeno,YES;NO,YES,
+support_strength,string,Força do suporte,STRONG;MODERATE;WEAK,YES,
+notes,string,Notas,,NO,

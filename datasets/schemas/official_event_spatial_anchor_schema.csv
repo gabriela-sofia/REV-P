@@ -1,0 +1,23 @@
+field,description
+anchor_id,Identificador único do spatial anchor (ANCHOR_<unit_id>)
+source_unit_id,ID da unidade documental v1ir de origem
+source_institution,Instituição emissora do relatório (CPRM/DIGEAP)
+region,Código de região (PET = Petrópolis)
+municipality,Município do evento
+locality_text_sanitized,Localidade/bairro documentado no relatório (sanitizado)
+event_date,Data exata de vistoria (DD/MM/YYYY)
+event_window,Janela de evento se data exata não disponível
+temporal_precision,Precisão temporal (EXACT_DATE / EVENT_WINDOW / UNKNOWN)
+phenomenon_group,Grupo de fenômeno (MOVEMENT_OF_MASS / FLOODING / etc.)
+coordinate_lat,Latitude GPS explicitamente documentada no relatório
+coordinate_lon,Longitude GPS explicitamente documentada no relatório
+coordinate_source,Fonte da coordenada (CPRM_FIELD_SURVEY_REPORT)
+spatial_precision,Precisão espacial (EXACT_COORDINATE / NEIGHBORHOOD / etc.)
+anchor_status,Status do anchor (SPATIAL_ANCHOR_CANDIDATE)
+can_be_spatial_anchor_candidate,Pode ser spatial anchor candidate (YES/NO)
+can_be_operational_ground_truth,INVARIANTE: sempre NO
+can_create_training_label,INVARIANTE: sempre NO
+can_train_model,INVARIANTE: sempre NO
+can_reopen_protocol_b,INVARIANTE: sempre NO
+blocking_reason,Razão de bloqueio para promoção a ground truth
+notes,Notas adicionais sobre o anchor

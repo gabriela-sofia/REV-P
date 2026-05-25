@@ -1,0 +1,13 @@
+field,description
+taxonomy_id,Patch corpus taxonomy field: taxonomy_id.
+corpus_layer,Patch corpus taxonomy field: corpus_layer.
+count_total,Patch corpus taxonomy field: count_total.
+recife_count,Patch corpus taxonomy field: recife_count.
+petropolis_count,Patch corpus taxonomy field: petropolis_count.
+curitiba_count,Patch corpus taxonomy field: curitiba_count.
+unit_type,Patch corpus taxonomy field: unit_type.
+source_registry_or_manifest,Patch corpus taxonomy field: source_registry_or_manifest.
+scientific_role,Patch corpus taxonomy field: scientific_role.
+can_be_used_as_ground_truth,Patch corpus taxonomy field: can_be_used_as_ground_truth.
+can_create_training_label,Patch corpus taxonomy field: can_create_training_label.
+notes,Patch corpus taxonomy field: notes.

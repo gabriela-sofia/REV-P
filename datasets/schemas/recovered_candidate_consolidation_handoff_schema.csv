@@ -1,0 +1,17 @@
+field_name,field_type,description,allowed_values,mandatory,notes
+handoff_id,string,ID único de handoff,,YES,
+recovery_asset_id,string,Referência ao ativo recuperado,ASSET_*,YES,
+target_candidate_name,string,Nome-alvo sendo entregue,,YES,
+region_hint,string,Hint de região,PET;REC;CTB;UNKNOWN,YES,
+event_hint,string,Hint de evento,,YES,
+asset_format,string,Formato do ativo,,YES,
+geometry_status,string,Status de geometria para handoff,LIKELY_AVAILABLE;NEEDS_VERIFICATION,YES,
+crs_status,string,Status de CRS,LIKELY_AVAILABLE;NEEDS_VERIFICATION,YES,
+date_status,string,Status de data,NEEDS_VERIFICATION,YES,
+phenomenon_status,string,Status de fenômeno,NEEDS_VERIFICATION,YES,
+observed_not_risk_status,string,Status ocorrência vs risco,NEEDS_VERIFICATION,YES,
+recommended_next_stage,string,Próximo estágio recomendado,rerun_v1ik_with_recovered_asset,YES,
+should_rerun_v1ij,string,Deve reexecutar v1ij,YES;NO,YES,
+should_rerun_v1ik,string,Deve reexecutar v1ik,YES;NO,YES,
+can_create_training_label,string,Pode criar label,NO,YES,Sempre NO
+notes,string,Notas de handoff,,NO,

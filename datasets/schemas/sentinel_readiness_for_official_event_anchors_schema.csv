@@ -1,0 +1,15 @@
+field,description
+anchor_id,ID do spatial anchor avaliado
+event_date,Data exata de vistoria
+event_window,Janela de evento (se data exata não disponível)
+sentinel_search_window_start,Início da janela de busca Sentinel (ISO)
+sentinel_search_window_end,Fim da janela de busca Sentinel (ISO)
+sentinel_expected_revisit_days,Revisita esperada Sentinel-2 (dias)
+sentinel_pixel_size_m,"Resolução espacial Sentinel-2 (metros, banda 10m)"
+sentinel_patch_candidate_available,Patch Sentinel disponível localmente (PATCH_FOUND / PATCH_NOT_AVAILABLE)
+sentinel_patch_registry_inspected,Registros inspecionados para verificar disponibilidade
+sentinel_patch_region_found,Regiões encontradas nos manifests de patch
+sentinel_patch_coordinate_match,Match de coordenada com patch disponível
+sentinel_readiness_status,Status de prontidão Sentinel (READY_FOR_INSPECTION / NOT_READY_PATCH_UNAVAILABLE)
+blocking_reason,Razão de bloqueio para análise Sentinel
+notes,Notas sobre prontidão e próximos passos

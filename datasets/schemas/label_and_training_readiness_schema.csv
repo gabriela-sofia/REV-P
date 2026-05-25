@@ -1,0 +1,18 @@
+field,description
+readiness_id,REV-P v1jc label and training readiness field: readiness_id.
+positive_reference_candidates_count,REV-P v1jc label and training readiness field: positive_reference_candidates_count.
+confirmed_anchors_count,REV-P v1jc label and training readiness field: confirmed_anchors_count.
+documentary_no_coordinate_count,REV-P v1jc label and training readiness field: documentary_no_coordinate_count.
+control_candidates_count,REV-P v1jc label and training readiness field: control_candidates_count.
+negative_labels_ready_count,REV-P v1jc label and training readiness field: negative_labels_ready_count.
+sentinel_patch_coverage_count,REV-P v1jc label and training readiness field: sentinel_patch_coverage_count.
+dino_embedding_count,REV-P v1jc label and training readiness field: dino_embedding_count.
+split_readiness_status,REV-P v1jc label and training readiness field: split_readiness_status.
+leakage_risk_status,REV-P v1jc label and training readiness field: leakage_risk_status.
+training_boundary_status,REV-P v1jc label and training readiness field: training_boundary_status.
+review_only_status,REV-P v1jc label and training readiness field: review_only_status.
+can_create_training_label,REV-P v1jc label and training readiness field: can_create_training_label.
+can_train_model,REV-P v1jc label and training readiness field: can_train_model.
+can_unfreeze_dino_for_scientific_claim,REV-P v1jc label and training readiness field: can_unfreeze_dino_for_scientific_claim.
+minimum_evidence_needed,REV-P v1jc label and training readiness field: minimum_evidence_needed.
+notes,REV-P v1jc label and training readiness field: notes.

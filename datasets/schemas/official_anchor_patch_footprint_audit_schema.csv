@@ -1,0 +1,27 @@
+field,description
+audit_id,ID único da auditoria (anchor + patch)
+anchor_id,ID do spatial anchor oficial
+documented_event_unit_id,ID da unidade documental v1ir de origem
+anchor_latitude,Latitude GPS do anchor (WGS84)
+anchor_longitude,Longitude GPS do anchor (WGS84)
+anchor_crs,CRS da coordenada do anchor (EPSG:4326)
+patch_id,ID do patch Sentinel avaliado
+patch_region,Região do patch
+patch_asset_name_sanitized,Referência do asset do patch (path redacted)
+patch_crs,CRS do patch (EPSG)
+patch_bounds_available,Bounds do patch disponíveis (YES/NO)
+patch_centroid_available,Centroide do patch disponível (YES/NO)
+anchor_transformed_to_patch_crs,Anchor foi transformado para CRS do patch
+anchor_inside_patch_bounds,Anchor está dentro dos bounds do patch
+distance_to_patch_centroid_m,Distância do anchor ao centroide do patch (metros)
+distance_to_nearest_edge_m,"Distância do anchor à borda mais próxima do patch (metros, 0 se dentro)"
+footprint_match_status,Status de match de footprint
+sentinel_patch_coverage_status,Status de cobertura Sentinel para o anchor
+dino_embedding_available,Embedding DINO disponível para este patch
+can_be_multimodal_reference_candidate,Pode ser candidato multimodal (YES apenas se dentro + DINO disponível)
+can_create_training_label,INVARIANTE: sempre NO
+can_train_model,INVARIANTE: sempre NO
+can_reopen_protocol_b,INVARIANTE: sempre NO
+blocking_reason,Razão de bloqueio para análise
+minimum_evidence_needed,Evidência mínima necessária para próxima etapa
+notes,Notas técnicas (sem path privado)

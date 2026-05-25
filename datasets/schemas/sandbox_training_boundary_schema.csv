@@ -1,0 +1,11 @@
+field,description
+boundary_id,REV-P v1jj sandbox boundary field: boundary_id.
+review_only_batch_ready,REV-P v1jj sandbox boundary field: review_only_batch_ready.
+weak_label_sandbox_allowed_local_only,REV-P v1jj sandbox boundary field: weak_label_sandbox_allowed_local_only.
+one_class_prototype_sandbox_allowed,REV-P v1jj sandbox boundary field: one_class_prototype_sandbox_allowed.
+supervised_training_ready,REV-P v1jj sandbox boundary field: supervised_training_ready.
+can_unfreeze_dino_for_scientific_claim,REV-P v1jj sandbox boundary field: can_unfreeze_dino_for_scientific_claim.
+can_create_training_label,REV-P v1jj sandbox boundary field: can_create_training_label.
+can_train_model,REV-P v1jj sandbox boundary field: can_train_model.
+minimum_evidence_needed,REV-P v1jj sandbox boundary field: minimum_evidence_needed.
+notes,REV-P v1jj sandbox boundary field: notes.

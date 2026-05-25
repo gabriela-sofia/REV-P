@@ -1,0 +1,18 @@
+field_name,field_type,description
+provenance_id,string,ID único de proveniência
+candidate_asset_name,string,Arquivo vetorial auditado
+source_field_value,string,Valor do campo FONTE no DBF
+source_method,string,Método de produção documentado
+source_institution,string,Instituição inferida
+imagery_or_base_name_sanitized,string,Imagem/base usada para fotointerpretação (se documentada)
+imagery_date_documented,string,Data da imagem (se documentada)
+mapping_date_documented,string,Data do mapeamento (proxy)
+survey_date_documented,string,Data do levantamento de campo (proxy)
+event_date_documented,string,Data do evento (2022-02-15)
+temporal_link_strength,string,Força do vínculo temporal
+promotion_decision_after_provenance_audit,string,Decisão de promoção
+can_be_ground_reference_candidate,string,Pode ser candidato? SIM/NÃO
+can_be_operational_ground_truth,string,Sempre NÃO
+can_create_training_label,string,Sempre NÃO
+primary_blocker,string,Bloqueio primário
+minimum_evidence_needed,string,Evidência mínima para superar bloqueio
