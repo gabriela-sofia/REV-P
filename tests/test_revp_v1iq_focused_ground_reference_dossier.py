@@ -1,11 +1,11 @@
 """
 test_revp_v1iq_focused_ground_reference_dossier.py
 
-Testes para v1iq -- Focused Ground Reference Dossier for Cicatriz_Area_A
+Testes para v1iq -- Focused Ground Reference Dossier for PET_CPRM_DESLIZAMENTO_AREA_FOTOINTERPRETADA
 
-Expectativa correta: Cicatriz_Area_A.shp NÃO é GROUND_REFERENCE_CANDIDATE.
+Expectativa correta: PET_CPRM_DESLIZAMENTO_AREA_FOTOINTERPRETADA NÃO é GROUND_REFERENCE_CANDIDATE.
 Resultado esperado: STRONG_COMPOSITE_REFERENCE_BUT_TEMPORAL_LINK_WEAK.
-Bloqueio: cicatrizes cumulativas sem data específica (SIG histórico 2013-2015).
+Bloqueio: feições de deslizamento cumulativas sem data específica (SIG histórico 2013-2015).
 """
 
 import pytest
@@ -73,11 +73,11 @@ class TestV1IQDossierStructure:
         assert builder.dossier is not None
 
     def test_dossier_candidate_asset_name(self):
-        """Dossiê deve referenciar Cicatriz_Area_A.shp."""
+        """Dossiê deve referenciar PET_CPRM_DESLIZAMENTO_AREA_FOTOINTERPRETADA."""
         builder = FocusedGroundReferenceDossierBuilder(force=False)
         builder.run()
         assert builder.dossier is not None
-        assert builder.dossier.candidate_asset_name == "Cicatriz_Area_A.shp"
+        assert builder.dossier.candidate_asset_name == "PET_CPRM_DESLIZAMENTO_AREA_FOTOINTERPRETADA"
 
     def test_dossier_region(self):
         """Dossiê deve ter região PET."""
@@ -127,7 +127,7 @@ class TestV1IQGateEvaluation:
         assert builder.stats["gates_fail"] >= 0
 
     def test_gates_pass_minimum(self):
-        """Cicatriz_Area_A deve passar em pelo menos 4 gates (geometry, observed, region, phenomenon)."""
+        """PET_CPRM_DESLIZAMENTO_AREA_FOTOINTERPRETADA deve passar em pelo menos 4 gates (geometry, observed, region, phenomenon)."""
         builder = FocusedGroundReferenceDossierBuilder(force=False)
         builder.run()
         assert builder.stats["gates_pass"] >= 4, (
@@ -135,7 +135,7 @@ class TestV1IQGateEvaluation:
         )
 
     def test_gate_observed_status_passes(self):
-        """gate_observed_status deve ser PASS (cicatrizes são observadas, não modeladas)."""
+        """gate_observed_status deve ser PASS (feições de deslizamento são observadas, não modeladas)."""
         builder = FocusedGroundReferenceDossierBuilder(force=False)
         builder.run()
         obs_gate = next(g for g in builder.gates if g.gate_name == "gate_observed_status")
@@ -156,13 +156,13 @@ class TestV1IQGateEvaluation:
         assert phenom_gate.status == "STRONG", f"gate_phenomenon_match deve ser STRONG, got {phenom_gate.status}"
 
     def test_gate_event_date_does_not_pass(self):
-        """gate_event_or_survey_date NÃO deve ser PASS (cicatrizes cumulativas/sem data)."""
+        """gate_event_or_survey_date NÃO deve ser PASS (feições de deslizamento cumulativas/sem data)."""
         builder = FocusedGroundReferenceDossierBuilder(force=False)
         builder.run()
         date_gate = next(g for g in builder.gates if g.gate_name == "gate_event_or_survey_date")
         assert date_gate.status not in ("PASS", "STRONG"), (
             f"gate_event_or_survey_date NÃO deve ser PASS/STRONG. "
-            f"Cicatrizes são cumulativas, sem data específica. Got: {date_gate.status}"
+            f"feições de deslizamento são cumulativas, sem data específica. Got: {date_gate.status}"
         )
 
 
@@ -184,13 +184,13 @@ class TestV1IQPromotion:
         ]
 
     def test_cicatriz_area_not_ground_reference_candidate(self):
-        """Cicatriz_Area_A NÃO deve virar GROUND_REFERENCE_CANDIDATE (SIG histórico 2013-2015)."""
+        """PET_CPRM_DESLIZAMENTO_AREA_FOTOINTERPRETADA NÃO deve virar GROUND_REFERENCE_CANDIDATE (SIG histórico 2013-2015)."""
         builder = FocusedGroundReferenceDossierBuilder(force=True)
         builder.run()
         assert builder.dossier is not None
         assert builder.dossier.promotion_decision != "GROUND_REFERENCE_CANDIDATE", (
-            "Cicatriz_Area_A NÃO pode ser GROUND_REFERENCE_CANDIDATE: "
-            "cicatrizes são cumulativas (SIG histórico 2013-2015), "
+            "PET_CPRM_DESLIZAMENTO_AREA_FOTOINTERPRETADA NÃO pode ser GROUND_REFERENCE_CANDIDATE: "
+            "feições de deslizamento são cumulativas (SIG histórico 2013-2015), "
             "sem campo de data, sem vínculo explícito com 2022-02-15."
         )
 
@@ -303,7 +303,7 @@ class TestV1IQOutputs:
         assert matrix_path.exists(), "cicatriz_area_ground_reference_gate_matrix.csv deve ser criada"
 
     def test_dossier_registry_has_cicatriz(self):
-        """Registry deve conter Cicatriz_Area_A."""
+        """Registry deve conter PET_CPRM_DESLIZAMENTO_AREA_FOTOINTERPRETADA."""
         builder = FocusedGroundReferenceDossierBuilder(force=True)
         builder.run()
         registry_path = REPO_ROOT / "datasets" / "cicatriz_area_ground_reference_dossier.csv"
@@ -311,7 +311,7 @@ class TestV1IQOutputs:
             reader = csv.DictReader(f)
             rows = list(reader)
         assert len(rows) > 0, "Registry deve ter pelo menos 1 registro"
-        assert "Cicatriz_Area_A" in rows[0].get("candidate_asset_name", "")
+        assert "PET_CPRM_DESLIZAMENTO_AREA_FOTOINTERPRETADA" in rows[0].get("candidate_asset_name", "")
 
     def test_dossier_registry_promotion_decision(self):
         """Registry deve ter promotion_decision correto."""
@@ -426,7 +426,7 @@ class TestV1IQDBFValueAudit:
             pytest.skip("DBF não acessível neste ambiente")
         total = builder.dbf_audit.get("total_records", 0)
         assert total == 444, (
-            f"Cicatriz_Area_A.shp deve ter 444 feições (auditado), got {total}"
+            f"PET_CPRM_DESLIZAMENTO_AREA_FOTOINTERPRETADA deve ter 444 feições (auditado), got {total}"
         )
 
     def test_expected_fields_in_audit(self):
@@ -448,11 +448,11 @@ class TestV1IQDBFValueAudit:
         assert builder.attr_prov is not None, "attr_prov deve ser preenchido"
 
     def test_attr_prov_candidate_name(self):
-        """attr_prov.candidate_asset_name deve ser Cicatriz_Area_A.shp."""
+        """attr_prov.candidate_asset_name deve ser PET_CPRM_DESLIZAMENTO_AREA_FOTOINTERPRETADA."""
         builder = FocusedGroundReferenceDossierBuilder(force=False)
         builder.run()
         assert builder.attr_prov is not None
-        assert builder.attr_prov.candidate_asset_name == "Cicatriz_Area_A.shp"
+        assert builder.attr_prov.candidate_asset_name == "PET_CPRM_DESLIZAMENTO_AREA_FOTOINTERPRETADA"
 
     def test_attr_prov_promotion_valid_value(self):
         """attr_prov.promotion_decision_after_attribute_audit deve ser valor válido."""
