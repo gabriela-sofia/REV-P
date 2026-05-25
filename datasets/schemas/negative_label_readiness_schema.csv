@@ -1,0 +1,14 @@
+field,description
+matrix_id,REV-P v1jl negative label readiness field: matrix_id.
+formal_negative_ready_count,REV-P v1jl negative label readiness field: formal_negative_ready_count.
+strong_control_candidate_count,REV-P v1jl negative label readiness field: strong_control_candidate_count.
+review_control_only_count,REV-P v1jl negative label readiness field: review_control_only_count.
+invalid_negative_assumption_count,REV-P v1jl negative label readiness field: invalid_negative_assumption_count.
+insufficient_evidence_count,REV-P v1jl negative label readiness field: insufficient_evidence_count.
+positive_reference_candidate_count,REV-P v1jl negative label readiness field: positive_reference_candidate_count.
+formal_positive_label_ready_count,REV-P v1jl negative label readiness field: formal_positive_label_ready_count.
+formal_negative_label_ready_count,REV-P v1jl negative label readiness field: formal_negative_label_ready_count.
+can_create_training_label,REV-P v1jl negative label readiness field: can_create_training_label.
+negative_label_status,REV-P v1jl negative label readiness field: negative_label_status.
+minimum_evidence_needed,REV-P v1jl negative label readiness field: minimum_evidence_needed.
+notes,REV-P v1jl negative label readiness field: notes.

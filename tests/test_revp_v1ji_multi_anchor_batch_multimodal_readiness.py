@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import csv
 import json
+import os
 import subprocess
 import sys
 from functools import lru_cache
@@ -16,6 +17,9 @@ SCHEMAS = DATASETS / "schemas"
 DOCS = REVP_ROOT / "docs" / "metodologia_cientifica"
 SCRIPT = REVP_ROOT / "scripts/protocolo_c/revp_v1ji_multi_anchor_batch_multimodal_readiness.py"
 LOCAL = REVP_ROOT / "local_runs/protocolo_c/v1ji"
+RUN_INTEGRATION = os.environ.get("RUN_REVP_INTEGRATION") == "1"
+SCRIPT_COMMAND = [sys.executable, str(SCRIPT), "--force"] if RUN_INTEGRATION else [sys.executable, str(SCRIPT), "--metadata-only-test"]
+SCRIPT_TIMEOUT_SECONDS = 1800 if RUN_INTEGRATION else 60
 
 PRIVATE_FRAGMENTS = [
     r"C:\Users\gabriela",
@@ -43,13 +47,14 @@ def read_csv(path: Path) -> list[dict[str, str]]:
 @lru_cache(maxsize=1)
 def run_once() -> None:
     result = subprocess.run(
-        [sys.executable, str(SCRIPT), "--force"],
+        SCRIPT_COMMAND,
         cwd=str(REVP_ROOT),
         capture_output=True,
         text=True,
         check=False,
+        timeout=SCRIPT_TIMEOUT_SECONDS,
     )
-    assert result.returncode == 0, result.stderr
+    assert result.returncode == 0, result.stderr + result.stdout
 
 
 def test_script_exists_and_runs() -> None:
@@ -126,7 +131,10 @@ def test_negatives_zero_and_training_blocked() -> None:
 def test_summary_matches_public_training_boundary() -> None:
     run_once()
     summary = json.loads((LOCAL / "v1ji_summary.json").read_text(encoding="utf-8"))
-    assert summary["official_unique_anchor_count"] >= 9
+    assert summary["official_unique_anchor_count"] == 9
+    if not RUN_INTEGRATION:
+        assert summary["execution_mode"] == "METADATA_ONLY_TEST"
+        assert summary["gee_status"] == "METADATA_ONLY_TEST_NO_GEE"
     assert summary["negative_labels_ready_count"] == 0
     assert summary["training_gate_status"] == "SUPERVISED_TRAINING_BLOCKED"
     assert summary["can_create_training_label"] is False

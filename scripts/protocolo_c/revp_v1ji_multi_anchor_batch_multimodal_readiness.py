@@ -6,6 +6,10 @@ anchors, attempts small local GEE downloads for Sentinel-2, Sentinel-1 and
 DEM/terrain patches, emits QA and metadata registries, and extracts frozen DINO
 review diagnostics when valid S2 pre/post patches exist. No label, true
 negative, supervised training, or DINO unfreeze is created.
+
+The default execution path is the real integration path. Unit tests should use
+--metadata-only-test or --test-mode so the standard pytest suite never starts
+GEE downloads, raster batch generation, or DINO model loading.
 """
 
 from __future__ import annotations
@@ -96,8 +100,8 @@ def write_json(path: Path, data: dict[str, Any]) -> None:
     path.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
 
 
-def prepare(force: bool) -> None:
-    if force and LOCAL_RUN_DIR.exists():
+def prepare(force: bool, preserve_existing_outputs: bool = False) -> None:
+    if force and LOCAL_RUN_DIR.exists() and not preserve_existing_outputs:
         resolved = LOCAL_RUN_DIR.resolve()
         expected = (REVP_ROOT / "local_runs" / "protocolo_c" / "v1ji").resolve()
         if resolved != expected:
@@ -412,6 +416,141 @@ def run_dino(anchors: list[dict[str, Any]], s2_qa_rows: list[dict[str, Any]]) ->
     return rows
 
 
+def scene_rows_metadata_only(anchors: list[dict[str, Any]], prefix: str) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    for anchor in anchors:
+        windows = inclusive_windows(anchor["date"])
+        for relation in ["pre", "post"]:
+            start, end = windows[relation]
+            row = {
+                **anchor,
+                "relation": relation,
+                "window_start": start,
+                "window_end": end,
+                "scene_count": "",
+                "scene_id": "",
+                "scene_date": "",
+                "status": f"{prefix.upper()}_METADATA_ONLY_TEST_NO_GEE",
+            }
+            if prefix == "s2":
+                row["cloud"] = ""
+            else:
+                row["polarizations"] = ""
+            rows.append(row)
+    return rows
+
+
+def ready_rows_metadata_only(anchors: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    existing_rows = {row["anchor_id"]: row for row in read_csv(DATASETS_DIR / "multi_anchor_multimodal_patch_registry.csv") if row.get("anchor_id")}
+    rows: list[dict[str, Any]] = []
+    for anchor in anchors:
+        existing = existing_rows.get(anchor["anchor_id"], {})
+        row = {field: existing.get(field, "") for field in MIN_FIELDS}
+        row.update(
+            {
+                "anchor_id": anchor["anchor_id"],
+                "documented_event_unit_id": anchor["documented_event_unit_id"],
+                "date": anchor["date"],
+                "phenomenon_group": anchor["phenomenon_group"],
+                "latitude": anchor["latitude"],
+                "longitude": anchor["longitude"],
+                "coordinate_confidence": anchor["coordinate_confidence"],
+                "s2_pre_status": row["s2_pre_status"] or "QA_PASS",
+                "s2_post_status": row["s2_post_status"] or "QA_PASS",
+                "s1_pre_status": row["s1_pre_status"] or "PATCH_NOT_AVAILABLE",
+                "s1_post_status": row["s1_post_status"] or "PATCH_NOT_AVAILABLE",
+                "dem_status": row["dem_status"] or "QA_PASS",
+                "dino_status": row["dino_status"] or "DINO_METADATA_ONLY_TEST_NO_MODEL",
+                "review_only_status": row["review_only_status"] or "REVIEW_ONLY_READY",
+                "positive_reference_candidate": "true",
+                "positive_label_ready": "false",
+                "negative_label_ready": "false",
+                "training_ready": "false",
+                "can_create_training_label": "false",
+                "can_train_model": "false",
+                "can_unfreeze_dino_for_scientific_claim": "false",
+                "blocking_reason": row["blocking_reason"] or "LABEL_AND_NEGATIVE_GATES_BLOCKED",
+                "notes": "Metadata-only test fixture; no GEE, raster batch, DINO load, label, or training permission.",
+            }
+        )
+        rows.append(row)
+    return rows
+
+
+def relation_qa_rows_from_ready(anchors: list[dict[str, Any]], ready: list[dict[str, Any]], prefix: str) -> list[dict[str, Any]]:
+    ready_by_anchor = {row["anchor_id"]: row for row in ready if row.get("anchor_id")}
+    status_fields = {
+        "s2": ("s2_pre_status", "s2_post_status", "s2_status"),
+        "s1": ("s1_pre_status", "s1_post_status", "s1_status"),
+    }
+    pre_field, post_field, source_status_field = status_fields[prefix]
+    rows: list[dict[str, Any]] = []
+    for anchor in anchors:
+        existing = ready_by_anchor.get(anchor["anchor_id"], {})
+        for relation, field in [("pre", pre_field), ("post", post_field)]:
+            qa_status = existing.get(field) or "PATCH_NOT_AVAILABLE"
+            row = {
+                **anchor,
+                "relation": relation,
+                "patch_file_sanitized": "",
+                source_status_field: "METADATA_ONLY_TEST_NO_RASTER",
+                "patch_exists": "false",
+                "qa_status": qa_status,
+                "shape_px": "",
+                "band_count": "",
+                "crs": "",
+                "valid_pixel_fraction": "1.000000" if qa_status == "QA_PASS" else "0.000000",
+                "nan_inf_status": "NOT_ASSESSED_METADATA_ONLY",
+            }
+            if prefix == "s2":
+                row["local_cloud_fraction"] = "NOT_COMPUTED_METADATA_ONLY"
+            rows.append(row)
+    return rows
+
+
+def dem_rows_metadata_only(anchors: list[dict[str, Any]], ready: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    ready_by_anchor = {row["anchor_id"]: row for row in ready if row.get("anchor_id")}
+    rows: list[dict[str, Any]] = []
+    for anchor in anchors:
+        existing = ready_by_anchor.get(anchor["anchor_id"], {})
+        qa_status = existing.get("dem_status") or "PATCH_NOT_AVAILABLE"
+        rows.append(
+            {
+                **anchor,
+                "patch_file_sanitized": "",
+                "dem_status": "METADATA_ONLY_TEST_NO_RASTER",
+                "patch_exists": "false",
+                "qa_status": qa_status,
+                "shape_px": "",
+                "band_count": "",
+                "crs": "",
+                "valid_pixel_fraction": "1.000000" if qa_status == "QA_PASS" else "0.000000",
+                "nan_inf_status": "NOT_ASSESSED_METADATA_ONLY",
+            }
+        )
+    return rows
+
+
+def dino_rows_metadata_only(anchors: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    existing_rows = {row["anchor_id"]: row for row in read_csv(DATASETS_DIR / "multi_anchor_dino_review_embedding_registry.csv") if row.get("anchor_id")}
+    rows: list[dict[str, Any]] = []
+    for anchor in anchors:
+        existing = existing_rows.get(anchor["anchor_id"], {})
+        status = existing.get("dino_status") or "DINO_METADATA_ONLY_TEST_NO_MODEL"
+        rows.append(
+            {
+                **anchor,
+                "embedding_dim": existing.get("embedding_dim") or ("768" if status == "DINO_QA_PASS" else ""),
+                "cosine_similarity": existing.get("cosine_similarity", ""),
+                "euclidean_distance": existing.get("euclidean_distance", ""),
+                "dino_status": status,
+                "can_create_training_label": "false",
+                "can_train_model": "false",
+            }
+        )
+    return rows
+
+
 def readiness_rows(anchors: list[dict[str, Any]], s2_qa: list[dict[str, Any]], s1_all: list[dict[str, Any]], dem_rows: list[dict[str, Any]], dino_rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
     for anchor in anchors:
@@ -458,12 +597,22 @@ def write_schema(path: Path, fields: list[str], prefix: str) -> None:
 
 
 def run(args: argparse.Namespace) -> dict[str, Any]:
-    prepare(args.force)
+    metadata_only_test = bool(getattr(args, "metadata_only_test", False))
+    prepare(args.force, preserve_existing_outputs=metadata_only_test)
     anchors = deduplicate_anchors()
-    ee, gee_status = gee_init()
-    s2_scenes, s2_qa, s1_all, dem_rows = run_batch_downloads(anchors, ee)
-    dino_rows = run_dino(anchors, s2_qa)
-    ready = readiness_rows(anchors, s2_qa, s1_all, dem_rows, dino_rows)
+    if metadata_only_test:
+        gee_status = "METADATA_ONLY_TEST_NO_GEE"
+        ready = ready_rows_metadata_only(anchors)
+        s2_scenes = scene_rows_metadata_only(anchors, "s2")
+        s2_qa = relation_qa_rows_from_ready(anchors, ready, "s2")
+        s1_all = scene_rows_metadata_only(anchors, "s1") + relation_qa_rows_from_ready(anchors, ready, "s1")
+        dem_rows = dem_rows_metadata_only(anchors, ready)
+        dino_rows = dino_rows_metadata_only(anchors)
+    else:
+        ee, gee_status = gee_init()
+        s2_scenes, s2_qa, s1_all, dem_rows = run_batch_downloads(anchors, ee)
+        dino_rows = run_dino(anchors, s2_qa)
+        ready = readiness_rows(anchors, s2_qa, s1_all, dem_rows, dino_rows)
     gate = {
         "gate_id": "V1JI_TRAINING_GATE_UPDATE",
         "official_anchor_count": len(anchors),
@@ -498,18 +647,20 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
         {"check": "can_unfreeze_dino_for_scientific_claim_false", "status": "PASS", "detail": "false"},
         {"check": "no_private_path_in_public_outputs", "status": "PASS", "detail": "sanitized metadata only"},
     ], ["check", "status", "detail"])
-    write_csv(DATASETS_DIR / "official_multi_anchor_registry.csv", anchors, ["anchor_id", "documented_event_unit_id", "source_document_name_sanitized", "date", "phenomenon_group", "latitude", "longitude", "coordinate_confidence", "coordinate_expression_count", "merged_recovery_ids", "dedup_status", "notes"])
-    write_csv(DATASETS_DIR / "multi_anchor_multimodal_patch_registry.csv", ready, MIN_FIELDS)
-    write_csv(DATASETS_DIR / "multi_anchor_dino_review_embedding_registry.csv", dino_rows, ["anchor_id", "documented_event_unit_id", "embedding_dim", "cosine_similarity", "euclidean_distance", "dino_status", "can_create_training_label", "can_train_model"])
-    write_csv(DATASETS_DIR / "multi_anchor_training_gate_matrix.csv", [gate], list(gate.keys()))
-    write_schema(SCHEMAS_DIR / "official_multi_anchor_schema.csv", ["anchor_id", "documented_event_unit_id", "source_document_name_sanitized", "date", "phenomenon_group", "latitude", "longitude", "coordinate_confidence", "coordinate_expression_count", "merged_recovery_ids", "dedup_status", "notes"], "REV-P v1ji official multi-anchor field")
-    write_schema(SCHEMAS_DIR / "multi_anchor_multimodal_patch_schema.csv", MIN_FIELDS, "REV-P v1ji multimodal patch field")
-    write_schema(SCHEMAS_DIR / "multi_anchor_dino_review_embedding_schema.csv", ["anchor_id", "documented_event_unit_id", "embedding_dim", "cosine_similarity", "euclidean_distance", "dino_status", "can_create_training_label", "can_train_model"], "REV-P v1ji DINO review embedding field")
-    write_schema(SCHEMAS_DIR / "multi_anchor_training_gate_schema.csv", list(gate.keys()), "REV-P v1ji training gate field")
+    if not metadata_only_test:
+        write_csv(DATASETS_DIR / "official_multi_anchor_registry.csv", anchors, ["anchor_id", "documented_event_unit_id", "source_document_name_sanitized", "date", "phenomenon_group", "latitude", "longitude", "coordinate_confidence", "coordinate_expression_count", "merged_recovery_ids", "dedup_status", "notes"])
+        write_csv(DATASETS_DIR / "multi_anchor_multimodal_patch_registry.csv", ready, MIN_FIELDS)
+        write_csv(DATASETS_DIR / "multi_anchor_dino_review_embedding_registry.csv", dino_rows, ["anchor_id", "documented_event_unit_id", "embedding_dim", "cosine_similarity", "euclidean_distance", "dino_status", "can_create_training_label", "can_train_model"])
+        write_csv(DATASETS_DIR / "multi_anchor_training_gate_matrix.csv", [gate], list(gate.keys()))
+        write_schema(SCHEMAS_DIR / "official_multi_anchor_schema.csv", ["anchor_id", "documented_event_unit_id", "source_document_name_sanitized", "date", "phenomenon_group", "latitude", "longitude", "coordinate_confidence", "coordinate_expression_count", "merged_recovery_ids", "dedup_status", "notes"], "REV-P v1ji official multi-anchor field")
+        write_schema(SCHEMAS_DIR / "multi_anchor_multimodal_patch_schema.csv", MIN_FIELDS, "REV-P v1ji multimodal patch field")
+        write_schema(SCHEMAS_DIR / "multi_anchor_dino_review_embedding_schema.csv", ["anchor_id", "documented_event_unit_id", "embedding_dim", "cosine_similarity", "euclidean_distance", "dino_status", "can_create_training_label", "can_train_model"], "REV-P v1ji DINO review embedding field")
+        write_schema(SCHEMAS_DIR / "multi_anchor_training_gate_schema.csv", list(gate.keys()), "REV-P v1ji training gate field")
     summary = {
         "stage": "v1ji",
         "timestamp": utc_now(),
         "gee_status": gee_status,
+        "execution_mode": "METADATA_ONLY_TEST" if metadata_only_test else "REAL_GEE_DINO_INTEGRATION",
         "official_unique_anchor_count": len(anchors),
         "s2_patches_generated_count": sum(1 for row in s2_qa if row.get("patch_exists") == "true"),
         "s2_pre_post_qa_pass_count": gate["s2_pre_post_qa_pass_count"],
@@ -531,6 +682,7 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--force", action="store_true")
+    parser.add_argument("--metadata-only-test", "--test-mode", "--offline-fixture", dest="metadata_only_test", action="store_true")
     return parser.parse_args(argv)
 
 

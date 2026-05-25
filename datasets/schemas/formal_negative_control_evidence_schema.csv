@@ -1,0 +1,21 @@
+field,description
+candidate_id,REV-P v1jl formal negative/control evidence field: candidate_id.
+candidate_type,REV-P v1jl formal negative/control evidence field: candidate_type.
+source_layer,REV-P v1jl formal negative/control evidence field: source_layer.
+region,REV-P v1jl formal negative/control evidence field: region.
+coordinate_available,REV-P v1jl formal negative/control evidence field: coordinate_available.
+patch_available,REV-P v1jl formal negative/control evidence field: patch_available.
+official_absence_evidence,REV-P v1jl formal negative/control evidence field: official_absence_evidence.
+official_stability_evidence,REV-P v1jl formal negative/control evidence field: official_stability_evidence.
+distance_to_nearest_positive_anchor_m,REV-P v1jl formal negative/control evidence field: distance_to_nearest_positive_anchor_m.
+same_event_or_locality_risk,REV-P v1jl formal negative/control evidence field: same_event_or_locality_risk.
+control_strength_status,REV-P v1jl formal negative/control evidence field: control_strength_status.
+negative_label_status,REV-P v1jl formal negative/control evidence field: negative_label_status.
+can_be_negative_label,REV-P v1jl formal negative/control evidence field: can_be_negative_label.
+can_be_review_control,REV-P v1jl formal negative/control evidence field: can_be_review_control.
+can_create_training_label,REV-P v1jl formal negative/control evidence field: can_create_training_label.
+can_train_model,REV-P v1jl formal negative/control evidence field: can_train_model.
+leakage_risk_status,REV-P v1jl formal negative/control evidence field: leakage_risk_status.
+blocking_reason,REV-P v1jl formal negative/control evidence field: blocking_reason.
+minimum_evidence_needed,REV-P v1jl formal negative/control evidence field: minimum_evidence_needed.
+notes,REV-P v1jl formal negative/control evidence field: notes.

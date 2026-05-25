@@ -1,0 +1,19 @@
+field,description
+boundary_id,REV-P v1jm positive-unlabeled boundary field: boundary_id.
+positive_count,REV-P v1jm positive-unlabeled boundary field: positive_count.
+unlabeled_candidate_count,REV-P v1jm positive-unlabeled boundary field: unlabeled_candidate_count.
+pseudo_absence_review_only_count,REV-P v1jm positive-unlabeled boundary field: pseudo_absence_review_only_count.
+background_unlabeled_count,REV-P v1jm positive-unlabeled boundary field: background_unlabeled_count.
+strong_control_review_only_count,REV-P v1jm positive-unlabeled boundary field: strong_control_review_only_count.
+formal_negative_ready_count,REV-P v1jm positive-unlabeled boundary field: formal_negative_ready_count.
+pu_boundary_status,REV-P v1jm positive-unlabeled boundary field: pu_boundary_status.
+supervised_training_status,REV-P v1jm positive-unlabeled boundary field: supervised_training_status.
+metrics_status,REV-P v1jm positive-unlabeled boundary field: metrics_status.
+model_artifact_status,REV-P v1jm positive-unlabeled boundary field: model_artifact_status.
+can_create_training_label,REV-P v1jm positive-unlabeled boundary field: can_create_training_label.
+can_train_supervised_model,REV-P v1jm positive-unlabeled boundary field: can_train_supervised_model.
+can_train_pu_sandbox,REV-P v1jm positive-unlabeled boundary field: can_train_pu_sandbox.
+can_save_model_weights,REV-P v1jm positive-unlabeled boundary field: can_save_model_weights.
+scientific_claim_status,REV-P v1jm positive-unlabeled boundary field: scientific_claim_status.
+blocking_reason,REV-P v1jm positive-unlabeled boundary field: blocking_reason.
+notes,REV-P v1jm positive-unlabeled boundary field: notes.

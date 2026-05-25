@@ -1,0 +1,14 @@
+field,description
+gate_id,REV-P v1jl supervised training minimum gate field: gate_id.
+formal_positive_labels_ready,REV-P v1jl supervised training minimum gate field: formal_positive_labels_ready.
+formal_negative_labels_ready,REV-P v1jl supervised training minimum gate field: formal_negative_labels_ready.
+review_only_controls_ready,REV-P v1jl supervised training minimum gate field: review_only_controls_ready.
+split_protocol_status,REV-P v1jl supervised training minimum gate field: split_protocol_status.
+leakage_risk_status,REV-P v1jl supervised training minimum gate field: leakage_risk_status.
+supervised_training_boundary_status,REV-P v1jl supervised training minimum gate field: supervised_training_boundary_status.
+can_create_training_label,REV-P v1jl supervised training minimum gate field: can_create_training_label.
+can_train_model,REV-P v1jl supervised training minimum gate field: can_train_model.
+can_unfreeze_dino_for_scientific_claim,REV-P v1jl supervised training minimum gate field: can_unfreeze_dino_for_scientific_claim.
+primary_blocker,REV-P v1jl supervised training minimum gate field: primary_blocker.
+minimum_evidence_needed,REV-P v1jl supervised training minimum gate field: minimum_evidence_needed.
+notes,REV-P v1jl supervised training minimum gate field: notes.

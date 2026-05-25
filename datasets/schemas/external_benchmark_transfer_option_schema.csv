@@ -1,0 +1,13 @@
+field,description
+option_id,REV-P v1jm external benchmark transfer option field: option_id.
+benchmark_name,REV-P v1jm external benchmark transfer option field: benchmark_name.
+benchmark_family,REV-P v1jm external benchmark transfer option field: benchmark_family.
+download_status,REV-P v1jm external benchmark transfer option field: download_status.
+local_ground_truth_status,REV-P v1jm external benchmark transfer option field: local_ground_truth_status.
+role_in_revp,REV-P v1jm external benchmark transfer option field: role_in_revp.
+can_supply_local_negative_ground_truth,REV-P v1jm external benchmark transfer option field: can_supply_local_negative_ground_truth.
+can_enable_local_supervised_claim,REV-P v1jm external benchmark transfer option field: can_enable_local_supervised_claim.
+transfer_status,REV-P v1jm external benchmark transfer option field: transfer_status.
+compatibility_status,REV-P v1jm external benchmark transfer option field: compatibility_status.
+minimum_evidence_needed,REV-P v1jm external benchmark transfer option field: minimum_evidence_needed.
+notes,REV-P v1jm external benchmark transfer option field: notes.
