@@ -1,0 +1,14 @@
+field,description
+gate_id,REV-P v1ji training gate field: gate_id.
+official_anchor_count,REV-P v1ji training gate field: official_anchor_count.
+s2_pre_post_qa_pass_count,REV-P v1ji training gate field: s2_pre_post_qa_pass_count.
+s1_pre_post_qa_pass_count,REV-P v1ji training gate field: s1_pre_post_qa_pass_count.
+dem_qa_pass_count,REV-P v1ji training gate field: dem_qa_pass_count.
+dino_qa_pass_count,REV-P v1ji training gate field: dino_qa_pass_count.
+negative_labels_ready_count,REV-P v1ji training gate field: negative_labels_ready_count.
+leakage_risk_status,REV-P v1ji training gate field: leakage_risk_status.
+training_gate_status,REV-P v1ji training gate field: training_gate_status.
+can_create_training_label,REV-P v1ji training gate field: can_create_training_label.
+can_train_model,REV-P v1ji training gate field: can_train_model.
+can_unfreeze_dino_for_scientific_claim,REV-P v1ji training gate field: can_unfreeze_dino_for_scientific_claim.
+notes,REV-P v1ji training gate field: notes.

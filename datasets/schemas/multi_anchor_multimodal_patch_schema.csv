@@ -1,0 +1,24 @@
+field,description
+anchor_id,REV-P v1ji multimodal patch field: anchor_id.
+documented_event_unit_id,REV-P v1ji multimodal patch field: documented_event_unit_id.
+date,REV-P v1ji multimodal patch field: date.
+phenomenon_group,REV-P v1ji multimodal patch field: phenomenon_group.
+latitude,REV-P v1ji multimodal patch field: latitude.
+longitude,REV-P v1ji multimodal patch field: longitude.
+coordinate_confidence,REV-P v1ji multimodal patch field: coordinate_confidence.
+s2_pre_status,REV-P v1ji multimodal patch field: s2_pre_status.
+s2_post_status,REV-P v1ji multimodal patch field: s2_post_status.
+s1_pre_status,REV-P v1ji multimodal patch field: s1_pre_status.
+s1_post_status,REV-P v1ji multimodal patch field: s1_post_status.
+dem_status,REV-P v1ji multimodal patch field: dem_status.
+dino_status,REV-P v1ji multimodal patch field: dino_status.
+review_only_status,REV-P v1ji multimodal patch field: review_only_status.
+positive_reference_candidate,REV-P v1ji multimodal patch field: positive_reference_candidate.
+positive_label_ready,REV-P v1ji multimodal patch field: positive_label_ready.
+negative_label_ready,REV-P v1ji multimodal patch field: negative_label_ready.
+training_ready,REV-P v1ji multimodal patch field: training_ready.
+can_create_training_label,REV-P v1ji multimodal patch field: can_create_training_label.
+can_train_model,REV-P v1ji multimodal patch field: can_train_model.
+can_unfreeze_dino_for_scientific_claim,REV-P v1ji multimodal patch field: can_unfreeze_dino_for_scientific_claim.
+blocking_reason,REV-P v1ji multimodal patch field: blocking_reason.
+notes,REV-P v1ji multimodal patch field: notes.

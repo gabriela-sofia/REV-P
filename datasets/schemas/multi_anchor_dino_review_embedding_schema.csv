@@ -1,0 +1,9 @@
+field,description
+anchor_id,REV-P v1ji DINO review embedding field: anchor_id.
+documented_event_unit_id,REV-P v1ji DINO review embedding field: documented_event_unit_id.
+embedding_dim,REV-P v1ji DINO review embedding field: embedding_dim.
+cosine_similarity,REV-P v1ji DINO review embedding field: cosine_similarity.
+euclidean_distance,REV-P v1ji DINO review embedding field: euclidean_distance.
+dino_status,REV-P v1ji DINO review embedding field: dino_status.
+can_create_training_label,REV-P v1ji DINO review embedding field: can_create_training_label.
+can_train_model,REV-P v1ji DINO review embedding field: can_train_model.

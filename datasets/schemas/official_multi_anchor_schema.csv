@@ -1,0 +1,13 @@
+field,description
+anchor_id,REV-P v1ji official multi-anchor field: anchor_id.
+documented_event_unit_id,REV-P v1ji official multi-anchor field: documented_event_unit_id.
+source_document_name_sanitized,REV-P v1ji official multi-anchor field: source_document_name_sanitized.
+date,REV-P v1ji official multi-anchor field: date.
+phenomenon_group,REV-P v1ji official multi-anchor field: phenomenon_group.
+latitude,REV-P v1ji official multi-anchor field: latitude.
+longitude,REV-P v1ji official multi-anchor field: longitude.
+coordinate_confidence,REV-P v1ji official multi-anchor field: coordinate_confidence.
+coordinate_expression_count,REV-P v1ji official multi-anchor field: coordinate_expression_count.
+merged_recovery_ids,REV-P v1ji official multi-anchor field: merged_recovery_ids.
+dedup_status,REV-P v1ji official multi-anchor field: dedup_status.
+notes,REV-P v1ji official multi-anchor field: notes.

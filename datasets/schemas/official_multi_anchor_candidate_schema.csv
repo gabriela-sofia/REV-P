@@ -1,0 +1,24 @@
+field,description
+anchor_id,REV-P v1jc official multi-anchor candidate field: anchor_id.
+documented_event_unit_id,REV-P v1jc official multi-anchor candidate field: documented_event_unit_id.
+source_document_name_sanitized,REV-P v1jc official multi-anchor candidate field: source_document_name_sanitized.
+source_institution,REV-P v1jc official multi-anchor candidate field: source_institution.
+region,REV-P v1jc official multi-anchor candidate field: region.
+municipality,REV-P v1jc official multi-anchor candidate field: municipality.
+locality_text_sanitized,REV-P v1jc official multi-anchor candidate field: locality_text_sanitized.
+event_or_survey_date,REV-P v1jc official multi-anchor candidate field: event_or_survey_date.
+temporal_precision,REV-P v1jc official multi-anchor candidate field: temporal_precision.
+phenomenon_group,REV-P v1jc official multi-anchor candidate field: phenomenon_group.
+coordinate_available,REV-P v1jc official multi-anchor candidate field: coordinate_available.
+latitude,REV-P v1jc official multi-anchor candidate field: latitude.
+longitude,REV-P v1jc official multi-anchor candidate field: longitude.
+coordinate_source,REV-P v1jc official multi-anchor candidate field: coordinate_source.
+spatial_precision,REV-P v1jc official multi-anchor candidate field: spatial_precision.
+anchor_status,REV-P v1jc official multi-anchor candidate field: anchor_status.
+can_be_positive_reference_candidate,REV-P v1jc official multi-anchor candidate field: can_be_positive_reference_candidate.
+can_be_positive_training_label,REV-P v1jc official multi-anchor candidate field: can_be_positive_training_label.
+can_create_training_label,REV-P v1jc official multi-anchor candidate field: can_create_training_label.
+can_train_model,REV-P v1jc official multi-anchor candidate field: can_train_model.
+can_reopen_protocol_b,REV-P v1jc official multi-anchor candidate field: can_reopen_protocol_b.
+blocking_reason,REV-P v1jc official multi-anchor candidate field: blocking_reason.
+notes,REV-P v1jc official multi-anchor candidate field: notes.

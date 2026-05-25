@@ -1,0 +1,2 @@
+gate_id,official_anchor_count,s2_pre_post_qa_pass_count,s1_pre_post_qa_pass_count,dem_qa_pass_count,dino_qa_pass_count,negative_labels_ready_count,leakage_risk_status,training_gate_status,can_create_training_label,can_train_model,can_unfreeze_dino_for_scientific_claim,notes
+V1JI_TRAINING_GATE_UPDATE,9,9,1,9,9,0,LEAKAGE_PROTOCOL_REQUIRED,SUPERVISED_TRAINING_BLOCKED,false,false,false,Review-only batch can advance where QA passed; supervised gates remain blocked.

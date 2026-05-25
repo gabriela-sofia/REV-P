@@ -1,0 +1,19 @@
+field,description
+anchor_id,REV-P v1jd multi-anchor update field: anchor_id.
+documented_event_unit_id,REV-P v1jd multi-anchor update field: documented_event_unit_id.
+source_document_name_sanitized,REV-P v1jd multi-anchor update field: source_document_name_sanitized.
+locality_text_sanitized,REV-P v1jd multi-anchor update field: locality_text_sanitized.
+event_or_survey_date,REV-P v1jd multi-anchor update field: event_or_survey_date.
+phenomenon_group,REV-P v1jd multi-anchor update field: phenomenon_group.
+latitude,REV-P v1jd multi-anchor update field: latitude.
+longitude,REV-P v1jd multi-anchor update field: longitude.
+coordinate_source,REV-P v1jd multi-anchor update field: coordinate_source.
+anchor_status,REV-P v1jd multi-anchor update field: anchor_status.
+can_be_positive_reference_candidate,REV-P v1jd multi-anchor update field: can_be_positive_reference_candidate.
+can_be_positive_training_label,REV-P v1jd multi-anchor update field: can_be_positive_training_label.
+can_create_training_label,REV-P v1jd multi-anchor update field: can_create_training_label.
+can_train_model,REV-P v1jd multi-anchor update field: can_train_model.
+can_unfreeze_dino_for_scientific_claim,REV-P v1jd multi-anchor update field: can_unfreeze_dino_for_scientific_claim.
+can_reopen_protocol_b,REV-P v1jd multi-anchor update field: can_reopen_protocol_b.
+blocking_reason,REV-P v1jd multi-anchor update field: blocking_reason.
+notes,REV-P v1jd multi-anchor update field: notes.
