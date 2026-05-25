@@ -1,0 +1,13 @@
+field_name,field_type,description
+candidate_id,string,ID do dossiê
+gate_geometry,string,PASS/FAIL
+gate_crs,string,PASS/FAIL
+gate_observed_status,string,PASS/FAIL
+gate_source_authority,string,PASS/MODERATE
+gate_document_vector_linkage,string,STRONG/MODERATE/WEAK
+gate_event_or_survey_date,string,PASS/FAIL
+gate_region_match,string,STRONG/WEAK
+gate_phenomenon_match,string,STRONG/WEAK
+overall_reference_status,string,Decisão final
+blocking_gate,string,Gate bloqueante
+minimum_evidence_needed,string,Evidência mínima

@@ -1,0 +1,24 @@
+field,description
+recovery_id,REV-P v1jd PDF coordinate recovery field: recovery_id.
+source_document_name_sanitized,REV-P v1jd PDF coordinate recovery field: source_document_name_sanitized.
+documented_event_unit_id,REV-P v1jd PDF coordinate recovery field: documented_event_unit_id.
+annex_id,REV-P v1jd PDF coordinate recovery field: annex_id.
+municipality,REV-P v1jd PDF coordinate recovery field: municipality.
+locality_text_sanitized,REV-P v1jd PDF coordinate recovery field: locality_text_sanitized.
+event_or_survey_date,REV-P v1jd PDF coordinate recovery field: event_or_survey_date.
+phenomenon_group,REV-P v1jd PDF coordinate recovery field: phenomenon_group.
+coordinate_text_sanitized,REV-P v1jd PDF coordinate recovery field: coordinate_text_sanitized.
+coordinate_format,REV-P v1jd PDF coordinate recovery field: coordinate_format.
+latitude,REV-P v1jd PDF coordinate recovery field: latitude.
+longitude,REV-P v1jd PDF coordinate recovery field: longitude.
+utm_easting,REV-P v1jd PDF coordinate recovery field: utm_easting.
+utm_northing,REV-P v1jd PDF coordinate recovery field: utm_northing.
+coordinate_crs,REV-P v1jd PDF coordinate recovery field: coordinate_crs.
+coordinate_validation_status,REV-P v1jd PDF coordinate recovery field: coordinate_validation_status.
+coordinate_confidence,REV-P v1jd PDF coordinate recovery field: coordinate_confidence.
+extraction_method,REV-P v1jd PDF coordinate recovery field: extraction_method.
+page_reference,REV-P v1jd PDF coordinate recovery field: page_reference.
+can_be_official_anchor_candidate,REV-P v1jd PDF coordinate recovery field: can_be_official_anchor_candidate.
+can_create_training_label,REV-P v1jd PDF coordinate recovery field: can_create_training_label.
+can_train_model,REV-P v1jd PDF coordinate recovery field: can_train_model.
+notes,REV-P v1jd PDF coordinate recovery field: notes.

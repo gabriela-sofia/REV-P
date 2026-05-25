@@ -1,0 +1,18 @@
+field_name,field_type,description
+dossier_id,string,ID único do dossiê
+candidate_asset_name,string,Nome do arquivo vetorial
+region,string,Região (PET)
+event_id,string,ID do evento
+source_institution,string,Instituição-fonte
+geometry_available,string,SIM se shapefile existe
+crs_available,string,SIM se CRS documentado
+observed_not_modelled_status,string,OBSERVED ou MODELLED
+event_date_documented,string,SIM/NÃO
+document_vector_package_link,string,STRONG/MODERATE/WEAK
+temporal_link_strength,string,Força do vínculo temporal
+promotion_decision,string,Decisão de promoção
+can_be_ground_reference_candidate,string,SIM/NÃO
+can_be_operational_ground_truth,string,Sempre NÃO
+can_create_training_label,string,Sempre NÃO
+primary_blocker,string,Gate que bloqueia
+minimum_evidence_needed,string,Evidência mínima necessária

@@ -1,0 +1,15 @@
+field_name,field_type,description
+candidate_id,string,ID do candidato
+gate_geometry,string,PASS/FAIL
+gate_crs,string,PASS/FAIL/UNKNOWN
+gate_observed_status,string,"PASS se OBSERVED, FAIL se MODELLED"
+gate_source_authority,string,PASS/UNKNOWN
+gate_event_date_or_survey_date,string,PASS/MISSING
+gate_document_vector_linkage,string,STRONG/MODERATE/WEAK
+gate_region_match,string,PASS/WEAK
+gate_phenomenon_match,string,PASS/WEAK
+gate_spatial_usability,string,PASS/UNKNOWN
+overall_composite_status,string,GROUND_REFERENCE_CANDIDATE ou BLOCKED_COMPOSITE
+blocking_gate,string,Qual gate bloqueia
+blocking_reason,string,Por quê
+minimum_evidence_needed,string,O que é necessário para destravar

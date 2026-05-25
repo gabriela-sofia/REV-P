@@ -1,0 +1,20 @@
+field,description
+decision_id,REV-P v1jh training gate decision field: decision_id.
+positive_reference_candidates_count,REV-P v1jh training gate decision field: positive_reference_candidates_count.
+review_area_candidates_count,REV-P v1jh training gate decision field: review_area_candidates_count.
+control_candidates_count,REV-P v1jh training gate decision field: control_candidates_count.
+negative_labels_ready_count,REV-P v1jh training gate decision field: negative_labels_ready_count.
+s2_ready_count,REV-P v1jh training gate decision field: s2_ready_count.
+s1_ready_count,REV-P v1jh training gate decision field: s1_ready_count.
+dem_ready_count,REV-P v1jh training gate decision field: dem_ready_count.
+dino_ready_count,REV-P v1jh training gate decision field: dino_ready_count.
+split_readiness_status,REV-P v1jh training gate decision field: split_readiness_status.
+leakage_risk_status,REV-P v1jh training gate decision field: leakage_risk_status.
+review_only_batch_status,REV-P v1jh training gate decision field: review_only_batch_status.
+weak_label_sandbox_status,REV-P v1jh training gate decision field: weak_label_sandbox_status.
+supervised_training_gate_status,REV-P v1jh training gate decision field: supervised_training_gate_status.
+can_create_training_label,REV-P v1jh training gate decision field: can_create_training_label.
+can_train_model,REV-P v1jh training gate decision field: can_train_model.
+can_unfreeze_dino_for_scientific_claim,REV-P v1jh training gate decision field: can_unfreeze_dino_for_scientific_claim.
+minimum_evidence_needed,REV-P v1jh training gate decision field: minimum_evidence_needed.
+notes,REV-P v1jh training gate decision field: notes.

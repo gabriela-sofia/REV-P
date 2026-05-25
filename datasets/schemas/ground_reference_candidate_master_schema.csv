@@ -1,0 +1,23 @@
+field,description
+candidate_id,REV-P v1jh ground reference candidate master field: candidate_id.
+candidate_type,REV-P v1jh ground reference candidate master field: candidate_type.
+source_document,REV-P v1jh ground reference candidate master field: source_document.
+date,REV-P v1jh ground reference candidate master field: date.
+phenomenon,REV-P v1jh ground reference candidate master field: phenomenon.
+coordinate_status,REV-P v1jh ground reference candidate master field: coordinate_status.
+patch_status,REV-P v1jh ground reference candidate master field: patch_status.
+s2_status,REV-P v1jh ground reference candidate master field: s2_status.
+s1_status,REV-P v1jh ground reference candidate master field: s1_status.
+dem_status,REV-P v1jh ground reference candidate master field: dem_status.
+dino_status,REV-P v1jh ground reference candidate master field: dino_status.
+control_status,REV-P v1jh ground reference candidate master field: control_status.
+label_status,REV-P v1jh ground reference candidate master field: label_status.
+training_gate_status,REV-P v1jh ground reference candidate master field: training_gate_status.
+leakage_risk_status,REV-P v1jh ground reference candidate master field: leakage_risk_status.
+can_be_review_candidate,REV-P v1jh ground reference candidate master field: can_be_review_candidate.
+can_be_positive_label,REV-P v1jh ground reference candidate master field: can_be_positive_label.
+can_be_negative_label,REV-P v1jh ground reference candidate master field: can_be_negative_label.
+can_train_model,REV-P v1jh ground reference candidate master field: can_train_model.
+can_unfreeze_dino_for_scientific_claim,REV-P v1jh ground reference candidate master field: can_unfreeze_dino_for_scientific_claim.
+blocking_reason,REV-P v1jh ground reference candidate master field: blocking_reason.
+minimum_evidence_needed,REV-P v1jh ground reference candidate master field: minimum_evidence_needed.

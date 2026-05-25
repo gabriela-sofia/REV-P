@@ -1,0 +1,21 @@
+field_name,field_type,description
+composite_candidate_id,string,ID único do candidato
+candidate_asset_name,string,Nome do arquivo vetorial
+region,string,"Região (PET, REC, CTB)"
+event_id,string,ID do evento (REGION_YYYY_MM_DD)
+source_institution,string,"Instituição fonte (SGB, CPRM, etc)"
+source_document_name_sanitized,string,Nome sanitizado do documento
+geometry_available,string,SIM se vetor existe
+crs_available,string,SIM se CRS documentado
+phenomenon_group,string,"movement_of_mass, hydrological, mixed"
+observed_not_modelled_status,string,OBSERVED ou MODELLED_RISK
+event_date_documented,string,SIM se data do evento em documento
+survey_date_documented,string,SIM se data de levantamento em documento
+document_vector_package_link,string,STRONG/MODERATE/WEAK: vínculo documento-vetor
+composite_evidence_strength,string,STRONG/MODERATE/WEAK da evidência composta
+ground_reference_status,string,Status final: GROUND_REFERENCE_CANDIDATE ou bloqueado
+can_be_ground_reference_candidate,string,SIM ou NÃO
+can_be_operational_ground_truth,string,Sempre NÃO nesta etapa
+can_create_training_label,string,Sempre NÃO
+can_train_model,string,Sempre NÃO
+can_reopen_protocol_b,string,Sempre NÃO
