@@ -1,0 +1,2 @@
+response_id,inbox_file,file_type,sha256,byte_count,raw_storage_policy,intake_status,manual_review_required,notes
+OFFNEG_RESPONSE_NONE_V1NK,official_negative_response_inbox/,NONE,,0,LOCAL_ONLY_NOT_VERSIONED,NO_OFFICIAL_RESPONSE_INTAKE,false,No official response files were present in the local inbox.

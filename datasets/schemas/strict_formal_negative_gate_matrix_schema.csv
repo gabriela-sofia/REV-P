@@ -1,0 +1,13 @@
+field,description
+candidate_negative_id,v1nl strict formal negative gates: candidate_negative_id.
+official_source_pass,v1nl strict formal negative gates: official_source_pass.
+explicit_negative_semantics_pass,v1nl strict formal negative gates: explicit_negative_semantics_pass.
+phenomenon_specificity_pass,v1nl strict formal negative gates: phenomenon_specificity_pass.
+temporal_compatibility_pass,v1nl strict formal negative gates: temporal_compatibility_pass.
+spatial_specificity_pass,v1nl strict formal negative gates: spatial_specificity_pass.
+uncertainty_registered_pass,v1nl strict formal negative gates: uncertainty_registered_pass.
+not_pseudo_absence_pass,v1nl strict formal negative gates: not_pseudo_absence_pass.
+not_absence_of_record_pass,v1nl strict formal negative gates: not_absence_of_record_pass.
+leakage_precheck_pass,v1nl strict formal negative gates: leakage_precheck_pass.
+all_gates_pass,v1nl strict formal negative gates: all_gates_pass.
+gate_status,v1nl strict formal negative gates: gate_status.

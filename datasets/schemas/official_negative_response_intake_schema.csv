@@ -1,0 +1,10 @@
+field,description
+response_id,v1nk official negative response intake: response_id.
+inbox_file,v1nk official negative response intake: inbox_file.
+file_type,v1nk official negative response intake: file_type.
+sha256,v1nk official negative response intake: sha256.
+byte_count,v1nk official negative response intake: byte_count.
+raw_storage_policy,v1nk official negative response intake: raw_storage_policy.
+intake_status,v1nk official negative response intake: intake_status.
+manual_review_required,v1nk official negative response intake: manual_review_required.
+notes,v1nk official negative response intake: notes.

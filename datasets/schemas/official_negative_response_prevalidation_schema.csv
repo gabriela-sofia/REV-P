@@ -1,0 +1,11 @@
+field,description
+response_id,v1nk official negative response prevalidation: response_id.
+contains_explicit_negative_semantics,v1nk official negative response prevalidation: contains_explicit_negative_semantics.
+contains_date,v1nk official negative response prevalidation: contains_date.
+contains_locality,v1nk official negative response prevalidation: contains_locality.
+contains_phenomenon,v1nk official negative response prevalidation: contains_phenomenon.
+contains_official_source,v1nk official negative response prevalidation: contains_official_source.
+contains_coordinate_address_or_bairro,v1nk official negative response prevalidation: contains_coordinate_address_or_bairro.
+prevalidation_status,v1nk official negative response prevalidation: prevalidation_status.
+can_promote_without_adjudication,v1nk official negative response prevalidation: can_promote_without_adjudication.
+notes,v1nk official negative response prevalidation: notes.

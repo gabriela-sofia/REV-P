@@ -1,0 +1,13 @@
+field,description
+triage_id,v1nn DINO C3 anchor triage: triage_id.
+event_id,v1nn DINO C3 anchor triage: event_id.
+anchor_id,v1nn DINO C3 anchor triage: anchor_id.
+patch_candidate_id,v1nn DINO C3 anchor triage: patch_candidate_id.
+embedding_registry_status,v1nn DINO C3 anchor triage: embedding_registry_status.
+dino_status,v1nn DINO C3 anchor triage: dino_status.
+embedding_values_status,v1nn DINO C3 anchor triage: embedding_values_status.
+review_priority,v1nn DINO C3 anchor triage: review_priority.
+can_create_label,v1nn DINO C3 anchor triage: can_create_label.
+can_validate_event,v1nn DINO C3 anchor triage: can_validate_event.
+can_prioritize_review,v1nn DINO C3 anchor triage: can_prioritize_review.
+notes,v1nn DINO C3 anchor triage: notes.

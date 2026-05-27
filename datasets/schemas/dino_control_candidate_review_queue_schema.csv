@@ -1,0 +1,13 @@
+field,description
+queue_id,v1nn DINO control candidate review queue: queue_id.
+candidate_id,v1nn DINO control candidate review queue: candidate_id.
+candidate_source,v1nn DINO control candidate review queue: candidate_source.
+region,v1nn DINO control candidate review queue: region.
+dino_metadata_status,v1nn DINO control candidate review queue: dino_metadata_status.
+review_priority,v1nn DINO control candidate review queue: review_priority.
+review_purpose,v1nn DINO control candidate review queue: review_purpose.
+official_negative_request_relevance,v1nn DINO control candidate review queue: official_negative_request_relevance.
+can_be_formal_negative,v1nn DINO control candidate review queue: can_be_formal_negative.
+can_create_label,v1nn DINO control candidate review queue: can_create_label.
+can_train_model,v1nn DINO control candidate review queue: can_train_model.
+notes,v1nn DINO control candidate review queue: notes.

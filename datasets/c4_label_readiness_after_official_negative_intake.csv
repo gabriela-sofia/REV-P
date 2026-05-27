@@ -1,0 +1,2 @@
+readiness_id,positive_c3_ready,formal_negative_count,negative_gate,split_leakage_gate,training_boundary,can_create_operational_label,can_train_model,dino_role,notes
+LABEL_READINESS_OFFICIAL_INTAKE_V1NM,true,0,FAIL_FORMAL_NEGATIVES_ZERO,BLOCKED_SPLIT_LEAKAGE_NOT_READY,BLOCKED_SUPERVISED_TRAINING_NOT_ALLOWED,false,false,REVIEW_ONLY_REPRESENTATION,C4 does not open without adjudicated formal negatives; request queue and DINO triage are not labels.

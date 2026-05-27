@@ -1,0 +1,11 @@
+field,description
+readiness_id,v1nm label readiness after official intake: readiness_id.
+positive_c3_ready,v1nm label readiness after official intake: positive_c3_ready.
+formal_negative_count,v1nm label readiness after official intake: formal_negative_count.
+negative_gate,v1nm label readiness after official intake: negative_gate.
+split_leakage_gate,v1nm label readiness after official intake: split_leakage_gate.
+training_boundary,v1nm label readiness after official intake: training_boundary.
+can_create_operational_label,v1nm label readiness after official intake: can_create_operational_label.
+can_train_model,v1nm label readiness after official intake: can_train_model.
+dino_role,v1nm label readiness after official intake: dino_role.
+notes,v1nm label readiness after official intake: notes.

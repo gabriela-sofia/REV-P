@@ -1,0 +1,2 @@
+boundary_id,embedding_can_create_label,embedding_can_validate_event,embedding_can_prioritize_review,embedding_can_support_negative_search_queue,embedding_can_train_classifier_now,training_blocker,dino_role,notes
+DINO_TRAINING_BOUNDARY_V1NN,false,false,true,true,false,FORMAL_NEGATIVES_ZERO;C4_NOT_OPEN;SPLIT_LEAKAGE_NOT_READY,REVIEW_ONLY_REPRESENTATION,"No classifier training, no supervised separability claim, no operational metric."

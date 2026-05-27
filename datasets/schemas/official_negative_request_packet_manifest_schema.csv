@@ -1,0 +1,9 @@
+field,description
+packet_item_id,v1nj request packet manifest: packet_item_id.
+artifact,v1nj request packet manifest: artifact.
+artifact_type,v1nj request packet manifest: artifact_type.
+target_count,v1nj request packet manifest: target_count.
+intended_channel,v1nj request packet manifest: intended_channel.
+send_status,v1nj request packet manifest: send_status.
+raw_response_policy,v1nj request packet manifest: raw_response_policy.
+notes,v1nj request packet manifest: notes.

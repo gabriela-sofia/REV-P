@@ -1,0 +1,14 @@
+field,description
+recheck_id,v1nm C4 recheck after official intake: recheck_id.
+c3_event_count,v1nm C4 recheck after official intake: c3_event_count.
+gazette_formal_negative_count,v1nm C4 recheck after official intake: gazette_formal_negative_count.
+official_intake_response_count,v1nm C4 recheck after official intake: official_intake_response_count.
+formal_negative_count,v1nm C4 recheck after official intake: formal_negative_count.
+official_request_queue_status,v1nm C4 recheck after official intake: official_request_queue_status.
+intake_status,v1nm C4 recheck after official intake: intake_status.
+adjudication_status,v1nm C4 recheck after official intake: adjudication_status.
+summary_decision,v1nm C4 recheck after official intake: summary_decision.
+can_create_operational_label,v1nm C4 recheck after official intake: can_create_operational_label.
+can_train_model,v1nm C4 recheck after official intake: can_train_model.
+dino_role,v1nm C4 recheck after official intake: dino_role.
+next_scientific_action,v1nm C4 recheck after official intake: next_scientific_action.

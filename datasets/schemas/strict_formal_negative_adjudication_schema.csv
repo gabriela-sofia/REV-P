@@ -1,0 +1,9 @@
+field,description
+candidate_negative_id,v1nl strict formal negative adjudication: candidate_negative_id.
+source_response_id,v1nl strict formal negative adjudication: source_response_id.
+adjudication_status,v1nl strict formal negative adjudication: adjudication_status.
+failed_gates,v1nl strict formal negative adjudication: failed_gates.
+can_be_formal_negative,v1nl strict formal negative adjudication: can_be_formal_negative.
+can_be_used_for_c4,v1nl strict formal negative adjudication: can_be_used_for_c4.
+can_create_training_negative_label,v1nl strict formal negative adjudication: can_create_training_negative_label.
+notes,v1nl strict formal negative adjudication: notes.

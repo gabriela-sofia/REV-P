@@ -1,0 +1,10 @@
+field,description
+boundary_id,v1nn DINO training boundary: boundary_id.
+embedding_can_create_label,v1nn DINO training boundary: embedding_can_create_label.
+embedding_can_validate_event,v1nn DINO training boundary: embedding_can_validate_event.
+embedding_can_prioritize_review,v1nn DINO training boundary: embedding_can_prioritize_review.
+embedding_can_support_negative_search_queue,v1nn DINO training boundary: embedding_can_support_negative_search_queue.
+embedding_can_train_classifier_now,v1nn DINO training boundary: embedding_can_train_classifier_now.
+training_blocker,v1nn DINO training boundary: training_blocker.
+dino_role,v1nn DINO training boundary: dino_role.
+notes,v1nn DINO training boundary: notes.

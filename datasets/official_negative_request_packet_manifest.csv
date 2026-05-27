@@ -1,0 +1,3 @@
+packet_item_id,artifact,artifact_type,target_count,intended_channel,send_status,raw_response_policy,notes
+OFFNEG_PACKET_DOC_V1NJ,docs/metodologia_cientifica/protocolo_c_pacote_lai_negativos_v1nj.md,method_packet,9,LAI/Prefeitura/Defesa Civil/orgao tecnico,NOT_SENT_BY_SCRIPT,responses must be stored only in local_runs/protocolo_c/official_negative_response_inbox,Packet asks for evidence; it does not assert that documents exist.
+OFFNEG_MODEL_DOC_V1NJ,docs/metodologia_cientifica/modelo_pedido_lai_defesa_civil_petropolis_2022_v1nj.md,reusable_request_model,9,LAI/Prefeitura/Defesa Civil/orgao tecnico,NOT_SENT_BY_SCRIPT,responses must be stored only in local_runs/protocolo_c/official_negative_response_inbox,Direct reusable wording for the user.

@@ -1,0 +1,9 @@
+field,description
+question_id,v1nj request question bank: question_id.
+target_evidence_type,v1nj request question bank: target_evidence_type.
+official_channel,v1nj request question bank: official_channel.
+question_text,v1nj request question bank: question_text.
+required_answer_format,v1nj request question bank: required_answer_format.
+why_needed_for_c4,v1nj request question bank: why_needed_for_c4.
+forbidden_inference_if_absent,v1nj request question bank: forbidden_inference_if_absent.
+priority,v1nj request question bank: priority.

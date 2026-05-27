@@ -1,0 +1,2 @@
+response_id,contains_explicit_negative_semantics,contains_date,contains_locality,contains_phenomenon,contains_official_source,contains_coordinate_address_or_bairro,prevalidation_status,can_promote_without_adjudication,notes
+OFFNEG_RESPONSE_NONE_V1NK,false,false,false,false,false,false,NO_OFFICIAL_RESPONSE_INTAKE,false,C4 remains blocked because there is no official response intake.

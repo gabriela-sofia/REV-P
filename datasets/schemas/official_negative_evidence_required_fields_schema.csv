@@ -1,0 +1,8 @@
+field,description
+field_id,v1ni official negative required fields: field_id.
+request_target_id,v1ni official negative required fields: request_target_id.
+required_field,v1ni official negative required fields: required_field.
+minimum_acceptance_rule,v1ni official negative required fields: minimum_acceptance_rule.
+why_needed_for_formal_negative,v1ni official negative required fields: why_needed_for_formal_negative.
+forbidden_substitute,v1ni official negative required fields: forbidden_substitute.
+is_required_for_c4,v1ni official negative required fields: is_required_for_c4.

@@ -1,0 +1,16 @@
+field,description
+request_target_id,v1ni official negative request targets: request_target_id.
+region,v1ni official negative request targets: region.
+municipality,v1ni official negative request targets: municipality.
+c4_blocker,v1ni official negative request targets: c4_blocker.
+target_event_context,v1ni official negative request targets: target_event_context.
+target_phenomenon,v1ni official negative request targets: target_phenomenon.
+acceptable_negative_statement_type,v1ni official negative request targets: acceptable_negative_statement_type.
+required_source_type,v1ni official negative request targets: required_source_type.
+required_temporal_window,v1ni official negative request targets: required_temporal_window.
+required_spatial_specificity,v1ni official negative request targets: required_spatial_specificity.
+required_fields,v1ni official negative request targets: required_fields.
+forbidden_substitutes,v1ni official negative request targets: forbidden_substitutes.
+priority,v1ni official negative request targets: priority.
+can_unlock_c4_alone,v1ni official negative request targets: can_unlock_c4_alone.
+notes,v1ni official negative request targets: notes.
