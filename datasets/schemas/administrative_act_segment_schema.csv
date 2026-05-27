@@ -1,0 +1,10 @@
+field,description
+act_id,v1nc administrative act segment: act_id.
+issue_id,v1nc administrative act segment: issue_id.
+issue_date,v1nc administrative act segment: issue_date.
+page,v1nc administrative act segment: page.
+act_type,v1nc administrative act segment: act_type.
+context,v1nc administrative act segment: context.
+matched_terms,v1nc administrative act segment: matched_terms.
+extraction_method,v1nc administrative act segment: extraction_method.
+private_path_removed,v1nc administrative act segment: private_path_removed.

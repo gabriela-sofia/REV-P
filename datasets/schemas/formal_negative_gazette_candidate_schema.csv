@@ -1,0 +1,17 @@
+field,description
+candidate_id,v1nf formal negative gazette candidate: candidate_id.
+source_candidate_id,v1nf formal negative gazette candidate: source_candidate_id.
+official_gazette_gate,v1nf formal negative gazette candidate: official_gazette_gate.
+administrative_act_gate,v1nf formal negative gazette candidate: administrative_act_gate.
+explicit_negative_statement_gate,v1nf formal negative gazette candidate: explicit_negative_statement_gate.
+phenomenon_specific_gate,v1nf formal negative gazette candidate: phenomenon_specific_gate.
+date_gate,v1nf formal negative gazette candidate: date_gate.
+precise_location_gate,v1nf formal negative gazette candidate: precise_location_gate.
+coordinate_or_geocodable_address_gate,v1nf formal negative gazette candidate: coordinate_or_geocodable_address_gate.
+independent_area_gate,v1nf formal negative gazette candidate: independent_area_gate.
+positive_buffer_exclusion_gate,v1nf formal negative gazette candidate: positive_buffer_exclusion_gate.
+patch_extractability_gate,v1nf formal negative gazette candidate: patch_extractability_gate.
+leakage_precheck_gate,v1nf formal negative gazette candidate: leakage_precheck_gate.
+decision,v1nf formal negative gazette candidate: decision.
+can_create_operational_label,v1nf formal negative gazette candidate: can_create_operational_label.
+can_train_model,v1nf formal negative gazette candidate: can_train_model.

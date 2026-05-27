@@ -1,0 +1,2 @@
+candidate_id,act_id,issue_id,issue_date,page,phrase_or_context,explicit_negative_statement_gate,date_gate,location_gate,phenomenon_specific_gate,decision,can_create_operational_label,can_train_model
+GAZETTENEG_V1ND_NONE,none,none,,0,NO_EXPLICIT_GAZETTE_NEGATIVE_CANDIDATE_FOUND,FAIL,FAIL,FAIL,FAIL,BLOCKED_NOT_EXPLICIT,false,false

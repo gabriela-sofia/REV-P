@@ -1,0 +1,2 @@
+decision_id,formal_positive_count,formal_negative_count,negative_provenance_gate,patch_extractability_gate,split_leakage_gate,decision,remaining_blocker,can_create_operational_label,can_train_model
+C4_GAZETTE_NEG_RECHECK_V1NG,9,0,FAIL,FAIL,FAIL,C4_BLOCKED_NO_FORMAL_NEGATIVES,NO_FORMAL_NEGATIVES,false,false

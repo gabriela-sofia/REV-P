@@ -1,0 +1,10 @@
+field,description
+document_id,v1nb gazette text extraction: document_id.
+issue_id,v1nb gazette text extraction: issue_id.
+document_kind,v1nb gazette text extraction: document_kind.
+page_count,v1nb gazette text extraction: page_count.
+extraction_method,v1nb gazette text extraction: extraction_method.
+extraction_status,v1nb gazette text extraction: extraction_status.
+text_char_count,v1nb gazette text extraction: text_char_count.
+ocr_status,v1nb gazette text extraction: ocr_status.
+private_path_removed,v1nb gazette text extraction: private_path_removed.

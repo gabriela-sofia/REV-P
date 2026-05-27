@@ -1,0 +1,11 @@
+field,description
+issue_id,v1na official gazette issue: issue_id.
+issue_date,v1na official gazette issue: issue_date.
+issue_number,v1na official gazette issue: issue_number.
+official_domain,v1na official gazette issue: official_domain.
+issue_kind,v1na official gazette issue: issue_kind.
+source_url_hash,v1na official gazette issue: source_url_hash.
+download_url_hash,v1na official gazette issue: download_url_hash.
+issue_discovery_status,v1na official gazette issue: issue_discovery_status.
+is_real_issue,v1na official gazette issue: is_real_issue.
+private_path_removed,v1na official gazette issue: private_path_removed.

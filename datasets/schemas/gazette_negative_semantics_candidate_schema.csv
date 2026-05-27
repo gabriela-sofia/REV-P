@@ -1,0 +1,14 @@
+field,description
+candidate_id,v1nd gazette negative semantics candidate: candidate_id.
+act_id,v1nd gazette negative semantics candidate: act_id.
+issue_id,v1nd gazette negative semantics candidate: issue_id.
+issue_date,v1nd gazette negative semantics candidate: issue_date.
+page,v1nd gazette negative semantics candidate: page.
+phrase_or_context,v1nd gazette negative semantics candidate: phrase_or_context.
+explicit_negative_statement_gate,v1nd gazette negative semantics candidate: explicit_negative_statement_gate.
+date_gate,v1nd gazette negative semantics candidate: date_gate.
+location_gate,v1nd gazette negative semantics candidate: location_gate.
+phenomenon_specific_gate,v1nd gazette negative semantics candidate: phenomenon_specific_gate.
+decision,v1nd gazette negative semantics candidate: decision.
+can_create_operational_label,v1nd gazette negative semantics candidate: can_create_operational_label.
+can_train_model,v1nd gazette negative semantics candidate: can_train_model.

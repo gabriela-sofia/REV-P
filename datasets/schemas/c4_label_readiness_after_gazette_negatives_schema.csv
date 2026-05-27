@@ -1,0 +1,11 @@
+field,description
+readiness_id,v1ng C4 label readiness after gazette negatives: readiness_id.
+formal_positive_count,v1ng C4 label readiness after gazette negatives: formal_positive_count.
+formal_negative_count,v1ng C4 label readiness after gazette negatives: formal_negative_count.
+positive_gate,v1ng C4 label readiness after gazette negatives: positive_gate.
+negative_gate,v1ng C4 label readiness after gazette negatives: negative_gate.
+split_leakage_gate,v1ng C4 label readiness after gazette negatives: split_leakage_gate.
+decision,v1ng C4 label readiness after gazette negatives: decision.
+remaining_blocker,v1ng C4 label readiness after gazette negatives: remaining_blocker.
+can_create_operational_label,v1ng C4 label readiness after gazette negatives: can_create_operational_label.
+can_train_model,v1ng C4 label readiness after gazette negatives: can_train_model.

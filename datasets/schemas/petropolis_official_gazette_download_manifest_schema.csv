@@ -1,0 +1,11 @@
+field,description
+download_id,v1na official gazette download: download_id.
+issue_id,v1na official gazette download: issue_id.
+official_domain,v1na official gazette download: official_domain.
+url_hash,v1na official gazette download: url_hash.
+file_type,v1na official gazette download: file_type.
+acquisition_status,v1na official gazette download: acquisition_status.
+byte_count,v1na official gazette download: byte_count.
+sha256,v1na official gazette download: sha256.
+raw_storage_policy,v1na official gazette download: raw_storage_policy.
+private_path_removed,v1na official gazette download: private_path_removed.

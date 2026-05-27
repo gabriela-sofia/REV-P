@@ -1,0 +1,13 @@
+field,description
+geocode_id,v1ne gazette negative geocoding: geocode_id.
+candidate_id,v1ne gazette negative geocoding: candidate_id.
+address_or_locality_status,v1ne gazette negative geocoding: address_or_locality_status.
+latitude,v1ne gazette negative geocoding: latitude.
+longitude,v1ne gazette negative geocoding: longitude.
+precise_location_gate,v1ne gazette negative geocoding: precise_location_gate.
+coordinate_or_geocodable_address_gate,v1ne gazette negative geocoding: coordinate_or_geocodable_address_gate.
+review_area_only_flag,v1ne gazette negative geocoding: review_area_only_flag.
+nearest_positive_distance_m,v1ne gazette negative geocoding: nearest_positive_distance_m.
+positive_buffer_exclusion_gate,v1ne gazette negative geocoding: positive_buffer_exclusion_gate.
+patch_extractability_gate,v1ne gazette negative geocoding: patch_extractability_gate.
+private_path_removed,v1ne gazette negative geocoding: private_path_removed.

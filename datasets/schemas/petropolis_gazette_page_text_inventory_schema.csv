@@ -1,0 +1,10 @@
+field,description
+page_text_id,v1nb gazette page text inventory: page_text_id.
+document_id,v1nb gazette page text inventory: document_id.
+issue_id,v1nb gazette page text inventory: issue_id.
+page,v1nb gazette page text inventory: page.
+text_char_count,v1nb gazette page text inventory: text_char_count.
+has_keyword_hit,v1nb gazette page text inventory: has_keyword_hit.
+page_text_sample,v1nb gazette page text inventory: page_text_sample.
+extraction_method,v1nb gazette page text inventory: extraction_method.
+private_path_removed,v1nb gazette page text inventory: private_path_removed.

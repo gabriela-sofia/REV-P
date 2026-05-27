@@ -1,0 +1,8 @@
+field,description
+matrix_id,v1ne gazette negative spatial specificity: matrix_id.
+candidate_count,v1ne gazette negative spatial specificity: candidate_count.
+precise_location_pass_count,v1ne gazette negative spatial specificity: precise_location_pass_count.
+coordinate_or_geocodable_address_pass_count,v1ne gazette negative spatial specificity: coordinate_or_geocodable_address_pass_count.
+patch_extractability_pass_count,v1ne gazette negative spatial specificity: patch_extractability_pass_count.
+decision,v1ne gazette negative spatial specificity: decision.
+remaining_blocker,v1ne gazette negative spatial specificity: remaining_blocker.

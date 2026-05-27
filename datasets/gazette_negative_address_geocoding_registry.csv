@@ -1,0 +1,2 @@
+geocode_id,candidate_id,address_or_locality_status,latitude,longitude,precise_location_gate,coordinate_or_geocodable_address_gate,review_area_only_flag,nearest_positive_distance_m,positive_buffer_exclusion_gate,patch_extractability_gate,private_path_removed
+GAZETTEGEO_V1NE_NONE,none,NO_STRONG_GAZETTE_NEGATIVE_TO_GEOCODE,,,FAIL,FAIL,false,,FAIL,FAIL,true

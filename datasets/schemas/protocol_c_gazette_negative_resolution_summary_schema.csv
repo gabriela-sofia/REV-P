@@ -1,0 +1,15 @@
+field,description
+summary_id,v1nh gazette negative resolution summary: summary_id.
+issues_discovered,v1nh gazette negative resolution summary: issues_discovered.
+issues_downloaded,v1nh gazette negative resolution summary: issues_downloaded.
+pages_extracted,v1nh gazette negative resolution summary: pages_extracted.
+administrative_acts_segmented,v1nh gazette negative resolution summary: administrative_acts_segmented.
+negative_candidates,v1nh gazette negative resolution summary: negative_candidates.
+geocoded_candidates,v1nh gazette negative resolution summary: geocoded_candidates.
+formal_negative_count,v1nh gazette negative resolution summary: formal_negative_count.
+c4_decision,v1nh gazette negative resolution summary: c4_decision.
+best_negative_candidate,v1nh gazette negative resolution summary: best_negative_candidate.
+remaining_blocker,v1nh gazette negative resolution summary: remaining_blocker.
+next_single_technical_action,v1nh gazette negative resolution summary: next_single_technical_action.
+can_create_operational_label,v1nh gazette negative resolution summary: can_create_operational_label.
+can_train_model,v1nh gazette negative resolution summary: can_train_model.

@@ -1,0 +1,8 @@
+field,description
+matrix_id,v1nf formal negative gazette gate: matrix_id.
+formal_negative_count,v1nf formal negative gazette gate: formal_negative_count.
+review_or_blocked_count,v1nf formal negative gazette gate: review_or_blocked_count.
+decision,v1nf formal negative gazette gate: decision.
+remaining_blocker,v1nf formal negative gazette gate: remaining_blocker.
+can_create_operational_label,v1nf formal negative gazette gate: can_create_operational_label.
+can_train_model,v1nf formal negative gazette gate: can_train_model.

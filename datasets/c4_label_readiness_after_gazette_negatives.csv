@@ -1,0 +1,2 @@
+readiness_id,formal_positive_count,formal_negative_count,positive_gate,negative_gate,split_leakage_gate,decision,remaining_blocker,can_create_operational_label,can_train_model
+C4_LABEL_READINESS_GAZETTE_V1NG,9,0,PASS,FAIL,FAIL,C4_BLOCKED_NO_FORMAL_NEGATIVES,NO_FORMAL_NEGATIVES,false,false

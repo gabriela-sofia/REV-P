@@ -1,0 +1,8 @@
+field,description
+hit_id,v1nc administrative act keyword hit: hit_id.
+act_id,v1nc administrative act keyword hit: act_id.
+issue_id,v1nc administrative act keyword hit: issue_id.
+page,v1nc administrative act keyword hit: page.
+matched_term,v1nc administrative act keyword hit: matched_term.
+term_class,v1nc administrative act keyword hit: term_class.
+private_path_removed,v1nc administrative act keyword hit: private_path_removed.
