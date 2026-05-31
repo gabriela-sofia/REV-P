@@ -1,0 +1,8 @@
+field,description
+crosswalk_id,v1pm_tcc_protocol_c_crosswalk: crosswalk_id.
+patch_id,v1pm_tcc_protocol_c_crosswalk: patch_id.
+embedding_status,v1pm_tcc_protocol_c_crosswalk: embedding_status.
+protocol_c_event_id,v1pm_tcc_protocol_c_crosswalk: protocol_c_event_id.
+protocol_c_candidate_level,v1pm_tcc_protocol_c_crosswalk: protocol_c_candidate_level.
+temporal_status,v1pm_tcc_protocol_c_crosswalk: temporal_status.
+dino_can_validate_event,v1pm_tcc_protocol_c_crosswalk: dino_can_validate_event.

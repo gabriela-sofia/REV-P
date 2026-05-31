@@ -1,0 +1,17 @@
+field,description
+artifact_id,v1pg_dino_artifact_discovery: artifact_id.
+relative_path,v1pg_dino_artifact_discovery: relative_path.
+path_hash,v1pg_dino_artifact_discovery: path_hash.
+artifact_type,v1pg_dino_artifact_discovery: artifact_type.
+file_size_bytes,v1pg_dino_artifact_discovery: file_size_bytes.
+detected_terms,v1pg_dino_artifact_discovery: detected_terms.
+likely_embedding_source,v1pg_dino_artifact_discovery: likely_embedding_source.
+likely_visual_source,v1pg_dino_artifact_discovery: likely_visual_source.
+likely_similarity_source,v1pg_dino_artifact_discovery: likely_similarity_source.
+likely_pca_source,v1pg_dino_artifact_discovery: likely_pca_source.
+region_hint,v1pg_dino_artifact_discovery: region_hint.
+patch_hint,v1pg_dino_artifact_discovery: patch_hint.
+is_fixture_or_synthetic,v1pg_dino_artifact_discovery: is_fixture_or_synthetic.
+allowed_for_dino_registry,v1pg_dino_artifact_discovery: allowed_for_dino_registry.
+blocked_reason,v1pg_dino_artifact_discovery: blocked_reason.
+notes,v1pg_dino_artifact_discovery: notes.

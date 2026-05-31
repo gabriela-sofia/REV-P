@@ -1,0 +1,8 @@
+stat_key,stat_value
+artifacts_scanned,510
+likely_embedding_artifacts,237
+likely_visual_artifacts,496
+likely_similarity_artifacts,47
+likely_pca_artifacts,13
+fixture_or_synthetic,3
+allowed_for_dino_registry,231

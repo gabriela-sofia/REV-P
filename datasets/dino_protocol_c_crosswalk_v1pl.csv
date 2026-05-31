@@ -1,0 +1,1 @@
+crosswalk_id,patch_id,alias,region,embedding_id,embedding_status,protocol_c_event_id,protocol_c_candidate_level,evidence_tier,temporal_status,c_level_status,dino_representation_status,allowed_use,dino_can_validate_event,dino_can_create_label,dino_can_train_model,blocked_reason,notes

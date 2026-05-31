@@ -1,0 +1,8 @@
+field,description
+embedding_id,v1pm_tcc_embedding_inventory: embedding_id.
+patch_id,v1pm_tcc_embedding_inventory: patch_id.
+region,v1pm_tcc_embedding_inventory: region.
+vector_dim,v1pm_tcc_embedding_inventory: vector_dim.
+embedding_status,v1pm_tcc_embedding_inventory: embedding_status.
+dino_allowed_use,v1pm_tcc_embedding_inventory: dino_allowed_use.
+is_duplicate_vector,v1pm_tcc_embedding_inventory: is_duplicate_vector.

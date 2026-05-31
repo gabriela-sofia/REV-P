@@ -1,0 +1,1 @@
+audit_id,embedding_id,patch_id,region,check_dim_768,check_no_nan,check_no_inf,check_norm_positive,check_patch_id_present,check_region_present,check_not_fixture,check_not_duplicate,check_no_label,check_no_target,check_no_training,overall_quality,embedding_status,blocked_reason,notes

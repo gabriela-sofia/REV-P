@@ -1,0 +1,7 @@
+stat_key,stat_value
+embeddings_audited,0
+valid_review_only,0
+blocked,0
+label_violations,0
+training_violations,0
+audit_status,NO_VALID_EMBEDDING_FAIL_CLOSED

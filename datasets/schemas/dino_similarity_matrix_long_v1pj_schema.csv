@@ -1,0 +1,9 @@
+field,description
+patch_id_a,v1pj_dino_similarity_matrix_long: patch_id_a.
+patch_id_b,v1pj_dino_similarity_matrix_long: patch_id_b.
+region_a,v1pj_dino_similarity_matrix_long: region_a.
+region_b,v1pj_dino_similarity_matrix_long: region_b.
+cosine_similarity,v1pj_dino_similarity_matrix_long: cosine_similarity.
+euclidean_distance,v1pj_dino_similarity_matrix_long: euclidean_distance.
+same_region,v1pj_dino_similarity_matrix_long: same_region.
+representation_use,v1pj_dino_similarity_matrix_long: representation_use.

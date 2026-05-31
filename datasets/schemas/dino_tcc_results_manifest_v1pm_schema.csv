@@ -1,0 +1,7 @@
+field,description
+artifact_id,v1pm_tcc_manifest: artifact_id.
+stage,v1pm_tcc_manifest: stage.
+relative_path,v1pm_tcc_manifest: relative_path.
+rows,v1pm_tcc_manifest: rows.
+header_present,v1pm_tcc_manifest: header_present.
+role,v1pm_tcc_manifest: role.

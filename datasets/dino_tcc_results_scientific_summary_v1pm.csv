@@ -1,0 +1,14 @@
+summary_id,metric,value,interpretation,methodological_status,writing_use
+V1PM_S001,artifacts_scanned,510,Artefatos do repositório escaneados (metadata-only),AUDITAVEL,metodologia_auditoria
+V1PM_S002,likely_embedding_artifacts,237,Artefatos prováveis de embedding por termos,AUDITAVEL,metodologia_auditoria
+V1PM_S003,embeddings_parsed,0,Vetores de embedding parseados de fontes reais,AUDITAVEL,metodologia_auditoria
+V1PM_S004,valid_768d_embeddings,0,Embeddings válidos de 768D em regime review-only,RESULTADO_FINAL,resultado_negativo_auditavel
+V1PM_S005,invalid_embeddings,0,Embeddings inválidos (dim/NaN/inf/zero) bloqueados,RESULTADO_FINAL,resultado_negativo_auditavel
+V1PM_S006,duplicate_vectors,0,"Vetores duplicados (flag de revisão, nunca label)",RESULTADO_FINAL,resultado_negativo_auditavel
+V1PM_S007,neighbor_pairs_generated,0,Pares de vizinhança por similaridade exploratória,AUDITAVEL,metodologia_auditoria
+V1PM_S008,pca_rows_generated,0,Linhas de projeção PCA exploratória,AUDITAVEL,metodologia_auditoria
+V1PM_S009,exploratory_clusters_generated,0,Clusters exploratórios (não são classe),AUDITAVEL,metodologia_auditoria
+V1PM_S010,protocol_c_crosswalk_rows,0,Linhas de crosswalk DINO ↔ Protocolo C,AUDITAVEL,metodologia_auditoria
+V1PM_S011,labels_created,0,Labels operacionais criadas — 0 por design,RESULTADO_FINAL,resultado_negativo_auditavel
+V1PM_S012,training_targets_created,0,Targets de treinamento criados — 0 por design,RESULTADO_FINAL,resultado_negativo_auditavel
+V1PM_S013,final_dino_status,DINO_EMBEDDINGS_NOT_FOUND_FAIL_CLOSED,Status final da camada DINO review-only,RESULTADO_FINAL,conclusao_auditavel

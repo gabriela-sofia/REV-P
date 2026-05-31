@@ -1,0 +1,8 @@
+field,description
+patch_id,v1pm_tcc_pca_cluster_results: patch_id.
+region,v1pm_tcc_pca_cluster_results: region.
+pca_x,v1pm_tcc_pca_cluster_results: pca_x.
+pca_y,v1pm_tcc_pca_cluster_results: pca_y.
+exploratory_cluster_id,v1pm_tcc_pca_cluster_results: exploratory_cluster_id.
+cluster_use,v1pm_tcc_pca_cluster_results: cluster_use.
+can_be_used_as_class,v1pm_tcc_pca_cluster_results: can_be_used_as_class.

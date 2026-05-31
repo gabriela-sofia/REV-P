@@ -1,0 +1,5 @@
+artifact_id,stage,relative_path,rows,header_present,role
+V1PM_T001,v1pm,dino_tcc_table_embedding_inventory_v1pm.csv,0,true,embedding_inventory
+V1PM_T002,v1pm,dino_tcc_table_similarity_results_v1pm.csv,0,true,similarity_results
+V1PM_T003,v1pm,dino_tcc_table_pca_cluster_results_v1pm.csv,0,true,pca_cluster_results
+V1PM_T004,v1pm,dino_tcc_table_protocol_c_crosswalk_v1pm.csv,0,true,protocol_c_crosswalk

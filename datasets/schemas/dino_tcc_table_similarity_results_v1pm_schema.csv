@@ -1,0 +1,7 @@
+field,description
+query_patch_id,v1pm_tcc_similarity_results: query_patch_id.
+neighbor_rank,v1pm_tcc_similarity_results: neighbor_rank.
+neighbor_patch_id,v1pm_tcc_similarity_results: neighbor_patch_id.
+cosine_similarity,v1pm_tcc_similarity_results: cosine_similarity.
+same_region,v1pm_tcc_similarity_results: same_region.
+representation_use,v1pm_tcc_similarity_results: representation_use.

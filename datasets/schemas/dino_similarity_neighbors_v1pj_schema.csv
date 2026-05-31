@@ -1,0 +1,14 @@
+field,description
+query_patch_id,v1pj_dino_similarity_neighbors: query_patch_id.
+query_region,v1pj_dino_similarity_neighbors: query_region.
+neighbor_rank,v1pj_dino_similarity_neighbors: neighbor_rank.
+neighbor_patch_id,v1pj_dino_similarity_neighbors: neighbor_patch_id.
+neighbor_region,v1pj_dino_similarity_neighbors: neighbor_region.
+cosine_similarity,v1pj_dino_similarity_neighbors: cosine_similarity.
+euclidean_distance,v1pj_dino_similarity_neighbors: euclidean_distance.
+same_region,v1pj_dino_similarity_neighbors: same_region.
+representation_use,v1pj_dino_similarity_neighbors: representation_use.
+can_infer_same_event,v1pj_dino_similarity_neighbors: can_infer_same_event.
+can_create_label,v1pj_dino_similarity_neighbors: can_create_label.
+can_train_model,v1pj_dino_similarity_neighbors: can_train_model.
+notes,v1pj_dino_similarity_neighbors: notes.

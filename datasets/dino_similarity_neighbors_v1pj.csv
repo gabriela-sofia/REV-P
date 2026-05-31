@@ -1,0 +1,1 @@
+query_patch_id,query_region,neighbor_rank,neighbor_patch_id,neighbor_region,cosine_similarity,euclidean_distance,same_region,representation_use,can_infer_same_event,can_create_label,can_train_model,notes

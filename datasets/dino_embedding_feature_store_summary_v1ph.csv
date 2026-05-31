@@ -1,0 +1,8 @@
+stat_key,stat_value
+embeddings_parsed,0
+valid_768d_embeddings,0
+invalid_embeddings,0
+duplicate_vectors,0
+labels_created,0
+training_targets_created,0
+feature_store_status,NO_REAL_EMBEDDING_FAIL_CLOSED

@@ -1,0 +1,19 @@
+field,description
+crosswalk_id,v1pl_dino_protocol_c_crosswalk: crosswalk_id.
+patch_id,v1pl_dino_protocol_c_crosswalk: patch_id.
+alias,v1pl_dino_protocol_c_crosswalk: alias.
+region,v1pl_dino_protocol_c_crosswalk: region.
+embedding_id,v1pl_dino_protocol_c_crosswalk: embedding_id.
+embedding_status,v1pl_dino_protocol_c_crosswalk: embedding_status.
+protocol_c_event_id,v1pl_dino_protocol_c_crosswalk: protocol_c_event_id.
+protocol_c_candidate_level,v1pl_dino_protocol_c_crosswalk: protocol_c_candidate_level.
+evidence_tier,v1pl_dino_protocol_c_crosswalk: evidence_tier.
+temporal_status,v1pl_dino_protocol_c_crosswalk: temporal_status.
+c_level_status,v1pl_dino_protocol_c_crosswalk: c_level_status.
+dino_representation_status,v1pl_dino_protocol_c_crosswalk: dino_representation_status.
+allowed_use,v1pl_dino_protocol_c_crosswalk: allowed_use.
+dino_can_validate_event,v1pl_dino_protocol_c_crosswalk: dino_can_validate_event.
+dino_can_create_label,v1pl_dino_protocol_c_crosswalk: dino_can_create_label.
+dino_can_train_model,v1pl_dino_protocol_c_crosswalk: dino_can_train_model.
+blocked_reason,v1pl_dino_protocol_c_crosswalk: blocked_reason.
+notes,v1pl_dino_protocol_c_crosswalk: notes.
