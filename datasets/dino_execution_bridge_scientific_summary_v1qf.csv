@@ -1,0 +1,12 @@
+summary_id,metric,value,interpretation,methodological_status,writing_use
+V1QF_S001,expanded_queue_rows_imported,100,Itens da fila expandida importados para bridge,AUDITAVEL,metodologia_auditoria
+V1QF_S002,dry_run_ready_rows,100,Itens prontos para dry-run (modelo pode ser ausente),RESULTADO_FINAL,resultado_negativo_auditavel
+V1QF_S003,real_execution_ready_rows,0,Itens prontos para execução real (requer modelo local),RESULTADO_FINAL,resultado_negativo_auditavel
+V1QF_S004,blocked_rows,0,Itens bloqueados por guardrails ou fila inválida,RESULTADO_FINAL,resultado_negativo_auditavel
+V1QF_S005,backend_status,DINO_BACKEND_MODEL_UNAVAILABLE_FAIL_CLOSED,Status do backend de execução DINO,RESULTADO_FINAL,resultado_negativo_auditavel
+V1QF_S006,model_available,false,Modelo local configurado e disponível,RESULTADO_FINAL,resultado_negativo_auditavel
+V1QF_S007,commands_generated,9,Comandos PowerShell gerados para execução reprodutível,AUDITAVEL,metodologia_auditoria
+V1QF_S008,compatibility_status,FULLY_COMPATIBLE,Status de compatibilidade v1pq ↔ v1qa,AUDITAVEL,metodologia_auditoria
+V1QF_S009,labels_created,0,Labels operacionais criadas — 0 por design,RESULTADO_FINAL,resultado_negativo_auditavel
+V1QF_S010,targets_created,0,Targets de treinamento criados — 0 por design,RESULTADO_FINAL,resultado_negativo_auditavel
+V1QF_S011,final_status,DINO_EXECUTION_BRIDGE_READY_DRY_RUN_MODEL_MISSING,Status final da ponte de execução DINO,RESULTADO_FINAL,conclusao_auditavel

@@ -1,0 +1,8 @@
+field,description
+check_id,v1qd_executor_compatibility_report: check_id.
+component,v1qd_executor_compatibility_report: component.
+compatible,v1qd_executor_compatibility_report: compatible.
+required_change,v1qd_executor_compatibility_report: required_change.
+implemented_change,v1qd_executor_compatibility_report: implemented_change.
+status,v1qd_executor_compatibility_report: status.
+notes,v1qd_executor_compatibility_report: notes.

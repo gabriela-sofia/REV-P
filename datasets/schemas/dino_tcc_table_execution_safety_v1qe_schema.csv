@@ -1,0 +1,5 @@
+field,description
+command_id,v1qe_tcc_execution_safety: command_id.
+command_type,v1qe_tcc_execution_safety: command_type.
+safety_note,v1qe_tcc_execution_safety: safety_note.
+requires_manual_confirmation,v1qe_tcc_execution_safety: requires_manual_confirmation.

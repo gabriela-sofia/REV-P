@@ -1,0 +1,6 @@
+field,description
+command_id,v1qc_dry_run_execution_commands: command_id.
+command_type,v1qc_dry_run_execution_commands: command_type.
+powershell_command,v1qc_dry_run_execution_commands: powershell_command.
+safety_note,v1qc_dry_run_execution_commands: safety_note.
+requires_manual_confirmation,v1qc_dry_run_execution_commands: requires_manual_confirmation.

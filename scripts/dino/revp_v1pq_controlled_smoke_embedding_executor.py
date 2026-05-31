@@ -33,7 +33,9 @@ SCH_RES = _p("REVP_V1PQ_SCH_RES", SCHEMAS / "dino_controlled_smoke_embedding_res
 SCH_FAIL = _p("REVP_V1PQ_SCH_FAIL", SCHEMAS / "dino_controlled_smoke_embedding_failures_v1pq_schema.csv")
 SCH_SUM = _p("REVP_V1PQ_SCH_SUM", SCHEMAS / "dino_controlled_smoke_embedding_summary_v1pq_schema.csv")
 DOC = _p("REVP_V1PQ_DOC", DOCS / "revp_v1pq_controlled_smoke_embedding_executor.md")
-IN_QUEUE = _p("REVP_V1PQ_IN_QUEUE", DATASETS / "dino_embedding_execution_queue_v1po.csv")
+# REVP_V1PQ_QUEUE_PATH overrides IN_QUEUE to allow consuming the v1qa expanded queue.
+_queue_override = os.environ.get("REVP_V1PQ_QUEUE_PATH", "")
+IN_QUEUE = Path(_queue_override) if _queue_override else _p("REVP_V1PQ_IN_QUEUE", DATASETS / "dino_embedding_execution_queue_v1po.csv")
 REVP_SOURCE_ROOT = Path(os.environ.get("REVP_DINO_SOURCE_ROOT", str(ROOT)))
 
 MAX_EXECUTE = int(os.environ.get("REVP_DINO_MAX_EXECUTE", "5"))
@@ -109,7 +111,8 @@ def execute(queue: list[dict[str, str]]) -> tuple[list[dict[str, Any]], list[dic
     model_src = info["model_path"] or info["model_name"] or "none"
 
     for item in queue[:MAX_EXECUTE]:
-        qid = item.get("queue_id", "")
+        # Support both original v1po queue_id and v1qa execution_queue_id field names.
+        qid = item.get("queue_id") or item.get("execution_queue_id") or item.get("source_queue_id", "")
         asid = item.get("visual_asset_id", "")
         patch = item.get("patch_id", "UNKNOWN")
         alias = item.get("alias", "")

@@ -1,0 +1,14 @@
+field,description
+plan_id,v1qc_dry_run_execution_plan: plan_id.
+execution_queue_id,v1qc_dry_run_execution_plan: execution_queue_id.
+patch_id,v1qc_dry_run_execution_plan: patch_id.
+region,v1qc_dry_run_execution_plan: region.
+relative_path,v1qc_dry_run_execution_plan: relative_path.
+dry_run_command_id,v1qc_dry_run_execution_plan: dry_run_command_id.
+execution_order,v1qc_dry_run_execution_plan: execution_order.
+max_execute,v1qc_dry_run_execution_plan: max_execute.
+model_path_required,v1qc_dry_run_execution_plan: model_path_required.
+allow_download_default,v1qc_dry_run_execution_plan: allow_download_default.
+expected_output,v1qc_dry_run_execution_plan: expected_output.
+guardrail_summary,v1qc_dry_run_execution_plan: guardrail_summary.
+notes,v1qc_dry_run_execution_plan: notes.

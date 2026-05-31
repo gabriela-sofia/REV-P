@@ -1,0 +1,10 @@
+command_id,command_type,safety_note,requires_manual_confirmation
+V1QC_CMD_001,set_model_path,Set to an absolute path of a locally downloaded DINOv2 model directory.,true
+V1QC_CMD_002,keep_download_false,Never change to true without explicit authorization; no model download by default.,false
+V1QC_CMD_003,enable_dry_run,Default mode; no embedding execution occurs.,false
+V1QC_CMD_004,set_queue_path,Point executor to the expanded v1qa queue.,false
+V1QC_CMD_005,run_v1pq,Run only after model path and queue path are configured.,true
+V1QC_CMD_006,run_v1pr,Run after v1pq to import valid embeddings into feature store.,false
+V1QC_CMD_007,run_v1ps,Run after v1pr to generate review products.,false
+V1QC_CMD_008,run_v1pt,Run last to consolidate execution results.,false
+V1QC_CMD_009,disable_dry_run_manual,Requires manual confirmation and a valid REVP_DINO_MODEL_PATH.,true

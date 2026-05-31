@@ -1,0 +1,10 @@
+command_id,command_type,powershell_command,safety_note,requires_manual_confirmation
+V1QC_CMD_001,set_model_path,"$env:REVP_DINO_MODEL_PATH = ""<path_to_local_dino_model>""",Set to an absolute path of a locally downloaded DINOv2 model directory.,true
+V1QC_CMD_002,keep_download_false,"$env:REVP_DINO_ALLOW_DOWNLOAD = ""false""",Never change to true without explicit authorization; no model download by default.,false
+V1QC_CMD_003,enable_dry_run,"$env:REVP_DINO_DRY_RUN = ""true""",Default mode; no embedding execution occurs.,false
+V1QC_CMD_004,set_queue_path,"$env:REVP_V1PQ_QUEUE_PATH = ""datasets/dino_execution_queue_from_visual_expansion_v1qa.csv""",Point executor to the expanded v1qa queue.,false
+V1QC_CMD_005,run_v1pq,python scripts/dino/revp_v1pq_controlled_smoke_embedding_executor.py,Run only after model path and queue path are configured.,true
+V1QC_CMD_006,run_v1pr,python scripts/dino/revp_v1pr_import_smoke_embeddings_feature_store.py,Run after v1pq to import valid embeddings into feature store.,false
+V1QC_CMD_007,run_v1ps,python scripts/dino/revp_v1ps_smoke_embedding_review_products.py,Run after v1pr to generate review products.,false
+V1QC_CMD_008,run_v1pt,python scripts/dino/revp_v1pt_dino_execution_bundle.py,Run last to consolidate execution results.,false
+V1QC_CMD_009,disable_dry_run_manual,"# MANUAL: $env:REVP_DINO_DRY_RUN = ""false""  # Only set after model path is configured",Requires manual confirmation and a valid REVP_DINO_MODEL_PATH.,true

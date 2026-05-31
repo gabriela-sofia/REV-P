@@ -1,0 +1,8 @@
+field,description
+readiness_id,v1qe_tcc_execution_readiness: readiness_id.
+patch_id,v1qe_tcc_execution_readiness: patch_id.
+region,v1qe_tcc_execution_readiness: region.
+backend_status,v1qe_tcc_execution_readiness: backend_status.
+dry_run_allowed,v1qe_tcc_execution_readiness: dry_run_allowed.
+real_execution_allowed,v1qe_tcc_execution_readiness: real_execution_allowed.
+readiness_status,v1qe_tcc_execution_readiness: readiness_status.

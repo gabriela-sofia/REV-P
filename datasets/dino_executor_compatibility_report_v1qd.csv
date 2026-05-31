@@ -1,0 +1,7 @@
+check_id,component,compatible,required_change,implemented_change,status,notes
+V1QD_C001,v1pq_queue_path_env,true,accept REVP_V1PQ_QUEUE_PATH to override IN_QUEUE,added _queue_override logic before IN_QUEUE assignment,PASS,
+V1QD_C002,v1pq_backward_compat_queue_id,true,still read queue_id from original v1po format,kept item.get('queue_id') as primary fallback,PASS,
+V1QD_C003,v1pq_supports_execution_queue_id,true,read execution_queue_id field from v1qa queue format,added item.get('execution_queue_id') in qid fallback chain,PASS,
+V1QD_C004,v1pq_dry_run_default_true,true,REVP_DINO_DRY_RUN defaults to true,unchanged,PASS,
+V1QD_C005,v1pq_no_download_default,true,REVP_DINO_ALLOW_DOWNLOAD defaults to false,unchanged,PASS,
+V1QD_C006,v1qa_relative_path_field,true,v1qa queue has relative_path field compatible with v1pq img_path resolution,v1qa outputs relative_path in same position as v1po,PASS,

@@ -1,0 +1,7 @@
+field,description
+artifact_id,v1qf_execution_bridge_manifest: artifact_id.
+stage,v1qf_execution_bridge_manifest: stage.
+filename,v1qf_execution_bridge_manifest: filename.
+rows,v1qf_execution_bridge_manifest: rows.
+header_present,v1qf_execution_bridge_manifest: header_present.
+role,v1qf_execution_bridge_manifest: role.

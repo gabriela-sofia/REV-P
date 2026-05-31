@@ -1,0 +1,8 @@
+stat_key,stat_value
+rows_audited,100
+ready_dry_run_only,100
+ready_local_model_execution,0
+blocked,0
+backend_status,DINO_BACKEND_MODEL_UNAVAILABLE_FAIL_CLOSED
+model_available,false
+labels_created,0
