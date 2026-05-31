@@ -1,0 +1,9 @@
+stat_key,stat_value
+queue_items_processed,0
+embeddings_attempted,0
+embeddings_executed_review_only,0
+failures,0
+dry_run,true
+execution_mode,DRY_RUN
+labels_created,0
+targets_created,0

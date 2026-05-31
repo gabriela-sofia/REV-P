@@ -1,0 +1,9 @@
+stat_key,stat_value
+can_execute_embeddings,false
+model_source,none
+download_allowed,false
+numpy_available,true
+pil_available,true
+torch_available,true
+transformers_available,true
+final_status,DINO_BACKEND_MODEL_UNAVAILABLE_FAIL_CLOSED

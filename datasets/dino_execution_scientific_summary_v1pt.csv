@@ -1,0 +1,16 @@
+summary_id,metric,value,interpretation,methodological_status,writing_use
+V1PT_S001,visual_assets_found,141,Imagens elegíveis encontradas no repositório,AUDITAVEL,metodologia_auditoria
+V1PT_S002,eligible_queue_items,0,Itens elegíveis para fila de embedding,AUDITAVEL,metodologia_auditoria
+V1PT_S003,queue_total,0,Total na fila de execução,AUDITAVEL,metodologia_auditoria
+V1PT_S004,backend_status,DINO_BACKEND_MODEL_UNAVAILABLE_FAIL_CLOSED,Status do backend de execução,AUDITAVEL,metodologia_auditoria
+V1PT_S005,dry_run,true,Modo dry-run ativo (padrão=true),AUDITAVEL,metodologia_auditoria
+V1PT_S006,embeddings_attempted,0,Embeddings tentados (0 se dry-run),RESULTADO_FINAL,resultado_negativo_auditavel
+V1PT_S007,embeddings_generated,0,Embeddings executados em modo real,RESULTADO_FINAL,resultado_negativo_auditavel
+V1PT_S008,valid_768d_embeddings,0,Embeddings válidos 768D importados,RESULTADO_FINAL,resultado_negativo_auditavel
+V1PT_S009,invalid_embeddings,0,Embeddings inválidos bloqueados,RESULTADO_FINAL,resultado_negativo_auditavel
+V1PT_S010,smoke_neighbors,0,Pares de vizinhança exploratória smoke,RESULTADO_FINAL,resultado_negativo_auditavel
+V1PT_S011,smoke_pca_rows,0,Linhas de projeção PCA smoke,RESULTADO_FINAL,resultado_negativo_auditavel
+V1PT_S012,smoke_clusters,0,Clusters exploratórios smoke (não são classe),RESULTADO_FINAL,resultado_negativo_auditavel
+V1PT_S013,labels_created,0,Labels operacionais criadas — 0 por design,RESULTADO_FINAL,resultado_negativo_auditavel
+V1PT_S014,targets_created,0,Targets de treinamento criados — 0 por design,RESULTADO_FINAL,resultado_negativo_auditavel
+V1PT_S015,final_execution_status,DINO_EXECUTION_PLAN_READY_DRY_RUN,Status final da execução de embeddings DINO,RESULTADO_FINAL,conclusao_auditavel

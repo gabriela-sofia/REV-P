@@ -1,0 +1,1 @@
+embedding_id,patch_id,alias,region,source_run_id,visual_asset_id,vector_dim,vector_sha256_16,vector_norm_l2,vector_mean,vector_std,has_nan,has_inf,is_zero_vector,embedding_status,dino_allowed_use,dino_can_create_label,dino_can_train_model,dino_target_field_created,blocked_reason,notes

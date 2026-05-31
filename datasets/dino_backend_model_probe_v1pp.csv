@@ -1,0 +1,10 @@
+probe_id,component,available,version_or_value,required_for_execution,status,blocked_reason,notes
+V1PP_P001,numpy,true,2.4.4,true,AVAILABLE,,
+V1PP_P002,PIL,true,12.2.0,true,AVAILABLE,,
+V1PP_P003,torch,true,2.11.0+cpu,false,AVAILABLE,,
+V1PP_P004,transformers,true,5.8.1,false,AVAILABLE,,
+V1PP_P005,timm,false,not_installed,false,OPTIONAL_MISSING,,
+V1PP_P006,model_path_env,false,not_set,false,OPTIONAL_MISSING,,
+V1PP_P007,model_path_exists,false,path_does_not_exist,false,OPTIONAL_MISSING,,
+V1PP_P008,model_name_env,false,not_set,false,OPTIONAL_MISSING,,
+V1PP_P009,allow_download,false,false,false,OPTIONAL_MISSING,,

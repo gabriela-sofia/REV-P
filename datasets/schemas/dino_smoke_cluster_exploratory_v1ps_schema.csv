@@ -1,0 +1,12 @@
+field,description
+patch_id,v1ps_smoke_cluster_exploratory: patch_id.
+alias,v1ps_smoke_cluster_exploratory: alias.
+region,v1ps_smoke_cluster_exploratory: region.
+exploratory_cluster_id,v1ps_smoke_cluster_exploratory: exploratory_cluster_id.
+cluster_method,v1ps_smoke_cluster_exploratory: cluster_method.
+cluster_k,v1ps_smoke_cluster_exploratory: cluster_k.
+cluster_use,v1ps_smoke_cluster_exploratory: cluster_use.
+can_be_used_as_class,v1ps_smoke_cluster_exploratory: can_be_used_as_class.
+can_create_label,v1ps_smoke_cluster_exploratory: can_create_label.
+can_train_model,v1ps_smoke_cluster_exploratory: can_train_model.
+notes,v1ps_smoke_cluster_exploratory: notes.

@@ -1,0 +1,12 @@
+field,description
+patch_id,v1ps_smoke_pca_projection: patch_id.
+alias,v1ps_smoke_pca_projection: alias.
+region,v1ps_smoke_pca_projection: region.
+pca_x,v1ps_smoke_pca_projection: pca_x.
+pca_y,v1ps_smoke_pca_projection: pca_y.
+explained_variance_ratio_x,v1ps_smoke_pca_projection: explained_variance_ratio_x.
+explained_variance_ratio_y,v1ps_smoke_pca_projection: explained_variance_ratio_y.
+representation_use,v1ps_smoke_pca_projection: representation_use.
+can_create_label,v1ps_smoke_pca_projection: can_create_label.
+can_train_model,v1ps_smoke_pca_projection: can_train_model.
+notes,v1ps_smoke_pca_projection: notes.

@@ -1,0 +1,10 @@
+field,description
+failure_id,v1pq_smoke_embedding_failures: failure_id.
+queue_id,v1pq_smoke_embedding_failures: queue_id.
+visual_asset_id,v1pq_smoke_embedding_failures: visual_asset_id.
+patch_id,v1pq_smoke_embedding_failures: patch_id.
+failure_stage,v1pq_smoke_embedding_failures: failure_stage.
+error_type,v1pq_smoke_embedding_failures: error_type.
+error_message_short,v1pq_smoke_embedding_failures: error_message_short.
+status,v1pq_smoke_embedding_failures: status.
+blocked_reason,v1pq_smoke_embedding_failures: blocked_reason.

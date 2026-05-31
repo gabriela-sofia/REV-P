@@ -1,0 +1,18 @@
+field,description
+queue_id,v1po_dino_embedding_execution_queue: queue_id.
+visual_asset_id,v1po_dino_embedding_execution_queue: visual_asset_id.
+patch_id,v1po_dino_embedding_execution_queue: patch_id.
+alias,v1po_dino_embedding_execution_queue: alias.
+region,v1po_dino_embedding_execution_queue: region.
+relative_path,v1po_dino_embedding_execution_queue: relative_path.
+path_hash,v1po_dino_embedding_execution_queue: path_hash.
+queue_priority,v1po_dino_embedding_execution_queue: queue_priority.
+queue_reason,v1po_dino_embedding_execution_queue: queue_reason.
+protocol_c_context,v1po_dino_embedding_execution_queue: protocol_c_context.
+dino_allowed_use,v1po_dino_embedding_execution_queue: dino_allowed_use.
+can_create_label,v1po_dino_embedding_execution_queue: can_create_label.
+can_train_model,v1po_dino_embedding_execution_queue: can_train_model.
+target_created,v1po_dino_embedding_execution_queue: target_created.
+execution_status,v1po_dino_embedding_execution_queue: execution_status.
+blocked_reason,v1po_dino_embedding_execution_queue: blocked_reason.
+notes,v1po_dino_embedding_execution_queue: notes.

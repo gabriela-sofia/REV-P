@@ -1,0 +1,7 @@
+field,description
+artifact_id,v1pt_dino_execution_manifest: artifact_id.
+stage,v1pt_dino_execution_manifest: stage.
+filename,v1pt_dino_execution_manifest: filename.
+rows,v1pt_dino_execution_manifest: rows.
+header_present,v1pt_dino_execution_manifest: header_present.
+role,v1pt_dino_execution_manifest: role.

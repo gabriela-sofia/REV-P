@@ -1,0 +1,5 @@
+stat_key,stat_value
+queue_total,0
+protocol_c_priority_items,0
+max_queue_limit,50
+labels_queued,0

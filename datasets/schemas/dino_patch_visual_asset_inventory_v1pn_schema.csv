@@ -1,0 +1,15 @@
+field,description
+visual_asset_id,v1pn_patch_visual_asset_inventory: visual_asset_id.
+relative_path,v1pn_patch_visual_asset_inventory: relative_path.
+path_hash,v1pn_patch_visual_asset_inventory: path_hash.
+file_ext,v1pn_patch_visual_asset_inventory: file_ext.
+file_size_bytes,v1pn_patch_visual_asset_inventory: file_size_bytes.
+patch_id,v1pn_patch_visual_asset_inventory: patch_id.
+alias,v1pn_patch_visual_asset_inventory: alias.
+region,v1pn_patch_visual_asset_inventory: region.
+asset_role_hint,v1pn_patch_visual_asset_inventory: asset_role_hint.
+is_local_only,v1pn_patch_visual_asset_inventory: is_local_only.
+is_fixture_or_synthetic,v1pn_patch_visual_asset_inventory: is_fixture_or_synthetic.
+eligible_for_embedding_queue,v1pn_patch_visual_asset_inventory: eligible_for_embedding_queue.
+blocked_reason,v1pn_patch_visual_asset_inventory: blocked_reason.
+notes,v1pn_patch_visual_asset_inventory: notes.

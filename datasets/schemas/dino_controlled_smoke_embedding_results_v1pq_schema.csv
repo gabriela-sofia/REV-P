@@ -1,0 +1,19 @@
+field,description
+embedding_run_id,v1pq_smoke_embedding_results: embedding_run_id.
+queue_id,v1pq_smoke_embedding_results: queue_id.
+visual_asset_id,v1pq_smoke_embedding_results: visual_asset_id.
+patch_id,v1pq_smoke_embedding_results: patch_id.
+alias,v1pq_smoke_embedding_results: alias.
+region,v1pq_smoke_embedding_results: region.
+model_source,v1pq_smoke_embedding_results: model_source.
+vector_dim,v1pq_smoke_embedding_results: vector_dim.
+embedding,v1pq_smoke_embedding_results: embedding.
+vector_sha256_16,v1pq_smoke_embedding_results: vector_sha256_16.
+execution_mode,v1pq_smoke_embedding_results: execution_mode.
+dino_allowed_use,v1pq_smoke_embedding_results: dino_allowed_use.
+can_create_label,v1pq_smoke_embedding_results: can_create_label.
+can_train_model,v1pq_smoke_embedding_results: can_train_model.
+target_created,v1pq_smoke_embedding_results: target_created.
+status,v1pq_smoke_embedding_results: status.
+blocked_reason,v1pq_smoke_embedding_results: blocked_reason.
+notes,v1pq_smoke_embedding_results: notes.

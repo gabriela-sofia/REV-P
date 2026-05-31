@@ -1,0 +1,12 @@
+field,description
+crosswalk_id,v1ps_smoke_protocol_c_crosswalk: crosswalk_id.
+patch_id,v1ps_smoke_protocol_c_crosswalk: patch_id.
+region,v1ps_smoke_protocol_c_crosswalk: region.
+embedding_id,v1ps_smoke_protocol_c_crosswalk: embedding_id.
+embedding_status,v1ps_smoke_protocol_c_crosswalk: embedding_status.
+protocol_c_event_id,v1ps_smoke_protocol_c_crosswalk: protocol_c_event_id.
+protocol_c_candidate_level,v1ps_smoke_protocol_c_crosswalk: protocol_c_candidate_level.
+dino_can_validate_event,v1ps_smoke_protocol_c_crosswalk: dino_can_validate_event.
+dino_can_create_label,v1ps_smoke_protocol_c_crosswalk: dino_can_create_label.
+dino_can_train_model,v1ps_smoke_protocol_c_crosswalk: dino_can_train_model.
+notes,v1ps_smoke_protocol_c_crosswalk: notes.
