@@ -1,0 +1,8 @@
+field,description
+visual_asset_id,v1py_tcc_visual_asset_eligibility: visual_asset_id.
+inferred_patch_id,v1py_tcc_visual_asset_eligibility: inferred_patch_id.
+inferred_region,v1py_tcc_visual_asset_eligibility: inferred_region.
+asset_visual_type,v1py_tcc_visual_asset_eligibility: asset_visual_type.
+eligibility_status,v1py_tcc_visual_asset_eligibility: eligibility_status.
+confidence,v1py_tcc_visual_asset_eligibility: confidence.
+dino_allowed_use,v1py_tcc_visual_asset_eligibility: dino_allowed_use.

@@ -1,0 +1,8 @@
+stat_key,stat_value
+queue_total,100
+protocol_c_priority_items,0
+sentinel_tif_items,100
+max_queue_limit,100
+include_manual_check,false
+labels_created,0
+targets_created,0

@@ -1,0 +1,11 @@
+artifact_id,stage,filename,rows,header_present,role
+V1PZ_ART_001,v1pu,dino_visual_asset_eligibility_audit_v1pu.csv,167,true,eligibility_audit
+V1PZ_ART_002,v1pu,dino_visual_asset_eligibility_summary_v1pu.csv,6,true,eligibility_summary
+V1PZ_ART_003,v1pv,dino_patch_visual_linkage_registry_v1pv.csv,167,true,linkage_registry
+V1PZ_ART_004,v1pv,dino_patch_visual_linkage_summary_v1pv.csv,6,true,linkage_summary
+V1PZ_ART_005,v1pw,dino_review_only_execution_queue_expanded_v1pw.csv,100,true,expanded_queue
+V1PZ_ART_006,v1pw,dino_review_only_execution_queue_expanded_summary_v1pw.csv,7,true,expanded_queue_summary
+V1PZ_ART_007,v1px,dino_queue_leakage_audit_v1px.csv,27,true,leakage_audit
+V1PZ_ART_008,v1px,dino_queue_leakage_summary_v1px.csv,5,true,leakage_summary
+V1PZ_ART_009,v1py,dino_tcc_table_visual_asset_eligibility_v1py.csv,167,true,tcc_eligibility_table
+V1PZ_ART_010,v1py,dino_tcc_table_review_queue_v1py.csv,100,true,tcc_queue_table

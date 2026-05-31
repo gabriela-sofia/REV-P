@@ -1,0 +1,11 @@
+summary_id,metric,value,interpretation,methodological_status,writing_use
+V1PZ_S001,visual_assets_audited,167,Assets visuais de manifests auditados,AUDITAVEL,metodologia_auditoria
+V1PZ_S002,eligible_review_only_assets,128,Assets elegíveis para DINO review-only (sem scene_date),RESULTADO_FINAL,resultado_negativo_auditavel
+V1PZ_S003,manual_check_candidates,39,Candidatos que requerem verificação manual,RESULTADO_FINAL,resultado_negativo_auditavel
+V1PZ_S004,blocked_assets,0,"Assets bloqueados (fixture, não-patch, sem ID)",RESULTADO_FINAL,resultado_negativo_auditavel
+V1PZ_S005,linked_patches_eligible,128,Patches únicos com linkage elegível,AUDITAVEL,metodologia_auditoria
+V1PZ_S006,expanded_queue_rows,100,Itens na fila de execução expandida,RESULTADO_FINAL,resultado_negativo_auditavel
+V1PZ_S007,leakage_audit_status,LEAKAGE_AUDIT_PASS,Status do audit de guardrails (leakage),RESULTADO_FINAL,resultado_negativo_auditavel
+V1PZ_S008,labels_created,0,Labels operacionais criadas — 0 por design,RESULTADO_FINAL,resultado_negativo_auditavel
+V1PZ_S009,targets_created,0,Targets de treinamento criados — 0 por design,RESULTADO_FINAL,resultado_negativo_auditavel
+V1PZ_S010,final_status,DINO_VISUAL_QUEUE_READY_REVIEW_ONLY,Status final da camada de elegibilidade visual DINO,RESULTADO_FINAL,conclusao_auditavel

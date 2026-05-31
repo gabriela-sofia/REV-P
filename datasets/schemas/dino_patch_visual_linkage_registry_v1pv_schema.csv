@@ -1,0 +1,17 @@
+field,description
+linkage_id,v1pv_patch_visual_linkage_registry: linkage_id.
+visual_asset_id,v1pv_patch_visual_linkage_registry: visual_asset_id.
+patch_id,v1pv_patch_visual_linkage_registry: patch_id.
+alias,v1pv_patch_visual_linkage_registry: alias.
+region,v1pv_patch_visual_linkage_registry: region.
+linkage_basis,v1pv_patch_visual_linkage_registry: linkage_basis.
+linkage_confidence,v1pv_patch_visual_linkage_registry: linkage_confidence.
+visual_type,v1pv_patch_visual_linkage_registry: visual_type.
+eligible_for_dino_review,v1pv_patch_visual_linkage_registry: eligible_for_dino_review.
+requires_manual_check,v1pv_patch_visual_linkage_registry: requires_manual_check.
+dino_allowed_use,v1pv_patch_visual_linkage_registry: dino_allowed_use.
+can_create_label,v1pv_patch_visual_linkage_registry: can_create_label.
+can_train_model,v1pv_patch_visual_linkage_registry: can_train_model.
+target_created,v1pv_patch_visual_linkage_registry: target_created.
+blocked_reason,v1pv_patch_visual_linkage_registry: blocked_reason.
+notes,v1pv_patch_visual_linkage_registry: notes.

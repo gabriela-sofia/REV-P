@@ -1,0 +1,9 @@
+field,description
+queue_id,v1py_tcc_review_queue: queue_id.
+patch_id,v1py_tcc_review_queue: patch_id.
+region,v1py_tcc_review_queue: region.
+visual_type,v1py_tcc_review_queue: visual_type.
+queue_priority,v1py_tcc_review_queue: queue_priority.
+queue_reason,v1py_tcc_review_queue: queue_reason.
+linkage_confidence,v1py_tcc_review_queue: linkage_confidence.
+dino_allowed_use,v1py_tcc_review_queue: dino_allowed_use.

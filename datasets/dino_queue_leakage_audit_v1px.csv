@@ -1,0 +1,28 @@
+check_id,stage,filename,check_name,status,severity,observed,expected,explanation
+V1PX_0001,v1pu,dino_visual_asset_eligibility_audit_v1pu.csv,file_exists,PASS,INFO,True,true,
+V1PX_0002,v1pu,dino_visual_asset_eligibility_audit_v1pu.csv,header_present,PASS,INFO,True,true,
+V1PX_0003,v1pu,dino_visual_asset_eligibility_audit_v1pu.csv,no_absolute_path,PASS,INFO,none,NOT_FOUND,
+V1PX_0004,v1pu,dino_visual_asset_eligibility_audit_v1pu.csv,no_local_runs_exposure,PASS,INFO,none,NOT_FOUND,
+V1PX_0005,v1pu,dino_visual_asset_eligibility_audit_v1pu.csv,blocked_rows_have_reason,PASS,MEDIUM,0,0,blocked rows must have blocked_reason
+V1PX_0001,v1pu,dino_visual_asset_eligibility_summary_v1pu.csv,file_exists,PASS,INFO,True,true,
+V1PX_0002,v1pu,dino_visual_asset_eligibility_summary_v1pu.csv,header_present,PASS,INFO,True,true,
+V1PX_0003,v1pu,dino_visual_asset_eligibility_summary_v1pu.csv,no_absolute_path,PASS,INFO,none,NOT_FOUND,
+V1PX_0004,v1pu,dino_visual_asset_eligibility_summary_v1pu.csv,no_local_runs_exposure,PASS,INFO,none,NOT_FOUND,
+V1PX_0001,v1pv,dino_patch_visual_linkage_registry_v1pv.csv,file_exists,PASS,INFO,True,true,
+V1PX_0002,v1pv,dino_patch_visual_linkage_registry_v1pv.csv,header_present,PASS,INFO,True,true,
+V1PX_0003,v1pv,dino_patch_visual_linkage_registry_v1pv.csv,no_absolute_path,PASS,INFO,none,NOT_FOUND,
+V1PX_0004,v1pv,dino_patch_visual_linkage_registry_v1pv.csv,no_local_runs_exposure,PASS,INFO,none,NOT_FOUND,
+V1PX_0005,v1pv,dino_patch_visual_linkage_registry_v1pv.csv,blocked_rows_have_reason,PASS,MEDIUM,0,0,blocked rows must have blocked_reason
+V1PX_0001,v1pv,dino_patch_visual_linkage_summary_v1pv.csv,file_exists,PASS,INFO,True,true,
+V1PX_0002,v1pv,dino_patch_visual_linkage_summary_v1pv.csv,header_present,PASS,INFO,True,true,
+V1PX_0003,v1pv,dino_patch_visual_linkage_summary_v1pv.csv,no_absolute_path,PASS,INFO,none,NOT_FOUND,
+V1PX_0004,v1pv,dino_patch_visual_linkage_summary_v1pv.csv,no_local_runs_exposure,PASS,INFO,none,NOT_FOUND,
+V1PX_0001,v1pw,dino_review_only_execution_queue_expanded_v1pw.csv,file_exists,PASS,INFO,True,true,
+V1PX_0002,v1pw,dino_review_only_execution_queue_expanded_v1pw.csv,header_present,PASS,INFO,True,true,
+V1PX_0003,v1pw,dino_review_only_execution_queue_expanded_v1pw.csv,no_absolute_path,PASS,INFO,none,NOT_FOUND,
+V1PX_0004,v1pw,dino_review_only_execution_queue_expanded_v1pw.csv,no_local_runs_exposure,PASS,INFO,none,NOT_FOUND,
+V1PX_0005,v1pw,dino_review_only_execution_queue_expanded_v1pw.csv,blocked_rows_have_reason,PASS,MEDIUM,0,0,blocked rows must have blocked_reason
+V1PX_0001,v1pw,dino_review_only_execution_queue_expanded_summary_v1pw.csv,file_exists,PASS,INFO,True,true,
+V1PX_0002,v1pw,dino_review_only_execution_queue_expanded_summary_v1pw.csv,header_present,PASS,INFO,True,true,
+V1PX_0003,v1pw,dino_review_only_execution_queue_expanded_summary_v1pw.csv,no_absolute_path,PASS,INFO,none,NOT_FOUND,
+V1PX_0004,v1pw,dino_review_only_execution_queue_expanded_summary_v1pw.csv,no_local_runs_exposure,PASS,INFO,none,NOT_FOUND,
