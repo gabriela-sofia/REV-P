@@ -1,0 +1,13 @@
+item,value,interpretation,tcc_sentence
+Fontes escaneadas,330,Arquivos do repositorio escaneados para evidencia externa,Foram escaneados 330 arquivos do repositorio para identificar candidatos a evidencia externa.
+Candidatos a fonte permitidos,22,Fontes com termos de evidencia relevantes,"Desses, 22 foram identificados como candidatos a fontes de evidencia permitidos para registro."
+Evidencia contextual apenas,2,Eventos com evidencia contextual sem confirmacao institucional,"2 candidatos a eventos foram classificados como evidencia contextual apenas, sem confirmacao por fonte institucional adquirida."
+Evidencia bloqueada/insuficiente,2,Candidatos bloqueados por falta de fonte ou dado,2 candidatos foram bloqueados por evidencia insuficiente (fonte nao adquirida ou licenca desconhecida).
+Vinculos evento-patch,12,Tentativas de vinculacao evento-patch geradas,"Foram gerados 12 vinculos evento-patch, todos em regime contextual ou bloqueado temporalmente."
+Vinculos temporais confirmados,0,Vinculos com cadeia temporal Sentinel confirmada,"Nenhum vinculo temporal foi confirmado (0), pois TEMPORAL_RECOVERY_FAIL_CLOSED impede qualquer adjudicacao temporal."
+C1 (contextual),2,Decisoes C1 — evidencia contextual insuficiente para review,2 candidatos foram classificados como C1 (contextual apenas).
+C2 (review-only),2,Decisoes C2 — review-only sem label,"2 candidatos alcancaram C2 (review-only), permitindo representacao visual sem criacao de rotulo."
+C3+ (nao alcancado),0,Nenhum candidato alcancou C3+ sem data Sentinel confirmada,"O nivel C3+ nao foi alcancado (0 candidatos), pois requer cadeia temporal Sentinel confirmada."
+C4 negativos formais,0,Nenhum negativo formal disponivel,"Nenhum negativo formal foi identificado (0), mantendo C4 fechado."
+Fila DINO review-only,2,Entradas DINO para representacao visual sem label,A fila DINO review-only conteve 2 entradas para representacao visual/embedding sem criacao de rotulo.
+Status final,OBSERVED_EVIDENCE_REVIEW_ONLY_FAIL_CLOSED,Pipeline observacional encerrado em review-only,O status final da camada observacional e OBSERVED_EVIDENCE_REVIEW_ONLY_FAIL_CLOSED: nenhuma evidencia externa foi promovida a ground truth operacional.

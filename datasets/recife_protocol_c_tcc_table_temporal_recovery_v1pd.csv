@@ -1,0 +1,7 @@
+item,value,interpretation,tcc_sentence
+Patches Sentinel avaliados,2654,Aliases unicos de patches no corpus Recife com tentativa de resolucao de data,Foram avaliados 2654 patches Sentinel unicos para resolucao temporal.
+Datas de produto confirmadas,0,Cadeia completa patch-asset-produto-aquisicao confirmada,Nenhuma data de aquisicao Sentinel foi confirmada com cadeia de proveniencia completa (0 de 2654 tentativas).
+Desbloqueios temporais,0,Patches com can_unlock_temporal=true,Nenhum patch obteve desbloqueio temporal (can_unlock_temporal=true: 0).
+Candidatos C3+,0,Candidatos que alcancaram nivel C3 ou superior,Nenhum candidato alcancou nivel C3+ (requer data Sentinel confirmada): 0.
+Fila DINO (temporal),0,Entradas na fila DINO derivadas de recuperacao temporal,A fila DINO derivada de recuperacao temporal permaneceu vazia (0 entradas).
+Status final,TEMPORAL_RECOVERY_FAIL_CLOSED,Pipeline temporal encerrado sem confirmacao de data,"O status final da recuperacao temporal e FAIL_CLOSED: nenhuma data de cena Sentinel foi confirmada, bloqueando adjudicacao temporal operacional."

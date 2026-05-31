@@ -1,0 +1,7 @@
+field,description
+level,v1pd_tcc_decision_levels: level.
+meaning_in_project,v1pd_tcc_decision_levels: meaning_in_project.
+current_count,v1pd_tcc_decision_levels: current_count.
+allowed_use,v1pd_tcc_decision_levels: allowed_use.
+prohibited_use,v1pd_tcc_decision_levels: prohibited_use.
+tcc_sentence,v1pd_tcc_decision_levels: tcc_sentence.

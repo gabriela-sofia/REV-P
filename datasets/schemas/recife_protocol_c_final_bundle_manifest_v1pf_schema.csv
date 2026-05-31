@@ -1,0 +1,10 @@
+field,description
+artifact_path,v1pf_final_bundle_manifest: artifact_path.
+artifact_type,v1pf_final_bundle_manifest: artifact_type.
+stage,v1pf_final_bundle_manifest: stage.
+rows,v1pf_final_bundle_manifest: rows.
+columns,v1pf_final_bundle_manifest: columns.
+sha256_16,v1pf_final_bundle_manifest: sha256_16.
+role,v1pf_final_bundle_manifest: role.
+include_in_commit,v1pf_final_bundle_manifest: include_in_commit.
+notes,v1pf_final_bundle_manifest: notes.

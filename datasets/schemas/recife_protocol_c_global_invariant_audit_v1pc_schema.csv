@@ -1,0 +1,11 @@
+field,description
+invariant_id,v1pc_global_invariant_audit: invariant_id.
+invariant_group,v1pc_global_invariant_audit: invariant_group.
+artifact_path,v1pc_global_invariant_audit: artifact_path.
+invariant_name,v1pc_global_invariant_audit: invariant_name.
+status,v1pc_global_invariant_audit: status.
+severity,v1pc_global_invariant_audit: severity.
+observed_value,v1pc_global_invariant_audit: observed_value.
+expected_value,v1pc_global_invariant_audit: expected_value.
+violation_count,v1pc_global_invariant_audit: violation_count.
+explanation,v1pc_global_invariant_audit: explanation.

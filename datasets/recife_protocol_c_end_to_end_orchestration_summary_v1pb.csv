@@ -1,0 +1,7 @@
+metric,value,interpretation
+total_pipeline_steps,16,Scripts no pipeline Protocol C v1og-v1pa
+steps_with_outputs_present,16,Scripts cujos outputs existem e estao completos
+steps_partial,0,Scripts com outputs parciais
+steps_missing,0,Scripts com outputs ausentes
+orchestration_mode,check-only,Pipeline executado em modo check-only
+final_status,ORCHESTRATION_CHECK_READY,Status da orquestracao end-to-end

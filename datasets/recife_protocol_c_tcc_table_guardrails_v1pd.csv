@@ -1,0 +1,8 @@
+guardrail,status,evidence,tcc_sentence
+Sem ground truth operacional,PASS,ground_truth=true nao encontrado; can_be_used_as_ground_truth=false em todos os registros,Nenhum registro foi promovido a ground truth operacional em qualquer estagio do Protocolo C.
+Sem labels,PASS,labels_created=0; can_create_operational_label=false em todos os registros,Nenhum rotulo supervisionado foi criado; o pipeline opera em regime review-only.
+Sem targets de treinamento,PASS,training_targets_created=0; can_train_model=false em todos os registros,Nenhum target de treinamento foi gerado; DINOv2 nao e utilizado para classificacao supervisionada.
+DINO review-only,PASS,dino_allowed_use=REVIEW_ONLY_REPRESENTATION; dino_can_create_label=false; dino_target_field_created=false,"Os embeddings DINOv2 sao utilizados exclusivamente para representacao estrutural visual, sem derivacao de rotulos ou targets."
+Sem negativos formais,PASS,formal_negative_count=0; C4 permanece fechado,"Na ausencia de declaracao oficial de nao-ocorrencia, o nivel C4 permanece fechado."
+Sem C3+ sem data Sentinel,PASS,product_dates_confirmed_real=0; c3_plus_candidates=0,Nenhum candidato alcancou C3+ porque a resolucao temporal Sentinel nao confirmou nenhuma data de aquisicao (FAIL_CLOSED).
+Sem desbloqueio temporal sem produto,PASS,can_unlock_temporal=true: 0,Nenhum desbloqueio temporal ocorreu na ausencia de cadeia de proveniencia produto-patch confirmada.

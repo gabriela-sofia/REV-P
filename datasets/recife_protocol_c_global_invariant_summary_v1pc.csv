@@ -1,0 +1,7 @@
+metric,value,interpretation
+total_invariants_checked,64,Total de invariantes auditadas
+pass,64,Invariantes aprovadas
+warn,0,Avisos (nao-criticos)
+fail,0,Falhas
+critical,0,Falhas criticas
+final_status,GLOBAL_INVARIANTS_PASS,Status global de invariantes

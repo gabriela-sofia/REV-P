@@ -1,0 +1,8 @@
+metric,value,interpretation,status
+total_artifacts,37,Total de artefatos no bundle,INFO
+artifacts_present,37,Artefatos existentes prontos para commit,INFO
+artifacts_missing,0,Artefatos esperados mas ausentes,INFO
+invariant_audit_status,GLOBAL_INVARIANTS_PASS,Status da auditoria global de invariantes (v1pc),GLOBAL_INVARIANTS_PASS
+orchestration_status,ORCHESTRATION_CHECK_READY,Status da orquestracao end-to-end (v1pb),ORCHESTRATION_CHECK_READY
+commit_groups_recommended,3,"A: v1og-v1ot, B: v1ou-v1pa, C: v1pb-v1pf",INFO
+final_status,PROTOCOL_C_COMPLETE_READY_FOR_COMMIT,Status final do bundle Protocol C,PROTOCOL_C_COMPLETE_READY_FOR_COMMIT

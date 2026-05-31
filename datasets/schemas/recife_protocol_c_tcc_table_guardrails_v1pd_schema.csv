@@ -1,0 +1,5 @@
+field,description
+guardrail,v1pd_tcc_guardrails: guardrail.
+status,v1pd_tcc_guardrails: status.
+evidence,v1pd_tcc_guardrails: evidence.
+tcc_sentence,v1pd_tcc_guardrails: tcc_sentence.
