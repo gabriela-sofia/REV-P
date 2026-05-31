@@ -1,0 +1,15 @@
+field,description
+artifact_id,v1pa_manifest: artifact_id.
+artifact_path,v1pa_manifest: artifact_path.
+artifact_type,v1pa_manifest: artifact_type.
+stage,v1pa_manifest: stage.
+rows,v1pa_manifest: rows.
+columns,v1pa_manifest: columns.
+required_columns_present,v1pa_manifest: required_columns_present.
+header_present,v1pa_manifest: header_present.
+file_size_bytes,v1pa_manifest: file_size_bytes.
+sha256_16,v1pa_manifest: sha256_16.
+role_in_pipeline,v1pa_manifest: role_in_pipeline.
+can_affect_label,v1pa_manifest: can_affect_label.
+can_affect_training,v1pa_manifest: can_affect_training.
+notes,v1pa_manifest: notes.

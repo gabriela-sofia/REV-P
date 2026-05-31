@@ -1,0 +1,10 @@
+field,description
+check_id,v1pa_quality_checks: check_id.
+check_group,v1pa_quality_checks: check_group.
+artifact_path,v1pa_quality_checks: artifact_path.
+check_name,v1pa_quality_checks: check_name.
+status,v1pa_quality_checks: status.
+severity,v1pa_quality_checks: severity.
+observed_value,v1pa_quality_checks: observed_value.
+expected_value,v1pa_quality_checks: expected_value.
+explanation,v1pa_quality_checks: explanation.

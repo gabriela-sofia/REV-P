@@ -1,0 +1,18 @@
+summary_id,metric,value,interpretation,methodological_status,writing_use
+V1PA_S001,sources_scanned,330,Arquivos do repositório escaneados para candidatos a fontes externas,AUDITAVEL,metodologia_auditoria
+V1PA_S002,source_candidates_found,22,Candidatos a fontes/evidências permitidos para registro de eventos,AUDITAVEL,metodologia_auditoria
+V1PA_S003,observed_events_confirmed_review_only,0,Eventos com evidência suficiente para review-only confirmado,RESULTADO_FINAL,resultado_negativo_auditavel
+V1PA_S004,probable_events_review_only,0,Eventos com evidência provável mas não confirmada (review-only),RESULTADO_FINAL,resultado_negativo_auditavel
+V1PA_S005,contextual_only_evidence,2,Evidências apenas contextuais — sem confirmação institucional,RESULTADO_FINAL,resultado_negativo_auditavel
+V1PA_S006,blocked_insufficient_evidence,2,Candidatos bloqueados por evidência insuficiente,RESULTADO_FINAL,resultado_negativo_auditavel
+V1PA_S007,event_patch_linkages_total,12,Vínculos evento-patch gerados (todos contextual ou bloqueados),AUDITAVEL,metodologia_auditoria
+V1PA_S008,spatial_linkages_review_only,12,"Linkages espaciais (contextuais, sem temporal confirmado)",AUDITAVEL,metodologia_auditoria
+V1PA_S009,temporal_linkages_confirmed,0,Linkages temporais confirmados — 0 esperado dado TEMPORAL_RECOVERY_FAIL_CLOSED,RESULTADO_FINAL,resultado_negativo_auditavel
+V1PA_S010,c1_contextual,2,Candidatos C1 — evidência contextual apenas,RESULTADO_FINAL,resultado_negativo_auditavel
+V1PA_S011,c2_review_only,2,"Candidatos C2 — review-only, sem label",RESULTADO_FINAL,resultado_negativo_auditavel
+V1PA_S012,c3_plus_candidates,0,C3+ não alcançado — requer scene_date confirmada (product_dates_confirmed_real=0),RESULTADO_FINAL,resultado_negativo_auditavel
+V1PA_S013,c4_formal_negatives,0,Negativos formais para C4 — 0 esperado,RESULTADO_FINAL,resultado_negativo_auditavel
+V1PA_S014,dino_review_queue,2,"Entradas na fila DINO review-only (sem label, sem target)",AUDITAVEL,metodologia_auditoria
+V1PA_S015,labels_created,0,Labels operacionais criadas — 0 por design do protocolo,RESULTADO_FINAL,resultado_negativo_auditavel
+V1PA_S016,training_targets_created,0,Targets de treinamento criados — 0 por design do protocolo,RESULTADO_FINAL,resultado_negativo_auditavel
+V1PA_S017,final_status,OBSERVED_EVIDENCE_REVIEW_ONLY_FAIL_CLOSED,"Status final do bloco observacional: evidência em regime review-only/contextual, sem ground truth operacional estabelecido",RESULTADO_FINAL,conclusao_auditavel

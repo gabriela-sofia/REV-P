@@ -1,0 +1,11 @@
+stat_key,stat_value
+total_scored,4
+tier_strong_review_only,0
+tier_moderate_review_only,0
+tier_limited_contextual,2
+tier_contextual_gap,0
+tier_blocked,2
+can_promote_to_label_any,false
+can_train_model_any,false
+scoring_status,SCORED
+stage,v1ow

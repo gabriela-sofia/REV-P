@@ -1,0 +1,12 @@
+stat_key,stat_value
+total_decisions,6
+c1_contextual,2
+c2_review_only_candidate,2
+c3_plus_not_reached,true
+c3_plus_reason,TEMPORAL_RECOVERY_FAIL_CLOSED
+c4_closed,true
+c4_formal_negative_count,0
+scene_date_confirmed,false
+can_be_used_for_training_any,false
+can_create_operational_label_any,false
+stage,v1oy

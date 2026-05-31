@@ -1,0 +1,12 @@
+stat_key,stat_value
+total_events,4
+observed_event_confirmed_review_only,0
+observed_event_probable_review_only,0
+contextual_evidence_only,2
+blocked_insufficient_evidence,2
+can_be_used_as_ground_truth_any,false
+can_train_model_any,false
+can_create_operational_label_any,false
+v1ou_recife_sources_loaded,7
+registry_status,NO_OBSERVED_EVENT_CONFIRMED
+stage,v1ov

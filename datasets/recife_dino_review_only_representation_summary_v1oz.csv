@@ -1,0 +1,11 @@
+stat_key,stat_value
+total_queue_entries,2
+blocked_not_queued,4
+dino_allowed_use,REVIEW_ONLY_REPRESENTATION
+dino_can_create_label_any,false
+dino_can_train_model_any,false
+dino_target_field_created_any,false
+labels_created,0
+training_targets_created,0
+queue_status,DINO_QUEUE_POPULATED_REVIEW_ONLY
+stage,v1oz

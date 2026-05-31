@@ -1,0 +1,9 @@
+stat_key,stat_value
+total_linkage_rows,12
+temporal_recovery_status_v1ot,TEMPORAL_RECOVERY_FAIL_CLOSED
+spatial_contextual_linkages,12
+temporal_linkages_blocked,12
+temporal_linkages_confirmed,0
+can_create_label_any,false
+can_train_model_any,false
+stage,v1ox
