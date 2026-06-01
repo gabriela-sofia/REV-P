@@ -1,0 +1,7 @@
+row_id,indicator,value,scientific_reading,boundary
+V1QS_R01,Roots configurados existentes,0,Diretórios locais de assets disponíveis,representacao_visual_review_only_nao_valida_evento
+V1QS_R02,Imagens candidatas encontradas,0,Arquivos TIF/PNG locais visíveis ao pipeline,representacao_visual_review_only_nao_valida_evento
+V1QS_R03,Assets smoke reconciliados,0,Patches com arquivo local identificado,representacao_visual_review_only_nao_valida_evento
+V1QS_R04,Modelo local configurado,false,REVP_DINO_MODEL_PATH set e verificado,representacao_visual_review_only_nao_valida_evento
+V1QS_R05,Gates de prontidão aprovados,3/8,Critérios para execução smoke real satisfeitos,representacao_visual_review_only_nao_valida_evento
+V1QS_R06,Status final prontidão local,BLOCKED_MODEL_MISSING,Resultado auditável da etapa v1qn-v1qt,representacao_visual_review_only_nao_valida_evento

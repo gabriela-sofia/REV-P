@@ -1,0 +1,9 @@
+stat_key,stat_value
+smoke_rows,32
+assets_resolved,0
+assets_missing,32
+metadata_only,0
+preprocessing_ready,0
+unreadable,0
+pixel_read_allowed,false
+final_status,ASSET_MISSING_FAIL_CLOSED

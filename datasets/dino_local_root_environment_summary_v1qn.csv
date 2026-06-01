@@ -1,0 +1,15 @@
+stat_key,stat_value
+roots_configured,0
+roots_existing,0
+total_candidate_image_files,0
+model_path_set,false
+model_path_exists,false
+model_config_exists,false
+model_weights_exists,false
+model_allow_download,false
+hf_hub_offline,
+detected_hidden_size,
+model_type,
+labels_created,0
+targets_created,0
+final_status,LOCAL_ENV_ROOTS_MISSING_FAIL_CLOSED

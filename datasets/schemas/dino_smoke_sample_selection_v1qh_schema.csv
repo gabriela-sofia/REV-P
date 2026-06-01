@@ -1,0 +1,20 @@
+field,description
+smoke_id,v1qh_smoke_sample_selection: smoke_id.
+execution_queue_id,v1qh_smoke_sample_selection: execution_queue_id.
+visual_asset_id,v1qh_smoke_sample_selection: visual_asset_id.
+patch_id,v1qh_smoke_sample_selection: patch_id.
+alias,v1qh_smoke_sample_selection: alias.
+region,v1qh_smoke_sample_selection: region.
+relative_path,v1qh_smoke_sample_selection: relative_path.
+path_hash,v1qh_smoke_sample_selection: path_hash.
+visual_type,v1qh_smoke_sample_selection: visual_type.
+sample_rank,v1qh_smoke_sample_selection: sample_rank.
+selection_reason,v1qh_smoke_sample_selection: selection_reason.
+linkage_confidence,v1qh_smoke_sample_selection: linkage_confidence.
+dino_allowed_use,v1qh_smoke_sample_selection: dino_allowed_use.
+can_create_label,v1qh_smoke_sample_selection: can_create_label.
+can_train_model,v1qh_smoke_sample_selection: can_train_model.
+target_created,v1qh_smoke_sample_selection: target_created.
+selected_for_smoke,v1qh_smoke_sample_selection: selected_for_smoke.
+blocked_reason,v1qh_smoke_sample_selection: blocked_reason.
+notes,v1qh_smoke_sample_selection: notes.

@@ -1,0 +1,13 @@
+stat_key,stat_value
+valid_vectors,0
+neighbor_rows,0
+matrix_pairs,0
+pca_rows,0
+pca_method,NONE
+cluster_rows,0
+cluster_is_label,false
+similarity_validates_event,false
+pca_validates_event,false
+labels_created,0
+targets_created,0
+final_status,DINO_SMOKE_REVIEW_PRODUCTS_FAIL_CLOSED_N_LT_2

@@ -1,0 +1,13 @@
+field,description
+manifest_id,v1qj_smoke_embedding_execution_manifest: manifest_id.
+smoke_id,v1qj_smoke_embedding_execution_manifest: smoke_id.
+patch_id,v1qj_smoke_embedding_execution_manifest: patch_id.
+relative_path,v1qj_smoke_embedding_execution_manifest: relative_path.
+path_hash,v1qj_smoke_embedding_execution_manifest: path_hash.
+execution_mode,v1qj_smoke_embedding_execution_manifest: execution_mode.
+embedding_attempted,v1qj_smoke_embedding_execution_manifest: embedding_attempted.
+embedding_valid,v1qj_smoke_embedding_execution_manifest: embedding_valid.
+vector_norm,v1qj_smoke_embedding_execution_manifest: vector_norm.
+status,v1qj_smoke_embedding_execution_manifest: status.
+blocked_reason,v1qj_smoke_embedding_execution_manifest: blocked_reason.
+notes,v1qj_smoke_embedding_execution_manifest: notes.

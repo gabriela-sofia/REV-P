@@ -1,0 +1,16 @@
+summary_id,metric,value,interpretation,methodological_status,writing_use
+V1QM_S001,smoke_sample_selected,32,Patches selecionados para smoke embedding,AUDITAVEL,metodologia_auditoria
+V1QM_S002,local_model_status,LOCAL_DINO_MODEL_MISSING_FAIL_CLOSED,Status do modelo DINO local offline,RESULTADO_FINAL,resultado_negativo_auditavel
+V1QM_S003,assets_resolved,0,Assets visuais/TIF resolvidos localmente,RESULTADO_FINAL,resultado_negativo_auditavel
+V1QM_S004,assets_preprocessing_ready,0,Assets prontos para pré-processamento DINO,RESULTADO_FINAL,resultado_negativo_auditavel
+V1QM_S005,embeddings_valid_768d,0,Embeddings 768D válidos review-only gerados,RESULTADO_FINAL,resultado_negativo_auditavel
+V1QM_S006,similarity_neighbor_rows,0,Linhas de vizinhos cosine review-only,AUDITAVEL,metodologia_auditoria
+V1QM_S007,pca_projection_rows,0,Linhas de projeção PCA 2D exploratória,AUDITAVEL,metodologia_auditoria
+V1QM_S008,quality_checks_passed,14/14,Checagens de qualidade aprovadas,AUDITAVEL,metodologia_auditoria
+V1QM_S009,labels_created,0,Rótulos operacionais criados — 0 por design,RESULTADO_FINAL,resultado_negativo_auditavel
+V1QM_S010,targets_created,0,Targets de treinamento criados — 0 por design,RESULTADO_FINAL,resultado_negativo_auditavel
+V1QM_S011,ground_truth_created,0,Ground truth criado — 0 por design,RESULTADO_FINAL,resultado_negativo_auditavel
+V1QM_S012,similarity_validates_event,false,Similaridade não valida evento,RESULTADO_FINAL,resultado_negativo_auditavel
+V1QM_S013,pca_validates_event,false,PCA não valida evento,RESULTADO_FINAL,resultado_negativo_auditavel
+V1QM_S014,cluster_is_label,false,Clusters não são classe,RESULTADO_FINAL,resultado_negativo_auditavel
+V1QM_S015,final_status,DINO_SMOKE_EMBEDDINGS_MODEL_MISSING_FAIL_CLOSED,Status final do bloco smoke embedding,RESULTADO_FINAL,conclusao_auditavel

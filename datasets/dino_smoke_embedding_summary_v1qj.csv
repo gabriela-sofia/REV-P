@@ -1,0 +1,11 @@
+stat_key,stat_value
+execution_gate,DRY_RUN
+embeddings_valid_768d,0
+embeddings_failed,0
+embedding_dim,768
+l2_normalized,true
+dry_run,true
+pixel_read_allowed,false
+labels_created,0
+targets_created,0
+final_status,DINO_SMOKE_EMBEDDINGS_DRY_RUN_ONLY

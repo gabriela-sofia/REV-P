@@ -1,0 +1,8 @@
+check_id,check_name,expected,observed,passed,notes
+V1QT_QC_001,roots_configured,>=1,0,false,
+V1QT_QC_002,model_path_set,true,false,false,
+V1QT_QC_003,allow_download_false,false,false,true,
+V1QT_QC_004,labels_created_zero,0,0,true,
+V1QT_QC_005,targets_created_zero,0,0,true,
+V1QT_QC_006,no_abs_paths_in_outputs,true,enforced,true,
+V1QT_QC_007,readiness_gate_computed,not_MISSING,BLOCKED_MODEL_MISSING,true,

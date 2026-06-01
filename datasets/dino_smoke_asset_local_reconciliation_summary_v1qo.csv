@@ -1,0 +1,10 @@
+stat_key,stat_value
+smoke_rows,32
+exact_matches,0
+partial_matches,0
+unresolved,32
+roots_available,0
+candidate_rows,0
+labels_created,0
+targets_created,0
+final_status,SMOKE_ASSETS_UNRESOLVED_FAIL_CLOSED

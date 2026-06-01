@@ -1,0 +1,7 @@
+field,description
+artifact_id,v1qt_local_readiness_manifest: artifact_id.
+stage,v1qt_local_readiness_manifest: stage.
+filename,v1qt_local_readiness_manifest: filename.
+rows,v1qt_local_readiness_manifest: rows.
+header_present,v1qt_local_readiness_manifest: header_present.
+role,v1qt_local_readiness_manifest: role.

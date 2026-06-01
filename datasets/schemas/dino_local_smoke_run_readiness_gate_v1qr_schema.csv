@@ -1,0 +1,8 @@
+field,description
+gate_id,v1qr_local_smoke_run_readiness_gate: gate_id.
+gate_name,v1qr_local_smoke_run_readiness_gate: gate_name.
+required_value,v1qr_local_smoke_run_readiness_gate: required_value.
+observed_value,v1qr_local_smoke_run_readiness_gate: observed_value.
+passed,v1qr_local_smoke_run_readiness_gate: passed.
+blocking,v1qr_local_smoke_run_readiness_gate: blocking.
+notes,v1qr_local_smoke_run_readiness_gate: notes.

@@ -1,0 +1,8 @@
+field,description
+pair_id,v1ql_smoke_similarity_matrix_long: pair_id.
+embedding_id_a,v1ql_smoke_similarity_matrix_long: embedding_id_a.
+patch_id_a,v1ql_smoke_similarity_matrix_long: patch_id_a.
+embedding_id_b,v1ql_smoke_similarity_matrix_long: embedding_id_b.
+patch_id_b,v1ql_smoke_similarity_matrix_long: patch_id_b.
+cosine_similarity,v1ql_smoke_similarity_matrix_long: cosine_similarity.
+similarity_validates_event,v1ql_smoke_similarity_matrix_long: similarity_validates_event.

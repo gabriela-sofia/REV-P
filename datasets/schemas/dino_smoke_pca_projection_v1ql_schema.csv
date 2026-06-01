@@ -1,0 +1,13 @@
+field,description
+pca_id,v1ql_smoke_pca_projection: pca_id.
+embedding_id,v1ql_smoke_pca_projection: embedding_id.
+patch_id,v1ql_smoke_pca_projection: patch_id.
+region,v1ql_smoke_pca_projection: region.
+pc1,v1ql_smoke_pca_projection: pc1.
+pc2,v1ql_smoke_pca_projection: pc2.
+explained_variance_pc1,v1ql_smoke_pca_projection: explained_variance_pc1.
+explained_variance_pc2,v1ql_smoke_pca_projection: explained_variance_pc2.
+pca_method,v1ql_smoke_pca_projection: pca_method.
+pca_validates_event,v1ql_smoke_pca_projection: pca_validates_event.
+cluster_is_label,v1ql_smoke_pca_projection: cluster_is_label.
+can_create_label,v1ql_smoke_pca_projection: can_create_label.

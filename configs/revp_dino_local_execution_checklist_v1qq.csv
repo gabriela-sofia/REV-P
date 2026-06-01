@@ -1,0 +1,12 @@
+step_id,step_name,command_or_action,requires_manual,safety_note,expected_outcome,review_only
+V1QQ_STEP_01,set_model_path,"$env:REVP_DINO_MODEL_PATH = ""<ABSOLUTE_LOCAL_MODEL_PATH>""",true,Set to local DINOv2 model directory. Never commit this value.,see doc,true
+V1QQ_STEP_02,set_sentinel_root,"$env:REVP_SENTINEL_LOCAL_ROOT = ""<ABSOLUTE_LOCAL_SENTINEL_ROOT>""",true,Root directory containing Sentinel TIF files locally.,see doc,true
+V1QQ_STEP_03,lock_download,"$env:REVP_DINO_ALLOW_DOWNLOAD = ""false""",false,Never change to true — prevents accidental model downloads.,see doc,true
+V1QQ_STEP_04,enable_offline,"$env:HF_HUB_OFFLINE = ""1""",false,Force HuggingFace hub offline mode.,see doc,true
+V1QQ_STEP_05,run_v1qn,python scripts/dino/revp_v1qn_local_root_environment_audit.py,false,Audit local roots and model directory.,see doc,true
+V1QQ_STEP_06,run_v1qo,python scripts/dino/revp_v1qo_smoke_asset_local_reconciliation.py,false,Reconcile smoke sample with local files.,see doc,true
+V1QQ_STEP_07,run_v1qg,python scripts/dino/revp_v1qg_local_dino_model_offline_audit.py,false,Verify model config/weights without loading.,see doc,true
+V1QQ_STEP_08,run_v1qi,python scripts/dino/revp_v1qi_local_asset_preprocessing_audit.py,false,Audit local asset metadata (no pixel read unless env set).,see doc,true
+V1QQ_STEP_09,dry_run_v1qj,python scripts/dino/revp_v1qj_controlled_real_smoke_embedding_executor.py,false,Dry-run by default. Review outputs before enabling real execution.,see doc,true
+V1QQ_STEP_10,enable_real_execution_manual,"# MANUAL: $env:REVP_DINO_DRY_RUN = ""false""  # Only after reviewing all gate outputs",true,Enable real embedding execution ONLY after all gates pass. Manual step.,see doc,true
+V1QQ_STEP_11,enable_pixel_read_manual,"# MANUAL: $env:REVP_DINO_PIXEL_READ_ALLOWED = ""true""  # Required for real execution",true,Enable pixel reading ONLY for real execution run. Manual step.,see doc,true

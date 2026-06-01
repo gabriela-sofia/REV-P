@@ -1,0 +1,7 @@
+stat_key,stat_value
+gates_total,8
+gates_passed,3
+gates_failed,5
+labels_created,0
+targets_created,0
+final_status,BLOCKED_MODEL_MISSING

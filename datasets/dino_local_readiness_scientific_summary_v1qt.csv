@@ -1,0 +1,13 @@
+summary_id,metric,value,interpretation,methodological_status,writing_use
+V1QT_S001,roots_configured,0,Roots locais configurados e existentes,AUDITAVEL,metodologia_auditoria
+V1QT_S002,model_path_configured,false,REVP_DINO_MODEL_PATH set,RESULTADO_FINAL,resultado_negativo_auditavel
+V1QT_S003,model_ready,false,Modelo local acessível (config+pesos),RESULTADO_FINAL,resultado_negativo_auditavel
+V1QT_S004,smoke_sample_rows,32,Linhas da amostra smoke,RESULTADO_FINAL,resultado_negativo_auditavel
+V1QT_S005,assets_reconciled,0,Assets smoke com correspondência local,RESULTADO_FINAL,resultado_negativo_auditavel
+V1QT_S006,assets_unresolved,32,Assets smoke sem correspondência local,RESULTADO_FINAL,resultado_negativo_auditavel
+V1QT_S007,readiness_gate_status,BLOCKED_MODEL_MISSING,Status do gate de prontidão v1qr,RESULTADO_FINAL,resultado_negativo_auditavel
+V1QT_S008,quality_checks_passed,5/7,QC passados,AUDITAVEL,metodologia_auditoria
+V1QT_S009,labels_created,0,Rótulos criados — 0 por design,RESULTADO_FINAL,resultado_negativo_auditavel
+V1QT_S010,targets_created,0,Targets criados — 0 por design,RESULTADO_FINAL,resultado_negativo_auditavel
+V1QT_S011,ground_truth_created,0,Ground truth criado — 0 por design,RESULTADO_FINAL,resultado_negativo_auditavel
+V1QT_S012,final_status,LOCAL_DINO_READINESS_MODEL_MISSING_FAIL_CLOSED,Status final do bloco local readiness,RESULTADO_FINAL,resultado_negativo_auditavel

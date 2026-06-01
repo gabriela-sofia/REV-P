@@ -1,0 +1,11 @@
+field,description
+cluster_row_id,v1ql_smoke_exploratory_clusters: cluster_row_id.
+embedding_id,v1ql_smoke_exploratory_clusters: embedding_id.
+patch_id,v1ql_smoke_exploratory_clusters: patch_id.
+region,v1ql_smoke_exploratory_clusters: region.
+cluster_index,v1ql_smoke_exploratory_clusters: cluster_index.
+cluster_is_label,v1ql_smoke_exploratory_clusters: cluster_is_label.
+similarity_validates_event,v1ql_smoke_exploratory_clusters: similarity_validates_event.
+can_create_label,v1ql_smoke_exploratory_clusters: can_create_label.
+can_train_model,v1ql_smoke_exploratory_clusters: can_train_model.
+target_created,v1ql_smoke_exploratory_clusters: target_created.

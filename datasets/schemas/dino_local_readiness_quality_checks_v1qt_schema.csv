@@ -1,0 +1,7 @@
+field,description
+check_id,v1qt_local_readiness_quality_checks: check_id.
+check_name,v1qt_local_readiness_quality_checks: check_name.
+expected,v1qt_local_readiness_quality_checks: expected.
+observed,v1qt_local_readiness_quality_checks: observed.
+passed,v1qt_local_readiness_quality_checks: passed.
+notes,v1qt_local_readiness_quality_checks: notes.

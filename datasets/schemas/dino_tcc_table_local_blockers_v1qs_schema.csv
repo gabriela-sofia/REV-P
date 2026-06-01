@@ -1,0 +1,7 @@
+field,description
+blocker_id,v1qs_tcc_table_local_blockers: blocker_id.
+blocker_name,v1qs_tcc_table_local_blockers: blocker_name.
+current_status,v1qs_tcc_table_local_blockers: current_status.
+action_required,v1qs_tcc_table_local_blockers: action_required.
+impact_on_tcc,v1qs_tcc_table_local_blockers: impact_on_tcc.
+review_only,v1qs_tcc_table_local_blockers: review_only.

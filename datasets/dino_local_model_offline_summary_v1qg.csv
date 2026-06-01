@@ -1,0 +1,13 @@
+stat_key,stat_value
+model_path_set,false
+model_path_exists,false
+config_exists,false
+weights_exists,false
+transformers_available,true
+torch_available,true
+offline_mode,false
+allow_download,false
+expected_dim,768
+detected_dim,0
+model_ready,false
+final_status,LOCAL_DINO_MODEL_MISSING_FAIL_CLOSED

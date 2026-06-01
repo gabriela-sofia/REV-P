@@ -1,0 +1,5 @@
+audit_id,env_var,configured,path_exists,candidate_files_tif,candidate_files_png,candidate_files_all_image,path_hash,role,notes
+V1QN_ROOT_01,REVP_SENTINEL_LOCAL_ROOT,false,false,0,0,0,,sentinel_tif_root,
+V1QN_ROOT_02,REVP_DINO_VISUAL_ROOT,false,false,0,0,0,,visual_asset_root,
+V1QN_ROOT_03,REVP_DINO_ASSET_ROOT,false,false,0,0,0,,generic_asset_root,
+V1QN_ROOT_04,REVP_DINO_SOURCE_ROOT,false,false,0,0,0,,embedding_source_root,

@@ -1,0 +1,11 @@
+stat_key,stat_value
+total_suggestions,64
+type_add_local_root,0
+type_fix_relative_path,32
+type_missing_local_file,0
+type_no_action_ready,0
+type_review_patch_alias,32
+type_review_region_mismatch,0
+labels_created,0
+targets_created,0
+final_status,CROSSWALK_REPAIR_SUGGESTIONS_GENERATED

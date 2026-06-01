@@ -1,0 +1,4 @@
+blocker_id,blocker_name,current_status,action_required,impact_on_tcc,review_only
+V1QS_BK01,model_path_not_set,MISSING,Set REVP_DINO_MODEL_PATH to local DINOv2 dir,"sem modelo local, embedding real impossível",true
+V1QS_BK02,unresolved_assets,unresolved=32,Set REVP_SENTINEL_LOCAL_ROOT with TIF location,"sem TIFs locais, embedding real impossível",true
+V1QS_BK03,no_local_roots,MISSING,Configure at least one REVP_*_LOCAL_ROOT env var,"sem roots, resolução de assets impossível",true

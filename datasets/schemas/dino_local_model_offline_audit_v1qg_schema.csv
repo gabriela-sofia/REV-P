@@ -1,0 +1,18 @@
+field,description
+check_id,v1qg_local_model_offline_audit: check_id.
+model_path_hash,v1qg_local_model_offline_audit: model_path_hash.
+model_source,v1qg_local_model_offline_audit: model_source.
+model_path_exists,v1qg_local_model_offline_audit: model_path_exists.
+config_exists,v1qg_local_model_offline_audit: config_exists.
+weights_exists,v1qg_local_model_offline_audit: weights_exists.
+processor_exists,v1qg_local_model_offline_audit: processor_exists.
+transformers_available,v1qg_local_model_offline_audit: transformers_available.
+torch_available,v1qg_local_model_offline_audit: torch_available.
+offline_mode,v1qg_local_model_offline_audit: offline_mode.
+allow_download,v1qg_local_model_offline_audit: allow_download.
+expected_dim,v1qg_local_model_offline_audit: expected_dim.
+detected_dim,v1qg_local_model_offline_audit: detected_dim.
+model_ready,v1qg_local_model_offline_audit: model_ready.
+status,v1qg_local_model_offline_audit: status.
+blocked_reason,v1qg_local_model_offline_audit: blocked_reason.
+notes,v1qg_local_model_offline_audit: notes.

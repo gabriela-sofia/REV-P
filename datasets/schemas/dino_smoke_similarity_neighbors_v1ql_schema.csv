@@ -1,0 +1,14 @@
+field,description
+neighbor_id,v1ql_smoke_similarity_neighbors: neighbor_id.
+source_embedding_id,v1ql_smoke_similarity_neighbors: source_embedding_id.
+source_patch_id,v1ql_smoke_similarity_neighbors: source_patch_id.
+source_region,v1ql_smoke_similarity_neighbors: source_region.
+neighbor_embedding_id,v1ql_smoke_similarity_neighbors: neighbor_embedding_id.
+neighbor_patch_id,v1ql_smoke_similarity_neighbors: neighbor_patch_id.
+neighbor_region,v1ql_smoke_similarity_neighbors: neighbor_region.
+rank,v1ql_smoke_similarity_neighbors: rank.
+cosine_similarity,v1ql_smoke_similarity_neighbors: cosine_similarity.
+similarity_validates_event,v1ql_smoke_similarity_neighbors: similarity_validates_event.
+cluster_is_label,v1ql_smoke_similarity_neighbors: cluster_is_label.
+can_create_label,v1ql_smoke_similarity_neighbors: can_create_label.
+can_train_model,v1ql_smoke_similarity_neighbors: can_train_model.

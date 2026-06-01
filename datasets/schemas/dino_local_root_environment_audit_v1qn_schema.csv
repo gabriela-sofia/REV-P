@@ -1,0 +1,11 @@
+field,description
+audit_id,v1qn_local_root_environment_audit: audit_id.
+env_var,v1qn_local_root_environment_audit: env_var.
+configured,v1qn_local_root_environment_audit: configured.
+path_exists,v1qn_local_root_environment_audit: path_exists.
+candidate_files_tif,v1qn_local_root_environment_audit: candidate_files_tif.
+candidate_files_png,v1qn_local_root_environment_audit: candidate_files_png.
+candidate_files_all_image,v1qn_local_root_environment_audit: candidate_files_all_image.
+path_hash,v1qn_local_root_environment_audit: path_hash.
+role,v1qn_local_root_environment_audit: role.
+notes,v1qn_local_root_environment_audit: notes.

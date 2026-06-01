@@ -1,0 +1,6 @@
+field,description
+row_id,v1qs_tcc_table_local_readiness: row_id.
+indicator,v1qs_tcc_table_local_readiness: indicator.
+value,v1qs_tcc_table_local_readiness: value.
+scientific_reading,v1qs_tcc_table_local_readiness: scientific_reading.
+boundary,v1qs_tcc_table_local_readiness: boundary.

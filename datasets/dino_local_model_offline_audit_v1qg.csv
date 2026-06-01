@@ -1,0 +1,2 @@
+check_id,model_path_hash,model_source,model_path_exists,config_exists,weights_exists,processor_exists,transformers_available,torch_available,offline_mode,allow_download,expected_dim,detected_dim,model_ready,status,blocked_reason,notes
+V1QG_CHK_00001,,NONE,false,false,false,false,true,true,false,false,768,0,false,LOCAL_DINO_MODEL_MISSING_FAIL_CLOSED,model_path_missing_or_unset,arch=unknown;config_loadable=false

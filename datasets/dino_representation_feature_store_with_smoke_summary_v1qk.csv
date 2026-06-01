@@ -1,0 +1,12 @@
+stat_key,stat_value
+input_rows,0
+valid_vectors,0
+invalid_vectors,0
+duplicate_vectors,0
+unique_valid_vectors,0
+embedding_dim,768
+cluster_is_label,false
+labels_created,0
+targets_created,0
+c3_c4_called,false
+final_status,DINO_REPRESENTATION_WITH_SMOKE_EMPTY_FAIL_CLOSED

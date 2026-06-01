@@ -1,0 +1,13 @@
+stat_key,stat_value
+queue_rows_read,100
+eligible_rows,98
+blocked_fixture_or_guardrail,2
+selected_smoke_rows,32
+smoke_n_target,32
+min_per_region,4
+selected_region_CUR,24
+selected_region_PET,4
+selected_region_REC,4
+labels_created,0
+targets_created,0
+final_status,DINO_SMOKE_SAMPLE_READY

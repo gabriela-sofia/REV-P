@@ -1,0 +1,9 @@
+gate_id,gate_name,required_value,observed_value,passed,blocking,notes
+G01,model_local_ready,true,false,false,true,
+G02,allow_download_false,false,false,true,true,
+G03,hf_hub_offline,1_or_na,false,false,true,
+G04,embedding_dim_768,768,0,true,true,
+G05,assets_reconciled_2+,>=2,0,false,true,
+G06,pixel_read_allowed,true,false,false,true,
+G07,dry_run_disabled,false,true,false,true,
+G08,labels_created_zero,0,0,true,false,
