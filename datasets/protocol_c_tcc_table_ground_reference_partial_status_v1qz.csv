@@ -1,0 +1,11 @@
+metric,value,interpretation_note
+source_requirements_total,18,requisitos de fonte externa definidos
+source_requirements_missing,8,fontes nao locais a coletar manualmente
+review_samples,8,unidades sorteadas para revisao dupla
+double_review_packets,16,pacotes A/B gerados
+completed_reviews,0,reviews humanos concluidos e pontuados
+c3_candidates_need_supervisor,0,candidatos C3 que exigem supervisor
+c4_formal_negatives,0,fechado sem fonte formal negativa
+labels_created,0,nenhum label operacional
+ground_truth_operational,0,nenhum ground truth operacional
+final_status,GROUND_REFERENCE_REVIEW_NOT_COMPLETED_FAIL_CLOSED,estado fail-closed do workbench

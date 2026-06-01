@@ -1,0 +1,13 @@
+field,description
+priority_id,v1qz_priorities: priority_id.
+region,v1qz_priorities: region.
+hazard_type,v1qz_priorities: hazard_type.
+evidence_need,v1qz_priorities: evidence_need.
+preferred_source_family,v1qz_priorities: preferred_source_family.
+preferred_source_name,v1qz_priorities: preferred_source_name.
+source_priority,v1qz_priorities: source_priority.
+collection_status,v1qz_priorities: collection_status.
+blocks_c3,v1qz_priorities: blocks_c3.
+blocks_c4,v1qz_priorities: blocks_c4.
+review_only,v1qz_priorities: review_only.
+notes,v1qz_priorities: notes.

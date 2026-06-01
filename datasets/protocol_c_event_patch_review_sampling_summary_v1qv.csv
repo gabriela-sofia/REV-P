@@ -1,0 +1,10 @@
+stat_key,stat_value
+frame_size,8
+sample_size,8
+sample_n_requested,24
+min_per_region,4
+blocked_controls_in_sample,8
+c2_in_sample,0
+dino_queue_in_sample,0
+sample_region_recife,8
+stage,v1qv

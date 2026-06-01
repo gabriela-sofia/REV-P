@@ -1,0 +1,6 @@
+artifact_id,stage,artifact_name,row_count,artifact_role,notes
+V1QZ_A01,v1qu,protocol_c_official_evidence_source_requirements_v1qu.csv,18,source_requirements,
+V1QZ_A02,v1qv,protocol_c_event_patch_review_sample_v1qv.csv,8,review_sample,
+V1QZ_A03,v1qw,protocol_c_double_review_packet_manifest_v1qw.csv,16,double_review_packets,
+V1QZ_A04,v1qx,protocol_c_observational_evidence_scores_v1qx.csv,0,observational_scores,
+V1QZ_A05,v1qy,protocol_c_ground_reference_adjudication_registry_v1qy.csv,0,adjudication,

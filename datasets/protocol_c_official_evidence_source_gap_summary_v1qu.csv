@@ -1,0 +1,10 @@
+stat_key,stat_value
+total_requirements,18
+source_required_not_local,8
+source_partially_local,10
+requirements_blocking_c3,12
+region_curitiba,6
+region_pet,6
+region_recife,6
+stage,v1qu
+scan_status,NO_INTERNET_NO_DOWNLOAD

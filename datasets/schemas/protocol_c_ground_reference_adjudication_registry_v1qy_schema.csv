@@ -1,0 +1,24 @@
+field,description
+adjudication_id,v1qy_adjudication: adjudication_id.
+review_sample_id,v1qy_adjudication: review_sample_id.
+event_id,v1qy_adjudication: event_id.
+patch_id,v1qy_adjudication: patch_id.
+region,v1qy_adjudication: region.
+input_decision,v1qy_adjudication: input_decision.
+composite_observational_score,v1qy_adjudication: composite_observational_score.
+temporal_precision_score,v1qy_adjudication: temporal_precision_score.
+spatial_precision_score,v1qy_adjudication: spatial_precision_score.
+source_reliability_score,v1qy_adjudication: source_reliability_score.
+adjudication_decision,v1qy_adjudication: adjudication_decision.
+supervisor_review_required,v1qy_adjudication: supervisor_review_required.
+formal_negative,v1qy_adjudication: formal_negative.
+blocked_reason,v1qy_adjudication: blocked_reason.
+adjudication_rationale,v1qy_adjudication: adjudication_rationale.
+review_only,v1qy_adjudication: review_only.
+dino_validates_event,v1qy_adjudication: dino_validates_event.
+can_create_operational_label,v1qy_adjudication: can_create_operational_label.
+can_train_model,v1qy_adjudication: can_train_model.
+target_created,v1qy_adjudication: target_created.
+ground_truth_operational,v1qy_adjudication: ground_truth_operational.
+absence_as_negative,v1qy_adjudication: absence_as_negative.
+notes,v1qy_adjudication: notes.

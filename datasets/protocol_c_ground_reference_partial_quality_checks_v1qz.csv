@@ -1,0 +1,15 @@
+check_id,check_name,expected,observed,passed,severity,notes
+QC01,labels_created,0,0,true,critical,
+QC02,targets_created,0,0,true,critical,
+QC03,ground_truth_operational,0,0,true,critical,
+QC04,formal_negative_count,0,0,true,critical,
+QC05,forbidden_true_fields,0,0,true,critical,
+QC06,absolute_paths,0,0,true,critical,
+QC07,localrun_path_exposure,0,0,true,critical,
+QC08,c3_candidates_require_supervisor,0_missing,0,true,critical,
+QC09,packets_have_ab_slots,true,true,true,high,
+QC10,blocked_rows_have_reason,0_missing,0,true,high,
+QC11,c4_blocked_without_formal_source,true,true,true,critical,
+QC12,no_dino_as_proof,true,true,true,critical,dino_validates_event=false everywhere
+QC13,no_absence_as_negative,true,true,true,critical,absence_as_negative=false everywhere
+QC14,collection_priorities_present,>=1,8,true,medium,

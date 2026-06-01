@@ -1,0 +1,21 @@
+field,description
+frame_id,v1qv_frame: frame_id.
+event_id,v1qv_frame: event_id.
+patch_id,v1qv_frame: patch_id.
+alias,v1qv_frame: alias.
+region,v1qv_frame: region.
+hazard_type,v1qv_frame: hazard_type.
+evidence_status,v1qv_frame: evidence_status.
+temporal_status,v1qv_frame: temporal_status.
+spatial_status,v1qv_frame: spatial_status.
+dino_queue_status,v1qv_frame: dino_queue_status.
+source_requirement_status,v1qv_frame: source_requirement_status.
+sampling_stratum,v1qv_frame: sampling_stratum.
+frame_priority,v1qv_frame: frame_priority.
+review_only,v1qv_frame: review_only.
+dino_validates_event,v1qv_frame: dino_validates_event.
+can_create_operational_label,v1qv_frame: can_create_operational_label.
+can_train_model,v1qv_frame: can_train_model.
+target_created,v1qv_frame: target_created.
+ground_truth_operational,v1qv_frame: ground_truth_operational.
+notes,v1qv_frame: notes.

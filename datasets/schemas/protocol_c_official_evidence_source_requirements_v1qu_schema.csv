@@ -1,0 +1,22 @@
+field,description
+requirement_id,v1qu_source_requirements: requirement_id.
+region,v1qu_source_requirements: region.
+hazard_type,v1qu_source_requirements: hazard_type.
+evidence_need,v1qu_source_requirements: evidence_need.
+preferred_source_family,v1qu_source_requirements: preferred_source_family.
+preferred_source_name,v1qu_source_requirements: preferred_source_name.
+source_priority,v1qu_source_requirements: source_priority.
+expected_evidence_type,v1qu_source_requirements: expected_evidence_type.
+temporal_precision_needed,v1qu_source_requirements: temporal_precision_needed.
+spatial_precision_needed,v1qu_source_requirements: spatial_precision_needed.
+license_or_access_note,v1qu_source_requirements: license_or_access_note.
+collection_action,v1qu_source_requirements: collection_action.
+collection_status,v1qu_source_requirements: collection_status.
+blocks_c3,v1qu_source_requirements: blocks_c3.
+blocks_c4,v1qu_source_requirements: blocks_c4.
+review_only,v1qu_source_requirements: review_only.
+can_create_operational_label,v1qu_source_requirements: can_create_operational_label.
+can_train_model,v1qu_source_requirements: can_train_model.
+target_created,v1qu_source_requirements: target_created.
+ground_truth_operational,v1qu_source_requirements: ground_truth_operational.
+notes,v1qu_source_requirements: notes.

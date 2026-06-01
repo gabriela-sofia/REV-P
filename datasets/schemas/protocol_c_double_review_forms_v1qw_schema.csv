@@ -1,0 +1,12 @@
+field,description
+form_id,v1qw_forms: form_id.
+packet_id,v1qw_forms: packet_id.
+review_sample_id,v1qw_forms: review_sample_id.
+reviewer_slot,v1qw_forms: reviewer_slot.
+question_key,v1qw_forms: question_key.
+question_text,v1qw_forms: question_text.
+answer_placeholder,v1qw_forms: answer_placeholder.
+response_value,v1qw_forms: response_value.
+review_only,v1qw_forms: review_only.
+dino_validates_event,v1qw_forms: dino_validates_event.
+notes,v1qw_forms: notes.

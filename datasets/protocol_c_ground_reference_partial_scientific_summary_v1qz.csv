@@ -1,0 +1,16 @@
+stat_key,stat_value
+source_requirements_total,18
+source_requirements_missing,8
+review_samples,8
+double_review_packets,16
+completed_reviews,0
+disagreement_cases,0
+c3_candidates_need_supervisor,0
+c4_formal_negatives,0
+labels_created,0
+targets_created,0
+ground_truth_operational,0
+qc_checks,14
+qc_failed,0
+final_status,GROUND_REFERENCE_REVIEW_NOT_COMPLETED_FAIL_CLOSED
+stage,v1qz

@@ -1,0 +1,22 @@
+field,description
+review_sample_id,v1qv_sample: review_sample_id.
+event_id,v1qv_sample: event_id.
+patch_id,v1qv_sample: patch_id.
+alias,v1qv_sample: alias.
+region,v1qv_sample: region.
+hazard_type,v1qv_sample: hazard_type.
+evidence_status,v1qv_sample: evidence_status.
+temporal_status,v1qv_sample: temporal_status.
+spatial_status,v1qv_sample: spatial_status.
+dino_queue_status,v1qv_sample: dino_queue_status.
+source_requirement_status,v1qv_sample: source_requirement_status.
+sampling_stratum,v1qv_sample: sampling_stratum.
+sample_priority,v1qv_sample: sample_priority.
+sample_reason,v1qv_sample: sample_reason.
+review_only,v1qv_sample: review_only.
+dino_validates_event,v1qv_sample: dino_validates_event.
+can_create_operational_label,v1qv_sample: can_create_operational_label.
+can_train_model,v1qv_sample: can_train_model.
+target_created,v1qv_sample: target_created.
+ground_truth_operational,v1qv_sample: ground_truth_operational.
+notes,v1qv_sample: notes.

@@ -1,0 +1,25 @@
+field,description
+score_id,v1qx_scores: score_id.
+review_sample_id,v1qx_scores: review_sample_id.
+event_id,v1qx_scores: event_id.
+patch_id,v1qx_scores: patch_id.
+region,v1qx_scores: region.
+source_reliability_score,v1qx_scores: source_reliability_score.
+temporal_precision_score,v1qx_scores: temporal_precision_score.
+spatial_precision_score,v1qx_scores: spatial_precision_score.
+provenance_score,v1qx_scores: provenance_score.
+independence_score,v1qx_scores: independence_score.
+review_agreement_score,v1qx_scores: review_agreement_score.
+composite_observational_score,v1qx_scores: composite_observational_score.
+disagreement_flag,v1qx_scores: disagreement_flag.
+disagreement_type,v1qx_scores: disagreement_type.
+scoring_status,v1qx_scores: scoring_status.
+recommended_protocol_c_decision,v1qx_scores: recommended_protocol_c_decision.
+review_only,v1qx_scores: review_only.
+dino_validates_event,v1qx_scores: dino_validates_event.
+can_create_operational_label,v1qx_scores: can_create_operational_label.
+can_train_model,v1qx_scores: can_train_model.
+target_created,v1qx_scores: target_created.
+ground_truth_operational,v1qx_scores: ground_truth_operational.
+blocked_reason,v1qx_scores: blocked_reason.
+notes,v1qx_scores: notes.

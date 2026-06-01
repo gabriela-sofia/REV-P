@@ -1,0 +1,19 @@
+field,description
+packet_id,v1qw_manifest: packet_id.
+review_sample_id,v1qw_manifest: review_sample_id.
+reviewer_slot,v1qw_manifest: reviewer_slot.
+event_id,v1qw_manifest: event_id.
+patch_id,v1qw_manifest: patch_id.
+alias,v1qw_manifest: alias.
+region,v1qw_manifest: region.
+hazard_type,v1qw_manifest: hazard_type.
+evidence_status,v1qw_manifest: evidence_status.
+dino_queue_status,v1qw_manifest: dino_queue_status.
+packet_status,v1qw_manifest: packet_status.
+review_only,v1qw_manifest: review_only.
+dino_validates_event,v1qw_manifest: dino_validates_event.
+can_create_operational_label,v1qw_manifest: can_create_operational_label.
+can_train_model,v1qw_manifest: can_train_model.
+target_created,v1qw_manifest: target_created.
+ground_truth_operational,v1qw_manifest: ground_truth_operational.
+notes,v1qw_manifest: notes.

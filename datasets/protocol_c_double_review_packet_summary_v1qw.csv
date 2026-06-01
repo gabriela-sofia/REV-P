@@ -1,0 +1,8 @@
+stat_key,stat_value
+review_samples,8
+packets_generated,16
+reviewers_per_sample,2
+forms_generated,144
+questions_per_form,9
+ab_balanced,true
+stage,v1qw

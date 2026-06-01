@@ -1,0 +1,8 @@
+field,description
+check_id,v1qz_qc: check_id.
+check_name,v1qz_qc: check_name.
+expected,v1qz_qc: expected.
+observed,v1qz_qc: observed.
+passed,v1qz_qc: passed.
+severity,v1qz_qc: severity.
+notes,v1qz_qc: notes.
