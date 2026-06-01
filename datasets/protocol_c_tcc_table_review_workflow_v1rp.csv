@@ -1,0 +1,7 @@
+workflow_stage,metric,value,interpretation_note
+v1qv_sampling,review_samples,8,amostra de revisao
+v1qz_partial,completed_reviews,0,reviews concluidos (P0)
+v1rm_gate,completed_double_reviews,0,revisoes duplas completas (P2)
+v1rm_gate,supervisor_packets,0,pacotes para supervisor
+v1rm_gate,c3_reference_candidates_review_only,0,candidatos C3 review-only
+v1rm_gate,final_status,REVIEW_SUPERVISOR_GATE_WAITING_MANUAL_RESPONSES,estado do gate

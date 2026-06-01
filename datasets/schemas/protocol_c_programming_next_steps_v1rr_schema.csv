@@ -1,0 +1,12 @@
+field,description
+step_id,v1rr_steps: step_id.
+priority,v1rr_steps: priority.
+module_scope,v1rr_steps: module_scope.
+next_script_range,v1rr_steps: next_script_range.
+objective,v1rr_steps: objective.
+required_inputs,v1rr_steps: required_inputs.
+expected_outputs,v1rr_steps: expected_outputs.
+risk,v1rr_steps: risk.
+model_recommendation,v1rr_steps: model_recommendation.
+done_when,v1rr_steps: done_when.
+notes,v1rr_steps: notes.

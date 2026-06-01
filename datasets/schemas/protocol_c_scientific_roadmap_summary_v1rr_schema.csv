@@ -1,0 +1,7 @@
+field,description
+summary_id,v1rr_summary: summary_id.
+metric,v1rr_summary: metric.
+value,v1rr_summary: value.
+interpretation,v1rr_summary: interpretation.
+methodological_status,v1rr_summary: methodological_status.
+writing_use,v1rr_summary: writing_use.

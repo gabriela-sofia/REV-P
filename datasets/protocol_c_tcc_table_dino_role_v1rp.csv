@@ -1,0 +1,5 @@
+dino_aspect,value,interpretation_note
+dino_review_queue_rows,2,fila de representacao review-only
+dino_validates_event,false,DINO nunca valida evento
+dino_can_create_label,false,DINO nunca cria label
+dino_role,REVIEW_ONLY_PRIORITIZATION,DINO apenas prioriza revisao

@@ -1,0 +1,8 @@
+stat_key,stat_value
+backlog_items,10
+items_blocking_c3,10
+p0_items,5
+blocker_double_review_not_completed,1
+blocker_external_documents_not_intaken,1
+blocker_external_source_not_local,8
+stage,v1ro

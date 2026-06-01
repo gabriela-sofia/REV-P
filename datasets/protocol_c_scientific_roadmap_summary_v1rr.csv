@@ -1,0 +1,16 @@
+summary_id,metric,value,interpretation,methodological_status,writing_use
+V1RR_S01,p0_status,GROUND_REFERENCE_REVIEW_NOT_COMPLETED_FAIL_CLOSED,estado do partial validation workbench,REVIEW_ONLY,tcc_results
+V1RR_S02,p1_status,EXTERNAL_INTAKE_TASK_BOARD_READY,estado do intake externo,REVIEW_ONLY,tcc_results
+V1RR_S03,p2_status,REVIEW_SUPERVISOR_GATE_WAITING_MANUAL_RESPONSES,estado do gate de revisao/supervisor,REVIEW_ONLY,tcc_results
+V1RR_S04,p3_claims_audit_status,CLAIMS_AUDIT_CLEAN,auditoria metodologica,GUARDRAIL,tcc_results
+V1RR_S05,source_requirements_missing,8,fontes externas a coletar,REVIEW_ONLY,methods
+V1RR_S06,external_collection_tasks,8,tarefas de coleta externa,REVIEW_ONLY,methods
+V1RR_S07,review_packets,16,pacotes A/B disponiveis,REVIEW_ONLY,methods
+V1RR_S08,completed_reviews,0,revisoes duplas completas,REVIEW_ONLY,results
+V1RR_S09,supervisor_packets,0,pacotes para supervisor,REVIEW_ONLY,results
+V1RR_S10,c3_candidates_review_only,0,candidatos C3 review-only,REVIEW_ONLY,results
+V1RR_S11,c4_formal_negatives,0,nenhum negativo formal por ausencia,GUARDRAIL,results
+V1RR_S12,labels_created,0,nenhum label operacional,GUARDRAIL,results
+V1RR_S13,targets_created,0,nenhum target supervisionado,GUARDRAIL,results
+V1RR_S14,ground_truth_operational_created,0,nenhum ground truth operacional,GUARDRAIL,results
+V1RR_S15,final_scientific_status,REV_P_WAITING_EXTERNAL_DOCUMENT_INTAKE,estado cientifico consolidado,REVIEW_ONLY,discussion

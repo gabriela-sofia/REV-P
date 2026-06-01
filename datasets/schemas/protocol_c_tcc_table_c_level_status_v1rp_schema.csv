@@ -1,0 +1,5 @@
+field,description
+c_level,v1rp_c_level: c_level.
+count,v1rp_c_level: count.
+is_operational_label,v1rp_c_level: is_operational_label.
+interpretation_note,v1rp_c_level: interpretation_note.

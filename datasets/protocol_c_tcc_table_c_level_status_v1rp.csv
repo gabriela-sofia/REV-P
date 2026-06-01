@@ -1,0 +1,5 @@
+c_level,count,is_operational_label,interpretation_note
+C1_CONTEXTUAL_ONLY,0,false,evidencia contextual
+C2_REVIEW_ONLY_CANDIDATE,0,false,candidato review-only
+C3_REFERENCE_CANDIDATE_NEEDS_SUPERVISOR,0,false,candidato C3 review-only (exige supervisor)
+C4_NEGATIVE_BLOCKED,0,false,negativo formal fechado

@@ -1,0 +1,5 @@
+field,description
+workflow_stage,v1rp_workflow: workflow_stage.
+metric,v1rp_workflow: metric.
+value,v1rp_workflow: value.
+interpretation_note,v1rp_workflow: interpretation_note.

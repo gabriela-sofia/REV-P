@@ -1,0 +1,16 @@
+field,description
+state_id,v1rn_state_machine: state_id.
+state_name,v1rn_state_machine: state_name.
+description,v1rn_state_machine: description.
+allowed_transitions,v1rn_state_machine: allowed_transitions.
+forbidden_transitions,v1rn_state_machine: forbidden_transitions.
+required_gates,v1rn_state_machine: required_gates.
+proof_outputs,v1rn_state_machine: proof_outputs.
+is_operational_label,v1rn_state_machine: is_operational_label.
+is_open,v1rn_state_machine: is_open.
+review_only,v1rn_state_machine: review_only.
+can_create_operational_label,v1rn_state_machine: can_create_operational_label.
+can_train_model,v1rn_state_machine: can_train_model.
+target_created,v1rn_state_machine: target_created.
+ground_truth_operational,v1rn_state_machine: ground_truth_operational.
+notes,v1rn_state_machine: notes.

@@ -1,0 +1,10 @@
+field,description
+audit_id,v1rq_audit: audit_id.
+artifact,v1rq_audit: artifact.
+artifact_type,v1rq_audit: artifact_type.
+claim_type,v1rq_audit: claim_type.
+status,v1rq_audit: status.
+evidence,v1rq_audit: evidence.
+severity,v1rq_audit: severity.
+review_only,v1rq_audit: review_only.
+notes,v1rq_audit: notes.

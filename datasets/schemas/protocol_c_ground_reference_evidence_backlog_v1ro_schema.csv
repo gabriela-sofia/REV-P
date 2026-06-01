@@ -1,0 +1,21 @@
+field,description
+backlog_id,v1ro_backlog: backlog_id.
+region,v1ro_backlog: region.
+event_id,v1ro_backlog: event_id.
+patch_id,v1ro_backlog: patch_id.
+hazard_type,v1ro_backlog: hazard_type.
+missing_source_family,v1ro_backlog: missing_source_family.
+missing_source_name,v1ro_backlog: missing_source_name.
+blocker,v1ro_backlog: blocker.
+next_action,v1ro_backlog: next_action.
+blocks_c3,v1ro_backlog: blocks_c3.
+blocks_c4,v1ro_backlog: blocks_c4.
+priority,v1ro_backlog: priority.
+current_state,v1ro_backlog: current_state.
+status,v1ro_backlog: status.
+review_only,v1ro_backlog: review_only.
+can_create_operational_label,v1ro_backlog: can_create_operational_label.
+can_train_model,v1ro_backlog: can_train_model.
+target_created,v1ro_backlog: target_created.
+ground_truth_operational,v1ro_backlog: ground_truth_operational.
+notes,v1ro_backlog: notes.

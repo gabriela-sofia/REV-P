@@ -1,0 +1,5 @@
+field,description
+source_family,v1rp_sources: source_family.
+requirements_total,v1rp_sources: requirements_total.
+required_not_local,v1rp_sources: required_not_local.
+interpretation_note,v1rp_sources: interpretation_note.

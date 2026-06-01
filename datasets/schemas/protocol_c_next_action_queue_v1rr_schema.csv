@@ -1,0 +1,20 @@
+field,description
+action_id,v1rr_queue: action_id.
+priority,v1rr_queue: priority.
+action_type,v1rr_queue: action_type.
+region,v1rr_queue: region.
+related_stage,v1rr_queue: related_stage.
+blocker,v1rr_queue: blocker.
+recommended_action,v1rr_queue: recommended_action.
+required_external_source,v1rr_queue: required_external_source.
+blocks_c3,v1rr_queue: blocks_c3.
+blocks_c4,v1rr_queue: blocks_c4.
+review_only,v1rr_queue: review_only.
+can_create_operational_label,v1rr_queue: can_create_operational_label.
+can_train_model,v1rr_queue: can_train_model.
+target_created,v1rr_queue: target_created.
+ground_truth_operational,v1rr_queue: ground_truth_operational.
+formal_negative,v1rr_queue: formal_negative.
+dino_validates_event,v1rr_queue: dino_validates_event.
+absence_as_negative,v1rr_queue: absence_as_negative.
+notes,v1rr_queue: notes.
