@@ -1,0 +1,10 @@
+stat_key,stat_value
+total_tasks,8
+tasks_blocking_c3,8
+region_curitiba,3
+region_pet,2
+region_recife,3
+priority_p0,4
+priority_p1,4
+collection_mode,MANUAL_NO_INTERNET
+stage,v1ra

@@ -1,0 +1,15 @@
+stat_key,stat_value
+external_collection_tasks,8
+manual_intake_rows,0
+validated_documents,0
+validation_failures,0
+event_candidates_review_only,0
+event_patch_link_candidates,0
+c3_ready_documents,0
+c4_formal_negatives,0
+labels_created,0
+targets_created,0
+ground_truth_operational_created,0
+qc_failed,0
+final_status,EXTERNAL_INTAKE_TASK_BOARD_READY
+stage,v1rf

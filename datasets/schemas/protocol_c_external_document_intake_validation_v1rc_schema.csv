@@ -1,0 +1,22 @@
+field,description
+validation_id,v1rc_validation: validation_id.
+document_id,v1rc_validation: document_id.
+source_name,v1rc_validation: source_name.
+source_family,v1rc_validation: source_family.
+region,v1rc_validation: region.
+hazard_type,v1rc_validation: hazard_type.
+check_name,v1rc_validation: check_name.
+status,v1rc_validation: status.
+severity,v1rc_validation: severity.
+observed_value,v1rc_validation: observed_value.
+expected_value,v1rc_validation: expected_value.
+blocks_c3,v1rc_validation: blocks_c3.
+blocks_c4,v1rc_validation: blocks_c4.
+review_only,v1rc_validation: review_only.
+can_create_operational_label,v1rc_validation: can_create_operational_label.
+can_train_model,v1rc_validation: can_train_model.
+target_created,v1rc_validation: target_created.
+ground_truth_operational,v1rc_validation: ground_truth_operational.
+formal_negative,v1rc_validation: formal_negative.
+blocked_reason,v1rc_validation: blocked_reason.
+notes,v1rc_validation: notes.

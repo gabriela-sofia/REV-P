@@ -1,0 +1,6 @@
+artifact_id,stage,artifact_name,row_count,artifact_role,notes
+V1RF_A01,v1ra,protocol_c_external_collection_task_board_v1ra.csv,8,task_board,
+V1RF_A02,v1rb,protocol_c_external_document_intake_template_v1rb.csv,0,intake_template,
+V1RF_A03,v1rc,protocol_c_external_document_intake_validation_v1rc.csv,0,validation,
+V1RF_A04,v1rd,protocol_c_external_event_candidates_v1rd.csv,0,event_candidates,
+V1RF_A05,v1re,protocol_c_external_event_patch_link_candidates_v1re.csv,0,link_candidates,

@@ -1,0 +1,10 @@
+metric,value,interpretation_note
+external_collection_tasks,8,tarefas de coleta externa manual
+validated_documents,0,documentos manuais examinados
+event_candidates_review_only,0,candidatos de evento review-only
+event_patch_link_candidates,0,vinculos evento-patch review-only
+c3_ready_documents,0,documentos com precisao para revisao C3 (supervisor)
+c4_formal_negatives,0,nenhum negativo formal por ausencia
+labels_created,0,nenhum label operacional
+ground_truth_operational_created,0,nenhum ground truth operacional
+final_status,EXTERNAL_INTAKE_TASK_BOARD_READY,estado do intake externo

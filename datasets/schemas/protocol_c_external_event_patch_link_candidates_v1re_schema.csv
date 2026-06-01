@@ -1,0 +1,17 @@
+field,description
+link_candidate_id,v1re_links: link_candidate_id.
+event_candidate_id,v1re_links: event_candidate_id.
+patch_id,v1re_links: patch_id.
+region,v1re_links: region.
+hazard_type,v1re_links: hazard_type.
+link_basis,v1re_links: link_basis.
+link_confidence,v1re_links: link_confidence.
+link_status,v1re_links: link_status.
+review_only,v1re_links: review_only.
+dino_validates_event,v1re_links: dino_validates_event.
+can_create_operational_label,v1re_links: can_create_operational_label.
+can_train_model,v1re_links: can_train_model.
+target_created,v1re_links: target_created.
+ground_truth_operational,v1re_links: ground_truth_operational.
+absence_as_negative,v1re_links: absence_as_negative.
+notes,v1re_links: notes.

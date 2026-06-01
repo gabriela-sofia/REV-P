@@ -1,0 +1,17 @@
+field,required,description,example_placeholder
+document_id,yes,Identificador unico do documento coletado,DOC_0001
+source_name,yes,Nome da fonte (instituicao/publicacao),Defesa Civil Petropolis
+source_family,auto,Familia de fonte (classificada automaticamente),OFFICIAL_CIVIL_DEFENSE
+region,yes,Regiao (RECIFE/PET/CURITIBA),PET
+hazard_type,yes,Tipo de ameaca,LANDSLIDE
+event_date_text,yes,Data do evento (texto livre),15/02/2022
+event_location_text,yes,Local do evento (texto livre),Alto da Serra
+url_or_reference,yes,URL ou referencia (NAO sera baixada),https://exemplo.gov.br/doc
+local_document_hash,optional,Hash do documento local (sem path),abc123
+access_date,yes,Data de acesso/coleta,2026-05-31
+license_note,yes,Nota de licenca/acesso,dominio publico
+evidence_type,yes,Tipo de evidencia,occurrence_bulletin
+temporal_precision_claim,yes,Precisao temporal alegada (DAY/MONTH/YEAR),DAY
+spatial_precision_claim,yes,Precisao espacial alegada (POINT/ADDRESS/ADMINISTRATIVE),ADDRESS
+reviewer_notes,optional,Notas do revisor,
+intake_status,auto,Status do intake,PENDING_VALIDATION

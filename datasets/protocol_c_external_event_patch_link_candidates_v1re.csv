@@ -1,0 +1,1 @@
+link_candidate_id,event_candidate_id,patch_id,region,hazard_type,link_basis,link_confidence,link_status,review_only,dino_validates_event,can_create_operational_label,can_train_model,target_created,ground_truth_operational,absence_as_negative,notes

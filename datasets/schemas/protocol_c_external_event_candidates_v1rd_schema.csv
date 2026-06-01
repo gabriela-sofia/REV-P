@@ -1,0 +1,21 @@
+field,description
+event_candidate_id,v1rd_candidates: event_candidate_id.
+document_id,v1rd_candidates: document_id.
+region,v1rd_candidates: region.
+hazard_type,v1rd_candidates: hazard_type.
+source_name,v1rd_candidates: source_name.
+source_family,v1rd_candidates: source_family.
+event_date_text,v1rd_candidates: event_date_text.
+event_location_text,v1rd_candidates: event_location_text.
+temporal_precision_claim,v1rd_candidates: temporal_precision_claim.
+spatial_precision_claim,v1rd_candidates: spatial_precision_claim.
+license_status,v1rd_candidates: license_status.
+candidate_status,v1rd_candidates: candidate_status.
+review_only,v1rd_candidates: review_only.
+dino_validates_event,v1rd_candidates: dino_validates_event.
+can_create_operational_label,v1rd_candidates: can_create_operational_label.
+can_train_model,v1rd_candidates: can_train_model.
+target_created,v1rd_candidates: target_created.
+ground_truth_operational,v1rd_candidates: ground_truth_operational.
+absence_as_negative,v1rd_candidates: absence_as_negative.
+notes,v1rd_candidates: notes.

@@ -1,0 +1,10 @@
+stat_key,stat_value
+validation_status,EXTERNAL_INTAKE_WAITING_MANUAL_DOCUMENTS
+documents_examined,0
+checks_total,0
+checks_passed,0
+checks_failed,0
+documents_blocked_for_c3,0
+intake_path_present,false
+urls_fetched,0
+stage,v1rc

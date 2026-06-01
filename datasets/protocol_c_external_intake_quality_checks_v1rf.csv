@@ -1,0 +1,16 @@
+check_id,check_name,expected,observed,passed,severity,notes
+QC01,task_board_exists,>=1,8,true,high,
+QC02,intake_template_exists,present,present,true,high,
+QC03,intake_validation_exists,present,present,true,high,
+QC04,event_candidates_review_only,true,true,true,critical,
+QC05,event_patch_links_review_only,true,true,true,critical,
+QC06,no_operational_label,0,0,true,critical,
+QC07,no_training_target,0,0,true,critical,
+QC08,no_ground_truth_operational,0,0,true,critical,
+QC09,no_formal_negative,0,0,true,critical,
+QC10,no_absence_as_negative,true,true,true,critical,absence_as_negative=false everywhere
+QC11,no_dino_as_proof,true,true,true,critical,dino_validates_event=false everywhere
+QC12,no_absolute_paths,0,0,true,critical,
+QC13,no_localrun_exposure,0,0,true,critical,
+QC14,blocked_rows_have_reason,0_missing,0,true,high,
+QC15,forbidden_true_fields,0,0,true,critical,

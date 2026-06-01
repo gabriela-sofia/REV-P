@@ -1,0 +1,15 @@
+field,description
+task_id,v1ra_task_board: task_id.
+region,v1ra_task_board: region.
+source_name,v1ra_task_board: source_name.
+source_family,v1ra_task_board: source_family.
+evidence_need,v1ra_task_board: evidence_need.
+search_query_suggested,v1ra_task_board: search_query_suggested.
+expected_document_type,v1ra_task_board: expected_document_type.
+priority,v1ra_task_board: priority.
+blocks_c3,v1ra_task_board: blocks_c3.
+blocks_c4,v1ra_task_board: blocks_c4.
+assigned_status,v1ra_task_board: assigned_status.
+collection_status,v1ra_task_board: collection_status.
+review_only,v1ra_task_board: review_only.
+notes,v1ra_task_board: notes.
