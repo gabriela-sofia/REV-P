@@ -1,0 +1,20 @@
+summary_id,metric,value,interpretation,methodological_status
+V1RZ_S01,total_artifacts_inventoried,464,artefatos inventariados,REVIEW_ONLY
+V1RZ_S02,missing_artifacts,0,artefatos ausentes,REVIEW_ONLY
+V1RZ_S03,csv_missing_schema,1,CSVs sem schema,REVIEW_ONLY
+V1RZ_S04,csv_missing_doc,6,CSVs sem doc,REVIEW_ONLY
+V1RZ_S05,csv_missing_test,51,CSVs sem teste,REVIEW_ONLY
+V1RZ_S06,guardrail_violations,0,violacoes de guardrail,GUARDRAIL
+V1RZ_S07,recommended_staging_files,1326,arquivos para staging,REVIEW_ONLY
+V1RZ_S08,excluded_files,1,arquivos excluidos,REVIEW_ONLY
+V1RZ_S09,ambiguous_files,0,arquivos ambiguos,REVIEW_ONLY
+V1RZ_S10,local_model_configured,false,modelo local configurado,REVIEW_ONLY
+V1RZ_S11,local_roots_configured,false,roots locais configurados,REVIEW_ONLY
+V1RZ_S12,external_intake_waiting,false,intake externo pendente,REVIEW_ONLY
+V1RZ_S13,review_responses_waiting,true,respostas de revisao pendentes,REVIEW_ONLY
+V1RZ_S14,c3_candidates_review_only,0,candidatos C3 review-only,GUARDRAIL
+V1RZ_S15,c4_formal_negatives,0,negativos formais,GUARDRAIL
+V1RZ_S16,labels_created,0,labels criados,GUARDRAIL
+V1RZ_S17,targets_created,0,targets criados,GUARDRAIL
+V1RZ_S18,ground_truth_operational_created,0,ground truth operacional,GUARDRAIL
+V1RZ_S19,final_status,INTEGRATION_HARDENING_WAITING_LOCAL_MODEL_AND_DATA,estado de integracao,REVIEW_ONLY

@@ -1,0 +1,13 @@
+step_id,phase,description,script_to_run,template_to_fill,expected_output,notes
+RS01,COLLECT,Collect official document for event/date/location,manual web search,v1rb intake template,Document reference saved,
+RS02,REGISTER,Record source metadata in intake template (v1rb),manual edit,datasets/protocol_c_external_document_intake_template_v1rb.csv,Row added with all required fields,
+RS03,VALIDATE,Validate intake with v1rc,python scripts/protocolo_c/revp_v1rc_external_document_intake_validator.py,—,EXTERNAL_INTAKE_VALIDATION_PASS_REVIEW_ONLY,
+RS04,CANDIDATES,Generate event candidates from intake (v1rd),python scripts/protocolo_c/revp_v1rd_event_candidate_builder_from_external_intake.py,—,Event candidates review-only created,
+RS05,LINK,Link event candidates to patches (v1re),python scripts/protocolo_c/revp_v1re_external_event_patch_candidate_linker.py,—,Link candidates review-only,
+RS06,FILL_AB,Fill A/B review responses using v1rg template,manual edit,datasets/protocol_c_review_response_intake_template_v1rg.csv,Responses filled for all samples,Use pseudonym; no PII
+RS07,VALIDATE_RESP,Validate A/B responses with v1rh,python scripts/protocolo_c/revp_v1rh_review_response_validator.py,—,REVIEW_RESPONSES_VALIDATION_PASS_REVIEW_ONLY,
+RS08,SCORE,Score completed double-review with v1ri,python scripts/protocolo_c/revp_v1ri_completed_review_scoring_replay.py,—,Review scores computed,
+RS09,SUPERVISOR,Generate supervisor packet with v1rj,python scripts/protocolo_c/revp_v1rj_supervisor_review_packet_generator.py,—,Supervisor packets ready if C3 candidate,
+RS10,SUP_FILL,Fill supervisor decision using v1rk template,manual edit,datasets/protocol_c_supervisor_decision_intake_template_v1rk.csv,Decision filled,
+RS11,SUP_VALIDATE,Validate supervisor decision with v1rl,python scripts/protocolo_c/revp_v1rl_supervisor_decision_validator.py,—,SUPERVISOR_DECISIONS_VALIDATION_PASS_REVIEW_ONLY,
+RS12,BUNDLE,Consolidate with v1rm and v1rr,python scripts/protocolo_c/revp_v1rm_review_supervisor_gate_bundle.py && python scripts/protocolo_c/revp_v1rr_scientific_roadmap_bundle.py,—,Final status updated,

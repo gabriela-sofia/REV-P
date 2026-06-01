@@ -1,0 +1,11 @@
+env_var,required,description,example_value,notes
+REVP_DINO_MODEL_PATH,yes,Path to local DINOv2+registers model dir,/path/to/dinov2-registers,Never commit; set in local shell
+REVP_SENTINEL_LOCAL_ROOT,yes,Root dir of local Sentinel TIF files,/path/to/sentinel_root,Never commit
+REVP_DINO_VISUAL_ROOT,yes,Root dir of visual assets for DINO queue,/path/to/visual_root,Never commit
+REVP_DINO_ASSET_ROOT,yes,Alternate root for DINO assets,/path/to/asset_root,Never commit
+HF_HUB_OFFLINE,yes,Disable HuggingFace Hub downloads,1,Set to 1 before all DINO runs
+REVP_DINO_ALLOW_DOWNLOAD,yes,Forbid automatic model download,false,Always false
+REVP_DINO_DRY_RUN,yes,Run in dry-run mode first,true,Set false only after confirming dry-run
+REVP_PROTOCOL_C_REVIEW_RESPONSES_PATH,no,Path to filled A/B review CSV,/path/to/responses.csv,Fill v1rg template first
+REVP_PROTOCOL_C_SUPERVISOR_DECISIONS_PATH,no,Path to filled supervisor decision CSV,/path/to/decisions.csv,Fill v1rk template first
+REVP_PROTOCOL_C_EXTERNAL_INTAKE_PATH,no,Path to filled external intake CSV,/path/to/intake.csv,Fill v1rb template first

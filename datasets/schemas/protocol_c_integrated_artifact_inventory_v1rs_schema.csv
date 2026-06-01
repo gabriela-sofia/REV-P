@@ -1,0 +1,13 @@
+field,description
+artifact_id,v1rs_inventory: artifact_id.
+block,v1rs_inventory: block.
+stage,v1rs_inventory: stage.
+artifact_type,v1rs_inventory: artifact_type.
+artifact_path,v1rs_inventory: artifact_path.
+artifact_exists,v1rs_inventory: artifact_exists.
+row_count,v1rs_inventory: row_count.
+has_schema,v1rs_inventory: has_schema.
+has_doc,v1rs_inventory: has_doc.
+has_test,v1rs_inventory: has_test.
+status,v1rs_inventory: status.
+notes,v1rs_inventory: notes.

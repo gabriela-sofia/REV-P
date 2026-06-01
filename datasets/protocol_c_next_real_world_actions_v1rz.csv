@@ -1,0 +1,6 @@
+action_id,priority,action,owner,depends_on,review_only,can_create_operational_label,can_train_model,target_created,ground_truth_operational,notes
+V1RZ_ACT01,P0,Configurar REVP_DINO_MODEL_PATH e REVP_SENTINEL_LOCAL_ROOT,human,local_model_available,true,false,false,false,false,Ver runbook v1rw
+V1RZ_ACT02,P0,Coletar documentos externos via fontes prioritárias,human,—,true,false,false,false,false,Ver runbook v1rx; preencher v1rb template
+V1RZ_ACT03,P1,Preencher respostas A/B de revisão (v1rg template),human_reviewer,external_documents_collected,true,false,false,false,false,
+V1RZ_ACT04,P1,Preencher decisão do supervisor (v1rk template),supervisor,double_review_completed,true,false,false,false,false,
+V1RZ_ACT05,P2,Revisar v1rv recommended_files e stagear por bloco,human,guardrail_audit_clean,true,false,false,false,false,Nunca git add automático

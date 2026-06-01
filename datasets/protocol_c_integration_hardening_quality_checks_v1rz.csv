@@ -1,0 +1,7 @@
+check_id,check_name,expected,observed,passed,severity,notes
+QC01,artifact_inventory_complete,>=10,464,true,high,
+QC02,guardrail_audit_clean,0,0,true,critical,
+QC03,no_labels_targets_ground_truth,true,true,true,critical,
+QC04,commit_recommended_files_generated,>=0,1326,true,medium,
+QC05,excluded_files_classified,>=0,1,true,medium,
+QC06,runbooks_exist,present,present,true,medium,

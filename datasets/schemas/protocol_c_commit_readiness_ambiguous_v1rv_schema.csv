@@ -1,0 +1,8 @@
+field,description
+file_id,v1rv_ambiguous: file_id.
+filepath,v1rv_ambiguous: filepath.
+commit_block,v1rv_ambiguous: commit_block.
+reason,v1rv_ambiguous: reason.
+git_command,v1rv_ambiguous: git_command.
+review_only,v1rv_ambiguous: review_only.
+notes,v1rv_ambiguous: notes.

@@ -1,0 +1,10 @@
+field,description
+edge_id,v1rt_edges: edge_id.
+source_block,v1rt_edges: source_block.
+source_artifact,v1rt_edges: source_artifact.
+target_block,v1rt_edges: target_block.
+target_artifact,v1rt_edges: target_artifact.
+dependency_type,v1rt_edges: dependency_type.
+required,v1rt_edges: required.
+fail_closed_behavior,v1rt_edges: fail_closed_behavior.
+notes,v1rt_edges: notes.

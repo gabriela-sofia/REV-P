@@ -1,0 +1,9 @@
+field,description
+order_id,v1rt_order: order_id.
+seq,v1rt_order: seq.
+block,v1rt_order: block.
+key_script,v1rt_order: key_script.
+depends_on,v1rt_order: depends_on.
+status_gate,v1rt_order: status_gate.
+outputs_to,v1rt_order: outputs_to.
+notes,v1rt_order: notes.

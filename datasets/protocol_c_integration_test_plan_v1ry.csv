@@ -1,0 +1,10 @@
+plan_id,test_suite,command,timeout_sec,expected_status,actual_status,test_count_passed,test_count_failed,notes
+T01,P0_ground_reference,pytest tests/test_revp_v1qu_v1qz_ground_reference_partial_validation.py -q,120,PASS,NOT_EXECUTED,,,execute_only_if_REVP_RUN_INTEGRATION_TESTS=true
+T02,P1_external_intake,pytest tests/test_revp_v1ra_v1rf_external_intake_workflow.py -q,90,PASS,NOT_EXECUTED,,,execute_only_if_REVP_RUN_INTEGRATION_TESTS=true
+T03,P2_review_gate,pytest tests/test_revp_v1rg_v1rm_review_supervisor_gate.py -q,90,PASS,NOT_EXECUTED,,,execute_only_if_REVP_RUN_INTEGRATION_TESTS=true
+T04,P3_dashboard_roadmap,pytest tests/test_revp_v1rn_v1rr_protocol_c_dashboard_roadmap.py -q,60,PASS,NOT_EXECUTED,,,execute_only_if_REVP_RUN_INTEGRATION_TESTS=true
+T05,INT_hardening,pytest tests/test_revp_v1rs_v1rz_integration_hardening.py -q,90,PASS,NOT_EXECUTED,,,execute_only_if_REVP_RUN_INTEGRATION_TESTS=true
+T06,DINO_local_readiness,pytest tests/test_revp_v1qn_v1qt_local_dino_readiness.py -q,180,PASS_OR_TIMEOUT,NOT_EXECUTED,,,execute_only_if_REVP_RUN_INTEGRATION_TESTS=true
+T07,DINO_smoke,pytest tests/test_revp_v1qg_v1qm_dino_smoke_embeddings.py -q,120,PASS_OR_TIMEOUT,NOT_EXECUTED,,,execute_only_if_REVP_RUN_INTEGRATION_TESTS=true
+T08,git_diff_check,git diff --check,30,CLEAN,NOT_EXECUTED,,,execute_only_if_REVP_RUN_INTEGRATION_TESTS=true
+T09,guardrail_scan,python scripts/protocolo_c/revp_v1ru_cross_block_guardrail_audit.py,60,GUARDRAIL_CLEAN,NOT_EXECUTED,,,execute_only_if_REVP_RUN_INTEGRATION_TESTS=true

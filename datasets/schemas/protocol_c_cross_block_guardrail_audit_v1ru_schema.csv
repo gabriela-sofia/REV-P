@@ -1,0 +1,10 @@
+field,description
+audit_id,v1ru_audit: audit_id.
+artifact_path,v1ru_audit: artifact_path.
+artifact_type,v1ru_audit: artifact_type.
+check,v1ru_audit: check.
+status,v1ru_audit: status.
+violation_count,v1ru_audit: violation_count.
+severity,v1ru_audit: severity.
+review_only,v1ru_audit: review_only.
+notes,v1ru_audit: notes.

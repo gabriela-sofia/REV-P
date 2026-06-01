@@ -1,0 +1,12 @@
+field,description
+action_id,v1rz_actions: action_id.
+priority,v1rz_actions: priority.
+action,v1rz_actions: action.
+owner,v1rz_actions: owner.
+depends_on,v1rz_actions: depends_on.
+review_only,v1rz_actions: review_only.
+can_create_operational_label,v1rz_actions: can_create_operational_label.
+can_train_model,v1rz_actions: can_train_model.
+target_created,v1rz_actions: target_created.
+ground_truth_operational,v1rz_actions: ground_truth_operational.
+notes,v1rz_actions: notes.

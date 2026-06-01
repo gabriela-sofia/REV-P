@@ -1,0 +1,10 @@
+field,description
+plan_id,v1ry_plan: plan_id.
+test_suite,v1ry_plan: test_suite.
+command,v1ry_plan: command.
+timeout_sec,v1ry_plan: timeout_sec.
+expected_status,v1ry_plan: expected_status.
+actual_status,v1ry_plan: actual_status.
+test_count_passed,v1ry_plan: test_count_passed.
+test_count_failed,v1ry_plan: test_count_failed.
+notes,v1ry_plan: notes.

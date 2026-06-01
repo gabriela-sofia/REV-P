@@ -1,0 +1,11 @@
+step_id,phase,description,command_or_action,expected_result,on_fail,notes
+S01,CONFIG,Configure all required env vars in local shell profile,export REVP_DINO_MODEL_PATH=... (see env vars table),env vars readable,Abort; never commit paths,
+S02,CONFIG,Set HF_HUB_OFFLINE=1 and REVP_DINO_ALLOW_DOWNLOAD=false,export HF_HUB_OFFLINE=1; export REVP_DINO_ALLOW_DOWNLOAD=false,No internet calls,Abort,
+S03,DRYRUN,Run local readiness audit in dry-run mode,python scripts/dino/revp_v1qn_local_root_environment_audit.py,LOCAL_DINO_READINESS status reported,Check missing roots/model,REVP_DINO_DRY_RUN=true
+S04,DRYRUN,Run smoke asset reconciliation,python scripts/dino/revp_v1qo_smoke_asset_local_reconciliation.py,Assets resolved or repair suggestions generated,Check repair suggestions,
+S05,DRYRUN,Run local smoke run readiness gate,python scripts/dino/revp_v1qr_local_smoke_run_readiness_gate.py,GATE_PASS or GATE_FAIL with reasons,Fix blockers before continuing,
+S06,VALIDATE,Confirm dry-run is still true; review outputs,echo $REVP_DINO_DRY_RUN,true,Do NOT proceed if false unintentionally,
+S07,EXECUTE,Set dry_run=false and run controlled smoke embedding,export REVP_DINO_DRY_RUN=false; python scripts/dino/revp_v1qj_controlled_real_smoke_embedding_executor.py,Embeddings written to gitignored output dir only,Check error log; never commit embeddings,Only after full dry-run validation
+S08,VALIDATE,Run guardrail scan on any new CSV outputs,python scripts/protocolo_c/revp_v1ru_cross_block_guardrail_audit.py,GUARDRAIL_CLEAN,Fix violations before staging,
+S09,COMMIT_PREP,Run commit readiness package,python scripts/protocolo_c/revp_v1rv_commit_readiness_package.py,Recommended/excluded files classified,Review ambiguous files manually,Never stage .tif/.npy/.npz
+S10,NEVER,Never commit raster or embedding files,—,—,—,.tif .tiff .npy .npz must stay in gitignored output dirs (see .gitignore)

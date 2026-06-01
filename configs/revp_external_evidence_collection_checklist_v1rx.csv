@@ -1,0 +1,10 @@
+source_id,source_name,source_family,region,priority,evidence_type,access_method,collection_action,intake_template,review_only,notes
+SRC01,CEMADEN,OFFICIAL_HYDROMETEOROLOGICAL,ALL,P0,hydromet_alert_pluviometry,web/API,Search alerts for event date/location,v1rb intake template,true,cemaden.gov.br
+SRC02,ANA / HidroWeb,OFFICIAL_HYDROMETEOROLOGICAL,RECIFE;CURITIBA,P0,river_level_discharge_series,web/API,Download station series for event dates,v1rb intake template,true,hidroweb.ana.gov.br
+SRC03,INMET / BDMEP,OFFICIAL_HYDROMETEOROLOGICAL,ALL,P0,rainfall_hourly_daily,web/API,Download precipitation series,v1rb intake template,true,bdmep.inmet.gov.br
+SRC04,SGB / CPRM,OFFICIAL_GEOLOGICAL,PET,P0,mass_movement_post_disaster_report,web/download,Search for post-disaster reports,v1rb intake template,true,sgb.gov.br/rigeo
+SRC05,Defesa Civil municipal/estadual,OFFICIAL_CIVIL_DEFENSE,ALL,P0,occurrence_bulletin_affected_areas,web/email/LAI,Request occurrence records for events,v1rb intake template,true,
+SRC06,Diário Oficial,OFFICIAL_GOVERNMENT_PUBLICATION,ALL,P1,decree_emergency_recognition,web,Search for emergency decrees for event dates,v1rb intake template,true,
+SRC07,Relatórios técnicos/artigos,TECHNICAL_REPORT,ALL,P1,technical_secondary_evidence,web/academic,Collect only when documented source,v1rb intake template,true,Only if documented
+SRC08,Mídia jornalística,NEWS_MEDIA_SECONDARY,ALL,P2,secondary_evidence_only,web,Secondary evidence; never sufficient alone for C3,v1rb intake template,true,Never alone for C3
+SRC09,Redes sociais,SOCIAL_MEDIA_SECONDARY,ALL,P3,triage_only,web,Triagem apenas; evidência fraca,v1rb intake template,true,Triage only

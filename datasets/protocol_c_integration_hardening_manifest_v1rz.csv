@@ -1,0 +1,6 @@
+artifact_id,stage,artifact_name,exists,row_count,role,notes
+V1RZ_A01,v1rs,protocol_c_integrated_artifact_inventory_summary_v1rs.csv,true,7,artifact_inventory_summary,
+V1RZ_A02,v1rt,protocol_c_dependency_graph_summary_v1rt.csv,true,4,dependency_graph_summary,
+V1RZ_A03,v1ru,protocol_c_cross_block_guardrail_summary_v1ru.csv,true,4,guardrail_audit_summary,
+V1RZ_A04,v1rv,protocol_c_commit_readiness_recommended_files_v1rv.csv,true,1326,commit_recommended,
+V1RZ_A05,v1ry,protocol_c_integration_test_summary_v1ry.csv,true,6,integration_test_summary,
