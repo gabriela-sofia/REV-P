@@ -1,0 +1,7 @@
+stat_key,stat_value
+supervisor_status,SUPERVISOR_PACKETS_WAITING_COMPLETED_REVIEWS
+supervisor_packets,0
+supervisor_forms,0
+approve_c3_candidate_actions,0
+can_promote_to_c3_candidate,0
+stage,v1rj

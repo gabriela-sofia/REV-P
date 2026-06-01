@@ -1,0 +1,16 @@
+stat_key,stat_value
+review_packets_available,16
+response_rows_provided,0
+valid_response_packets,0
+completed_double_reviews,0
+disagreement_cases,0
+supervisor_packets,0
+supervisor_decisions_provided,0
+c3_reference_candidates_review_only,0
+c4_formal_negatives,0
+labels_created,0
+targets_created,0
+ground_truth_operational_created,0
+qc_failed,0
+final_status,REVIEW_SUPERVISOR_GATE_WAITING_MANUAL_RESPONSES
+stage,v1rm

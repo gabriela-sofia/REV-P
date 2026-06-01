@@ -1,0 +1,22 @@
+field,description
+validation_id,v1rl_validation: validation_id.
+supervisor_packet_id,v1rl_validation: supervisor_packet_id.
+review_sample_id,v1rl_validation: review_sample_id.
+supervisor_decision,v1rl_validation: supervisor_decision.
+check_name,v1rl_validation: check_name.
+status,v1rl_validation: status.
+severity,v1rl_validation: severity.
+observed_value,v1rl_validation: observed_value.
+expected_value,v1rl_validation: expected_value.
+maintains_review_only,v1rl_validation: maintains_review_only.
+c4_opened,v1rl_validation: c4_opened.
+blocked_reason,v1rl_validation: blocked_reason.
+review_only,v1rl_validation: review_only.
+can_create_operational_label,v1rl_validation: can_create_operational_label.
+can_train_model,v1rl_validation: can_train_model.
+target_created,v1rl_validation: target_created.
+ground_truth_operational,v1rl_validation: ground_truth_operational.
+formal_negative,v1rl_validation: formal_negative.
+dino_validates_event,v1rl_validation: dino_validates_event.
+absence_as_negative,v1rl_validation: absence_as_negative.
+notes,v1rl_validation: notes.

@@ -1,0 +1,26 @@
+field,description
+completed_score_id,v1ri_scores: completed_score_id.
+review_sample_id,v1ri_scores: review_sample_id.
+event_id,v1ri_scores: event_id.
+patch_id,v1ri_scores: patch_id.
+region,v1ri_scores: region.
+reviewer_a_present,v1ri_scores: reviewer_a_present.
+reviewer_b_present,v1ri_scores: reviewer_b_present.
+reviewer_agreement_score,v1ri_scores: reviewer_agreement_score.
+disagreement_flag,v1ri_scores: disagreement_flag.
+disagreement_type,v1ri_scores: disagreement_type.
+evidence_support_score,v1ri_scores: evidence_support_score.
+temporal_support_score,v1ri_scores: temporal_support_score.
+spatial_support_score,v1ri_scores: spatial_support_score.
+source_support_score,v1ri_scores: source_support_score.
+composite_review_score,v1ri_scores: composite_review_score.
+recommended_decision,v1ri_scores: recommended_decision.
+supervisor_review_required,v1ri_scores: supervisor_review_required.
+review_only,v1ri_scores: review_only.
+can_create_operational_label,v1ri_scores: can_create_operational_label.
+can_train_model,v1ri_scores: can_train_model.
+target_created,v1ri_scores: target_created.
+ground_truth_operational,v1ri_scores: ground_truth_operational.
+formal_negative,v1ri_scores: formal_negative.
+blocked_reason,v1ri_scores: blocked_reason.
+notes,v1ri_scores: notes.

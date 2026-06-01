@@ -1,0 +1,22 @@
+field,description
+response_id,v1rg_template: response_id.
+packet_id,v1rg_template: packet_id.
+review_sample_id,v1rg_template: review_sample_id.
+reviewer_slot,v1rg_template: reviewer_slot.
+reviewer_id_pseudonym,v1rg_template: reviewer_id_pseudonym.
+event_id,v1rg_template: event_id.
+patch_id,v1rg_template: patch_id.
+region,v1rg_template: region.
+question_id,v1rg_template: question_id.
+question_text,v1rg_template: question_text.
+answer_value,v1rg_template: answer_value.
+confidence_0_4,v1rg_template: confidence_0_4.
+evidence_note,v1rg_template: evidence_note.
+source_reference,v1rg_template: source_reference.
+uncertainty_note,v1rg_template: uncertainty_note.
+response_status,v1rg_template: response_status.
+review_only,v1rg_template: review_only.
+can_create_operational_label,v1rg_template: can_create_operational_label.
+can_train_model,v1rg_template: can_train_model.
+target_created,v1rg_template: target_created.
+ground_truth_operational,v1rg_template: ground_truth_operational.

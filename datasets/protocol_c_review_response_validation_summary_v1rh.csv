@@ -1,0 +1,9 @@
+stat_key,stat_value
+validation_status,REVIEW_RESPONSES_WAITING_MANUAL_INPUT
+response_groups,0
+checks_total,0
+checks_passed,0
+checks_failed,0
+responses_path_present,false
+synthetic_allowed,false
+stage,v1rh

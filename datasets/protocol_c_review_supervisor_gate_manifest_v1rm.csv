@@ -1,0 +1,7 @@
+artifact_id,stage,artifact_name,row_count,artifact_role,notes
+V1RM_A01,v1rg,protocol_c_review_response_intake_template_v1rg.csv,144,response_template,
+V1RM_A02,v1rh,protocol_c_review_response_validation_v1rh.csv,0,response_validation,
+V1RM_A03,v1ri,protocol_c_completed_review_scores_v1ri.csv,0,completed_review_scores,
+V1RM_A04,v1rj,protocol_c_supervisor_review_packet_manifest_v1rj.csv,0,supervisor_packets,
+V1RM_A05,v1rk,protocol_c_supervisor_decision_intake_template_v1rk.csv,0,supervisor_decision_template,
+V1RM_A06,v1rl,protocol_c_supervisor_decision_validation_v1rl.csv,0,supervisor_decision_validation,

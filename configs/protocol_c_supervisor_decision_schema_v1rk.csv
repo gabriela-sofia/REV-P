@@ -1,0 +1,7 @@
+field,required,description,example_placeholder
+supervisor_packet_id,yes,ID do pacote v1rj,V1RJ_SPKT_...
+supervisor_decision,yes,Acao do supervisor permitida,APPROVE_C3_CANDIDATE_REVIEW_ONLY
+decision_confidence_0_4,yes,Confianca 0 a 4,3
+required_followup,optional,Followup necessario,coletar boletim oficial
+decision_note,optional,Justificativa,
+decision_status,auto,Status do preenchimento,FILLED

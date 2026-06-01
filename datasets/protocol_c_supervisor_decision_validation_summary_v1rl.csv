@@ -1,0 +1,10 @@
+stat_key,stat_value
+validation_status,SUPERVISOR_DECISIONS_WAITING_MANUAL_INPUT
+decisions_examined,0
+checks_total,0
+checks_passed,0
+checks_failed,0
+approved_c3_candidates_review_only,0
+c4_formal_negatives_opened,0
+decisions_path_present,false
+stage,v1rl

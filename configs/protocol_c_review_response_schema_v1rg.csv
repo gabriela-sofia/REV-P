@@ -1,0 +1,10 @@
+field,required,description,example_placeholder
+response_id,auto,ID unico da resposta,V1RG_RESP_...
+packet_id,yes,ID do pacote v1qw,V1QW_PKT_...
+reviewer_slot,yes,REVIEWER_A ou REVIEWER_B,REVIEWER_A
+reviewer_id_pseudonym,yes,Pseudonimo do revisor (sem PII),REV_01
+question_id,yes,ID da pergunta,event_supported
+answer_value,yes,Resposta (sim/nao/incerto/texto),sim
+confidence_0_4,yes,Confianca 0 a 4,3
+source_reference,conditional,Referencia da fonte (obrigatoria se event_supported=sim),Boletim Defesa Civil
+response_status,auto,Status do preenchimento,FILLED

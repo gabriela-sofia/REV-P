@@ -1,0 +1,20 @@
+field,description
+supervisor_packet_id,v1rj_manifest: supervisor_packet_id.
+review_sample_id,v1rj_manifest: review_sample_id.
+event_id,v1rj_manifest: event_id.
+patch_id,v1rj_manifest: patch_id.
+region,v1rj_manifest: region.
+composite_review_score,v1rj_manifest: composite_review_score.
+disagreement_flag,v1rj_manifest: disagreement_flag.
+source_evidence_summary,v1rj_manifest: source_evidence_summary.
+temporal_evidence_summary,v1rj_manifest: temporal_evidence_summary.
+spatial_evidence_summary,v1rj_manifest: spatial_evidence_summary.
+recommended_decision,v1rj_manifest: recommended_decision.
+supervisor_action_required,v1rj_manifest: supervisor_action_required.
+can_promote_to_c3_candidate,v1rj_manifest: can_promote_to_c3_candidate.
+can_create_operational_label,v1rj_manifest: can_create_operational_label.
+can_train_model,v1rj_manifest: can_train_model.
+target_created,v1rj_manifest: target_created.
+ground_truth_operational,v1rj_manifest: ground_truth_operational.
+formal_negative,v1rj_manifest: formal_negative.
+notes,v1rj_manifest: notes.

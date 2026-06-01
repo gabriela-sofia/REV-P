@@ -1,0 +1,18 @@
+field,description
+supervisor_decision_id,v1rk_template: supervisor_decision_id.
+supervisor_packet_id,v1rk_template: supervisor_packet_id.
+review_sample_id,v1rk_template: review_sample_id.
+event_id,v1rk_template: event_id.
+patch_id,v1rk_template: patch_id.
+region,v1rk_template: region.
+supervisor_decision,v1rk_template: supervisor_decision.
+decision_confidence_0_4,v1rk_template: decision_confidence_0_4.
+required_followup,v1rk_template: required_followup.
+decision_note,v1rk_template: decision_note.
+decision_status,v1rk_template: decision_status.
+review_only,v1rk_template: review_only.
+can_create_operational_label,v1rk_template: can_create_operational_label.
+can_train_model,v1rk_template: can_train_model.
+target_created,v1rk_template: target_created.
+ground_truth_operational,v1rk_template: ground_truth_operational.
+formal_negative,v1rk_template: formal_negative.

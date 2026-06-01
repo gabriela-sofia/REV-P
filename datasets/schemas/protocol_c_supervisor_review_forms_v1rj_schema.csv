@@ -1,0 +1,10 @@
+field,description
+form_id,v1rj_forms: form_id.
+supervisor_packet_id,v1rj_forms: supervisor_packet_id.
+review_sample_id,v1rj_forms: review_sample_id.
+question_key,v1rj_forms: question_key.
+question_text,v1rj_forms: question_text.
+answer_placeholder,v1rj_forms: answer_placeholder.
+response_value,v1rj_forms: response_value.
+review_only,v1rj_forms: review_only.
+notes,v1rj_forms: notes.

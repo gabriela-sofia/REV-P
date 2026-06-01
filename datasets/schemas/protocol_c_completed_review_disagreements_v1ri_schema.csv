@@ -1,0 +1,10 @@
+field,description
+disagreement_id,v1ri_disagreement: disagreement_id.
+review_sample_id,v1ri_disagreement: review_sample_id.
+decision_a,v1ri_disagreement: decision_a.
+decision_b,v1ri_disagreement: decision_b.
+disagreement_type,v1ri_disagreement: disagreement_type.
+reviewer_agreement_score,v1ri_disagreement: reviewer_agreement_score.
+needs_third_reviewer,v1ri_disagreement: needs_third_reviewer.
+review_only,v1ri_disagreement: review_only.
+notes,v1ri_disagreement: notes.

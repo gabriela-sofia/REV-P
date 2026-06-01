@@ -1,0 +1,10 @@
+metric,value,interpretation_note
+review_packets_available,16,pacotes A/B disponiveis
+completed_double_reviews,0,revisoes duplas completas
+disagreement_cases,0,casos com desacordo A/B
+supervisor_packets,0,pacotes para supervisor
+c3_reference_candidates_review_only,0,candidatos C3 review-only (nao label)
+c4_formal_negatives,0,nenhum negativo formal por ausencia
+labels_created,0,nenhum label operacional
+ground_truth_operational_created,0,nenhum ground truth operacional
+final_status,REVIEW_SUPERVISOR_GATE_WAITING_MANUAL_RESPONSES,estado do gate de revisao/supervisor
