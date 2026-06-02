@@ -15,7 +15,7 @@ v1ij consolidou **18 candidatos** de v1if (6 candidatos) e v1ii (12 candidatos).
 - **3 candidatos** bloqueados por falta de data de evento (gate_04)
 - **1 candidato** bloqueado por falta de fenômeno (gate_06)
 
-**Melhor candidato bloqueado:** `Cicatriz_Area_A.shp` (V1II_002) — tem geometria e fenômeno, mas falta data específica de evento.
+**Melhor candidato bloqueado:** `camada original de feições poligonais de deslizamento fotointerpretadas` (V1II_002) — tem geometria e fenômeno, mas falta data específica de evento.
 
 ---
 
@@ -66,7 +66,7 @@ Candidatos não possuem campos estruturados de fenômeno preenchidos. Todos os 1
 ### Gate 4: Data de Evento Disponível (gate_event_date_available)
 - **FAIL:** 3 candidatos
 - **Razão:** Sem campo de data no vetor ou metadado compatível
-- **Exemplo:** `Cicatriz_Area_A.shp` — cicatriz presente, mas sem data de ocorrência
+- **Exemplo:** `camada original de feições poligonais de deslizamento fotointerpretadas` — feição de deslizamento presente, mas sem data de ocorrência
 
 ### Gate 6: Fenômeno Disponível (gate_phenomenon_available)
 - **FAIL:** 1 candidato
@@ -89,18 +89,18 @@ Total:                   18 candidatos (100%)
 
 ## 6. Candidato Mais Promissor (Bloqueado)
 
-### Cicatriz_Area_A.shp
+### camada original de feições poligonais de deslizamento fotointerpretadas
 - **ID Consolidado:** V1II_002
 - **Origem:** v1ii (RIGeo/SGB)
 - **Fonte Original:** RIGEO_PET_002
 - **Fonte Instituição:** SGB/CPRM
-- **Fenômeno:** Deslizamento (cicatriz)
+- **Fenômeno:** Deslizamento (feição de deslizamento)
 - **Geometria:** SHP com 444 features
 - **CRS:** Presente
 - **Data de Evento:** FALTA
 - **Status:** BLOCKED_NO_DATE
 - **Bloqueador:** gate_04_no_event_date
-- **Razão:** Cicatrizes de deslizamento consolidadas, mas sem data específica de ocorrência
+- **Razão:** feições de deslizamento de deslizamento consolidadas, mas sem data específica de ocorrência
 
 ### Por Que É Promissor:
 - Geometria vetorial real (Polygon)
@@ -111,11 +111,11 @@ Total:                   18 candidatos (100%)
 
 ### Por Que É Bloqueado:
 - Nenhuma data de evento no vetor
-- Nenhum metadado público com data da cicatriz
+- Nenhum metadado público com data da feição de deslizamento
 - Seria necessária solicitação formal ao SGB/CPRM ou busca em documentação não-publicada
 
 ### Próxima Ação Recomendada:
-Se for localizada evidência pública ou local documentando a data de levantamento ou vínculo temporal de Cicatriz_Area_A.shp (ex: em sidecars `.prj`, `.xml`, metadados de repositório, ou documentação técnica publicada), este candidato avançaria imediatamente para patch binding preflight.
+Se for localizada evidência pública ou local documentando a data de levantamento ou vínculo temporal de camada original de feições poligonais de deslizamento fotointerpretadas (ex: em sidecars `.prj`, `.xml`, metadados de repositório, ou documentação técnica publicada), este candidato avançaria imediatamente para patch binding preflight.
 
 ---
 
@@ -181,7 +181,7 @@ label_creation_allowed: NO
 
 ## 10. Próximos Passos Técnicos
 
-### Cenário 1: Localizar Data para Cicatriz_Area_A.shp
+### Cenário 1: Localizar Data para camada original de feições poligonais de deslizamento fotointerpretadas
 1. Buscar em fontes públicas (metadados RIGeo, documentação técnica SGB, sidecars locais)
 2. Se encontrado: enriquecer candidato com data documentada
 3. Reavaliar gates
@@ -211,7 +211,7 @@ label_creation_allowed: NO
 
 3. **OCR Não Executado:** PDFs contêm informações que não foram OCRizadas (decisão controlada).
 
-4. **Dados Cumulativos:** `Cicatriz_Area_A.shp` pode representar múltiplos eventos; data única pode ser insuficiente.
+4. **Dados Cumulativos:** `camada original de feições poligonais de deslizamento fotointerpretadas` pode representar múltiplos eventos; data única pode ser insuficiente.
 
 ---
 
@@ -266,7 +266,7 @@ v1ij consolidou sistematicamente 18 candidatos de fontes oficiais e aplicou gate
 
 O bloqueio principal (14 candidatos) é categorizado: a maioria são documentos (PDFs), não vetores. O segundo bloqueio (3 candidatos) é metadados: falta data de evento.
 
-O melhor candidato (`Cicatriz_Area_A.shp`) é **bloqueado por data**, não por qualidade vetorial. Avançaria imediatamente se metadado de data fosse adquirido.
+O melhor candidato (`camada original de feições poligonais de deslizamento fotointerpretadas`) é **bloqueado por data**, não por qualidade vetorial. Avançaria imediatamente se metadado de data fosse adquirido.
 
 **Status Operacional:** `BLOCKED — NO_CANDIDATE_PASSED_MINIMUM_PATCH_BINDING_GATES`
 

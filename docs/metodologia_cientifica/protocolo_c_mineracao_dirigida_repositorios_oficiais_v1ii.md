@@ -31,7 +31,7 @@ A etapa v1ii busca **minerar recursos vetoriais e tabelares de eventos observado
 ### 2.1 RIGeo/SGB
 
 - **URL:** https://rigeo.sgb.gov.br
-- **Termos:** Petrópolis, 2022, pós-desastre, inundação, cicatriz, avaliação
+- **Termos:** Petrópolis, 2022, pós-desastre, inundação, feição de deslizamento, avaliação
 - **Formato esperado:** Metadata + pequenos anexos
 - **Scanner:** Inspeção de metadados via handle público (`doc/22668`)
 - **Status v1ii-R1:** API_NOT_AVAILABLE (DSpace sem endpoint CKAN) — 2 itens pré-auditados
@@ -52,7 +52,7 @@ A etapa v1ii busca **minerar recursos vetoriais e tabelares de eventos observado
 
 ### 2.4 Dados Abertos RJ / DRM-RJ
 
-- **Termos:** Petrópolis, Carta de Risco, cicatriz, inundação, 2022
+- **Termos:** Petrópolis, Carta de Risco, feição de deslizamento, inundação, 2022
 - **Scanner:** API REST + inspeção de catálogo público DRM-RJ
 - **Status v1ii-R1:** NETWORK_UNAVAILABLE — 2 itens pré-auditados por metadados
 

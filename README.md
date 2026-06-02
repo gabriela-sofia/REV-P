@@ -31,6 +31,12 @@ Os patches são recortes territoriais pré-existentes sobre áreas urbanas de Cu
 
 Detalhes em [docs/patch_lineage_and_grounding.md](docs/patch_lineage_and_grounding.md).
 
+## Taxonomia de contagens
+
+O corpus territorial consolidado tem 59 patches: Recife 18, Petrópolis 27 e Curitiba 14. O manifesto Sentinel-first tem 128 assets candidatos: Recife 37, Petrópolis 48 e Curitiba 43. Esses números não são concorrentes: 59 conta unidades territoriais/contextuais; 128 conta referências Sentinel candidatas para o pipeline.
+
+A taxonomia formal fica em [`datasets/patch_corpus_taxonomy_registry.csv`](datasets/patch_corpus_taxonomy_registry.csv) e na metodologia v1iw. Nenhuma dessas camadas cria label, target ou ground truth operacional.
+
 ## Trilha DINO Sentinel-first
 
 O pipeline segue a ordem:

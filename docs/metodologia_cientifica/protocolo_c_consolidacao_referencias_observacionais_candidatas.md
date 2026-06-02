@@ -131,7 +131,7 @@ A v1ic executou a separação fenomenológica máxima alcançável com fontes te
 
 A v1id registrou PKG_FR_PET_001 como REQUIRED_NOT_INGESTED e preparou a ingestão formal.
 
-A v1ie executou busca local real e auditou 10 candidatos SGB/CPRM e FBDS com geometria confirmada (SIRGAS 2000). Nenhum passou o Gate 6 (event_date_compatible): mapas de suscetibilidade (`Inundacao_A.shp`, `Movimento_de_Massa_A.shp`) são produtos modelados, não ocorrências do evento de 15/02/2022; cicatrizes históricas (`Cicatriz_Area_A.shp`) não têm campo de data. PKG_FR_PET_001 permanece não encontrado.
+A v1ie executou busca local real e auditou 10 candidatos SGB/CPRM e FBDS com geometria confirmada (SIRGAS 2000). Nenhum passou o Gate 6 (event_date_compatible): mapas de suscetibilidade (`Inundacao_A.shp`, `Movimento_de_Massa_A.shp`) são produtos modelados, não ocorrências do evento de 15/02/2022; feições de deslizamento históricas (`camada original de feições poligonais de deslizamento fotointerpretadas`) não têm campo de data. PKG_FR_PET_001 permanece não encontrado.
 
 Estado invariante após v1ie:
 - `operational_ground_truth_status = BLOCKED`

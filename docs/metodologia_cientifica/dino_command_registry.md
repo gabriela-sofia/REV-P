@@ -152,10 +152,10 @@ Usar um manifest de embedding específico:
 python scripts\dino\revp_v1gf_dino_structural_evidence_index.py --embedding-manifest local_runs\dino_embeddings\v1ge\dino_expanded_embedding_manifest_v1ge.csv --force
 ```
 
-## v1gg — pacote de revisão humana
+## v1gg — pacote de revisão supervisora
 
 ```powershell
-python scripts\dino\revp_v1gg_dino_human_review_package.py --force
+python scripts\dino\revp_v1gg_dino_review_gate_package.py --force
 ```
 
 ## v1gh — diagnóstico estrutural longitudinal

@@ -19,12 +19,12 @@ v1ir extraiu unidades documentais de evento de 11 relatórios técnicos CPRM/DIG
 
 ## 1. Por Que v1ir Muda a Abordagem
 
-### O Problema Estrutural de Cicatriz_Area_A
+### O Problema Estrutural de camada de feições poligonais de deslizamento fotointerpretadas
 
 Três camadas independentes de auditoria confirmaram o mesmo bloqueio:
 
 ```
-v1ij: cicatrizes cumulativas sem data específica
+v1ij: feições de deslizamento cumulativas sem data específica
 v1iq-R2: 444 registros, OBS vazio, sem campo DATA, has_event_or_survey_date=NO
 v1ir (fotointerpretação): SIG de 2013-2015, "2022" ausente em todos os XMLs
 → STRONG_COMPOSITE_REFERENCE_BUT_TEMPORAL_LINK_WEAK (definitivo)
@@ -164,7 +164,7 @@ UNKNOWN:          0
 
 ### O Que NÃO São
 
-- Vetores observados de cicatrizes
+- Vetores observados de feições de deslizamento
 - Labels de treino
 - Ground truth operacional
 - Liberação de Protocolo B
@@ -224,7 +224,7 @@ can_be_ground_reference_candidate = YES_DOCUMENTARY (10 unidades)
 
 ## 9. Comparação com Abordagem Anterior
 
-| Aspecto | Cicatriz_Area_A (v1iq) | Relatórios CPRM (v1ir) |
+| Aspecto | camada de feições poligonais de deslizamento fotointerpretadas (v1iq) | Relatórios CPRM (v1ir) |
 |---------|------------------------|------------------------|
 | **Unidade** | Polígono shapefile | Documento textual |
 | **Data** | SIG 2013-2015 | 19/02/2022 a 02/03/2022 |

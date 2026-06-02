@@ -80,7 +80,7 @@ O evento PET_2022_02_15 (15 de fevereiro de 2022) é o mais forte do corpus — 
 |------|-------------|-----------------|----------------|
 | Relatório técnico DRM-RJ / NADE / Thalweg completo | DRM-RJ | PDF | Portal público DRM-RJ |
 | Relatório técnico SGB/CPRM (se aplicável ao evento de fev/2022) | SGB/CPRM | PDF | Portal RIGeo / solicitação |
-| Shapefiles ou GeoJSONs de cicatrizes de deslizamento | DRM-RJ, CPRM, defesa civil | Shapefile, GeoJSON | Solicitação formal |
+| Shapefiles ou GeoJSONs de feições de deslizamento de deslizamento | DRM-RJ, CPRM, defesa civil | Shapefile, GeoJSON | Solicitação formal |
 | Geometria de alcances de inundação/enxurrada (separada de deslizamento) | DRM-RJ, INEA | Shapefile, GeoJSON | Solicitação formal |
 | Áreas de risco remanescente pós-evento | DRM-RJ, Defesa Civil | Shapefile, GeoJSON | Solicitação formal ou portal |
 | Relatórios individuais de vistoria de imóveis | Defesa Civil Municipal, DRM-RJ | PDF, tabela | Solicitação formal |

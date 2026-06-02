@@ -4,7 +4,7 @@
 
 A etapa **v1ik** tenta resolver, de forma auditável e conservadora, o bloqueio temporal dos melhores candidatos vetoriais bloqueados em v1ij, especialmente aqueles com **geometria, CRS e fenômeno bem definidos** mas sem data documentada de evento ou levantamento.
 
-Exemplo principal: `Cicatriz_Area_A.shp` (444 features de cicatriz de deslizamento) bloqueada apenas por ausência de data de evento.
+Exemplo principal: `camada original de feições poligonais de deslizamento fotointerpretadas` (444 features de feição de deslizamento de deslizamento) bloqueada apenas por ausência de data de evento.
 
 **v1ik NÃO CRIA DADO.** Apenas audita proveniência temporal em fontes já existentes (sidecars locais, registries, documentação versionada, metadados públicos).
 
@@ -16,10 +16,10 @@ v1ij consolidou **18 candidatos** de v1if e v1ii. Resultado:
 - **3 candidatos** bloqueados por `gate_04_no_event_date` — vetores com geometria, mas sem data documentada
 - **1 candidato** bloqueado por `gate_06_no_phenomenon` — vetor genérico sem fenômeno claro
 
-O **melhor candidato**, `Cicatriz_Area_A.shp`, tem:
+O **melhor candidato**, `camada original de feições poligonais de deslizamento fotointerpretadas`, tem:
 - ✓ Geometria: SHP com 444 features Polygon
 - ✓ CRS: Presente e válido
-- ✓ Fenômeno: Cicatriz de deslizamento (movimento de massa)
+- ✓ Fenômeno: feição de deslizamento de deslizamento (movimento de massa)
 - ✓ Observed not risk: YES (é ocorrência observada, não mapa de risco)
 - ✗ **Data de evento: NÃO TEM**
 
@@ -30,7 +30,7 @@ Sem data documentada, v1ij bloqueou conservadoramente. v1ik tenta resolver este 
 Sem **data de evento** documentada, não é possível:
 1. Vincular o vetor a um evento específico (ex: eventos de fevereiro de 2022 em Petrópolis)
 2. Garantir que a geometria representa ocorrência no período-alvo
-3. Descartar possibilidade de que as cicatrizes sejam de eventos anteriores ou posteriores
+3. Descartar possibilidade de que as feições de deslizamento sejam de eventos anteriores ou posteriores
 4. Usar o vetor como ground truth operacional
 
 Exemplos de **datas não aceitáveis** por si só:
@@ -50,13 +50,13 @@ Exemplos de **datas não aceitáveis** por si só:
 
 ### Data de Evento (Aceitável como data principal)
 - Data em que o evento ocorreu (deslizamento aconteceu, inundação ocorreu)
-- Exemplo: "2022-02-15" para cicatriz de deslizamento do dia 15 de fevereiro de 2022
+- Exemplo: "2022-02-15" para feição de deslizamento de deslizamento do dia 15 de fevereiro de 2022
 - **v1ik procura esto.**
 
 ### Data de Levantamento ou Coleta (Aceitável como contexto)
-- Data em que a cicatriz foi mapeada ou avaliada
+- Data em que a feição de deslizamento foi mapeada ou avaliada
 - Exemplo: "2022-02-28" para avaliação pós-desastre realizada em 28 de fevereiro
-- **Não é data de evento,** mas ajuda a vincular: "cicatriz foi mapeada 13 dias após o evento"
+- **Não é data de evento,** mas ajuda a vincular: "feição de deslizamento foi mapeada 13 dias após o evento"
 - Só útil se houver documentação do evento no período anterior
 
 ### Data de Publicação (NÃO aceitável como data de evento)
@@ -72,7 +72,7 @@ Exemplos de **datas não aceitáveis** por si só:
 
 ### Pista em Nome de Pasta ou Arquivo (MUITO FRACA)
 - "SIG_2022_Petropolis"
-- "cicatriz_areaA_2022"
+- "PET_CPRM_DESLIZAMENTO_AREA_FOTOINTERPRETADA_2022"
 - **Nunca** é STRONG; no máximo WEAK_FILE_OR_FOLDER_HINT
 - Exige corroboração com documentação explícita
 

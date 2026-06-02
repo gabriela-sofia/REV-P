@@ -16,6 +16,13 @@ correspondentes existem no workspace privado, somam múltiplos gigabytes e não 
 versionados. O que é público é a rastreabilidade: qual patch tem qual designação de
 TIF, qual QA foi executado, qual estado de vinculação persiste.
 
+**Taxonomia de contagens (v1iw)** — o corpus territorial consolidado tem 59 patches
+(Recife 18, Petrópolis 27, Curitiba 14), enquanto o manifesto Sentinel-first tem 128
+assets candidatos (Recife 37, Petrópolis 48, Curitiba 43). O primeiro número descreve
+unidades territoriais/contextuais; o segundo descreve referências Sentinel candidatas.
+Eles não são contagens concorrentes e nenhum deles estabelece ground truth operacional
+ou label de treinamento.
+
 **Embeddings DINO** — representações visuais extraídas pelo encoder DINOv2 com
 registros (congelado) sobre patches Sentinel. O corpus operacional tem 12 embeddings
 balanceados (4 por região). Arquivos `.npz` ficam em `local_runs/` e não são
@@ -267,7 +274,7 @@ A v1id registra PKG_FR_PET_001 como REQUIRED_NOT_INGESTED. A v1ie executa busca 
 - `observed_reference_source_package_registry.csv` — 1 linha: PKG_FR_PET_001, `source_status=REQUIRED_NOT_INGESTED`, `operational_ground_truth_status=BLOCKED`
 - `ground_reference_evidence_registry.csv` — 10 linhas: candidatos auditados, todos `operational_ground_truth_status=BLOCKED`, `ml_label_status=BLOCKED_UNTIL_SPLIT_AND_LEAKAGE_PROTOCOL`; Gate 6 (event_date_compatible) FAIL para todos
 
-Achado crítico da v1ie: `Inundacao_A.shp` (SGB/CPRM, 617 feições) é suscetibilidade modelada (`CLASSE=Baixa/Média/Alta`), não ocorrência do evento de 15/02/2022. `Cicatriz_Area_A.shp` (444 cicatrizes) não tem campo de data — não pode ser vinculado ao evento. PKG_FR_PET_001 permanece não encontrado.
+Achado crítico da v1ie: `Inundacao_A.shp` (SGB/CPRM, 617 feições) é suscetibilidade modelada (`CLASSE=Baixa/Média/Alta`), não ocorrência do evento de 15/02/2022. `camada original de feições poligonais de deslizamento fotointerpretadas` (444 feições de deslizamento) não tem campo de data — não pode ser vinculado ao evento. PKG_FR_PET_001 permanece não encontrado.
 
 ## Referências internas
 

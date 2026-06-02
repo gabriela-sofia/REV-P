@@ -22,7 +22,7 @@ SCRIPT_BY_PHASE = {
     "v1gd": "revp_v1gd_dino_embedding_perturbation_robustness_diagnostics.py",
     "v1ge": "revp_v1ge_dino_expanded_sentinel_embedding_corpus.py",
     "v1gf": "revp_v1gf_dino_structural_evidence_index.py",
-    "v1gg": "revp_v1gg_dino_human_review_package.py",
+    "v1gg": "revp_v1gg_dino_review_gate_package.py",
     "v1gh": "revp_v1gh_dino_longitudinal_structural_diagnostics.py",
     "v1gi": "revp_v1gi_dino_structural_provenance_tracker.py",
     "v1gj": "revp_v1gj_multimodal_readiness_audit.py",

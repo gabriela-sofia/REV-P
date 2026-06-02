@@ -22,7 +22,7 @@ STAGES = {
     "v1gd": {"script": "revp_v1gd_dino_embedding_perturbation_robustness_diagnostics.py", "deps": ["v1fz"], "default_args": ["--force", "--allow-cpu", "--skip-model-if-unavailable"], "multimodal": False},
     "v1ge": {"script": "revp_v1ge_dino_expanded_sentinel_embedding_corpus.py", "deps": ["v1fz"], "default_args": ["--execute", "--limit", "12", "--force", "--allow-cpu"], "multimodal": False},
     "v1gf": {"script": "revp_v1gf_dino_structural_evidence_index.py", "deps": ["v1ga", "v1gb", "v1gc", "v1gd"], "default_args": ["--force"], "multimodal": False},
-    "v1gg": {"script": "revp_v1gg_dino_human_review_package.py", "deps": ["v1gf"], "default_args": ["--force"], "multimodal": False},
+    "v1gg": {"script": "revp_v1gg_dino_review_gate_package.py", "deps": ["v1gf"], "default_args": ["--force"], "multimodal": False},
     "v1gh": {"script": "revp_v1gh_dino_longitudinal_structural_diagnostics.py", "deps": ["v1gg"], "default_args": ["--force"], "multimodal": False},
     "v1gi": {"script": "revp_v1gi_dino_structural_provenance_tracker.py", "deps": ["v1gg"], "default_args": ["--force"], "multimodal": False},
     "v1gj": {"script": "revp_v1gj_multimodal_readiness_audit.py", "deps": ["v1gi"], "default_args": ["--force"], "multimodal": False, "multimodal_execution_enabled": False},

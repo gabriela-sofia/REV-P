@@ -1,33 +1,33 @@
 # Protocolo C — v1ik: Relatório de Recuperação de Proveniência Temporal
 
-**Data de Execução:** 2026-05-23  
-**Versão:** v1ik-R1  
+**Data de Execução:** 2026-05-23
+**Versão:** v1ik-R1
 **Status Final:** `TEMPORAL_GATE_RECOVERY_AUDIT_COMPLETE`
 
 ---
 
 ## 1. Resumo Executivo
 
-v1ik realizou auditoria temporal conservadora de candidatos bloqueados em v1ij. Nota: apenas candidatos presentes no `consolidated_observed_event_vector_candidate_registry.csv` podem ser auditados. Cicatriz_Ponto_P.shp não foi consolidado em v1ij, portanto não foi auditado.
+v1ik realizou auditoria temporal conservadora de candidatos bloqueados em v1ij. Nota: apenas candidatos presentes no `consolidated_observed_event_vector_candidate_registry.csv` podem ser auditados. camada original de pontos de feições de deslizamento fotointerpretadas não foi consolidado em v1ij, portanto não foi auditado.
 
 **Resultado:**
-- **1 candidato revisado** (Cicatriz_Area_A.shp, consolidado em v1ij)
+- **1 candidato revisado** (camada original de feições poligonais de deslizamento fotointerpretadas, consolidado em v1ij)
 - **0 candidatos** com evidência temporal forte documentada
 - **0 candidatos** que avançaram em gate temporal
 - **1 candidato** continua bloqueado: `TEMPORAL_GATE_BLOCKED_NO_DATE`
 
-**Conclusão:** Nenhuma data de evento foi recuperada em fontes públicas/locais auditáveis para o único candidato consolidado. Bloqueio persiste com motivação documentada. Cicatriz_Ponto_P.shp requer consolidação em v1ij antes de auditoria temporal.
+**Conclusão:** Nenhuma data de evento foi recuperada em fontes públicas/locais auditáveis para o único candidato consolidado. Bloqueio persiste com motivação documentada. camada original de pontos de feições de deslizamento fotointerpretadas requer consolidação em v1ij antes de auditoria temporal.
 
 ---
 
 ## 2. Candidatos Revisados
 
-### Cicatriz_Area_A.shp (Prioritário)
+### camada original de feições poligonais de deslizamento fotointerpretadas (Prioritário)
 
 **Status de Entrada (v1ij):**
 - Geometry: YES (444 features)
 - CRS: EPSG (válido)
-- Phenomenon: mass_movement (cicatriz)
+- Phenomenon: mass_movement (feição de deslizamento)
 - Observed not risk: YES
 - **Bloqueador:** `gate_04_no_event_date`
 
@@ -40,19 +40,19 @@ v1ik realizou auditoria temporal conservadora de candidatos bloqueados em v1ij. 
 
 #### 2. Registries Versionados (v1if, v1ii)
 - **Consulta:** `official_observed_event_vector_registry.csv`
-  - Encontrado: referência a `Cicatriz_Area_A.shp` em notas v1ii
-  - Informação: "Cicatrizes de deslizamento consolidadas, mas sem data específica de ocorrência"
+  - Encontrado: referência a `camada original de feições poligonais de deslizamento fotointerpretadas` em notas v1ii
+  - Informação: "feições de deslizamento de deslizamento consolidadas, mas sem data específica de ocorrência"
   - **Contribuição temporal:** NENHUMA (confirma bloqueio, não resolve)
 
 - **Consulta:** `targeted_official_repository_event_vector_registry.csv`
-  - Encontrado: RIGEO_PET_002 com recurso `Cicatriz_Area_A.shp`
-  - Informação: "Shapefiles de cicatriz auditados localmente em v1ih. Sem campo de data de evento."
+  - Encontrado: RIGEO_PET_002 com recurso `camada original de feições poligonais de deslizamento fotointerpretadas`
+  - Informação: "Shapefiles de feição de deslizamento auditados localmente em v1ih. Sem campo de data de evento."
   - **Contribuição temporal:** NENHUMA (confirma bloqueio)
 
 #### 3. Documentação Versionada
 - **Consulta:** README.md, docs/metodologia_cientifica/
-  - Encontrado: Referências a "cicatriz", "2022", "SGB/CPRM"
-  - Informação: Contexto de Petrópolis fevereiro 2022, mas sem data explícita de cicatriz
+  - Encontrado: Referências a "feição de deslizamento", "2022", "SGB/CPRM"
+  - Informação: Contexto de Petrópolis fevereiro 2022, mas sem data explícita de feição de deslizamento
   - **Classificação:** WEAK_FILE_OR_FOLDER_HINT (apenas contexto de evento, não data de levantamento)
 
 #### 4. Metadados Públicos RIGeo (indiretamente via registry)
@@ -60,7 +60,7 @@ v1ik realizou auditoria temporal conservadora de candidatos bloqueados em v1ij. 
 - **Informação:** "avaliação pós-desastre Petrópolis 2022"
   - Esta é data de publicação (2022), não data de evento específica
   - Não há data de coleta/levantamento documentada
-  - Não há vinculação explícita entre cicatriz e 2022-02-15
+  - Não há vinculação explícita entre feição de deslizamento e 2022-02-15
 
 **Status Temporal Após Revisão:**
 - `temporal_status_after_review = TEMPORAL_GATE_BLOCKED_NO_DATE`
@@ -74,7 +74,7 @@ v1ik realizou auditoria temporal conservadora de candidatos bloqueados em v1ij. 
 1. Sem data explícita de evento no vetor
 2. Sem campo de data em atributos do shapefile
 3. Sem metadado técnico documentando data de levantamento
-4. Sem documento oficial vinculando cicatriz a data específica
+4. Sem documento oficial vinculando feição de deslizamento a data específica
 5. Disponível apenas: "após desastre fevereiro 2022" sem precisão temporal
 
 **Próxima Ação Recomendada:**
@@ -84,17 +84,17 @@ v1ik realizou auditoria temporal conservadora de candidatos bloqueados em v1ij. 
 
 ---
 
-## 3. Cicatriz_Ponto_P.shp (Não Encontrado em v1ij)
+## 3. camada original de pontos de feições de deslizamento fotointerpretadas (Não Encontrado em v1ij)
 
 **Status:** Não revisado em v1ik-R2 porque não consolidado em v1ij.
 
-Cicatriz_Ponto_P.shp foi mencionado na metodologia como candidato promissor, mas:
+camada original de pontos de feições de deslizamento fotointerpretadas foi mencionado na metodologia como candidato promissor, mas:
 - Não foi encontrado nos registries v1if, v1ii ou v1ih durante v1ij
 - Portanto, não existe no `consolidated_observed_event_vector_candidate_registry.csv`
 - v1ik só pode auditar candidatos presentes no registry consolidado
 
 **Próxima ação recomendada:**
-- Se Cicatriz_Ponto_P.shp for localizado em repositório v1if/v1ii/v1ih:
+- Se camada original de pontos de feições de deslizamento fotointerpretadas for localizado em repositório v1if/v1ii/v1ih:
   1. Consolidar em v1ij com metadata de origem
   2. Auditar temporalmente em v1ik (nova iteração)
 - Caso contrário: manter como candidato futuro se descoberto
@@ -126,17 +126,17 @@ Cicatriz_Ponto_P.shp foi mencionado na metodologia como candidato promissor, mas
 
 ## 5. Status Final dos Melhores Candidatos
 
-### Cicatriz_Area_A.shp
+### camada original de feições poligonais de deslizamento fotointerpretadas
 
 **Status Consolidado:**
 - Geometry: ✓ YES
 - CRS: ✓ Presente
-- Phenomenon: ✓ YES (cicatriz)
+- Phenomenon: ✓ YES (feição de deslizamento)
 - Observed not risk: ✓ YES
 - Temporal/Date: ✗ BLOCKED
 
-**Ground Truth Candidate Status:** `BLOCKED` (não avançou)  
-**Patch Binding Preflight Status:** `BLOCKED` (não avançou)  
+**Ground Truth Candidate Status:** `BLOCKED` (não avançou)
+**Patch Binding Preflight Status:** `BLOCKED` (não avançou)
 **Can Create Training Label:** `NO` (sempre)
 
 **Motivo Consolidado de Bloqueio:**
@@ -190,21 +190,21 @@ Mesmo se gate temporal fosse recuperado, label requer múltiplas validações ad
 
 ## 10. Testes Executados
 
-✓ Script existe e roda  
-✓ Registry temporal criado  
-✓ Schema temporal compatível  
-✓ Matriz temporal criada  
-✓ Schema da matriz compatível  
-✓ Outputs locais gerados  
-✓ Data de sistema de arquivos nunca aceita  
-✓ Nome de pasta/arquivo nunca STRONG  
-✓ Data de publicação não vira data de evento  
-✓ Data de levantamento não vira data de evento  
-✓ Só data explícita pode passar  
-✓ `can_create_training_label` sempre `NO`  
-✓ Se nenhum candidato tem data forte, patch binding continua bloqueado  
-✓ Sem label/target supervisionado  
-✓ Sem path privado em arquivo público  
+✓ Script existe e roda
+✓ Registry temporal criado
+✓ Schema temporal compatível
+✓ Matriz temporal criada
+✓ Schema da matriz compatível
+✓ Outputs locais gerados
+✓ Data de sistema de arquivos nunca aceita
+✓ Nome de pasta/arquivo nunca STRONG
+✓ Data de publicação não vira data de evento
+✓ Data de levantamento não vira data de evento
+✓ Só data explícita pode passar
+✓ `can_create_training_label` sempre `NO`
+✓ Se nenhum candidato tem data forte, patch binding continua bloqueado
+✓ Sem label/target supervisionado
+✓ Sem path privado em arquivo público
 
 ---
 
@@ -225,8 +225,8 @@ Mesmo se gate temporal fosse recuperado, label requer múltiplas validações ad
    - Mantém isolamento de fontes públicas
 
 4. **Dados Cumulativos:**
-   - Cicatrizes podem representar múltiplos eventos
-   - Sem data por cicatriz individual, não é possível separar
+   - feições de deslizamento podem representar múltiplos eventos
+   - Sem data por feição de deslizamento individual, não é possível separar
 
 ---
 
@@ -249,13 +249,13 @@ Mesmo se gate temporal fosse recuperado, label requer múltiplas validações ad
 
 ## 13. Mensagens-Chave
 
-✓ **v1ik foi conservador:** Não inferiu; rejeitou pistas fracas; documentou tudo.  
-✓ **Bloqueio é honesto:** Sem data documentada, não é possível validar ocorrência.  
-✓ **Melhor candidato é promissor:** Cicatriz_Area_A.shp é geometricamente sólido; falta apenas data.  
-✓ **Próximos passos claros:** Se data for encontrada, reprocessamento é direto.  
+✓ **v1ik foi conservador:** Não inferiu; rejeitou pistas fracas; documentou tudo.
+✓ **Bloqueio é honesto:** Sem data documentada, não é possível validar ocorrência.
+✓ **Melhor candidato é promissor:** camada original de feições poligonais de deslizamento fotointerpretadas é geometricamente sólido; falta apenas data.
+✓ **Próximos passos claros:** Se data for encontrada, reprocessamento é direto.
 
 ---
 
-**Data de Conclusão:** 2026-05-23  
-**Versão:** v1ik-R1  
+**Data de Conclusão:** 2026-05-23
+**Versão:** v1ik-R1
 **Status:** `TEMPORAL_GATE_RECOVERY_AUDIT_COMPLETE_NO_RECOVERY`

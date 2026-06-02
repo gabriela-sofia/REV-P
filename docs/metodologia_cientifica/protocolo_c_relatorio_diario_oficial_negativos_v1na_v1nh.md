@@ -1,7 +1,7 @@
 # Relatorio v1na-v1nh - Diario Oficial
 
-- Edicoes reais descobertas: 51.
-- Edicoes baixadas: 2.
+- Edicoes reais descobertas: 39.
+- Edicoes baixadas: 1.
 - Paginas extraidas: 644.
 - Atos segmentados: 1721.
 - Candidatos negativos: 0.

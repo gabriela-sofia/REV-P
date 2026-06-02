@@ -14,13 +14,13 @@ A etapa **v1ij** consolida todos os candidatos observados encontrados em v1if, v
 ### v1ih: Descoberta de Dados Abertos Locais
 - Auditoria de 18 candidatos locais
 - Verificação de 8 fontes abertas
-- Melhor candidato bloqueado: `Cicatriz_Area_A.shp` (sem data específica de evento)
+- Melhor candidato bloqueado: `camada original de feições poligonais de deslizamento fotointerpretadas` (sem data específica de evento)
 - **Resultado:** 0 ground truth candidatos. Bloqueio estruturado: ausência de data de evento.
 
 ### v1ii: Mineração Dirigida em Repositórios Oficiais
 - Scanners de RIGeo/SGB, CKAN Recife, Dados Abertos RJ, etc.
 - 12 candidatos registrados de repositórios oficiais
-- **Resultado:** 0 ground truth confirmado. Melhor candidato: mesmo `Cicatriz_Area_A.shp`.
+- **Resultado:** 0 ground truth confirmado. Melhor candidato: mesmo `camada original de feições poligonais de deslizamento fotointerpretadas`.
 
 ### v1ij: Consolidação Estruturada
 - **18 candidatos** consolidados de v1if + v1ii
@@ -87,7 +87,7 @@ Cada candidato passa por 10 gates de decisão:
 - **FAIL:** Sem fenômeno identificável
 
 ### Gate 7: Observed Not Risk
-- **PASS:** Dado de ocorrência observada real (cicatriz de deslizamento, área inundada, etc.)
+- **PASS:** Dado de ocorrência observada real (feição de deslizamento de deslizamento, área inundada, etc.)
 - **FAIL:** Mapa de risco/suscetibilidade, modelagem, previsão
 
 ### Gate 8: Phenomenon Separable
@@ -193,7 +193,7 @@ markdown_publico_em_portugues        = true
 
 ### Como nenhum candidato passou:
 1. **Revisar bloqueadores** — gate_02 (14 sem geometria) é o principal
-2. **Investigar cicatrizes locais** — `Cicatriz_Area_A.shp` precisa de data documental em metadados públicos
+2. **Investigar feições de deslizamento locais** — `camada original de feições poligonais de deslizamento fotointerpretadas` precisa de data documental em metadados públicos
 3. **Buscar metadados públicos** — explorar documentação técnica SGB, sidecars em repositórios, fontes abertas
 4. **Explorar v1iii** — expandir discovery em novos repositórios para encontrar candidatos com geometria e data
 

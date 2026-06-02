@@ -45,9 +45,9 @@ A etapa v1ii-R1 realizou varredura sistemática de 6 repositórios oficiais púb
 | ID | Recurso | Classificação | Gate Bloqueador |
 |----|---------|---------------|-----------------|
 | RIGEO_PET_001 | Relatorio_Petropolis_2022_SGB_CPRM.zip | CARTOGRAPHIC_LEAD_ONLY | Formato ZIP com PDFs — sem vetor diretamente acessível |
-| RIGEO_PET_002 | Cicatriz_Area_A.shp | BLOCKED_NO_DATE | Gate 04: sem data de evento específica |
+| RIGEO_PET_002 | camada original de feições poligonais de deslizamento fotointerpretadas | BLOCKED_NO_DATE | Gate 04: sem data de evento específica |
 
-**Análise:** O produto SIG pós-desastre do SGB/CPRM ([doc/22668](https://rigeo.sgb.gov.br/handle/doc/22668)) contém shapefiles de cicatriz com 444 feições de deslizamento, mas sem campo de data de evento. O arquivo é uma compilação cumulativa de levantamento de campo pós-2022, sem vínculo temporal explícito ao evento de 2022-02-15. Isso bloqueia no gate 04 (data compatível) e impede binding temporal seguro.
+**Análise:** O produto SIG pós-desastre do SGB/CPRM ([doc/22668](https://rigeo.sgb.gov.br/handle/doc/22668)) contém shapefiles de feição de deslizamento com 444 feições de deslizamento, mas sem campo de data de evento. O arquivo é uma compilação cumulativa de levantamento de campo pós-2022, sem vínculo temporal explícito ao evento de 2022-02-15. Isso bloqueia no gate 04 (data compatível) e impede binding temporal seguro.
 
 ### 3.2 CKAN Recife
 
@@ -138,7 +138,7 @@ A varredura v1ii-R1 confirma e estende o diagnóstico da v1ih:
 
 2. **Escala espacial:** Geometrias disponíveis são (a) coordenadas de pontos de atendimento, (b) polígonos de risco/susceptibilidade, ou (c) cartas cartográficas sem equivalente vetorial aberto.
 
-3. **Data de evento:** Cicatrizes e mapeamentos pós-desastre (ex: RIGeo/SGB) são compilações cumulativas sem vínculo temporal explícito ao evento específico.
+3. **Data de evento:** feições de deslizamento e mapeamentos pós-desastre (ex: RIGeo/SGB) são compilações cumulativas sem vínculo temporal explícito ao evento específico.
 
 4. **Fenômeno observado vs. modelado:** Produtos como ZEE e DRM são mapeamentos prospectivos — não registros de ocorrência.
 

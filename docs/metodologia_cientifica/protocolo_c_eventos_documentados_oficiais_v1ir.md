@@ -1,18 +1,18 @@
 # Protocolo C — Eventos Documentados Oficiais (v1ir)
 
-## Contexto: Por que saímos de Cicatriz_Area_A
+## Contexto: Por que saímos de camada de feições poligonais de deslizamento fotointerpretadas
 
-### O Problema de Cicatriz_Area_A.shp
+### O Problema de camada original de feições poligonais de deslizamento fotointerpretadas
 
-`Cicatriz_Area_A.shp` foi auditada em três camadas independentes (v1ij → v1iq-R2 → v1ir):
+`camada original de feições poligonais de deslizamento fotointerpretadas` foi auditada em três camadas independentes (v1ij → v1iq-R2 → v1ir):
 
 | Camada | Bloqueio Confirmado |
 |--------|---------------------|
-| Registry v1ij | Cicatrizes cumulativas sem data específica |
+| Registry v1ij | feições de deslizamento cumulativas sem data específica |
 | DBF atributos v1iq-R2 | 444 registros × 8 campos — sem DATA, OBS vazio |
 | XML sidecars v1ir | Fotointerpretação de 2013; "2022" ausente |
 
-**Decisão:** Usar `Cicatriz_Area_A.shp` apenas como evidência contextual/geomorfológica.
+**Decisão:** Usar `camada original de feições poligonais de deslizamento fotointerpretadas` apenas como evidência contextual/geomorfológica.
 Não insistir em promovê-la como ground reference para o evento 2022.
 
 ### A Nova Abordagem
@@ -27,13 +27,13 @@ a partir da unidade documental correta:
 
 ## Diferença: Vetor Histórico vs. Evento Documentado
 
-| Aspecto | Cicatriz_Area_A.shp | Relatório CPRM (v1ir) |
+| Aspecto | camada original de feições poligonais de deslizamento fotointerpretadas | Relatório CPRM (v1ir) |
 |---------|--------------------|-----------------------|
 | **Tipo** | Vetor geoespacial | Documento textual |
 | **Data** | SIG histórico 2013-2015 | Data exata de vistoria (pós-2022-02-15) |
 | **Localidade** | Petrópolis genérico | Bairro/rua específica |
 | **Fenômeno** | TIPO=Deslizamento (cumulativo) | Ocorrência específica documentada |
-| **Coordenada** | Polígono de cicatriz histórica | Ponto de campo GPS (em alguns docs) |
+| **Coordenada** | Polígono de feição de deslizamento histórica | Ponto de campo GPS (em alguns docs) |
 | **Vínculo com 2022** | NÃO verificável | SIM — data de vistoria pós-evento |
 | **Usabilidade como referência** | Evidência contextual | Ground reference candidate documental |
 
@@ -58,7 +58,7 @@ Todos os 5 critérios são atendidos pelos Anexos CPRM/DIGEAP (v1ir).
 Mesmo sendo ground reference candidate documental, o relatório:
 
 - NÃO fornece polígono de área atingida com precisão métrica
-- NÃO foi validado via imagem para confirmar presença de cicatriz
+- NÃO foi validado via imagem para confirmar presença de feição de deslizamento
 - NÃO representa vetor observado independente
 - NÃO libera supervisão, treino ou rotulagem
 
