@@ -1,0 +1,10 @@
+addendum_id,packet_id,event_candidate_id,region,source_packet_type,addendum_status,review_only,hydromet_validates_event,hydromet_is_negative_evidence,can_create_operational_label,can_train_model,target_created,ground_truth_operational,formal_negative,absence_as_negative,notes
+V1TH_ADD_d64f61d2bf,,PET2022_CPRM_ANEXOII_19022022,PET,STANDALONE_NO_V1QW_MATCH,ADDENDUM_STANDALONE_REVIEW_ONLY,true,false,false,false,false,false,false,false,false,no matching v1qw packet found
+V1TH_ADD_60e1653eb5,,PET2022_CPRM_ANEXOIII_20022022,PET,STANDALONE_NO_V1QW_MATCH,ADDENDUM_STANDALONE_REVIEW_ONLY,true,false,false,false,false,false,false,false,false,no matching v1qw packet found
+V1TH_ADD_cd07121636,,PET2022_CPRM_ANEXOIV_22022022,PET,STANDALONE_NO_V1QW_MATCH,ADDENDUM_STANDALONE_REVIEW_ONLY,true,false,false,false,false,false,false,false,false,no matching v1qw packet found
+V1TH_ADD_4ba35d46b6,,PET2022_CPRM_ANEXOIX_28022022,PET,STANDALONE_NO_V1QW_MATCH,ADDENDUM_STANDALONE_REVIEW_ONLY,true,false,false,false,false,false,false,false,false,no matching v1qw packet found
+V1TH_ADD_463b58c9bf,,PET2022_CPRM_ANEXOV_23022022,PET,STANDALONE_NO_V1QW_MATCH,ADDENDUM_STANDALONE_REVIEW_ONLY,true,false,false,false,false,false,false,false,false,no matching v1qw packet found
+V1TH_ADD_3ce307def6,,PET2022_CPRM_ANEXOVI_24022022,PET,STANDALONE_NO_V1QW_MATCH,ADDENDUM_STANDALONE_REVIEW_ONLY,true,false,false,false,false,false,false,false,false,no matching v1qw packet found
+V1TH_ADD_36c69931d6,,PET2022_CPRM_ANEXOX_01032022,PET,STANDALONE_NO_V1QW_MATCH,ADDENDUM_STANDALONE_REVIEW_ONLY,true,false,false,false,false,false,false,false,false,no matching v1qw packet found
+V1TH_ADD_91ea56b651,,PET2022_CPRM_ANEXOXI_02032022,PET,STANDALONE_NO_V1QW_MATCH,ADDENDUM_STANDALONE_REVIEW_ONLY,true,false,false,false,false,false,false,false,false,no matching v1qw packet found
+V1TH_ADD_50ae30f48c,,EVENT_PET2022_CPRM_ANEXOVIII_25022022_260,PET,STANDALONE_NO_V1QW_MATCH,ADDENDUM_STANDALONE_REVIEW_ONLY,true,false,false,false,false,false,false,false,false,no matching v1qw packet found

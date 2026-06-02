@@ -1,0 +1,20 @@
+field,description
+score_id,v1ti_scores: score_id.
+event_candidate_id,v1ti_scores: event_candidate_id.
+region,v1ti_scores: region.
+addendum_id,v1ti_scores: addendum_id.
+hydromet_context_score,v1ti_scores: hydromet_context_score.
+station_relevance_score,v1ti_scores: station_relevance_score.
+temporal_context_score,v1ti_scores: temporal_context_score.
+overclaim_risk_score,v1ti_scores: overclaim_risk_score.
+scoring_status,v1ti_scores: scoring_status.
+review_only,v1ti_scores: review_only.
+hydromet_validates_event,v1ti_scores: hydromet_validates_event.
+hydromet_is_negative_evidence,v1ti_scores: hydromet_is_negative_evidence.
+can_create_operational_label,v1ti_scores: can_create_operational_label.
+can_train_model,v1ti_scores: can_train_model.
+target_created,v1ti_scores: target_created.
+ground_truth_operational,v1ti_scores: ground_truth_operational.
+formal_negative,v1ti_scores: formal_negative.
+absence_as_negative,v1ti_scores: absence_as_negative.
+notes,v1ti_scores: notes.

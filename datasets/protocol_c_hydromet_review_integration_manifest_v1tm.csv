@@ -1,0 +1,7 @@
+artifact_id,stage,artifact_name,row_count,role,notes
+V1TM_A01,v1tg,packet_registry,9,evidence_packets,
+V1TM_A02,v1th,double_review_addendum,9,review_addenda,
+V1TM_A03,v1ti,scoring_adapter,9,context_scores,
+V1TM_A04,v1tj,supervisor_addendum,9,supervisor_addenda,
+V1TM_A05,v1tk,tcc_tables,3,tcc_tables,
+V1TM_A06,v1tl,guardrail_audit,9,guardrail_audit,

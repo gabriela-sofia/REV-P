@@ -1,0 +1,7 @@
+metric,value,interpretation_note
+hydromet_packets,9,Pacotes de evidencia hidromet por evento candidato
+context_available,9,Pacotes com contexto disponivel (estacao <100km + precip)
+double_review_addenda,9,Addenda para revisao A/B com perguntas INMET
+review_forms,63,Formularios de revisao hidromet gerados
+responses_empty,63,Respostas pendentes de preenchimento humano
+validates_event,false,Nenhum evento validado automaticamente

@@ -1,0 +1,7 @@
+control_id,aspect,description,implication
+OC01,precipitation_is_context,"Chuva INMET registrada e contexto hidrometeorologico oficial, nao validacao de inundacao/deslizamento.",Revisor nao pode usar rain_7d como criterio de validacao de evento.
+OC02,absence_is_not_negative,Ausencia ou baixa precipitacao em estacao INMET nao constitui negativo formal.,C3 nao pode ser negado somente por falta de chuva INMET.
+OC03,station_proximity_is_not_validation,Estacao proxima nao prova que evento ocorreu naquele ponto especifico.,"Distancia de 5km nao substitui foto, boletim ou documento observacional."
+OC04,c3_requires_independent_source,Promocao para C3 exige fonte observacional independente alem do INMET.,Contexto hidromet e necessario mas nao suficiente para C3.
+OC05,c4_not_opened_by_hydromet,C4 nao pode ser aberto com base em dados INMET.,Abertura de C4 exige revisao metodologica separada e explicitamente aprovada.
+OC06,hydromet_does_not_replace_review,Addenda hidromet sao auxiliares — nao substituem revisao A/B nem supervisao.,Respostas ao addendum devem ser preenchidas por revisor humano qualificado.

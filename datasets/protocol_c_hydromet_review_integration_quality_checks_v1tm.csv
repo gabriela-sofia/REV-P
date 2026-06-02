@@ -1,0 +1,11 @@
+check_id,check_name,expected,observed,passed,severity,notes
+QC01,packets_generated,>=1,9,true,high,
+QC02,addenda_generated,>=1,9,true,medium,
+QC03,supervisor_addenda,>=1,9,true,medium,
+QC04,labels_zero,0,0,true,critical,
+QC05,targets_zero,0,0,true,critical,
+QC06,ground_truth_zero,0,0,true,critical,
+QC07,formal_negatives_zero,0,0,true,critical,
+QC08,c4_promotions_zero,0,0,true,critical,
+QC09,guardrail_violations_zero,0,0,true,critical,
+QC10,independent_source_flagged,>=1,9,true,high,

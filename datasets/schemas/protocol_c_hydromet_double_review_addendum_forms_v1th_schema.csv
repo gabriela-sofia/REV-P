@@ -1,0 +1,20 @@
+field,description
+form_id,v1th_forms: form_id.
+addendum_id,v1th_forms: addendum_id.
+packet_id,v1th_forms: packet_id.
+event_candidate_id,v1th_forms: event_candidate_id.
+region,v1th_forms: region.
+question_key,v1th_forms: question_key.
+question_text,v1th_forms: question_text.
+answer_placeholder,v1th_forms: answer_placeholder.
+response_value,v1th_forms: response_value.
+review_only,v1th_forms: review_only.
+hydromet_validates_event,v1th_forms: hydromet_validates_event.
+hydromet_is_negative_evidence,v1th_forms: hydromet_is_negative_evidence.
+can_create_operational_label,v1th_forms: can_create_operational_label.
+can_train_model,v1th_forms: can_train_model.
+target_created,v1th_forms: target_created.
+ground_truth_operational,v1th_forms: ground_truth_operational.
+formal_negative,v1th_forms: formal_negative.
+absence_as_negative,v1th_forms: absence_as_negative.
+notes,v1th_forms: notes.

@@ -1,0 +1,17 @@
+field,description
+addendum_id,v1th_manifest: addendum_id.
+packet_id,v1th_manifest: packet_id.
+event_candidate_id,v1th_manifest: event_candidate_id.
+region,v1th_manifest: region.
+source_packet_type,v1th_manifest: source_packet_type.
+addendum_status,v1th_manifest: addendum_status.
+review_only,v1th_manifest: review_only.
+hydromet_validates_event,v1th_manifest: hydromet_validates_event.
+hydromet_is_negative_evidence,v1th_manifest: hydromet_is_negative_evidence.
+can_create_operational_label,v1th_manifest: can_create_operational_label.
+can_train_model,v1th_manifest: can_train_model.
+target_created,v1th_manifest: target_created.
+ground_truth_operational,v1th_manifest: ground_truth_operational.
+formal_negative,v1th_manifest: formal_negative.
+absence_as_negative,v1th_manifest: absence_as_negative.
+notes,v1th_manifest: notes.

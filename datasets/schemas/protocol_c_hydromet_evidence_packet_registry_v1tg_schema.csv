@@ -1,0 +1,26 @@
+field,description
+hydromet_packet_id,v1tg_packet: hydromet_packet_id.
+event_candidate_id,v1tg_packet: event_candidate_id.
+region,v1tg_packet: region.
+event_window,v1tg_packet: event_window.
+nearest_station_code,v1tg_packet: nearest_station_code.
+nearest_station_name,v1tg_packet: nearest_station_name.
+nearest_station_distance_km,v1tg_packet: nearest_station_distance_km.
+rain_1d,v1tg_packet: rain_1d.
+rain_3d,v1tg_packet: rain_3d.
+rain_7d,v1tg_packet: rain_7d.
+max_1d_in_window,v1tg_packet: max_1d_in_window.
+station_coverage_status,v1tg_packet: station_coverage_status.
+precipitation_context_status,v1tg_packet: precipitation_context_status.
+hydromet_support_level,v1tg_packet: hydromet_support_level.
+evidence_role,v1tg_packet: evidence_role.
+review_only,v1tg_packet: review_only.
+hydromet_validates_event,v1tg_packet: hydromet_validates_event.
+hydromet_is_negative_evidence,v1tg_packet: hydromet_is_negative_evidence.
+can_create_operational_label,v1tg_packet: can_create_operational_label.
+can_train_model,v1tg_packet: can_train_model.
+target_created,v1tg_packet: target_created.
+ground_truth_operational,v1tg_packet: ground_truth_operational.
+formal_negative,v1tg_packet: formal_negative.
+absence_as_negative,v1tg_packet: absence_as_negative.
+notes,v1tg_packet: notes.

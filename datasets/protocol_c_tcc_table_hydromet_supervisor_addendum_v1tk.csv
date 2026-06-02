@@ -1,0 +1,6 @@
+metric,value,interpretation_note
+supervisor_addenda,9,Addenda gerados para supervisor
+attached_to_supervisor,0,Addenda vinculados a pacote supervisor existente
+standalone_waiting,9,Addenda standalone aguardando pacote supervisor
+independent_source_required,9,Addenda marcando necessidade de fonte observacional independente
+scoring_status,HYDROMET_REVIEW_RESPONSES_WAITING,Estado atual do scoring contextual

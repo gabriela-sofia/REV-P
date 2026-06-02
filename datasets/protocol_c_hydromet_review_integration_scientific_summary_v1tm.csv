@@ -1,0 +1,15 @@
+stat_key,stat_value
+hydromet_packets,9
+double_review_addenda,9
+hydromet_review_scores,9
+supervisor_addenda,9
+tcc_tables,3
+guardrail_violations,0
+c3_promotions,0
+c4_formal_negatives,0
+labels_created,0
+targets_created,0
+ground_truth_operational_created,0
+qc_failed,0
+final_status,HYDROMET_REVIEW_INTEGRATION_READY_REVIEW_ONLY
+stage,v1tm

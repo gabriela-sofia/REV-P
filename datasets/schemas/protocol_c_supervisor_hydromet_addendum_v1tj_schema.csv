@@ -1,0 +1,24 @@
+field,description
+supervisor_addendum_id,v1tj_addendum: supervisor_addendum_id.
+supervisor_packet_id,v1tj_addendum: supervisor_packet_id.
+event_candidate_id,v1tj_addendum: event_candidate_id.
+region,v1tj_addendum: region.
+hydromet_packet_id,v1tj_addendum: hydromet_packet_id.
+nearest_station_code,v1tj_addendum: nearest_station_code.
+nearest_station_distance_km,v1tj_addendum: nearest_station_distance_km.
+rain_7d,v1tj_addendum: rain_7d.
+hydromet_support_level,v1tj_addendum: hydromet_support_level.
+supervisor_notes_prompt,v1tj_addendum: supervisor_notes_prompt.
+supports_manual_review,v1tj_addendum: supports_manual_review.
+does_not_validate_event,v1tj_addendum: does_not_validate_event.
+independent_observational_source_still_required,v1tj_addendum: independent_observational_source_still_required.
+review_only,v1tj_addendum: review_only.
+hydromet_validates_event,v1tj_addendum: hydromet_validates_event.
+hydromet_is_negative_evidence,v1tj_addendum: hydromet_is_negative_evidence.
+can_create_operational_label,v1tj_addendum: can_create_operational_label.
+can_train_model,v1tj_addendum: can_train_model.
+target_created,v1tj_addendum: target_created.
+ground_truth_operational,v1tj_addendum: ground_truth_operational.
+formal_negative,v1tj_addendum: formal_negative.
+absence_as_negative,v1tj_addendum: absence_as_negative.
+notes,v1tj_addendum: notes.
