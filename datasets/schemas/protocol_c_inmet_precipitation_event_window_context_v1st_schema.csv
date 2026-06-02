@@ -1,0 +1,22 @@
+field,description
+context_id,v1st_context: context_id.
+event_window_id,v1st_context: event_window_id.
+event_candidate_id,v1st_context: event_candidate_id.
+region,v1st_context: region.
+station_code,v1st_context: station_code.
+station_name,v1st_context: station_name.
+distance_km,v1st_context: distance_km.
+date,v1st_context: date.
+precipitation_mm,v1st_context: precipitation_mm.
+window_position,v1st_context: window_position.
+precipitation_context_status,v1st_context: precipitation_context_status.
+evidence_role,v1st_context: evidence_role.
+review_only,v1st_context: review_only.
+does_not_validate_event,v1st_context: does_not_validate_event.
+can_create_operational_label,v1st_context: can_create_operational_label.
+can_train_model,v1st_context: can_train_model.
+target_created,v1st_context: target_created.
+ground_truth_operational,v1st_context: ground_truth_operational.
+formal_negative,v1st_context: formal_negative.
+absence_as_negative,v1st_context: absence_as_negative.
+notes,v1st_context: notes.

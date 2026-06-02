@@ -1,0 +1,7 @@
+field,description
+limitation_id,v1sw_limitations: limitation_id.
+aspect,v1sw_limitations: aspect.
+description,v1sw_limitations: description.
+implication,v1sw_limitations: implication.
+review_only,v1sw_limitations: review_only.
+notes,v1sw_limitations: notes.

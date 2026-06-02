@@ -1,0 +1,9 @@
+field,description
+region,v1sw_coverage: region.
+stations_within_100km,v1sw_coverage: stations_within_100km.
+stations_within_50km,v1sw_coverage: stations_within_50km.
+stations_within_25km,v1sw_coverage: stations_within_25km.
+nearest_distance_km,v1sw_coverage: nearest_distance_km.
+coverage_status,v1sw_coverage: coverage_status.
+review_only,v1sw_coverage: review_only.
+notes,v1sw_coverage: notes.

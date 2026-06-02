@@ -1,0 +1,8 @@
+stat_key,stat_value
+context_rows,810
+rows_with_precip_data,683
+stations_queried,17
+event_windows_used,9
+validates_events,false
+creates_negative,false
+stage,v1st

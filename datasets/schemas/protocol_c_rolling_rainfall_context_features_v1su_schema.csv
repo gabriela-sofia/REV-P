@@ -1,0 +1,22 @@
+field,description
+feature_id,v1su_features: feature_id.
+event_window_id,v1su_features: event_window_id.
+region,v1su_features: region.
+station_code,v1su_features: station_code.
+anchor_date,v1su_features: anchor_date.
+rain_1d,v1su_features: rain_1d.
+rain_3d,v1su_features: rain_3d.
+rain_7d,v1su_features: rain_7d.
+max_1d_in_window,v1su_features: max_1d_in_window.
+station_count,v1su_features: station_count.
+nearest_station_distance_km,v1su_features: nearest_station_distance_km.
+feature_status,v1su_features: feature_status.
+review_only,v1su_features: review_only.
+does_not_validate_event,v1su_features: does_not_validate_event.
+can_create_operational_label,v1su_features: can_create_operational_label.
+can_train_model,v1su_features: can_train_model.
+target_created,v1su_features: target_created.
+ground_truth_operational,v1su_features: ground_truth_operational.
+formal_negative,v1su_features: formal_negative.
+absence_as_negative,v1su_features: absence_as_negative.
+notes,v1su_features: notes.

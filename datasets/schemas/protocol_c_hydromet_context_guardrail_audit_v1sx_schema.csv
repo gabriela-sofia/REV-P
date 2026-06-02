@@ -1,0 +1,8 @@
+field,description
+audit_id,v1sx_audit: audit_id.
+csv_file,v1sx_audit: csv_file.
+row_count,v1sx_audit: row_count.
+violations_found,v1sx_audit: violations_found.
+violation_details,v1sx_audit: violation_details.
+audit_status,v1sx_audit: audit_status.
+notes,v1sx_audit: notes.

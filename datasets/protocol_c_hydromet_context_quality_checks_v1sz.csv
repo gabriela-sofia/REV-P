@@ -1,0 +1,9 @@
+check_id,check_name,expected,observed,passed,severity,notes
+QC01,stations_within_100km,>=1,25,true,high,
+QC02,event_windows_available,>=1,9,true,high,
+QC03,context_rows_generated,>=1,810,true,medium,
+QC04,labels_created_zero,0,0,true,critical,
+QC05,targets_created_zero,0,0,true,critical,
+QC06,ground_truth_zero,0,0,true,critical,
+QC07,formal_negatives_zero,0,0,true,critical,
+QC08,guardrail_pass,0,0,true,critical,

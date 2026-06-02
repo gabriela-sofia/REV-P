@@ -1,0 +1,10 @@
+event_window_id,event_candidate_id,region,hazard_type,event_date_text,parsed_date,window_start,window_end,window_days,temporal_precision_status,source_block,review_only,does_not_validate_event,can_create_operational_label,can_train_model,target_created,ground_truth_operational,formal_negative,blocked_reason,notes
+V1SS_W0000,PET2022_CPRM_ANEXOII_19022022,PET,FLOOD_LANDSLIDE,19/02/2022,2022-02-19,2022-02-12,2022-02-20,9,DATE_PARSED_OK,v1ir,true,true,false,false,false,false,false,,
+V1SS_W0001,PET2022_CPRM_ANEXOIII_20022022,PET,FLOOD_LANDSLIDE,20/02/2022,2022-02-20,2022-02-13,2022-02-21,9,DATE_PARSED_OK,v1ir,true,true,false,false,false,false,false,,
+V1SS_W0002,PET2022_CPRM_ANEXOIV_22022022,PET,FLOOD_LANDSLIDE,22/02/2022,2022-02-22,2022-02-15,2022-02-23,9,DATE_PARSED_OK,v1ir,true,true,false,false,false,false,false,,
+V1SS_W0003,PET2022_CPRM_ANEXOIX_28022022,PET,FLOOD_LANDSLIDE,28/02/2022,2022-02-28,2022-02-21,2022-03-01,9,DATE_PARSED_OK,v1ir,true,true,false,false,false,false,false,,
+V1SS_W0004,PET2022_CPRM_ANEXOV_23022022,PET,FLOOD_LANDSLIDE,23/02/2022,2022-02-23,2022-02-16,2022-02-24,9,DATE_PARSED_OK,v1ir,true,true,false,false,false,false,false,,
+V1SS_W0005,PET2022_CPRM_ANEXOVI_24022022,PET,FLOOD_LANDSLIDE,24/02/2022,2022-02-24,2022-02-17,2022-02-25,9,DATE_PARSED_OK,v1ir,true,true,false,false,false,false,false,,
+V1SS_W0006,PET2022_CPRM_ANEXOX_01032022,PET,FLOOD_LANDSLIDE,01/03/2022,2022-03-01,2022-02-22,2022-03-02,9,DATE_PARSED_OK,v1ir,true,true,false,false,false,false,false,,
+V1SS_W0007,PET2022_CPRM_ANEXOXI_02032022,PET,FLOOD_LANDSLIDE,02/03/2022,2022-03-02,2022-02-23,2022-03-03,9,DATE_PARSED_OK,v1ir,true,true,false,false,false,false,false,,
+V1SS_W0008,EVENT_PET2022_CPRM_ANEXOVIII_25022022_260,PET,FLOOD_LANDSLIDE,25/02/2022–26/02/2022,2022-02-25,2022-02-18,2022-02-26,9,DATE_PARSED_OK,v1qx,true,true,false,false,false,false,false,,

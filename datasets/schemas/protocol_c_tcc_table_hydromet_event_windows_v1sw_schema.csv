@@ -1,0 +1,8 @@
+field,description
+region,v1sw_windows: region.
+event_windows_available,v1sw_windows: event_windows_available.
+date_range,v1sw_windows: date_range.
+hydromet_context_rows,v1sw_windows: hydromet_context_rows.
+feature_rows,v1sw_windows: feature_rows.
+review_only,v1sw_windows: review_only.
+notes,v1sw_windows: notes.

@@ -1,0 +1,4 @@
+region,stations_within_100km,stations_within_50km,stations_within_25km,nearest_distance_km,coverage_status,review_only,notes
+RECIFE,2,1,1,8.59,ADEQUATE_CONTEXT,true,
+PET,18,7,3,12.58,ADEQUATE_CONTEXT,true,
+CURITIBA,5,3,2,4.84,ADEQUATE_CONTEXT,true,

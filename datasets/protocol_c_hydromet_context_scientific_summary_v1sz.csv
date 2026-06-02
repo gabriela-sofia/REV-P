@@ -1,0 +1,14 @@
+stat_key,stat_value
+stations_within_100km,25
+event_windows,9
+context_rows,810
+rolling_feature_rows,78
+crosswalk_rows,9
+guardrail_violations,0
+labels_created,0
+targets_created,0
+ground_truth_operational_created,0
+formal_negatives_created,0
+final_status,HYDROMET_CONTEXT_READY_REVIEW_ONLY
+qc_failed,0
+stage,v1sz

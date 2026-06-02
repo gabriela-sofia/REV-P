@@ -1,0 +1,22 @@
+field,description
+station_id,v1sr_proximity: station_id.
+station_code,v1sr_proximity: station_code.
+station_name,v1sr_proximity: station_name.
+uf,v1sr_proximity: uf.
+lat,v1sr_proximity: lat.
+lon,v1sr_proximity: lon.
+nearest_region,v1sr_proximity: nearest_region.
+distance_km,v1sr_proximity: distance_km.
+within_25km,v1sr_proximity: within_25km.
+within_50km,v1sr_proximity: within_50km.
+within_100km,v1sr_proximity: within_100km.
+proximity_status,v1sr_proximity: proximity_status.
+source_zip,v1sr_proximity: source_zip.
+review_only,v1sr_proximity: review_only.
+does_not_validate_event,v1sr_proximity: does_not_validate_event.
+can_create_operational_label,v1sr_proximity: can_create_operational_label.
+can_train_model,v1sr_proximity: can_train_model.
+target_created,v1sr_proximity: target_created.
+ground_truth_operational,v1sr_proximity: ground_truth_operational.
+formal_negative,v1sr_proximity: formal_negative.
+notes,v1sr_proximity: notes.

@@ -1,0 +1,21 @@
+field,description
+event_window_id,v1ss_windows: event_window_id.
+event_candidate_id,v1ss_windows: event_candidate_id.
+region,v1ss_windows: region.
+hazard_type,v1ss_windows: hazard_type.
+event_date_text,v1ss_windows: event_date_text.
+parsed_date,v1ss_windows: parsed_date.
+window_start,v1ss_windows: window_start.
+window_end,v1ss_windows: window_end.
+window_days,v1ss_windows: window_days.
+temporal_precision_status,v1ss_windows: temporal_precision_status.
+source_block,v1ss_windows: source_block.
+review_only,v1ss_windows: review_only.
+does_not_validate_event,v1ss_windows: does_not_validate_event.
+can_create_operational_label,v1ss_windows: can_create_operational_label.
+can_train_model,v1ss_windows: can_train_model.
+target_created,v1ss_windows: target_created.
+ground_truth_operational,v1ss_windows: ground_truth_operational.
+formal_negative,v1ss_windows: formal_negative.
+blocked_reason,v1ss_windows: blocked_reason.
+notes,v1ss_windows: notes.

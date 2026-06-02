@@ -1,0 +1,20 @@
+field,description
+crosswalk_id,v1sv_crosswalk: crosswalk_id.
+event_window_id,v1sv_crosswalk: event_window_id.
+event_candidate_id,v1sv_crosswalk: event_candidate_id.
+region,v1sv_crosswalk: region.
+source_name,v1sv_crosswalk: source_name.
+source_family,v1sv_crosswalk: source_family.
+evidence_type,v1sv_crosswalk: evidence_type.
+context_summary,v1sv_crosswalk: context_summary.
+intake_status,v1sv_crosswalk: intake_status.
+manual_review_required,v1sv_crosswalk: manual_review_required.
+license_note,v1sv_crosswalk: license_note.
+review_only,v1sv_crosswalk: review_only.
+does_not_validate_event,v1sv_crosswalk: does_not_validate_event.
+can_create_operational_label,v1sv_crosswalk: can_create_operational_label.
+can_train_model,v1sv_crosswalk: can_train_model.
+target_created,v1sv_crosswalk: target_created.
+ground_truth_operational,v1sv_crosswalk: ground_truth_operational.
+formal_negative,v1sv_crosswalk: formal_negative.
+notes,v1sv_crosswalk: notes.

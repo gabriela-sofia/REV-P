@@ -1,0 +1,8 @@
+artifact_id,stage,artifact_name,exists,row_count,role,notes
+V1SZ_A01,v1sr,station_proximity,true,25,proximity_table,
+V1SZ_A02,v1ss,event_windows,true,9,event_windows,
+V1SZ_A03,v1st,precip_context,true,810,context_table,
+V1SZ_A04,v1su,rolling_features,true,78,rolling_features,
+V1SZ_A05,v1sv,intake_crosswalk,true,9,intake_crosswalk,
+V1SZ_A06,v1sx,guardrail_audit,true,8,guardrail_audit,
+V1SZ_A07,v1sy,runbook_doc,true,1,methodology_doc,

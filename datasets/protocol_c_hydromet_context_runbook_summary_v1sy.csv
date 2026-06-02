@@ -1,0 +1,8 @@
+stat_key,stat_value
+runbook_emitted,true
+mandatory_clause,INCLUDED
+stations_in_scope,25
+event_windows,9
+context_rows,810
+guardrail_status,GUARDRAIL_PASS_ALL
+stage,v1sy
