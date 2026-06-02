@@ -1,0 +1,19 @@
+field,description
+discrepancy_id,v1tb_audit: discrepancy_id.
+station_code,v1tb_audit: station_code.
+station_name,v1tb_audit: station_name.
+v1si_lat,v1tb_audit: v1si_lat.
+v1si_lon,v1tb_audit: v1si_lon.
+canonical_lat,v1tb_audit: canonical_lat.
+canonical_lon,v1tb_audit: canonical_lon.
+delta_km,v1tb_audit: delta_km.
+discrepancy_type,v1tb_audit: discrepancy_type.
+affects_region_matching,v1tb_audit: affects_region_matching.
+correction_status,v1tb_audit: correction_status.
+review_only,v1tb_audit: review_only.
+can_create_operational_label,v1tb_audit: can_create_operational_label.
+can_train_model,v1tb_audit: can_train_model.
+target_created,v1tb_audit: target_created.
+ground_truth_operational,v1tb_audit: ground_truth_operational.
+formal_negative,v1tb_audit: formal_negative.
+notes,v1tb_audit: notes.

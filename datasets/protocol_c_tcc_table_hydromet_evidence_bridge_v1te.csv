@@ -1,0 +1,6 @@
+metric,value,interpretation_note
+event_windows,9,Janelas de evento com pacote de evidência hidromet
+rows_with_rain_data,9,Janelas com dados de precipitação canônica disponíveis
+canonical_precip_records,49208,Registros diários de precipitação no índice canônico v1tc
+validates_event,false,Nenhum evento validado automaticamente
+absence_as_negative,false,Ausência de dados não é evidência negativa

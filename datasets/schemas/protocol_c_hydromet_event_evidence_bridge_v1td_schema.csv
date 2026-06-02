@@ -1,0 +1,22 @@
+field,description
+hydromet_evidence_id,v1td_bridge: hydromet_evidence_id.
+event_candidate_id,v1td_bridge: event_candidate_id.
+region,v1td_bridge: region.
+event_window,v1td_bridge: event_window.
+nearest_station_code,v1td_bridge: nearest_station_code.
+nearest_station_distance_km,v1td_bridge: nearest_station_distance_km.
+rain_1d,v1td_bridge: rain_1d.
+rain_3d,v1td_bridge: rain_3d.
+rain_7d,v1td_bridge: rain_7d.
+max_1d_in_window,v1td_bridge: max_1d_in_window.
+evidence_role,v1td_bridge: evidence_role.
+supports_manual_review,v1td_bridge: supports_manual_review.
+does_not_validate_event,v1td_bridge: does_not_validate_event.
+review_only,v1td_bridge: review_only.
+can_create_operational_label,v1td_bridge: can_create_operational_label.
+can_train_model,v1td_bridge: can_train_model.
+target_created,v1td_bridge: target_created.
+ground_truth_operational,v1td_bridge: ground_truth_operational.
+formal_negative,v1td_bridge: formal_negative.
+absence_as_negative,v1td_bridge: absence_as_negative.
+notes,v1td_bridge: notes.

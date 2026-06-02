@@ -1,0 +1,13 @@
+stat_key,stat_value
+canonical_stations,668
+corrected_from_v1si,668
+canonical_precip_records,49208
+evidence_bridge_rows,9
+bridge_rows_with_rain,9
+labels_created,0
+targets_created,0
+ground_truth_created,0
+formal_negatives_created,0
+qc_failed,0
+final_status,INMET_CANONICAL_HYDROMET_READY_REVIEW_ONLY
+stage,v1tf

@@ -1,0 +1,9 @@
+check_id,check_name,expected,observed,passed,severity,notes
+QC01,canonical_stations,>=1,668,true,high,
+QC02,corrected_stations,>=1,668,true,high,
+QC03,precip_records,>=1,49208,true,medium,
+QC04,labels_zero,0,0,true,critical,
+QC05,targets_zero,0,0,true,critical,
+QC06,ground_truth_zero,0,0,true,critical,
+QC07,formal_negatives_zero,0,0,true,critical,
+QC08,v1si_not_modified,true,true,true,critical,

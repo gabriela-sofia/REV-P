@@ -1,0 +1,7 @@
+metric,value,interpretation_note
+stations_in_v1si,668,Estações extraídas pelo parser v1si (coordenadas quebradas)
+stations_corrected_v1ta,668,Estações com coordenadas corrigidas em v1ta (decimal-vírgula→ponto)
+canonical_total,668,Total no registry canônico v1ta
+within_100km_canonical,25,Estações canônicas dentro de 100km das regiões-alvo
+region_matching_affected,668,Estações com matching de região afetado pelo bug de parse
+v1si_not_modified,true,v1si preservado intacto; correção apenas em v1ta

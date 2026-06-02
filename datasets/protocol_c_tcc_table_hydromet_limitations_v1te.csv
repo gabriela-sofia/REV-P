@@ -1,0 +1,7 @@
+limitation_id,aspect,description,implication,notes
+LIM_TE01,parse_bug_v1si,v1si usou parse sem conversão de vírgula decimal; coordenadas resultantes inválidas.,Matching de região em v1si é não-confiável. Usar v1ta para análises downstream.,
+LIM_TE02,coordinate_correction,"v1ta corrige via releitura dos ZIPs originais com replace(',','.').",Correção é auditável; provenance preservado. v1si não alterado.,
+LIM_TE03,contextual_use_only,"Precipitação INMET é usada como contexto temporal/regional, não como prova de evento.",Compatibilidade de precipitação não valida deslizamento ou inundação.,
+LIM_TE04,absence_not_negative,Ausência de precipitação em estação próxima não constitui evidência negativa.,"Evento pode ter ocorrido por acumulados anteriores, chuva localizada ou outras causas.",
+LIM_TE05,hourly_to_daily_aggregation,Dados INMET são horários; v1tc agrega para diário.,Eventos de curta duração (<1h) podem ter total diário subestimado.,
+LIM_TE06,station_density,Densidade de estações INMET é baixa em regiões serranas como Petrópolis.,Estação mais próxima pode não representar condições no local exato do evento.,

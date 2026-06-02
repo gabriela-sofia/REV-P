@@ -1,0 +1,7 @@
+field,description
+artifact_id,v1tf_manifest: artifact_id.
+stage,v1tf_manifest: stage.
+artifact_name,v1tf_manifest: artifact_name.
+row_count,v1tf_manifest: row_count.
+role,v1tf_manifest: role.
+notes,v1tf_manifest: notes.

@@ -1,0 +1,6 @@
+artifact_id,stage,artifact_name,row_count,role,notes
+V1TF_A01,v1ta,canonical_station_registry,668,canonical_stations,
+V1TF_A02,v1tb,coord_discrepancy_audit,668,qa_audit,
+V1TF_A03,v1tc,canonical_precip_index,49208,precip_index,
+V1TF_A04,v1td,evidence_bridge,9,evidence_bridge,
+V1TF_A05,v1te,tcc_tables,6,tcc_limitations,

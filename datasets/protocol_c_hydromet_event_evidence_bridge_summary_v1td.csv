@@ -1,0 +1,7 @@
+stat_key,stat_value
+bridge_rows,9
+rows_with_rain_data,9
+validates_event,false
+creates_negative,false
+all_manual_review,true
+stage,v1td

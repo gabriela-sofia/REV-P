@@ -1,0 +1,24 @@
+field,description
+station_id,v1ta_registry: station_id.
+station_code,v1ta_registry: station_code.
+station_name,v1ta_registry: station_name.
+uf,v1ta_registry: uf.
+latitude,v1ta_registry: latitude.
+longitude,v1ta_registry: longitude.
+raw_lat_text,v1ta_registry: raw_lat_text.
+raw_lon_text,v1ta_registry: raw_lon_text.
+coordinate_quality_status,v1ta_registry: coordinate_quality_status.
+source_years,v1ta_registry: source_years.
+provenance_sources,v1ta_registry: provenance_sources.
+nearest_region,v1ta_registry: nearest_region.
+nearest_region_distance_km,v1ta_registry: nearest_region_distance_km.
+within_25km,v1ta_registry: within_25km.
+within_50km,v1ta_registry: within_50km.
+within_100km,v1ta_registry: within_100km.
+review_only,v1ta_registry: review_only.
+can_create_operational_label,v1ta_registry: can_create_operational_label.
+can_train_model,v1ta_registry: can_train_model.
+target_created,v1ta_registry: target_created.
+ground_truth_operational,v1ta_registry: ground_truth_operational.
+formal_negative,v1ta_registry: formal_negative.
+notes,v1ta_registry: notes.

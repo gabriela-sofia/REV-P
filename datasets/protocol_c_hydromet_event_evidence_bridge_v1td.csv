@@ -1,0 +1,10 @@
+hydromet_evidence_id,event_candidate_id,region,event_window,nearest_station_code,nearest_station_distance_km,rain_1d,rain_3d,rain_7d,max_1d_in_window,evidence_role,supports_manual_review,does_not_validate_event,review_only,can_create_operational_label,can_train_model,target_created,ground_truth_operational,formal_negative,absence_as_negative,notes
+V1TD_1490c8a927,PET2022_CPRM_ANEXOII_19022022,PET,2022-02-12 to 2022-02-20,A636,53.53,5.0,109.6,110.2,104.20,HYDROMETEOROLOGICAL_CONTEXT_REVIEW_ONLY,true,true,true,false,false,false,false,false,false,
+V1TD_72891327dd,PET2022_CPRM_ANEXOIII_20022022,PET,2022-02-13 to 2022-02-21,A618,20.57,7.8,40.6,115.6,32.60,HYDROMETEOROLOGICAL_CONTEXT_REVIEW_ONLY,true,true,true,false,false,false,false,false,false,
+V1TD_7a75b34d76,PET2022_CPRM_ANEXOIV_22022022,PET,2022-02-15 to 2022-02-23,A624,54.84,36.6,57.2,119.4,49.00,HYDROMETEOROLOGICAL_CONTEXT_REVIEW_ONLY,true,true,true,false,false,false,false,false,false,
+V1TD_6e22bd3193,PET2022_CPRM_ANEXOIX_28022022,PET,2022-02-21 to 2022-03-01,A618,20.57,0.0,0.8,72.2,69.20,HYDROMETEOROLOGICAL_CONTEXT_REVIEW_ONLY,true,true,true,false,false,false,false,false,false,
+V1TD_e44e8ac7b9,PET2022_CPRM_ANEXOV_23022022,PET,2022-02-16 to 2022-02-24,A618,20.57,69.2,71.8,123.8,69.20,HYDROMETEOROLOGICAL_CONTEXT_REVIEW_ONLY,true,true,true,false,false,false,false,false,false,
+V1TD_b2688cde2e,PET2022_CPRM_ANEXOVI_24022022,PET,2022-02-17 to 2022-02-25,A624,54.84,0.4,42.8,123.2,49.00,HYDROMETEOROLOGICAL_CONTEXT_REVIEW_ONLY,true,true,true,false,false,false,false,false,false,
+V1TD_317b6be04b,PET2022_CPRM_ANEXOX_01032022,PET,2022-02-22 to 2022-03-02,A618,20.57,0.0,0.0,70.4,69.20,HYDROMETEOROLOGICAL_CONTEXT_REVIEW_ONLY,true,true,true,false,false,false,false,false,false,
+V1TD_f31fdc1cea,PET2022_CPRM_ANEXOXI_02032022,PET,2022-02-23 to 2022-03-03,A610,12.58,0.0,0.6,1.8,0.40,HYDROMETEOROLOGICAL_CONTEXT_REVIEW_ONLY,true,true,true,false,false,false,false,false,false,
+V1TD_0d70080ad4,EVENT_PET2022_CPRM_ANEXOVIII_25022022_260,PET,2022-02-18 to 2022-02-26,A618,20.57,0.0,69.6,105.2,69.20,HYDROMETEOROLOGICAL_CONTEXT_REVIEW_ONLY,true,true,true,false,false,false,false,false,false,

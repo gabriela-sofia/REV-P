@@ -1,0 +1,6 @@
+field,description
+limitation_id,v1te_limitations: limitation_id.
+aspect,v1te_limitations: aspect.
+description,v1te_limitations: description.
+implication,v1te_limitations: implication.
+notes,v1te_limitations: notes.
