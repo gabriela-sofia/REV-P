@@ -1,0 +1,8 @@
+field,description
+case_id,v1tt_block: case_id.
+blocking_factors,v1tt_block: blocking_factors.
+next_required_action,v1tt_block: next_required_action.
+why_c3_not_automatic,v1tt_block: why_c3_not_automatic.
+why_c4_closed,v1tt_block: why_c4_closed.
+review_only,v1tt_block: review_only.
+automated_review,v1tt_block: automated_review.

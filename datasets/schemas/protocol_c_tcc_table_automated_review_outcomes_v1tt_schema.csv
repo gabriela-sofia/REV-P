@@ -1,0 +1,11 @@
+field,description
+case_id,v1tt_outcome: case_id.
+reviewer_a_status,v1tt_outcome: reviewer_a_status.
+reviewer_b_status,v1tt_outcome: reviewer_b_status.
+consensus_status,v1tt_outcome: consensus_status.
+supervisor_decision,v1tt_outcome: supervisor_decision.
+final_for_review_only_use,v1tt_outcome: final_for_review_only_use.
+review_only,v1tt_outcome: review_only.
+automated_review,v1tt_outcome: automated_review.
+ground_truth_operational,v1tt_outcome: ground_truth_operational.
+formal_negative,v1tt_outcome: formal_negative.

@@ -1,0 +1,26 @@
+field,description
+audit_id,v1tv_audit: audit_id.
+source_file,v1tv_audit: source_file.
+rows_scanned,v1tv_audit: rows_scanned.
+abs_path_hits,v1tv_audit: abs_path_hits.
+lr_exposure_hits,v1tv_audit: lr_exposure_hits.
+forbidden_true_hits,v1tv_audit: forbidden_true_hits.
+forbidden_phrase_hits,v1tv_audit: forbidden_phrase_hits.
+total_violations,v1tv_audit: total_violations.
+audit_status,v1tv_audit: audit_status.
+review_only,v1tv_audit: review_only.
+automated_review,v1tv_audit: automated_review.
+internal_review_automated_for_review_only,v1tv_audit: internal_review_automated_for_review_only.
+requires_external_observational_evidence_for_operational_claim,v1tv_audit: requires_external_observational_evidence_for_operational_claim.
+automatic_c3_promotion,v1tv_audit: automatic_c3_promotion.
+c4_opened,v1tv_audit: c4_opened.
+can_create_operational_label,v1tv_audit: can_create_operational_label.
+can_train_model,v1tv_audit: can_train_model.
+target_created,v1tv_audit: target_created.
+ground_truth_operational,v1tv_audit: ground_truth_operational.
+formal_negative,v1tv_audit: formal_negative.
+dino_validates_event,v1tv_audit: dino_validates_event.
+hydromet_validates_event,v1tv_audit: hydromet_validates_event.
+hydromet_is_negative_evidence,v1tv_audit: hydromet_is_negative_evidence.
+absence_as_negative,v1tv_audit: absence_as_negative.
+notes,v1tv_audit: notes.

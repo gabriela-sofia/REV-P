@@ -1,0 +1,82 @@
+case_id,section_order,section_key,section_text,review_only,automated_review
+CASE_PET_C3E253E01A,0,case_summary,"Caso CASE_PET_C3E253E01A (PET, FLOOD_LANDSLIDE) janela 2022-02-12 to 2022-02-20. Prontidão: CASE_CONTEXT_AVAILABLE_NEEDS_EXTERNAL_SOURCE.",true,true
+CASE_PET_C3E253E01A,1,external_evidence_summary,Fonte externa: EXTERNAL_SOURCE_ABSENT_LOCAL. Exigida p/ afirmação operacional.,true,true
+CASE_PET_C3E253E01A,2,hydromet_summary,"Hidromet (INMET): HYDROMET_CONTEXT_AVAILABLE_REVIEW_ONLY — contexto, não validação.",true,true
+CASE_PET_C3E253E01A,3,dino_role,"DINO: DINO_NOT_PRESENT_CONTEXT_ONLY — representação visual review-only, nunca prova.",true,true
+CASE_PET_C3E253E01A,4,patch_event_link,Patch/evento: PATCH_LINK_ABSENT.,true,true
+CASE_PET_C3E253E01A,5,blockers,Blockers: NO_EXTERNAL_OBSERVATIONAL_SOURCE;NO_PATCH_LINK.,true,true
+CASE_PET_C3E253E01A,6,overclaim_risks,Risco de overclaim se hidromet/DINO forem tratados como prova; ausência de chuva não é negativo.,true,true
+CASE_PET_C3E253E01A,7,next_steps,Próxima ação: COLLECT_EXTERNAL_OBSERVATIONAL_SOURCE_FOR_OPERATIONAL_CLAIM.,true,true
+CASE_PET_C3E253E01A,8,review_only_status,"Status review-only: CASE_CONTEXT_AVAILABLE_NEEDS_EXTERNAL_SOURCE (sem C3 automático, sem C4).",true,true
+CASE_PET_A96F79E34C,0,case_summary,"Caso CASE_PET_A96F79E34C (PET, FLOOD_LANDSLIDE) janela 2022-02-13 to 2022-02-21. Prontidão: CASE_CONTEXT_AVAILABLE_NEEDS_EXTERNAL_SOURCE.",true,true
+CASE_PET_A96F79E34C,1,external_evidence_summary,Fonte externa: EXTERNAL_SOURCE_ABSENT_LOCAL. Exigida p/ afirmação operacional.,true,true
+CASE_PET_A96F79E34C,2,hydromet_summary,"Hidromet (INMET): HYDROMET_CONTEXT_AVAILABLE_REVIEW_ONLY — contexto, não validação.",true,true
+CASE_PET_A96F79E34C,3,dino_role,"DINO: DINO_NOT_PRESENT_CONTEXT_ONLY — representação visual review-only, nunca prova.",true,true
+CASE_PET_A96F79E34C,4,patch_event_link,Patch/evento: PATCH_LINK_ABSENT.,true,true
+CASE_PET_A96F79E34C,5,blockers,Blockers: NO_EXTERNAL_OBSERVATIONAL_SOURCE;NO_PATCH_LINK.,true,true
+CASE_PET_A96F79E34C,6,overclaim_risks,Risco de overclaim se hidromet/DINO forem tratados como prova; ausência de chuva não é negativo.,true,true
+CASE_PET_A96F79E34C,7,next_steps,Próxima ação: COLLECT_EXTERNAL_OBSERVATIONAL_SOURCE_FOR_OPERATIONAL_CLAIM.,true,true
+CASE_PET_A96F79E34C,8,review_only_status,"Status review-only: CASE_CONTEXT_AVAILABLE_NEEDS_EXTERNAL_SOURCE (sem C3 automático, sem C4).",true,true
+CASE_PET_85AA83E768,0,case_summary,"Caso CASE_PET_85AA83E768 (PET, FLOOD_LANDSLIDE) janela 2022-02-15 to 2022-02-23. Prontidão: CASE_CONTEXT_AVAILABLE_NEEDS_EXTERNAL_SOURCE.",true,true
+CASE_PET_85AA83E768,1,external_evidence_summary,Fonte externa: EXTERNAL_SOURCE_ABSENT_LOCAL. Exigida p/ afirmação operacional.,true,true
+CASE_PET_85AA83E768,2,hydromet_summary,"Hidromet (INMET): HYDROMET_CONTEXT_AVAILABLE_REVIEW_ONLY — contexto, não validação.",true,true
+CASE_PET_85AA83E768,3,dino_role,"DINO: DINO_NOT_PRESENT_CONTEXT_ONLY — representação visual review-only, nunca prova.",true,true
+CASE_PET_85AA83E768,4,patch_event_link,Patch/evento: PATCH_LINK_ABSENT.,true,true
+CASE_PET_85AA83E768,5,blockers,Blockers: NO_EXTERNAL_OBSERVATIONAL_SOURCE;NO_PATCH_LINK.,true,true
+CASE_PET_85AA83E768,6,overclaim_risks,Risco de overclaim se hidromet/DINO forem tratados como prova; ausência de chuva não é negativo.,true,true
+CASE_PET_85AA83E768,7,next_steps,Próxima ação: COLLECT_EXTERNAL_OBSERVATIONAL_SOURCE_FOR_OPERATIONAL_CLAIM.,true,true
+CASE_PET_85AA83E768,8,review_only_status,"Status review-only: CASE_CONTEXT_AVAILABLE_NEEDS_EXTERNAL_SOURCE (sem C3 automático, sem C4).",true,true
+CASE_PET_3BB6F6D1E4,0,case_summary,"Caso CASE_PET_3BB6F6D1E4 (PET, FLOOD_LANDSLIDE) janela 2022-02-21 to 2022-03-01. Prontidão: CASE_CONTEXT_AVAILABLE_NEEDS_EXTERNAL_SOURCE.",true,true
+CASE_PET_3BB6F6D1E4,1,external_evidence_summary,Fonte externa: EXTERNAL_SOURCE_ABSENT_LOCAL. Exigida p/ afirmação operacional.,true,true
+CASE_PET_3BB6F6D1E4,2,hydromet_summary,"Hidromet (INMET): HYDROMET_CONTEXT_AVAILABLE_REVIEW_ONLY — contexto, não validação.",true,true
+CASE_PET_3BB6F6D1E4,3,dino_role,"DINO: DINO_NOT_PRESENT_CONTEXT_ONLY — representação visual review-only, nunca prova.",true,true
+CASE_PET_3BB6F6D1E4,4,patch_event_link,Patch/evento: PATCH_LINK_ABSENT.,true,true
+CASE_PET_3BB6F6D1E4,5,blockers,Blockers: NO_EXTERNAL_OBSERVATIONAL_SOURCE;NO_PATCH_LINK.,true,true
+CASE_PET_3BB6F6D1E4,6,overclaim_risks,Risco de overclaim se hidromet/DINO forem tratados como prova; ausência de chuva não é negativo.,true,true
+CASE_PET_3BB6F6D1E4,7,next_steps,Próxima ação: COLLECT_EXTERNAL_OBSERVATIONAL_SOURCE_FOR_OPERATIONAL_CLAIM.,true,true
+CASE_PET_3BB6F6D1E4,8,review_only_status,"Status review-only: CASE_CONTEXT_AVAILABLE_NEEDS_EXTERNAL_SOURCE (sem C3 automático, sem C4).",true,true
+CASE_PET_7BE58263D6,0,case_summary,"Caso CASE_PET_7BE58263D6 (PET, FLOOD_LANDSLIDE) janela 2022-02-16 to 2022-02-24. Prontidão: CASE_CONTEXT_AVAILABLE_NEEDS_EXTERNAL_SOURCE.",true,true
+CASE_PET_7BE58263D6,1,external_evidence_summary,Fonte externa: EXTERNAL_SOURCE_ABSENT_LOCAL. Exigida p/ afirmação operacional.,true,true
+CASE_PET_7BE58263D6,2,hydromet_summary,"Hidromet (INMET): HYDROMET_CONTEXT_AVAILABLE_REVIEW_ONLY — contexto, não validação.",true,true
+CASE_PET_7BE58263D6,3,dino_role,"DINO: DINO_NOT_PRESENT_CONTEXT_ONLY — representação visual review-only, nunca prova.",true,true
+CASE_PET_7BE58263D6,4,patch_event_link,Patch/evento: PATCH_LINK_ABSENT.,true,true
+CASE_PET_7BE58263D6,5,blockers,Blockers: NO_EXTERNAL_OBSERVATIONAL_SOURCE;NO_PATCH_LINK.,true,true
+CASE_PET_7BE58263D6,6,overclaim_risks,Risco de overclaim se hidromet/DINO forem tratados como prova; ausência de chuva não é negativo.,true,true
+CASE_PET_7BE58263D6,7,next_steps,Próxima ação: COLLECT_EXTERNAL_OBSERVATIONAL_SOURCE_FOR_OPERATIONAL_CLAIM.,true,true
+CASE_PET_7BE58263D6,8,review_only_status,"Status review-only: CASE_CONTEXT_AVAILABLE_NEEDS_EXTERNAL_SOURCE (sem C3 automático, sem C4).",true,true
+CASE_PET_8840701F8A,0,case_summary,"Caso CASE_PET_8840701F8A (PET, FLOOD_LANDSLIDE) janela 2022-02-17 to 2022-02-25. Prontidão: CASE_CONTEXT_AVAILABLE_NEEDS_EXTERNAL_SOURCE.",true,true
+CASE_PET_8840701F8A,1,external_evidence_summary,Fonte externa: EXTERNAL_SOURCE_ABSENT_LOCAL. Exigida p/ afirmação operacional.,true,true
+CASE_PET_8840701F8A,2,hydromet_summary,"Hidromet (INMET): HYDROMET_CONTEXT_AVAILABLE_REVIEW_ONLY — contexto, não validação.",true,true
+CASE_PET_8840701F8A,3,dino_role,"DINO: DINO_NOT_PRESENT_CONTEXT_ONLY — representação visual review-only, nunca prova.",true,true
+CASE_PET_8840701F8A,4,patch_event_link,Patch/evento: PATCH_LINK_ABSENT.,true,true
+CASE_PET_8840701F8A,5,blockers,Blockers: NO_EXTERNAL_OBSERVATIONAL_SOURCE;NO_PATCH_LINK.,true,true
+CASE_PET_8840701F8A,6,overclaim_risks,Risco de overclaim se hidromet/DINO forem tratados como prova; ausência de chuva não é negativo.,true,true
+CASE_PET_8840701F8A,7,next_steps,Próxima ação: COLLECT_EXTERNAL_OBSERVATIONAL_SOURCE_FOR_OPERATIONAL_CLAIM.,true,true
+CASE_PET_8840701F8A,8,review_only_status,"Status review-only: CASE_CONTEXT_AVAILABLE_NEEDS_EXTERNAL_SOURCE (sem C3 automático, sem C4).",true,true
+CASE_PET_517165F296,0,case_summary,"Caso CASE_PET_517165F296 (PET, FLOOD_LANDSLIDE) janela 2022-02-22 to 2022-03-02. Prontidão: CASE_CONTEXT_AVAILABLE_NEEDS_EXTERNAL_SOURCE.",true,true
+CASE_PET_517165F296,1,external_evidence_summary,Fonte externa: EXTERNAL_SOURCE_ABSENT_LOCAL. Exigida p/ afirmação operacional.,true,true
+CASE_PET_517165F296,2,hydromet_summary,"Hidromet (INMET): HYDROMET_CONTEXT_AVAILABLE_REVIEW_ONLY — contexto, não validação.",true,true
+CASE_PET_517165F296,3,dino_role,"DINO: DINO_NOT_PRESENT_CONTEXT_ONLY — representação visual review-only, nunca prova.",true,true
+CASE_PET_517165F296,4,patch_event_link,Patch/evento: PATCH_LINK_ABSENT.,true,true
+CASE_PET_517165F296,5,blockers,Blockers: NO_EXTERNAL_OBSERVATIONAL_SOURCE;NO_PATCH_LINK.,true,true
+CASE_PET_517165F296,6,overclaim_risks,Risco de overclaim se hidromet/DINO forem tratados como prova; ausência de chuva não é negativo.,true,true
+CASE_PET_517165F296,7,next_steps,Próxima ação: COLLECT_EXTERNAL_OBSERVATIONAL_SOURCE_FOR_OPERATIONAL_CLAIM.,true,true
+CASE_PET_517165F296,8,review_only_status,"Status review-only: CASE_CONTEXT_AVAILABLE_NEEDS_EXTERNAL_SOURCE (sem C3 automático, sem C4).",true,true
+CASE_PET_2ADA2F240D,0,case_summary,"Caso CASE_PET_2ADA2F240D (PET, FLOOD_LANDSLIDE) janela 2022-02-23 to 2022-03-03. Prontidão: CASE_CONTEXT_AVAILABLE_NEEDS_EXTERNAL_SOURCE.",true,true
+CASE_PET_2ADA2F240D,1,external_evidence_summary,Fonte externa: EXTERNAL_SOURCE_ABSENT_LOCAL. Exigida p/ afirmação operacional.,true,true
+CASE_PET_2ADA2F240D,2,hydromet_summary,"Hidromet (INMET): HYDROMET_CONTEXT_AVAILABLE_REVIEW_ONLY — contexto, não validação.",true,true
+CASE_PET_2ADA2F240D,3,dino_role,"DINO: DINO_NOT_PRESENT_CONTEXT_ONLY — representação visual review-only, nunca prova.",true,true
+CASE_PET_2ADA2F240D,4,patch_event_link,Patch/evento: PATCH_LINK_ABSENT.,true,true
+CASE_PET_2ADA2F240D,5,blockers,Blockers: NO_EXTERNAL_OBSERVATIONAL_SOURCE;NO_PATCH_LINK.,true,true
+CASE_PET_2ADA2F240D,6,overclaim_risks,Risco de overclaim se hidromet/DINO forem tratados como prova; ausência de chuva não é negativo.,true,true
+CASE_PET_2ADA2F240D,7,next_steps,Próxima ação: COLLECT_EXTERNAL_OBSERVATIONAL_SOURCE_FOR_OPERATIONAL_CLAIM.,true,true
+CASE_PET_2ADA2F240D,8,review_only_status,"Status review-only: CASE_CONTEXT_AVAILABLE_NEEDS_EXTERNAL_SOURCE (sem C3 automático, sem C4).",true,true
+CASE_PET_408C023151,0,case_summary,"Caso CASE_PET_408C023151 (PET, FLOOD_LANDSLIDE) janela 2022-02-18 to 2022-02-26. Prontidão: CASE_CONTEXT_AVAILABLE_NEEDS_EXTERNAL_SOURCE.",true,true
+CASE_PET_408C023151,1,external_evidence_summary,Fonte externa: EXTERNAL_SOURCE_ABSENT_LOCAL. Exigida p/ afirmação operacional.,true,true
+CASE_PET_408C023151,2,hydromet_summary,"Hidromet (INMET): HYDROMET_CONTEXT_AVAILABLE_REVIEW_ONLY — contexto, não validação.",true,true
+CASE_PET_408C023151,3,dino_role,"DINO: DINO_NOT_PRESENT_CONTEXT_ONLY — representação visual review-only, nunca prova.",true,true
+CASE_PET_408C023151,4,patch_event_link,Patch/evento: PATCH_LINK_ABSENT.,true,true
+CASE_PET_408C023151,5,blockers,Blockers: NO_EXTERNAL_OBSERVATIONAL_SOURCE;NO_PATCH_LINK.,true,true
+CASE_PET_408C023151,6,overclaim_risks,Risco de overclaim se hidromet/DINO forem tratados como prova; ausência de chuva não é negativo.,true,true
+CASE_PET_408C023151,7,next_steps,Próxima ação: COLLECT_EXTERNAL_OBSERVATIONAL_SOURCE_FOR_OPERATIONAL_CLAIM.,true,true
+CASE_PET_408C023151,8,review_only_status,"Status review-only: CASE_CONTEXT_AVAILABLE_NEEDS_EXTERNAL_SOURCE (sem C3 automático, sem C4).",true,true

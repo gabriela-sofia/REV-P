@@ -1,0 +1,12 @@
+field,description
+case_id,v1tt_status: case_id.
+region,v1tt_status: region.
+hazard_type,v1tt_status: hazard_type.
+case_readiness_status,v1tt_status: case_readiness_status.
+supervisor_decision,v1tt_status: supervisor_decision.
+review_only_validation_status,v1tt_status: review_only_validation_status.
+ready_for_tcc_discussion,v1tt_status: ready_for_tcc_discussion.
+review_only,v1tt_status: review_only.
+automated_review,v1tt_status: automated_review.
+automatic_c3_promotion,v1tt_status: automatic_c3_promotion.
+c4_opened,v1tt_status: c4_opened.

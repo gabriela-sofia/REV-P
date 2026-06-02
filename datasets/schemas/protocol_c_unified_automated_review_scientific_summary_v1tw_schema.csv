@@ -1,0 +1,5 @@
+field,description
+metric_key,v1tw_scientific_summary: metric_key.
+metric_value,v1tw_scientific_summary: metric_value.
+review_only,v1tw_scientific_summary: review_only.
+automated_review,v1tw_scientific_summary: automated_review.

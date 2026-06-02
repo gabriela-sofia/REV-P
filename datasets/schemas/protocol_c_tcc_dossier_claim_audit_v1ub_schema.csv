@@ -1,0 +1,22 @@
+field,description
+audit_id,v1ub_audit: audit_id.
+source_file,v1ub_audit: source_file.
+rows_scanned,v1ub_audit: rows_scanned.
+claim_violations,v1ub_audit: claim_violations.
+audit_status,v1ub_audit: audit_status.
+sample_hits,v1ub_audit: sample_hits.
+review_only,v1ub_audit: review_only.
+automated_review,v1ub_audit: automated_review.
+requires_external_observational_evidence_for_operational_claim,v1ub_audit: requires_external_observational_evidence_for_operational_claim.
+automatic_c3_promotion,v1ub_audit: automatic_c3_promotion.
+c4_opened,v1ub_audit: c4_opened.
+can_create_operational_label,v1ub_audit: can_create_operational_label.
+can_train_model,v1ub_audit: can_train_model.
+target_created,v1ub_audit: target_created.
+ground_truth_operational,v1ub_audit: ground_truth_operational.
+formal_negative,v1ub_audit: formal_negative.
+dino_validates_event,v1ub_audit: dino_validates_event.
+hydromet_validates_event,v1ub_audit: hydromet_validates_event.
+hydromet_is_negative_evidence,v1ub_audit: hydromet_is_negative_evidence.
+absence_as_negative,v1ub_audit: absence_as_negative.
+notes,v1ub_audit: notes.

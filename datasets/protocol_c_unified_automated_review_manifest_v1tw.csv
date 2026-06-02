@@ -1,0 +1,10 @@
+artifact_id,stage,artifact_path,rows,role,review_only,automated_review
+V1TW_V1TN,v1tn,datasets/protocol_c_unified_evidence_case_index_v1tn.csv,9,case_index,true,true
+V1TW_V1TO,v1to,datasets/protocol_c_unified_single_case_workspace_v1to.csv,9,workspace,true,true
+V1TW_V1TP,v1tp,datasets/protocol_c_automated_reviewer_ab_decisions_v1tp.csv,18,reviewer_ab,true,true
+V1TW_V1TQ,v1tq,datasets/protocol_c_review_consensus_divergence_adjudication_v1tq.csv,9,consensus,true,true
+V1TW_V1TR,v1tr,datasets/protocol_c_automated_supervisor_adjudication_v1tr.csv,9,supervisor,true,true
+V1TW_V1TS,v1ts,datasets/protocol_c_single_flow_review_export_v1ts.csv,9,single_flow,true,true
+V1TW_V1TT,v1tt,datasets/protocol_c_tcc_table_automated_review_case_status_v1tt.csv,9,tcc_tables,true,true
+V1TW_V1TU,v1tu,datasets/protocol_c_proof_of_review_only_validation_audit_v1tu.csv,9,proof_audit,true,true
+V1TW_V1TV,v1tv,datasets/protocol_c_unified_review_guardrail_audit_v1tv.csv,13,guardrail_audit,true,true

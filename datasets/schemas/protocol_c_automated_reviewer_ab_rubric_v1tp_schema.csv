@@ -1,0 +1,6 @@
+field,description
+reviewer_profile,v1tp_rubric: reviewer_profile.
+criterion_key,v1tp_rubric: criterion_key.
+criterion_description,v1tp_rubric: criterion_description.
+review_only,v1tp_rubric: review_only.
+automated_review,v1tp_rubric: automated_review.

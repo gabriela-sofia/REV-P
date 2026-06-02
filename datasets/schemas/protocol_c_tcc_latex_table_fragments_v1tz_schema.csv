@@ -1,0 +1,7 @@
+field,description
+fragment_id,v1tz_fragments: fragment_id.
+table_key,v1tz_fragments: table_key.
+row_order,v1tz_fragments: row_order.
+latex_row,v1tz_fragments: latex_row.
+review_only,v1tz_fragments: review_only.
+automated_review,v1tz_fragments: automated_review.

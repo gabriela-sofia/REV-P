@@ -1,0 +1,21 @@
+field,description
+narrative_id,v1ua_narrative: narrative_id.
+scope,v1ua_narrative: scope.
+case_id,v1ua_narrative: case_id.
+narrative_text,v1ua_narrative: narrative_text.
+review_only,v1ua_narrative: review_only.
+automated_review,v1ua_narrative: automated_review.
+internal_review_automated_for_review_only,v1ua_narrative: internal_review_automated_for_review_only.
+requires_external_observational_evidence_for_operational_claim,v1ua_narrative: requires_external_observational_evidence_for_operational_claim.
+automatic_c3_promotion,v1ua_narrative: automatic_c3_promotion.
+c4_opened,v1ua_narrative: c4_opened.
+can_create_operational_label,v1ua_narrative: can_create_operational_label.
+can_train_model,v1ua_narrative: can_train_model.
+target_created,v1ua_narrative: target_created.
+ground_truth_operational,v1ua_narrative: ground_truth_operational.
+formal_negative,v1ua_narrative: formal_negative.
+dino_validates_event,v1ua_narrative: dino_validates_event.
+hydromet_validates_event,v1ua_narrative: hydromet_validates_event.
+hydromet_is_negative_evidence,v1ua_narrative: hydromet_is_negative_evidence.
+absence_as_negative,v1ua_narrative: absence_as_negative.
+notes,v1ua_narrative: notes.

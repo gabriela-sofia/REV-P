@@ -1,0 +1,13 @@
+field,description
+case_id,v1tt_safety: case_id.
+claim_safety_status,v1tt_safety: claim_safety_status.
+dino_role,v1tt_safety: dino_role.
+hydromet_role,v1tt_safety: hydromet_role.
+absence_role,v1tt_safety: absence_role.
+external_required_for_operational_claim,v1tt_safety: external_required_for_operational_claim.
+review_only,v1tt_safety: review_only.
+automated_review,v1tt_safety: automated_review.
+dino_validates_event,v1tt_safety: dino_validates_event.
+hydromet_validates_event,v1tt_safety: hydromet_validates_event.
+hydromet_is_negative_evidence,v1tt_safety: hydromet_is_negative_evidence.
+absence_as_negative,v1tt_safety: absence_as_negative.

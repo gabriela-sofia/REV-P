@@ -1,0 +1,6 @@
+audit_id,source_file,rows_scanned,claim_violations,audit_status,sample_hits,review_only,automated_review,requires_external_observational_evidence_for_operational_claim,automatic_c3_promotion,c4_opened,can_create_operational_label,can_train_model,target_created,ground_truth_operational,formal_negative,dino_validates_event,hydromet_validates_event,hydromet_is_negative_evidence,absence_as_negative,notes
+V1UB_v1tx_dossier,protocol_c_case_dossier_v1tx.csv,9,0,CLAIM_CLEAN,,true,true,true,false,false,false,false,false,false,false,false,false,false,false,
+V1UB_v1tx_dossier_sections,protocol_c_case_dossier_sections_v1tx.csv,72,0,CLAIM_CLEAN,,true,true,true,false,false,false,false,false,false,false,false,false,false,false,
+V1UB_v1ty_matrix,protocol_c_final_evidence_matrix_v1ty.csv,9,0,CLAIM_CLEAN,,true,true,true,false,false,false,false,false,false,false,false,false,false,false,
+V1UB_v1tz_latex_fragments,protocol_c_tcc_latex_table_fragments_v1tz.csv,11,0,CLAIM_CLEAN,,true,true,true,false,false,false,false,false,false,false,false,false,false,false,
+V1UB_v1ua_narrative,protocol_c_tcc_narrative_draft_v1ua.csv,10,0,CLAIM_CLEAN,,true,true,true,false,false,false,false,false,false,false,false,false,false,false,

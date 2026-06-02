@@ -1,0 +1,8 @@
+field,description
+artifact_id,v1tw_manifest: artifact_id.
+stage,v1tw_manifest: stage.
+artifact_path,v1tw_manifest: artifact_path.
+rows,v1tw_manifest: rows.
+role,v1tw_manifest: role.
+review_only,v1tw_manifest: review_only.
+automated_review,v1tw_manifest: automated_review.

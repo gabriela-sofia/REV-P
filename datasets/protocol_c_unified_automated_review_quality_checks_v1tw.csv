@@ -1,0 +1,11 @@
+check_id,check_name,check_result,detail,review_only,automated_review
+V1TW_QC_00,reviewer_ab_present,PASS,A=9 B=9 cases=9,true,true
+V1TW_QC_01,consensus_present,PASS,consensus=9,true,true
+V1TW_QC_02,supervisor_present,PASS,supervisor=9,true,true
+V1TW_QC_03,single_flow_present,PASS,flow=9,true,true
+V1TW_QC_04,proof_present,PASS,proof=9,true,true
+V1TW_QC_05,no_guardrail_violations,PASS,violations=0,true,true
+V1TW_QC_06,no_automatic_c3,PASS,automatic_c3_promotion=false,true,true
+V1TW_QC_07,no_c4_opened,PASS,c4_opened=false,true,true
+V1TW_QC_08,no_labels_targets_ground_truth,PASS,all false,true,true
+V1TW_QC_09,external_required_for_operational_claim,PASS,true,true,true

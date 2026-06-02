@@ -1,0 +1,7 @@
+field,description
+case_id,v1to_sections: case_id.
+section_order,v1to_sections: section_order.
+section_key,v1to_sections: section_key.
+section_text,v1to_sections: section_text.
+review_only,v1to_sections: review_only.
+automated_review,v1to_sections: automated_review.

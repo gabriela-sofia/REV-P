@@ -1,0 +1,15 @@
+reviewer_profile,criterion_key,criterion_description,review_only,automated_review
+conservative,external_source_sufficient_for_review_only,Há fonte observacional externa independente suficiente?,true,true
+conservative,temporal_context_sufficient_for_review_only,A precisão temporal é suficiente para revisão?,true,true
+conservative,spatial_context_sufficient_for_review_only,A precisão espacial é suficiente para revisão?,true,true
+conservative,hydromet_context_useful,O contexto hidromet (INMET) é útil — apenas como contexto?,true,true
+conservative,dino_role_correctly_limited,O papel do DINO está corretamente limitado a representação?,true,true
+conservative,patch_linkage_sufficient_for_review_only,O vínculo patch/evento é suficiente para revisão?,true,true
+conservative,overclaim_risk,Risco de overclaim se o contexto for usado como prova.,true,true
+integrator,external_source_sufficient_for_review_only,Há fonte observacional externa independente suficiente?,true,true
+integrator,temporal_context_sufficient_for_review_only,A precisão temporal é suficiente para revisão?,true,true
+integrator,spatial_context_sufficient_for_review_only,A precisão espacial é suficiente para revisão?,true,true
+integrator,hydromet_context_useful,O contexto hidromet (INMET) é útil — apenas como contexto?,true,true
+integrator,dino_role_correctly_limited,O papel do DINO está corretamente limitado a representação?,true,true
+integrator,patch_linkage_sufficient_for_review_only,O vínculo patch/evento é suficiente para revisão?,true,true
+integrator,overclaim_risk,Risco de overclaim se o contexto for usado como prova.,true,true

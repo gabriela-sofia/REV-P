@@ -1,0 +1,11 @@
+metric_key,metric_value,review_only,automated_review
+dossiers_total,9,true,true
+files_audited,5,true,true
+claim_violations,0,true,true
+automatic_c3_promotions,0,true,true
+c4_opened_count,0,true,true
+labels_created,0,true,true
+targets_created,0,true,true
+ground_truth_operational_created,0,true,true
+formal_negatives_created,0,true,true
+final_status,TCC_DOSSIER_BUNDLE_CLAIM_SAFE_READY_FOR_TCC,true,true

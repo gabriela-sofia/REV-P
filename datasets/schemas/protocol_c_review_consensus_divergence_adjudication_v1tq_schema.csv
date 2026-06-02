@@ -1,0 +1,26 @@
+field,description
+consensus_id,v1tq_consensus: consensus_id.
+case_id,v1tq_consensus: case_id.
+reviewer_a_status,v1tq_consensus: reviewer_a_status.
+reviewer_b_status,v1tq_consensus: reviewer_b_status.
+consensus_status,v1tq_consensus: consensus_status.
+divergence_type,v1tq_consensus: divergence_type.
+supervisor_adjudication_required,v1tq_consensus: supervisor_adjudication_required.
+external_observational_evidence_required_for_operational_claim,v1tq_consensus: external_observational_evidence_required_for_operational_claim.
+recommended_next_action,v1tq_consensus: recommended_next_action.
+review_only,v1tq_consensus: review_only.
+automated_review,v1tq_consensus: automated_review.
+internal_review_automated_for_review_only,v1tq_consensus: internal_review_automated_for_review_only.
+requires_external_observational_evidence_for_operational_claim,v1tq_consensus: requires_external_observational_evidence_for_operational_claim.
+automatic_c3_promotion,v1tq_consensus: automatic_c3_promotion.
+c4_opened,v1tq_consensus: c4_opened.
+can_create_operational_label,v1tq_consensus: can_create_operational_label.
+can_train_model,v1tq_consensus: can_train_model.
+target_created,v1tq_consensus: target_created.
+ground_truth_operational,v1tq_consensus: ground_truth_operational.
+formal_negative,v1tq_consensus: formal_negative.
+dino_validates_event,v1tq_consensus: dino_validates_event.
+hydromet_validates_event,v1tq_consensus: hydromet_validates_event.
+hydromet_is_negative_evidence,v1tq_consensus: hydromet_is_negative_evidence.
+absence_as_negative,v1tq_consensus: absence_as_negative.
+notes,v1tq_consensus: notes.

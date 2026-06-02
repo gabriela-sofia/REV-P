@@ -1,0 +1,8 @@
+stat_key,stat_value
+proof_rows,9
+proof_complete,9
+validated_review_only,9
+not_operational_ground_truth,true
+not_automatic_c3,true
+not_c4,true
+stage,v1tu

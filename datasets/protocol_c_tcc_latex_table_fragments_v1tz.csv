@@ -1,0 +1,12 @@
+fragment_id,table_key,row_order,latex_row,review_only,automated_review
+V1TZ_HDR,evidence_matrix,0,Caso & Regiao & Externa & Hidromet & DINO & Patch & Decisao review-only \\,true,true
+V1TZ_0001,evidence_matrix,1,CASE\_PET\_C3E253E01A & PET & false & true & false & false & AUTOMATED\_SUPERVISOR\_VALIDATED\_FOR\_REVIEW\_ONLY\_USE \\,true,true
+V1TZ_0002,evidence_matrix,2,CASE\_PET\_A96F79E34C & PET & false & true & false & false & AUTOMATED\_SUPERVISOR\_VALIDATED\_FOR\_REVIEW\_ONLY\_USE \\,true,true
+V1TZ_0003,evidence_matrix,3,CASE\_PET\_85AA83E768 & PET & false & true & false & false & AUTOMATED\_SUPERVISOR\_VALIDATED\_FOR\_REVIEW\_ONLY\_USE \\,true,true
+V1TZ_0004,evidence_matrix,4,CASE\_PET\_3BB6F6D1E4 & PET & false & true & false & false & AUTOMATED\_SUPERVISOR\_VALIDATED\_FOR\_REVIEW\_ONLY\_USE \\,true,true
+V1TZ_0005,evidence_matrix,5,CASE\_PET\_7BE58263D6 & PET & false & true & false & false & AUTOMATED\_SUPERVISOR\_VALIDATED\_FOR\_REVIEW\_ONLY\_USE \\,true,true
+V1TZ_0006,evidence_matrix,6,CASE\_PET\_8840701F8A & PET & false & true & false & false & AUTOMATED\_SUPERVISOR\_VALIDATED\_FOR\_REVIEW\_ONLY\_USE \\,true,true
+V1TZ_0007,evidence_matrix,7,CASE\_PET\_517165F296 & PET & false & true & false & false & AUTOMATED\_SUPERVISOR\_VALIDATED\_FOR\_REVIEW\_ONLY\_USE \\,true,true
+V1TZ_0008,evidence_matrix,8,CASE\_PET\_2ADA2F240D & PET & false & true & false & false & AUTOMATED\_SUPERVISOR\_VALIDATED\_FOR\_REVIEW\_ONLY\_USE \\,true,true
+V1TZ_0009,evidence_matrix,9,CASE\_PET\_408C023151 & PET & false & true & false & false & AUTOMATED\_SUPERVISOR\_VALIDATED\_FOR\_REVIEW\_ONLY\_USE \\,true,true
+V1TZ_CAP,evidence_matrix,10,\caption{Matriz de evidencia review-only (revisao automatizada). DINO e hidromet sao contexto; ausencia nao e negativo; sem promocao automatica de C3 e C4 fechado.},true,true

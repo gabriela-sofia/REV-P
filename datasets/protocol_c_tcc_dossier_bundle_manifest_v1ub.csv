@@ -1,0 +1,6 @@
+artifact_id,stage,artifact_path,rows,role,review_only,automated_review
+V1UB_V1TX_DOSSIER,v1tx,datasets/protocol_c_case_dossier_v1tx.csv,9,dossier,true,true
+V1UB_V1TX_DOSSIER_SECTIONS,v1tx,datasets/protocol_c_case_dossier_sections_v1tx.csv,72,dossier_sections,true,true
+V1UB_V1TY_MATRIX,v1ty,datasets/protocol_c_final_evidence_matrix_v1ty.csv,9,matrix,true,true
+V1UB_V1TZ_LATEX_FRAGMENTS,v1tz,datasets/protocol_c_tcc_latex_table_fragments_v1tz.csv,11,latex_fragments,true,true
+V1UB_V1UA_NARRATIVE,v1ua,datasets/protocol_c_tcc_narrative_draft_v1ua.csv,10,narrative,true,true
