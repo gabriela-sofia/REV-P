@@ -1,0 +1,8 @@
+field,description
+gate_check_id,v1so_gate: gate_check_id.
+check_name,v1so_gate: check_name.
+status,v1so_gate: status.
+value,v1so_gate: value.
+severity,v1so_gate: severity.
+review_only,v1so_gate: review_only.
+notes,v1so_gate: notes.

@@ -1,0 +1,19 @@
+field,description
+download_id,v1sj_manifest: download_id.
+source_name,v1sj_manifest: source_name.
+region,v1sj_manifest: region.
+url,v1sj_manifest: url.
+downloaded,v1sj_manifest: downloaded.
+download_attempted,v1sj_manifest: download_attempted.
+raw_relative_path,v1sj_manifest: raw_relative_path.
+file_sha256_short,v1sj_manifest: file_sha256_short.
+file_size_bytes,v1sj_manifest: file_size_bytes.
+download_status,v1sj_manifest: download_status.
+review_only,v1sj_manifest: review_only.
+can_create_operational_label,v1sj_manifest: can_create_operational_label.
+can_train_model,v1sj_manifest: can_train_model.
+target_created,v1sj_manifest: target_created.
+ground_truth_operational,v1sj_manifest: ground_truth_operational.
+formal_negative,v1sj_manifest: formal_negative.
+blocked_reason,v1sj_manifest: blocked_reason.
+notes,v1sj_manifest: notes.

@@ -1,0 +1,5 @@
+gate_check_id,check_name,status,value,severity,review_only,notes
+V1SO_GC00,endpoints_configured,PASS,6,high,true,
+V1SO_GC01,downloads_attempted,FAIL,enabled=False downloaded=0,medium,true,
+V1SO_GC02,intake_drafts_generated,PASS,0,medium,true,
+V1SO_GC03,license_review_pending,PASS,21,medium,true,

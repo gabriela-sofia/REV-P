@@ -1,0 +1,6 @@
+check_id,check_name,expected,observed,passed,severity,notes
+QC01,endpoints_configured,>=1,6,true,high,
+QC02,labels_created_zero,0,0,true,critical,
+QC03,targets_created_zero,0,0,true,critical,
+QC04,ground_truth_operational_zero,0,0,true,critical,
+QC05,formal_negatives_zero,0,0,true,critical,

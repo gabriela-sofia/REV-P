@@ -1,0 +1,5 @@
+queue_id,source_name,region,endpoint_url,query_type,auto_download_allowed,requires_manual_query,priority,review_only,blocked_reason,notes
+V1SJ_Q000,ANA HidroWeb,ALL,https://www.snirh.gov.br/hidroweb/seriesHistoricas,WEB_FORM,false,true,P0,true,ANA_MANUAL_QUERY_REQUIRED,HidroWeb requer consulta interativa por estacao/periodo
+V1SJ_Q001,ANA Telemetria,RECIFE,https://telemetriaws1.ana.gov.br/ServiceANA.asmx/DadosHidrometeorologicos?codEstacao=39270000&dataInicio=01/01/2020&dataFim=31/12/2024,SOAP_API,true,false,P0,true,,Exemplo estacao Recife; pode precisar ajuste de codigo
+V1SJ_Q002,ANA Telemetria,PET,https://telemetriaws1.ana.gov.br/ServiceANA.asmx/DadosHidrometeorologicos?codEstacao=58974000&dataInicio=01/01/2020&dataFim=31/12/2024,SOAP_API,true,false,P1,true,,Exemplo estacao Piabanha/Petropolis
+V1SJ_Q003,ANA Telemetria,CURITIBA,https://telemetriaws1.ana.gov.br/ServiceANA.asmx/DadosHidrometeorologicos?codEstacao=65017006&dataInicio=01/01/2020&dataFim=31/12/2024,SOAP_API,true,false,P1,true,,Exemplo estacao Bacia Iguacu/Curitiba

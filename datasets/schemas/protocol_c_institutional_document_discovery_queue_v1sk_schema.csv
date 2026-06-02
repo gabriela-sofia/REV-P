@@ -1,0 +1,19 @@
+field,description
+discovery_id,v1sk_queue: discovery_id.
+region,v1sk_queue: region.
+source_name,v1sk_queue: source_name.
+source_family,v1sk_queue: source_family.
+hazard_type,v1sk_queue: hazard_type.
+evidence_need,v1sk_queue: evidence_need.
+suggested_query,v1sk_queue: suggested_query.
+candidate_url,v1sk_queue: candidate_url.
+domain,v1sk_queue: domain.
+allowed_domain,v1sk_queue: allowed_domain.
+auto_download_allowed,v1sk_queue: auto_download_allowed.
+requires_manual_review,v1sk_queue: requires_manual_review.
+priority,v1sk_queue: priority.
+blocks_c3,v1sk_queue: blocks_c3.
+blocks_c4,v1sk_queue: blocks_c4.
+review_only,v1sk_queue: review_only.
+blocked_reason,v1sk_queue: blocked_reason.
+notes,v1sk_queue: notes.

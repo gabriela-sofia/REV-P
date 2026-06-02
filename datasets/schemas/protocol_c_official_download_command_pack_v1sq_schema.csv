@@ -1,0 +1,15 @@
+field,description
+step_id,v1sq_pack: step_id.
+stage,v1sq_pack: stage.
+command,v1sq_pack: command.
+purpose,v1sq_pack: purpose.
+downloads_enabled,v1sq_pack: downloads_enabled.
+produces,v1sq_pack: produces.
+safety_note,v1sq_pack: safety_note.
+review_only,v1sq_pack: review_only.
+can_create_operational_label,v1sq_pack: can_create_operational_label.
+can_train_model,v1sq_pack: can_train_model.
+target_created,v1sq_pack: target_created.
+ground_truth_operational,v1sq_pack: ground_truth_operational.
+formal_negative,v1sq_pack: formal_negative.
+notes,v1sq_pack: notes.

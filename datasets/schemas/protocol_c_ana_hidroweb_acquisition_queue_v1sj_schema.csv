@@ -1,0 +1,12 @@
+field,description
+queue_id,v1sj_queue: queue_id.
+source_name,v1sj_queue: source_name.
+region,v1sj_queue: region.
+endpoint_url,v1sj_queue: endpoint_url.
+query_type,v1sj_queue: query_type.
+auto_download_allowed,v1sj_queue: auto_download_allowed.
+requires_manual_query,v1sj_queue: requires_manual_query.
+priority,v1sj_queue: priority.
+review_only,v1sj_queue: review_only.
+blocked_reason,v1sj_queue: blocked_reason.
+notes,v1sj_queue: notes.

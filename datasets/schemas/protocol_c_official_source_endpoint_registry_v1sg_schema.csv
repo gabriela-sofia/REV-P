@@ -1,0 +1,20 @@
+field,description
+endpoint_id,v1sg_endpoint_registry: endpoint_id.
+source_name,v1sg_endpoint_registry: source_name.
+source_family,v1sg_endpoint_registry: source_family.
+base_url,v1sg_endpoint_registry: base_url.
+domain,v1sg_endpoint_registry: domain.
+endpoint_type,v1sg_endpoint_registry: endpoint_type.
+region_scope,v1sg_endpoint_registry: region_scope.
+hazard_scope,v1sg_endpoint_registry: hazard_scope.
+expected_file_types,v1sg_endpoint_registry: expected_file_types.
+download_strategy,v1sg_endpoint_registry: download_strategy.
+requires_manual_url,v1sg_endpoint_registry: requires_manual_url.
+allowed_domain,v1sg_endpoint_registry: allowed_domain.
+robots_status,v1sg_endpoint_registry: robots_status.
+rate_limit_seconds,v1sg_endpoint_registry: rate_limit_seconds.
+enabled_by_default,v1sg_endpoint_registry: enabled_by_default.
+priority,v1sg_endpoint_registry: priority.
+review_only,v1sg_endpoint_registry: review_only.
+blocked_reason,v1sg_endpoint_registry: blocked_reason.
+notes,v1sg_endpoint_registry: notes.

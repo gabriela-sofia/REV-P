@@ -1,0 +1,23 @@
+field,description
+intake_draft_id,v1sm_draft: intake_draft_id.
+document_id,v1sm_draft: document_id.
+source_name,v1sm_draft: source_name.
+source_family,v1sm_draft: source_family.
+region,v1sm_draft: region.
+hazard_type,v1sm_draft: hazard_type.
+event_date_text,v1sm_draft: event_date_text.
+event_location_text,v1sm_draft: event_location_text.
+url_or_reference,v1sm_draft: url_or_reference.
+evidence_type,v1sm_draft: evidence_type.
+temporal_precision_claim,v1sm_draft: temporal_precision_claim.
+spatial_precision_claim,v1sm_draft: spatial_precision_claim.
+license_note,v1sm_draft: license_note.
+manual_review_required,v1sm_draft: manual_review_required.
+intake_status,v1sm_draft: intake_status.
+review_only,v1sm_draft: review_only.
+can_create_operational_label,v1sm_draft: can_create_operational_label.
+can_train_model,v1sm_draft: can_train_model.
+target_created,v1sm_draft: target_created.
+ground_truth_operational,v1sm_draft: ground_truth_operational.
+formal_negative,v1sm_draft: formal_negative.
+notes,v1sm_draft: notes.

@@ -1,0 +1,22 @@
+field,description
+download_id,v1sh_manifest: download_id.
+source_name,v1sh_manifest: source_name.
+year,v1sh_manifest: year.
+url,v1sh_manifest: url.
+domain,v1sh_manifest: domain.
+downloaded,v1sh_manifest: downloaded.
+download_attempted,v1sh_manifest: download_attempted.
+raw_relative_path,v1sh_manifest: raw_relative_path.
+file_sha256_short,v1sh_manifest: file_sha256_short.
+file_size_bytes,v1sh_manifest: file_size_bytes.
+content_type,v1sh_manifest: content_type.
+http_status,v1sh_manifest: http_status.
+download_status,v1sh_manifest: download_status.
+review_only,v1sh_manifest: review_only.
+can_create_operational_label,v1sh_manifest: can_create_operational_label.
+can_train_model,v1sh_manifest: can_train_model.
+target_created,v1sh_manifest: target_created.
+ground_truth_operational,v1sh_manifest: ground_truth_operational.
+formal_negative,v1sh_manifest: formal_negative.
+blocked_reason,v1sh_manifest: blocked_reason.
+notes,v1sh_manifest: notes.

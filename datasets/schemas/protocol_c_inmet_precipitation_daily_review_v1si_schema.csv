@@ -1,0 +1,19 @@
+field,description
+record_id,v1si_precip: record_id.
+source_name,v1si_precip: source_name.
+station_code,v1si_precip: station_code.
+station_name,v1si_precip: station_name.
+uf,v1si_precip: uf.
+region_candidate,v1si_precip: region_candidate.
+date,v1si_precip: date.
+precipitation_mm,v1si_precip: precipitation_mm.
+temporal_precision,v1si_precip: temporal_precision.
+spatial_precision,v1si_precip: spatial_precision.
+provenance_status,v1si_precip: provenance_status.
+review_only,v1si_precip: review_only.
+can_create_operational_label,v1si_precip: can_create_operational_label.
+can_train_model,v1si_precip: can_train_model.
+target_created,v1si_precip: target_created.
+ground_truth_operational,v1si_precip: ground_truth_operational.
+formal_negative,v1si_precip: formal_negative.
+notes,v1si_precip: notes.

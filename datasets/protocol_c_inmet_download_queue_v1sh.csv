@@ -1,0 +1,8 @@
+queue_id,source_name,year,url,domain,priority,expected_file_type,download_enabled,review_only,notes
+V1SH_Q0000,INMET,2020,https://portal.inmet.gov.br/uploads/dadoshistoricos/2020.zip,portal.inmet.gov.br,P0,ZIP,false,true,
+V1SH_Q0001,INMET,2021,https://portal.inmet.gov.br/uploads/dadoshistoricos/2021.zip,portal.inmet.gov.br,P0,ZIP,false,true,
+V1SH_Q0002,INMET,2022,https://portal.inmet.gov.br/uploads/dadoshistoricos/2022.zip,portal.inmet.gov.br,P0,ZIP,false,true,
+V1SH_Q0003,INMET,2023,https://portal.inmet.gov.br/uploads/dadoshistoricos/2023.zip,portal.inmet.gov.br,P0,ZIP,false,true,
+V1SH_Q0004,INMET,2024,https://portal.inmet.gov.br/uploads/dadoshistoricos/2024.zip,portal.inmet.gov.br,P0,ZIP,false,true,
+V1SH_Q0005,INMET,2025,https://portal.inmet.gov.br/uploads/dadoshistoricos/2025.zip,portal.inmet.gov.br,P0,ZIP,false,true,
+V1SH_Q0006,INMET,2026,https://portal.inmet.gov.br/uploads/dadoshistoricos/2026.zip,portal.inmet.gov.br,P0,ZIP,false,true,

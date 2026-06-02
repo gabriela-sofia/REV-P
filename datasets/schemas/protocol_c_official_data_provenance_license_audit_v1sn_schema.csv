@@ -1,0 +1,19 @@
+field,description
+audit_id,v1sn_audit: audit_id.
+source_name,v1sn_audit: source_name.
+source_block,v1sn_audit: source_block.
+domain,v1sn_audit: domain.
+allowed_domain,v1sn_audit: allowed_domain.
+downloaded,v1sn_audit: downloaded.
+provenance_status,v1sn_audit: provenance_status.
+license_status,v1sn_audit: license_status.
+can_use_in_tcc,v1sn_audit: can_use_in_tcc.
+manual_license_review_required,v1sn_audit: manual_license_review_required.
+review_only,v1sn_audit: review_only.
+can_create_operational_label,v1sn_audit: can_create_operational_label.
+can_train_model,v1sn_audit: can_train_model.
+target_created,v1sn_audit: target_created.
+ground_truth_operational,v1sn_audit: ground_truth_operational.
+formal_negative,v1sn_audit: formal_negative.
+blocked_reason,v1sn_audit: blocked_reason.
+notes,v1sn_audit: notes.

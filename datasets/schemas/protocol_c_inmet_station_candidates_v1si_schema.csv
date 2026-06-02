@@ -1,0 +1,11 @@
+field,description
+station_id,v1si_stations: station_id.
+station_code,v1si_stations: station_code.
+station_name,v1si_stations: station_name.
+uf,v1si_stations: uf.
+latitude,v1si_stations: latitude.
+longitude,v1si_stations: longitude.
+region_candidate,v1si_stations: region_candidate.
+source_file,v1si_stations: source_file.
+review_only,v1si_stations: review_only.
+notes,v1si_stations: notes.

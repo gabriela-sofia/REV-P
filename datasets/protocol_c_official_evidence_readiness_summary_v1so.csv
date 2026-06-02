@@ -1,0 +1,8 @@
+stat_key,stat_value
+readiness_status,OFFICIAL_EVIDENCE_DOWNLOADS_DISABLED_QUEUE_READY
+endpoints_ready,6
+files_downloaded,0
+intake_drafts,0
+license_review_required,21
+downloads_enabled,false
+stage,v1so

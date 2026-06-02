@@ -1,0 +1,7 @@
+stat_key,stat_value
+chain_steps,10
+default_downloads_enabled,false
+powershell_emitted,true
+max_files,20
+max_bytes_per_file,262144000
+stage,v1sq

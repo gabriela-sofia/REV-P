@@ -1,0 +1,12 @@
+endpoint_id,source_name,source_family,base_url,domain,endpoint_type,region_scope,hazard_scope,expected_file_types,download_strategy,requires_manual_url,allowed_domain,robots_status,rate_limit_seconds,enabled_by_default,priority,review_only,blocked_reason,notes
+V1SG_EP_000,INMET dados historicos anuais,OFFICIAL_HYDROMETEOROLOGICAL,https://portal.inmet.gov.br/uploads/dadoshistoricos/,portal.inmet.gov.br,FILE_LISTING,ALL,HYDROMETEOROLOGICAL,ZIP/CSV,ANNUAL_ZIP_DOWNLOAD,false,true,NOT_CHECKED,2,true,P0,true,,
+V1SG_EP_001,ANA HidroWeb series,OFFICIAL_HYDROMETEOROLOGICAL,https://www.snirh.gov.br/hidroweb/seriesHistoricas,www.snirh.gov.br,WEB_FORM,ALL,HYDROMETEOROLOGICAL,CSV,MANUAL_QUERY_OR_API,true,true,NOT_CHECKED,2,true,P0,true,,
+V1SG_EP_002,ANA Telemetria,OFFICIAL_HYDROMETEOROLOGICAL,https://telemetriaws1.ana.gov.br/ServiceANA.asmx,telemetriaws1.ana.gov.br,SOAP_API,ALL,HYDROMETEOROLOGICAL,XML/CSV,API_CALL,false,true,NOT_CHECKED,2,true,P1,true,,
+V1SG_EP_003,CEMADEN alertas,OFFICIAL_HYDROMETEOROLOGICAL,https://www.gov.br/cemaden/pt-br,www.gov.br,WEB_PORTAL,ALL,HYDROMETEOROLOGICAL,HTML/PDF,MANUAL_DISCOVERY,true,true,NOT_CHECKED,2,false,P1,true,,
+V1SG_EP_004,SGB/CPRM RIGEO,OFFICIAL_GEOLOGICAL,https://rigeo.sgb.gov.br/,rigeo.sgb.gov.br,WEB_PORTAL,PET,GEOLOGICAL,PDF/ZIP,MANUAL_DISCOVERY,true,true,NOT_CHECKED,2,false,P1,true,,
+V1SG_EP_005,IBGE limites municipais,SCIENTIFIC_DATASET,https://servicodados.ibge.gov.br/api/v3/malhas/municipios/,servicodados.ibge.gov.br,REST_API,ALL,TERRITORIAL,JSON/GEOJSON,API_CALL,false,true,NOT_CHECKED,2,true,P2,true,,
+V1SG_EP_006,Defesa Civil PE/Recife,OFFICIAL_CIVIL_DEFENSE,,,UNKNOWN,RECIFE,FLOOD,PDF/HTML,CONFIG_REQUIRED,true,NOT_CONFIGURED,NOT_CHECKED,2,false,P0,true,ENDPOINT_CONFIG_REQUIRED,
+V1SG_EP_007,Defesa Civil RJ/Petropolis,OFFICIAL_CIVIL_DEFENSE,,,UNKNOWN,PET,LANDSLIDE,PDF/HTML,CONFIG_REQUIRED,true,NOT_CONFIGURED,NOT_CHECKED,2,false,P0,true,ENDPOINT_CONFIG_REQUIRED,
+V1SG_EP_008,Defesa Civil PR/Curitiba,OFFICIAL_CIVIL_DEFENSE,,,UNKNOWN,CURITIBA,FLOOD,PDF/HTML,CONFIG_REQUIRED,true,NOT_CONFIGURED,NOT_CHECKED,2,false,P1,true,ENDPOINT_CONFIG_REQUIRED,
+V1SG_EP_009,Diario Oficial PE,OFFICIAL_GOVERNMENT_PUBLICATION,,,UNKNOWN,RECIFE,INSTITUTIONAL,PDF/HTML,CONFIG_REQUIRED,true,NOT_CONFIGURED,NOT_CHECKED,2,false,P1,true,ENDPOINT_CONFIG_REQUIRED,
+V1SG_EP_010,Diario Oficial RJ,OFFICIAL_GOVERNMENT_PUBLICATION,,,UNKNOWN,PET,INSTITUTIONAL,PDF/HTML,CONFIG_REQUIRED,true,NOT_CONFIGURED,NOT_CHECKED,2,false,P1,true,ENDPOINT_CONFIG_REQUIRED,

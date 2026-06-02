@@ -1,0 +1,7 @@
+artifact_id,stage,artifact_name,exists,row_count,role,notes
+V1SP_A01,v1sg,endpoint_registry,true,11,endpoints,
+V1SP_A02,v1sh,inmet_downloads,true,7,inmet_data,
+V1SP_A03,v1sj,ana_downloads,true,4,ana_data,
+V1SP_A04,v1sk,institutional_queue,true,10,institutional_discovery,
+V1SP_A05,v1sm,intake_draft,true,0,intake_adapter,
+V1SP_A06,v1sn,provenance_audit,true,21,license_audit,

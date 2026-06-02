@@ -1,0 +1,9 @@
+stat_key,stat_value
+queue_size,7
+downloads_enabled,false
+files_downloaded,0
+already_exists_hashed,7
+partial_or_empty_files,0
+total_bytes_downloaded,0
+links_discovered,27
+stage,v1sh

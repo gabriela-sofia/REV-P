@@ -1,0 +1,7 @@
+metric,value,interpretation_note
+endpoints_ready,6,fontes oficiais configuradas
+files_downloaded,0,arquivos oficiais baixados
+intake_draft_rows,0,drafts de intake review-only
+labels_created,0,nenhum label operacional
+ground_truth_operational,0,nenhum ground truth operacional
+final_status,OFFICIAL_ACQUISITION_QUEUE_READY_DOWNLOADS_DISABLED,estado da aquisicao oficial

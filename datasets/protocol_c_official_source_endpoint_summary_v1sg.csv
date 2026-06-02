@@ -1,0 +1,5 @@
+stat_key,stat_value
+endpoints_total,11
+endpoints_ready,6
+endpoints_config_required,5
+stage,v1sg

@@ -1,0 +1,10 @@
+field,description
+orchestrator_id,v1sl_manifest: orchestrator_id.
+source_block,v1sl_manifest: source_block.
+source_name,v1sl_manifest: source_name.
+download_status,v1sl_manifest: download_status.
+downloaded,v1sl_manifest: downloaded.
+file_size_bytes,v1sl_manifest: file_size_bytes.
+requires_manual,v1sl_manifest: requires_manual.
+review_only,v1sl_manifest: review_only.
+notes,v1sl_manifest: notes.

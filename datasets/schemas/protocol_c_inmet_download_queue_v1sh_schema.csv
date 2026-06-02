@@ -1,0 +1,11 @@
+field,description
+queue_id,v1sh_queue: queue_id.
+source_name,v1sh_queue: source_name.
+year,v1sh_queue: year.
+url,v1sh_queue: url.
+domain,v1sh_queue: domain.
+priority,v1sh_queue: priority.
+expected_file_type,v1sh_queue: expected_file_type.
+download_enabled,v1sh_queue: download_enabled.
+review_only,v1sh_queue: review_only.
+notes,v1sh_queue: notes.
