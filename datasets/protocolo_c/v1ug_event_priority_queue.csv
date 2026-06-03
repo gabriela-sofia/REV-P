@@ -1,0 +1,4 @@
+rank,event_id,region,city,review_package_status,blocking_dimensions_count,fail_gap_count,pass_gap_count,formal_request_count,priority_score,recommended_next_step,can_create_ground_reference,can_create_training_label
+1,REC_2022_05_24_30,REC,Recife,WAITING_OBSERVED_GEOMETRY,3,4,6,3,92,Enviar pedido formal para geometria observada (Defesa Civil/SGB/COMPDEC),false,false
+2,PET_2022_02_15,PET,Petrópolis,WAITING_PHENOMENON_SEPARATION,4,6,5,5,52,Solicitar dados com separação inundação/deslizamento (SGB_CPRM/DRM_RJ),false,false
+3,PET_2024_03_21_28,PET,Petrópolis,WAITING_PHENOMENON_SEPARATION,4,6,5,3,49,Solicitar dados com separação inundação/deslizamento (SGB_CPRM/DRM_RJ),false,false

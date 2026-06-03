@@ -1,0 +1,103 @@
+## v1ug — Supervisor Review Policy
+## Define os itens obrigatórios da revisão supervisora futura.
+## Revisão supervisora não é executada nesta etapa — apenas estruturada.
+
+protocol_version: v1ug
+supervisor_review_completed: false
+ground_truth_operational: false
+can_create_ground_reference: false
+can_create_training_label: false
+
+checklist_items:
+  - item_id: SR_01
+    item: "Fonte é oficial e rastreável?"
+    reviewer_role: supervisor
+    blocking_if_missing: true
+    decision_options: [SIM, NAO, INCERTO]
+
+  - item_id: SR_02
+    item: "Licença permite uso acadêmico sem redistribuição?"
+    reviewer_role: supervisor
+    blocking_if_missing: true
+    decision_options: [SIM, NAO, NEEDS_REVIEW]
+
+  - item_id: SR_03
+    item: "Data do evento está clara e documentada?"
+    reviewer_role: supervisor
+    blocking_if_missing: true
+    decision_options: [SIM, NAO, PARCIAL]
+
+  - item_id: SR_04
+    item: "Fenômeno é identificável (inundação, alagamento, deslizamento)?"
+    reviewer_role: supervisor
+    blocking_if_missing: true
+    decision_options: [SIM, NAO, MISTO_NAO_SEPARADO]
+
+  - item_id: SR_05
+    item: "Separação inundação/deslizamento existe na evidência?"
+    reviewer_role: supervisor
+    blocking_if_missing: true
+    decision_options: [SIM, NAO, PARCIAL]
+
+  - item_id: SR_06
+    item: "Localidade é suficientemente precisa (bairro/rua/coordenada)?"
+    reviewer_role: supervisor
+    blocking_if_missing: true
+    decision_options: [SIM, NAO, IMPRECISA]
+
+  - item_id: SR_07
+    item: "Geometria observada existe (polígono/ponto de ocorrência)?"
+    reviewer_role: supervisor
+    blocking_if_missing: true
+    decision_options: [SIM, NAO, PARCIAL]
+
+  - item_id: SR_08
+    item: "CRS da geometria está definido?"
+    reviewer_role: supervisor
+    blocking_if_missing: true
+    decision_options: [SIM, NAO, DESCONHECIDO]
+
+  - item_id: SR_09
+    item: "Geometria cruza área urbana afetada conforme relato oficial?"
+    reviewer_role: supervisor
+    blocking_if_missing: true
+    decision_options: [SIM, NAO, NAO_VERIFICAVEL]
+
+  - item_id: SR_10
+    item: "Geometria pode ser cruzada com patch Sentinel (overlay futuro)?"
+    reviewer_role: supervisor
+    blocking_if_missing: true
+    decision_options: [SIM, NAO, PARCIAL]
+
+  - item_id: SR_11
+    item: "Incerteza espacial da evidência é aceitável para o uso pretendido?"
+    reviewer_role: supervisor
+    blocking_if_missing: false
+    decision_options: [SIM, NAO, AVALIAR]
+
+  - item_id: SR_12
+    item: "Há risco de leakage com patches de validação/treinamento?"
+    reviewer_role: supervisor
+    blocking_if_missing: true
+    decision_options: [SIM_RISCO, NAO_RISCO, AVALIAR]
+
+  - item_id: SR_13
+    item: "Patch candidato identificado para cruzamento?"
+    reviewer_role: supervisor
+    blocking_if_missing: false
+    decision_options: [SIM, NAO, EM_ANALISE]
+
+  - item_id: SR_14
+    item: "Pode virar ground reference?"
+    reviewer_role: supervisor
+    blocking_if_missing: false
+    decision_options: [SIM_COM_RESSALVAS, NAO, INCERTO]
+    note: "Requer todos SR_01-SR_13 positivos + overlay + aprovação"
+
+  - item_id: SR_15
+    item: "Pode virar label de treinamento?"
+    reviewer_role: supervisor
+    blocking_if_missing: false
+    default_response: NAO
+    decision_options: [NAO]
+    note: "Resposta padrão: NAO nesta etapa. Label só após ground reference validado."

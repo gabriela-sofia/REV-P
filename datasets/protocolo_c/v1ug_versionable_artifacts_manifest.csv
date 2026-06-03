@@ -1,0 +1,21 @@
+artifact_id,artifact_path,artifact_type,protocol_version,sha256_prefix,file_size_bytes,is_versionable,reason
+ART_v1ug_0000,configs/protocolo_c/v1ug_formal_request_targets.yaml,config,v1ug,41d060debe4a5ff5,4852,true,Safe for git
+ART_v1ug_0001,configs/protocolo_c/v1ug_ground_reference_readiness_policy.yaml,config,v1ug,dbae053b7023e78c,2639,true,Safe for git
+ART_v1ug_0002,configs/protocolo_c/v1ug_review_package_policy.yaml,config,v1ug,83858edf7019180a,1724,true,Safe for git
+ART_v1ug_0003,configs/protocolo_c/v1ug_supervisor_review_policy.yaml,config,v1ug,5d56a5b6e3c0ade0,3381,true,Safe for git
+ART_v1ug_0004,datasets/protocolo_c/v1ug_completion_report.md,report,v1ug,7a5a00cacac8c5c4,4221,true,Safe for git
+ART_v1ug_0005,datasets/protocolo_c/v1ug_event_gap_matrix.csv,dataset,v1ug,bfd079da9805146b,6957,true,Safe for git
+ART_v1ug_0006,datasets/protocolo_c/v1ug_event_priority_queue.csv,dataset,v1ug,eb939e3f400c2d83,698,true,Safe for git
+ART_v1ug_0007,datasets/protocolo_c/v1ug_event_review_package_registry.csv,dataset,v1ug,0698113cbbbffbbc,1703,true,Safe for git
+ART_v1ug_0008,datasets/protocolo_c/v1ug_formal_request_queue.csv,dataset,v1ug,f03dde2746bd8454,5332,true,Safe for git
+ART_v1ug_0009,datasets/protocolo_c/v1ug_ground_reference_readiness_matrix.csv,dataset,v1ug,a1d60f58cc4b90bd,998,true,Safe for git
+ART_v1ug_0010,datasets/protocolo_c/v1ug_supervisor_review_checklist.csv,dataset,v1ug,32f59243c6ecff06,6678,true,Safe for git
+ART_v1ug_0011,datasets/protocolo_c/v1ug_versionable_artifacts_manifest.csv,manifest,v1ug,d42f7600c334c3de,2585,true,Safe for git
+ART_v1ug_0012,scripts/protocolo_c/revp_v1ug_completion_report.py,script,v1ug,ff59d4a18c68a30f,6953,true,Safe for git
+ART_v1ug_0013,scripts/protocolo_c/revp_v1ug_event_gap_matrix_builder.py,script,v1ug,780906a956b7690a,7723,true,Safe for git
+ART_v1ug_0014,scripts/protocolo_c/revp_v1ug_event_priority_queue.py,script,v1ug,e1bec275e0c87cb7,4253,true,Safe for git
+ART_v1ug_0015,scripts/protocolo_c/revp_v1ug_formal_request_finalizer.py,script,v1ug,b1e34d82a94e9dd5,4337,true,Safe for git
+ART_v1ug_0016,scripts/protocolo_c/revp_v1ug_ground_reference_readiness_matrix.py,script,v1ug,240451c5481b0b9a,5352,true,Safe for git
+ART_v1ug_0017,scripts/protocolo_c/revp_v1ug_human_review_package_builder.py,script,v1ug,038c907acd37e513,7361,true,Safe for git
+ART_v1ug_0018,scripts/protocolo_c/revp_v1ug_supervisor_review_checklist.py,script,v1ug,cc10e3f33b022e34,3377,true,Safe for git
+ART_v1ug_0019,scripts/protocolo_c/revp_v1ug_versionable_artifacts_manifest.py,script,v1ug,cfee1388733e2cbd,3727,true,Safe for git

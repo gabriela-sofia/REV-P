@@ -1,0 +1,96 @@
+## v1ug — Formal Request Targets
+## Define as instituições-alvo para pedidos formais e os dados solicitados.
+
+protocol_version: v1ug
+ground_truth_operational: false
+can_create_ground_reference: false
+formal_request_only: true
+
+institutions:
+  - institution_id: SGB_CPRM
+    name: "Serviço Geológico do Brasil (SGB/CPRM)"
+    applicable_events: [PET_2022_02_15]
+    priority: 1
+    requested_data:
+      - geodados georreferenciados de campo (pós-desastre Petrópolis 2022)
+      - anexos vetoriais dos relatórios técnicos
+      - SHP, GPKG, GeoJSON, KMZ, KML
+      - planilhas GPS com coordenadas de pontos de observação
+      - separação por fenômeno (inundação x deslizamento x acúmulo de detritos)
+      - data e localidade de cada ponto/polígono
+      - metadados de levantamento (data, equipe, equipamento, CRS)
+    requested_formats: [SHP, GPKG, GeoJSON, KMZ, KML, CSV, XLSX, PDF]
+    gates_to_resolve: [phenomenon_separated, observed_geometry_available, geometry_crs_available]
+    contact_url: "https://www.sgb.gov.br/"
+    sensitive_data_policy: "Não versionar dado pessoal (nome de vítima, CPF, endereço individual)"
+
+  - institution_id: DRM_RJ_NADE
+    name: "DRM-RJ / NADE — Departamento de Recursos Minerais do Rio de Janeiro"
+    applicable_events: [PET_2022_02_15]
+    priority: 1
+    package_ref: "PKG_FR_PET_001"
+    requested_data:
+      - cartografia de inundação e deslizamento (polígonos/pontos)
+      - pontos/polígonos de ocorrência com atributos
+      - atributos: data, fenômeno, localidade, severidade
+      - CRS dos dados vetoriais
+    requested_formats: [SHP, GPKG, GeoJSON, KMZ, KML, CSV]
+    gates_to_resolve: [observed_geometry_available, phenomenon_separated, geometry_crs_available]
+    contact_url: "https://www.drm.rj.gov.br/"
+    sensitive_data_policy: "Uso acadêmico; não redistribuição de dados sensíveis"
+
+  - institution_id: DEFESA_CIVIL_PETROPOLIS
+    name: "Defesa Civil / COMPDEC Municipal de Petrópolis"
+    applicable_events: [PET_2022_02_15, PET_2024_03_21_28]
+    priority: 1
+    requested_data:
+      - ocorrências georreferenciadas (bairros, ruas, coordenadas se disponíveis)
+      - registros de inundação, alagamento, deslizamento por endereço/localidade
+      - pontos de atendimento emergencial georreferenciados
+      - mapas de interdição ou evacuação com localização
+      - boletins técnicos do evento
+    requested_formats: [SHP, GPKG, KMZ, KML, CSV, XLSX, PDF]
+    gates_to_resolve: [locality_confirmed, observed_geometry_available, phenomenon_type_confirmed]
+    sensitive_data_policy: "Não publicar dado pessoal de vítimas (CPF, nome individual, telefone)"
+
+  - institution_id: COMPDEC_RECIFE_PE
+    name: "COMPDEC / Defesa Civil de Pernambuco — Recife"
+    applicable_events: [REC_2022_05_24_30]
+    priority: 1
+    requested_data:
+      - boletins COMPDEC do período 24–30/05/2022
+      - ocorrências georreferenciadas (bairros, ruas, pontos)
+      - pontos/polígonos de alagamento/inundação
+      - data, hora e localidade por registro
+      - CRS dos arquivos vetoriais se disponíveis
+    requested_formats: [SHP, GPKG, KMZ, KML, CSV, XLSX, PDF]
+    gates_to_resolve: [locality_confirmed, observed_geometry_available, phenomenon_type_confirmed]
+    sensitive_data_policy: "Não publicar dado pessoal; não redistribuição de dado restrito"
+
+  - institution_id: CEMADEN
+    name: "Cemaden — Centro Nacional de Monitoramento e Alertas de Desastres Naturais"
+    applicable_events: [PET_2022_02_15, PET_2024_03_21_28, REC_2022_05_24_30]
+    priority: 2
+    requested_data:
+      - boletins e relatórios de evento por município/data
+      - séries de chuva de pluviômetros automáticos no período do evento
+      - alertas emitidos no período
+      - metadados de estações (código, coordenadas, tipo)
+      - dados de estações hidrológicas/geotécnicas quando disponíveis
+    requested_formats: [CSV, XLSX, JSON, PDF]
+    gates_to_resolve: [hydromet_temporal_anchor, official_station_coordinates]
+    sensitive_data_policy: "Dados públicos — uso acadêmico sem redistribuição de dados restritos"
+
+  - institution_id: ANA_HIDROWEB
+    name: "ANA — Agência Nacional de Águas / HidroWeb"
+    applicable_events: [PET_2022_02_15, PET_2024_03_21_28, REC_2022_05_24_30]
+    priority: 2
+    requested_data:
+      - séries hidrológicas de estações fluviométricas/pluviométricas relevantes
+      - código e nome da estação, bacia, município
+      - nível d'água, vazão ou precipitação conforme disponível
+      - período do evento e janela -7/+7 dias
+      - metadados de estação (coordenadas, altitude, CRS)
+    requested_formats: [CSV, XLSX, JSON]
+    gates_to_resolve: [hydromet_temporal_anchor, official_station_coordinates]
+    sensitive_data_policy: "Dados públicos ANA — uso acadêmico"

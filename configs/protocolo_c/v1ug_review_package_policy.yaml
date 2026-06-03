@@ -1,0 +1,51 @@
+## v1ug — Review Package Policy
+## Define critérios para montagem de pacotes de revisão humana por evento.
+## Nenhum pacote promove ground reference automaticamente.
+
+protocol_version: v1ug
+ground_truth_operational: false
+can_create_ground_reference: false
+can_create_training_label: false
+review_package_only: true
+
+## Campos obrigatórios no pacote de revisão
+required_package_fields:
+  - event_id
+  - region
+  - city
+  - event_start
+  - event_end
+  - hydromet_anchor_status
+  - has_official_station_series
+  - has_observed_geometry
+  - has_phenomenon_separation
+  - reviewer_task
+  - next_required_evidence
+
+## Estados de pacote
+package_status_definitions:
+  READY_FOR_DOCUMENT_REVIEW:
+    description: "Evidência documental disponível para revisão humana (PDFs, relatórios, boletins)"
+    allows_promotion: false
+  READY_FOR_FORMAL_REQUEST:
+    description: "Pedido formal necessário para próxima evidência"
+    allows_promotion: false
+  BLOCKED_GEOMETRY_MISSING:
+    description: "Sem geometria observada — solicitar à Defesa Civil / SGB / COMPDEC"
+    allows_promotion: false
+  BLOCKED_PHENOMENON_SEPARATION_REQUIRED:
+    description: "Evento misto sem separação inundação/deslizamento"
+    allows_promotion: false
+  BLOCKED_INSUFFICIENT_COVERAGE:
+    description: "Cobertura hidrometeorológica insuficiente na janela do evento"
+    allows_promotion: false
+  CONTEXT_ONLY:
+    description: "Evidência apenas contextual — sem âncora observacional"
+    allows_promotion: false
+
+## Invariante: nenhum estado permite promoção automática
+promotion_invariant:
+  can_create_ground_reference: false
+  can_create_training_label: false
+  supervisor_review_completed: false
+  no_overlay_executed: true

@@ -1,0 +1,46 @@
+checklist_entry_id,event_id,item_id,item_text,reviewer_role,blocking_if_missing,decision_options,current_decision,decision_rationale,supervisor_review_completed
+CK_v1ug_0000,PET_2022_02_15,SR_01,Fonte é oficial e rastreável?,supervisor,true,SIM|NAO|INCERTO,NOT_EVALUATED,,false
+CK_v1ug_0001,PET_2022_02_15,SR_02,Licença permite uso acadêmico sem redistribuição?,supervisor,true,SIM|NAO|NEEDS_REVIEW,NOT_EVALUATED,,false
+CK_v1ug_0002,PET_2022_02_15,SR_03,Data do evento está clara e documentada?,supervisor,true,SIM|NAO|PARCIAL,NOT_EVALUATED,,false
+CK_v1ug_0003,PET_2022_02_15,SR_04,"Fenômeno é identificável (inundação, alagamento, deslizamento)?",supervisor,true,SIM|NAO|MISTO_NAO_SEPARADO,NOT_EVALUATED,,false
+CK_v1ug_0004,PET_2022_02_15,SR_05,Separação inundação/deslizamento existe na evidência?,supervisor,true,SIM|NAO|PARCIAL,NOT_EVALUATED,,false
+CK_v1ug_0005,PET_2022_02_15,SR_06,Localidade é suficientemente precisa (bairro/rua/coordenada)?,supervisor,true,SIM|NAO|IMPRECISA,NOT_EVALUATED,,false
+CK_v1ug_0006,PET_2022_02_15,SR_07,Geometria observada existe (polígono/ponto de ocorrência)?,supervisor,true,SIM|NAO|PARCIAL,NOT_EVALUATED,,false
+CK_v1ug_0007,PET_2022_02_15,SR_08,CRS da geometria está definido?,supervisor,true,SIM|NAO|DESCONHECIDO,NOT_EVALUATED,,false
+CK_v1ug_0008,PET_2022_02_15,SR_09,Geometria cruza área urbana afetada conforme relato oficial?,supervisor,true,SIM|NAO|NAO_VERIFICAVEL,NOT_EVALUATED,,false
+CK_v1ug_0009,PET_2022_02_15,SR_10,Geometria pode ser cruzada com patch Sentinel (overlay futuro)?,supervisor,true,SIM|NAO|PARCIAL,NOT_EVALUATED,,false
+CK_v1ug_0010,PET_2022_02_15,SR_11,Incerteza espacial da evidência é aceitável para o uso pretendido?,supervisor,false,SIM|NAO|AVALIAR,NOT_EVALUATED,,false
+CK_v1ug_0011,PET_2022_02_15,SR_12,Há risco de leakage com patches de validação/treinamento?,supervisor,true,SIM_RISCO|NAO_RISCO|AVALIAR,NOT_EVALUATED,,false
+CK_v1ug_0012,PET_2022_02_15,SR_13,Patch candidato identificado para cruzamento?,supervisor,false,SIM|NAO|EM_ANALISE,NOT_EVALUATED,,false
+CK_v1ug_0013,PET_2022_02_15,SR_14,Pode virar ground reference?,supervisor,false,SIM_COM_RESSALVAS|NAO|INCERTO,NOT_EVALUATED,,false
+CK_v1ug_0014,PET_2022_02_15,SR_15,Pode virar label de treinamento?,supervisor,false,NAO,NAO,,false
+CK_v1ug_0015,PET_2024_03_21_28,SR_01,Fonte é oficial e rastreável?,supervisor,true,SIM|NAO|INCERTO,NOT_EVALUATED,,false
+CK_v1ug_0016,PET_2024_03_21_28,SR_02,Licença permite uso acadêmico sem redistribuição?,supervisor,true,SIM|NAO|NEEDS_REVIEW,NOT_EVALUATED,,false
+CK_v1ug_0017,PET_2024_03_21_28,SR_03,Data do evento está clara e documentada?,supervisor,true,SIM|NAO|PARCIAL,NOT_EVALUATED,,false
+CK_v1ug_0018,PET_2024_03_21_28,SR_04,"Fenômeno é identificável (inundação, alagamento, deslizamento)?",supervisor,true,SIM|NAO|MISTO_NAO_SEPARADO,NOT_EVALUATED,,false
+CK_v1ug_0019,PET_2024_03_21_28,SR_05,Separação inundação/deslizamento existe na evidência?,supervisor,true,SIM|NAO|PARCIAL,NOT_EVALUATED,,false
+CK_v1ug_0020,PET_2024_03_21_28,SR_06,Localidade é suficientemente precisa (bairro/rua/coordenada)?,supervisor,true,SIM|NAO|IMPRECISA,NOT_EVALUATED,,false
+CK_v1ug_0021,PET_2024_03_21_28,SR_07,Geometria observada existe (polígono/ponto de ocorrência)?,supervisor,true,SIM|NAO|PARCIAL,NOT_EVALUATED,,false
+CK_v1ug_0022,PET_2024_03_21_28,SR_08,CRS da geometria está definido?,supervisor,true,SIM|NAO|DESCONHECIDO,NOT_EVALUATED,,false
+CK_v1ug_0023,PET_2024_03_21_28,SR_09,Geometria cruza área urbana afetada conforme relato oficial?,supervisor,true,SIM|NAO|NAO_VERIFICAVEL,NOT_EVALUATED,,false
+CK_v1ug_0024,PET_2024_03_21_28,SR_10,Geometria pode ser cruzada com patch Sentinel (overlay futuro)?,supervisor,true,SIM|NAO|PARCIAL,NOT_EVALUATED,,false
+CK_v1ug_0025,PET_2024_03_21_28,SR_11,Incerteza espacial da evidência é aceitável para o uso pretendido?,supervisor,false,SIM|NAO|AVALIAR,NOT_EVALUATED,,false
+CK_v1ug_0026,PET_2024_03_21_28,SR_12,Há risco de leakage com patches de validação/treinamento?,supervisor,true,SIM_RISCO|NAO_RISCO|AVALIAR,NOT_EVALUATED,,false
+CK_v1ug_0027,PET_2024_03_21_28,SR_13,Patch candidato identificado para cruzamento?,supervisor,false,SIM|NAO|EM_ANALISE,NOT_EVALUATED,,false
+CK_v1ug_0028,PET_2024_03_21_28,SR_14,Pode virar ground reference?,supervisor,false,SIM_COM_RESSALVAS|NAO|INCERTO,NOT_EVALUATED,,false
+CK_v1ug_0029,PET_2024_03_21_28,SR_15,Pode virar label de treinamento?,supervisor,false,NAO,NAO,,false
+CK_v1ug_0030,REC_2022_05_24_30,SR_01,Fonte é oficial e rastreável?,supervisor,true,SIM|NAO|INCERTO,NOT_EVALUATED,,false
+CK_v1ug_0031,REC_2022_05_24_30,SR_02,Licença permite uso acadêmico sem redistribuição?,supervisor,true,SIM|NAO|NEEDS_REVIEW,NOT_EVALUATED,,false
+CK_v1ug_0032,REC_2022_05_24_30,SR_03,Data do evento está clara e documentada?,supervisor,true,SIM|NAO|PARCIAL,NOT_EVALUATED,,false
+CK_v1ug_0033,REC_2022_05_24_30,SR_04,"Fenômeno é identificável (inundação, alagamento, deslizamento)?",supervisor,true,SIM|NAO|MISTO_NAO_SEPARADO,NOT_EVALUATED,,false
+CK_v1ug_0034,REC_2022_05_24_30,SR_05,Separação inundação/deslizamento existe na evidência?,supervisor,true,SIM|NAO|PARCIAL,NOT_EVALUATED,,false
+CK_v1ug_0035,REC_2022_05_24_30,SR_06,Localidade é suficientemente precisa (bairro/rua/coordenada)?,supervisor,true,SIM|NAO|IMPRECISA,NOT_EVALUATED,,false
+CK_v1ug_0036,REC_2022_05_24_30,SR_07,Geometria observada existe (polígono/ponto de ocorrência)?,supervisor,true,SIM|NAO|PARCIAL,NOT_EVALUATED,,false
+CK_v1ug_0037,REC_2022_05_24_30,SR_08,CRS da geometria está definido?,supervisor,true,SIM|NAO|DESCONHECIDO,NOT_EVALUATED,,false
+CK_v1ug_0038,REC_2022_05_24_30,SR_09,Geometria cruza área urbana afetada conforme relato oficial?,supervisor,true,SIM|NAO|NAO_VERIFICAVEL,NOT_EVALUATED,,false
+CK_v1ug_0039,REC_2022_05_24_30,SR_10,Geometria pode ser cruzada com patch Sentinel (overlay futuro)?,supervisor,true,SIM|NAO|PARCIAL,NOT_EVALUATED,,false
+CK_v1ug_0040,REC_2022_05_24_30,SR_11,Incerteza espacial da evidência é aceitável para o uso pretendido?,supervisor,false,SIM|NAO|AVALIAR,NOT_EVALUATED,,false
+CK_v1ug_0041,REC_2022_05_24_30,SR_12,Há risco de leakage com patches de validação/treinamento?,supervisor,true,SIM_RISCO|NAO_RISCO|AVALIAR,NOT_EVALUATED,,false
+CK_v1ug_0042,REC_2022_05_24_30,SR_13,Patch candidato identificado para cruzamento?,supervisor,false,SIM|NAO|EM_ANALISE,NOT_EVALUATED,,false
+CK_v1ug_0043,REC_2022_05_24_30,SR_14,Pode virar ground reference?,supervisor,false,SIM_COM_RESSALVAS|NAO|INCERTO,NOT_EVALUATED,,false
+CK_v1ug_0044,REC_2022_05_24_30,SR_15,Pode virar label de treinamento?,supervisor,false,NAO,NAO,,false

@@ -1,0 +1,69 @@
+## v1ug — Ground Reference Readiness Policy
+## Define as condições de prontidão para ground reference por evento.
+## Nenhum evento pode atingir overall_readiness=READY_FOR_GROUND_REFERENCE nesta etapa.
+
+protocol_version: v1ug
+ground_truth_operational: false
+can_create_ground_reference: false
+can_create_training_label: false
+can_reopen_protocol_b: false
+
+## Dimensões de prontidão
+readiness_dimensions:
+  temporal_readiness:
+    description: "Âncora temporal confirmada (janela do evento + série oficial)"
+    required_for_ground_reference: true
+  hydromet_readiness:
+    description: "Evidência hidrometeorológica de plausibilidade"
+    required_for_ground_reference: false
+  phenomenon_readiness:
+    description: "Fenômeno tipado e separado"
+    required_for_ground_reference: true
+  locality_readiness:
+    description: "Localidade suficientemente precisa"
+    required_for_ground_reference: true
+  geometry_readiness:
+    description: "Geometria observada disponível com CRS"
+    required_for_ground_reference: true
+  overlay_readiness:
+    description: "Overlay patch-evidência possível e executado"
+    required_for_ground_reference: true
+  supervisor_review_readiness:
+    description: "Revisão supervisora completada"
+    required_for_ground_reference: true
+  label_readiness:
+    description: "Aprovação para criar label de treinamento"
+    required_for_ground_reference: false
+    note: "Label só após ground reference validado"
+
+## Classificações — nenhuma permite promoção automática
+classification_rules:
+  CONTEXT_ONLY:
+    requires: []
+    max_level: true
+  TEMPORAL_ANCHOR_CONFIRMED:
+    requires: [temporal_readiness]
+  READY_FOR_DOCUMENT_REVIEW:
+    requires: [temporal_readiness, locality_readiness]
+  READY_FOR_FORMAL_REQUEST:
+    requires: [temporal_readiness]
+  WAITING_OBSERVED_GEOMETRY:
+    requires: [temporal_readiness, phenomenon_readiness, locality_readiness]
+    missing: [geometry_readiness]
+  WAITING_PHENOMENON_SEPARATION:
+    requires: [temporal_readiness]
+    missing: [phenomenon_readiness]
+  WAITING_SUPERVISOR_REVIEW:
+    requires: [temporal_readiness, phenomenon_readiness, geometry_readiness, overlay_readiness]
+    missing: [supervisor_review_readiness]
+  NOT_READY_FOR_GROUND_REFERENCE:
+    description: "Estado padrão de todos os eventos nesta etapa"
+
+## Invariante: nenhum evento pode sair desta lista
+blocked_states_invariant:
+  - NOT_READY_FOR_GROUND_REFERENCE
+  - WAITING_OBSERVED_GEOMETRY
+  - WAITING_PHENOMENON_SEPARATION
+  - READY_FOR_FORMAL_REQUEST
+  - READY_FOR_DOCUMENT_REVIEW
+  note: "Em v1ug, nenhum evento alcança WAITING_SUPERVISOR_REVIEW ou superior"
