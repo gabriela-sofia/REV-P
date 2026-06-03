@@ -1,0 +1,1 @@
+audit_id,candidate_id,event_id,asset_id,crs_present,crs_value,crs_status,geometry_validity_status,feature_count,geometry_type,bounds_status,region_plausibility_status,prj_status,quality_status,blocking,required_action,notes

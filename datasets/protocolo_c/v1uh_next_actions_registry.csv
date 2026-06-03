@@ -1,0 +1,4 @@
+action_id,event_id,action_type,priority,description,target,status,notes
+ACT_v1uh_0000,PET_2022_02_15,SEND_FORMAL_REQUEST,1,Enviar solicitacoes formais e aguardar retorno,Instituicoes listadas em v1ug_formal_request_queue,PENDING,Nenhuma resposta formal recebida
+ACT_v1uh_0001,PET_2024_03_21_28,SEND_FORMAL_REQUEST,1,Enviar solicitacoes formais e aguardar retorno,Instituicoes listadas em v1ug_formal_request_queue,PENDING,Nenhuma resposta formal recebida
+ACT_v1uh_0002,REC_2022_05_24_30,SEND_FORMAL_REQUEST,1,Enviar solicitacoes formais e aguardar retorno,Instituicoes listadas em v1ug_formal_request_queue,PENDING,Nenhuma resposta formal recebida

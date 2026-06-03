@@ -1,0 +1,24 @@
+artifact_id,artifact_path,artifact_type,protocol_version,sha256_prefix,file_size_bytes,is_versionable,reason
+ART_v1uh_0000,configs/protocolo_c/v1uh_allowed_response_formats.yaml,config,v1uh,e93e9851bcb145cb,1594,true,Safe for git
+ART_v1uh_0001,configs/protocolo_c/v1uh_formal_response_intake_policy.yaml,config,v1uh,78554989b831781d,1388,true,Safe for git
+ART_v1uh_0002,configs/protocolo_c/v1uh_institution_response_mapping.yaml,config,v1uh,ce7fd6e08a5fd88b,2245,true,Safe for git
+ART_v1uh_0003,configs/protocolo_c/v1uh_observed_geometry_gate_policy.yaml,config,v1uh,46fb10acd63b9b93,2223,true,Safe for git
+ART_v1uh_0004,configs/protocolo_c/v1uh_sensitive_data_policy.yaml,config,v1uh,90dc2f76dfe99c2a,1271,true,Safe for git
+ART_v1uh_0005,datasets/protocolo_c/v1uh_crs_geometry_quality_audit.csv,dataset,v1uh,3fd1847dbedfa5d3,225,true,Safe for git
+ART_v1uh_0006,datasets/protocolo_c/v1uh_event_field_mapping_registry.csv,dataset,v1uh,9f0a396916655de1,174,true,Safe for git
+ART_v1uh_0007,datasets/protocolo_c/v1uh_formal_response_registry.csv,dataset,v1uh,b5b6d55c9b29a33f,246,true,Safe for git
+ART_v1uh_0008,datasets/protocolo_c/v1uh_ground_reference_candidate_blocker_matrix.csv,dataset,v1uh,e7e69bb8c65b22ae,2667,true,Safe for git
+ART_v1uh_0009,datasets/protocolo_c/v1uh_next_actions_registry.csv,dataset,v1uh,ffbbdc4df83b0f60,652,true,Safe for git
+ART_v1uh_0010,datasets/protocolo_c/v1uh_observed_geometry_candidate_registry.csv,dataset,v1uh,88244b00de627737,422,true,Safe for git
+ART_v1uh_0011,datasets/protocolo_c/v1uh_phenomenon_temporal_gate_audit.csv,dataset,v1uh,97e8029d55a3b585,297,true,Safe for git
+ART_v1uh_0012,datasets/protocolo_c/v1uh_response_asset_inventory.csv,dataset,v1uh,6f8ca5980a413403,259,true,Safe for git
+ART_v1uh_0013,datasets/protocolo_c/v1uh_supervisor_review_queue.csv,dataset,v1uh,7d12f0bfcd39a587,233,true,Safe for git
+ART_v1uh_0014,datasets/protocolo_c/v1uh_versionable_artifacts_manifest.csv,dataset,v1uh,b07154cb071114ff,3010,true,Safe for git
+ART_v1uh_0015,scripts/protocolo_c/revp_v1uh_completion_report.py,script,v1uh,357190f5f5c0e80c,14717,true,Safe for git
+ART_v1uh_0016,scripts/protocolo_c/revp_v1uh_crs_and_geometry_quality_audit.py,script,v1uh,f263384291b95f24,5473,true,Safe for git
+ART_v1uh_0017,scripts/protocolo_c/revp_v1uh_event_field_mapper.py,script,v1uh,1d8ee55ad520f85b,5662,true,Safe for git
+ART_v1uh_0018,scripts/protocolo_c/revp_v1uh_formal_response_intake.py,script,v1uh,85d3710b137f4fdd,6124,true,Safe for git
+ART_v1uh_0019,scripts/protocolo_c/revp_v1uh_observed_geometry_candidate_audit.py,script,v1uh,b5bcb0af2f11bdc0,5742,true,Safe for git
+ART_v1uh_0020,scripts/protocolo_c/revp_v1uh_phenomenon_temporal_gate_audit.py,script,v1uh,414653abc6742d5b,6703,true,Safe for git
+ART_v1uh_0021,scripts/protocolo_c/revp_v1uh_response_asset_inventory.py,script,v1uh,74ad8c783076859f,8105,true,Safe for git
+ART_v1uh_0022,scripts/protocolo_c/revp_v1uh_supervisor_review_queue_builder.py,script,v1uh,241f03c7038824ba,5717,true,Safe for git

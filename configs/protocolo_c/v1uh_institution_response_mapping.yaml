@@ -1,0 +1,67 @@
+## v1uh — Institution Response Mapping
+## Mapeia instituicoes para eventos e tipos de resposta esperados.
+
+protocol_version: v1uh
+
+institutions:
+  SGB_CPRM:
+    name: "Servico Geologico do Brasil (SGB/CPRM)"
+    expected_events: [PET_2022_02_15]
+    expected_formats: [SHP, GPKG, GeoJSON, KML, KMZ, PDF, CSV, XLSX]
+    expected_content:
+      - geodados de campo pos-desastre
+      - vetores de ocorrencia
+      - pontos/poligonos com fenomeno separado
+    response_channel: ["email", "sei", "download_portal"]
+
+  DRM_RJ_NADE:
+    name: "DRM-RJ / NADE"
+    expected_events: [PET_2022_02_15]
+    expected_formats: [SHP, GPKG, GeoJSON, KML, KMZ, CSV]
+    expected_content:
+      - cartografia de inundacao e deslizamento
+      - pontos/poligonos de ocorrencia com atributos
+    response_channel: ["email", "sei"]
+
+  DEFESA_CIVIL_PETROPOLIS:
+    name: "Defesa Civil / COMPDEC Municipal de Petropolis"
+    expected_events: [PET_2022_02_15, PET_2024_03_21_28]
+    expected_formats: [CSV, XLSX, KML, KMZ, PDF, SHP]
+    expected_content:
+      - ocorrencias georreferenciadas
+      - boletins tecnicos
+      - mapas de interdicao
+    response_channel: ["email", "protocolo_municipal"]
+
+  COMPDEC_RECIFE_PE:
+    name: "COMPDEC / Defesa Civil de Pernambuco"
+    expected_events: [REC_2022_05_24_30]
+    expected_formats: [CSV, XLSX, KML, KMZ, PDF, SHP]
+    expected_content:
+      - boletins COMPDEC
+      - ocorrencias georreferenciadas
+      - pontos/poligonos de alagamento
+    response_channel: ["email", "protocolo_estadual"]
+
+  CEMADEN:
+    name: "Cemaden"
+    expected_events: [PET_2022_02_15, PET_2024_03_21_28, REC_2022_05_24_30]
+    expected_formats: [CSV, XLSX, JSON, PDF]
+    expected_content:
+      - series de chuva de pluviometros automaticos
+      - boletins de evento
+      - alertas emitidos
+    response_channel: ["download_portal", "email"]
+
+  ANA_HIDROWEB:
+    name: "ANA / HidroWeb"
+    expected_events: [PET_2022_02_15, PET_2024_03_21_28, REC_2022_05_24_30]
+    expected_formats: [CSV, XLSX, JSON]
+    expected_content:
+      - series hidrologicas
+      - metadados de estacao
+    response_channel: ["download_portal"]
+
+unknown_institution_policy:
+  quarantine: true
+  reason: "Instituicao nao mapeada — requer revisao humana"

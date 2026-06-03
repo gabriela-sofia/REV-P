@@ -1,0 +1,67 @@
+## v1uh — Observed Geometry Gate Policy
+## Define gates para que geometria recebida seja candidata a ground reference.
+## Nenhum gate permite promocao automatica.
+
+protocol_version: v1uh
+ground_truth_operational: false
+can_create_ground_reference: false
+can_create_training_label: false
+observed_geometry_candidate_only: true
+
+candidate_classification:
+  OBSERVED_EVENT_GEOMETRY_CANDIDATE:
+    requires_all:
+      - has_real_geometry
+      - has_institutional_source
+      - has_event_binding
+      - has_event_date_indication
+      - has_hazard_indication
+      - has_crs_or_crs_recoverable
+    allows_promotion: false
+
+  TABLE_WITH_COORDINATES_CANDIDATE:
+    requires_all:
+      - has_lat_lon_columns
+      - has_institutional_source
+      - has_event_binding
+    allows_promotion: false
+
+  MODELED_SUSCEPTIBILITY_CONTEXT:
+    indicators: ["suscetibilidade", "susceptibility", "risco", "risk_map", "modelo"]
+    is_observed: false
+    allows_promotion: false
+
+  RISK_MAPPING_CONTEXT:
+    indicators: ["mapa de risco", "risk mapping", "hazard map", "zoneamento"]
+    is_observed: false
+    allows_promotion: false
+
+  DOCUMENT_ONLY:
+    description: "PDF/boletim sem geometria vetorial"
+    allows_promotion: false
+
+  STATIC_MAP_ONLY:
+    description: "PNG/JPG de mapa — nao e geometria validada"
+    allows_promotion: false
+
+  INSUFFICIENT_METADATA:
+    description: "Falta dados criticos para classificacao"
+    allows_promotion: false
+
+  REJECTED_NOT_EVENT_GEOMETRY:
+    description: "Nao e geometria de ocorrencia observada"
+    allows_promotion: false
+
+blocking_rules:
+  geometry_without_date: "BLOCKED — geometria sem data de evento nao passa"
+  geometry_without_hazard: "BLOCKED — geometria sem fenomeno identificado nao passa"
+  geometry_without_crs: "BLOCKED — geometria sem CRS nao passa"
+  susceptibility_as_occurrence: "BLOCKED — suscetibilidade/modelagem nao e ocorrencia observada"
+  quickview_as_geometry: "BLOCKED — mapa estatico nao e geometria validada"
+  pdf_without_vector: "CONTEXT_ONLY — PDF sem vetor e evidencia documental"
+
+promotion_invariant:
+  can_create_ground_reference: false
+  can_create_training_label: false
+  supervisor_review_completed: false
+  no_overlay_executed: true

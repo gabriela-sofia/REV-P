@@ -1,0 +1,42 @@
+## v1uh — Sensitive Data Policy
+## Regras para tratamento de dados sensiveis em respostas formais.
+
+protocol_version: v1uh
+
+sensitive_fields:
+  - field_pattern: ["cpf", "CPF"]
+    action: quarantine
+    reason: "Documento pessoal — nao versionar"
+  - field_pattern: ["nome_vitima", "nome_morador", "victim_name"]
+    action: quarantine
+    reason: "Nome de vitima — nao versionar"
+  - field_pattern: ["telefone", "phone", "celular"]
+    action: quarantine
+    reason: "Telefone pessoal — nao versionar"
+  - field_pattern: ["endereco_individual", "endereco_residencial"]
+    action: flag_for_review
+    reason: "Endereco individual pode ser sensivel"
+  - field_pattern: ["rg", "RG"]
+    action: quarantine
+    reason: "Documento pessoal — nao versionar"
+
+sensitive_filename_patterns:
+  - pattern: ".*vitima.*"
+    action: flag_for_review
+  - pattern: ".*cadastro_pessoal.*"
+    action: quarantine
+  - pattern: ".*cpf.*"
+    action: quarantine
+
+rules:
+  never_commit_sensitive: true
+  sensitive_stays_in_local_only: true
+  sensitive_requires_human_review: true
+  hash_only_in_registry: true
+  no_absolute_paths_in_versionable: true
+
+redistribution_defaults:
+  academic_use: true
+  public_redistribution: false
+  commercial_use: false
+  requires_attribution: true

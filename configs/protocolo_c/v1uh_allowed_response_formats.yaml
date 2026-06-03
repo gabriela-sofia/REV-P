@@ -1,0 +1,71 @@
+## v1uh — Allowed Response Formats
+## Extensoes permitidas para ingestao de respostas formais.
+
+protocol_version: v1uh
+
+vector_geospatial:
+  - extension: ".shp"
+    mime: "application/x-esri-shapefile"
+    category: geospatial_vector
+    requires_companions: [".shx", ".dbf"]
+    optional_companions: [".prj", ".cpg", ".sbn", ".sbx"]
+  - extension: ".gpkg"
+    mime: "application/geopackage+sqlite3"
+    category: geospatial_vector
+  - extension: ".geojson"
+    mime: "application/geo+json"
+    category: geospatial_vector
+  - extension: ".kml"
+    mime: "application/vnd.google-earth.kml+xml"
+    category: geospatial_vector
+  - extension: ".kmz"
+    mime: "application/vnd.google-earth.kmz"
+    category: geospatial_archive
+
+tabular:
+  - extension: ".csv"
+    mime: "text/csv"
+    category: tabular
+  - extension: ".xlsx"
+    mime: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    category: tabular
+  - extension: ".xls"
+    mime: "application/vnd.ms-excel"
+    category: tabular
+
+document:
+  - extension: ".pdf"
+    mime: "application/pdf"
+    category: document
+
+archive:
+  - extension: ".zip"
+    mime: "application/zip"
+    category: archive
+
+image_context:
+  - extension: ".png"
+    mime: "image/png"
+    category: static_map_context
+  - extension: ".jpg"
+    mime: "image/jpeg"
+    category: static_map_context
+  - extension: ".jpeg"
+    mime: "image/jpeg"
+    category: static_map_context
+
+blocked_extensions:
+  - ".exe"
+  - ".bat"
+  - ".cmd"
+  - ".ps1"
+  - ".sh"
+  - ".py"
+  - ".js"
+  - ".dll"
+  - ".so"
+  - ".msi"
+  - ".scr"
+  - ".com"
+  - ".vbs"
+  - ".wsf"

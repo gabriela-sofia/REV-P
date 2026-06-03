@@ -1,0 +1,1 @@
+response_id,institution,event_id,received_date,source_channel,original_filename,local_raw_path_hash,sha256,file_size_bytes,mime_type,extension,intake_status,quarantine_reason,sensitive_review_required,license_status,redistribution_allowed,notes

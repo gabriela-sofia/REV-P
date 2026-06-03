@@ -1,0 +1,4 @@
+data_ocorrencia,tipo,fenomeno,bairro,municipio,uf,latitude,longitude,fonte,observacao
+2022-02-15,inundacao,inundacao,Centro,Petropolis,RJ,-22.5047,-43.1747,Defesa Civil,SINTETICO_FIXTURE_NAO_USAR_COMO_EVIDENCIA
+2022-02-15,deslizamento,deslizamento,Alto da Serra,Petropolis,RJ,-22.4921,-43.1823,Defesa Civil,SINTETICO_FIXTURE_NAO_USAR_COMO_EVIDENCIA
+2022-05-25,alagamento,alagamento,Boa Viagem,Recife,PE,-8.1194,-34.9028,COMPDEC PE,SINTETICO_FIXTURE_NAO_USAR_COMO_EVIDENCIA

@@ -1,0 +1,31 @@
+{
+  "type": "FeatureCollection",
+  "name": "SYNTHETIC_FIXTURE_NOT_REAL_EVIDENCE",
+  "crs": {
+    "type": "name",
+    "properties": { "name": "urn:ogc:def:crs:EPSG::4326" }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "data": "2022-02-15",
+        "fenomeno": "inundacao",
+        "bairro": "Centro",
+        "municipio": "Petropolis",
+        "fonte": "SYNTHETIC"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-43.18, -22.51],
+          [-43.17, -22.51],
+          [-43.17, -22.50],
+          [-43.18, -22.50],
+          [-43.18, -22.51]
+        ]]
+      }
+    }
+  ]
+}

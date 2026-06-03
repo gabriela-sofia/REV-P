@@ -1,0 +1,44 @@
+## v1uh — Formal Response Intake Policy
+## Governa ingestao de respostas formais de instituicoes.
+## Nenhuma resposta promove ground reference automaticamente.
+
+protocol_version: v1uh
+ground_truth_operational: false
+can_create_ground_reference: false
+can_create_training_label: false
+formal_response_intake_only: true
+observed_geometry_candidate_only: true
+
+intake_rules:
+  max_file_size_bytes: 524288000  # 500 MB
+  max_zip_expanded_bytes: 2147483648  # 2 GB
+  never_delete_original: true
+  never_version_raw_file: true
+  raw_storage_root: "local_only/protocolo_c/formal_responses"
+
+  inbox_path: "local_only/protocolo_c/formal_responses/inbox"
+  staging_path: "local_only/protocolo_c/formal_responses/staging"
+  quarantine_path: "local_only/protocolo_c/formal_responses/quarantine"
+  reports_path: "local_only/protocolo_c/formal_responses/reports"
+
+  quarantine_reasons:
+    - format_not_allowed
+    - file_corrupted
+    - file_too_large
+    - sensitive_data_suspected
+    - suspicious_extension
+    - zip_dangerous_content
+    - zip_path_traversal
+    - unknown_institution
+    - missing_event_binding
+
+  empty_inbox_behavior:
+    status: "NO_RESPONSES_RECEIVED"
+    generate_empty_registries: true
+    fail_pipeline: false
+
+promotion_invariant:
+  can_create_ground_reference: false
+  can_create_training_label: false
+  supervisor_review_completed: false
+  no_overlay_executed: true
