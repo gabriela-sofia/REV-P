@@ -189,7 +189,7 @@ TCC_TABLES: list[dict[str, str]] = [
     },
     {
         "table_id": "t006_review_candidates_summary",
-        "title": "Human review candidate distribution by category and region",
+        "title": "Review gate candidate distribution by category and region",
         "section": "5. Methodology | 5.1 Review Stage Formalization",
         "source_files": "local_runs/dino_embeddings/v1gw/review_candidates_metadata_v1gw.json",
         "format": "category x region cross-tabulation",

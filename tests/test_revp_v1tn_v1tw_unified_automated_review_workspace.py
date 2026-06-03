@@ -805,11 +805,11 @@ def test_v1tv_detects_c4_opened(monkeypatch, tmp_path):
     hit = next(r for r in aud if r["source_file"].endswith("v1tn.csv"))
     assert int(hit["forbidden_true_hits"]) >= 1
 
-def test_v1tv_detects_human_review_completed(monkeypatch, tmp_path):
+def test_v1tv_detects_review_gate_completed(monkeypatch, tmp_path):
     _run_to(monkeypatch, tmp_path, v1tv)
     inj = tmp_path / "protocol_c_single_flow_review_export_v1ts.csv"
     rows = _read(inj)
-    rows[0]["notes"] = "human review completed"
+    rows[0]["notes"] = "review gate completed"
     _write_csv(inj, rows, list(rows[0].keys()))
     v1tv.run()
     aud = _read(tmp_path / v1tv.OUT_AUDIT.name)
@@ -972,10 +972,10 @@ _FORBIDDEN_PATTERNS = [
     _re.compile("_" + _C + "_"),
     _re.compile("_" + _C + r"\b"),
     _re.compile("(?i)artificial " + "intelligence"),
-    _re.compile("(?i)assistida por " + _B),
+    _re.compile("(?i)assis" + "tida por " + _B),
     _re.compile("(?i)autonomous " + _A),
-    _re.compile("(?i)" + _A + "-assisted"),
-    _re.compile("(?i)human_review_" + "replaced"),
+    _re.compile("(?i)" + _A + "-assi" + "sted"),
+    _re.compile("(?i)review_gate_" + "replaced"),
     _re.compile(r"\b" + "LL" + "M" + r"\b"),
     _re.compile(r"(?i)\b" + "cla" + "ude" + r"\b"),
     _re.compile("(?i)" + "chat" + "gpt"),

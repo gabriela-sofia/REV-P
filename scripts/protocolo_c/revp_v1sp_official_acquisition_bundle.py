@@ -43,7 +43,7 @@ ST_BLOCKED = "OFFICIAL_ACQUISITION_BLOCKED_FAIL_CLOSED"
 MANDATORY = (
     "A camada v1sg-v1sp automatiza a aquisicao controlada de dados oficiais externos e "
     "registra proveniencia, hashes e limitacoes de uso. Os downloads oficiais podem "
-    "alimentar o intake e a revisao humana, mas nao criam rotulos operacionais, targets "
+    "alimentar o intake e a revisao supervisora, mas nao criam rotulos operacionais, targets "
     "supervisionados, ground truth operacional ou negativos formais."
 )
 

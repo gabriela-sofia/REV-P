@@ -4,14 +4,14 @@ dossier_id,string,true,,Referência ao dossier_id em event_evidence_dossier_regi
 screening_id,string,true,,Referência ao screening_id em event_candidate_screening_registry.csv
 region,string,true,"RECIFE,PETROPOLIS,CURITIBA,METHOD_REFERENCE",Região do REV-P
 candidate_event_name,string,true,,Nome descritivo do evento candidato
-dossier_status,string,true,"DOSSIER_NOT_STARTED,DOSSIER_OPEN,DOSSIER_PARTIAL,DOSSIER_READY_FOR_SOURCE_REVIEW,DOSSIER_READY_FOR_HUMAN_REVIEW,DOSSIER_BLOCKED,METHOD_REFERENCE_ONLY",Status atual do dossiê
-decision_status,string,true,"CONTINUE_SOURCE_SEARCH,REQUEST_FORMAL_SOURCE,WAIT_FOR_ACQUISITION,READY_FOR_SOURCE_REVIEW,READY_FOR_HUMAN_REVIEW,BLOCK_EVENT_FOR_NOW,METHOD_REFERENCE_ONLY",Decisão de continuidade para o dossiê
+dossier_status,string,true,"DOSSIER_NOT_STARTED,DOSSIER_OPEN,DOSSIER_PARTIAL,DOSSIER_READY_FOR_SOURCE_REVIEW,DOSSIER_READY_FOR_REVIEW_GATE,DOSSIER_BLOCKED,METHOD_REFERENCE_ONLY",Status atual do dossiê
+decision_status,string,true,"CONTINUE_SOURCE_SEARCH,REQUEST_FORMAL_SOURCE,WAIT_FOR_ACQUISITION,READY_FOR_SOURCE_REVIEW,READY_FOR_REVIEW_GATE,BLOCK_EVENT_FOR_NOW,METHOD_REFERENCE_ONLY",Decisão de continuidade para o dossiê
 decision_reason,string,true,,Justificativa da decisão
 missing_critical_requirements,string,false,,Lista dos requisitos críticos ausentes que fundamentam a decisão
 allowed_next_step,string,true,,Próximos passos permitidos pelo dossiê
 forbidden_next_step,string,true,,Próximos passos explicitamente proibidos
 can_create_patch_event_link,string,true,"true,false",Vínculo patch-evento pode ser criado com evidência atual? false salvo evidência real suficiente
-can_start_human_review,string,true,"true,false",Revisão humana pode ser iniciada? false no estado atual salvo evidência real
+can_start_review_gate,string,true,"true,false",Revisão supervisora pode ser iniciada? false no estado atual salvo evidência real
 can_reassess_protocol_b,string,true,"false",Protocolo B pode ser reavaliado? Sempre false nesta etapa
 can_start_multimodal,string,true,"false",Pipeline multimodal pode ser iniciado? Sempre false nesta etapa
 allowed_claim,string,true,,Claims metodológicos conservadores permitidos

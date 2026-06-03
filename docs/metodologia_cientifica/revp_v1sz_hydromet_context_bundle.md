@@ -9,4 +9,4 @@ final_status=HYDROMET_CONTEXT_READY_REVIEW_ONLY. Estacoes: 25. Janelas: 9. Conte
 
 ## Declaracao obrigatoria
 
-A camada v1sr–v1sz usa dados hidrometeorológicos oficiais apenas como contexto temporal e regional review-only. Precipitação observada, proximidade de estação ou janela temporal compatível não validam automaticamente evento, não criam ground truth operacional, não criam negativo formal e não substituem revisão humana.
+A camada v1sr–v1sz usa dados hidrometeorológicos oficiais apenas como contexto temporal e regional review-only. Precipitação observada, proximidade de estação ou janela temporal compatível não validam automaticamente evento, não criam ground truth operacional, não criam negativo formal e não substituem revisão supervisora.

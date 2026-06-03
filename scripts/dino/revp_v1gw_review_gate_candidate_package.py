@@ -1,6 +1,6 @@
-"""REV-P v1gw: Human review candidate package.
+"""REV-P v1gw: Review gate candidate package.
 
-Formalizes human review as a methodological stage. Selects candidate
+Formalizes review gate as a methodological stage. Selects candidate
 patches from structural evidence (v1gu) and GIS coverage (v1gv).
 
 When v1gu embeddings are blocked, falls back to manifest-derived candidates
@@ -29,7 +29,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[2]
 PHASE = "v1gw"
-PHASE_NAME = "HUMAN_REVIEW_CANDIDATE_PACKAGE"
+PHASE_NAME = "REVIEW_GATE_CANDIDATE_PACKAGE"
 
 DEFAULT_OUTPUT_DIR = ROOT / "local_runs" / "dino_embeddings" / "v1gw"
 DEFAULT_INPUT_MANIFEST = (
@@ -59,7 +59,7 @@ FIELD_REGION = "region"
 
 METHODOLOGICAL_GUARDRAILS: dict[str, Any] = {
     "review_only": True,
-    "human_review_is_methodological_stage": True,
+    "review_gate_is_methodological_stage": True,
     "automatic_classification_forbidden": True,
     "candidates_are_not_classified": True,
     "review_is_not_validation": True,
@@ -77,10 +77,10 @@ CANDIDATE_CATEGORIES = [
     "geometry_complete",
 ]
 
-REVIEW_PROTOCOL = """# Human Review Protocol (v1gw)
+REVIEW_PROTOCOL = """# Review Gate Protocol (v1gw)
 
 ## Purpose
-Human review formalizes structural evidence interpretation by visual inspection
+Review gate formalizes structural evidence interpretation by visual inspection
 and domain expertise. Reviewers assess candidate patches to build interpretive
 understanding of the embedding space and GIS coverage — NOT to assign labels,
 classify vulnerability, or validate model outputs.
@@ -162,7 +162,7 @@ def normalize_region(raw: str) -> str:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="REV-P v1gw human review candidate package."
+        description="REV-P v1gw review gate candidate package."
     )
     parser.add_argument("--mode", default="candidate-generation-run",
                         choices=["candidate-generation-run"])
@@ -491,7 +491,7 @@ def export_metadata(
 
 
 def run_candidate_generation(args: argparse.Namespace) -> int:
-    print(f"[{PHASE}] Starting human review candidate package generation...")
+    print(f"[{PHASE}] Starting review gate candidate package generation...")
 
     manifest_path = Path(args.input_manifest)
     if not manifest_path.exists():

@@ -36,7 +36,7 @@ VALID_TARGET_GATES = {
     "G4_SPATIAL_ALIGNMENT",
     "G5_SOURCE_STRENGTH",
     "G6_UNCERTAINTY_AND_LIMITATIONS",
-    "G7_HUMAN_REVIEW",
+    "G7_REVIEW_GATE",
     "G8_INDEPENDENT_CORROBORATION",
     "G9_PROMOTION_DECISION",
     "MULTIPLE_GATES",
@@ -109,7 +109,7 @@ VALID_ANSWER_TYPES = {
     "SPATIAL_GEOMETRY",
     "EVENT_DATE",
     "UNCERTAINTY_DESCRIPTION",
-    "HUMAN_REVIEW_INPUT",
+    "REVIEW_GATE_INPUT",
     "LICENSE_TERMS",
     "SOURCE_METADATA",
     "AVAILABILITY_STATUS",
@@ -564,7 +564,7 @@ BLOCKING_GATES = {
     "G1_EVENT_CONFIRMATION",
     "G3_TEMPORAL_ALIGNMENT",
     "G4_SPATIAL_ALIGNMENT",
-    "G7_HUMAN_REVIEW",
+    "G7_REVIEW_GATE",
 }
 
 
@@ -600,7 +600,7 @@ def test_v1hp_g1_primary_questions_are_blocking():
 def test_v1hp_g7_questions_are_blocking():
     for row in read_csv(GATE_QST):
         gates = split_semi(row["target_gate"])
-        if "G7_HUMAN_REVIEW" in gates:
+        if "G7_REVIEW_GATE" in gates:
             assert row["blocking_if_unanswered"].lower() == "true", \
                 f"{row['question_id']}: G7 questions must be blocking"
 

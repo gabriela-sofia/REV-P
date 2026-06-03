@@ -13,7 +13,7 @@ expected_geometry_type,string,true,"POINT,LINE,POLYGON,AREA_APPROXIMATION,UNKNOW
 spatial_precision_expected,string,true,"HIGH,MEDIUM,LOW,UNKNOWN",Nível de precisão espacial esperado da geocodificação
 requires_official_confirmation,string,true,"true",Geocodificação exige confirmação por fonte oficial antes de uso; sempre true
 license_review_required,string,true,"true,false",Revisão de licença da fonte de geocodificação é obrigatória
-can_support_patch_linking_after_review,string,true,"true,false",Esta localidade pode suportar patch-linking após geocodificação e revisão humana
+can_support_patch_linking_after_review,string,true,"true,false",Esta localidade pode suportar patch-linking após geocodificação e revisão supervisora
 cannot_establish_ground_truth_alone,string,true,"true",Esta localidade geocodificada não estabelece ground truth operacional sozinha; sempre true
 required_next_action,string,true,,Próximo passo necessário para avançar
 forbidden_use,string,true,,Usos explicitamente proibidos — deve bloquear ground truth operacional; flood detection; flood prediction; flood label; training label; supervised training

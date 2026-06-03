@@ -16,7 +16,7 @@ REVIEW_ONLY_CLAIM = "REVIEW_ONLY_NO_PREDICTIVE_CLAIM"
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="REV-P v1gg local-only DINO human review package.")
+    parser = argparse.ArgumentParser(description="REV-P v1gg local-only DINO review gate package.")
     parser.add_argument("--structural-index", default=str(DEFAULT_INDEX))
     parser.add_argument("--output-dir", default=str(DEFAULT_OUTPUT_DIR))
     parser.add_argument("--batch-size", type=int, default=8)
@@ -114,7 +114,7 @@ def run(args: argparse.Namespace) -> int:
                 "suggested_review_question": question,
                 "review_priority": row.get("review_priority", ""),
                 "review_priority_is_not_label": "true",
-                "human_review_required": "true",
+                "review_gate_required": "true",
                 "label_status": "NO_LABEL",
                 "target_status": "NO_TARGET",
                 "claim_scope": REVIEW_ONLY_CLAIM,
@@ -126,10 +126,10 @@ def run(args: argparse.Namespace) -> int:
         batches.append({"batch_id": f"V1GG_BATCH_{len(batches)+1:03d}", "item_count": len(batch), "review_item_ids": "|".join(str(row["review_item_id"]) for row in batch), "batch_status": "READY_FOR_MANUAL_REVIEW"})
     qa = make_qa(manifest, index_path)
     qa_status = "PASS" if all(row["status"] == "PASS" for row in qa) else "FAIL"
-    write_csv(output_dir / "human_review_manifest.csv", manifest, ["review_item_id", "patch_id", "dino_input_id", "region", "review_reason", "evidence_sources", "local_visual_path", "local_embedding_path", "notes_empty_for_human", "suggested_review_question", "review_priority", "review_priority_is_not_label", "human_review_required", "label_status", "target_status", "claim_scope"])
+    write_csv(output_dir / "review_gate_manifest.csv", manifest, ["review_item_id", "patch_id", "dino_input_id", "region", "review_reason", "evidence_sources", "local_visual_path", "local_embedding_path", "notes_empty_for_human", "suggested_review_question", "review_priority", "review_priority_is_not_label", "review_gate_required", "label_status", "target_status", "claim_scope"])
     write_csv(output_dir / "review_batches.csv", batches, ["batch_id", "item_count", "review_item_ids", "batch_status"])
-    write_csv(output_dir / "human_review_package_qa.csv", qa, ["check", "status", "details"])
-    readme = """# DINO Sentinel-first human review package
+    write_csv(output_dir / "review_gate_package_qa.csv", qa, ["check", "status", "details"])
+    readme = """# DINO Sentinel-first review gate package
 
 This local package supports manual review of structural DINO embedding diagnostics. It is review-only.
 
@@ -139,8 +139,8 @@ This local package supports manual review of structural DINO embedding diagnosti
 - Human notes should be added only after manual inspection.
 """
     (output_dir / "review_readme.md").write_text(readme, encoding="utf-8")
-    summary = {"phase": "v1gg", "created_utc": datetime.now(timezone.utc).isoformat(), "review_items": len(manifest), "review_batches": len(batches), "reason_counts": dict(Counter(row["review_reason"] for row in manifest)), "qa_status": qa_status, "review_only": True, "supervised_training": False, "labels_created": False, "targets_created": False, "predictive_claims": False, "review_priority_is_not_label": True, "human_review_required": True, "outputs_local_only": True}
-    write_json(output_dir / "human_review_package_summary.json", summary)
+    summary = {"phase": "v1gg", "created_utc": datetime.now(timezone.utc).isoformat(), "review_items": len(manifest), "review_batches": len(batches), "reason_counts": dict(Counter(row["review_reason"] for row in manifest)), "qa_status": qa_status, "review_only": True, "supervised_training": False, "labels_created": False, "targets_created": False, "predictive_claims": False, "review_priority_is_not_label": True, "review_gate_required": True, "outputs_local_only": True}
+    write_json(output_dir / "review_gate_package_summary.json", summary)
     print(json.dumps(summary, ensure_ascii=False, indent=2))
     return 0 if qa_status == "PASS" else 2
 
@@ -155,7 +155,7 @@ def make_qa(rows: list[dict[str, object]], index_path: Path) -> list[dict[str, s
     add("review manifest created", bool(rows), f"rows={len(rows)}")
     add("no labels targets or predictive claims", all(row.get("label_status") == "NO_LABEL" and row.get("target_status") == "NO_TARGET" and row.get("claim_scope") == REVIEW_ONLY_CLAIM for row in rows), REVIEW_ONLY_CLAIM)
     add("review priority is not label", all(row.get("review_priority_is_not_label") == "true" for row in rows), "triage only")
-    add("human review required", all(row.get("human_review_required") == "true" for row in rows), "manual review required")
+    add("review gate required", all(row.get("review_gate_required") == "true" for row in rows), "manual review required")
     add("raw rasters not copied", all(not str(row.get("local_visual_path", "")).lower().endswith((".tif", ".tiff")) for row in rows), "visual references only")
     add("local_runs ignored", local_runs_ignored(), ".gitignore checked")
     return qa

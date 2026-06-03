@@ -5,7 +5,7 @@ municipality,string,false,,Município principal do evento candidato
 candidate_event_name,string,false,,Nome descritivo do evento candidato; pode ser NOT_EVENT_SPECIFIC para fontes de contexto
 candidate_event_period,string,false,,Período candidato do evento; UNKNOWN se não aplicável
 search_goal,string,true,,Descrição do objetivo da busca
-target_gate,string,true,"G1_EVENT_CONFIRMATION,G2_SOURCE_AVAILABILITY,G3_TEMPORAL_ALIGNMENT,G4_SPATIAL_ALIGNMENT,G5_SOURCE_STRENGTH,G6_UNCERTAINTY_AND_LIMITATIONS,G7_HUMAN_REVIEW,G8_INDEPENDENT_CORROBORATION,G9_PROMOTION_DECISION,MULTIPLE_GATES",Gate principal do Protocolo C que esta busca visa endereçar
+target_gate,string,true,"G1_EVENT_CONFIRMATION,G2_SOURCE_AVAILABILITY,G3_TEMPORAL_ALIGNMENT,G4_SPATIAL_ALIGNMENT,G5_SOURCE_STRENGTH,G6_UNCERTAINTY_AND_LIMITATIONS,G7_REVIEW_GATE,G8_INDEPENDENT_CORROBORATION,G9_PROMOTION_DECISION,MULTIPLE_GATES",Gate principal do Protocolo C que esta busca visa endereçar
 target_source_family,string,true,"CIVIL_DEFENSE_RECORD,MUNICIPAL_GIS_LAYER,OFFICIAL_OBSERVED_FLOOD_MAP,OPERATIONAL_FLOOD_PRODUCT,TECHNICAL_REPORT,EVENT_OCCURRENCE_RECORD,SENTINEL_EVENT_IMAGE,HIGH_RESOLUTION_IMAGE,ACADEMIC_DATASET,NEWS_OR_REPORT_DOCUMENTATION,METHOD_REFERENCE",Família da fonte-alvo
 target_provider_or_institution,string,false,,Provedor ou instituição da fonte-alvo
 expected_evidence_type,string,false,,Tipo de evidência esperada ao encontrar a fonte

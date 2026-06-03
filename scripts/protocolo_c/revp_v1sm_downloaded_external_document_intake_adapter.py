@@ -60,7 +60,7 @@ def run(datasets: Path | None = None) -> dict[str, Any]:
             "spatial_precision_claim": "ADMINISTRATIVE",
             "license_note": "PUBLIC_OFFICIAL_SOURCE_NEEDS_LICENSE_REVIEW",
             "manual_review_required": "true",
-            "intake_status": "DRAFT_FROM_DOWNLOAD_NEEDS_HUMAN_REVIEW",
+            "intake_status": "DRAFT_FROM_DOWNLOAD_NEEDS_REVIEW_GATE",
             "notes": "",
         }
         row.update(guardrail_row())

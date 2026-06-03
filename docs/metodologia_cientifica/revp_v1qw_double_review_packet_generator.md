@@ -14,4 +14,4 @@ Amostras: 8. Pacotes A/B: 16. Formularios: 144.
 
 ## Guardrails
 
-Nenhuma resposta final e preenchida; apenas placeholders <TO_BE_FILLED_BY_HUMAN_REVIEWER>. dino_validates_event=false. Nenhum label.
+Nenhuma resposta final e preenchida; apenas placeholders <TO_BE_FILLED_BY_REVIEWER>. dino_validates_event=false. Nenhum label.

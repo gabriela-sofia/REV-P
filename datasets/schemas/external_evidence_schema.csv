@@ -12,5 +12,5 @@ spatial_coverage,string,Cobertura geográfica conhecida,Região metropolitana do
 patch_coverage,string,Quantos patches a fonte potencialmente cobre,18 (Recife canônico)
 evidence_tier,string,"Tier metodológico: STRONG | CONTEXTUAL | EXPLORATORY",STRONG
 limitations,string,Limitações explícitas da fonte,Stack parcial; sem temporal-ready; não valida pixels individuais
-role_in_pipeline,string,Papel no pipeline de validação,Evidência topográfica externa para revisão humana
+role_in_pipeline,string,Papel no pipeline de validação,Evidência topográfica externa para revisão supervisora
 related_manifest,string,Manifest relacionado,manifests/external_validation/revp_external_validation_master_package_FIXED_20260511_200206/

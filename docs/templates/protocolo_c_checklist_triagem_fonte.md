@@ -90,7 +90,7 @@
 | G4_SPATIAL_ALIGNMENT | SIM / NÃO / PARCIAL | |
 | G5_SOURCE_STRENGTH | SIM / NÃO / PARCIAL | |
 | G6_UNCERTAINTY_AND_LIMITATIONS | SIM / NÃO / PARCIAL | |
-| G7_HUMAN_REVIEW | SIM / NÃO (nunca automático) | |
+| G7_REVIEW_GATE | SIM / NÃO (nunca automático) | |
 | G8_INDEPENDENT_CORROBORATION | SIM / NÃO / PARCIAL | |
 | G9_PROMOTION_DECISION | NÃO (requer todos os gates anteriores) | |
 
@@ -111,7 +111,7 @@
 | Razão de bloqueio (se aplicável) | [blocked_reason] |
 | Usos permitidos | [allowed_use] |
 | Usos proibidos | [forbidden_use] |
-| Requer revisão humana? | SIM / NÃO |
+| Requer revisão supervisora? | SIM / NÃO |
 | Próxima ação | [next_action] |
 
 ---

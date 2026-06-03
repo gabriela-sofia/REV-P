@@ -1,14 +1,14 @@
-# Protocolo de Revisão Humana — REV-P v1hb
+# protocolo de revisão supervisora — REV-P v1hb
 
 **Status**: Metodologia; Review-only; Interpretativa  
 **Data**: 2026-05-18  
-**Fase**: v1hb — Human Review Execution Package
+**Fase**: v1hb — Review Gate Execution Package
 
 ---
 
-## 1. Propósito da Revisão Humana
+## 1. Propósito da revisão supervisora
 
-A revisão humana é uma etapa de interpretação estrutural **exploratória** que permite validar
+A revisão supervisora é uma etapa de interpretação estrutural **exploratória** que permite validar
 coerência visual entre:
 
 - Estrutura de embeddings DINO (vizinhança, medoids, outliers);
@@ -210,7 +210,7 @@ evidência matemática (embeddings) com interpretação visual e contextual.
 
 ### 5.1 Preparação
 
-1. Abrir manifest de execução: `human_review_execution_manifest_v1hb.csv`
+1. Abrir manifest de execução: `review_gate_execution_manifest_v1hb.csv`
 2. Para cada item (HRE001–HRE047):
    - Identificar canonical_patch_id
    - Localizar Sentinel RGB + NDVI correspondentes
@@ -270,7 +270,7 @@ evidência matemática (embeddings) com interpretação visual e contextual.
 
 ### 5.5 Campos de Anotação
 
-Usar template: `human_review_annotation_template_v1hb.csv`
+Usar template: `review_gate_annotation_template_v1hb.csv`
 
 - **reviewer_name_or_initials**: Identificação (REV-01, etc)
 - **review_date**: YYYY-MM-DD
@@ -285,11 +285,11 @@ Usar template: `human_review_annotation_template_v1hb.csv`
 
 ---
 
-## 6. Como Usar Revisão Humana na Discussão do TCC
+## 6. Como Usar revisão supervisora na Discussão do TCC
 
 ### 6.1 Insumos Diretos
 
-Tabela: `human_review_discussion_inputs_v1hb.csv`
+Tabela: `review_gate_discussion_inputs_v1hb.csv`
 
 Cada linha oferece:
 - **finding_id**: Identificador para referência
@@ -321,7 +321,7 @@ Cada linha oferece:
    - Exploratório, não preditivo
 
 4. **Seção 5.4: Implicações para Pesquisa Futura**
-   - Que perguntas revisão humana levanta?
+   - Que perguntas revisão supervisora levanta?
    - Que dados faltam?
    - Como expandir corpus validando estrutura?
 

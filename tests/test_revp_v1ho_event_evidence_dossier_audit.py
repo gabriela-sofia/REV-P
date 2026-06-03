@@ -79,7 +79,7 @@ def test_v1ho_dossier_schema_required_fields():
         "event_status", "dossier_status",
         "minimum_temporal_evidence_status", "minimum_spatial_evidence_status",
         "minimum_source_traceability_status",
-        "can_advance_to_source_review", "can_advance_to_human_review",
+        "can_advance_to_source_review", "can_advance_to_review_gate",
         "can_support_ground_reference_candidate",
         "operational_ground_truth_status", "protocol_b_status", "multimodal_status",
         "allowed_claim", "forbidden_claim",
@@ -108,7 +108,7 @@ def test_v1ho_decision_schema_required_fields():
         "decision_id", "dossier_id", "screening_id", "region",
         "dossier_status", "decision_status", "decision_reason",
         "allowed_next_step", "forbidden_next_step",
-        "can_create_patch_event_link", "can_start_human_review",
+        "can_create_patch_event_link", "can_start_review_gate",
         "can_reassess_protocol_b", "can_start_multimodal",
         "allowed_claim", "forbidden_claim",
     }
@@ -122,7 +122,7 @@ def test_v1ho_decision_schema_required_fields():
 
 VALID_DOSSIER_STATUS = {
     "DOSSIER_NOT_STARTED", "DOSSIER_OPEN", "DOSSIER_PARTIAL",
-    "DOSSIER_READY_FOR_SOURCE_REVIEW", "DOSSIER_READY_FOR_HUMAN_REVIEW",
+    "DOSSIER_READY_FOR_SOURCE_REVIEW", "DOSSIER_READY_FOR_REVIEW_GATE",
     "DOSSIER_BLOCKED", "METHOD_REFERENCE_ONLY",
 }
 VALID_EVIDENCE_STATUS = {
@@ -192,11 +192,11 @@ def test_v1ho_dossier_can_support_ground_reference_always_false():
             f"{row['dossier_id']}: can_support_ground_reference_candidate deve ser 'false'"
 
 
-def test_v1ho_dossier_can_advance_to_human_review_false():
+def test_v1ho_dossier_can_advance_to_review_gate_false():
     rows = read_csv(os.path.join(DATASETS, "event_evidence_dossier_registry.csv"))
     for row in rows:
-        assert row["can_advance_to_human_review"] == "false", \
-            f"{row['dossier_id']}: can_advance_to_human_review deve ser 'false' nesta etapa"
+        assert row["can_advance_to_review_gate"] == "false", \
+            f"{row['dossier_id']}: can_advance_to_review_gate deve ser 'false' nesta etapa"
 
 
 def test_v1ho_dossier_ogt_not_established():
@@ -241,12 +241,12 @@ def test_v1ho_dossier_all_regions_covered():
 
 
 def test_v1ho_event_search_target_not_confirmed():
-    """Eventos EVENT_SEARCH_TARGET não podem ter dossier_status DOSSIER_READY_FOR_HUMAN_REVIEW."""
+    """Eventos EVENT_SEARCH_TARGET não podem ter dossier_status DOSSIER_READY_FOR_REVIEW_GATE."""
     dossiers = read_csv(os.path.join(DATASETS, "event_evidence_dossier_registry.csv"))
     for row in dossiers:
         if row["event_status"] == "EVENT_SEARCH_TARGET":
-            assert row["dossier_status"] != "DOSSIER_READY_FOR_HUMAN_REVIEW", \
-                f"{row['dossier_id']}: EVENT_SEARCH_TARGET não pode ter dossiê READY_FOR_HUMAN_REVIEW"
+            assert row["dossier_status"] != "DOSSIER_READY_FOR_REVIEW_GATE", \
+                f"{row['dossier_id']}: EVENT_SEARCH_TARGET não pode ter dossiê READY_FOR_REVIEW_GATE"
 
 
 def test_v1ho_no_confirmed_by_source_events_in_dossier():
@@ -262,7 +262,7 @@ def test_v1ho_no_confirmed_by_source_events_in_dossier():
 VALID_REQ_TYPE = {
     "EVENT_CONFIRMATION", "TEMPORAL_EVIDENCE", "SPATIAL_EVIDENCE",
     "SOURCE_TRACEABILITY", "SOURCE_STRENGTH", "UNCERTAINTY_DOCUMENTATION",
-    "LICENSE_PROVENANCE", "PATCH_RELATION", "HUMAN_REVIEW",
+    "LICENSE_PROVENANCE", "PATCH_RELATION", "REVIEW_GATE",
     "INDEPENDENT_CORROBORATION", "PROMOTION_DECISION",
 }
 VALID_REQ_STATUS = {
@@ -308,7 +308,7 @@ def test_v1ho_requirements_dossier_refs_exist():
 def test_v1ho_critical_requirements_blocking():
     """Requisitos críticos (G1, G4, G7, G9) devem ter blocking_if_missing=true."""
     rows = read_csv(os.path.join(DATASETS, "event_evidence_requirements_registry.csv"))
-    critical = {"EVENT_CONFIRMATION", "SPATIAL_EVIDENCE", "HUMAN_REVIEW", "PROMOTION_DECISION"}
+    critical = {"EVENT_CONFIRMATION", "SPATIAL_EVIDENCE", "REVIEW_GATE", "PROMOTION_DECISION"}
     for row in rows:
         if row["requirement_type"] in critical:
             assert row["blocking_if_missing"] == "true", \
@@ -372,7 +372,7 @@ def test_v1ho_each_dossier_has_requirements():
 
 VALID_DECISION_STATUS = {
     "CONTINUE_SOURCE_SEARCH", "REQUEST_FORMAL_SOURCE", "WAIT_FOR_ACQUISITION",
-    "READY_FOR_SOURCE_REVIEW", "READY_FOR_HUMAN_REVIEW",
+    "READY_FOR_SOURCE_REVIEW", "READY_FOR_REVIEW_GATE",
     "BLOCK_EVENT_FOR_NOW", "METHOD_REFERENCE_ONLY",
 }
 
@@ -398,11 +398,11 @@ def test_v1ho_decision_can_start_multimodal_always_false():
             f"{row['decision_id']}: can_start_multimodal deve ser 'false'"
 
 
-def test_v1ho_decision_can_start_human_review_false():
+def test_v1ho_decision_can_start_review_gate_false():
     rows = read_csv(os.path.join(DATASETS, "event_dossier_decision_registry.csv"))
     for row in rows:
-        assert row["can_start_human_review"] == "false", \
-            f"{row['decision_id']}: can_start_human_review deve ser 'false' nesta etapa"
+        assert row["can_start_review_gate"] == "false", \
+            f"{row['decision_id']}: can_start_review_gate deve ser 'false' nesta etapa"
 
 
 def test_v1ho_decision_dossier_refs_exist():

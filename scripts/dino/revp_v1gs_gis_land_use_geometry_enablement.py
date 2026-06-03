@@ -720,7 +720,7 @@ def run_audit(gis_root: Path | None, output_dir: Path) -> dict[str, Any]:
         "qa_status": qa_overall,
         "methodology_note": (
             "land use geometry is unlocked for Petropolis only; "
-            "class mapping is a candidate for human review; "
+            "class mapping is a candidate for review gate; "
             "it is not ground truth, not a label, not a supervised target; "
             "Curitiba and Recife remain BLOCKED; "
             "population density remains BLOCKED for all regions; "

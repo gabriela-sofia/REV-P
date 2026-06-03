@@ -10,7 +10,7 @@ Esta etapa organiza como buscar, documentar e priorizar evidências observaciona
 - **temporalidade** (compatibilidade temporal entre evento e observação);
 - **espacialidade** (compatibilidade espacial, resolução, CRS, escala);
 - **força metodológica** (observação de campo, mapa oficial, produto operacional, contexto);
-- **revisão humana** (auditoria independente, corroboração cruzada);
+- **revisão supervisora** (auditoria independente, corroboração cruzada);
 - **decisão de promoção** (apta ou bloqueada).
 
 O REV-P não possui ground truth operacional observado. O objetivo desta etapa é transformar a metodologia em um plano de aquisição real — registrando fontes-alvo por região, priorizando as que podem fechar gates específicos, documentando a força e limitação de cada fonte, e deixando claro o que não pode (e nunca poderá) ser feito sem referência independente validada.
@@ -264,7 +264,7 @@ Cada tipo de fonte tem força, limitação e aplicabilidade específicas.
 - G4_SPATIAL_ALIGNMENT
 - G5_SOURCE_STRENGTH
 - G6_UNCERTAINTY_AND_LIMITATIONS
-- Parcialmente G7_HUMAN_REVIEW (se anotação humana foi parte do método)
+- Parcialmente G7_REVIEW_GATE (se anotação humana foi parte do método)
 - G8_INDEPENDENT_CORROBORATION (como corroboration, não como única fonte)
 
 **O que não pode sustentar:**
@@ -376,7 +376,7 @@ Cada tipo de fonte tem força, limitação e aplicabilidade específicas.
 - Não pode ser interpretado como evidência independente
 
 **O que pode sustentar:**
-- Suporte metodológico de revisão humana
+- Suporte metodológico de revisão supervisora
 - Visualização para auditoria (não como métrica de validação)
 
 **O que não pode sustentar:**
@@ -439,7 +439,7 @@ O Protocolo C define 9 gates. Esta etapa mapeia quais fontes podem fechar quais 
 | **G4_SPATIAL_ALIGNMENT** | Geometria, CRS, resolução apropriados | Imagem de alta resolução anotada, mapa oficial com CRS, Sentinel-2 10 m | Resolução ≥ 10 m, CRS documentado |
 | **G5_SOURCE_STRENGTH** | Fonte é independente, não algorítmica | Observação de campo, anotação humana independente, mapa oficial anotado | Humana, não derivada de modelo |
 | **G6_UNCERTAINTY_AND_LIMITATIONS** | Incerteza documentada, limitações claras | GFM com disclaimer, produto operacional com intervalo de confiança, anotação com critério declarado | Métrica de acurácia ou intervalo |
-| **G7_HUMAN_REVIEW** | Auditoria humana independente | Especialista em sensoriamento remoto, hidrólogo, geógrafo | Documentação de revisão |
+| **G7_REVIEW_GATE** | Auditoria humana independente | Especialista em sensoriamento remoto, hidrólogo, geógrafo | Documentação de revisão |
 | **G8_INDEPENDENT_CORROBORATION** | Múltiplas fontes independentes convergem | 2+ de: Defesa Civil, relatório técnico, imagem anotada, observação de campo | Consistência entre fontes |
 | **G9_PROMOTION_DECISION** | Decisão auditable de aptidão | Todas as fontes avaliadas, lacunas documentadas, decisão documentada | Resultado de auditoria |
 

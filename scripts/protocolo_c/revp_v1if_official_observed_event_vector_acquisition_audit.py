@@ -1112,8 +1112,8 @@ def build_public_record(
         limitations = f"Gate(s) bloqueante(s): {block_gate}"
         next_action = "Resolver gate bloqueante; buscar versao com data de evento explicita"
     else:
-        limitations = "Auditoria completa — revisao humana obrigatoria antes de uso"
-        next_action = "Revisao humana; definir protocolo de split/leakage"
+        limitations = "Auditoria completa — revisao supervisora obrigatoria antes de uso"
+        next_action = "Revisao supervisora; definir protocolo de split/leakage"
 
     return PublicRegistryRecord(
         source_asset_id=source["source_asset_id"],
@@ -1559,7 +1559,7 @@ def main() -> None:
             "v1if buscou vetores observados oficiais. Nenhum ativo confirmou "
             "ground truth operacional. Invariantes mantidos."
             if n_candidate_gt == 0 else
-            f"{n_candidate_gt} candidato(s) passaram os gates — revisao humana obrigatoria."
+            f"{n_candidate_gt} candidato(s) passaram os gates — revisao supervisora obrigatoria."
         ),
     }
 
@@ -1686,7 +1686,7 @@ def main() -> None:
     if n_candidate_gt == 0:
         print("[RESULT] Nenhum ground truth vetorial observado confirmado neste estagio.")
     else:
-        print(f"[RESULT] {n_candidate_gt} candidato(s) — revisao humana obrigatoria.")
+        print(f"[RESULT] {n_candidate_gt} candidato(s) — revisao supervisora obrigatoria.")
 
 
 if __name__ == "__main__":

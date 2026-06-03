@@ -46,7 +46,7 @@ Esta etapa não executa a busca. Prepara as condições para que a busca e a sol
 ### Recife
 
 **Registros de Defesa Civil — COMPDEC Recife**
-Fonte-alvo para G1 (confirmação de evento), G2 (disponibilidade de fonte), G4 (alinhamento espacial) e G7 (revisão humana). Acesso via solicitação formal. Cobre eventos de 2021 e 2022. Licença UNKNOWN — deve ser clarificada antes de qualquer uso. Bundling de 2021 e 2022 em uma solicitação é estratégia recomendada.
+Fonte-alvo para G1 (confirmação de evento), G2 (disponibilidade de fonte), G4 (alinhamento espacial) e G7 (revisão supervisora). Acesso via solicitação formal. Cobre eventos de 2021 e 2022. Licença UNKNOWN — deve ser clarificada antes de qualquer uso. Bundling de 2021 e 2022 em uma solicitação é estratégia recomendada.
 
 **SGB/CPRM — Portal RIGeo**
 Fonte-alvo para G1 (confirmação geológica), G5 (força de fonte observada/especializada), G6 (limitações e incerteza) e G8 (corroboração independente). Acesso público via portal RIGeo. Licença UNKNOWN — verificar termos de reutilização. Possível laudo pós-evento 2021.
@@ -119,17 +119,17 @@ As perguntas abaixo guiam a busca de evidências para cada gate do Protocolo C. 
 - O produto operacional (ex: GFM) inclui metadados de confiança ou incerteza?
 - A incerteza está registrada de forma que possa ser reportada na cadeia metodológica?
 
-### G7 — HUMAN_REVIEW
+### G7 — REVIEW_GATE
 - A fonte pode ser enviada para revisão por pesquisador ou especialista?
 - Quem seria o revisor adequado (geomorfólogo, engenheiro hidráulico, especialista em Sentinel)?
-- O resultado da revisão pode ser documentado no registry de revisão humana?
+- O resultado da revisão pode ser documentado no registry de revisão supervisora?
 
 ### G8 — INDEPENDENT_CORROBORATION
 - Existe segunda fonte independente que confirme o evento?
 - As duas fontes são metodologicamente independentes?
 
 ### G9 — PROMOTION_DECISION
-- Todos os gates G1–G8 foram satisfeitos com evidência documentada e revisão humana?
+- Todos os gates G1–G8 foram satisfeitos com evidência documentada e revisão supervisora?
 - A decisão de promoção pode ser registrada formalmente?
 
 ---

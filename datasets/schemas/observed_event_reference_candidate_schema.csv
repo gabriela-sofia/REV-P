@@ -31,6 +31,6 @@ can_advance_to_source_review,string,true,"true,false",Evento pode avançar para 
 can_advance_to_patch_linking,string,true,"true,false",Evento pode avançar para ligação patch-evento (false sem geometria e overlay)
 can_be_used_as_training_label,string,true,"true,false",Evento pode ser usado como label de treino; sempre false nesta etapa
 can_reopen_protocol_b,string,true,"true,false",Evento pode reabrir Protocolo B; sempre false nesta etapa
-requires_human_review,string,true,"true,false",Evento exige revisão humana antes de qualquer promoção; sempre true
+requires_review_gate,string,true,"true,false",Evento exige revisão supervisora antes de qualquer promoção; sempre true
 missing_evidence,string,true,,Lista de evidências faltantes para avançar
 notes,string,false,,Observações metodológicas adicionais

@@ -4,7 +4,7 @@
 
 A etapa v1hl definiu o que buscar: fontes-alvo por região, prioridades de aquisição, força metodológica de cada tipo de fonte e a prontidão regional para os gates do Protocolo C.
 
-A etapa v1hm define **como** operar essa aquisição: como registrar, verificar acesso, documentar licença, triar entrada, organizar staging local e encaminhar para revisão humana — sem promover claims indevidos, sem baixar dados pesados e sem declarar ground truth onde ele não existe.
+A etapa v1hm define **como** operar essa aquisição: como registrar, verificar acesso, documentar licença, triar entrada, organizar staging local e encaminhar para revisão supervisora — sem promover claims indevidos, sem baixar dados pesados e sem declarar ground truth onde ele não existe.
 
 O REV-P ainda não possui ground truth operacional observado. O Protocolo C organiza a construção graduada de referência: contexto → proxy → candidato de referência → validação operacional. Nenhuma etapa dessa progressão é automática. Esta etapa coloca em prática os mecanismos operacionais para que o plano de aquisição da v1hl possa ser executado com rastreabilidade, documentação e guardrails auditáveis.
 
@@ -27,7 +27,7 @@ Toda fonte usada deve ter instituição identificável, referência citável, da
 Nenhuma fonte pode ser usada sem que seu status de licença e redistribuição seja registrado. Licença desconhecida bloqueia promoção.
 
 ### nenhuma promoção automática
-Nenhum dado, produto ou resultado é automaticamente promovido a ground truth ou referência operacional. Toda promoção requer revisão humana documentada e satisfação de gates.
+Nenhum dado, produto ou resultado é automaticamente promovido a ground truth ou referência operacional. Toda promoção requer revisão supervisora documentada e satisfação de gates.
 
 ### nenhum label supervisionado
 Esta etapa não cria, não importa e não usa labels de treinamento. Não há e não haverá rótulo de inundação, não-inundação ou qualquer classe supervisionada.
@@ -65,8 +65,8 @@ O manifest público contém: `source_id`, `region`, `institution`, `acquisition_
 ### Passo 7 — Avaliar gates do Protocolo C
 Verificar quais gates a fonte pode satisfazer. Registrar em `protocol_c_gates_supported` do intake registry. Avaliar se a fonte está suficientemente forte para cada gate específico.
 
-### Passo 8 — Encaminhar para revisão humana se houver elegibilidade
-Se a fonte satisfizer as pré-condições de evento, temporalidade, espacialidade e força metodológica, criar entrada em `human_reference_review_registry.csv` (etapa anterior). Revisor humano decide sobre promoção.
+### Passo 8 — Encaminhar para revisão supervisora se houver elegibilidade
+Se a fonte satisfizer as pré-condições de evento, temporalidade, espacialidade e força metodológica, criar entrada em `review_gate_reference_registry.csv` (etapa anterior). Revisor humano decide sobre promoção.
 
 ### Passo 9 — Registrar bloqueio se faltar condição
 Se faltar evento, temporalidade, espacialidade, licença ou revisão, registrar `intake_decision=BLOCK_USE` e `blocked_reason` específico. Manter `promotion_allowed=false`.

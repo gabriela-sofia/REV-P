@@ -1,20 +1,20 @@
-# Protocolo C — revisão humana de referência
+# Protocolo C — revisão supervisora de referência
 
-## 1. Papel da revisão humana
+## 1. Papel da revisão supervisora
 
-A revisão humana no Protocolo C é uma etapa de auditoria e curadoria metodológica — não uma forma de criar labels arbitrários ou atribuir classes de forma subjetiva. Ela existe para verificar, de forma qualificada e documentada, se a evidência reunida nos gates anteriores é coerente o suficiente para avançar na hierarquia de candidatura a ground reference.
+A revisão supervisora no Protocolo C é uma etapa de auditoria e curadoria metodológica — não uma forma de criar labels arbitrários ou atribuir classes de forma subjetiva. Ela existe para verificar, de forma qualificada e documentada, se a evidência reunida nos gates anteriores é coerente o suficiente para avançar na hierarquia de candidatura a ground reference.
 
-A revisão humana não substitui evento documentado. Não é equivalente a observação de campo. Não cria ground truth por si só. O revisor verifica a consistência entre a evidência disponível e a candidatura proposta — e registra sua decisão com justificativa, claim permitido e claim proibido.
+A revisão supervisora não substitui evento documentado. Não é equivalente a observação de campo. Não cria ground truth por si só. O revisor verifica a consistência entre a evidência disponível e a candidatura proposta — e registra sua decisão com justificativa, claim permitido e claim proibido.
 
 O resultado da revisão é sempre um registro auditável: quem revisou (em termos de papel metodológico), o que foi avaliado, qual foi a decisão, e por que. Revisões sem registro não têm validade metodológica no Protocolo C.
 
-A revisão humana corresponde ao gate G7 da sequência de promoção definida em `protocolo_c_fechamento_evidencias_ground_reference.md`. G7 não pode ser satisfeito sem revisão executada e registrada.
+A revisão supervisora corresponde ao gate G7 da sequência de promoção definida em `protocolo_c_fechamento_evidencias_ground_reference.md`. G7 não pode ser satisfeito sem revisão executada e registrada.
 
 ---
 
 ## 2. Entradas da revisão
 
-Para que uma revisão humana possa ser conduzida, o revisor precisa ter acesso a:
+Para que uma revisão supervisora possa ser conduzida, o revisor precisa ter acesso a:
 
 **Patch Sentinel**
 O recorte de imagem Sentinel associado ao patch — bandas relevantes, data de aquisição, região e identificador canônico (ex.: REC_01). O revisor deve poder visualizar e interpretar a imagem.
@@ -43,7 +43,7 @@ Revisão baseada exclusivamente em DINO, cluster ou índice GIS não satisfaz G7
 
 ## 3. Decisões possíveis
 
-O revisor registra uma das seguintes decisões no `human_reference_review_registry.csv`:
+O revisor registra uma das seguintes decisões no `review_gate_reference_registry.csv`:
 
 **ACCEPT_AS_CONTEXTUAL_REFERENCE**
 A evidência disponível é coerente como referência contextual — fornece contexto físico-ambiental rastreável, mas não documenta evento observado. Resultado: o par patch-fonte permanece em CONTEXTUAL_EVIDENCE. Nenhuma promoção acima deste nível.
@@ -100,7 +100,7 @@ A única "evidência" disponível é embedding, cluster, NDWI/NDBI, MNDWI ou ín
 
 ## 5. Registro da decisão
 
-Toda revisão executada deve produzir uma entrada no `human_reference_review_registry.csv` com os seguintes campos mínimos preenchidos:
+Toda revisão executada deve produzir uma entrada no `review_gate_reference_registry.csv` com os seguintes campos mínimos preenchidos:
 
 **reviewer_role:** papel metodológico do revisor — METHODOLOGICAL_REVIEWER, DOMAIN_REVIEWER, GIS_REVIEWER, REMOTE_SENSING_REVIEWER ou FUTURE_EXTERNAL_REVIEWER. Identificação pessoal não é armazenada no registro público.
 
@@ -134,9 +134,9 @@ Toda revisão executada deve produzir uma entrada no `human_reference_review_reg
 
 ## 6. Relação com anotação futura
 
-Se, no futuro, houver imagem pós-evento de alta resolução disponível para um patch específico — ou produto operacional confirmado com evento documentado — pode haver anotação manual assistida por especialista.
+Se, no futuro, houver imagem pós-evento de alta resolução disponível para um patch específico — ou produto operacional confirmado com evento documentado — pode haver anotação manual por especialista.
 
-Essa anotação futura é uma nova etapa metodológica, distinta da revisão humana descrita neste documento. Ela não é consequência automática de uma revisão positiva. Deve ser tratada com:
+Essa anotação futura é uma nova etapa metodológica, distinta da revisão supervisora descrita neste documento. Ela não é consequência automática de uma revisão positiva. Deve ser tratada com:
 
 - Protocolo de anotação documentado.
 - Especificação da imagem usada (data, sensor, resolução).
@@ -153,15 +153,15 @@ A anotação futura não retroativamente valida patches do estado atual. Ela cri
 
 ## 7. Papel da revisão no contexto do Protocolo C
 
-A revisão humana não é o último passo do Protocolo C. É o penúltimo: ela satisfaz G7 e habilita G9 (decisão formal de promoção). A sequência é:
+A revisão supervisora não é o último passo do Protocolo C. É o penúltimo: ela satisfaz G7 e habilita G9 (decisão formal de promoção). A sequência é:
 
 ```
-G0 → G1 → G2 → G3 → G4 → G5 → G6 → G7 (revisão humana) → G8 (corroboração) → G9 (decisão)
+G0 → G1 → G2 → G3 → G4 → G5 → G6 → G7 (revisão supervisora) → G8 (corroboração) → G9 (decisão)
 ```
 
 Sem G7 satisfeito, G9 não pode ser executado. Sem G9 executado, nenhuma promoção é formal.
 
-No estado atual do REV-P, nenhum patch tem G1, G3, G4 ou G7 satisfeitos. O Protocolo B permanece bloqueado. Esta etapa de revisão humana existe como protocolo preparado para quando os gates anteriores forem satisfeitos — não como declaração de que eles já foram.
+No estado atual do REV-P, nenhum patch tem G1, G3, G4 ou G7 satisfeitos. O Protocolo B permanece bloqueado. Esta etapa de revisão supervisora existe como protocolo preparado para quando os gates anteriores forem satisfeitos — não como declaração de que eles já foram.
 
 ---
 
@@ -170,6 +170,6 @@ No estado atual do REV-P, nenhum patch tem G1, G3, G4 ou G7 satisfeitos. O Proto
 - [`docs/metodologia_cientifica/protocolo_c_fechamento_evidencias_ground_reference.md`](protocolo_c_fechamento_evidencias_ground_reference.md) — gates de promoção e níveis de fechamento
 - [`docs/metodologia_cientifica/protocolo_c_aquisicao_ground_reference.md`](protocolo_c_aquisicao_ground_reference.md) — etapa de aquisição: eventos e vínculos candidatos
 - [`docs/metodologia_cientifica/protocolo_c_construcao_referencia_operacional.md`](protocolo_c_construcao_referencia_operacional.md) — Protocolo C: formulação completa
-- [`datasets/human_reference_review_registry.csv`](../../datasets/human_reference_review_registry.csv) — registry de revisões humanas executadas ou placeholder
-- [`datasets/schemas/human_reference_review_schema.csv`](../../datasets/schemas/human_reference_review_schema.csv) — schema de campos do registry de revisão humana
+- [`datasets/review_gate_reference_registry.csv`](../../datasets/review_gate_reference_registry.csv) — registry de revisões supervisoras executadas ou placeholder
+- [`datasets/schemas/review_gate_reference_schema.csv`](../../datasets/schemas/review_gate_reference_schema.csv) — schema de campos do registry de revisão supervisora
 - [`datasets/reference_promotion_decision_registry.csv`](../../datasets/reference_promotion_decision_registry.csv) — registry de decisões de promoção

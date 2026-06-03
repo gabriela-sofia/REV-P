@@ -34,7 +34,7 @@ A fonte pertence a uma família com força metodológica suficiente para servir 
 **Incerteza documentada**
 As limitações e o grau de confiança da fonte estão documentados. Uma fonte sem incerteza declarada é suspeita, não forte.
 
-**Revisão humana**
+**Revisão supervisora**
 Há previsão de revisão por especialista ou humano qualificado antes de uso como referência operacional.
 
 **Vínculo com patch**
@@ -94,8 +94,8 @@ Embeddings DINOv2, diagnósticos estruturais, coerência Sentinel, índice GIS m
 **Permite afirmar:** características estruturais visuais dos patches Sentinel e comparação relativa entre patches.
 **Não permite afirmar:** que o patch foi inundado, que o embedding corresponde a um estado de inundação, ou que o índice mede vulnerabilidade observada.
 
-### HUMAN_REVIEW_EVIDENCE
-Feedback de especialista ou revisor humano sobre patches candidatos, registrado no protocolo de revisão humana do REV-P.
+### REVIEW_GATE_EVIDENCE
+Feedback de especialista ou revisor humano sobre patches candidatos, registrado no protocolo de revisão supervisora do REV-P.
 
 **Permite afirmar:** que o revisor observou características visuais ou contextuais consistentes com a hipótese de exposição hídrica.
 **Não permite afirmar:** que a revisão substitui evidência observacional de evento.
@@ -117,7 +117,7 @@ Para que um par patch-evento seja considerado elegível para uso como referênci
 | Cobertura do patch | A fonte cobre a bounding box do patch (confirmado por sobreposição) |
 | Fonte rastreável | Origem, versão, data e emissor da fonte documentados |
 | Incerteza documentada | Limitações e grau de confiança da fonte declarados |
-| Revisão humana | Revisão por especialista ou protocolo qualificado executado |
+| Revisão supervisora | Revisão por especialista ou protocolo qualificado executado |
 
 A ausência de qualquer item acima gera bloqueio com razão documentada no registry de vínculos.
 
@@ -142,7 +142,7 @@ Os seguintes estados bloqueiam um vínculo patch-evento-fonte de avançar para g
 - Dependência exclusiva de embedding DINO/cluster
 - Dependência exclusiva de índice espectral (NDWI, NDBI, MNDWI)
 - Dependência exclusiva de índice GIS multicritério
-- Ausência de revisão humana
+- Ausência de revisão supervisora
 - Fonte não adquirida localmente sem alternativa documentada
 
 **Bloqueios de qualidade** — impedem promoção para operacional:
@@ -183,7 +183,7 @@ A saída desta etapa é um conjunto de registros metadata-only que organiza:
 
 - **Registry de eventos candidatos** (`flood_event_candidate_registry.csv`): lista de eventos de inundação que podem ser relevantes para as três regiões do REV-P, com status de confirmação, fonte confirmatória e elegibilidade para busca de referência. Inclui referências metodológicas externas marcadas como METHOD_REFERENCE_ONLY.
 
-- **Registry de vínculos patch-evento-fonte** (`patch_event_reference_link_registry.csv`): mapeamento entre patches do corpus DINO, eventos candidatos e fontes de referência. Para cada combinação, registra: alinhamento temporal, alinhamento espacial, força da observação, status de revisão humana, se DINO foi usado apenas como suporte, status de candidatura e bloqueadores ativos.
+- **Registry de vínculos patch-evento-fonte** (`patch_event_reference_link_registry.csv`): mapeamento entre patches do corpus DINO, eventos candidatos e fontes de referência. Para cada combinação, registra: alinhamento temporal, alinhamento espacial, força da observação, status de revisão supervisora, se DINO foi usado apenas como suporte, status de candidatura e bloqueadores ativos.
 
 - **Status de elegibilidade por vínculo**: cada linha do registry de vínculos tem `reference_candidate_status` e `promotion_allowed`. No estado atual, todos os vínculos permanecem com `promotion_allowed=false` e `reference_candidate_status` conservador.
 
@@ -215,7 +215,7 @@ O que a etapa faz é criar a documentação auditável que torna visível a dist
 ## Referências internas
 
 - [`docs/metodologia_cientifica/protocolo_c_fechamento_evidencias_ground_reference.md`](protocolo_c_fechamento_evidencias_ground_reference.md) — etapa seguinte: gates de promoção, matriz de lacunas e decisão formal de promoção
-- [`docs/metodologia_cientifica/protocolo_c_revisao_humana_referencia.md`](protocolo_c_revisao_humana_referencia.md) — protocolo de revisão humana que se aplica quando houver candidatos suficientes
+- [`docs/metodologia_cientifica/protocolo_c_revisao_supervisora_referencia.md`](protocolo_c_revisao_supervisora_referencia.md) — protocolo de revisão supervisora que se aplica quando houver candidatos suficientes
 - [`docs/metodologia_cientifica/protocolo_c_construcao_referencia_operacional.md`](protocolo_c_construcao_referencia_operacional.md) — hierarquia de evidências e critérios gerais
 - [`docs/metodologia_cientifica/camada_referencia_contextual_validada.md`](camada_referencia_contextual_validada.md) — guardrails por status e claims por patch
 - [`datasets/flood_event_candidate_registry.csv`](../../datasets/flood_event_candidate_registry.csv) — registry de eventos candidatos

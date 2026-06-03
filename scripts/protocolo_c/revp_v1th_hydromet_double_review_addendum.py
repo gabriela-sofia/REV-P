@@ -2,7 +2,7 @@
 
 Generates hydromet-specific review questions as an addendum to existing
 v1qw packets, or standalone when no v1qw match exists. Answer slots are
-always empty — filled by human reviewer only.
+always empty — filled by reviewer only.
 """
 from __future__ import annotations
 import argparse
@@ -101,7 +101,7 @@ def run() -> dict[str, Any]:
                         "region":             region,
                         "question_key":       q["question_key"],
                         "question_text":      q["question_text"],
-                        "answer_placeholder": "<TO_BE_FILLED_BY_HUMAN_REVIEWER>",
+                        "answer_placeholder": "<TO_BE_FILLED_BY_REVIEWER>",
                         "response_value":     "",
                         "notes":              "",
                     }
@@ -131,7 +131,7 @@ def run() -> dict[str, Any]:
                     "region":             region,
                     "question_key":       q["question_key"],
                     "question_text":      q["question_text"],
-                    "answer_placeholder": "<TO_BE_FILLED_BY_HUMAN_REVIEWER>",
+                    "answer_placeholder": "<TO_BE_FILLED_BY_REVIEWER>",
                     "response_value":     "",
                     "notes":              "",
                 }

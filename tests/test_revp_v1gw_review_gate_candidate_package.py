@@ -1,4 +1,4 @@
-"""Tests for revp_v1gw_human_review_candidate_package.py (corrected).
+"""Tests for revp_v1gw_review_gate_candidate_package.py (corrected).
 
 Covers: guardrails, candidate categories, review protocol, region normalization,
 count_available_indicators, select_review_candidates_fallback,
@@ -22,7 +22,7 @@ import pytest
 SCRIPTS_DIR = Path(__file__).resolve().parents[1] / "scripts" / "dino"
 sys.path.insert(0, str(SCRIPTS_DIR))
 
-from revp_v1gw_human_review_candidate_package import (
+from revp_v1gw_review_gate_candidate_package import (
     CANDIDATE_CATEGORIES,
     FIELD_PATCH_ID,
     FIELD_REGION,
@@ -41,7 +41,7 @@ from revp_v1gw_human_review_candidate_package import (
 class TestGuardrails:
     def test_methodological_guardrails_locked(self) -> None:
         assert METHODOLOGICAL_GUARDRAILS["review_only"] is True
-        assert METHODOLOGICAL_GUARDRAILS["human_review_is_methodological_stage"] is True
+        assert METHODOLOGICAL_GUARDRAILS["review_gate_is_methodological_stage"] is True
         assert METHODOLOGICAL_GUARDRAILS["automatic_classification_forbidden"] is True
         assert METHODOLOGICAL_GUARDRAILS["candidates_are_not_classified"] is True
 

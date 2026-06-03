@@ -7,8 +7,8 @@ event_id,string,ID do evento candidato no flood_event_candidate_registry ou N/A,
 source_id,string,ID da fonte no ground_reference_evidence_source_registry ou N/A,,pe3d_recife_mde
 current_reference_status,string,Status atual de candidatura de referência,"CONTEXTUAL_EVIDENCE | AUDITABLE_REFERENCE_PROXY | STRONG_REFERENCE_CANDIDATE | OPERATIONAL_GROUND_TRUTH_NOT_ESTABLISHED | METHOD_REFERENCE_ONLY",CONTEXTUAL_EVIDENCE
 current_closure_level,string,Nível atual de fechamento de evidências,"EVIDENCE_OPEN | EVIDENCE_PARTIALLY_CLOSED | REFERENCE_CANDIDATE_READY_FOR_REVIEW | STRONG_REFERENCE_READY_FOR_EXTERNAL_VALIDATION | OPERATIONAL_GROUND_TRUTH_NOT_ESTABLISHED",EVIDENCE_OPEN
-missing_gate,string,Gate(s) crítico(s) aberto(s) impedindo promoção,"G0_PATCH_LINEAGE | G1_EVENT_CONFIRMATION | G2_SOURCE_AVAILABILITY | G3_TEMPORAL_ALIGNMENT | G4_SPATIAL_ALIGNMENT | G5_SOURCE_STRENGTH | G6_UNCERTAINTY_AND_LIMITATIONS | G7_HUMAN_REVIEW | G8_INDEPENDENT_CORROBORATION | G9_PROMOTION_DECISION | MULTIPLE_GATES | NOT_ASSESSED",MULTIPLE_GATES
-missing_evidence,string,Descrição da evidência faltante para fechar os gates,,evento confirmado; janela temporal; cobertura espacial; revisão humana
+missing_gate,string,Gate(s) crítico(s) aberto(s) impedindo promoção,"G0_PATCH_LINEAGE | G1_EVENT_CONFIRMATION | G2_SOURCE_AVAILABILITY | G3_TEMPORAL_ALIGNMENT | G4_SPATIAL_ALIGNMENT | G5_SOURCE_STRENGTH | G6_UNCERTAINTY_AND_LIMITATIONS | G7_REVIEW_GATE | G8_INDEPENDENT_CORROBORATION | G9_PROMOTION_DECISION | MULTIPLE_GATES | NOT_ASSESSED",MULTIPLE_GATES
+missing_evidence,string,Descrição da evidência faltante para fechar os gates,,evento confirmado; janela temporal; cobertura espacial; revisão supervisora
 required_action,string,Ação concreta necessária para avançar o fechamento de evidências,,buscar evento de inundação confirmado para Recife com data específica
 evidence_priority,string,Prioridade de aquisição de evidência,"HIGH | MEDIUM | LOW | METHOD_REFERENCE_ONLY",HIGH
 methodological_risk,string,Risco metodológico de promover sem fechar os gates atuais,"LOW | MODERATE | HIGH | CRITICAL | METHOD_REFERENCE_ONLY",HIGH

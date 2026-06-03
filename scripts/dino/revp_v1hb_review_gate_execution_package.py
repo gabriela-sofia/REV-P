@@ -1,4 +1,4 @@
-"""REV-P v1hb: Human Review Execution Package.
+"""REV-P v1hb: Review Gate Execution Package.
 
 Transforms v1gw candidates into an executable, auditable review package.
 Organizes 47 candidates, generates annotation templates, and prepares
@@ -21,7 +21,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[2]
 PHASE = "v1hb"
-PHASE_NAME = "HUMAN_REVIEW_EXECUTION_PACKAGE"
+PHASE_NAME = "REVIEW_GATE_EXECUTION_PACKAGE"
 
 DEFAULT_OUTPUT_DIR = ROOT / "local_runs" / "dino_embeddings" / PHASE
 
@@ -52,7 +52,7 @@ ALLOWED_REVIEW_SCOPE = [
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="REV-P v1hb: Human review execution package."
+        description="REV-P v1hb: Review gate execution package."
     )
     parser.add_argument("--output-dir", default=str(DEFAULT_OUTPUT_DIR))
     parser.add_argument("--force", action="store_true")
@@ -288,12 +288,12 @@ def build_discussion_inputs(
 
 
 def build_protocol_document() -> str:
-    """Build human review protocol documentation."""
-    return """# Human Review Protocol — REV-P v1hb
+    """Build review gate protocol documentation."""
+    return """# Review Gate Protocol — REV-P v1hb
 
 ## Propósito
 
-A revisão humana é uma etapa de interpretação estrutural exploratória. Reviewers inspecionam
+A revisão supervisora é uma etapa de interpretação estrutural exploratória. Reviewers inspecionam
 visualmente os patches candidatos para compreender:
 
 - Padrões visuais coerentes com vizinhança estrutural (DINO);
@@ -402,7 +402,7 @@ Para cada patch:
 
 ## Síntese para a Discussão do TCC
 
-Revisão humana alimenta a Seção 5 (Discussão) com:
+Revisão supervisora alimenta a Seção 5 (Discussão) com:
 
 1. Observações de padrão visual por categoria
 2. Coerência estrutural entre DINO e paisagem visual
@@ -412,7 +412,7 @@ Revisão humana alimenta a Seção 5 (Discussão) com:
 
 ## Garantias Metodológicas
 
-- Revisão humana permanece **interpretativa**, não operacional
+- Revisão supervisora permanece **interpretativa**, não operacional
 - Nenhum **label, classe ou target** é criado
 - Nenhuma **validação supervisionada** é executada
 - Nenhum **ground truth** é estabelecido
@@ -451,7 +451,7 @@ def main() -> int:
 
     # Write outputs
     write_csv(
-        output_dir / "human_review_execution_manifest_v1hb.csv",
+        output_dir / "review_gate_execution_manifest_v1hb.csv",
         execution_manifest,
         [
             "review_item_id", "canonical_patch_id", "region", "candidate_category",
@@ -462,29 +462,29 @@ def main() -> int:
     )
 
     write_csv(
-        output_dir / "human_review_annotation_template_v1hb.csv",
+        output_dir / "review_gate_annotation_template_v1hb.csv",
         annotation_template,
         template_fields,
     )
 
     write_csv(
-        output_dir / "human_review_category_summary_v1hb.csv",
+        output_dir / "review_gate_category_summary_v1hb.csv",
         category_summary,
         ["category", "n_patches", "regions", "interpretation_allowed", "interpretation_forbidden", "review_focus"],
     )
 
     write_csv(
-        output_dir / "human_review_discussion_inputs_v1hb.csv",
+        output_dir / "review_gate_discussion_inputs_v1hb.csv",
         discussion_inputs,
         ["finding_id", "evidence_type", "finding_summary", "supporting_artifact", "interpretation_for_discussion", "limitation", "claim_allowed", "claim_blocked"],
     )
 
     write_md(
-        output_dir / "human_review_protocol_v1hb.md",
+        output_dir / "review_gate_protocol_v1hb.md",
         protocol_doc,
     )
 
-    print(f"[OK] Human review execution package complete: {output_dir}")
+    print(f"[OK] Review gate execution package complete: {output_dir}")
     print(f"  - Execution manifest: {len(execution_manifest)} items")
     print(f"  - Annotation template: {len(annotation_template)} rows")
     print(f"  - Category summary: {len(category_summary)} categories")

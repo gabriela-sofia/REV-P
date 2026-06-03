@@ -245,7 +245,7 @@ def run() -> dict[str, Any]:
         "## Declaracao obrigatoria",
         "Precipitacao observada, proximidade de estacao ou janela temporal "
         "compativel nao validam automaticamente evento, nao criam ground truth "
-        "operacional, nao criam negativo formal e nao substituem revisao humana.",
+        "operacional, nao criam negativo formal e nao substituem revisao supervisora.",
     ])
     print(f"[v1st] rows={len(rows)} with_data={with_data} stations_queried={len(station_codes_needed)}")
     return {"rows": len(rows), "with_data": with_data}

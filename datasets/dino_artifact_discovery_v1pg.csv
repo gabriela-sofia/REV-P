@@ -52,7 +52,7 @@ V1PG_ART_0160,datasets/ground_reference_gap_matrix.csv,7a236f60fa227cb4,CSV,9503
 V1PG_ART_0162,datasets/ground_truth_candidate_decision_audit.csv,edbd7f404641b9b5,CSV,8039,dino,false,true,false,false,,false,false,true,,source=datasets
 V1PG_ART_0165,datasets/hard_stable_control_after_real_patch_gate_matrix.csv,012f8e06c6417532,CSV,1265,dino,false,true,false,false,,false,false,true,,source=datasets
 V1PG_ART_0168,datasets/hard_stable_control_numeric_gate_matrix.csv,f1167184dae6d188,CSV,15436,dino,false,true,false,false,,false,false,true,,source=datasets
-V1PG_ART_0170,datasets/human_reference_review_registry.csv,9cf84e237f770322,CSV,4494,dino|patch_id,false,true,false,false,,true,false,true,,source=datasets
+V1PG_ART_0170,datasets/review_gate_reference_registry.csv,9cf84e237f770322,CSV,4494,dino|patch_id,false,true,false,false,,true,false,true,,source=datasets
 V1PG_ART_0188,datasets/inventory_negative_multimodal_readiness_matrix.csv,0cf86ca592138b4d,CSV,407,dino,false,true,false,false,,false,false,true,,source=datasets
 V1PG_ART_0191,datasets/label_and_training_readiness_matrix.csv,185cfa7cbb8107ec,CSV,814,dino|embedding,true,true,false,false,,false,false,true,,source=datasets
 V1PG_ART_0197,datasets/multi_anchor_dino_review_embedding_registry.csv,02310f200418f3b3,CSV,1233,dino|embedding|similarity,true,true,true,false,,false,false,true,,source=datasets
@@ -202,7 +202,7 @@ V1PG_ART_1141,scripts/dino/revp_v1gc_dino_embedding_geo_structural_diagnostics.p
 V1PG_ART_1142,scripts/dino/revp_v1gd_dino_embedding_perturbation_robustness_diagnostics.py,6f69d9f31143ef75,SCRIPT,27399,dino|embedding,true,true,false,false,,false,false,true,,source=scripts/dino
 V1PG_ART_1143,scripts/dino/revp_v1ge_dino_expanded_sentinel_embedding_corpus.py,feb63795db7f5996,SCRIPT,17146,dino|embedding,true,true,false,false,,false,false,true,,source=scripts/dino
 V1PG_ART_1144,scripts/dino/revp_v1gf_dino_structural_evidence_index.py,9809138728bfc8e2,SCRIPT,10475,dino,false,true,false,false,,false,false,true,,source=scripts/dino
-V1PG_ART_1145,scripts/dino/revp_v1gg_dino_human_review_package.py,27358dc927c6ed88,SCRIPT,9143,dino,false,true,false,false,,false,false,true,,source=scripts/dino
+V1PG_ART_1145,scripts/dino/revp_v1gg_dino_review_gate_package.py,27358dc927c6ed88,SCRIPT,9143,dino,false,true,false,false,,false,false,true,,source=scripts/dino
 V1PG_ART_1146,scripts/dino/revp_v1gh_dino_longitudinal_structural_diagnostics.py,d1a2f144b7cb43ad,SCRIPT,10323,dino,false,true,false,false,,false,false,true,,source=scripts/dino
 V1PG_ART_1147,scripts/dino/revp_v1gi_dino_structural_provenance_tracker.py,d098f8d423ce7b03,SCRIPT,10315,dino,false,true,false,false,,false,false,true,,source=scripts/dino
 V1PG_ART_1148,scripts/dino/revp_v1gj_multimodal_readiness_audit.py,1b563110b4fbb5e4,SCRIPT,7426,dino,false,true,false,false,,false,false,true,,source=scripts/dino
@@ -216,13 +216,13 @@ V1PG_ART_1155,scripts/dino/revp_v1gs_gis_land_use_geometry_enablement.py,4be2a89
 V1PG_ART_1156,scripts/dino/revp_v1gt_gis_land_use_coverage_expansion_audit.py,45d55f4742dfbe6e,SCRIPT,22896,dino,false,true,false,false,,false,false,true,,source=scripts/dino
 V1PG_ART_1157,scripts/dino/revp_v1gu_embedding_structural_evidence_package.py,8b7e39a449154f97,SCRIPT,22365,dino|embedding,true,true,false,false,,false,false,true,,source=scripts/dino
 V1PG_ART_1158,scripts/dino/revp_v1gv_external_evidence_coverage_matrix.py,bc82646cfc697ed9,SCRIPT,20624,dino,false,true,false,false,,false,false,true,,source=scripts/dino
-V1PG_ART_1159,scripts/dino/revp_v1gw_human_review_candidate_package.py,8862d1b3b35f381e,SCRIPT,21061,dino,false,true,false,false,,false,false,true,,source=scripts/dino
+V1PG_ART_1159,scripts/dino/revp_v1gw_review_gate_candidate_package.py,8862d1b3b35f381e,SCRIPT,21061,dino,false,true,false,false,,false,false,true,,source=scripts/dino
 V1PG_ART_1160,scripts/dino/revp_v1gx_tcc_figures_and_tables_export_plan.py,01cb144dfe1ed7b5,SCRIPT,17063,dino,false,true,false,false,,false,false,true,,source=scripts/dino
 V1PG_ART_1161,scripts/dino/revp_v1gy_tcc_visual_evidence_export_package.py,9e81fc1782327c7a,SCRIPT,38850,dino,false,true,false,false,,false,false,true,,source=scripts/dino
 V1PG_ART_1162,scripts/dino/revp_v1gz_scientific_evidence_master_audit.py,2aebf229d5eddf30,SCRIPT,25458,dino,false,true,false,false,,false,false,true,,source=scripts/dino
-V1PG_ART_1163,scripts/dino/revp_v1hb_human_review_execution_package.py,21fa8ea34fdee1ab,SCRIPT,18603,dino,false,true,false,false,,false,false,true,,source=scripts/dino
+V1PG_ART_1163,scripts/dino/revp_v1hb_review_gate_execution_package.py,21fa8ea34fdee1ab,SCRIPT,18603,dino,false,true,false,false,,false,false,true,,source=scripts/dino
 V1PG_ART_1164,scripts/dino/revp_v1hc_sentinel_visual_review_preview_package.py,5f94e30251bc9d03,SCRIPT,17534,dino,false,true,false,false,,false,false,true,,source=scripts/dino
-V1PG_ART_1165,scripts/dino/revp_v1hd_visual_assisted_review_update.py,0f717c93cf9a6a87,SCRIPT,32512,dino,false,true,false,false,,false,false,true,,source=scripts/dino
+V1PG_ART_1165,scripts/dino/revp_v1hd_visual_review_update_update.py,0f717c93cf9a6a87,SCRIPT,32512,dino,false,true,false,false,,false,false,true,,source=scripts/dino
 V1PG_ART_1166,scripts/dino/revp_v1he_tcc_results_discussion_synthesis.py,977bf4b52493b561,SCRIPT,48778,dino,false,true,false,false,,false,false,true,,source=scripts/dino
 V1PG_ART_1167,scripts/dino/revp_v1hf_overleaf_ready_academic_package.py,2651ae693b14280a,SCRIPT,58535,dino,false,true,false,false,,false,false,true,,source=scripts/dino
 V1PG_ART_1168,scripts/dino/revp_v1pg_dino_artifact_discovery.py,910afac95d708f4a,SCRIPT,7723,dino,false,true,false,false,,false,false,true,,source=scripts/dino

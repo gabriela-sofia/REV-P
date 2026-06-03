@@ -157,7 +157,7 @@ preservando seu potencial para futuros pipelines que disponham de ground truth a
 2. Metadados Sentinel locais nao continham sidecars com data de aquisicao
 3. O escopo temporal foi restrito a patches existentes no corpus
 4. Nao houve acesso a rede durante a execucao do pipeline
-5. Nao houve revisao humana formal dos candidatos a eventos
+5. Nao houve revisao supervisora formal dos candidatos a eventos
 6. O pipeline e reproduzivel apenas com os mesmos assets locais
 
 ## 15. Proximos Passos
@@ -167,5 +167,5 @@ Condicoes para destravar ground truth operacional no futuro:
 2. Adquirir decreto completo do Diario Oficial Municipal
 3. Re-executar pipeline Sentinel com assets contendo sidecars STAC/MTD
 4. Estabelecer negativo formal de ao menos uma fonte oficial
-5. Executar revisao humana com especialista em desastres
+5. Executar revisao supervisora com especialista em desastres
 6. Nenhum desses passos deve ser executado automaticamente por este pipeline

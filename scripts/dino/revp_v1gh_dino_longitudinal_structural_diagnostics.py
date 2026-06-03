@@ -83,7 +83,7 @@ def run(args: argparse.Namespace) -> int:
         "v1gc_bridges": ROOT / "local_runs" / "dino_embeddings" / "v1gc" / "graph_bridges.csv",
         "v1gd_drift": ROOT / "local_runs" / "dino_embeddings" / "v1gd" / "sensitivity_rankings.csv",
         "v1gf_index": ROOT / "local_runs" / "dino_embeddings" / "v1gf" / "structural_evidence_index.csv",
-        "v1gg_review": ROOT / "local_runs" / "dino_embeddings" / "v1gg" / "human_review_manifest.csv",
+        "v1gg_review": ROOT / "local_runs" / "dino_embeddings" / "v1gg" / "review_gate_manifest.csv",
     }
     missing = [name for name, path in upstream.items() if not path.exists()]
     fz_neighbors = by_id(read_csv(upstream["v1fz_neighbors"]))

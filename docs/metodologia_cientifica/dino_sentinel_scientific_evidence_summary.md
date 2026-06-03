@@ -15,7 +15,7 @@ A trilha DINO utiliza um encoder auto-supervisionado congelado para inspeção e
 - Os embeddings locais foram gerados apenas em `local_runs/`.
 - Um corpus regional balanceado foi produzido para Curitiba, Petrópolis e Recife.
 - Uma execução expandida do corpus local produziu 12 embeddings, 4 por região.
-- Diagnósticos estruturais foram gerados para vizinhos, clusters, medoids, outliers, pontes de grafo, robustez a perturbações, estabilidade longitudinal, proveniência e triagem de revisão humana.
+- Diagnósticos estruturais foram gerados para vizinhos, clusters, medoids, outliers, pontes de grafo, robustez a perturbações, estabilidade longitudinal, proveniência e triagem de revisão supervisora.
 
 ## Evidências locais produzidas
 
@@ -31,7 +31,7 @@ A evidência de execução local está armazenada em `local_runs/dino_embeddings
 - v1gd: diagnósticos de robustez a perturbações.
 - v1ge: corpus expandido de embeddings Sentinel.
 - v1gf: índice de evidência estrutural.
-- v1gg: pacote de revisão humana.
+- v1gg: pacote de revisão supervisora.
 - v1gh: diagnósticos estruturais longitudinais.
 - v1gi: rastreador de proveniência estrutural.
 - v1gj: auditoria de prontidão multimodal com execução multimodal desabilitada.
@@ -52,7 +52,7 @@ A trilha DINO não reivindica:
 - inferência de ocorrência de inundação;
 - prontidão de fusão multimodal além da auditoria de bloqueadores.
 
-`review_priority` é um campo de triagem de revisão humana apenas. Não é um rótulo científico, não é um alvo e não é um proxy para status de vulnerabilidade ou inundação.
+`review_priority` é um campo de triagem de revisão supervisora apenas. Não é um rótulo científico, não é um alvo e não é um proxy para status de vulnerabilidade ou inundação.
 
 ## Status dos embeddings
 
@@ -95,9 +95,9 @@ O v1gd testou perturbações controladas para auditoria de sensibilidade local:
 
 Essas perturbações não são aumentos de dados de treinamento. Não são usadas para treinar ou validar um modelo supervisionado.
 
-## Status da revisão humana
+## Status da revisão supervisora
 
-O v1gg gerou um pacote local de revisão humana a partir dos diagnósticos estruturais. Inclui itens de revisão para candidatos de ponte, outliers, medoids, embeddings robustos ou instáveis e exemplos regionais.
+O v1gg gerou um pacote local de revisão supervisora a partir dos diagnósticos estruturais. Inclui itens de revisão para candidatos de ponte, outliers, medoids, embeddings robustos ou instáveis e exemplos regionais.
 
 As notas humanas permanecem vazias até a revisão manual. O pacote não copia rasters brutos e não versiona outputs visuais.
 

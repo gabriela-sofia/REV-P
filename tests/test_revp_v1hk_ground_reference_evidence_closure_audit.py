@@ -1,6 +1,6 @@
 """Tests for Protocolo C evidence closure and promotion decision stage.
 
-Covers: gap matrix schema/registry, human review schema/registry, promotion
+Covers: gap matrix schema/registry, review gate schema/registry, promotion
 decision schema/registry, document content validation, and promotion guardrails.
 
 Reference: docs/metodologia_cientifica/protocolo_c_fechamento_evidencias_ground_reference.md
@@ -34,7 +34,7 @@ VALID_MISSING_GATE = {
     "G4_SPATIAL_ALIGNMENT",
     "G5_SOURCE_STRENGTH",
     "G6_UNCERTAINTY_AND_LIMITATIONS",
-    "G7_HUMAN_REVIEW",
+    "G7_REVIEW_GATE",
     "G8_INDEPENDENT_CORROBORATION",
     "G9_PROMOTION_DECISION",
     "MULTIPLE_GATES",
@@ -113,7 +113,7 @@ CRITICAL_GATES = {
     "G1_EVENT_CONFIRMATION",
     "G3_TEMPORAL_ALIGNMENT",
     "G4_SPATIAL_ALIGNMENT",
-    "G7_HUMAN_REVIEW",
+    "G7_REVIEW_GATE",
     "G9_PROMOTION_DECISION",
 }
 
@@ -132,8 +132,8 @@ NON_PROMOTING_DECISIONS = {
 
 GAP_MATRIX_SCHEMA = PROJECT_ROOT / "datasets" / "schemas" / "ground_reference_gap_matrix_schema.csv"
 GAP_MATRIX_REGISTRY = PROJECT_ROOT / "datasets" / "ground_reference_gap_matrix.csv"
-HUMAN_REVIEW_SCHEMA = PROJECT_ROOT / "datasets" / "schemas" / "human_reference_review_schema.csv"
-HUMAN_REVIEW_REGISTRY = PROJECT_ROOT / "datasets" / "human_reference_review_registry.csv"
+REVIEW_GATE_SCHEMA = PROJECT_ROOT / "datasets" / "schemas" / "review_gate_reference_schema.csv"
+REVIEW_GATE_REGISTRY = PROJECT_ROOT / "datasets" / "review_gate_reference_registry.csv"
 PROMOTION_SCHEMA = PROJECT_ROOT / "datasets" / "schemas" / "reference_promotion_decision_schema.csv"
 PROMOTION_REGISTRY = PROJECT_ROOT / "datasets" / "reference_promotion_decision_registry.csv"
 CLOSURE_DOC = (
@@ -142,11 +142,11 @@ CLOSURE_DOC = (
     / "metodologia_cientifica"
     / "protocolo_c_fechamento_evidencias_ground_reference.md"
 )
-HUMAN_REVIEW_DOC = (
+REVIEW_GATE_DOC = (
     PROJECT_ROOT
     / "docs"
     / "metodologia_cientifica"
-    / "protocolo_c_revisao_humana_referencia.md"
+    / "protocolo_c_revisao_supervisora_referencia.md"
 )
 
 
@@ -177,11 +177,11 @@ class TestClosureFilesExist:
     def test_gap_matrix_registry_exists(self) -> None:
         assert GAP_MATRIX_REGISTRY.exists(), f"Missing: {GAP_MATRIX_REGISTRY}"
 
-    def test_human_review_schema_exists(self) -> None:
-        assert HUMAN_REVIEW_SCHEMA.exists(), f"Missing: {HUMAN_REVIEW_SCHEMA}"
+    def test_review_gate_schema_exists(self) -> None:
+        assert REVIEW_GATE_SCHEMA.exists(), f"Missing: {REVIEW_GATE_SCHEMA}"
 
-    def test_human_review_registry_exists(self) -> None:
-        assert HUMAN_REVIEW_REGISTRY.exists(), f"Missing: {HUMAN_REVIEW_REGISTRY}"
+    def test_review_gate_registry_exists(self) -> None:
+        assert REVIEW_GATE_REGISTRY.exists(), f"Missing: {REVIEW_GATE_REGISTRY}"
 
     def test_promotion_schema_exists(self) -> None:
         assert PROMOTION_SCHEMA.exists(), f"Missing: {PROMOTION_SCHEMA}"
@@ -192,8 +192,8 @@ class TestClosureFilesExist:
     def test_closure_document_exists(self) -> None:
         assert CLOSURE_DOC.exists(), f"Missing: {CLOSURE_DOC}"
 
-    def test_human_review_document_exists(self) -> None:
-        assert HUMAN_REVIEW_DOC.exists(), f"Missing: {HUMAN_REVIEW_DOC}"
+    def test_review_gate_document_exists(self) -> None:
+        assert REVIEW_GATE_DOC.exists(), f"Missing: {REVIEW_GATE_DOC}"
 
     def test_prior_registries_still_exist(self) -> None:
         for name in [
@@ -243,7 +243,7 @@ class TestGapMatrixSchemaFields:
 
 
 # ════════════════════════════════════════
-# 3. Schema fields — human review
+# 3. Schema fields — review gate
 # ════════════════════════════════════════
 
 class TestHumanReviewSchemaFields:
@@ -274,11 +274,11 @@ class TestHumanReviewSchemaFields:
 
     @pytest.fixture
     def schema_fields(self) -> set[str]:
-        return _read_schema_fields(HUMAN_REVIEW_SCHEMA)
+        return _read_schema_fields(REVIEW_GATE_SCHEMA)
 
     @pytest.mark.parametrize("field", sorted(REQUIRED_FIELDS))
     def test_required_field_present(self, schema_fields: set[str], field: str) -> None:
-        assert field in schema_fields, f"Required field '{field}' missing from human review schema"
+        assert field in schema_fields, f"Required field '{field}' missing from review gate schema"
 
 
 # ════════════════════════════════════════
@@ -445,16 +445,16 @@ class TestGapMatrixGuardrails:
 
 
 # ════════════════════════════════════════
-# 7. Human review registry — structure & controlled values
+# 7. Review gate registry — structure & controlled values
 # ════════════════════════════════════════
 
 class TestHumanReviewRegistryStructure:
     @pytest.fixture
     def rows(self) -> list[dict]:
-        return _read_registry(HUMAN_REVIEW_REGISTRY)
+        return _read_registry(REVIEW_GATE_REGISTRY)
 
     def test_registry_has_rows(self, rows: list[dict]) -> None:
-        assert len(rows) > 0, "Human review registry must have at least one row"
+        assert len(rows) > 0, "Review gate registry must have at least one row"
 
     def test_review_ids_unique(self, rows: list[dict]) -> None:
         ids = [row["review_id"] for row in rows]
@@ -525,13 +525,13 @@ class TestHumanReviewRegistryStructure:
 
 
 # ════════════════════════════════════════
-# 8. Human review registry — guardrails
+# 8. Review gate registry — guardrails
 # ════════════════════════════════════════
 
 class TestHumanReviewGuardrails:
     @pytest.fixture
     def rows(self) -> list[dict]:
-        return _read_registry(HUMAN_REVIEW_REGISTRY)
+        return _read_registry(REVIEW_GATE_REGISTRY)
 
     def test_all_current_reviews_have_promotion_blocked(self, rows: list[dict]) -> None:
         """All reviews in the current REV-P state must have promotion_allowed=false."""
@@ -611,7 +611,7 @@ class TestHumanReviewGuardrails:
         }
         for expected in ["Recife", "Petrópolis", "Curitiba"]:
             assert expected in regions, (
-                f"Region '{expected}' missing from placeholder human review entries"
+                f"Region '{expected}' missing from placeholder review gate entries"
             )
 
 
@@ -730,13 +730,13 @@ class TestPromotionDecisionRegistry:
                 )
 
     def test_decisions_without_g7_cannot_promote(self, rows: list[dict]) -> None:
-        """Decisions listing G7_HUMAN_REVIEW as failed cannot have promotion_allowed=true."""
+        """Decisions listing G7_REVIEW_GATE as failed cannot have promotion_allowed=true."""
         for row in rows:
             failed = row.get("failed_gates", "")
-            if "G7_HUMAN_REVIEW" in failed:
+            if "G7_REVIEW_GATE" in failed:
                 promoted = row.get("promotion_allowed", "").strip().lower()
                 assert promoted == "false", (
-                    f"Decision '{row['decision_id']}': G7_HUMAN_REVIEW failed "
+                    f"Decision '{row['decision_id']}': G7_REVIEW_GATE failed "
                     f"but promotion_allowed='{promoted}'"
                 )
 
@@ -769,9 +769,9 @@ class TestClosureDocumentContent:
             "Document must address G1 event confirmation gate"
         )
 
-    def test_document_mentions_g7_human_review(self, doc: str) -> None:
-        assert "g7_human_review" in doc.lower() or "human_review" in doc.lower(), (
-            "Document must address G7 human review gate"
+    def test_document_mentions_g7_review_gate(self, doc: str) -> None:
+        assert "g7_review_gate" in doc.lower() or "review_gate" in doc.lower(), (
+            "Document must address G7 review gate gate"
         )
 
     def test_document_mentions_closure_levels(self, doc: str) -> None:
@@ -824,17 +824,17 @@ class TestClosureDocumentContent:
 
 
 # ════════════════════════════════════════
-# 11. Document content — human review document
+# 11. Document content — review gate document
 # ════════════════════════════════════════
 
 class TestHumanReviewDocumentContent:
     @pytest.fixture
     def doc(self) -> str:
-        return _read_doc(HUMAN_REVIEW_DOC)
+        return _read_doc(REVIEW_GATE_DOC)
 
     def test_document_defines_review_role(self, doc: str) -> None:
         assert "auditoria" in doc.lower() or "curadoria" in doc.lower() or "audit" in doc.lower(), (
-            "Human review document must define review as auditing/curation, not arbitrary labeling"
+            "Review gate document must define review as auditing/curation, not arbitrary labeling"
         )
 
     def test_document_lists_review_inputs(self, doc: str) -> None:
@@ -854,12 +854,12 @@ class TestHumanReviewDocumentContent:
 
     def test_document_states_dino_cannot_create_label(self, doc: str) -> None:
         assert "dino" in doc.lower(), (
-            "Document must address DINOv2 limitations in human review context"
+            "Document must address DINOv2 limitations in review gate context"
         )
 
     def test_document_defines_g7_gate(self, doc: str) -> None:
         assert "g7" in doc.lower(), (
-            "Human review document must reference G7 gate"
+            "Review gate document must reference G7 gate"
         )
 
     def test_document_mentions_protocol_b_dependency(self, doc: str) -> None:
@@ -875,7 +875,7 @@ class TestHumanReviewDocumentContent:
         ]
         doc_lower = doc.lower()
         for claim in forbidden:
-            assert claim not in doc_lower, f"Human review document must not assert: '{claim}'"
+            assert claim not in doc_lower, f"Review gate document must not assert: '{claim}'"
 
     def test_document_mentions_future_annotation_as_separate_step(self, doc: str) -> None:
         assert "anotação" in doc.lower() or "annotation" in doc.lower(), (

@@ -12,7 +12,7 @@ external_source_status,string,"Status local: EXISTS_COMPLETE | EXISTS_PARTIAL | 
 hydrogeomorphological_coherence,string,"Coerência hidrogeomorfológica: STRONG | MODERATE | WEAK | UNVERIFIED | BLOCKED",STRONG
 sentinel_coherence,string,"Coerência Sentinel-embedding: ALIGNED | DIVERGENT | UNVERIFIED | NOT_APPLICABLE",UNVERIFIED
 temporal_alignment_status,string,"Status de alinhamento temporal: COMPATIBLE | INCOMPATIBLE | UNKNOWN | NO_EVENT_DATA",UNKNOWN
-human_review_status,string,"Status de revisão humana: NOT_REVIEWED | PENDING | REVIEWED_APPROVED | REVIEWED_REJECTED | PARTIAL_FEEDBACK",NOT_REVIEWED
+review_gate_status,string,"Status de revisão supervisora: NOT_REVIEWED | PENDING | REVIEWED_APPROVED | REVIEWED_REJECTED | PARTIAL_FEEDBACK",NOT_REVIEWED
 promotion_allowed,boolean,Se este patch pode ser elevado de status (true/false),false
 blocked_reason,string,Se promotion_allowed=false; razão específica,CRS reconciliation pending (B1); spatial overlap unverified; no event temporal data
 allowed_claim,string,"Claim metodológico permitido (ex: contextual pattern indicator)",This patch exhibits strong topographic gradient per PE3D; context supports low-lying terrain classification; PE3D source limitation: partial stack coverage and no pixel-level validation

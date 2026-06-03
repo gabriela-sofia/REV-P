@@ -729,7 +729,7 @@ def test_v1sy_mandatory_clause(monkeypatch, tmp_path):
     doc = (tmp_path / v1sy.DOC.name).read_text(encoding="utf-8")
     assert "v1sr" in doc and "v1sz" in doc
     assert "ground truth operacional" in doc
-    assert "revisão humana" in doc
+    assert "revisão supervisora" in doc
 
 
 def test_no_writes_outside_tmp(monkeypatch, tmp_path):

@@ -9,4 +9,4 @@ Bridge rows: 9. Com dados de chuva: 9.
 
 ## Limitação
 
-Acumulados de precipitação não validam evento. A ponte suporta revisão humana mas não substitui evidência observacional independente.
+Acumulados de precipitação não validam evento. A ponte suporta revisão supervisora mas não substitui evidência observacional independente.

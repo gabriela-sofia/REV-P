@@ -2,7 +2,7 @@
 
 > **ATENÇÃO**: Este dossiê não é ground truth operacional.
 > Ele documenta o estado atual de busca de evidências para um evento candidato.
-> Ground truth operacional requer satisfação de todos os gates G1–G9 e revisão humana formal.
+> Ground truth operacional requer satisfação de todos os gates G1–G9 e revisão supervisora formal.
 
 ---
 

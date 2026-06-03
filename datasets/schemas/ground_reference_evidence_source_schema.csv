@@ -1,7 +1,7 @@
 field,type,description,controlled_values,example
 source_id,string,Identificador único da fonte de referência,,pe3d_recife_mde
 source_name,string,Nome completo da fonte,,PE3D/MDE rasters — Programa Pernambuco 3D
-source_family,string,Família metodológica da fonte,"FIELD_OBSERVATION | OFFICIAL_OBSERVED_FLOOD_MAP | EXPERT_ANNOTATED_HIGH_RES_IMAGE | OPERATIONAL_FLOOD_PRODUCT | MODELLED_SUSCEPTIBILITY_LAYER | HYDROGEOMORPHOLOGICAL_CONTEXT | SENTINEL_STRUCTURAL_EVIDENCE | HUMAN_REVIEW_EVIDENCE",HYDROGEOMORPHOLOGICAL_CONTEXT
+source_family,string,Família metodológica da fonte,"FIELD_OBSERVATION | OFFICIAL_OBSERVED_FLOOD_MAP | EXPERT_ANNOTATED_HIGH_RES_IMAGE | OPERATIONAL_FLOOD_PRODUCT | MODELLED_SUSCEPTIBILITY_LAYER | HYDROGEOMORPHOLOGICAL_CONTEXT | SENTINEL_STRUCTURAL_EVIDENCE | REVIEW_GATE_EVIDENCE",HYDROGEOMORPHOLOGICAL_CONTEXT
 source_type,string,Tipo técnico da fonte,"terrain | drainage | land_use | administrative | remote_sensing_product | gis_index | embedding_analysis | field_report | other",terrain
 region,string,"Região de aplicação: Curitiba | Petrópolis | Recife | All | N/A","Curitiba | Petrópolis | Recife | All | N/A",Recife
 event_specific,boolean,A fonte documenta um evento específico? (true/false),,false

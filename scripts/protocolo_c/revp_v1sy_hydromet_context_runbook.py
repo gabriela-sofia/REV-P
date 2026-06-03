@@ -27,7 +27,7 @@ _MANDATORY = (
     "contexto temporal e regional review-only. Precipitação observada, "
     "proximidade de estação ou janela temporal compatível não validam "
     "automaticamente evento, não criam ground truth operacional, não criam "
-    "negativo formal e não substituem revisão humana."
+    "negativo formal e não substituem revisão supervisora."
 )
 
 
@@ -62,7 +62,7 @@ def run() -> dict[str, Any]:
         "descritivos; não podem ser usados como target ou label supervisionado.",
         "5. **Crosswalk de intake** (v1sv): para cada janela, criar entrada de "
         "intake manual no v1rb com todos os campos review-only.",
-        "6. **Revisão humana obrigatória**: qualquer interpretação de causalidade "
+        "6. **Revisão supervisora obrigatória**: qualquer interpretação de causalidade "
         "entre precipitação e evento requer revisão por especialista.",
         "## O que não fazer",
         "- Não tratar compatibilidade de precipitação como validação de evento.",

@@ -4,7 +4,7 @@ patch_id,string,ID canônico do patch (CUR_XX | PET_XX | REC_XX),,REC_01
 region,string,"Região: Curitiba | Petrópolis | Recife","Curitiba | Petrópolis | Recife",Recife
 event_id,string,ID do evento candidato no flood_event_candidate_registry,,recife_flood_candidate_2022_placeholder
 source_id,string,ID da fonte no ground_reference_evidence_source_registry,,pe3d_recife_mde
-source_family,string,Família metodológica da fonte,"FIELD_OBSERVATION | OFFICIAL_OBSERVED_FLOOD_MAP | EXPERT_ANNOTATED_HIGH_RES_IMAGE | OPERATIONAL_FLOOD_PRODUCT | HAND_LABELED_REMOTE_SENSING_DATASET | MODELLED_SUSCEPTIBILITY_LAYER | HYDROGEOMORPHOLOGICAL_CONTEXT | SENTINEL_STRUCTURAL_EVIDENCE | HUMAN_REVIEW_EVIDENCE",HYDROGEOMORPHOLOGICAL_CONTEXT
+source_family,string,Família metodológica da fonte,"FIELD_OBSERVATION | OFFICIAL_OBSERVED_FLOOD_MAP | EXPERT_ANNOTATED_HIGH_RES_IMAGE | OPERATIONAL_FLOOD_PRODUCT | HAND_LABELED_REMOTE_SENSING_DATASET | MODELLED_SUSCEPTIBILITY_LAYER | HYDROGEOMORPHOLOGICAL_CONTEXT | SENTINEL_STRUCTURAL_EVIDENCE | REVIEW_GATE_EVIDENCE",HYDROGEOMORPHOLOGICAL_CONTEXT
 event_confirmation_status,string,Status de confirmação do evento associado,"CONFIRMED | PARTIALLY_CONFIRMED | REPORTED_UNVERIFIED | METHOD_REFERENCE_ONLY | UNKNOWN",UNKNOWN
 temporal_alignment_status,string,Alinhamento entre imagem/produto e evento,"ALIGNED | PARTIAL | NOT_ALIGNED | NOT_ASSESSED | METHOD_REFERENCE_ONLY",NOT_ASSESSED
 spatial_alignment_status,string,Sobreposição espacial confirmada entre patch e fonte,"MATCHED | PARTIAL | NOT_MATCHED | NOT_ASSESSED | METHOD_REFERENCE_ONLY",NOT_ASSESSED
@@ -12,11 +12,11 @@ crs_compatibility_status,string,Compatibilidade de CRS entre patch e fonte,"COMP
 patch_coverage_status,string,Cobertura do patch pela fonte,"COVERED | PARTIALLY_COVERED | NOT_COVERED | UNVERIFIED | METHOD_REFERENCE_ONLY",UNVERIFIED
 observation_strength,string,Força da observação da fonte,"DIRECT_OBSERVATION | EXPERT_ANNOTATION | OPERATIONAL_ALGORITHMIC | MODELLED_CONTEXT | STRUCTURAL_CONTEXT | NONE",STRUCTURAL_CONTEXT
 uncertainty_status,string,Incerteza da fonte documentada?,"DOCUMENTED | PARTIALLY_DOCUMENTED | NOT_DOCUMENTED | NOT_APPLICABLE",PARTIALLY_DOCUMENTED
-human_review_status,string,Status de revisão humana executada,"NOT_REVIEWED | PENDING | REVIEWED_APPROVED | REVIEWED_REJECTED | PARTIAL_FEEDBACK | METHOD_REFERENCE_ONLY",NOT_REVIEWED
+review_gate_status,string,Status de revisão supervisora executada,"NOT_REVIEWED | PENDING | REVIEWED_APPROVED | REVIEWED_REJECTED | PARTIAL_FEEDBACK | METHOD_REFERENCE_ONLY",NOT_REVIEWED
 dino_used_as_support_only,boolean,DINO é usado apenas como suporte estrutural (não como fonte de ground truth)? (true/false),,true
 reference_candidate_status,string,Status de candidatura de referência,"NOT_ASSESSED | CONTEXTUAL_ONLY | REFERENCE_SEARCH_REQUIRED | GROUND_REFERENCE_CANDIDATE | OPERATIONAL_GROUND_TRUTH_BLOCKED | INSUFFICIENT_REFERENCE | METHOD_REFERENCE_ONLY",CONTEXTUAL_ONLY
 promotion_allowed,boolean,Se este vínculo pode ser promovido a referência operacional (true/false),,false
-blocked_reason,string,Razão do bloqueio se promotion_allowed=false,,Evento não confirmado; alinhamento temporal não avaliado; alinhamento espacial não avaliado; CRS incompatível; revisão humana pendente
+blocked_reason,string,Razão do bloqueio se promotion_allowed=false,,Evento não confirmado; alinhamento temporal não avaliado; alinhamento espacial não avaliado; CRS incompatível; revisão supervisora pendente
 allowed_claim,string,Claim metodológico permitido para este vínculo específico,,Este patch está em região coberta por PE3D com contexto geomorfológico documentado; nenhum vínculo evento-fonte confirmado até o momento
 forbidden_claim,string,Claims categoricamente proibidos para este vínculo,,"Afirmação de inundação observada; flood label; training label; ground truth operacional; flood prediction; flood detection"
 notes,string,Notas adicionais e rastreabilidade,,Vínculo placeholder; pendente confirmação de evento e busca de fonte compatível; DINO usado apenas como suporte de triagem

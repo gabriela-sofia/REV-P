@@ -33,7 +33,7 @@ A v1hq **não prova**:
 - que há cobertura Sentinel sem nuvens sobre o evento
 - que há geometria de área afetada georreferenciada e compatível com o corpus
 - que há licença/proveniência adequada para uso operacional
-- que há revisão humana ou especialista da evidência
+- que há revisão supervisora ou especialista da evidência
 - que há corroboração independente suficiente
 - que há ground truth operacional
 - que há label de inundação
@@ -53,7 +53,7 @@ Evento observado com fonte rastreável, temporalidade documentada e localizaçã
 
 ### Ground reference
 
-Referência espacial e temporal mais forte, construída a partir de evidência observacional direta (laudo técnico, mapa observado, produto operacional com incerteza documentada), com licença/proveniência verificada, revisão humana ou especialista e compatibilidade com os patches do corpus confirmada por overlay real. O REV-P ainda não possui ground reference formalizada. A construção de ground reference exige gates G1–G9 do Protocolo C satisfeitos ou explicitamente avaliados.
+Referência espacial e temporal mais forte, construída a partir de evidência observacional direta (laudo técnico, mapa observado, produto operacional com incerteza documentada), com licença/proveniência verificada, revisão supervisora ou especialista e compatibilidade com os patches do corpus confirmada por overlay real. O REV-P ainda não possui ground reference formalizada. A construção de ground reference exige gates G1–G9 do Protocolo C satisfeitos ou explicitamente avaliados.
 
 ### Ground truth operacional
 
@@ -97,7 +97,7 @@ Os seguintes gates permanecem abertos e não foram fechados nesta etapa:
 - **G4 — SPATIAL_ALIGNMENT** em nível patch-level: overlay espacial real entre geometria do evento e patches do corpus
 - **G5 — SOURCE_STRENGTH**: força metodológica da fonte — observação direta vs. produto algorítmico
 - **G6 — UNCERTAINTY_AND_LIMITATIONS**: documentação completa de incerteza da fonte
-- **G7 — HUMAN_REVIEW**: revisão humana ou especialista da evidência concreta
+- **G7 — REVIEW_GATE**: revisão supervisora ou especialista da evidência concreta
 - **G8 — INDEPENDENT_CORROBORATION**: corroboração por segunda fonte independente
 - **G9 — PROMOTION_DECISION**: decisão formal de promoção a referência operacional
 
@@ -147,7 +147,7 @@ Portal GIS municipal, sistema de monitoramento, base de ocorrências. Força var
 
 ### Sentinel
 
-Imagens Sentinel-2 ou Sentinel-1 podem apoiar análise temporal e visual futura, sujeita à disponibilidade de asset no workspace local, cobertura de nuvem e alinhamento temporal com o evento. O Sentinel não é ground truth sozinho — é sensor que registra reflectância. A interpretação de inundação a partir de imagem Sentinel exige referência observacional independente, separação de confundidores e revisão humana. Não é executado nenhum pipeline Sentinel nesta etapa.
+Imagens Sentinel-2 ou Sentinel-1 podem apoiar análise temporal e visual futura, sujeita à disponibilidade de asset no workspace local, cobertura de nuvem e alinhamento temporal com o evento. O Sentinel não é ground truth sozinho — é sensor que registra reflectância. A interpretação de inundação a partir de imagem Sentinel exige referência observacional independente, separação de confundidores e revisão supervisora. Não é executado nenhum pipeline Sentinel nesta etapa.
 
 ### DINOv2
 
@@ -181,7 +181,7 @@ A v1hq produz os seguintes artefatos auditáveis:
 - `datasets/manual_external_evidence_needed_registry.csv` — inventário de dados externos necessários por região: o que buscar manualmente, em qual formato, de qual instituição e com qual modo de aquisição
 - `docs/metodologia_cientifica/protocolo_c_diagnostico_dados_externos_validos.md` — diagnóstico por região dos dados externos que precisam ser trazidos manualmente para avançar
 - `docs/templates/protocolo_c_intake_fonte_observacional_manual.md` — template de intake manual de fonte observacional
-- `docs/templates/protocolo_c_revisao_evento_observado.md` — template de revisão humana de evento observado
+- `docs/templates/protocolo_c_revisao_evento_observado.md` — template de revisão supervisora de evento observado
 - `tests/test_revp_v1hq_observed_event_reference_candidate_audit.py` — testes de auditoria da camada v1hq
 
 **Nenhum dado bruto foi baixado. Nenhum raster, shapefile, GeoTIFF ou arquivo pesado foi versionado. Dados externos brutos, quando adquiridos no futuro, devem permanecer em `local_only/` ou `local_runs/` e nunca ser commitados.**

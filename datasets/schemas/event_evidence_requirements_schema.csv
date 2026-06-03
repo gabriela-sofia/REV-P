@@ -11,7 +11,7 @@ minimum_acceptance_criteria,string,false,,Critérios mínimos para que o requisi
 current_status,string,true,"SATISFIED,PARTIAL,MISSING,NOT_ASSESSED,METHOD_REFERENCE_ONLY",Status atual do requisito
 blocking_if_missing,string,true,"true,false",A ausência deste requisito bloqueia promoção do evento?
 acquisition_path,string,false,,Caminho de aquisição sugerido (ex: solicitação formal; portal público)
-review_needed,string,true,"true,false",Revisão humana é necessária para satisfazer este requisito?
+review_needed,string,true,"true,false",Revisão supervisora é necessária para satisfazer este requisito?
 allowed_if_satisfied,string,false,,O que fica permitido se este requisito for satisfeito
 forbidden_if_missing,string,false,,O que permanece proibido enquanto este requisito não for satisfeito
 notes,string,false,,Observações adicionais

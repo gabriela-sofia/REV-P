@@ -9,7 +9,7 @@
 
 ## Sumário Executivo
 
-Esta etapa consolida toda a evidência científica gerada nos estágios v1gu–v1gy em uma matriz de prontidão para escrita de TCC. O corpus de 12 embeddings reais (4 por região, 768-dim, DINOv2-com-registers) foi auditado como estruturalmente coerente e exploratório. Todas as 10 claims permitidas têm evidência documentada. As 10 claims proibidas estão explicitamente bloqueadas. O TCC pode proceder com análise estrutural e revisão humana formalizada.
+Esta etapa consolida toda a evidência científica gerada nos estágios v1gu–v1gy em uma matriz de prontidão para escrita de TCC. O corpus de 12 embeddings reais (4 por região, 768-dim, DINOv2-com-registers) foi auditado como estruturalmente coerente e exploratório. Todas as 10 claims permitidas têm evidência documentada. As 10 claims proibidas estão explicitamente bloqueadas. O TCC pode proceder com análise estrutural e revisão supervisora formalizada.
 
 ---
 
@@ -19,7 +19,7 @@ Validar que:
 - Cada claim científico permitido tem suporte de evidência verificável
 - Nenhum claim proibido (preditivo, classificatório, etc) foi executado
 - Figuras e tabelas estão prontas e sem termos indevidos
-- Revisão humana está formalizada como etapa metodológica
+- Revisão supervisora está formalizada como etapa metodológica
 - Lacunas científicas são documentadas e justificadas
 - TCC pode proceder em cada seção com clareza de dependências
 
@@ -36,7 +36,7 @@ Validar que:
 | Linhagem de patches | ✓ Rastreável de TIF → embedding via `revp_v1fu` |
 | Criptografia de hash | ✓ Cada patch tem hash SHA256 registrado |
 
-**Justificação**: Corpus reduzido é válido para análise estrutural exploratória. Generalização requer revisão humana e potencial expansão em v1ha/v1hb.
+**Justificação**: Corpus reduzido é válido para análise estrutural exploratória. Generalização requer revisão supervisora e potencial expansão em v1ha/v1hb.
 
 ---
 
@@ -82,13 +82,13 @@ Validar que:
 4. **Identificação de medoids estruturais** (READY)
    - Arquivo: `embedding_regional_summary_v1gu.json`
    - Medoids: CUR_00357, PET_00104, REC_00205 (patch mais central por região)
-   - Uso: Priorizados para revisão humana contextual
+   - Uso: Priorizados para revisão supervisora contextual
    - Limitação: Termos estruturais, não rótulos de risco
 
 5. **Identificação de outliers estruturais** (READY)
    - Arquivo: `embedding_regional_summary_v1gu.json`
    - Outliers: CUR_00350, PET_00016, REC_00019 (patches mais periféricos)
-   - Uso: Examinados em revisão humana para variação estrutural
+   - Uso: Examinados em revisão supervisora para variação estrutural
    - Limitação: Não implica anomalia ou risco
 
 ### Claims explicitamente NÃO feitos:
@@ -128,7 +128,7 @@ Validar que:
 | f001 | Matriz de similaridade cosseno | `fig_similarity_heatmap_v1gy.png` | 4.1 Análise Estrutural | READY |
 | f002 | Rede de vizinhos estruturais | `fig_neighbor_network_v1gy.png` | 4.1 Análise Estrutural | READY |
 | f003 | Taxa intra/inter-região | `fig_intra_inter_neighbor_rate_v1gy.png` | 4.2 Estrutura Regional | READY |
-| f004 | Categorias de candidatos revisão | `fig_review_candidate_categories_v1gy.png` | 5.1 Revisão Humana | READY |
+| f004 | Categorias de candidatos revisão | `fig_review_candidate_categories_v1gy.png` | 5.1 revisão supervisora | READY |
 | f005 | Cobertura GIS por indicador | `fig_external_evidence_coverage_v1gy.png` | 4.3 Evidência Contextual | READY |
 
 ### Tabelas geradas (6 READY):
@@ -146,7 +146,7 @@ Validar que:
 
 ---
 
-## 7. Revisão Humana Formalizada (v1gw)
+## 7. revisão supervisora Formalizada (v1gw)
 
 ### Protocolo:
 
@@ -212,7 +212,7 @@ Arquivo: `review_protocol_v1gw.md`
 | C004 | Taxa intra/inter | Sim | `embedding_regional_summary_v1gu.json` | READY |
 | C005 | Medoids estruturais | Sim | `embedding_regional_summary_v1gu.json` | READY |
 | C006 | Outliers estruturais | Sim | `embedding_regional_summary_v1gu.json` | READY |
-| C007 | Revisão humana formalizada | Sim | `review_candidates_v1gw.csv` + protocolo | READY |
+| C007 | Revisão supervisora formalizada | Sim | `review_candidates_v1gw.csv` + protocolo | READY |
 | C008 | GIS contextual | Sim | `evidence_coverage_matrix_v1gv.csv` | READY |
 | C009 | Rastreabilidade pipeline | Sim | Documentação + manifests | READY |
 | C010 | Reprodutibilidade local | Sim | Scripts + commands docs | READY |
@@ -242,13 +242,13 @@ Arquivo: `review_protocol_v1gw.md`
 
 | Gap | Categoria | Descrição | Impacto | Mitigação | Resolvido |
 |-----|-----------|-----------|---------|-----------|-----------|
-| G001 | Corpus pequeno | 12 embeddings, 4/região | Exploratório, não generaliza | Revisão humana estruturada | Não |
+| G001 | Corpus pequeno | 12 embeddings, 4/região | Exploratório, não generaliza | Revisão supervisora estruturada | Não |
 | G002 | GIS fragmentária | Muitos indicadores MISSING | Contexto incompleto | Documentado; utilizado descritivamente | Não |
 | G003 | Robustez não testada | Perturbação v1gd não executada | Estabilidade desconhecida | Opcional v1ha; não bloqueador | Não |
 | G004 | Multimodal desabilitado | Sem análise multi-data | Snapshot único | Documentado como futuro | Não |
-| G005 | Revisão humana pendente | Candidatos identificados mas não anotados | Interpretação contextual faltante | v1gw protocolo pronto; aguardando execução | Não |
+| G005 | Revisão supervisora pendente | Candidatos identificados mas não anotados | Interpretação contextual faltante | v1gw protocolo pronto; aguardando execução | Não |
 
-**Conclusão**: Todas as lacunas são documentadas, justificadas, e não impedem TCC. Revisão humana é a crítica para próximos passos.
+**Conclusão**: Todas as lacunas são documentadas, justificadas, e não impedem TCC. Revisão supervisora é a crítica para próximos passos.
 
 ---
 
@@ -261,11 +261,11 @@ Arquivo: `review_protocol_v1gw.md`
 - ✓ **4.1 Análise Estrutural** — 5 figuras + 3 tabelas prontas
 - ✓ **4.2 Estrutura Regional** — Medoids/outliers, taxa intra/inter documentada
 - ✓ **4.3 Evidência Contextual** — Cobertura GIS documentada com limitações
-- ✓ **5.1 Revisão Humana** — Protocolo formalizado, candidatos prontos
+- ✓ **5.1 revisão supervisora** — Protocolo formalizado, candidatos prontos
 
 ### Seções PARTIAL:
 
-- ⚠️ **5. Discussão** — Aguarda execução de revisão humana
+- ⚠️ **5. Discussão** — Aguarda execução de revisão supervisora
 - ⚠️ **Apêndice: Robustez** — Opcional; pode ser v1ha se tempo permitir
 
 ### Seções INDEPENDENT:
@@ -290,7 +290,7 @@ Arquivo: `review_protocol_v1gw.md`
 
 ## Recomendações para Próximos Passos
 
-1. **Imediato**: Executar revisão humana de 47 candidatos v1gw
+1. **Imediato**: Executar revisão supervisora de 47 candidatos v1gw
    - Tempo estimado: 2–4 horas (manual, cuidadoso)
    - Preenchimento: Campos em `review_candidates_v1gw_annotated_TEMPLATE.csv`
 
@@ -308,7 +308,7 @@ O dossiê mestre valida que:
 - **Evidência científica**: Completa, auditada, sem overclaims
 - **Pipeline**: Reprodutível, documentado, auditável
 - **Guardrails**: Todas as 10 claims proibidas estão explicitamente bloqueadas
-- **Prontidão TCC**: Seções 3–4 prontas; Seção 5 aguarda revisão humana
+- **Prontidão TCC**: Seções 3–4 prontas; Seção 5 aguarda revisão supervisora
 - **Qualidade**: 16/16 testes passando; sem violações
 
 **Status final**: ✓ **VÁLIDO PARA ESCRITA DE TCC**

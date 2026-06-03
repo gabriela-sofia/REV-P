@@ -2,9 +2,9 @@ field_name,field_type,required,controlled_values,description
 gap_id,string,true,,Identificador único da lacuna (ex: GAP_REC_2022_05_001)
 observed_event_id,string,true,,Referência ao observed_event_id em observed_event_reference_candidate_registry.csv
 region,string,true,"Recife,Petrópolis,Curitiba",Região do REV-P
-gap_type,string,true,"OFFICIAL_FLOOD_MAP_MISSING,MUNICIPAL_OCCURRENCE_LOG_MISSING,HYDROMET_SERIES_MISSING,PATCH_OVERLAY_NOT_DONE,HUMAN_REVIEW_NOT_DONE,GEOMETRY_NOT_AVAILABLE,ADDRESS_LEVEL_DETAIL_MISSING,SOURCE_DOCUMENT_NOT_DOWNLOADED_LOCALLY,LICENSE_PROVENANCE_PENDING,PHENOMENON_SEPARATION_REQUIRED,COPERNICUS_PRODUCT_DETAIL_PENDING",Tipo da lacuna metodológica
+gap_type,string,true,"OFFICIAL_FLOOD_MAP_MISSING,MUNICIPAL_OCCURRENCE_LOG_MISSING,HYDROMET_SERIES_MISSING,PATCH_OVERLAY_NOT_DONE,REVIEW_GATE_NOT_DONE,GEOMETRY_NOT_AVAILABLE,ADDRESS_LEVEL_DETAIL_MISSING,SOURCE_DOCUMENT_NOT_DOWNLOADED_LOCALLY,LICENSE_PROVENANCE_PENDING,PHENOMENON_SEPARATION_REQUIRED,COPERNICUS_PRODUCT_DETAIL_PENDING",Tipo da lacuna metodológica
 gap_description,string,true,,Descrição específica da lacuna para este evento
-required_for_gate,string,true,,Gate do Protocolo C que esta lacuna bloqueia (ex: G4_SPATIAL_ALIGNMENT_TRIAGE; G7_HUMAN_REVIEW)
+required_for_gate,string,true,,Gate do Protocolo C que esta lacuna bloqueia (ex: G4_SPATIAL_ALIGNMENT_TRIAGE; G7_REVIEW_GATE)
 required_for_patch_level_reference,string,true,"true,false",Esta lacuna bloqueia a ligação patch-nível com o evento
 priority_level,string,true,"HIGH,MEDIUM,LOW",Prioridade de resolução da lacuna
 suggested_action,string,true,,Ação sugerida para resolver a lacuna

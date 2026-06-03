@@ -10,7 +10,7 @@ request_required,boolean,yes,Is a formal request required to access this source?
 request_status,string,no,Status of formal request if applicable,"NOT_APPLICABLE,PENDING,SENT,ACKNOWLEDGED,RECEIVED,REJECTED,UNKNOWN",NOT_APPLICABLE
 source_reference,string,no,URL or bibliographic reference (public only; no private paths),user-provided,https://portal.cprm.gov.br
 expected_event_link,string,no,Event ID or description this source is expected to link to,user-provided,EVT_REC_2021_FLOOD
-expected_gate_closure,string,no,Gate(s) this source is expected to help close (controlled values),"G1_EVENT_CONFIRMATION,G2_SOURCE_AVAILABILITY,G3_TEMPORAL_ALIGNMENT,G4_SPATIAL_ALIGNMENT,G5_SOURCE_STRENGTH,G6_UNCERTAINTY_AND_LIMITATIONS,G7_HUMAN_REVIEW,G8_INDEPENDENT_CORROBORATION,G9_PROMOTION_DECISION,MULTIPLE_GATES,METHOD_REFERENCE_ONLY",G1_EVENT_CONFIRMATION;G2_SOURCE_AVAILABILITY
+expected_gate_closure,string,no,Gate(s) this source is expected to help close (controlled values),"G1_EVENT_CONFIRMATION,G2_SOURCE_AVAILABILITY,G3_TEMPORAL_ALIGNMENT,G4_SPATIAL_ALIGNMENT,G5_SOURCE_STRENGTH,G6_UNCERTAINTY_AND_LIMITATIONS,G7_REVIEW_GATE,G8_INDEPENDENT_CORROBORATION,G9_PROMOTION_DECISION,MULTIPLE_GATES,METHOD_REFERENCE_ONLY",G1_EVENT_CONFIRMATION;G2_SOURCE_AVAILABILITY
 expected_artifact_type,string,no,Type of artifact expected from this acquisition,user-provided,Event map polygon; PDF report
 raw_data_expected,boolean,yes,Is raw data (raster/shapefile/heavy file) expected?,"true,false",false
 local_only_required,boolean,yes,Must raw data remain local-only?,"true,false",true

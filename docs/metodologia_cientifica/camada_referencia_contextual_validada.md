@@ -88,7 +88,7 @@ Uma métrica ou índice heurístico construído a partir de múltiplas evidênci
 **Exemplos:**
 - Índice GIS multicritério (distância ao rio + densidade viária + uso do solo): proxy interpretável para "exposição estrutural ao contexto hídrico", não "suscetibilidade observada"
 - Coerência Sentinel-embedding (medida de estabilidade estrutural visual entre embeddings DINO e imagens): proxy de "coerência estrutural", não "representatividade de verdade de campo"
-- Score de revisão humana determinístico (baseado em outlier + cobertura CRS + limitação temporal): triagem de candidatos, não label
+- Score de revisão supervisora determinístico (baseado em outlier + cobertura CRS + limitação temporal): triagem de candidatos, não label
 
 **O que permite afirmar:**
 - "O índice GIS classifica esses patches em três tiers de exposição estrutural"
@@ -116,7 +116,7 @@ Uma métrica ou índice heurístico construído a partir de múltiplas evidênci
 Uma evidência ou agregação de evidências que aponta fortemente para uma propriedade específica, mas ainda aguarda validação externa ou reconciliação de bloqueadores técnicos para promoção a operacional.
 
 **Exemplos:**
-- Uma combinação de (PE3D topografia + ESIG drenagem + revisão humana de foto satélite) que demarca uma zona de baixa altitude com drenagem deficiente → candidata forte a "zona de acúmulo de água" mas aguardando (1) reconciliação CRS, (2) validação espacial pixel-level, (3) temporalidade de evento observado
+- Uma combinação de (PE3D topografia + ESIG drenagem + revisão supervisora de foto satélite) que demarca uma zona de baixa altitude com drenagem deficiente → candidata forte a "zona de acúmulo de água" mas aguardando (1) reconciliação CRS, (2) validação espacial pixel-level, (3) temporalidade de evento observado
 - Um patch com concordância entre (embedding DINO outlier + índice GIS baixo + feedback humano "aspecto estruturalmente distinto") → candidato forte a validação adicional mas não decisão operacional ainda
 
 **O que permite afirmar:**
@@ -133,7 +133,7 @@ Uma evidência ou agregação de evidências que aponta fortemente para uma prop
 **Evidências mínimas necessárias:**
 - Agregação documentada de ≥2 evidências independentes
 - Explicitação de quais bloqueadores (CRS, temporal, espacial) ainda estão abertos
-- Critérios para promoção a operacional (ex.: "reconciliação CRS + validação spatial de sobreposição + revisão humana de feedback")
+- Critérios para promoção a operacional (ex.: "reconciliação CRS + validação spatial de sobreposição + revisão supervisora de feedback")
 - Análise de discordância se múltiplas evidências divergem
 
 ---
@@ -165,7 +165,7 @@ Ground truth operacional é a verdade de campo que sustentaria decisões operaci
 - Reconciliação CRS completa e validação de sobreposição spatial
 - Vinculação temporal confirmada de patch Sentinel a evento observado documentado
 - Separação obrigatória de processos (inundação vs. alagamento vs. escorregamento)
-- Revisão humana executada e documentada
+- Revisão supervisora executada e documentada
 - Métricas de concordância entre fontes ≥ limiar operacional definido e auditado
 - Aprovação explícita de stakeholder autorizado (defesa civil, pesquisador responsável)
 
@@ -233,7 +233,7 @@ Cada decisão de status deve ser rastreável:
 - Qual script ou ação produziu o resultado?
 - Qual evidência é citada?
 - Qual bloqueador (se houver) impede promoção?
-- Qual revisão humana foi executada (se houver)?
+- Qual revisão supervisora foi executada (se houver)?
 
 Use campo `notes` no registry para citação de manifests/estágios.
 
@@ -276,8 +276,8 @@ A camada de referência contextual validada conecta-se aos estágios existentes:
 | v1gq — GIS multicritério | 12 patches + evidências externas | Índice GIS | AUDITABLE_REFERENCE_PROXY |
 | v1gt — Cobertura uso do solo | 128 patches + FBDS/MapBiomas | Cobertura auditada | CONTEXTUAL_EVIDENCE (bloqueadores anotados) |
 | v1gv — Matriz de cobertura externa | Evidências externas | Status por patch | Mapeamento CONTEXTUAL_EVIDENCE ↔ patch |
-| v1gw — Human review candidate | Índices + embedding outliers | Triagem determinística | AUDITABLE_REFERENCE_PROXY (triagem) |
-| v1hb — Human review execution | Candidatos + feedback humano | Notas de revisão | Elevação para STRONG_REFERENCE_CANDIDATE (se aprovado) |
+| v1gw — Review gate candidate | Índices + embedding outliers | Triagem determinística | AUDITABLE_REFERENCE_PROXY (triagem) |
+| v1hb — Review gate execution | Candidatos + feedback humano | Notas de revisão | Elevação para STRONG_REFERENCE_CANDIDATE (se aprovado) |
 
 ---
 
@@ -304,7 +304,7 @@ Para cada patch REC_01–REC_18:
 ### Condições para promoção
 REC_01 poderia ser elevado a AUDITABLE_REFERENCE_PROXY se:
 1. CRS reconciliado e sobreposição patch-PE3D confirmada spacialmente
-2. Revisão humana executada (v1hb stage)
+2. Revisão supervisora executada (v1hb stage)
 
 REC_01 poderia ser elevado a STRONG_REFERENCE_CANDIDATE se:
 1. + Correlação com evento observado documentado (ex.: chuva de março 2022, imagem Sentinel de março 2022, feedback de defesa civil Recife)
@@ -338,7 +338,7 @@ Veja [`docs/metodologia_cientifica/protocolo_c_construcao_referencia_operacional
 ## Próximas fases previstas
 
 1. **Fase atual**: Documentação metodológica da camada de referência e Protocolo C
-2. **Fase seguinte**: Aquisição de registros de revisão humana (v1hb) para patches candidatos
+2. **Fase seguinte**: Aquisição de registros de revisão supervisora (v1hb) para patches candidatos
 3. **Fase futura**: Reconciliação CRS e validação spatial de sobreposição (requer desbloqueio B1)
 4. **Fase operacional**: Definição de limiar de concordância inter-fonte para elevação a operacional (requer aprovação stakeholder e evidência observacional direta)
 

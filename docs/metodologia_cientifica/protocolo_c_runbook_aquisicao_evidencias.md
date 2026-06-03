@@ -121,7 +121,7 @@ Mudar `acquisition_status` para `RECEIVED_RAW_LOCAL_ONLY` ou `RECEIVED_METADATA_
 
 ## 4. Ao preparar para revisão
 
-**Objetivo**: encaminhar fonte elegível para revisão humana sem automatizar promoção.
+**Objetivo**: encaminhar fonte elegível para revisão supervisora sem automatizar promoção.
 
 ### Passo 4.1 — Criar ou verificar vínculo source-event-patch
 Abrir `datasets/patch_event_reference_link_registry.csv`. Verificar se já existe vínculo para esta fonte, evento e patches relevantes.
@@ -131,10 +131,10 @@ Condições para criar novo vínculo:
 - Evento tem data conhecida
 - Patch está na mesma região geográfica
 - Alinhamento temporal é possível (cobertura de data pelo evento)
-- `promotion_allowed=false` enquanto não houver revisão humana
+- `promotion_allowed=false` enquanto não houver revisão supervisora
 
-### Passo 4.2 — Criar entrada em revisão humana
-Criar placeholder em `datasets/human_reference_review_registry.csv` com:
+### Passo 4.2 — Criar entrada em revisão supervisora
+Criar placeholder em `datasets/review_gate_reference_registry.csv` com:
 - `review_status=PENDING`
 - `reviewer=TBD`
 - `materials_reviewed=PENDING`
@@ -163,7 +163,7 @@ Usar os critérios da seção 8 do pacote operacional. Razões de bloqueio váli
 - `RAW_DATA_REDISTRIBUTION_FORBIDDEN`
 - `SOURCE_CONFLICT_UNRESOLVED`
 - `DINO_ONLY_INSUFFICIENT`
-- `MISSING_HUMAN_REVIEW`
+- `MISSING_REVIEW_GATE`
 
 ### Passo 5.2 — Registrar no intake registry
 Preencher:
@@ -181,7 +181,7 @@ Definir `next_action` no tracker: o que seria necessário para desbloquear? Reun
 
 ## 6. Critérios para encaminhar ao próximo ciclo
 
-Uma fonte pode ser encaminhada para o próximo ciclo de aquisição (e potencialmente para revisão humana) quando:
+Uma fonte pode ser encaminhada para o próximo ciclo de aquisição (e potencialmente para revisão supervisora) quando:
 
 | Critério | Requerido |
 |---|---|
@@ -191,12 +191,12 @@ Uma fonte pode ser encaminhada para o próximo ciclo de aquisição (e potencial
 | Data da fonte compatível com evento | Sim para gate G3 |
 | Geometria disponível ou estimada | Sim para gate G4 |
 | Vínculo possível com patch REV-P | Sim para gates G4–G8 |
-| Revisão humana agendada ou pendente | Sim para gates G7, G9 |
+| Revisão supervisora agendada ou pendente | Sim para gates G7, G9 |
 
 Fontes que satisfazem todos os critérios relevantes devem ter:
 - `acquisition_status=RECEIVED_METADATA_ONLY` ou `RECEIVED_RAW_LOCAL_ONLY`
 - `intake_decision=ACCEPT_METADATA_ONLY` ou `ACCEPT_LOCAL_ONLY`
-- Entrada em `human_reference_review_registry.csv` com `review_status=PENDING`
+- Entrada em `review_gate_reference_registry.csv` com `review_status=PENDING`
 
 ---
 

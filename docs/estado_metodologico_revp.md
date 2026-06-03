@@ -8,7 +8,7 @@ O pipeline não executa classificação supervisionada, não cria rótulos biná
 
 ## Ausência de verdade de campo observacional
 
-Não existe, no estado atual do projeto, um conjunto validado de rótulos de inundação observada para os patches inventariados. Os registros de enchentes históricas disponíveis são evidência geoespacial qualitativa para revisão humana, não ground truth para treino supervisionado. Nenhum patch recebeu rótulo binário de suscetibilidade.
+Não existe, no estado atual do projeto, um conjunto validado de rótulos de inundação observada para os patches inventariados. Os registros de enchentes históricas disponíveis são evidência geoespacial qualitativa para revisão supervisora, não ground truth para treino supervisionado. Nenhum patch recebeu rótulo binário de suscetibilidade.
 
 ## Ausência de classificação supervisionada
 
@@ -16,7 +16,7 @@ O projeto não utiliza, em nenhum estágio atual, classificadores supervisionado
 
 ## DINO como encoder visual congelado
 
-DINOv2 com registros é utilizado exclusivamente como encoder visual pré-treinado e congelado para extração de representações estruturais de patches Sentinel. O encoder não é ajustado, não é retreinado e não é avaliado como classificador. Embeddings extraídos são usados para comparação de vizinhança, análise de outliers, clustering exploratório e triagem de revisão humana.
+DINOv2 com registros é utilizado exclusivamente como encoder visual pré-treinado e congelado para extração de representações estruturais de patches Sentinel. O encoder não é ajustado, não é retreinado e não é avaliado como classificador. Embeddings extraídos são usados para comparação de vizinhança, análise de outliers, clustering exploratório e triagem de revisão supervisora.
 
 ## GIS como baseline interpretável
 
@@ -58,6 +58,6 @@ O DINO não deve ser reportado como classificador supervisionado de suscetibilid
 
 - Expandir corpus de embeddings Sentinel em direção aos 128 patches do manifest v1fu.
 - Repetir análise de consistência estrutural em execuções locais maiores.
-- Revisão humana manual de medoids, outliers e vizinhos recíprocos.
+- Revisão supervisora manual de medoids, outliers e vizinhos recíprocos.
 - Ampliar cobertura de uso do solo via fontes externas (MapBiomas, IBGE LULC).
 - Revisitar trilha multimodal após resolução dos bloqueadores de Recife.

@@ -1,4 +1,4 @@
-"""Tests for REV-P v1hb: Human Review Execution Package."""
+"""Tests for REV-P v1hb: Review Gate Execution Package."""
 from __future__ import annotations
 
 import csv
@@ -18,11 +18,11 @@ FORBIDDEN_REVIEW_TERMS = {
 }
 
 EXPECTED_OUTPUTS = {
-    "human_review_execution_manifest_v1hb.csv": {"min_rows": 45},
-    "human_review_annotation_template_v1hb.csv": {"min_rows": 45},
-    "human_review_category_summary_v1hb.csv": {"min_rows": 2},
-    "human_review_discussion_inputs_v1hb.csv": {"min_rows": 5},
-    "human_review_protocol_v1hb.md": {"min_bytes": 1000},
+    "review_gate_execution_manifest_v1hb.csv": {"min_rows": 45},
+    "review_gate_annotation_template_v1hb.csv": {"min_rows": 45},
+    "review_gate_category_summary_v1hb.csv": {"min_rows": 2},
+    "review_gate_discussion_inputs_v1hb.csv": {"min_rows": 5},
+    "review_gate_protocol_v1hb.md": {"min_bytes": 1000},
 }
 
 
@@ -53,7 +53,7 @@ class TestV1HBOutputs:
 
     def test_execution_manifest_valid(self) -> None:
         """Test execution manifest has valid structure."""
-        path = V1HB_DIR / "human_review_execution_manifest_v1hb.csv"
+        path = V1HB_DIR / "review_gate_execution_manifest_v1hb.csv"
         rows = read_csv(path)
 
         assert len(rows) >= 45, f"Expected >=45 rows, got {len(rows)}"
@@ -80,7 +80,7 @@ class TestV1HBOutputs:
 
     def test_annotation_template_valid(self) -> None:
         """Test annotation template has correct structure."""
-        path = V1HB_DIR / "human_review_annotation_template_v1hb.csv"
+        path = V1HB_DIR / "review_gate_annotation_template_v1hb.csv"
         rows = read_csv(path)
 
         assert len(rows) >= 45, f"Expected >=45 template rows, got {len(rows)}"
@@ -113,7 +113,7 @@ class TestV1HBOutputs:
 
     def test_no_forbidden_terms_in_manifest(self) -> None:
         """Test that forbidden review terms don't appear in manifest."""
-        path = V1HB_DIR / "human_review_execution_manifest_v1hb.csv"
+        path = V1HB_DIR / "review_gate_execution_manifest_v1hb.csv"
         rows = read_csv(path)
 
         violations = []
@@ -130,7 +130,7 @@ class TestV1HBOutputs:
 
     def test_category_summary_valid(self) -> None:
         """Test category summary has expected categories."""
-        path = V1HB_DIR / "human_review_category_summary_v1hb.csv"
+        path = V1HB_DIR / "review_gate_category_summary_v1hb.csv"
         rows = read_csv(path)
 
         assert len(rows) >= 2, f"Expected >=2 categories, got {len(rows)}"
@@ -151,7 +151,7 @@ class TestV1HBOutputs:
 
     def test_discussion_inputs_valid(self) -> None:
         """Test discussion inputs table is ready for TCC writing."""
-        path = V1HB_DIR / "human_review_discussion_inputs_v1hb.csv"
+        path = V1HB_DIR / "review_gate_discussion_inputs_v1hb.csv"
         rows = read_csv(path)
 
         assert len(rows) >= 5, f"Expected >=5 discussion findings, got {len(rows)}"
@@ -175,7 +175,7 @@ class TestV1HBOutputs:
 
     def test_protocol_document_valid(self) -> None:
         """Test protocol document is properly structured."""
-        path = V1HB_DIR / "human_review_protocol_v1hb.md"
+        path = V1HB_DIR / "review_gate_protocol_v1hb.md"
         content = read_md(path)
 
         assert len(content) >= 1000, f"Protocol document too short: {len(content)} bytes"
@@ -204,7 +204,7 @@ class TestV1HBMetodology:
 
     def test_no_label_creation_enforced(self) -> None:
         """Test that templates enforce no-label policy."""
-        path = V1HB_DIR / "human_review_annotation_template_v1hb.csv"
+        path = V1HB_DIR / "review_gate_annotation_template_v1hb.csv"
         rows = read_csv(path)
 
         # Each template row should have confirmation fields
@@ -215,7 +215,7 @@ class TestV1HBMetodology:
 
     def test_review_is_review_only(self) -> None:
         """Test that review is formalized as review-only."""
-        path = V1HB_DIR / "human_review_execution_manifest_v1hb.csv"
+        path = V1HB_DIR / "review_gate_execution_manifest_v1hb.csv"
         rows = read_csv(path)
 
         # Check that methodological_interpretation is explanatory, not operational
@@ -228,7 +228,7 @@ class TestV1HBMetodology:
 
     def test_all_candidates_have_warning(self) -> None:
         """Test that all candidates have forbidden claim warning."""
-        path = V1HB_DIR / "human_review_execution_manifest_v1hb.csv"
+        path = V1HB_DIR / "review_gate_execution_manifest_v1hb.csv"
         rows = read_csv(path)
 
         for row in rows:
@@ -238,7 +238,7 @@ class TestV1HBMetodology:
 
     def test_allowed_claim_scope_documented(self) -> None:
         """Test that allowed claims are explicitly documented."""
-        path = V1HB_DIR / "human_review_execution_manifest_v1hb.csv"
+        path = V1HB_DIR / "review_gate_execution_manifest_v1hb.csv"
         rows = read_csv(path)
 
         allowed_keywords = ["visual", "pattern", "coherence", "contextual", "structural"]
@@ -261,12 +261,12 @@ class TestV1HBOutputLocation:
         assert "local_runs" in str(path), f"Outputs not in local_runs: {path}"
 
         # Verify no outputs outside local_runs
-        docs_path = ROOT / "docs" / "metodologia_cientifica" / "human_review_protocol.md"
+        docs_path = ROOT / "docs" / "metodologia_cientifica" / "review_gate_protocol.md"
         assert docs_path.exists(), "Versionable protocol doc should exist in docs/"
 
     def test_protocol_in_docs(self) -> None:
         """Test that protocol document is versionable in docs."""
-        path = ROOT / "docs" / "metodologia_cientifica" / "human_review_protocol.md"
+        path = ROOT / "docs" / "metodologia_cientifica" / "review_gate_protocol.md"
         assert path.exists(), "Protocol not found in docs/"
 
         content = read_md(path)

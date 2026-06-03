@@ -231,7 +231,7 @@ class TestV1GYCaptions:
 
 
 class TestV1GWHumanReview:
-    """Test v1gw human review formalization."""
+    """Test v1gw review gate formalization."""
 
     def test_review_candidates_not_labels(self) -> None:
         """Test that review candidates do not create labels/classes."""

@@ -8,7 +8,7 @@ O Protocolo C existe para organizar esse espaço de forma auditável. Ele define
 
 A contribuição concreta do Protocolo C é tornar explícita a diferença entre contexto, proxy, candidato de referência e validação operacional — e registrar, por patch e por fonte, onde cada evidência se situa nessa escada.
 
-Ground truth operacional continua bloqueado no estado atual do REV-P porque faltam, para todos os patches candidatos: evento observado documentado, alinhamento temporal entre imagem e evento, sobreposição espacial confirmada entre patch e fonte, e revisão humana ou de especialista. O Protocolo C não muda isso — ele documenta o bloqueio com precisão.
+Ground truth operacional continua bloqueado no estado atual do REV-P porque faltam, para todos os patches candidatos: evento observado documentado, alinhamento temporal entre imagem e evento, sobreposição espacial confirmada entre patch e fonte, e revisão supervisora ou de especialista. O Protocolo C não muda isso — ele documenta o bloqueio com precisão.
 
 ---
 
@@ -77,7 +77,7 @@ A literatura clássica de avaliação de acurácia em sensoriamento remoto (matr
 |---|---|
 | Evento documentado | Ausente para todos os patches |
 | Alinhamento temporal imagem-evento | Ausente; imagens Sentinel são snapshots estáticos |
-| Anotação manual ou de especialista | Ausente; revisão humana planejada mas não concluída |
+| Anotação manual ou de especialista | Ausente; revisão supervisora planejada mas não concluída |
 | Fonte com incerteza documentada | Parcial: PE3D, SGB, GeoCuritiba têm limitações documentadas |
 | Alinhamento espacial patch-fonte | Bloqueado por CRS incompatível (B1) |
 | Revisão independente | Ausente |
@@ -106,7 +106,7 @@ Todos os anteriores, mais:
 - CRS reconciliado entre patch e fonte (ou bloqueio documentado com plano de resolução)
 - Sobreposição espacial entre patch e fonte confirmada ou estimada
 - Coerência Sentinel-embedding avaliada (ALIGNED ou DIVERGENT, não apenas UNVERIFIED)
-- Revisão humana executada (pelo menos parcial)
+- Revisão supervisora executada (pelo menos parcial)
 - Pelo menos duas evidências independentes apontando para a mesma propriedade
 - Discordâncias entre fontes documentadas e explicadas
 
@@ -147,7 +147,7 @@ Os bloqueadores a seguir impedem promoção de qualquer patch para ground truth 
 - Dependência exclusiva de embedding DINO para caracterização
 - Dependência exclusiva de cluster não supervisionado
 - Dependência exclusiva de índice espectral (NDWI, NDBI)
-- Ausência de revisão humana executada
+- Ausência de revisão supervisora executada
 
 **Bloqueadores de qualidade (impedem promoção para STRONG_REFERENCE_CANDIDATE):**
 - Conflito entre fontes sem explicação documentada
@@ -191,10 +191,10 @@ Evidência que fornece contexto físico-ambiental sobre um local ou região, sem
 
 ### STRONG_REFERENCE_CANDIDATE
 
-Convergência de múltiplas evidências independentes em direção a uma propriedade específica, com revisão humana e bloqueadores documentados. Não é ground truth — é o estado mais avançado de referência que um patch pode alcançar sem evento observado.
+Convergência de múltiplas evidências independentes em direção a uma propriedade específica, com revisão supervisora e bloqueadores documentados. Não é ground truth — é o estado mais avançado de referência que um patch pode alcançar sem evento observado.
 
 **Permite afirmar:**
-- Que a convergência de [fonte 1] + [fonte 2] + revisão humana apoia a hipótese de [propriedade]
+- Que a convergência de [fonte 1] + [fonte 2] + revisão supervisora apoia a hipótese de [propriedade]
 - Que o patch é candidato forte a validação adicional e que os critérios restantes para promoção são [lista específica]
 - Que as discordâncias encontradas são [descrição] e foram explicadas por [raciocínio]
 
@@ -232,7 +232,7 @@ Este conceito está documentado para orientar trabalho futuro, não para classif
 DINOv2 é usado no REV-P como encoder visual congelado para extração de representações estruturais de patches Sentinel. Isso tem papel metodológico claro e contribuição real — mas fora do escopo de construção de referência operacional.
 
 **O que DINOv2 oferece ao Protocolo C:**
-- Diagnóstico de coerência estrutural: um embedding muito discrepante pode indicar anomalia visual que orienta revisão humana
+- Diagnóstico de coerência estrutural: um embedding muito discrepante pode indicar anomalia visual que orienta revisão supervisora
 - Triagem de candidatos: outliers e medoids no espaço de embeddings sugerem quais patches merecem atenção prioritária
 - Evidência de consistência: embeddings estáveis sob perturbação controlada indicam que o patch tem representação estrutural robusta
 
@@ -277,8 +277,8 @@ O resultado do Protocolo C não é um modelo treinado, um mapa de inundação ou
 
 ## Referências internas
 
-- [`docs/metodologia_cientifica/protocolo_c_fechamento_evidencias_ground_reference.md`](protocolo_c_fechamento_evidencias_ground_reference.md) — etapa de fechamento: gates de promoção (G0–G9), níveis de evidência, matriz de lacunas e relação com revisão humana e Protocolo B
-- [`docs/metodologia_cientifica/protocolo_c_revisao_humana_referencia.md`](protocolo_c_revisao_humana_referencia.md) — protocolo de revisão humana: decisões possíveis, critérios de bloqueio, registro obrigatório e relação com anotação futura
+- [`docs/metodologia_cientifica/protocolo_c_fechamento_evidencias_ground_reference.md`](protocolo_c_fechamento_evidencias_ground_reference.md) — etapa de fechamento: gates de promoção (G0–G9), níveis de evidência, matriz de lacunas e relação com revisão supervisora e Protocolo B
+- [`docs/metodologia_cientifica/protocolo_c_revisao_supervisora_referencia.md`](protocolo_c_revisao_supervisora_referencia.md) — protocolo de revisão supervisora: decisões possíveis, critérios de bloqueio, registro obrigatório e relação com anotação futura
 - [`docs/metodologia_cientifica/protocolo_c_aquisicao_ground_reference.md`](protocolo_c_aquisicao_ground_reference.md) — etapa de aquisição: qualificação metadata-only de eventos candidatos e vínculos patch-evento-fonte
 - [`docs/metodologia_cientifica/camada_referencia_contextual_validada.md`](camada_referencia_contextual_validada.md) — hierarquia de status e guardrails por patch
 - [`datasets/contextual_reference_layer_registry.csv`](../../datasets/contextual_reference_layer_registry.csv) — registro de referências por patch

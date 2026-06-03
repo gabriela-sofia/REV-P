@@ -8,7 +8,7 @@ event_confirmation_readiness,string,yes,Status of event confirmation (G1),"READY
 source_availability_readiness,string,yes,Status of source availability (G2),"READY,PARTIAL,NOT_READY,BLOCKED,METHOD_REFERENCE_ONLY","PARTIAL"
 temporal_alignment_readiness,string,yes,Status of temporal alignment (G3),"READY,PARTIAL,NOT_READY,BLOCKED,METHOD_REFERENCE_ONLY","PARTIAL"
 spatial_alignment_readiness,string,yes,Status of spatial alignment (G4),"READY,PARTIAL,NOT_READY,BLOCKED,METHOD_REFERENCE_ONLY","PARTIAL"
-human_review_readiness,string,yes,Status of human review (G7),"READY,PARTIAL,NOT_READY,BLOCKED,METHOD_REFERENCE_ONLY","NOT_READY"
+review_gate_readiness,string,yes,Status of review gate (G7),"READY,PARTIAL,NOT_READY,BLOCKED,METHOD_REFERENCE_ONLY","NOT_READY"
 independent_validation_readiness,string,yes,Status of independent corroboration (G8),"READY,PARTIAL,NOT_READY,BLOCKED,METHOD_REFERENCE_ONLY","NOT_READY"
 operational_ground_truth_status,string,yes,Can operational ground truth be declared now?,"NOT_ESTABLISHED,BLOCKED_PENDING_EVIDENCE,FUTURE_ELIGIBILITY_ONLY","NOT_ESTABLISHED"
 protocol_b_status,string,yes,Status of Protocolo B (detection/prediction),"BLOCKED,FUTURE_REASSESSMENT_ONLY","BLOCKED"

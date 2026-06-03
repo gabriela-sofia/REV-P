@@ -1,4 +1,4 @@
-# Template de Revisão Humana — Evento Observado Candidato
+# Template de revisão supervisora — Evento Observado Candidato
 
 ## Instruções de preenchimento
 

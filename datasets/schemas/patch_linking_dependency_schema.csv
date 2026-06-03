@@ -5,7 +5,7 @@ region,string,true,"Recife,Petrópolis,Curitiba",Região do REV-P
 dependency_type,string,true,"SOURCE_GEOMETRY,MANUAL_GEOCODING,CRS_CONFIRMATION,LICENSE_PROVENANCE,PATCH_MANIFEST_REVIEW,SENTINEL_TEMPORAL_SEARCH,REVIEW_GATE,PHENOMENON_SEPARATION,INDEPENDENT_CORROBORATION",Tipo de dependência metodológica
 dependency_description,string,true,,Descrição específica da dependência para este evento
 required_before_overlay,string,true,"true,false",Esta dependência deve ser resolvida antes de qualquer overlay patch-level
-required_before_human_review,string,true,"true,false",Esta dependência deve ser resolvida antes de revisão humana formal
+required_before_review_gate,string,true,"true,false",Esta dependência deve ser resolvida antes de revisão supervisora formal
 required_before_ground_reference,string,true,"true,false",Esta dependência deve ser resolvida antes de qualquer promoção a ground reference
 current_status,string,true,"OPEN,PARTIAL,BLOCKED,NOT_ASSESSED",Status atual da dependência; nenhuma está fechada nesta etapa
 priority_level,string,true,"HIGH,MEDIUM,LOW",Prioridade de resolução da dependência

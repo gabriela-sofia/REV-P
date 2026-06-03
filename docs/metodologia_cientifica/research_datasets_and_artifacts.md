@@ -128,7 +128,7 @@ externa: 11 QA checks passados, 0 falhas.
 DINOv2 com registros, encoder congelado. Extração local em v1fx (5 patches, smoke)
 e v1fz (12 patches, corpus balanceado). Embeddings em `local_runs/` — não versionados,
 não labels, não targets. Diagnósticos estruturais: kNN, clustering, outliers,
-robustez, proveniência, triagem de revisão humana.
+robustez, proveniência, triagem de revisão supervisora.
 
 ↓
 
@@ -139,10 +139,10 @@ interpretável para comparação estrutural com os embeddings.
 
 ↓
 
-**Revisão humana**
+**Revisão supervisora**
 Pacote de evidências externas por região: PE3D/Recife (evidência forte de terreno),
 SGB/Petrópolis (terreno com separação de processo obrigatória), GeoCuritiba (contraste
-metodológico). Estado: mastered for review — pacote pronto, revisão humana não executada.
+metodológico). Estado: mastered for review — pacote pronto, revisão supervisora não executada.
 
 ↓
 
@@ -178,7 +178,7 @@ Triagem metadata-only de eventos candidatos de inundação/alagamento por regiã
 ↓
 
 **Dossiês de evidência por evento candidato (v1ho)**
-Para cada um dos cinco eventos candidatos da triagem, um dossiê especifica o pacote mínimo de evidências necessário. `event_evidence_dossier_registry.csv`: cinco dossiês com status (DOSSIER_OPEN para EVENT_SEARCH_TARGET; DOSSIER_PARTIAL para PENDING_SOURCE_REVIEW), lacunas de evidência mínima e `can_support_ground_reference_candidate=false`. `event_evidence_requirements_registry.csv`: 25 requisitos mínimos (cinco por evento: EVENT_CONFIRMATION, TEMPORAL_EVIDENCE, SPATIAL_EVIDENCE, HUMAN_REVIEW, PROMOTION_DECISION) com `current_status=MISSING` ou `PARTIAL` e `blocking_if_missing=true` para requisitos críticos. `event_dossier_decision_registry.csv`: uma decisão por dossiê (CONTINUE_SOURCE_SEARCH, REQUEST_FORMAL_SOURCE, READY_FOR_SOURCE_REVIEW ou WAIT_FOR_ACQUISITION) com `can_reassess_protocol_b=false` e `can_start_multimodal=false`. Nenhum gate foi fechado. Nenhum dado foi baixado.
+Para cada um dos cinco eventos candidatos da triagem, um dossiê especifica o pacote mínimo de evidências necessário. `event_evidence_dossier_registry.csv`: cinco dossiês com status (DOSSIER_OPEN para EVENT_SEARCH_TARGET; DOSSIER_PARTIAL para PENDING_SOURCE_REVIEW), lacunas de evidência mínima e `can_support_ground_reference_candidate=false`. `event_evidence_requirements_registry.csv`: 25 requisitos mínimos (cinco por evento: EVENT_CONFIRMATION, TEMPORAL_EVIDENCE, SPATIAL_EVIDENCE, REVIEW_GATE, PROMOTION_DECISION) com `current_status=MISSING` ou `PARTIAL` e `blocking_if_missing=true` para requisitos críticos. `event_dossier_decision_registry.csv`: uma decisão por dossiê (CONTINUE_SOURCE_SEARCH, REQUEST_FORMAL_SOURCE, READY_FOR_SOURCE_REVIEW ou WAIT_FOR_ACQUISITION) com `can_reassess_protocol_b=false` e `can_start_multimodal=false`. Nenhum gate foi fechado. Nenhum dado foi baixado.
 
 ↓
 
@@ -188,7 +188,7 @@ Os dossiês são transformados em ação concreta por quatro registros metadata-
 ↓
 
 **Referências observacionais candidatas (v1hq)**
-Primeira camada documental de eventos observados candidatos. `observed_event_reference_candidate_registry.csv`: 9 eventos (3 por região) com G1/G2/G3 fechados documentalmente por fonte primária rastreável e G4 em triagem espacial — prova de existência do evento, fonte e temporalidade; não prova ground truth operacional, não cria label. Todos têm `operational_ground_truth_status=NOT_ESTABLISHED`, `protocol_b_status=BLOCKED`, `multimodal_status=HOLD`, `dino_usage_status=SUPPORT_ONLY`, `can_be_used_as_training_label=false` e `can_reopen_protocol_b=false`. `observed_event_reference_gap_registry.csv`: 43 lacunas organizadas por evento — patch overlay não executado, revisão humana não feita, licença pendente, geometria ausente, separação de fenômenos pendente em Petrópolis. `observed_event_reference_decision_registry.csv`: uma decisão por evento com `can_promote_to_ground_reference=false` e `can_generate_training_label=false` em todas as linhas; PET_2024_03_21_28 tem NEEDS_MORE_SPATIAL_EVIDENCE por G4 parcial. `manual_external_evidence_needed_registry.csv`: inventário de dados externos que precisam ser trazidos manualmente por região — decretos, boletins, mapas, shapefiles, séries pluviométricas, fotos oficiais, separação de fenômenos — com `cannot_establish_ground_truth_alone=true` em todas as entradas. G4 nesta etapa é apenas triagem espacial, não overlay patch-level. Nenhum dado foi baixado.
+Primeira camada documental de eventos observados candidatos. `observed_event_reference_candidate_registry.csv`: 9 eventos (3 por região) com G1/G2/G3 fechados documentalmente por fonte primária rastreável e G4 em triagem espacial — prova de existência do evento, fonte e temporalidade; não prova ground truth operacional, não cria label. Todos têm `operational_ground_truth_status=NOT_ESTABLISHED`, `protocol_b_status=BLOCKED`, `multimodal_status=HOLD`, `dino_usage_status=SUPPORT_ONLY`, `can_be_used_as_training_label=false` e `can_reopen_protocol_b=false`. `observed_event_reference_gap_registry.csv`: 43 lacunas organizadas por evento — patch overlay não executado, revisão supervisora não feita, licença pendente, geometria ausente, separação de fenômenos pendente em Petrópolis. `observed_event_reference_decision_registry.csv`: uma decisão por evento com `can_promote_to_ground_reference=false` e `can_generate_training_label=false` em todas as linhas; PET_2024_03_21_28 tem NEEDS_MORE_SPATIAL_EVIDENCE por G4 parcial. `manual_external_evidence_needed_registry.csv`: inventário de dados externos que precisam ser trazidos manualmente por região — decretos, boletins, mapas, shapefiles, séries pluviométricas, fotos oficiais, separação de fenômenos — com `cannot_establish_ground_truth_alone=true` em todas as entradas. G4 nesta etapa é apenas triagem espacial, não overlay patch-level. Nenhum dado foi baixado.
 
 ↓
 
@@ -215,7 +215,7 @@ desta fase — não mais, não menos.
 
 ## Protocolo C e construção de referência operacional
 
-A camada de referência contextual validada foi refinada pelo Protocolo C. O protocolo organiza a diferença entre evidência contextual, proxy auditável, candidato forte de referência e validação operacional — e registra, por patch e por fonte, onde cada evidência se situa. Ground truth operacional continua bloqueado: faltam, para todos os patches, evento observado documentado, alinhamento temporal, sobreposição espacial confirmada e revisão humana ou de especialista.
+A camada de referência contextual validada foi refinada pelo Protocolo C. O protocolo organiza a diferença entre evidência contextual, proxy auditável, candidato forte de referência e validação operacional — e registra, por patch e por fonte, onde cada evidência se situa. Ground truth operacional continua bloqueado: faltam, para todos os patches, evento observado documentado, alinhamento temporal, sobreposição espacial confirmada e revisão supervisora ou de especialista.
 
 O inventário de fontes (`ground_reference_evidence_source_registry.csv`) classifica cada fonte por grau de observação, tipo, allowed_use e forbidden_use. Fontes não adquiridas localmente são marcadas como METHODOLOGICAL_REFERENCE_ONLY e não podem ser usadas como referência aplicada. A distinção importa porque fontes metodológicas (como Sen1Floods11 ou Copernicus GFM) informam o design do Protocolo C sem substituir evidência local.
 
@@ -233,10 +233,10 @@ Esta etapa é explicitamente metadata-only: não baixa rasters, não executa pip
 A etapa de fechamento do Protocolo C define como as lacunas identificadas na etapa de aquisição serão resolvidas e como uma referência pode eventualmente ser promovida. Ela adiciona três registros:
 
 - `ground_reference_gap_matrix.csv` — matriz de lacunas: para cada região, quais gates (G0–G9) estão abertos, qual evidência falta, qual é o risco metodológico e quais são os próximos passos permitidos e proibidos. Todas as linhas têm `promotion_blocked=true` no estado atual.
-- `human_reference_review_registry.csv` — registry de revisões humanas ou placeholders: decisão (BLOCK_OPERATIONAL_PROMOTION para todos os placeholders), materiais revisados, consistency checks e claims. Todas as linhas têm `promotion_allowed=false` no estado atual.
+- `review_gate_reference_registry.csv` — registry de revisões supervisoras ou placeholders: decisão (BLOCK_OPERATIONAL_PROMOTION para todos os placeholders), materiais revisados, consistency checks e claims. Todas as linhas têm `promotion_allowed=false` no estado atual.
 - `reference_promotion_decision_registry.csv` — decisões formais de promoção: gates satisfeitos/falhados, `final_reference_status`, `promotion_allowed=false` e `protocol_b_reassessment_allowed=false` em todas as linhas atuais.
 
-O Protocolo C agora inclui fechamento de evidências, revisão humana e decisão de promoção, formando uma trilha auditável para eventual ground reference. Ground truth operacional permanece não estabelecido. O objetivo desta etapa é identificar lacunas reais para aquisição futura — não treinar modelo. Veja [`protocolo_c_fechamento_evidencias_ground_reference.md`](protocolo_c_fechamento_evidencias_ground_reference.md) e [`protocolo_c_revisao_humana_referencia.md`](protocolo_c_revisao_humana_referencia.md) para as justificativas metodológicas.
+O Protocolo C agora inclui fechamento de evidências, revisão supervisora e decisão de promoção, formando uma trilha auditável para eventual ground reference. Ground truth operacional permanece não estabelecido. O objetivo desta etapa é identificar lacunas reais para aquisição futura — não treinar modelo. Veja [`protocolo_c_fechamento_evidencias_ground_reference.md`](protocolo_c_fechamento_evidencias_ground_reference.md) e [`protocolo_c_revisao_supervisora_referencia.md`](protocolo_c_revisao_supervisora_referencia.md) para as justificativas metodológicas.
 
 ### Pré-ligação evento–patch (v1hr)
 
@@ -245,7 +245,7 @@ A etapa v1hr prepara as condições para patch-linking sem executá-lo. É metad
 - `event_patch_linking_preflight_registry.csv` — 9 linhas REGION_LEVEL (uma por evento observado candidato) com `promotion_allowed=false`, `can_create_training_label=false`, `protocol_b_status=BLOCKED` e `multimodal_status=HOLD` em todas. Status de pré-ligação: READY_FOR_MANUAL_GEOCODING (Recife e Curitiba), READY_FOR_SOURCE_GEOMETRY_REVIEW (Petrópolis 2022) ou NOT_READY_FOR_PATCH_LINKING (Petrópolis 2024, G4=PARTIAL).
 - `manual_geocoding_target_registry.csv` — 22 localidades a geocodificar manualmente por evento e região: 7 Recife (Jardim Uchôa, Areias, Sítio dos Macacos, Milagres, Rio Tejipió, CAIC Barro, Jardim Monte Verde), 10 Petrópolis (Alto da Serra, Centro, Chácara Flora, Morin, Caxambu, São Sebastião, Quitandinha, Castelânea, Valparaíso, Floresta), 5 Curitiba (Caximba, Tatuquara, Cajuru, Rua Miguel Pedro Abib, Rua Alice Vilas Boas da Conceição). Todas com `geocoding_status=NOT_GEOCODED` ou `NEEDS_MANUAL_REVIEW`, sem coordenadas, `requires_official_confirmation=true`, `cannot_establish_ground_truth_alone=true`.
 - `event_sentinel_temporal_window_registry.csv` — 9 janelas temporais (uma por evento): pré-evento (14 dias antes), evento e pós-evento (14 dias depois). `sentinel_1_relevance=HIGH` para todos (SAR penetra nuvem), `sentinel_2_relevance=MEDIUM`, `expected_cloud_risk=HIGH`, `acquisition_status=NOT_ACQUIRED`, `cannot_establish_ground_truth_alone=true`. Nenhum asset foi buscado nem baixado.
-- `patch_linking_dependency_registry.csv` — 48 dependências metodológicas: 5 por evento para Recife e Curitiba (SOURCE_GEOMETRY, MANUAL_GEOCODING, LICENSE_PROVENANCE, SENTINEL_TEMPORAL_SEARCH, HUMAN_REVIEW), 6 por evento para Petrópolis (mais PHENOMENON_SEPARATION). Todas com `current_status=OPEN` e `required_before_ground_reference=true`. Nenhuma dependência fechada nesta etapa.
+- `patch_linking_dependency_registry.csv` — 48 dependências metodológicas: 5 por evento para Recife e Curitiba (SOURCE_GEOMETRY, MANUAL_GEOCODING, LICENSE_PROVENANCE, SENTINEL_TEMPORAL_SEARCH, REVIEW_GATE), 6 por evento para Petrópolis (mais PHENOMENON_SEPARATION). Todas com `current_status=OPEN` e `required_before_ground_reference=true`. Nenhuma dependência fechada nesta etapa.
 
 O Protocolo B permanece BLOCKED. O pipeline multimodal permanece HOLD. DINO permanece SUPPORT_ONLY. Esta etapa não cria as condições para promoção a ground reference, label de treino, supervised training, flood detection, flood prediction ou reabertura do Protocolo B.
 
@@ -258,7 +258,7 @@ A v1ib transforma o Protocolo C de camada de bloqueio em camada de promoção po
 
 Resultados: PET_2022_02_15 como candidata forte (LEVEL_5_SPATIAL_TRIAGE_READY) — a evidência mais robusta do corpus, com 3 fontes SOURCE_CONFIRMED, data 15/02/2022, fenômeno MIXED, 6 localidades, bloqueada para geocodificação por separação de fenômeno (PKG_FR_PET_001 pendente). PET_2024_03_21_28 como candidata secundária (LEVEL_6_READY_FOR_CONTROLLED_GEOCODING) — 1 fonte, 2 alvos READY_FOR_TRIAGE_ONLY. REC_2022_05_24_30 em LEVEL_4 (aguarda COMPDEC). Demais 6 eventos em LEVEL_0 ou LEVEL_1. Ground truth operacional não está estabelecido. Nenhum label criado. Protocolo B permanece BLOCKED.
 
-### Separação assistida de fenômeno por localidade (v1ic)
+### Separação metodológica de fenômeno por localidade (v1ic)
 
 A v1ic executa a separação fenomenológica máxima alcançável com fontes textuais disponíveis para PET_2022_02_15 — o evento mais forte do corpus e o principal bloqueio pendente para geocodificação.
 
@@ -286,7 +286,7 @@ Achado crítico da v1ie: `Inundacao_A.shp` (SGB/CPRM, 617 feições) é suscetib
 - [`datasets/flood_event_candidate_registry.csv`](../../datasets/flood_event_candidate_registry.csv) — registro de eventos candidatos (etapa de aquisição)
 - [`datasets/patch_event_reference_link_registry.csv`](../../datasets/patch_event_reference_link_registry.csv) — vínculos patch-evento-fonte (etapa de aquisição)
 - [`datasets/ground_reference_gap_matrix.csv`](../../datasets/ground_reference_gap_matrix.csv) — matriz de lacunas por região (etapa de fechamento)
-- [`datasets/human_reference_review_registry.csv`](../../datasets/human_reference_review_registry.csv) — registry de revisões humanas (etapa de fechamento)
+- [`datasets/review_gate_reference_registry.csv`](../../datasets/review_gate_reference_registry.csv) — registry de revisões supervisoras (etapa de fechamento)
 - [`datasets/reference_promotion_decision_registry.csv`](../../datasets/reference_promotion_decision_registry.csv) — decisões formais de promoção (etapa de fechamento)
 - [`datasets/event_candidate_screening_registry.csv`](../../datasets/event_candidate_screening_registry.csv) — eventos candidatos por região (v1hn)
 - [`datasets/event_source_search_backlog.csv`](../../datasets/event_source_search_backlog.csv) — backlog de fontes a pesquisar por evento candidato (v1hn)
@@ -310,19 +310,19 @@ Achado crítico da v1ie: `Inundacao_A.shp` (SGB/CPRM, 617 feições) é suscetib
 - [`docs/metodologia_cientifica/protocolo_c_construcao_referencia_operacional.md`](protocolo_c_construcao_referencia_operacional.md) — Protocolo C: formulação completa
 - [`docs/metodologia_cientifica/protocolo_c_aquisicao_ground_reference.md`](protocolo_c_aquisicao_ground_reference.md) — etapa de aquisição: justificativa e registros metadata-only
 - [`docs/metodologia_cientifica/protocolo_c_fechamento_evidencias_ground_reference.md`](protocolo_c_fechamento_evidencias_ground_reference.md) — etapa de fechamento: gates de promoção e matriz de lacunas
-- [`docs/metodologia_cientifica/protocolo_c_revisao_humana_referencia.md`](protocolo_c_revisao_humana_referencia.md) — protocolo de revisão humana
+- [`docs/metodologia_cientifica/protocolo_c_revisao_supervisora_referencia.md`](protocolo_c_revisao_supervisora_referencia.md) — protocolo de revisão supervisora
 - [`docs/metodologia_cientifica/camada_referencia_contextual_validada.md`](camada_referencia_contextual_validada.md) — hierarquia de status e guardrails por patch
 - [`docs/metodologia_cientifica/patch_lineage_and_grounding.md`](patch_lineage_and_grounding.md) — linhagem territorial dos patches
 - [`docs/metodologia_cientifica/protocolo_c_aquisicao_fontes_observacionais_publicas.md`](protocolo_c_aquisicao_fontes_observacionais_publicas.md) — aquisição local-only de fontes observacionais públicas (v1hs): política local-only, estados de aquisição, relação com ground reference
 - [`docs/metodologia_cientifica/protocolo_c_relatorio_aquisicao_fontes_observacionais_v1hs.md`](protocolo_c_relatorio_aquisicao_fontes_observacionais_v1hs.md) — relatório de aquisição v1hs/v1ht: fontes tentadas, 6 adquiridas, falhas SSL/403, pendências formais e buscas manuais
-- [`docs/metodologia_cientifica/protocolo_c_revisao_assistida_fontes_observacionais.md`](protocolo_c_revisao_assistida_fontes_observacionais.md) — metodologia da revisão assistida v1hu: o que extrai, gates avaliados, força de evidência, limites
-- [`docs/metodologia_cientifica/protocolo_c_relatorio_revisao_assistida_fontes_v1hu.md`](protocolo_c_relatorio_revisao_assistida_fontes_v1hu.md) — relatório de execução v1hu: 38 fontes revisadas, 4 HTMLs lidos, 2 STRONG, candidatos G1–G4, lacunas e próximos passos
+- [`docs/metodologia_cientifica/protocolo_c_revisao_programatica_fontes_observacionais.md`](protocolo_c_revisao_programatica_fontes_observacionais.md) — metodologia da revisão programática v1hu: o que extrai, gates avaliados, força de evidência, limites
+- [`docs/metodologia_cientifica/protocolo_c_relatorio_revisao_programatica_fontes_v1hu.md`](protocolo_c_relatorio_revisao_programatica_fontes_v1hu.md) — relatório de execução v1hu: 38 fontes revisadas, 4 HTMLs lidos, 2 STRONG, candidatos G1–G4, lacunas e próximos passos
 - [`docs/metodologia_cientifica/protocolo_c_matriz_decisao_gates_evento.md`](protocolo_c_matriz_decisao_gates_evento.md) — metodologia da matriz de decisão por evento v1hv: lógica de agregação por gate, readiness, próximas ações, restrições absolutas
 - [`docs/metodologia_cientifica/protocolo_c_relatorio_matriz_decisao_gates_v1hv.md`](protocolo_c_relatorio_matriz_decisao_gates_v1hv.md) — relatório de execução v1hv: 36 linhas de matriz, PET_2022_02_15 candidato forte, 9 readiness, 30 ações, can_promote=false para todos
-- [`docs/metodologia_cientifica/protocolo_c_validacao_assistida_fonte_evento.md`](protocolo_c_validacao_assistida_fonte_evento.md) — metodologia da validação assistida fonte–evento v1hw: estados de fonte, evento, temporal, fenômeno, localidade, licença, decisões e restrições absolutas
-- [`docs/metodologia_cientifica/protocolo_c_relatorio_validacao_assistida_fonte_evento_v1hw.md`](protocolo_c_relatorio_validacao_assistida_fonte_evento_v1hw.md) — relatório de execução v1hw: 38 fontes, 3 SOURCE_CONFIRMED, PET_2022_02_15 REQUEST_PHENOMENON_SEPARATION, PET_2024_03_21_28 KEEP_AS_PRIORITY, 2 eventos selecionados para geocodificação; can_execute_overlay_now=false; can_promote=false para todos
+- [`docs/metodologia_cientifica/protocolo_c_validacao_programatica_fonte_evento.md`](protocolo_c_validacao_programatica_fonte_evento.md) — metodologia da validação programática fonte–evento v1hw: estados de fonte, evento, temporal, fenômeno, localidade, licença, decisões e restrições absolutas
+- [`docs/metodologia_cientifica/protocolo_c_relatorio_validacao_programatica_fonte_evento_v1hw.md`](protocolo_c_relatorio_validacao_programatica_fonte_evento_v1hw.md) — relatório de execução v1hw: 38 fontes, 3 SOURCE_CONFIRMED, PET_2022_02_15 REQUEST_PHENOMENON_SEPARATION, PET_2024_03_21_28 KEEP_AS_PRIORITY, 2 eventos selecionados para geocodificação; can_execute_overlay_now=false; can_promote=false para todos
 - [`docs/metodologia_cientifica/protocolo_c_relatorio_execucao_aquisicao_dirigida_v1ht.md`](protocolo_c_relatorio_execucao_aquisicao_dirigida_v1ht.md) — relatório de execução v1ht: script endurecido, 22 alvos de busca dirigida, 11 solicitações formais, 13 lacunas que bloqueiam ground reference; nenhum novo arquivo adquirido nesta fase de catalogação
-- [`docs/metodologia_cientifica/protocolo_c_resolucao_assistida_lacunas_v1hx.md`](protocolo_c_resolucao_assistida_lacunas_v1hx.md) — metodologia da resolução assistida de lacunas v1hx: classes de lacuna, WEB_* status codes, critério de sucesso, relação com próximas etapas
+- [`docs/metodologia_cientifica/protocolo_c_resolucao_programatica_lacunas_v1hx.md`](protocolo_c_resolucao_programatica_lacunas_v1hx.md) — metodologia da resolução programática de lacunas v1hx: classes de lacuna, WEB_* status codes, critério de sucesso, relação com próximas etapas
 - [`docs/metodologia_cientifica/protocolo_c_relatorio_resolucao_lacunas_v1hx.md`](protocolo_c_relatorio_resolucao_lacunas_v1hx.md) — relatório de execução v1hx: 8/9 portais adquiridos, backend PDF ALL_MISSING, 12 pacotes formais DRAFT, re-execução v1hw com 46 fontes (3 DOWNGRADE_TO_CONTEXTUAL_ONLY); can_promote=false para todos
 - [`docs/metodologia_cientifica/protocolo_c_revisao_profunda_pre_geocodificacao_v1hy.md`](protocolo_c_revisao_profunda_pre_geocodificacao_v1hy.md) — metodologia v1hy: revisão profunda de portais adquiridos, suporte a PDF via pypdf, fechamento pré-geocodificação com guardrails explícitos
 - [`docs/metodologia_cientifica/protocolo_c_relatorio_revisao_profunda_pre_geocodificacao_v1hy.md`](protocolo_c_relatorio_revisao_profunda_pre_geocodificacao_v1hy.md) — relatório v1hy: pypdf instalado (v6.12.0), 1729 links extraídos/0 event-specific, pre_geocoding_closure_registry com 3 eventos selecionados, todos guardrails false/BLOCKED/HOLD/SUPPORT_ONLY
@@ -332,7 +332,7 @@ Achado crítico da v1ie: `Inundacao_A.shp` (SGB/CPRM, 617 feições) é suscetib
 - [`docs/metodologia_cientifica/protocolo_c_relatorio_inventario_fontes_espaciais_v1ia.md`](protocolo_c_relatorio_inventario_fontes_espaciais_v1ia.md) — relatório v1ia: 15 fontes (13 PRIMARY_OFFICIAL/TECHNICAL), 2 alvos READY_FOR_TRIAGE_ONLY (PET_2024), 11 bloqueados, 1 lacuna CRITICAL, 5 formal requests pendentes; nenhuma geocodificação executada
 - [`docs/metodologia_cientifica/protocolo_c_consolidacao_referencias_observacionais_candidatas.md`](protocolo_c_consolidacao_referencias_observacionais_candidatas.md) — metodologia v1ib: consolidação positiva de evidências observacionais candidatas; níveis LEVEL_0–LEVEL_6; promoção graduada por evento; ground truth operacional não estabelecido; invariantes permanentes
 - [`docs/metodologia_cientifica/protocolo_c_relatorio_consolidacao_referencias_observacionais.md`](protocolo_c_relatorio_consolidacao_referencias_observacionais.md) — relatório v1ib: PET_2022_02_15 como candidata forte (LEVEL_5), PET_2024_03_21_28 como secundária (LEVEL_6), demais contextuais ou bloqueados; nenhum label criado; Protocolo B permanece BLOCKED
-- [`docs/metodologia_cientifica/protocolo_c_separacao_fenomeno_petropolis_2022_v1ic.md`](protocolo_c_separacao_fenomeno_petropolis_2022_v1ic.md) — metodologia v1ic: separação assistida de fenômeno por localidade; classes de fenômeno; critério de avanço; bloqueio de geocodificação; fontes utilizadas
+- [`docs/metodologia_cientifica/protocolo_c_separacao_fenomeno_petropolis_2022_v1ic.md`](protocolo_c_separacao_fenomeno_petropolis_2022_v1ic.md) — metodologia v1ic: separação metodológica de fenômeno por localidade; classes de fenômeno; critério de avanço; bloqueio de geocodificação; fontes utilizadas
 - [`docs/metodologia_cientifica/protocolo_c_relatorio_separacao_fenomeno_petropolis_2022_v1ic.md`](protocolo_c_relatorio_separacao_fenomeno_petropolis_2022_v1ic.md) — relatório v1ic: PARTIAL_SEPARATION; 0 HYDRO/3 MASS/5 MIXED; Chácara Flora e Caxambu HIGH; rio Quitandinha; PKG_FR_PET_001 como próxima ação
 - [`docs/metodologia_cientifica/protocolo_c_pacote_referencia_cartografica_petropolis_2022_v1id.md`](protocolo_c_pacote_referencia_cartografica_petropolis_2022_v1id.md) — metodologia v1id: registro e preparação de ingestão de PKG_FR_PET_001 (DRM-RJ cartográfico); bloqueio de geocodificação até cartografia disponível
 - [`docs/metodologia_cientifica/protocolo_c_relatorio_pacote_referencia_cartografica_petropolis_2022_v1id.md`](protocolo_c_relatorio_pacote_referencia_cartografica_petropolis_2022_v1id.md) — relatório v1id: PKG_FR_PET_001 registrado como REQUIRED_NOT_INGESTED; bloqueios operacionais mantidos

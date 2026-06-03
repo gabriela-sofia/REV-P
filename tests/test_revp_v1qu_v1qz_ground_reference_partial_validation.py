@@ -474,7 +474,7 @@ def test_v1qw_forms_have_placeholders(monkeypatch, tmp_path):
     monkeypatch.setattr(v1qw, "IN_SAMPLE", sp)
     v1qw.run()
     forms = _read(tmp_path / v1qw.OUT_FORMS.name)
-    assert all(f["answer_placeholder"] == "<TO_BE_FILLED_BY_HUMAN_REVIEWER>" for f in forms)
+    assert all(f["answer_placeholder"] == "<TO_BE_FILLED_BY_REVIEWER>" for f in forms)
 
 def test_v1qw_forms_decision_not_filled(monkeypatch, tmp_path):
     _redirect(monkeypatch, v1qw, tmp_path)

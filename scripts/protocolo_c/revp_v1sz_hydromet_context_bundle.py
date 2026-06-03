@@ -8,7 +8,7 @@ A camada v1sr–v1sz usa dados hidrometeorológicos oficiais apenas como
 contexto temporal e regional review-only. Precipitação observada,
 proximidade de estação ou janela temporal compatível não validam
 automaticamente evento, não criam ground truth operacional, não criam
-negativo formal e não substituem revisão humana.
+negativo formal e não substituem revisão supervisora.
 """
 from __future__ import annotations
 import argparse
@@ -54,7 +54,7 @@ MANDATORY = (
     "contexto temporal e regional review-only. Precipitação observada, "
     "proximidade de estação ou janela temporal compatível não validam "
     "automaticamente evento, não criam ground truth operacional, não criam "
-    "negativo formal e não substituem revisão humana."
+    "negativo formal e não substituem revisão supervisora."
 )
 
 

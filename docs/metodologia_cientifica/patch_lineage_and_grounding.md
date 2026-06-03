@@ -88,11 +88,11 @@ O campo `review_priority` no índice estrutural (v1gf) é um indicador de triage
 |---|---|---|
 | B1 — CRS externo | Não resolvido | Operações espaciais proibidas |
 | B6 — prontidão de patch | 0/59 LOCKED | Validação espacial bloqueada |
-| B7 — revisão humana | Pendente | Abertura de portas depende de revisão |
+| B7 — revisão supervisora | Pendente | Abertura de portas depende de revisão |
 | Rótulos observados | Não disponíveis | Treinamento supervisionado bloqueado |
 | Multimodal | Em espera | Pendente resolução Recife balanço/recuperação |
 
-Com esses bloqueadores ativos, o escopo válido do projeto é: extração local de embeddings, diagnósticos estruturais exploratórios, contexto GIS interpretável e triagem de revisão humana.
+Com esses bloqueadores ativos, o escopo válido do projeto é: extração local de embeddings, diagnósticos estruturais exploratórios, contexto GIS interpretável e triagem de revisão supervisora.
 
 ## Claims permitidos e proibidos
 

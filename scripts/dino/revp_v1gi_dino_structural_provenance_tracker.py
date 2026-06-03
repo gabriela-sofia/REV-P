@@ -81,7 +81,7 @@ def run(args: argparse.Namespace) -> int:
         "v1gc_bridge_target": by_id(read_csv(base / "v1gc" / "graph_bridges.csv"), "target_id"),
         "v1gd_robustness": by_id(read_csv(base / "v1gd" / "sensitivity_rankings.csv")),
         "v1gf_index": by_id(read_csv(base / "v1gf" / "structural_evidence_index.csv")),
-        "v1gg_review": by_id(read_csv(base / "v1gg" / "human_review_manifest.csv")),
+        "v1gg_review": by_id(read_csv(base / "v1gg" / "review_gate_manifest.csv")),
     }
     qa_sources = {
         "v1fz": base / "v1fz" / "dino_balanced_embedding_qa_v1fz.csv",
@@ -90,7 +90,7 @@ def run(args: argparse.Namespace) -> int:
         "v1gc": base / "v1gc" / "geo_structural_diagnostics_qa.csv",
         "v1gd": base / "v1gd" / "perturbation_robustness_qa.csv",
         "v1gf": base / "v1gf" / "structural_evidence_qa.csv",
-        "v1gg": base / "v1gg" / "human_review_package_qa.csv",
+        "v1gg": base / "v1gg" / "review_gate_package_qa.csv",
     }
     provenance = []
     history = []
@@ -125,12 +125,12 @@ def run(args: argparse.Namespace) -> int:
             diagnostics.append("structural_index")
         if sources["v1gg_review"].get(dino_id):
             touched.append("v1gg")
-            diagnostics.append("human_review_package")
+            diagnostics.append("review_gate_package")
         visuals = sources["v1gb_visual"].get(patch_id, [])
         qa_statuses = {name: read_qa_status(path) for name, path in qa_sources.items()}
         key = (dino_id, row.get("embedding_path", ""))
         seen_keys.add(key)
-        provenance.append({"patch_id": patch_id, "dino_input_id": dino_id, "region": row.get("region", ""), "embedding_path": row.get("embedding_path", ""), "versions_touched": "|".join(sorted(set(touched))), "diagnostics_produced": "|".join(sorted(set(diagnostics))) if diagnostics else "NONE", "visualization_count": len(visuals), "qa_passed_versions": "|".join(name for name, status in qa_statuses.items() if status == "PASS"), "medoid_participation": str("medoid" in diagnostics).lower(), "bridge_participation": str("bridge" in diagnostics).lower(), "outlier_participation": str(any("outlier" in item for item in diagnostics)).lower(), "review_package_participation": str("human_review_package" in diagnostics).lower(), "label_status": "NO_LABEL", "target_status": "NO_TARGET", "claim_scope": REVIEW_ONLY_CLAIM})
+        provenance.append({"patch_id": patch_id, "dino_input_id": dino_id, "region": row.get("region", ""), "embedding_path": row.get("embedding_path", ""), "versions_touched": "|".join(sorted(set(touched))), "diagnostics_produced": "|".join(sorted(set(diagnostics))) if diagnostics else "NONE", "visualization_count": len(visuals), "qa_passed_versions": "|".join(name for name, status in qa_statuses.items() if status == "PASS"), "medoid_participation": str("medoid" in diagnostics).lower(), "bridge_participation": str("bridge" in diagnostics).lower(), "outlier_participation": str(any("outlier" in item for item in diagnostics)).lower(), "review_package_participation": str("review_gate_package" in diagnostics).lower(), "label_status": "NO_LABEL", "target_status": "NO_TARGET", "claim_scope": REVIEW_ONLY_CLAIM})
         for version in sorted(set(touched)):
             history.append({"patch_id": patch_id, "dino_input_id": dino_id, "version": version, "diagnostic_status": "PRESENT", "history_chain_status": "VALID"})
         if sources["v1gg_review"].get(dino_id):

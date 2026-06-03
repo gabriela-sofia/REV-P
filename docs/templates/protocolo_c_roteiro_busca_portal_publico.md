@@ -57,7 +57,7 @@
 | **Próximos passos** | [PROXIMOS_PASSOS] |
 | **Bloqueadores** | [BLOQUEIOS] |
 
-*Próximos passos possíveis: registrar no intake registry; solicitar licença; encaminhar para revisão humana; continuar busca em outra fonte; bloquear uso.*
+*Próximos passos possíveis: registrar no intake registry; solicitar licença; encaminhar para revisão supervisora; continuar busca em outra fonte; bloquear uso.*
 *Bloqueadores: licença UNKNOWN; geometria ausente; data incompatível; acesso restrito; sem cobertura dos patches.*
 
 ---

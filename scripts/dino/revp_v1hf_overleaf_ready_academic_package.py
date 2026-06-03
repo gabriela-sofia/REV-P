@@ -98,7 +98,7 @@ class Evidence:
         self.gy_corpus = _read_csv(V1GY_DIR / "table_embedding_corpus_summary_v1gy.csv")
 
         # v1hd
-        self.hd_summary = _read_json(V1HD_DIR / "human_review_visual_summary_v1hd.json")
+        self.hd_summary = _read_json(V1HD_DIR / "review_gate_visual_summary_v1hd.json")
 
         # Derived scalars — safe defaults when files absent
         self.n_patches: int = self.gz_summary.get("corpus_size", 12)
@@ -107,7 +107,7 @@ class Evidence:
         self.backbone: str = self.gz_summary.get(
             "embedding_backbone", "DINOv2-com-registers"
         )
-        self.n_review_candidates: int = self.gz_summary.get("human_review_candidates", 47)
+        self.n_review_candidates: int = self.gz_summary.get("review_gate_candidates", 47)
         self.n_figures_ready: int = self.gz_summary.get("figures_ready", 5)
         self.n_tables_ready: int = self.gz_summary.get("tables_ready", 6)
         self.n_allowed_claims: int = self.gz_summary.get("allowed_claims_count", 11)
@@ -173,7 +173,7 @@ def build_metodologia(ev: Evidence) -> str:
     return f"""# Capítulo 3 — Metodologia
 
 > **Nota de uso**: Este rascunho foi gerado automaticamente a partir dos artefatos
-> computados no pipeline REV-P. Os números são reais. O texto requer revisão humana
+> computados no pipeline REV-P. Os números são reais. O texto requer revisão supervisora
 > antes da inserção no Overleaf/abnTeX2. Nenhum claim preditivo ou operacional foi criado.
 
 ---
@@ -390,12 +390,12 @@ A cobertura GIS é fragmentária em todas as três regiões:
 
 > **Limitação metodológica crítica**: GIS não é ground truth. Não é possível
 > verificar se a estrutura de embeddings correlaciona com indicadores contextuais
-> pela ausência de dados completos. A revisão visual assistida complementa — mas
+> pela ausência de dados completos. A revisão visual programática complementa — mas
 > não substitui — indicadores contextuais formais.
 
 ---
 
-## 3.9 Seleção e Revisão Visual Assistida de Candidatos
+## 3.9 Seleção e revisão visual programática de Candidatos
 
 ### 3.9.1 Seleção dos Candidatos
 
@@ -411,7 +411,7 @@ critérios estruturais explícitos:
 A seleção é exploratória — não constitui amostragem probabilística da população
 de patches Sentinel disponíveis.
 
-### 3.9.2 Revisão Visual Assistida
+### 3.9.2 revisão visual programática
 
 Para cada candidato, foram calculadas estatísticas de imagem diretamente dos
 arquivos TIF Sentinel (bandas B2–B12): brilho médio, desvio padrão de brilho
@@ -426,9 +426,9 @@ As notas descritivas são conservadoras e fraseadas com marcadores de incerteza
 - Incerteza: {ev.n_unc_low} baixa · {ev.n_unc_med} média · {ev.n_unc_high} alta
 - Todos os {ev.n_review_candidates} com usabilidade marcada como `conditional`
 
-> **Limitação**: A revisão visual é assistida por estatísticas de imagem — não é
+> **Limitação**: A revisão visual é apoiada por estatísticas de imagem — não é
 > inspeção humana direta. As notas descritivas são interpretativas, não operacionais.
-> Todos os {ev.n_review_candidates} candidatos requerem revisão humana definitiva.
+> Todos os {ev.n_review_candidates} candidatos requerem revisão supervisora definitiva.
 
 ---
 
@@ -449,7 +449,7 @@ verificação de afirmações na escrita do TCC.
 ---
 
 *Rascunho gerado automaticamente em {datetime.now(timezone.utc).date()} — v1hf.*
-*Todos os números são reais, extraídos dos artefatos computados. Revisão humana obrigatória.*
+*Todos os números são reais, extraídos dos artefatos computados. Revisão supervisora obrigatória.*
 """
 
 
@@ -464,7 +464,7 @@ def build_resultados(ev: Evidence) -> str:
     )
     return f"""# Capítulo 4 — Resultados
 > **Origem**: consolidado a partir de `results_section_draft_v1he.md`.
-> Revisão humana obrigatória antes de inserção no Overleaf.
+> Revisão supervisora obrigatória antes de inserção no Overleaf.
 > Nenhum claim preditivo ou operacional foi criado.
 
 ---
@@ -495,7 +495,7 @@ def build_discussao(ev: Evidence) -> str:
     )
     return f"""# Capítulo 5 — Discussão
 > **Origem**: consolidado a partir de `discussion_section_draft_v1he.md`.
-> Revisão humana obrigatória antes de inserção no Overleaf.
+> Revisão supervisora obrigatória antes de inserção no Overleaf.
 > Interpretação conservadora — sem afirmações operacionais.
 
 ---
@@ -587,7 +587,7 @@ validação dos embeddings.
 
 ---
 
-## L4 — Revisão Visual Assistida por Estatísticas de Imagem
+## L4 — revisão visual programática por Estatísticas de Imagem
 
 A revisão visual dos {ev.n_review_candidates} candidatos foi realizada por meio de estatísticas
 de imagem computadas dos TIFs Sentinel (NDVI, brilho, heterogeneidade) — não por
@@ -598,7 +598,7 @@ inspeção humana direta de todas as imagens.
 marcada como `conditional`.
 
 **Implicação**: As notas descritivas geradas são conservadoras e interpretativas.
-Não constituem classificações operacionais e não substituem revisão humana direta
+Não constituem classificações operacionais e não substituem revisão supervisora direta
 das imagens.
 
 ---
@@ -654,7 +654,7 @@ de que o modelo "entende" imagens Sentinel.
 ---
 
 *Gerado automaticamente em {datetime.now(timezone.utc).date()} — v1hf.*
-*Revisão humana obrigatória antes de inserção no Overleaf.*
+*Revisão supervisora obrigatória antes de inserção no Overleaf.*
 """
 
 
@@ -721,7 +721,7 @@ O pipeline REV-P documenta cada operação em artefatos versionáveis:
 | v1ge | Manifesto expandido com hash SHA-512 por embedding |
 | v1gz | Auditoria científica sistematizada: claims, evidências, gaps |
 | v1ha | Diagnóstico de robustez: {ev.n_pert_types} tipos de perturbação, {ev.n_robust}/{ev.n_patches} ROBUST |
-| v1hb–v1hd | Protocolo formalizado de revisão visual assistida |
+| v1hb–v1hd | Protocolo formalizado de revisão visual programática |
 | v1he | Síntese de resultados e discussão com rastreabilidade a artefatos |
 | v1hf | Pacote Overleaf com índice de figuras/tabelas e crosswalk seção→artefato |
 
@@ -764,7 +764,7 @@ científica que conecta cada afirmação do texto a um artefato computado local.
 ---
 
 *Gerado automaticamente em {datetime.now(timezone.utc).date()} — v1hf.*
-*Revisão humana obrigatória antes de inserção no Overleaf.*
+*Revisão supervisora obrigatória antes de inserção no Overleaf.*
 """
 
 
@@ -968,18 +968,18 @@ sem sobrecarregar a Seção 4. Pode ser referenciado no corpo com "Vide Apêndic
 
 ---
 
-## Apêndice C — Protocolo de Revisão Humana
+## Apêndice C — protocolo de revisão supervisora
 
 **Status**: RECOMENDADO
-**Origem**: `docs/metodologia_cientifica/human_review_protocol.md`
+**Origem**: `docs/metodologia_cientifica/review_gate_protocol.md`
 **Conteúdo**:
 - Critérios de seleção dos 47 candidatos
 - Protocolo de anotação com campos e escala de incerteza
 - Regras de governança para notas descritivas
-- Distinção explícita entre revisão assistida e classificação operacional
+- Distinção explícita entre revisão programática e classificação operacional
 
 **Observação**: Essencial para fundamentar metodologicamente a seção 4.5
-(Revisão Visual Assistida).
+(revisão visual programática).
 
 ---
 
@@ -1215,15 +1215,15 @@ CROSSWALK: list[dict] = [
             "47/47 com estatísticas de imagem computadas (NDVI, brilho, heterogeneidade)"
         ),
         "artifact_sustentando": (
-            "local_runs/dino_embeddings/v1hb/human_review_execution_manifest_v1hb.csv; "
-            "local_runs/dino_embeddings/v1hd/human_review_visual_annotation_v1hd.csv"
+            "local_runs/dino_embeddings/v1hb/review_gate_execution_manifest_v1hb.csv; "
+            "local_runs/dino_embeddings/v1hd/review_gate_visual_annotation_v1hd.csv"
         ),
         "figura_tabela": (
             "fig_review_candidate_categories_v1gy.png; "
             "table_review_candidates_summary_v1gy.csv"
         ),
         "limitacao_associada": (
-            "Revisão assistida por estatísticas — não inspeção humana direta; "
+            "Revisão programática por estatísticas — não inspeção humana direta; "
             "todos os 47 com usabilidade conditional"
         ),
     },
@@ -1240,7 +1240,7 @@ CROSSWALK: list[dict] = [
         "figura_tabela": "Todas as figuras e tabelas do corpo",
         "limitacao_associada": (
             "Corpus pequeno; ausência de ground truth; GIS parcial; "
-            "revisão visual assistida — não supervisionada"
+            "revisão visual programática — não supervisionada"
         ),
     },
 ]

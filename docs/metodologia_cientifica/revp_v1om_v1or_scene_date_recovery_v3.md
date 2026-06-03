@@ -59,7 +59,7 @@ de sensing/aquisição em MTD XML/STAC são considerados datas de cena válidas.
 
 - **C3+**: só existe se `scene_date_status == PRODUCT_DATE_CONFIRMED`, regra temporal
   satisfeita (strong/moderate/contextual) e `formal_negative_count > 0`.
-  C3+ requer revisão humana — não é label operacional.
+  C3+ requer revisão supervisora — não é label operacional.
 - **C4**: fechado enquanto `formal_negative_count == 0`. A presença de scene_date confirmada
   não abre C4 por si só.
 - **DINO**: permanece `REVIEW_ONLY_REPRESENTATION`. A fila DINO contém apenas patches com

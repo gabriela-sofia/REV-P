@@ -364,7 +364,7 @@ def generate_review_category_figure(
         )
     ax.set_ylabel("Nº de patches candidatos", fontsize=10)
     ax.set_title(
-        "Candidatos à revisão humana por categoria\n"
+        "Candidatos à revisão supervisora por categoria\n"
         f"(total: {meta.get('n_candidates', '?')} — EMBEDDING_BASED)",
         fontsize=10,
     )
@@ -515,7 +515,7 @@ def build_table_review_candidates_summary(
             "categoria": cat,
             "n_candidatos": count,
             "modo_selecao": meta.get("embedding_mode", ""),
-            "nota": "candidatos para revisão humana — sem classificação automática",
+            "nota": "candidatos para revisão supervisora — sem classificação automática",
         })
     return rows
 
@@ -579,7 +579,7 @@ def build_manifest(figure_statuses: dict[str, str]) -> list[dict[str, Any]]:
             "claim_scope": "STRUCTURAL_EXPLORATION_ONLY",
             "limitations_note": (
                 "Corpus reduzido (12 patches, 4 por região). "
-                "Resultados não generalizam para o universo de 128 patches sem revisão humana."
+                "Resultados não generalizam para o universo de 128 patches sem revisão supervisora."
             ),
         },
         {
@@ -629,14 +629,14 @@ def build_manifest(figure_statuses: dict[str, str]) -> list[dict[str, Any]]:
             "source_file": "local_runs/dino_embeddings/v1gw/review_candidates_metadata_v1gw.json",
             "recommended_tcc_section": "5. Metodologia | 5.1 Formalização da Etapa de Revisão",
             "caption_draft_pt": (
-                "Distribuição de candidatos à revisão humana por categoria de seleção. "
+                "Distribuição de candidatos à revisão supervisora por categoria de seleção. "
                 "Seleção baseada em métricas estruturais (EMBEDDING_BASED). "
                 "Candidatos são indicados para revisão metodológica — sem rótulos automáticos."
             ),
             "claim_scope": "REVIEW_CANDIDATE_SELECTION_ONLY",
             "limitations_note": (
                 "Categorias são critérios de seleção, não rótulos de risco ou vulnerabilidade. "
-                "Revisão humana é etapa metodológica, não validação."
+                "Revisão supervisora é etapa metodológica, não validação."
             ),
         },
         {
@@ -684,12 +684,12 @@ def build_manifest(figure_statuses: dict[str, str]) -> list[dict[str, Any]]:
             "caption_draft_pt": (
                 "Patches medoid e outliers estruturais por região. "
                 "Medoid: patch mais central na distribuição de embeddings. "
-                "Outlier: patch mais distante — priorizados para revisão humana."
+                "Outlier: patch mais distante — priorizados para revisão supervisora."
             ),
             "claim_scope": "STRUCTURAL_EXPLORATION_ONLY",
             "limitations_note": (
                 "Medoid e outlier são termos estruturais, não rótulos de risco. "
-                "Revisão humana necessária para interpretação contextual."
+                "Revisão supervisora necessária para interpretação contextual."
             ),
         },
         {
@@ -716,12 +716,12 @@ def build_manifest(figure_statuses: dict[str, str]) -> list[dict[str, Any]]:
             "source_file": "local_runs/dino_embeddings/v1gw/review_candidates_metadata_v1gw.json",
             "recommended_tcc_section": "5. Metodologia | 5.1 Formalização da Etapa de Revisão",
             "caption_draft_pt": (
-                "Distribuição de candidatos à revisão humana por categoria. "
+                "Distribuição de candidatos à revisão supervisora por categoria. "
                 "Candidatos selecionados por métricas estruturais — sem atribuição automática "
                 "de risco ou vulnerabilidade."
             ),
             "claim_scope": "REVIEW_CANDIDATE_SELECTION_ONLY",
-            "limitations_note": "Candidatos requerem revisão humana antes de qualquer interpretação.",
+            "limitations_note": "Candidatos requerem revisão supervisora antes de qualquer interpretação.",
         },
         {
             "artifact_id": "table_external_evidence_coverage_summary_v1gy",

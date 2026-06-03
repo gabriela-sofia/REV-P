@@ -38,7 +38,7 @@ REQUIRED_DEPENDENCY_TYPES = {
     "MANUAL_GEOCODING",
     "LICENSE_PROVENANCE",
     "SENTINEL_TEMPORAL_SEARCH",
-    "HUMAN_REVIEW",
+    "REVIEW_GATE",
 }
 
 DANGEROUS_PATTERNS = [
@@ -438,16 +438,16 @@ class TestDependencyRegistry:
             assert event_id in event_ids_with_deps, \
                 f"No dependencies for event {event_id}"
 
-    def test_human_review_required_before_ground_reference(self):
+    def test_review_gate_required_before_ground_reference(self):
         rows = self._load()
         for event_id in EXPECTED_EVENTS:
-            human_reviews = [
+            review_gates = [
                 r for r in rows
                 if r["observed_event_id"] == event_id
-                and r["dependency_type"] == "HUMAN_REVIEW"
+                and r["dependency_type"] == "REVIEW_GATE"
             ]
-            assert human_reviews, f"No HUMAN_REVIEW dependency for {event_id}"
-            for hr in human_reviews:
+            assert review_gates, f"No REVIEW_GATE dependency for {event_id}"
+            for hr in review_gates:
                 assert hr["required_before_ground_reference"] == "true"
 
 

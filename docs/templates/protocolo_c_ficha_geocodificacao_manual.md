@@ -77,7 +77,7 @@
 
 - **Decisão**: [DECISAO_DE_USO]
   - Opções: GEOCODIFICACAO_CONCLUIDA_PENDENTE_REVISAO_HUMANA / NECESSITA_FONTE_OFICIAL / NECESSITA_CONFIRMACAO_CRS / BLOQUEADO_POR_LICENCA / BLOQUEADO_SEM_EVIDENCIA_ESPACIAL
-- **Pode entrar em patch-linking após revisão humana**: [PODE_ENTRAR_EM_PATCH_LINKING]
+- **Pode entrar em patch-linking após revisão supervisora**: [PODE_ENTRAR_EM_PATCH_LINKING]
   - Controles: true / false
 
 ---

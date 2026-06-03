@@ -1,7 +1,7 @@
 limitation_id,aspect,description,implication,review_only,notes
 LIM01,temporal_coverage,Dados INMET 2020-2026; precipitacao horaria agregada a diaria.,Eventos sub-horarios nao captados.,true,
 LIM02,spatial_representativity,Precipitacao pontual nao representa area de bacia.,Variabilidade espacial nao modelada.,true,
-LIM03,event_validation,Precipitacao compativel nao valida evento de deslizamento ou inundacao.,Revisao humana obrigatoria para qualquer interpretacao causal.,true,
+LIM03,event_validation,Precipitacao compativel nao valida evento de deslizamento ou inundacao.,Revisao supervisora obrigatoria para qualquer interpretacao causal.,true,
 LIM04,negative_evidence,Ausencia de precipitacao nao constitui evidencia negativa.,Evento pode ter ocorrido por acumulados anteriores ou fontes locais.,true,
 LIM05,station_density,Densidade de estacoes varia por regiao.,"Areas sem estacao proxima tem lacuna de contexto, nao evidencia negativa.",true,
 LIM06,license,"Dados INMET: fonte publica oficial, necessita revisao de licenca antes de publicacao.",Verificar termos no portal INMET antes de citar em publicacao.,true,

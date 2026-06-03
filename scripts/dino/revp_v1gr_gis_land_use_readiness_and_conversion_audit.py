@@ -103,10 +103,10 @@ CLASS_MAPPING_ROWS = [
     # --- REVIEW: unknown / unclassified ---
     {"class_pattern": "desconhecido", "class_example": "desconhecido",
      "score": "REVIEW", "category": "desconhecido", "review_only": "true",
-     "notes": "unknown class — requires human review before score assignment"},
+     "notes": "unknown class — requires review gate before score assignment"},
     {"class_pattern": "sem classificação", "class_example": "sem classificação",
      "score": "REVIEW", "category": "sem_classificacao", "review_only": "true",
-     "notes": "unclassified — requires human review"},
+     "notes": "unclassified — requires review gate"},
     {"class_pattern": "nulo", "class_example": "nulo / null",
      "score": "REVIEW", "category": "nulo", "review_only": "true",
      "notes": "null class — blocked from score assignment"},
@@ -706,7 +706,7 @@ def run_audit(gis_root: Path | None, output_dir: Path) -> dict[str, Any]:
         "output_dir": str(output_dir),
         "qa_status": qa_overall,
         "methodology_note": (
-            "land use class mapping is a candidate table for human review; "
+            "land use class mapping is a candidate table for review gate; "
             "it is not a final classification, not ground truth, and not a label. "
             "Integration with v1gq requires geometry conversion (fiona/geopandas) "
             "and is currently blocked by missing dependencies."

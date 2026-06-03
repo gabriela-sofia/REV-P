@@ -2,9 +2,9 @@ field_name,field_type,required,controlled_values,description
 question_id,string,true,,Identificador único da pergunta de busca (ex: QST_REC_G1_01)
 region,string,true,"RECIFE,PETROPOLIS,CURITIBA,METHOD_REFERENCE",Região do REV-P
 candidate_event_name,string,false,,Nome descritivo do evento candidato; ALL_EVENTS se aplicável a todos
-target_gate,string,true,"G1_EVENT_CONFIRMATION,G2_SOURCE_AVAILABILITY,G3_TEMPORAL_ALIGNMENT,G4_SPATIAL_ALIGNMENT,G5_SOURCE_STRENGTH,G6_UNCERTAINTY_AND_LIMITATIONS,G7_HUMAN_REVIEW,G8_INDEPENDENT_CORROBORATION,G9_PROMOTION_DECISION,MULTIPLE_GATES",Gate do Protocolo C que esta pergunta endereça
+target_gate,string,true,"G1_EVENT_CONFIRMATION,G2_SOURCE_AVAILABILITY,G3_TEMPORAL_ALIGNMENT,G4_SPATIAL_ALIGNMENT,G5_SOURCE_STRENGTH,G6_UNCERTAINTY_AND_LIMITATIONS,G7_REVIEW_GATE,G8_INDEPENDENT_CORROBORATION,G9_PROMOTION_DECISION,MULTIPLE_GATES",Gate do Protocolo C que esta pergunta endereça
 search_question,string,true,,Pergunta de busca específica a ser respondida
-expected_answer_type,string,true,"EVENT_DATE,EVENT_CONFIRMATION,SPATIAL_GEOMETRY,SOURCE_AVAILABILITY,LICENSE_STATUS,UNCERTAINTY_DESCRIPTION,PATCH_COVERAGE,HUMAN_REVIEW_INPUT,INDEPENDENT_CORROBORATION,PROMOTION_DECISION_INPUT",Tipo de resposta esperada
+expected_answer_type,string,true,"EVENT_DATE,EVENT_CONFIRMATION,SPATIAL_GEOMETRY,SOURCE_AVAILABILITY,LICENSE_STATUS,UNCERTAINTY_DESCRIPTION,PATCH_COVERAGE,REVIEW_GATE_INPUT,INDEPENDENT_CORROBORATION,PROMOTION_DECISION_INPUT",Tipo de resposta esperada
 evidence_needed,string,true,,Evidência necessária para responder a pergunta
 acceptable_source_family,string,false,,Famílias de fonte aceitáveis para responder (separadas por ponto e vírgula)
 current_answer_status,string,true,"UNANSWERED,PARTIAL,ANSWERED_METADATA_ONLY,BLOCKED,METHOD_REFERENCE_ONLY",Status atual da resposta

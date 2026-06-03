@@ -157,7 +157,7 @@ class TestSchemaFields:
         "multimodal_status", "dino_usage_status",
         "can_advance_to_source_review", "can_advance_to_patch_linking",
         "can_be_used_as_training_label", "can_reopen_protocol_b",
-        "requires_human_review", "missing_evidence",
+        "requires_review_gate", "missing_evidence",
     ]
 
     GAP_REQUIRED = [
@@ -281,9 +281,9 @@ class TestCandidateRegistry:
         bad = [r["observed_event_id"] for r in rows if r["can_reopen_protocol_b"] != "false"]
         assert not bad, f"can_reopen_protocol_b != false: {bad}"
 
-    def test_all_require_human_review(self, rows):
-        bad = [r["observed_event_id"] for r in rows if r["requires_human_review"] != "true"]
-        assert not bad, f"requires_human_review != true: {bad}"
+    def test_all_require_review_gate(self, rows):
+        bad = [r["observed_event_id"] for r in rows if r["requires_review_gate"] != "true"]
+        assert not bad, f"requires_review_gate != true: {bad}"
 
     def test_all_can_advance_to_source_review(self, rows):
         bad = [r["observed_event_id"] for r in rows if r["can_advance_to_source_review"] != "true"]
@@ -326,11 +326,11 @@ class TestGapRegistry:
         missing = candidate_ids - events_with_overlay_gap
         assert not missing, f"Events without PATCH_OVERLAY_NOT_DONE gap: {missing}"
 
-    def test_all_events_have_human_review_gap(self, gap_rows, candidate_ids):
+    def test_all_events_have_review_gate_gap(self, gap_rows, candidate_ids):
         events_with_review_gap = {r["observed_event_id"] for r in gap_rows
-                                  if r["gap_type"] == "HUMAN_REVIEW_NOT_DONE"}
+                                  if r["gap_type"] == "REVIEW_GATE_NOT_DONE"}
         missing = candidate_ids - events_with_review_gap
-        assert not missing, f"Events without HUMAN_REVIEW_NOT_DONE gap: {missing}"
+        assert not missing, f"Events without REVIEW_GATE_NOT_DONE gap: {missing}"
 
     def test_all_events_have_license_gap(self, gap_rows, candidate_ids):
         events_with_license_gap = {r["observed_event_id"] for r in gap_rows

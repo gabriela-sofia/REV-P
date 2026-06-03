@@ -10,7 +10,7 @@ c_level_status, external_sources, review_workflow, dino_role.
 
 ## Invariante DINO
 
-DINO e review-only: dino_validates_event=false, dino_can_create_label=false. Serve apenas para priorizar revisao humana, nunca como prova de evento.
+DINO e review-only: dino_validates_event=false, dino_can_create_label=false. Serve apenas para priorizar revisao supervisora, nunca como prova de evento.
 
 ## Guardrails
 

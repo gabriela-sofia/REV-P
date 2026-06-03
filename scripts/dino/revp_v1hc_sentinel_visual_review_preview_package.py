@@ -1,6 +1,6 @@
 """REV-P v1hc: Sentinel Visual Review Preview Package.
 
-Generates visual previews (RGB + NDVI) for all 47 human review candidates from
+Generates visual previews (RGB + NDVI) for all 47 review gate candidates from
 v1hb, using the original Sentinel TIF files supplied via --sentinel-root or REVP_SENTINEL_ROOT.
 Outputs individual patch previews and category contact sheets for review-only use.
 
@@ -74,8 +74,8 @@ class PatchRecord(NamedTuple):
 
 
 def load_manifest() -> list[PatchRecord]:
-    manifest_path = V1HB_DIR / "human_review_execution_manifest_v1hb.csv"
-    annotation_path = V1HB_DIR / "human_review_annotation_filled_assisted_v1hb.csv"
+    manifest_path = V1HB_DIR / "review_gate_execution_manifest_v1hb.csv"
+    annotation_path = V1HB_DIR / "review_gate_annotation_filled_programmatic_v1hb.csv"
 
     uncertainty_map: dict[str, str] = {}
     usable_map: dict[str, str] = {}
@@ -458,7 +458,7 @@ def main() -> int:
             "Previews are visual inspection aids — no automatic interpretation.",
             "RGB composite uses B4/B3/B2 with 2-98 percentile normalization per band.",
             "NDVI uses (B8-B4)/(B8+B4) — contextual index only.",
-            "All interpretation requires human reviewer judgment.",
+            "All interpretation requires reviewer judgment.",
         ],
     }
     write_json(OUT_DIR / "visual_review_preview_summary_v1hc.json", summary)

@@ -1,7 +1,7 @@
 """REV-P v1tv — Unified automated review guardrail audit.
 
 Audits v1tn-v1tu outputs for absolute paths, local-runs exposure, forbidden
-guardrail-true flags, and forbidden assertion phrases (e.g. "human review
+guardrail-true flags, and forbidden assertion phrases (e.g. "review gate
 completed", "operationally validated event", "ground truth confirmed").
 Fail-closed: any violation is reported per file.
 """
@@ -56,7 +56,7 @@ AUDITED_FILES = [
 ]
 
 FORBIDDEN_PHRASES = [
-    "human review completed", "revisao humana concluida", "revisão humana concluída",
+    "review gate completed", "revisao supervisora concluida", "revisão supervisora concluída",
     "operationally validated event", "operationally validated",
     "evento validado operacionalmente", "ground truth confirmed",
     "ground truth confirmado", "validacao operacional confirmada",
@@ -131,7 +131,7 @@ def run() -> dict[str, Any]:
         "Auditar v1tn-v1tu: path absoluto, local_runs, label, target, ground "
         "truth, negativo formal, dino/hidromet como prova, hidromet como "
         "negativo, ausência como negativo, C3 automático, C4 aberto e frases "
-        "proibidas (revisão humana concluída, evento validado operacionalmente, "
+        "proibidas (revisão supervisora concluída, evento validado operacionalmente, "
         "ground truth confirmado).",
         f"## Resultado\nArquivos auditados: {len(rows)}. Limpos: {clean}. "
         f"Violações: {total_violations}.",

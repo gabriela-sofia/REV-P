@@ -45,7 +45,7 @@ Um evento candidato só pode avançar na cadeia do Protocolo C se reunir, no mí
 4. **Fonte espacial ou produto interpretável**: mapa de área afetada, produto de detecção ou imagem com cobertura temporal próxima
 5. **Possibilidade de conexão com patch**: ao menos um patch do corpus dentro do perímetro plausível do evento
 6. **Licença e proveniência compreendidas**: o uso da fonte para fins acadêmicos precisa ser explicitamente permitido ou clarificado
-7. **Revisão humana futura**: nenhuma promoção pode ocorrer sem revisão por pesquisador ou especialista
+7. **Revisão supervisora futura**: nenhuma promoção pode ocorrer sem revisão por pesquisador ou especialista
 
 A ausência de qualquer um desses elementos bloqueia a promoção do evento a candidato de referência.
 
@@ -59,7 +59,7 @@ O pacote forte de evidência para um evento candidato inclui:
 - **Mapa observado ou produto operacional com incerteza documentada** (laudo geológico, GFM com metadados de confiança)
 - **Imagem Sentinel-2 ou SAR próxima ao evento** com baixa cobertura de nuvem e alinhamento temporal confirmado
 - **Geometria ou polígono de ocorrência** com referência de CRS e cobertura sobre os patches do corpus
-- **Anotação humana ou de especialista** (se disponível), documentada no registro de revisão humana
+- **Anotação humana ou de especialista** (se disponível), documentada no registro de revisão supervisora
 - **Fonte independente de corroboração** — segunda fonte que confirme a ocorrência do evento de forma independente
 
 Nenhum desses elementos é suficiente isoladamente para declarar ground truth operacional. A promoção exige satisfação de todos os gates G1–G9 e revisão formal (Protocolo C — etapa de fechamento).
@@ -82,7 +82,7 @@ Parte dos requisitos foi avaliada. Pode haver evidência contextual (PENDING_SOU
 **DOSSIER_READY_FOR_SOURCE_REVIEW**
 O dossiê tem fonte-alvo clara e caminho de acesso definido. A próxima etapa é a revisão real da fonte (consulta ao portal, solicitação formal). Nenhum dado foi baixado ainda.
 
-**DOSSIER_READY_FOR_HUMAN_REVIEW**
+**DOSSIER_READY_FOR_REVIEW_GATE**
 Evidência suficiente foi adquirida e documentada para justificar revisão por pesquisador ou especialista. Este estado requer que fontes concretas tenham sido recebidas e registradas — não existe nesta etapa.
 
 **DOSSIER_BLOCKED**
@@ -105,7 +105,7 @@ Um dossiê é bloqueado quando ocorre pelo menos um dos seguintes:
 - Fonte apenas contextual tentando fechar gates de observação direta
 - Dependência exclusiva de embedding DINO, índice GIS ou clustering como confirmação de evento
 - Conflito entre fontes sobre ocorrência ou extensão do evento
-- Ausência de revisão humana quando exigida pelo gate
+- Ausência de revisão supervisora quando exigida pelo gate
 
 ---
 
@@ -121,7 +121,7 @@ O dossiê organiza os requisitos de evidência de acordo com os gates do Protoco
 | G4 | SPATIAL_ALIGNMENT | Sobreposição entre evento e patches do corpus |
 | G5 | SOURCE_STRENGTH | Força metodológica da fonte (observação direta vs. produto algorítmico) |
 | G6 | UNCERTAINTY_AND_LIMITATIONS | Documentação de incerteza da fonte |
-| G7 | HUMAN_REVIEW | Revisão humana ou especialista documentada |
+| G7 | REVIEW_GATE | Revisão supervisora ou especialista documentada |
 | G8 | INDEPENDENT_CORROBORATION | Segunda fonte independente |
 | G9 | PROMOTION_DECISION | Decisão formal de promoção a referência operacional |
 

@@ -21,7 +21,7 @@ Nenhum dado bruto é baixado nesta etapa. Nenhum raster é lido. Nenhum label é
 
 - Não baixa raster, imagem ou dado geoespacial
 - Não executa pipeline espacial ou temporal
-- Não confirma evento como observado — eventos permanecem como EVENT_SEARCH_TARGET ou PENDING_SOURCE_REVIEW até aquisição e revisão humana
+- Não confirma evento como observado — eventos permanecem como EVENT_SEARCH_TARGET ou PENDING_SOURCE_REVIEW até aquisição e revisão supervisora
 - Não declara ground truth operacional
 - Não gera label supervisionado
 - Não associa DINO como suporte a gate de evento, temporalidade, espacialidade ou ground truth
@@ -90,7 +90,7 @@ Cada evento candidato é conectado ao conjunto de gates que pode eventualmente a
 | G4 | SPATIAL_ALIGNMENT | Sobreposição espacial entre evento e patches do corpus |
 | G5 | SOURCE_STRENGTH | Força metodológica da fonte (observação direta vs. produto algorítmico) |
 | G6 | UNCERTAINTY_AND_LIMITATIONS | Documentação de incerteza da fonte |
-| G7 | HUMAN_REVIEW | Revisão humana ou especialista da evidência |
+| G7 | REVIEW_GATE | Revisão supervisora ou especialista da evidência |
 | G8 | INDEPENDENT_CORROBORATION | Corroboração independente por segunda fonte |
 | G9 | PROMOTION_DECISION | Decisão formal de promoção a referência operacional |
 

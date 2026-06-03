@@ -1,4 +1,4 @@
-"""Tests for v1nt Recife DINO-assisted review-only triage."""
+"""Tests for v1nt Recife DINO-programmatic review-only triage."""
 
 from __future__ import annotations
 
@@ -9,7 +9,7 @@ from pathlib import Path
 
 
 ROOT = Path(r"C:\Users\gabriela\Documents\REV-P")
-SCRIPT = ROOT / "scripts/protocolo_c/revp_v1nt_recife_dino_assisted_c3_anchor_control_triage.py"
+SCRIPT = ROOT / "scripts/protocolo_c/revp_v1nt_recife_dino_programmatic_c3_anchor_control_triage.py"
 BOUNDARY = ROOT / "datasets/recife_dino_protocol_c_boundary_matrix.csv"
 ANCHOR = ROOT / "datasets/recife_dino_c3_anchor_candidate_queue.csv"
 NEIGHBOR = ROOT / "datasets/recife_dino_structural_neighbor_review_queue.csv"

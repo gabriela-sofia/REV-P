@@ -108,7 +108,7 @@ VALID_UNCERTAINTY_STATUS = {
     "NOT_APPLICABLE",
 }
 
-VALID_HUMAN_REVIEW_STATUS = {
+VALID_REVIEW_GATE_STATUS = {
     "NOT_REVIEWED",
     "PENDING",
     "REVIEWED_APPROVED",
@@ -136,7 +136,7 @@ VALID_LINK_SOURCE_FAMILIES = {
     "MODELLED_SUSCEPTIBILITY_LAYER",
     "HYDROGEOMORPHOLOGICAL_CONTEXT",
     "SENTINEL_STRUCTURAL_EVIDENCE",
-    "HUMAN_REVIEW_EVIDENCE",
+    "REVIEW_GATE_EVIDENCE",
 }
 
 # DINO/Sentinel structural families — can never promote ground truth
@@ -146,7 +146,7 @@ STRUCTURAL_ONLY_FAMILIES = {
     "MODELLED_SUSCEPTIBILITY_LAYER",
 }
 
-# Human review statuses that count as "approved"
+# Review gate statuses that count as "approved"
 APPROVED_REVIEW_STATUSES = {"REVIEWED_APPROVED"}
 
 # Literature references that must be method-reference-only
@@ -283,7 +283,7 @@ class TestLinkSchemaFields:
         "patch_coverage_status",
         "observation_strength",
         "uncertainty_status",
-        "human_review_status",
+        "review_gate_status",
         "dino_used_as_support_only",
         "reference_candidate_status",
         "promotion_allowed",
@@ -494,11 +494,11 @@ class TestLinkRegistryStructure:
                 f"Row {i} ({row.get('link_id')}): invalid uncertainty_status '{val}'"
             )
 
-    def test_human_review_status_valid(self, rows: list[dict]) -> None:
+    def test_review_gate_status_valid(self, rows: list[dict]) -> None:
         for i, row in enumerate(rows):
-            val = row.get("human_review_status", "").strip()
-            assert val in VALID_HUMAN_REVIEW_STATUS, (
-                f"Row {i} ({row.get('link_id')}): invalid human_review_status '{val}'"
+            val = row.get("review_gate_status", "").strip()
+            assert val in VALID_REVIEW_GATE_STATUS, (
+                f"Row {i} ({row.get('link_id')}): invalid review_gate_status '{val}'"
             )
 
     def test_reference_candidate_status_valid(self, rows: list[dict]) -> None:
@@ -552,14 +552,14 @@ class TestLinkRegistryPromotionGuardrails:
                     f"spatial_alignment_status='{spatial}' (requires MATCHED)"
                 )
 
-    def test_no_link_without_human_review_can_be_promoted(self, rows: list[dict]) -> None:
-        """promotion_allowed=true requires human_review_status in APPROVED_REVIEW_STATUSES."""
+    def test_no_link_without_review_gate_can_be_promoted(self, rows: list[dict]) -> None:
+        """promotion_allowed=true requires review_gate_status in APPROVED_REVIEW_STATUSES."""
         for row in rows:
             if row.get("promotion_allowed", "").strip().lower() == "true":
-                review = row.get("human_review_status", "").strip()
+                review = row.get("review_gate_status", "").strip()
                 assert review in APPROVED_REVIEW_STATUSES, (
                     f"Link '{row['link_id']}': promotion_allowed=true but "
-                    f"human_review_status='{review}' (requires REVIEWED_APPROVED)"
+                    f"review_gate_status='{review}' (requires REVIEWED_APPROVED)"
                 )
 
     def test_method_reference_links_not_promoted(self, rows: list[dict]) -> None:
@@ -614,9 +614,9 @@ class TestLinkRegistryPromotionGuardrails:
                 )
 
     def test_not_reviewed_links_not_promoted(self, rows: list[dict]) -> None:
-        """Links with human_review_status=NOT_REVIEWED cannot be promoted."""
+        """Links with review_gate_status=NOT_REVIEWED cannot be promoted."""
         for row in rows:
-            if row.get("human_review_status") == "NOT_REVIEWED":
+            if row.get("review_gate_status") == "NOT_REVIEWED":
                 promoted = row.get("promotion_allowed", "").strip().lower()
                 assert promoted == "false", (
                     f"Link '{row['link_id']}': NOT_REVIEWED "

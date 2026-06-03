@@ -153,17 +153,17 @@ def run(args: argparse.Namespace) -> int:
                 "qa_flags": "|".join(flags) if flags else "NONE",
                 "review_priority": priority,
                 "review_priority_is_not_label": "true",
-                "human_review_required": "true",
+                "review_gate_required": "true",
                 "label_status": "NO_LABEL",
                 "target_status": "NO_TARGET",
                 "claim_scope": REVIEW_ONLY_CLAIM,
             }
         )
-    summary_rows = [{"review_priority": key, "count": value, "meaning": "triage_for_human_review_only"} for key, value in sorted(Counter(row["review_priority"] for row in index_rows).items())]
-    guardrails = {"review_only": True, "supervised_training": False, "labels_created": False, "targets_created": False, "predictive_claims": False, "review_priority_is_not_label": True, "human_review_required": True, "clusters_are_classes": False, "multimodal_hold": True, "outputs_local_only": True}
+    summary_rows = [{"review_priority": key, "count": value, "meaning": "triage_for_review_gate_only"} for key, value in sorted(Counter(row["review_priority"] for row in index_rows).items())]
+    guardrails = {"review_only": True, "supervised_training": False, "labels_created": False, "targets_created": False, "predictive_claims": False, "review_priority_is_not_label": True, "review_gate_required": True, "clusters_are_classes": False, "multimodal_hold": True, "outputs_local_only": True}
     qa = make_qa(index_rows, manifest)
     qa_status = "PASS" if all(row["status"] == "PASS" for row in qa) else "FAIL"
-    write_csv(output_dir / "structural_evidence_index.csv", index_rows, ["patch_id", "dino_input_id", "region", "embedding_path", "embedding_dim", "cluster_diagnostics", "neighbor_stability", "medoid_status", "outlier_category", "geo_structural_role", "perturbation_robustness", "visual_panel_availability", "qa_flags", "review_priority", "review_priority_is_not_label", "human_review_required", "label_status", "target_status", "claim_scope"])
+    write_csv(output_dir / "structural_evidence_index.csv", index_rows, ["patch_id", "dino_input_id", "region", "embedding_path", "embedding_dim", "cluster_diagnostics", "neighbor_stability", "medoid_status", "outlier_category", "geo_structural_role", "perturbation_robustness", "visual_panel_availability", "qa_flags", "review_priority", "review_priority_is_not_label", "review_gate_required", "label_status", "target_status", "claim_scope"])
     write_csv(output_dir / "review_priority_summary.csv", summary_rows, ["review_priority", "count", "meaning"])
     write_json(output_dir / "methodological_guardrails.json", guardrails)
     write_csv(output_dir / "structural_evidence_qa.csv", qa, ["check", "status", "details"])

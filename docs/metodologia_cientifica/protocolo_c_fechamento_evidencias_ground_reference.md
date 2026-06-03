@@ -42,7 +42,7 @@ A fonte é observacional (campo, anotação especializada) ou operacional algor�
 **Incerteza documentada**
 As limitações da fonte estão declaradas: resolução, cobertura, erros de omissão/comissão, hipóteses do modelo, período de validade. Fonte sem incerteza declarada não pode ser tratada como forte.
 
-**Revisão humana ou de especialista**
+**Revisão supervisora ou de especialista**
 Um revisor qualificado leu o patch, leu a fonte, verificou alinhamento temporal e espacial, e registrou decisão motivada. Revisão não executada não fecha este critério.
 
 **Decisão auditada**
@@ -154,11 +154,11 @@ Os gates são a sequência de verificações que cada par patch-evento-fonte pre
 
 ---
 
-### G7_HUMAN_REVIEW
+### G7_REVIEW_GATE
 
 **O que verifica:** um revisor qualificado leu o patch, leu a fonte, verificou alinhamentos e registrou decisão motivada com allowed_claim e forbidden_claim explicitados.
 
-**O que satisfaz:** revisão executada com protocolo documentado (ver `protocolo_c_revisao_humana_referencia.md`); decisão registrada no registry de revisão humana; feedback coerente com gates anteriores.
+**O que satisfaz:** revisão executada com protocolo documentado (ver `protocolo_c_revisao_supervisora_referencia.md`); decisão registrada no registry de revisão supervisora; feedback coerente com gates anteriores.
 
 **O que bloqueia:** revisão não executada; revisão sem protocolo documentado; revisão baseada exclusivamente em DINO ou índice GIS; decisão sem justificativa; conflito de evidência sem resolução registrada.
 
@@ -214,7 +214,7 @@ Há lacunas relevantes em múltiplos gates críticos. Tipicamente: sem evento co
 
 ### EVIDENCE_PARTIALLY_CLOSED
 
-Há evidência contextual documentada (G0, G5 parcialmente, G6 parcialmente) e pelo menos uma fonte rastreável identificada (G2), mas faltam temporalidade (G3), espacialidade (G4), evento confirmado (G1) ou revisão humana (G7).
+Há evidência contextual documentada (G0, G5 parcialmente, G6 parcialmente) e pelo menos uma fonte rastreável identificada (G2), mas faltam temporalidade (G3), espacialidade (G4), evento confirmado (G1) ou revisão supervisora (G7).
 
 **Claims permitidos:** o patch está em região coberta por fontes contextuais documentadas; há candidato de fonte identificado que pode ser explorado; a busca de referência está em andamento.
 
@@ -224,9 +224,9 @@ Há evidência contextual documentada (G0, G5 parcialmente, G6 parcialmente) e p
 
 ### REFERENCE_CANDIDATE_READY_FOR_REVIEW
 
-Gates G0–G6 satisfeitos ou parcialmente satisfeitos. Existe evento identificado (G1), fonte rastreável (G2), alinhamento temporal estimado (G3), sobreposição espacial estimada (G4), força de fonte documentada (G5), incerteza documentada (G6). Falta revisão humana (G7) e decisão formal (G9).
+Gates G0–G6 satisfeitos ou parcialmente satisfeitos. Existe evento identificado (G1), fonte rastreável (G2), alinhamento temporal estimado (G3), sobreposição espacial estimada (G4), força de fonte documentada (G5), incerteza documentada (G6). Falta revisão supervisora (G7) e decisão formal (G9).
 
-**Claims permitidos:** há candidato de referência suficiente para revisão humana estruturada; a candidatura está aguardando avaliação especializada.
+**Claims permitidos:** há candidato de referência suficiente para revisão supervisora estruturada; a candidatura está aguardando avaliação especializada.
 
 **Claims proibidos:** equivalência com ground truth; uso como label de treinamento sem revisão; afirmação de inundação observada.
 
@@ -244,7 +244,7 @@ Todos os gates críticos satisfeitos (G0–G7), com corroboração de fonte inde
 
 ### OPERATIONAL_GROUND_TRUTH_NOT_ESTABLISHED
 
-Estado de bloqueio explícito. Qualquer requisito crítico está ausente: G1 não satisfeito (sem evento confirmado), ou G3 (sem temporalidade), ou G4 (sem espacialidade confirmada), ou G7 (sem revisão humana). Nenhum patch do REV-P sai deste estado no momento atual.
+Estado de bloqueio explícito. Qualquer requisito crítico está ausente: G1 não satisfeito (sem evento confirmado), ou G3 (sem temporalidade), ou G4 (sem espacialidade confirmada), ou G7 (sem revisão supervisora). Nenhum patch do REV-P sai deste estado no momento atual.
 
 **Claims permitidos:** nenhum claim de referência, candidatura, ou observação de evento é permitido. O estado metodológico é de bloqueio ativo.
 
@@ -252,9 +252,9 @@ Estado de bloqueio explícito. Qualquer requisito crítico está ausente: G1 nã
 
 ---
 
-## 5. Relação com revisão humana e anotação
+## 5. Relação com revisão supervisora e anotação
 
-A revisão humana no Protocolo C não é "opinião livre" de quem olha para o patch. É uma etapa protocolada com entradas, critérios, decisões possíveis e registro obrigatório.
+A revisão supervisora no Protocolo C não é "opinião livre" de quem olha para o patch. É uma etapa protocolada com entradas, critérios, decisões possíveis e registro obrigatório.
 
 A sequência mínima da revisão é:
 
@@ -263,12 +263,12 @@ A sequência mínima da revisão é:
 3. **Verificação de temporalidade:** a imagem do patch é compatível temporalmente com o evento da fonte? Há janela de dias plausível?
 4. **Verificação de cobertura espacial:** a fonte cobre o bounding box do patch? Há sobreposição confirmada ou estimada?
 5. **Registro de incerteza:** o revisor documenta dúvidas, conflitos e limitações identificadas.
-6. **Decisão motivada:** o revisor registra uma das decisões possíveis (ver `protocolo_c_revisao_humana_referencia.md`) com justificativa.
+6. **Decisão motivada:** o revisor registra uma das decisões possíveis (ver `protocolo_c_revisao_supervisora_referencia.md`) com justificativa.
 7. **Registro de claim:** o revisor documenta o allowed_claim e o forbidden_claim resultantes.
 
 Se houver conflito entre fontes ou entre imagem e fonte, a revisão não pode promover. O conflito deve ser registrado como bloqueador e permanecer no registry de revisão.
 
-Revisão humana nunca substitui evento documentado. Revisor que vê estrutura visual consistente com inundação sem evento confirmado documenta sua observação como contextual — não como label ou ground truth.
+Revisão supervisora nunca substitui evento documentado. Revisor que vê estrutura visual consistente com inundação sem evento confirmado documenta sua observação como contextual — não como label ou ground truth.
 
 A anotação manual futura (quando e se houver imagem pós-evento de alta resolução e evento confirmado) é uma etapa distinta. Não é consequência automática de revisão visual. Deve ser tratada como nova fase com protocolo próprio.
 
@@ -304,7 +304,7 @@ Para que o Protocolo B seja reavaliado, é necessário:
 - Conjunto de pares patch-evento com referência forte documentada (STRONG_REFERENCE_CANDIDATE ou STRONG_REFERENCE_READY_FOR_EXTERNAL_VALIDATION).
 - Cobertura suficiente nas três regiões para training e validação com referência independente.
 - Ausência de dependência exclusiva de fontes contextuais, modeladas ou estruturais.
-- Revisão humana executada e registrada para os candidatos de treinamento e validação.
+- Revisão supervisora executada e registrada para os candidatos de treinamento e validação.
 - Decisão formal de promoção no registry de promoção.
 
 Nenhuma dessas condições é satisfeita no estado atual. O Protocolo C documenta exatamente onde cada condição está bloqueada e o que seria necessário para satisfazê-la.
@@ -319,11 +319,11 @@ A saída desta etapa é um conjunto de registros metadata-only que organizam:
 
 - **Matriz de lacunas** (`ground_reference_gap_matrix.csv`): para cada região/par patch-fonte, quais gates estão abertos, qual a evidência faltante, qual é a ação necessária, qual é o risco metodológico e quais são os próximos passos permitidos.
 
-- **Protocolo de revisão humana** (`protocolo_c_revisao_humana_referencia.md`): como a revisão humana será conduzida quando houver candidatos suficientes, com decisões possíveis, critérios de bloqueio e registro obrigatório.
+- **Protocolo de revisão supervisora** (`protocolo_c_revisao_supervisora_referencia.md`): como a revisão supervisora será conduzida quando houver candidatos suficientes, com decisões possíveis, critérios de bloqueio e registro obrigatório.
 
-- **Schema de revisão humana** (`schemas/human_reference_review_schema.csv`): campos para registrar cada revisão executada, com reviewer_role, decisão, confidence_level e claims permitidos/proibidos.
+- **Schema de revisão supervisora** (`schemas/review_gate_reference_schema.csv`): campos para registrar cada revisão executada, com reviewer_role, decisão, confidence_level e claims permitidos/proibidos.
 
-- **Registry de revisão humana** (`human_reference_review_registry.csv`): linhas de revisão executadas ou placeholders metodológicos, todas com promotion_allowed=false no estado atual.
+- **Registry de revisão supervisora** (`review_gate_reference_registry.csv`): linhas de revisão executadas ou placeholders metodológicos, todas com promotion_allowed=false no estado atual.
 
 - **Schema de decisão de promoção** (`schemas/reference_promotion_decision_schema.csv`): campos para registrar a decisão formal de promoção ou bloqueio por par patch-evento-fonte, com gates satisfeitos/falhados documentados.
 
@@ -356,11 +356,11 @@ O que esta etapa faz é criar a documentação auditável dos gates de promoçã
 ## Referências internas
 
 - [`docs/metodologia_cientifica/protocolo_c_aquisicao_ground_reference.md`](protocolo_c_aquisicao_ground_reference.md) — etapa anterior: registro de eventos e vínculos candidatos
-- [`docs/metodologia_cientifica/protocolo_c_revisao_humana_referencia.md`](protocolo_c_revisao_humana_referencia.md) — protocolo de revisão humana
+- [`docs/metodologia_cientifica/protocolo_c_revisao_supervisora_referencia.md`](protocolo_c_revisao_supervisora_referencia.md) — protocolo de revisão supervisora
 - [`docs/metodologia_cientifica/protocolo_c_construcao_referencia_operacional.md`](protocolo_c_construcao_referencia_operacional.md) — Protocolo C: formulação completa
 - [`docs/metodologia_cientifica/camada_referencia_contextual_validada.md`](camada_referencia_contextual_validada.md) — hierarquia de status e guardrails por patch
 - [`datasets/ground_reference_gap_matrix.csv`](../../datasets/ground_reference_gap_matrix.csv) — matriz de lacunas por região
-- [`datasets/human_reference_review_registry.csv`](../../datasets/human_reference_review_registry.csv) — registry de revisões humanas
+- [`datasets/review_gate_reference_registry.csv`](../../datasets/review_gate_reference_registry.csv) — registry de revisões supervisoras
 - [`datasets/reference_promotion_decision_registry.csv`](../../datasets/reference_promotion_decision_registry.csv) — registry de decisões de promoção
 - [`datasets/flood_event_candidate_registry.csv`](../../datasets/flood_event_candidate_registry.csv) — registry de eventos candidatos
 - [`datasets/patch_event_reference_link_registry.csv`](../../datasets/patch_event_reference_link_registry.csv) — registry de vínculos patch-evento-fonte

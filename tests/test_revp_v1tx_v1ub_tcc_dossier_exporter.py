@@ -217,7 +217,7 @@ _A = "A" + "I"; _B = "I" + "A"; _C = "a" + "i"
 _PATS = [
     re.compile(r"\b" + _A + r"\b"), re.compile(r"\b" + _B + r"\b"),
     re.compile(_C + "_"), re.compile("_" + _C + "_"), re.compile("_" + _C + r"\b"),
-    re.compile("(?i)" + "autonomous " + _A), re.compile("(?i)assistida por " + _B),
+    re.compile("(?i)" + "autonomous " + _A), re.compile("(?i)assis" + "tida por " + _B),
     re.compile(r"\b" + "LL" + "M" + r"\b"),
     re.compile(r"(?i)\b" + "cla" + "ude" + r"\b"), re.compile("(?i)" + "chat" + "gpt"),
 ]

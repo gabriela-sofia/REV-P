@@ -96,7 +96,7 @@ A camada de análise suporta:
 - diagnósticos de robustez a perturbações sob pequenas alterações controladas de imagem, sem criar aumentos de treinamento
 - execução de corpus local expandida com suporte a retomada/skip-existing
 - indexação integrada de evidência estrutural para triagem de revisão
-- empacotamento de revisão humana apenas local para inspeção manual posterior
+- empacotamento de revisão supervisora apenas local para inspeção manual posterior
 - verificações de estabilidade longitudinal entre fases de diagnóstico DINO
 - rastreamento de proveniência de patch a embedding a pacote de revisão
 - auditoria de prontidão multimodal enquanto a execução multimodal permanece desabilitada
@@ -108,7 +108,7 @@ Esses outputs são diagnósticos estruturais para revisão. Não são classes se
 
 ## Revisão visual estrutural
 
-v1gb adiciona painéis visuais apenas locais para suportar revisão humana posterior do comportamento estrutural dos embeddings. Os painéis visam tornar auditáveis as relações de vizinho mais próximo, pares recíprocos, medoids, casos de borda, embeddings isolados e exemplares regionais — sem converter clusters em rótulos.
+v1gb adiciona painéis visuais apenas locais para suportar revisão supervisora posterior do comportamento estrutural dos embeddings. Os painéis visam tornar auditáveis as relações de vizinho mais próximo, pares recíprocos, medoids, casos de borda, embeddings isolados e exemplares regionais — sem converter clusters em rótulos.
 
 As seleções de medoid e representativo são apenas conveniências estruturais. Indicam posições em um espaço de embedding para inspeção, não pertencimento a classe no mundo real, não ocorrência de inundação e não evidência de validação. A QA visual também é limitada pelo tamanho atual do corpus local, a disponibilidade de renderização de patches Sentinel e o fato de que os painéis de imagem derivam de leituras locais de tempo de execução em vez de dados brutos versionados.
 
@@ -116,7 +116,7 @@ As seleções de medoid e representativo são apenas conveniências estruturais.
 
 v1gc compara relações de embedding com geometria espacial local quando coordenadas de centroide ou limites de metadados raster estão disponíveis. Produz tabelas de distância versus similaridade, métricas de sobreposição regional, resumos de compacidade, componentes de grafo, hubs, candidatos de ponte e candidatos de transição, além de verificações de continuidade de topologia.
 
-A camada de grafo é apenas diagnóstica: nós são patches, arestas são relações de vizinho mais próximo em embedding, e pontes inter-região são candidatos para revisão humana. Não são classes, não são rótulos, não são alvos de validação e não são evidência de desempenho preditivo. As métricas de topologia dependem do tamanho atual do corpus, da disponibilidade de coordenadas e do top-k de vizinhança escolhido; devem ser tratadas como auxílios de auditoria para selecionar exemplos para inspeção manual posterior.
+A camada de grafo é apenas diagnóstica: nós são patches, arestas são relações de vizinho mais próximo em embedding, e pontes inter-região são candidatos para revisão supervisora. Não são classes, não são rótulos, não são alvos de validação e não são evidência de desempenho preditivo. As métricas de topologia dependem do tamanho atual do corpus, da disponibilidade de coordenadas e do top-k de vizinhança escolhido; devem ser tratadas como auxílios de auditoria para selecionar exemplos para inspeção manual posterior.
 
 ## Diagnósticos de robustez a perturbações
 
@@ -124,19 +124,19 @@ v1gd aplica pequenas perturbações reversíveis a renderizações Sentinel loca
 
 Os outputs de robustez comparam embeddings originais versus perturbados por meio de deriva cosseno, persistência de vizinho mais próximo, estabilidade de atribuição de cluster, persistência de medoid, persistência de aresta de grafo, persistência de ponte, estabilidade de hub e resumos de deriva regional. Esses diagnósticos suportam revisão manual de sensibilidade e não estabelecem confiabilidade preditiva, pertencimento a classe ou desempenho supervisionado.
 
-## Corpus expandido e triagem de revisão humana
+## Corpus expandido e triagem de revisão supervisora
 
 v1ge expande a execução de embeddings Sentinel-first além do corpus balanceado inicial pequeno quando a computação local e a disponibilidade do modelo permitem. A execução permanece apenas local e suporta `--limit`, `--per-region-limit`, `--resume` e `--skip-existing` para que a execução parcial possa ser auditada sem sobrescrever embeddings locais anteriores.
 
 v1gf consolida diagnósticos estruturais em um único índice de evidência por patch. O campo `review_priority` é uma indicação determinística de triagem apenas para inspeção humana. Não é rótulo, não é classe, não é alvo e não é evidência de que um patch tem qualquer status de inundação ou suscetibilidade.
 
-v1gg empacota referências locais para futura revisão humana de medoids, outliers, pontes, embeddings robustos/instáveis, exemplos de vizinhos recíprocos e representantes regionais. Não copia rasters brutos e não versiona imagens locais. Notas humanas ficam intencionalmente em branco até que a inspeção manual ocorra.
+v1gg empacota referências locais para futura revisão supervisora de medoids, outliers, pontes, embeddings robustos/instáveis, exemplos de vizinhos recíprocos e representantes regionais. Não copia rasters brutos e não versiona imagens locais. Notas humanas ficam intencionalmente em branco até que a inspeção manual ocorra.
 
 ## Diagnósticos longitudinais e proveniência
 
 v1gh compara sinais estruturais entre as fases DINO locais para verificar se relações de vizinhos, marcadores de outlier, papéis de medoid, papéis de ponte, resumos regionais e triagem de prioridade de revisão permanecem rastreáveis entre versões. O output é uma auditoria de persistência diagnóstica, não uma afirmação de mudança ambiental temporal.
 
-v1gi registra a proveniência patch → embedding → diagnóstico. Rastreia quais versões tocaram cada patch, quais diagnósticos foram produzidos, quais arquivos QA passaram, quais visualizações locais existem e se cada patch aparece em papéis de medoid, ponte, outlier ou pacote de revisão humana.
+v1gi registra a proveniência patch → embedding → diagnóstico. Rastreia quais versões tocaram cada patch, quais diagnósticos foram produzidos, quais arquivos QA passaram, quais visualizações locais existem e se cada patch aparece em papéis de medoid, ponte, outlier ou pacote de revisão supervisora.
 
 ## Hold multimodal
 
@@ -171,7 +171,7 @@ v1gp audita o estado versionado do bloco DINO Sentinel-first antes de qualquer c
 
 ## Baseline de vulnerabilidade multicritério GIS
 
-v1gq computa um baseline de vulnerabilidade multicritério para os 12 patches Sentinel auditados no v1ge. Usa até quatro indicadores: distância ao rio, uso do solo, densidade populacional e densidade viária. O índice de vulnerabilidade é um proxy estrutural e interpretável para comparação, priorização e revisão humana — não é verdade de campo, não é rótulo e não é alvo supervisionado. A integração com DINO é apenas exploratória e estrutural.
+v1gq computa um baseline de vulnerabilidade multicritério para os 12 patches Sentinel auditados no v1ge. Usa até quatro indicadores: distância ao rio, uso do solo, densidade populacional e densidade viária. O índice de vulnerabilidade é um proxy estrutural e interpretável para comparação, priorização e revisão supervisora — não é verdade de campo, não é rótulo e não é alvo supervisionado. A integração com DINO é apenas exploratória e estrutural.
 
 Indicadores disponíveis com dados GIS locais: distância ao rio (GeoJSON de hidrografia disponível para as três regiões), densidade viária (Recife apenas, via segmentos municipais de vias). Uso do solo é BLOCKED para todos os patches do dino-corpus — a camada FBDS de Petrópolis foi convertida para WGS84 (v1gs, 6861 feições), mas os 4 patches de Petrópolis do dino-corpus têm centroides em lat ≈ −22.598, fora da extensão da camada FBDS (lat −22.575 a −22.202); esta é uma lacuna de cobertura de dados, não um erro de processamento. Curitiba e Recife não têm fontes de uso do solo disponíveis. Densidade populacional é BLOCKED (sem dados censitários encontrados).
 
@@ -185,7 +185,7 @@ v1gr inventaria arquivos de uso do solo no diretório local REV-P e em um GIS ro
 
 Resultados atuais com gis-root do PROJETO: um arquivo FBDS de uso do solo encontrado para Petrópolis (`RJ_3303906_USO.shp`, 8,7 MB), DBF lido com sucesso, seis valores únicos de CLASSE_USO extraídos (formação florestal, formação não florestal, silvicultura, água, área antropizada, área edificada). Conversão de geometria bem-sucedida após instalar shapely, fiona, geopandas, pyogrio. Curitiba e Recife não têm fontes de uso do solo.
 
-A tabela de mapeamento de classes é um candidato apenas para revisão humana. Atribui pontuações ordinais (1 = floresta/água, 2 = antropizado/agricultura/silvicultura, 3 = urbano/edificado) a strings de classe FBDS conhecidas. Não é uma classificação final, não é verdade de campo, não é rótulo e não é alvo supervisionado.
+A tabela de mapeamento de classes é um candidato apenas para revisão supervisora. Atribui pontuações ordinais (1 = floresta/água, 2 = antropizado/agricultura/silvicultura, 3 = urbano/edificado) a strings de classe FBDS conhecidas. Não é uma classificação final, não é verdade de campo, não é rótulo e não é alvo supervisionado.
 
 v1gr não modifica outputs do v1gq. Caminhos GIS privados aparecem apenas em outputs de `local_runs/` e nunca em arquivos-fonte versionáveis.
 
@@ -214,7 +214,7 @@ Cinco candidatos de expansão estão documentados (MapBiomas para Curitiba, Reci
 - Os diagnósticos geo-estruturais de grafo são sensíveis ao tamanho do corpus local, à proveniência das coordenadas e às configurações de vizinhança.
 - Os diagnósticos de perturbação são auditorias locais de sensibilidade; não são aumentos de treinamento e não validam robustez operacional.
 - A execução do corpus expandido ainda é limitada pela disponibilidade local do modelo, velocidade de CPU/GPU e acesso a assets privados.
-- `review_priority` e entradas do pacote de revisão humana são apenas auxílios de fluxo de auditoria.
+- `review_priority` e entradas do pacote de revisão supervisora são apenas auxílios de fluxo de auditoria.
 - A estabilidade longitudinal é persistência diagnóstica entre outputs locais, não inferência de série temporal ambiental.
 - A prontidão multimodal é uma camada de auditoria de bloqueadores e preparação de compatibilidade, não fusão, geração de stack ou treinamento multimodal.
 - A auditoria de reprodutibilidade verifica estrutura do pipeline e disponibilidade de evidência local; não substitui a reexecução completa do fluxo local.

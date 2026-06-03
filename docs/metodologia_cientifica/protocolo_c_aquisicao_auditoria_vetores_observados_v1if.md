@@ -59,10 +59,10 @@ Para ser utilizável como ground reference vetorial, esse mapa precisa:
 1. Ser **georreferenciado** explicitamente (não apenas sobre base visual)
 2. Ter os polígonos/pontos **vetorizados** manualmente
 3. Ter os metadados documentados: escala, datum, projeção, data de levantamento
-4. Passar por **dupla revisão humana** que confirme que a geometria reflete o fenômeno e a data correta
+4. Passar por **dupla revisão supervisora** que confirme que a geometria reflete o fenômeno e a data correta
 5. Ter a **incerteza posicional** documentada (erro de georeferenciamento manual é tipicamente 10–50m)
 
-Essa cadeia de transformação (PDF → vetor) não é automática e não pode ser feita pelo script. Ela requer decisão humana qualificada e pode ser realizada como etapa futura (derivação cartográfica controlada), mas não como ground truth direto.
+Essa cadeia de transformação (PDF → vetor) não é automática e não pode ser feita pelo script. Ela requer decisão supervisora qualificada e pode ser realizada como etapa futura (derivação cartográfica controlada), mas não como ground truth direto.
 
 ---
 
@@ -192,7 +192,7 @@ dino_usage_status                   = SUPPORT_ONLY
 
 Se um ativo passar todos os 11 gates em uma iteração futura:
 - Status avança para `CANDIDATE_OBSERVED_GROUND_TRUTH`
-- Ainda requer revisão humana obrigatória
+- Ainda requer revisão supervisora obrigatória
 - Ainda requer protocolo de split/leakage
 - Ainda não libera treino supervisionado
 

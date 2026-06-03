@@ -12,7 +12,7 @@
 
 > **A próxima evolução real é encontrar ou solicitar formalmente geometria observada com vínculo temporal ao evento — não treinar modelo com proxy.**
 
-> **Treino supervisionado permanece bloqueado até haver geometria com vínculo temporal, separação de fenômeno, revisão humana e protocolo de split/leakage.**
+> **Treino supervisionado permanece bloqueado até haver geometria com vínculo temporal, separação de fenômeno, revisão supervisora e protocolo de split/leakage.**
 
 ---
 

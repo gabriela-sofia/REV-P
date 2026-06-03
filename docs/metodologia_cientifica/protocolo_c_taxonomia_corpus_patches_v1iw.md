@@ -26,7 +26,7 @@ Esses 59 nao sao rotulos. Eles nao provam ocorrencia observada de evento em cada
 
 O numero 128 vem do manifesto Sentinel candidato. Ele conta referencias de assets Sentinel preparados para o pipeline Sentinel-first. Como uma unidade territorial pode ter mais de uma referencia Sentinel, e como o manifesto organiza assets e candidatos de entrada, esse numero nao precisa coincidir com 59.
 
-Os 128 devem ser usados quando o texto falar de disponibilidade Sentinel, planejamento de embeddings, preflight de assets e cobertura operacional do pipeline. Eles nao sao ground truth, nao sao rotulos e nao substituem revisao humana.
+Os 128 devem ser usados quando o texto falar de disponibilidade Sentinel, planejamento de embeddings, preflight de assets e cobertura operacional do pipeline. Eles nao sao ground truth, nao sao rotulos e nao substituem revisao supervisora.
 
 ## Qual numero usar no TCC
 

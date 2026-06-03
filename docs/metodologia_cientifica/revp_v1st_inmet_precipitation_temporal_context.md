@@ -10,4 +10,4 @@ Linhas de contexto: 810. Com dados de precip: 683.
 
 ## Declaracao obrigatoria
 
-Precipitacao observada, proximidade de estacao ou janela temporal compativel nao validam automaticamente evento, nao criam ground truth operacional, nao criam negativo formal e nao substituem revisao humana.
+Precipitacao observada, proximidade de estacao ou janela temporal compativel nao validam automaticamente evento, nao criam ground truth operacional, nao criam negativo formal e nao substituem revisao supervisora.

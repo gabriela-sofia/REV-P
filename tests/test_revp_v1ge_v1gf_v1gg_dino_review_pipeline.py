@@ -10,7 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 V1GE = ROOT / "scripts" / "dino" / "revp_v1ge_dino_expanded_sentinel_embedding_corpus.py"
 V1GF = ROOT / "scripts" / "dino" / "revp_v1gf_dino_structural_evidence_index.py"
-V1GG = ROOT / "scripts" / "dino" / "revp_v1gg_dino_human_review_package.py"
+V1GG = ROOT / "scripts" / "dino" / "revp_v1gg_dino_review_gate_package.py"
 
 
 def write_csv(path: Path, rows: list[dict[str, str]], fields: list[str]) -> None:
@@ -58,7 +58,7 @@ def test_v1ge_expanded_selection_resume_skip_existing(tmp_path: Path) -> None:
     assert summary2["skipped_existing_count"] >= 3
 
 
-def test_v1gf_index_and_v1gg_human_review_package(tmp_path: Path) -> None:
+def test_v1gf_index_and_v1gg_review_gate_package(tmp_path: Path) -> None:
     manifest, preflight = inputs(tmp_path)
     v1ge_out = tmp_path / "local_runs" / "dino_embeddings" / "v1ge"
     subprocess.run([sys.executable, str(V1GE), "--execute", "--input-manifest", str(manifest), "--asset-preflight", str(preflight), "--output-dir", str(v1ge_out), "--per-region-limit", "1", "--force", "--embedding-proxy-for-tests"], cwd=ROOT, text=True, capture_output=True, check=True)
@@ -73,8 +73,8 @@ def test_v1gf_index_and_v1gg_human_review_package(tmp_path: Path) -> None:
     v1gg_out = tmp_path / "local_runs" / "dino_embeddings" / "v1gg"
     result2 = subprocess.run([sys.executable, str(V1GG), "--structural-index", str(v1gf_out / "structural_evidence_index.csv"), "--output-dir", str(v1gg_out), "--force"], cwd=ROOT, text=True, capture_output=True, check=False)
     assert result2.returncode == 0, result2.stderr + result2.stdout
-    review = read_csv(v1gg_out / "human_review_manifest.csv")
+    review = read_csv(v1gg_out / "review_gate_manifest.csv")
     assert review
     assert (v1gg_out / "review_readme.md").exists()
-    assert {row["human_review_required"] for row in review} == {"true"}
+    assert {row["review_gate_required"] for row in review} == {"true"}
     assert not any(row["local_visual_path"].lower().endswith((".tif", ".tiff")) for row in review)

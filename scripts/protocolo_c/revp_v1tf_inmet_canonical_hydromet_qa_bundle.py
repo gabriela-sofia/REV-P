@@ -5,7 +5,7 @@ Final bundle for v1ta-v1te. Manifest, QC, scientific summary.
 Mandatory clause:
 A camada v1ta–v1tf canoniza o parsing de estações e precipitação INMET
 para uso contextual no Protocolo C. A correção de coordenadas, a proximidade
-de estações e os acumulados de precipitação apoiam revisão humana, mas não
+de estações e os acumulados de precipitação apoiam revisão supervisora, mas não
 validam evento, não criam ground truth operacional, não criam negativo formal
 e não substituem evidência observacional independente.
 """
@@ -46,7 +46,7 @@ ST_GUARDRAIL  = "INMET_CANONICAL_HYDROMET_GUARDRAIL_FAIL_CLOSED"
 MANDATORY = (
     "A camada v1ta–v1tf canoniza o parsing de estações e precipitação INMET "
     "para uso contextual no Protocolo C. A correção de coordenadas, a proximidade "
-    "de estações e os acumulados de precipitação apoiam revisão humana, mas não "
+    "de estações e os acumulados de precipitação apoiam revisão supervisora, mas não "
     "validam evento, não criam ground truth operacional, não criam negativo formal "
     "e não substituem evidência observacional independente."
 )

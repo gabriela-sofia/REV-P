@@ -12,7 +12,7 @@ expected_geometry_type,string,no,Geometry type expected,"POINT,LINESTRING,POLYGO
 expected_resolution_or_scale,string,no,Spatial resolution or map scale,"user-provided","10 m (Sentinel-2), 20 m (Sentinel-1), 1:50000 (map)"
 expected_crs_information,string,no,Coordinate reference system expected,"user-provided or standard","SIRGAS2000 (EPSG:4674), UTM Zone 25S (EPSG:31925)"
 expected_uncertainty_information,string,no,Uncertainty metrics or confidence intervals expected,"user-provided","±2 pixels (20 m), CI 90%"
-related_protocol_c_gate,string,yes,Which Protocolo C gate(s) this can help close,"G1_EVENT_CONFIRMATION,G2_SOURCE_AVAILABILITY,G3_TEMPORAL_ALIGNMENT,G4_SPATIAL_ALIGNMENT,G5_SOURCE_STRENGTH,G6_UNCERTAINTY_AND_LIMITATIONS,G7_HUMAN_REVIEW,G8_INDEPENDENT_CORROBORATION,G9_PROMOTION_DECISION,MULTIPLE_GATES","G1_EVENT_CONFIRMATION,G2_SOURCE_AVAILABILITY"
+related_protocol_c_gate,string,yes,Which Protocolo C gate(s) this can help close,"G1_EVENT_CONFIRMATION,G2_SOURCE_AVAILABILITY,G3_TEMPORAL_ALIGNMENT,G4_SPATIAL_ALIGNMENT,G5_SOURCE_STRENGTH,G6_UNCERTAINTY_AND_LIMITATIONS,G7_REVIEW_GATE,G8_INDEPENDENT_CORROBORATION,G9_PROMOTION_DECISION,MULTIPLE_GATES","G1_EVENT_CONFIRMATION,G2_SOURCE_AVAILABILITY"
 acquisition_priority,string,yes,Priority for acquisition,"HIGH,MEDIUM,LOW,METHOD_REFERENCE_ONLY","HIGH"
 access_mode,string,yes,How access is expected,"PUBLIC_DOWNLOAD,PUBLIC_PORTAL_REVIEW,FORMAL_REQUEST,MANUAL_REVIEW,FUTURE_ACQUISITION,METHOD_REFERENCE_ONLY,UNKNOWN","PUBLIC_PORTAL_REVIEW"
 local_asset_expected,boolean,yes,Is local file/asset expected from this acquisition?,"true,false","true"

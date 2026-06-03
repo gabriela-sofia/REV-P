@@ -21,7 +21,7 @@
 | MANUAL_GEOCODING | [DEP_ID] | [STATUS] |
 | LICENSE_PROVENANCE | [DEP_ID] | [STATUS] |
 | SENTINEL_TEMPORAL_SEARCH | [DEP_ID] | [STATUS] |
-| HUMAN_REVIEW | [DEP_ID] | [STATUS] |
+| REVIEW_GATE | [DEP_ID] | [STATUS] |
 | PHENOMENON_SEPARATION (se aplicável) | [DEP_ID] | [STATUS] |
 
 ---
@@ -65,7 +65,7 @@
 
 - **Pode executar overlay futuro**: [PODE_EXECUTAR_OVERLAY_FUTURO]
   - Controles: SIM / NAO / PENDENTE_DEPENDENCIAS
-  - Overlay futuro exige: geometria disponível + CRS verificado + licença verificada + alinhamento temporal confirmado + revisão humana autorizada + separação de fenômenos (se aplicável)
+  - Overlay futuro exige: geometria disponível + CRS verificado + licença verificada + alinhamento temporal confirmado + revisão supervisora autorizada + separação de fenômenos (se aplicável)
 
 ---
 

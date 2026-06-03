@@ -39,7 +39,7 @@ A v1jc criou controles candidatos apenas como objetos de revisao:
 - `EXISTING_PATCH_BACKGROUND_CANDIDATE`: patches PET existentes, sanitizados por id, sem vinculo oficial ao anchor;
 - `INVALID_NEGATIVE_LABEL`: linha de governanca para impedir que ausencia de registro seja tratada como negativo formal.
 
-Controle candidato nao e negativo. Ausencia de registro nao e ausencia de evento. Um negativo formal exigiria protocolo posterior especifico, com fonte, area, periodo, regra de exclusao e revisao humana.
+Controle candidato nao e negativo. Ausencia de registro nao e ausencia de evento. Um negativo formal exigiria protocolo posterior especifico, com fonte, area, periodo, regra de exclusao e revisao supervisora.
 
 ## Matriz de labels
 

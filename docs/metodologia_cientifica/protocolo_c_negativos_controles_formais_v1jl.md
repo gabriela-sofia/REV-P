@@ -12,7 +12,7 @@ Um negativo formal exigiria, no minimo:
 - fenomeno definido;
 - evidencia explicita de ausencia ou estabilidade;
 - patch QA;
-- decisao de revisao humana;
+- decisao de revisao supervisora;
 - protocolo split/leakage fechado.
 
 Distancia de anchor, ausencia de registro, patch pre-evento do mesmo anchor e material de outra regiao nao satisfazem esses gates.

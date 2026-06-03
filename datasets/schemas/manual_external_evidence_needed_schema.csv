@@ -3,7 +3,7 @@ needed_id,string,true,,Identificador único do item de evidência necessário (e
 region,string,true,"Recife,Petrópolis,Curitiba",Região do REV-P
 observed_event_id,string,true,,Referência ao observed_event_id associado (ou ALL_REGION se for regional)
 evidence_item,string,true,,Descrição específica do item de evidência necessário
-evidence_category,string,true,"DECREE,CIVIL_DEFENSE_BULLETIN,MUNICIPAL_OCCURRENCE_LOG,OFFICIAL_FLOOD_MAP,TECHNICAL_REPORT,SHAPEFILE_OR_GEOJSON,HYDROMET_SERIES,OFFICIAL_PHOTO_WITH_CAPTION,COPERNICUS_PRODUCT_DETAIL,SENTINEL_EVENT_IMAGE,LICENSE_CLARIFICATION,HUMAN_REVIEW_INPUT",Categoria do item de evidência
+evidence_category,string,true,"DECREE,CIVIL_DEFENSE_BULLETIN,MUNICIPAL_OCCURRENCE_LOG,OFFICIAL_FLOOD_MAP,TECHNICAL_REPORT,SHAPEFILE_OR_GEOJSON,HYDROMET_SERIES,OFFICIAL_PHOTO_WITH_CAPTION,COPERNICUS_PRODUCT_DETAIL,SENTINEL_EVENT_IMAGE,LICENSE_CLARIFICATION,REVIEW_GATE_INPUT",Categoria do item de evidência
 target_provider,string,true,,Instituição ou sistema esperado como provedor do item
 expected_format,string,true,,Formato esperado do dado (ex: PDF; CSV; Shapefile; GeoJSON; JPEG com legenda)
 expected_spatial_detail,string,true,,Nível de detalhe espacial esperado (ex: municipal; bairro; ponto georreferenciado)

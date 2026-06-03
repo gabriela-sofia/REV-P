@@ -14,8 +14,8 @@ ROOT = Path(__file__).resolve().parents[1]
 V1HD_DIR = ROOT / "local_runs" / "dino_embeddings" / "v1hd"
 
 EXPECTED_OUTPUTS = {
-    "human_review_visual_annotation_v1hd.csv": {"min_rows": 47},
-    "human_review_visual_examples_for_tcc_v1hd.csv": {"min_rows": 1},
+    "review_gate_visual_annotation_v1hd.csv": {"min_rows": 47},
+    "review_gate_visual_examples_for_tcc_v1hd.csv": {"min_rows": 1},
 }
 
 FORBIDDEN_PREDICTIVE_TERMS = [
@@ -67,7 +67,7 @@ def synthetic_tif(tmp_path: Path) -> Path:
 @pytest.fixture()
 def mod():
     sys.path.insert(0, str(ROOT / "scripts" / "dino"))
-    return importlib.import_module("revp_v1hd_visual_assisted_review_update")
+    return importlib.import_module("revp_v1hd_visual_review_update_update")
 
 
 # ---------------------------------------------------------------------------
@@ -196,17 +196,17 @@ class TestV1HDOutputs:
         assert path.exists(), f"Expected output not found: {filename}"
 
     def test_summary_json_exists(self) -> None:
-        assert (V1HD_DIR / "human_review_visual_summary_v1hd.json").exists()
+        assert (V1HD_DIR / "review_gate_visual_summary_v1hd.json").exists()
 
     def test_synthesis_md_exists(self) -> None:
-        assert (V1HD_DIR / "human_review_visual_discussion_synthesis_v1hd.md").exists()
+        assert (V1HD_DIR / "review_gate_visual_discussion_synthesis_v1hd.md").exists()
 
     def test_annotation_row_count(self) -> None:
-        rows = read_csv(V1HD_DIR / "human_review_visual_annotation_v1hd.csv")
+        rows = read_csv(V1HD_DIR / "review_gate_visual_annotation_v1hd.csv")
         assert len(rows) == 47, f"Expected 47 rows, got {len(rows)}"
 
     def test_annotation_required_columns(self) -> None:
-        rows = read_csv(V1HD_DIR / "human_review_visual_annotation_v1hd.csv")
+        rows = read_csv(V1HD_DIR / "review_gate_visual_annotation_v1hd.csv")
         required = [
             "review_item_id", "canonical_patch_id", "region", "candidate_category",
             "preview_status", "visual_interpretation_mode", "visual_pattern_notes",
@@ -221,7 +221,7 @@ class TestV1HDOutputs:
                 assert col in rows[0], f"Missing required column: {col}"
 
     def test_all_confirmations_are_yes(self) -> None:
-        rows = read_csv(V1HD_DIR / "human_review_visual_annotation_v1hd.csv")
+        rows = read_csv(V1HD_DIR / "review_gate_visual_annotation_v1hd.csv")
         for row in rows:
             assert row.get("no_label_created_confirmed") == "yes", \
                 f"no_label_created_confirmed != yes in {row['review_item_id']}"
@@ -231,7 +231,7 @@ class TestV1HDOutputs:
             assert row.get("review_only_confirmed") == "yes"
 
     def test_visual_modes_valid(self) -> None:
-        rows = read_csv(V1HD_DIR / "human_review_visual_annotation_v1hd.csv")
+        rows = read_csv(V1HD_DIR / "review_gate_visual_annotation_v1hd.csv")
         valid_modes = {"COMPUTED", "MANUAL_REQUIRED"}
         for row in rows:
             assert row.get("visual_interpretation_mode") in valid_modes, \
@@ -239,14 +239,14 @@ class TestV1HDOutputs:
 
     def test_preview_not_available_absent(self) -> None:
         """Verify PREVIEW_NOT_AVAILABLE from v1hb has been removed for computed patches."""
-        rows = read_csv(V1HD_DIR / "human_review_visual_annotation_v1hd.csv")
+        rows = read_csv(V1HD_DIR / "review_gate_visual_annotation_v1hd.csv")
         computed = [r for r in rows if r.get("visual_interpretation_mode") == "COMPUTED"]
         for row in computed:
             assert "PREVIEW_NOT_AVAILABLE" not in row.get("visual_pattern_notes", ""), \
                 f"PREVIEW_NOT_AVAILABLE in computed row {row['review_item_id']}"
 
     def test_summary_guardrails(self) -> None:
-        data = read_json(V1HD_DIR / "human_review_visual_summary_v1hd.json")
+        data = read_json(V1HD_DIR / "review_gate_visual_summary_v1hd.json")
         guardrails = data.get("methodological_guardrails", {})
         assert guardrails.get("labels_created") is False
         assert guardrails.get("predictions_made") is False
@@ -256,23 +256,23 @@ class TestV1HDOutputs:
         assert data.get("forbidden_claims_checked") is True
 
     def test_summary_candidate_count(self) -> None:
-        data = read_json(V1HD_DIR / "human_review_visual_summary_v1hd.json")
+        data = read_json(V1HD_DIR / "review_gate_visual_summary_v1hd.json")
         assert data.get("n_candidates") == 47
 
     def test_examples_have_tcc_suggestion(self) -> None:
-        rows = read_csv(V1HD_DIR / "human_review_visual_examples_for_tcc_v1hd.csv")
+        rows = read_csv(V1HD_DIR / "review_gate_visual_examples_for_tcc_v1hd.csv")
         assert len(rows) >= 1, "No examples generated"
         for row in rows:
             assert row.get("tcc_use_suggestion"), f"Missing tcc_use_suggestion in {row.get('example_type')}"
             assert row.get("example_type"), "Missing example_type"
 
     def test_synthesis_md_not_empty(self) -> None:
-        path = V1HD_DIR / "human_review_visual_discussion_synthesis_v1hd.md"
+        path = V1HD_DIR / "review_gate_visual_discussion_synthesis_v1hd.md"
         content = path.read_text(encoding="utf-8")
         assert len(content) > 500, "Synthesis document too short"
 
     def test_synthesis_has_key_sections(self) -> None:
-        content = (V1HD_DIR / "human_review_visual_discussion_synthesis_v1hd.md").read_text(encoding="utf-8")
+        content = (V1HD_DIR / "review_gate_visual_discussion_synthesis_v1hd.md").read_text(encoding="utf-8")
         for section in ["## 2. Medoids", "## 3. Outliers", "## 6. Como Usar", "## 7. Limitações"]:
             assert section in content, f"Missing section: {section}"
 
@@ -281,7 +281,7 @@ class TestV1HDNoForbiddenContent:
     """Test that v1hd outputs contain no forbidden claims."""
 
     def test_no_predictive_terms_in_visual_notes(self) -> None:
-        rows = read_csv(V1HD_DIR / "human_review_visual_annotation_v1hd.csv")
+        rows = read_csv(V1HD_DIR / "review_gate_visual_annotation_v1hd.csv")
         violations = []
         for row in rows:
             notes = row.get("visual_pattern_notes", "").lower()
@@ -291,7 +291,7 @@ class TestV1HDNoForbiddenContent:
         assert not violations, f"Forbidden terms found: {violations}"
 
     def test_no_predictive_terms_in_discussion_notes(self) -> None:
-        rows = read_csv(V1HD_DIR / "human_review_visual_annotation_v1hd.csv")
+        rows = read_csv(V1HD_DIR / "review_gate_visual_annotation_v1hd.csv")
         violations = []
         for row in rows:
             note = row.get("discussion_note", "").lower()
@@ -301,7 +301,7 @@ class TestV1HDNoForbiddenContent:
         assert not violations, f"Forbidden terms found: {violations}"
 
     def test_no_label_columns(self) -> None:
-        rows = read_csv(V1HD_DIR / "human_review_visual_annotation_v1hd.csv")
+        rows = read_csv(V1HD_DIR / "review_gate_visual_annotation_v1hd.csv")
         if rows:
             for col in rows[0].keys():
                 assert col not in {"label", "target", "class", "risk_class"}, \
@@ -309,9 +309,9 @@ class TestV1HDNoForbiddenContent:
 
     def test_no_private_paths_in_outputs(self) -> None:
         for fname in [
-            "human_review_visual_annotation_v1hd.csv",
-            "human_review_visual_summary_v1hd.json",
-            "human_review_visual_discussion_synthesis_v1hd.md",
+            "review_gate_visual_annotation_v1hd.csv",
+            "review_gate_visual_summary_v1hd.json",
+            "review_gate_visual_discussion_synthesis_v1hd.md",
         ]:
             path = V1HD_DIR / fname
             if path.exists():
@@ -320,7 +320,7 @@ class TestV1HDNoForbiddenContent:
                 assert "gabriela" not in content, f"User path in {fname}"
 
     def test_synthesis_no_predictive_claims(self) -> None:
-        path = V1HD_DIR / "human_review_visual_discussion_synthesis_v1hd.md"
+        path = V1HD_DIR / "review_gate_visual_discussion_synthesis_v1hd.md"
         content = path.read_text(encoding="utf-8").lower()
         for term in ["prediz enchente", "risco predito", "valida risco", "detecta inundação"]:
             assert term not in content, f"Predictive claim in synthesis: '{term}'"
@@ -330,28 +330,28 @@ class TestV1HDBlockedCandidates:
     """Test that candidates without preview are properly handled."""
 
     def test_blocked_candidates_marked_manual_required(self) -> None:
-        rows = read_csv(V1HD_DIR / "human_review_visual_annotation_v1hd.csv")
+        rows = read_csv(V1HD_DIR / "review_gate_visual_annotation_v1hd.csv")
         for row in rows:
             if row.get("preview_status") == "BLOCKED":
                 assert row.get("visual_interpretation_mode") == "MANUAL_REQUIRED", \
                     f"BLOCKED candidate should be MANUAL_REQUIRED: {row['review_item_id']}"
 
     def test_ready_candidates_have_visual_evidence(self) -> None:
-        rows = read_csv(V1HD_DIR / "human_review_visual_annotation_v1hd.csv")
+        rows = read_csv(V1HD_DIR / "review_gate_visual_annotation_v1hd.csv")
         for row in rows:
             if row.get("preview_status") == "GENERATED":
                 assert row.get("visual_interpretation_mode") in {"COMPUTED", "MANUAL_REQUIRED"}, \
                     f"GENERATED candidate has unexpected mode: {row['review_item_id']}"
 
     def test_uncertainty_levels_valid(self) -> None:
-        rows = read_csv(V1HD_DIR / "human_review_visual_annotation_v1hd.csv")
+        rows = read_csv(V1HD_DIR / "review_gate_visual_annotation_v1hd.csv")
         valid_levels = {"low", "medium", "high"}
         for row in rows:
             assert row.get("uncertainty_level") in valid_levels, \
                 f"Invalid uncertainty in {row['review_item_id']}"
 
     def test_usable_values_valid(self) -> None:
-        rows = read_csv(V1HD_DIR / "human_review_visual_annotation_v1hd.csv")
+        rows = read_csv(V1HD_DIR / "review_gate_visual_annotation_v1hd.csv")
         valid = {"yes", "no", "conditional"}
         for row in rows:
             assert row.get("usable_in_discussion") in valid, \

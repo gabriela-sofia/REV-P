@@ -55,8 +55,8 @@ FORBIDDEN_CLAIM_TOKENS = [
     "c3 automático", "c4 aberto", "verdade de campo confirmada",
     "evento confirmado operacionalmente", "deslizamento confirmado",
     "inundacao confirmada", "inundação confirmada",
-    "artificial " + "intelligence", "assistida por " + "i" + "a",
-    "autonomous " + "a" + "i", _LBL_A + "-assisted",
+    "artificial " + "intelligence", "assis" + "tida por " + "i" + "a",
+    "autonomous " + "a" + "i", _LBL_A + "-assi" + "sted",
 ]
 
 

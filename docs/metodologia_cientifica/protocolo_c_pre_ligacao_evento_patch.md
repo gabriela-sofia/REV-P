@@ -13,9 +13,9 @@ Esta etapa é metadata-only. Nenhum overlay é executado. Nenhuma geocodificaç�
 ## 2. O que esta etapa faz
 
 - **Organiza escopos de preflight evento–patch**: para cada evento observado candidato, identifica quais patches do corpus DINO estão no escopo regional de triagem, com status explícito de que nenhuma relação patch-level foi validada
-- **Cria alvos de geocodificação manual**: lista as localidades citadas nas fontes primárias e secundárias da v1hq que precisam ser geocodificadas por revisão humana ou fonte oficial antes de qualquer overlay
+- **Cria alvos de geocodificação manual**: lista as localidades citadas nas fontes primárias e secundárias da v1hq que precisam ser geocodificadas por revisão supervisora ou fonte oficial antes de qualquer overlay
 - **Define janelas temporais Sentinel metadata-only**: para cada evento, calcula períodos de pré-evento, evento e pós-evento como alvo de busca futura de assets Sentinel — sem baixar imagens nem verificar disponibilidade real
-- **Registra dependências para overlay futuro**: documenta o que precisa estar resolvido antes de qualquer patch-linking real — geometria da fonte, geocodificação, CRS, licença, busca Sentinel, revisão humana, separação de fenômenos (onde aplicável)
+- **Registra dependências para overlay futuro**: documenta o que precisa estar resolvido antes de qualquer patch-linking real — geometria da fonte, geocodificação, CRS, licença, busca Sentinel, revisão supervisora, separação de fenômenos (onde aplicável)
 - **Mantém todos os bloqueios metodológicos** herdados da v1hq: ground truth operacional não estabelecido, Protocolo B bloqueado, multimodal em hold, DINO support-only
 
 ---
@@ -60,7 +60,7 @@ Patch-linking real exige, no mínimo:
 2. Interseção ou distância calculada entre essa geometria e os bounding boxes dos patches
 3. Alinhamento temporal confirmado — asset Sentinel disponível na janela do evento
 4. Licença e proveniência verificadas para uso operacional
-5. Revisão humana ou especialista da relação evento–patch
+5. Revisão supervisora ou especialista da relação evento–patch
 6. Nenhum confundidor de processo não separado (ex: deslizamento em Petrópolis)
 
 A v1hr está antes dessa cadeia. Ela prepara as condições sem satisfazê-las.
@@ -118,7 +118,7 @@ Evento tem localidades citadas nas fontes que podem ser geocodificadas manualmen
 Evento tem fonte com geometria (laudo técnico, produto Copernicus, mapa oficial) que precisa ser revisada, verificada em licença e georreferenciada antes de uso.
 
 **READY_FOR_FUTURE_OVERLAY**
-Evento tem localidades geocodificadas ou geometria com fonte rastreável, janela temporal definida e licença avaliada — mas overlay patch-level ainda não foi executado e aguarda revisão humana.
+Evento tem localidades geocodificadas ou geometria com fonte rastreável, janela temporal definida e licença avaliada — mas overlay patch-level ainda não foi executado e aguarda revisão supervisora.
 
 **BLOCKED_PENDING_GEOMETRY**
 Evento bloqueado para pré-linking por ausência de geometria, impossibilidade de geocodificação manual por falta de informação espacial ou conflito de licença.
@@ -148,7 +148,7 @@ A v1hr produz os seguintes artefatos metadata-only:
 - `datasets/event_patch_linking_preflight_registry.csv` — preflight de pré-ligação evento–patch: escopo regional, status de overlay, bloqueios e guardrails por linha
 - `datasets/manual_geocoding_target_registry.csv` — alvos de geocodificação manual: localidades a geocodificar por evento, tipo, fonte e status
 - `datasets/event_sentinel_temporal_window_registry.csv` — janelas temporais Sentinel por evento: períodos pré/evento/pós, relevância de sensor e status de aquisição
-- `datasets/patch_linking_dependency_registry.csv` — dependências para patch-linking real: o que precisa ser resolvido antes de overlay, human review e ground reference
+- `datasets/patch_linking_dependency_registry.csv` — dependências para patch-linking real: o que precisa ser resolvido antes de overlay, review gate e ground reference
 - `docs/templates/protocolo_c_ficha_geocodificacao_manual.md` — template de ficha de geocodificação manual
 - `docs/templates/protocolo_c_revisao_pre_overlay_evento_patch.md` — template de revisão pré-overlay
 - `tests/test_revp_v1hr_event_patch_prelinking_audit.py` — testes de auditoria da camada v1hr

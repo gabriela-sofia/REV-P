@@ -32,10 +32,10 @@ A promoção não é binária. Um evento não passa de "nada" para "ground refer
 | `LEVEL_4_LOCALITY_CONFIRMED` | Localidades específicas afetadas identificadas por fonte ou triangulação documentada |
 | `LEVEL_5_SPATIAL_TRIAGE_READY` | Fonte espacial autoritativa de triagem disponível (limite de bairro ou geometria contextual) |
 | `LEVEL_6_READY_FOR_CONTROLLED_GEOCODING` | Método de geocodificação definido, fonte identificada, alvo registrado, pronto para execução controlada |
-| `LEVEL_7_GROUND_REFERENCE_CANDIDATE_FUTURE` | Após geocodificação controlada + overlay + revisão humana: candidato a ground reference futuro |
+| `LEVEL_7_GROUND_REFERENCE_CANDIDATE_FUTURE` | Após geocodificação controlada + overlay + revisão supervisora: candidato a ground reference futuro |
 | `BLOCKED_CONTEXTUAL_ONLY` | Evidência somente contextual; nenhuma fonte específica confirma evento, data, fenômeno ou localidade |
 
-A promoção de nível nunca implica em geocodificação automática, overlay ou criação de label. Cada transição de nível requer evidência documentada, e as transições acima de LEVEL_6 requerem decisão humana explícita.
+A promoção de nível nunca implica em geocodificação automática, overlay ou criação de label. Cada transição de nível requer evidência documentada, e as transições acima de LEVEL_6 requerem decisão supervisora explícita.
 
 ---
 
@@ -49,7 +49,7 @@ A promoção de nível nunca implica em geocodificação automática, overlay ou
 
 **Referência observacional candidata secundária**: Evento confirmado por pelo menos uma fonte, com triagem espacial disponível, mas com lacuna de fenômeno ou evidência espacial parcial. Nível: LEVEL_4 a LEVEL_6 com ressalvas.
 
-**Ground reference**: Posição georreferenciada validada de evento de inundação observado, após geocodificação controlada + overlay + confirmação por revisão humana. Não existe ainda neste corpus. Requer etapas futuras separadas.
+**Ground reference**: Posição georreferenciada validada de evento de inundação observado, após geocodificação controlada + overlay + confirmação por revisão supervisora. Não existe ainda neste corpus. Requer etapas futuras separadas.
 
 **Ground truth operacional**: Conjunto de geometrias validadas para treino supervisionado ou avaliação de modelo. **Não existe e não pode ser criado nesta etapa.** `can_be_called_ground_truth_operational=false` para todos os eventos. Invariante permanente no estado atual.
 
@@ -90,7 +90,7 @@ Um evento avança de nível quando a evidência acumulada satisfaz o critério d
 A criação de label supervisionado requer:
 1. Geocodificação controlada validada com incerteza documentada;
 2. Overlay geoespacial entre geometria do evento e patch do corpus;
-3. Confirmação por revisão humana da correspondência evento–patch;
+3. Confirmação por revisão supervisora da correspondência evento–patch;
 4. Validação da qualidade da geometria de referência;
 5. Decisão explícita de que a geometria é suficientemente precisa para uso como label.
 
@@ -101,7 +101,7 @@ Nenhuma dessas etapas foi executada. Nenhum evento, independentemente do nível 
 ## 7. Por que isso ainda não reabre o Protocolo B
 
 O Protocolo B está bloqueado porque não existe geometria de referência observacional válida para cruzamento com os patches. A reabertura do Protocolo B requer:
-1. Ground reference estabelecido (geocodificado, overlay executado, revisão humana realizada);
+1. Ground reference estabelecido (geocodificado, overlay executado, revisão supervisora realizada);
 2. Correspondência patch–evento validada com grau de sobreposição documentado;
 3. Decisão metodológica formal sobre se a qualidade da referência é suficiente para uso no pipeline.
 
@@ -117,7 +117,7 @@ Para PET_2022_02_15, o caminho bloqueante imediato é o PKG_FR_PET_001 (DRM-RJ).
 
 Para PET_2024_03_21_28, os alvos Valparaíso e Floresta podem avançar para geocodificação de triagem após definição do protocolo de execução.
 
-Mesmo após geocodificação: overlay e promoção a ground reference permanecem etapas separadas, com decisão humana explícita, e `can_create_training_label` permanece `false`.
+Mesmo após geocodificação: overlay e promoção a ground reference permanecem etapas separadas, com decisão supervisora explícita, e `can_create_training_label` permanece `false`.
 
 ---
 

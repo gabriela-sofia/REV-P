@@ -105,7 +105,7 @@ def run() -> dict[str, Any]:
          "implication": "Variabilidade espacial nao modelada.", "review_only": "true", "notes": ""},
         {"limitation_id": "LIM03", "aspect": "event_validation",
          "description": "Precipitacao compativel nao valida evento de deslizamento ou inundacao.",
-         "implication": "Revisao humana obrigatoria para qualquer interpretacao causal.", "review_only": "true", "notes": ""},
+         "implication": "Revisao supervisora obrigatoria para qualquer interpretacao causal.", "review_only": "true", "notes": ""},
         {"limitation_id": "LIM04", "aspect": "negative_evidence",
          "description": "Ausencia de precipitacao nao constitui evidencia negativa.",
          "implication": "Evento pode ter ocorrido por acumulados anteriores ou fontes locais.", "review_only": "true", "notes": ""},

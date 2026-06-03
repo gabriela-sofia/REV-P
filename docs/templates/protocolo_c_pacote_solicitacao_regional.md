@@ -54,7 +54,7 @@
 | **Dado bruto — local-only** | [DADOS_BRUTOS_LOCAL_ONLY] |
 | **Uso proibido** | [USO_PROIBIDO] |
 
-*Uso pretendido: referência metodológica auditável; análise exploratória de contexto territorial; registro de evidência para futura revisão humana.*
+*Uso pretendido: referência metodológica auditável; análise exploratória de contexto territorial; registro de evidência para futura revisão supervisora.*
 
 *Dado bruto local-only: sim — dado bruto recebido não será versionado nem redistribuído.*
 

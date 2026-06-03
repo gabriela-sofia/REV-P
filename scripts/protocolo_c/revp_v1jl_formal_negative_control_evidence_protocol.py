@@ -137,7 +137,7 @@ def boolish(value: str) -> bool:
 
 
 def base_minimum_evidence() -> str:
-    return "official absence or stability evidence for area/date/phenomenon; explicit coordinate or geometry; patch QA; split/leakage protocol; human review decision"
+    return "official absence or stability evidence for area/date/phenomenon; explicit coordinate or geometry; patch QA; split/leakage protocol; review gate decision"
 
 
 def classify_control(row: dict[str, str]) -> dict[str, str]:

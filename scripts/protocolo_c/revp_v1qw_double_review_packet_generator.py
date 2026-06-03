@@ -92,7 +92,7 @@ def build(sample: list[dict[str, str]]) -> tuple[list[dict[str, Any]], list[dict
                 "hazard_type": s.get("hazard_type", ""),
                 "evidence_status": s.get("evidence_status", ""),
                 "dino_queue_status": s.get("dino_queue_status", ""),
-                "packet_status": "AWAITING_HUMAN_REVIEW",
+                "packet_status": "AWAITING_REVIEW_GATE",
                 "notes": "review_only_no_answer_prefilled",
             }
             mrow.update(guardrail_row())
@@ -103,7 +103,7 @@ def build(sample: list[dict[str, str]]) -> tuple[list[dict[str, Any]], list[dict
                     "packet_id": packet_id, "review_sample_id": rsid,
                     "reviewer_slot": reviewer, "question_key": q,
                     "question_text": _QUESTION_TEXT[q],
-                    "answer_placeholder": "<TO_BE_FILLED_BY_HUMAN_REVIEWER>",
+                    "answer_placeholder": "<TO_BE_FILLED_BY_REVIEWER>",
                     "response_value": "",
                     "review_only": "true", "dino_validates_event": "false",
                     "notes": "",
@@ -151,7 +151,7 @@ def run(datasets: Path | None = None) -> dict[str, Any]:
             f"Amostras: {n_samples}. Pacotes A/B: {n_packets}. Formularios: {len(forms)}.",
             "## Guardrails",
             "Nenhuma resposta final e preenchida; apenas placeholders "
-            "<TO_BE_FILLED_BY_HUMAN_REVIEWER>. dino_validates_event=false. Nenhum label.",
+            "<TO_BE_FILLED_BY_REVIEWER>. dino_validates_event=false. Nenhum label.",
         ],
     )
     print(f"[v1qw] samples={n_samples} packets={n_packets} forms={len(forms)}")

@@ -4,7 +4,7 @@ Consolidates v1gu–v1gy into a comprehensive evidence audit:
 - maps each allowed claim to supporting evidence (READY/PARTIAL/BLOCKED)
 - explicitly blocks forbidden claims with technical reasoning
 - audits figure/table quality and captions
-- formalizes human review as a methodological stage (no labels created)
+- formalizes review gate as a methodological stage (no labels created)
 - identifies remaining scientific gaps
 - generates readiness matrix for TCC writing
 
@@ -72,8 +72,8 @@ ALLOWED_CLAIMS = {
         "evidence_source": "v1gu",
         "output_files": ["embedding_regional_summary_v1gu.json"],
     },
-    "human_review_formalized": {
-        "description": "Human review is a methodological stage (not validation/labeling)",
+    "review_gate_formalized": {
+        "description": "Review gate is a methodological stage (not validation/labeling)",
         "evidence_source": "v1gw",
         "output_files": ["review_candidates_v1gw.csv", "review_protocol_v1gw.md"],
     },
@@ -260,8 +260,8 @@ def audit_v1gv_evidence() -> dict[str, Any]:
     return result
 
 
-def audit_v1gw_human_review() -> dict[str, Any]:
-    """Audit v1gw human review formalization."""
+def audit_v1gw_review_gate() -> dict[str, Any]:
+    """Audit v1gw review gate formalization."""
     result = {
         "exists": V1GW_DIR.exists(),
         "files_found": [],
@@ -455,7 +455,7 @@ def build_evidence_strength_matrix(
         "intra_inter_neighborhood_rate": v1gu["status"],
         "medoid_identification": v1gu["status"],
         "outlier_identification": v1gu["status"],
-        "human_review_formalized": v1gw["status"],
+        "review_gate_formalized": v1gw["status"],
         "gis_contextual": v1gv["status"],
         "audit_trail": "READY",
         "pipeline_reproducibility": "READY",
@@ -482,8 +482,8 @@ def build_scientific_gaps() -> list[dict[str, object]]:
             "gap_id": "gap_001",
             "category": "corpus_size",
             "description": "Corpus is small (12 embeddings, 4 per region)",
-            "impact": "Results are exploratory and regional; generalization requires human review",
-            "mitigation": "Structured human review protocol (v1gw) formalizes interpretation boundaries",
+            "impact": "Results are exploratory and regional; generalization requires review gate",
+            "mitigation": "Structured review gate protocol (v1gw) formalizes interpretation boundaries",
             "resolved": "no",
         },
         {
@@ -512,8 +512,8 @@ def build_scientific_gaps() -> list[dict[str, object]]:
         },
         {
             "gap_id": "gap_005",
-            "category": "human_review_execution",
-            "description": "Human review candidates identified but not yet annotated",
+            "category": "review_gate_execution",
+            "description": "Review gate candidates identified but not yet annotated",
             "impact": "Contextual interpretation pending",
             "mitigation": "v1gw formalized protocol; review to be conducted manually",
             "resolved": "no",
@@ -568,15 +568,15 @@ def build_tcc_readiness_matrix() -> list[dict[str, object]]:
             "notes": "GIS coverage is fragmentary (PARTIAL/MISSING); documented limitations",
         },
         {
-            "tcc_section": "5. Metodologia | 5.1 Revisão Humana",
+            "tcc_section": "5. Metodologia | 5.1 revisão supervisora",
             "readiness": "READY",
             "dependencies": "v1gw + v1gw protocol + v1gy review category figure",
-            "notes": "Human review formalized; 48 candidates prepared; protocol documented",
+            "notes": "Review gate formalized; 48 candidates prepared; protocol documented",
         },
         {
             "tcc_section": "5. Discussão",
             "readiness": "BLOCKED",
-            "dependencies": "Human review execution (manual)",
+            "dependencies": "Review gate execution (manual)",
             "notes": "Requires completed annotation of v1gw candidates",
         },
         {
@@ -609,7 +609,7 @@ def build_summary_json(
         "audit_results": {
             "v1gu_embedding_evidence": v1gu,
             "v1gv_gis_coverage": v1gv,
-            "v1gw_human_review": v1gw,
+            "v1gw_review_gate": v1gw,
             "v1gy_figures_tables": v1gy,
             "v1ha_robustness": v1ha,
         },
@@ -617,7 +617,7 @@ def build_summary_json(
         "forbidden_claims_count": len(FORBIDDEN_CLAIMS),
         "figures_ready": v1gy.get("figure_count", 0),
         "tables_ready": v1gy.get("table_count", 0),
-        "human_review_candidates": v1gw.get("n_candidates", 0),
+        "review_gate_candidates": v1gw.get("n_candidates", 0),
         "corpus_size": 12,
         "n_regions": 3,
         "patches_per_region": 4,
@@ -651,7 +651,7 @@ def main() -> int:
     # Audit each stage
     v1gu = audit_v1gu_evidence()
     v1gv = audit_v1gv_evidence()
-    v1gw = audit_v1gw_human_review()
+    v1gw = audit_v1gw_review_gate()
     v1gy = audit_v1gy_figures_tables()
     v1ha = audit_v1ha_robustness()
 
@@ -699,7 +699,7 @@ def main() -> int:
     print(f"  - TCC readiness: {len(tcc_readiness)} sections")
     print(f"  - Figures READY: {v1gy.get('figure_count', 0)}")
     print(f"  - Tables READY: {v1gy.get('table_count', 0)}")
-    print(f"  - Human review candidates: {v1gw.get('n_candidates', 0)}")
+    print(f"  - Review gate candidates: {v1gw.get('n_candidates', 0)}")
     print(f"  - Robust embeddings: {v1ha.get('robust_embeddings', 0)}/12")
 
     return 0

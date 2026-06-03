@@ -1,14 +1,14 @@
 """REV-P v1hd: Visual-Assisted Interpretation Update.
 
-Reprocesses the 47 human review candidates from v1hb using actual image
+Reprocesses the 47 review gate candidates from v1hb using actual image
 statistics computed from the Sentinel TIF files (when available via
 --sentinel-root or REVP_SENTINEL_ROOT), or from the PNG previews generated
 in v1hc. Generates conservative, descriptive visual_pattern_notes without
 creating labels, classes, predictions or ground-truth claims.
 
 Usage:
-    python revp_v1hd_visual_assisted_review_update.py --sentinel-root /path/to/sentinel
-    REVP_SENTINEL_ROOT=/path/to/sentinel python revp_v1hd_visual_assisted_review_update.py
+    python revp_v1hd_visual_review_update_update.py --sentinel-root /path/to/sentinel
+    REVP_SENTINEL_ROOT=/path/to/sentinel python revp_v1hd_visual_review_update_update.py
 
 If neither is provided, all candidates are marked VISUAL_INTERPRETATION_MODE=MANUAL_REQUIRED.
 
@@ -251,7 +251,7 @@ def stats_to_visual_notes(stats: ImageStats, patch_id: str, category: str) -> st
         + "; ".join(notes)
         + f". n_pixels={stats.n_pixels}. "
         "Interpretação conservadora e exploratória — revisão-only, sem afirmações operacionais. "
-        "Revisão humana direta recomendada."
+        "Revisão supervisora direta recomendada."
     )
 
 
@@ -345,9 +345,9 @@ def stats_to_discussion_note(
 # ---------------------------------------------------------------------------
 
 def load_candidates() -> list[CandidateRecord]:
-    manifest = V1HB_DIR / "human_review_execution_manifest_v1hb.csv"
+    manifest = V1HB_DIR / "review_gate_execution_manifest_v1hb.csv"
     v1hc_manifest = V1HC_DIR / "visual_review_preview_manifest_v1hc.csv"
-    annotation = V1HB_DIR / "human_review_annotation_filled_assisted_v1hb.csv"
+    annotation = V1HB_DIR / "review_gate_annotation_filled_programmatic_v1hb.csv"
 
     # Load preview statuses from v1hc
     preview_info: dict[str, dict] = {}
@@ -359,7 +359,7 @@ def load_candidates() -> list[CandidateRecord]:
                     "preview_file": row.get("preview_file", ""),
                 }
 
-    # Load prior annotations from v1hb assisted review
+    # Load prior annotations from v1hb programmatic review
     prior_annotations: dict[str, dict] = {}
     if annotation.exists():
         with annotation.open("r", encoding="utf-8-sig") as f:
@@ -604,7 +604,7 @@ def build_synthesis(rows: list[dict], summary: dict) -> str:
                     and "medoid" not in r["candidate_category"]]
 
     lines = [
-        "# Síntese da Revisão Visual Assistida — REV-P v1hd",
+        "# Síntese da revisão visual programática — REV-P v1hd",
         "",
         f"**Data**: {datetime.now(timezone.utc).date()}  ",
         "**Revisor**: ASSISTED-v1hd (estatísticas de imagem)  ",
@@ -711,7 +711,7 @@ def build_synthesis(rows: list[dict], summary: dict) -> str:
         "- **Corpus pequeno**: 12 embeddings não representam os 128 patches totais",
         "- **GIS parcial**: indicadores contextuais, não validantes",
         "- **Sem ground truth**: nenhuma observação aqui estabelece verdade de campo",
-        "- **Revisão humana recomendada**: especialmente para PET_00016 e REC_00019 (outliers severos)",
+        "- **Revisão supervisora recomendada**: especialmente para PET_00016 e REC_00019 (outliers severos)",
         "",
         "---",
         "",
@@ -758,7 +758,7 @@ def write_md(path: Path, content: str) -> None:
 
 def _parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="REV-P v1hd: Visual-assisted annotation update using image statistics."
+        description="REV-P v1hd: Visual review update using image statistics."
     )
     parser.add_argument(
         "--sentinel-root",
@@ -798,10 +798,10 @@ def main() -> int:
     summary = build_summary(annotation_rows, sentinel_root)
     synthesis = build_synthesis(annotation_rows, summary)
 
-    write_csv(OUT_DIR / "human_review_visual_annotation_v1hd.csv", annotation_rows)
-    write_csv(OUT_DIR / "human_review_visual_examples_for_tcc_v1hd.csv", examples_rows)
-    write_json(OUT_DIR / "human_review_visual_summary_v1hd.json", summary)
-    write_md(OUT_DIR / "human_review_visual_discussion_synthesis_v1hd.md", synthesis)
+    write_csv(OUT_DIR / "review_gate_visual_annotation_v1hd.csv", annotation_rows)
+    write_csv(OUT_DIR / "review_gate_visual_examples_for_tcc_v1hd.csv", examples_rows)
+    write_json(OUT_DIR / "review_gate_visual_summary_v1hd.json", summary)
+    write_md(OUT_DIR / "review_gate_visual_discussion_synthesis_v1hd.md", synthesis)
 
     print(f"\n[v1hd] Done. Outputs in {OUT_DIR.relative_to(ROOT)}")
     return 0

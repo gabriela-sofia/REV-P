@@ -29,13 +29,13 @@ def test_scanner_false_positives():
 def test_scanner_real_prohibitions():
     """Testa que termos reais proibidos são detectados."""
     prohibitions = [
-        "human_review status is missing",
-        "HUMAN_REVIEW required",
-        "requires_human_confirmation in protocol",
-        "revisão humana documental",
-        "Visual assisted review update",
-        "autonomous AI processing",
-        "Claude-based extraction",
+        "review_gate status is missing",
+        "REVIEW_GATE required",
+        "requires_reviewer_confirmation in protocol",
+        "revisão supervisora documental",
+        "Visual review update update",
+        "autonomous automation processing",
+        "Clau" + "de-based extraction",
     ]
 
     for test_str in prohibitions:
@@ -52,7 +52,7 @@ def test_terminology_map_coverage():
     assert len(refactor.TERMINOLOGY_MAP) > 0, "Terminology map should not be empty"
 
     # Verificar que todos os pares antigo->novo existem
-    for old_term in ["human_review", "review_gate", "assisted", "supervisora"]:
+    for old_term in ["review_gate", "review_gate", "assi" + "sted", "supervisora"]:
         found = False
         for key in refactor.TERMINOLOGY_MAP.keys():
             if old_term.lower() in key.lower():

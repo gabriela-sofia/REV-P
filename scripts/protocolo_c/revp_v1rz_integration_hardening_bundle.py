@@ -181,7 +181,7 @@ def run(datasets: Path | None = None) -> dict[str, Any]:
         {"action_id": "V1RZ_ACT02", "priority": "P0", "action": "Coletar documentos externos via fontes prioritárias",
          "owner": "human", "depends_on": "—", "notes": "Ver runbook v1rx; preencher v1rb template"},
         {"action_id": "V1RZ_ACT03", "priority": "P1", "action": "Preencher respostas A/B de revisão (v1rg template)",
-         "owner": "human_reviewer", "depends_on": "external_documents_collected", "notes": ""},
+         "owner": "reviewer", "depends_on": "external_documents_collected", "notes": ""},
         {"action_id": "V1RZ_ACT04", "priority": "P1", "action": "Preencher decisão do supervisor (v1rk template)",
          "owner": "supervisor", "depends_on": "double_review_completed", "notes": ""},
         {"action_id": "V1RZ_ACT05", "priority": "P2", "action": "Revisar v1rv recommended_files e stagear por bloco",

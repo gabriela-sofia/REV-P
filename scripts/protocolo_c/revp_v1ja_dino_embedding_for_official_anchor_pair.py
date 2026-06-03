@@ -312,7 +312,7 @@ def registry_rows(selection: dict[str, str], diagnostics: dict[str, Any], status
                 "can_train_model": bool_text(False),
                 "can_reopen_protocol_b": bool_text(False),
                 "primary_blocker": blocker,
-                "minimum_evidence_needed": "Independent human review remains required before any stronger evidence role." if qa_pass else "Load DINOv2 and generate finite 768D pre/post embeddings.",
+                "minimum_evidence_needed": "Independent review gate remains required before any stronger evidence role." if qa_pass else "Load DINOv2 and generate finite 768D pre/post embeddings.",
                 "notes": "Frozen DINOv2 review embedding from Sentinel RGB composite; no label, target, training, or event claim is created.",
             }
         )

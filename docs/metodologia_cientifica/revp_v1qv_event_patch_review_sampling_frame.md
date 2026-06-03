@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Construir o quadro amostral de unidades evento-patch e sortear uma amostra estratificada para revisao humana. Prioriza C2, lacunas contextuais, fila DINO review-only e lacunas de fonte. Inclui bloqueados como controle metodologico.
+Construir o quadro amostral de unidades evento-patch e sortear uma amostra estratificada para revisao supervisora. Prioriza C2, lacunas contextuais, fila DINO review-only e lacunas de fonte. Inclui bloqueados como controle metodologico.
 
 ## Parametros
 

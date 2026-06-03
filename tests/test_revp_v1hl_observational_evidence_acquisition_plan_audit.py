@@ -91,7 +91,7 @@ def test_v1hl_readiness_schema_has_required_fields():
         'readiness_id', 'region', 'current_protocol_c_stage',
         'event_confirmation_readiness', 'source_availability_readiness',
         'temporal_alignment_readiness', 'spatial_alignment_readiness',
-        'human_review_readiness', 'independent_validation_readiness',
+        'review_gate_readiness', 'independent_validation_readiness',
         'operational_ground_truth_status', 'protocol_b_status', 'multimodal_status',
         'next_required_action', 'methodological_risk', 'allowed_claim', 'forbidden_claim'
     ]

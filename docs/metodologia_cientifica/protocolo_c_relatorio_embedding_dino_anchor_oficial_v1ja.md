@@ -35,7 +35,7 @@ Resultados:
 
 ## Interpretacao
 
-O status estrutural foi `MODERATE_STRUCTURAL_DIFFERENCE_REVIEW_ONLY`. Isso indica diferenca representacional entre as duas entradas visuais, dentro de uma analise estrutural. A interpretacao continua dependendo de revisao humana e de outros registros do Protocolo C.
+O status estrutural foi `MODERATE_STRUCTURAL_DIFFERENCE_REVIEW_ONLY`. Isso indica diferenca representacional entre as duas entradas visuais, dentro de uma analise estrutural. A interpretacao continua dependendo de revisao supervisora e de outros registros do Protocolo C.
 
 O embedding nao e label, nao e alvo supervisionado e nao prova evento observado. Ele apenas adiciona uma camada de representacao visual congelada para revisao multimodal.
 
