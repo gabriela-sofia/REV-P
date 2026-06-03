@@ -1,19 +1,19 @@
 """
 revp_v1iq_focused_ground_reference_dossier.py
 
-Protocolo C — v1iq: Focused Ground Reference Dossier for Cicatriz_Area_A
+Protocolo C — v1iq: Focused Ground Reference Dossier for PET_CPRM_DESLIZAMENTO_AREA_FOTOINTERPRETADA
 
-Objetivo: Construir dossiê técnico focado em Cicatriz_Area_A.shp para verificar
+Objetivo: Construir dossiê técnico focado em camada original de feições poligonais de deslizamento fotointerpretadas para verificar
 se o conjunto composto de evidências permite promovê-lo a GROUND_REFERENCE_CANDIDATE.
 
-Pergunta central: Com as evidências já existentes, Cicatriz_Area_A.shp pode subir
+Pergunta central: Com as evidências já existentes, camada original de feições poligonais de deslizamento fotointerpretadas pode subir
 de STRONG_COMPOSITE_REFERENCE_BUT_TEMPORAL_LINK_WEAK para GROUND_REFERENCE_CANDIDATE?
 
 Evidências locais reais lidas e auditadas nesta etapa:
-- XML sidecar: Cicatriz_Ponto_P.shp.xml → SIG criado em 2013-2015 por fotointerpretação
-- DBF Cicatriz_Area_A.shp (Petrópolis): date=2015-11-30, 444 registros, sem campo de data
+- XML sidecar: sidecar original de pontos de feições de deslizamento fotointerpretadas → SIG criado em 2013-2015 por fotointerpretação
+- DBF camada original de feições poligonais de deslizamento fotointerpretadas (Petrópolis): date=2015-11-30, 444 registros, sem campo de data
 - DBF VALORES (v1iq-R2): TIPO, CONDICIONA, FONTE, OBS, MUNICIPIO, UF lidos registro a registro
-- Registries v1ij/v1ik: blocking_reason inclui 'cicatrizes_cumulativas_sem_data_especifica'
+- Registries v1ij/v1ik: blocking_reason inclui 'feições de deslizamento_cumulativas_sem_data_especifica'
 - v1in: 0 linkages a candidatos específicos
 """
 
@@ -29,6 +29,10 @@ import sys
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO_ROOT / "scripts" / "protocolo_c"))
+
+SOURCE_LAYER_ALIAS = "PET_CPRM_DESLIZAMENTO_AREA_FOTOINTERPRETADA"
+SOURCE_LAYER_DISPLAY_NAME = "Feições poligonais de deslizamento fotointerpretadas"
+SOURCE_LAYER_ORIGINAL_NAME = "Cicatriz_Area_A.shp"
 
 # ---------------------------------------------------------------------------
 # Termos de busca para auditoria de atributos (v1iq-R2)
@@ -47,7 +51,7 @@ SOURCE_TERMS = [
 ]
 
 PHENOMENON_TERMS = [
-    "cicatriz", "deslizamento", "escorregamento", "movimento de massa",
+    "feição de deslizamento", "deslizamento", "escorregamento", "movimento de massa",
     "corrida de massa", "queda", "ruptura", "instabilidade",
 ]
 
@@ -69,6 +73,9 @@ class GateResult:
 class AttributeProvenanceDecision:
     """Decisão de proveniência baseada nos valores dos atributos do DBF (v1iq-R2)."""
     candidate_asset_name: str
+    source_layer_alias: str
+    source_layer_display_name: str
+    source_layer_original_name: str
     records_count: int
     municipio_values: str
     uf_values: str
@@ -92,9 +99,12 @@ class AttributeProvenanceDecision:
 
 @dataclass
 class CicatrizAreaDossier:
-    """Dossiê técnico focado em Cicatriz_Area_A."""
+    """Dossiê técnico focado em PET_CPRM_DESLIZAMENTO_AREA_FOTOINTERPRETADA."""
     dossier_id: str
     candidate_asset_name: str
+    source_layer_alias: str
+    source_layer_display_name: str
+    source_layer_original_name: str
     region: str
     event_id: str
     source_institution: str
@@ -125,10 +135,10 @@ class CicatrizAreaDossier:
 
 
 class FocusedGroundReferenceDossierBuilder:
-    """Construtor de dossiê focado em Cicatriz_Area_A."""
+    """Construtor de dossiê focado em PET_CPRM_DESLIZAMENTO_AREA_FOTOINTERPRETADA."""
 
     TARGET_TERMS = [
-        "Cicatriz_Area_A", "cicatriz", "deslizamento", "escorregamento",
+        "PET_CPRM_DESLIZAMENTO_AREA_FOTOINTERPRETADA", "feição de deslizamento", "deslizamento", "escorregamento",
         "movimento de massa", "Petrópolis", "Petropolis", "Quitandinha",
         "fevereiro de 2022", "15/02/2022", "2022-02-15",
         "avaliação pós-desastre", "pos-desastre", "campo", "vistoria", "levantamento",
@@ -425,7 +435,7 @@ class FocusedGroundReferenceDossierBuilder:
         return result
 
     def _audit_dbf_values(self) -> Dict:
-        """Auditar valores reais do DBF de Cicatriz_Area_A.shp (v1iq-R2)."""
+        """Auditar valores reais do DBF de camada original de feições poligonais de deslizamento fotointerpretadas (v1iq-R2)."""
         result: Dict = {
             "dbf_read": False,
             "total_records": 0,
@@ -563,7 +573,7 @@ class FocusedGroundReferenceDossierBuilder:
 
         # Observed status a partir dos atributos
         tipo_lower = tipo_vals.lower()
-        if any(t in tipo_lower for t in ["deslizamento", "cicatriz", "escorregamento", "queda"]):
+        if any(t in tipo_lower for t in ["deslizamento", "feição de deslizamento", "escorregamento", "queda"]):
             observed_status = "OBSERVED_MASS_MOVEMENT"
         elif tipo_vals:
             observed_status = "OBSERVED_UNKNOWN_TYPE"
@@ -588,7 +598,10 @@ class FocusedGroundReferenceDossierBuilder:
             temporal_link = "NO_TEMPORAL_EXPRESSION_IN_ATTRIBUTE"
 
         return AttributeProvenanceDecision(
-            candidate_asset_name="Cicatriz_Area_A.shp",
+            candidate_asset_name=SOURCE_LAYER_ALIAS,
+            source_layer_alias=SOURCE_LAYER_ALIAS,
+            source_layer_display_name=SOURCE_LAYER_DISPLAY_NAME,
+            source_layer_original_name=SOURCE_LAYER_ORIGINAL_NAME,
             records_count=total,
             municipio_values=municipio_vals,
             uf_values=uf_vals,
@@ -629,7 +642,7 @@ class FocusedGroundReferenceDossierBuilder:
         reg1 = datasets / "targeted_official_repository_event_vector_registry.csv"
         if reg1.exists():
             for row in csv.DictReader(reg1.open(encoding="utf-8")):
-                if "Cicatriz_Area_A" in str(row.values()):
+                if "PET_CPRM_DESLIZAMENTO_AREA_FOTOINTERPRETADA" in str(row.values()):
                     evidence["v1ij_blocking_reason"] = row.get("blocking_reason", "")
                     evidence["v1ij_dataset_title"] = row.get("dataset_title", "")
                     evidence["v1ij_dataset_url"] = row.get("dataset_url", "")
@@ -639,7 +652,7 @@ class FocusedGroundReferenceDossierBuilder:
         reg2 = datasets / "temporal_provenance_recovery_registry.csv"
         if reg2.exists():
             for row in csv.DictReader(reg2.open(encoding="utf-8")):
-                if "Cicatriz_Area_A" in str(row.values()):
+                if "PET_CPRM_DESLIZAMENTO_AREA_FOTOINTERPRETADA" in str(row.values()):
                     evidence["v1ik_temporal_status"] = row.get("temporal_status_after_review", "")
                     evidence["sources_read"].append("temporal_provenance_recovery")
             self.stats["registries_read"] += 1
@@ -647,7 +660,7 @@ class FocusedGroundReferenceDossierBuilder:
         reg3 = datasets / "composite_ground_reference_candidate_registry.csv"
         if reg3.exists():
             for row in csv.DictReader(reg3.open(encoding="utf-8")):
-                if "Cicatriz_Area_A" in str(row.values()):
+                if "PET_CPRM_DESLIZAMENTO_AREA_FOTOINTERPRETADA" in str(row.values()):
                     evidence["v1ip_decision"] = row.get("ground_reference_status", "")
                     evidence["sources_read"].append("composite_ground_reference")
             self.stats["registries_read"] += 1
@@ -774,10 +787,10 @@ class FocusedGroundReferenceDossierBuilder:
             status="PASS",
             evidence_source="xml_sidecar_cicatriz_ponto_p + registry_v1ij + attribute_audit",
             evidence_detail=(
-                "TIPO=Deslizamento/Cicatriz; FONTE=Fotointerpretação; observed_not_risk=YES (v1ij); "
+                "TIPO=Deslizamento/Feição de deslizamento; FONTE=Fotointerpretação; observed_not_risk=YES (v1ij); "
                 f"observed_from_attributes={self.attr_prov.observed_status_from_attributes if self.attr_prov else 'NOT_RUN'}"
             ),
-            note="Cicatrizes são ocorrências observadas, não modelagem de susceptibilidade",
+            note="Feições de deslizamento são ocorrências observadas, não modelagem de susceptibilidade",
         ))
 
         # Gate 4: Source Authority
@@ -804,7 +817,7 @@ class FocusedGroundReferenceDossierBuilder:
         # Gate 5: Event Date OR Survey Date
         # Verifica tanto registries quanto atributos (R2)
         blocking_reason_v1ij = registry_evidence.get("v1ij_blocking_reason", "")
-        cumulative_flag = "cicatrizes_cumulativas_sem_data_especifica" in blocking_reason_v1ij
+        cumulative_flag = "feições de deslizamento_cumulativas_sem_data_especifica" in blocking_reason_v1ij
         has_date_field = vector_meta.get("has_date_field", False)
         dbf_year = int(vector_meta.get("dbf_date", "0000")[:4]) if vector_meta.get("dbf_date") else 0
         attr_has_event_date = (
@@ -820,7 +833,7 @@ class FocusedGroundReferenceDossierBuilder:
                 date_note = "Campo de data presente no shapefile"
         elif cumulative_flag:
             date_status = "FAIL"
-            date_note = "Cicatrizes cumulativas sem data específica (v1ij confirmou); sem data nos atributos"
+            date_note = "Feições de deslizamento cumulativas sem data específica (v1ij confirmou); sem data nos atributos"
         elif dbf_year > 0 and dbf_year < 2022:
             date_status = "FAIL"
             date_note = (
@@ -912,7 +925,7 @@ class FocusedGroundReferenceDossierBuilder:
                 f"TIPO_in_attr={self.attr_prov.tipo_values[:80] if self.attr_prov else ''} "
                 f"attr_observed_status={attr_phenomenon}"
             ),
-            note="Movimento de massa (cicatrizes) confirmado em todas as fontes e atributos",
+            note="Movimento de massa (feições de deslizamento) confirmado em todas as fontes e atributos",
         ))
 
         self.gates = gates
@@ -961,7 +974,7 @@ class FocusedGroundReferenceDossierBuilder:
         doc_vector_link = doc_vector_link_gate.status if doc_vector_link_gate else "UNKNOWN"
 
         min_evidence = (
-            "Confirmação explícita de que Cicatriz_Area_A.shp inclui feições mapeadas "
+            "Confirmação explícita de que camada original de feições poligonais de deslizamento fotointerpretadas inclui feições mapeadas "
             "especificamente após 2022-02-15 em documento oficial SGB/CPRM; "
             "ou campo de data no shapefile discriminando evento por data."
         )
@@ -978,13 +991,16 @@ class FocusedGroundReferenceDossierBuilder:
             )
 
         self.dossier = CicatrizAreaDossier(
-            dossier_id="CICATRIZ_AREA_A_DOSSIER_V1IQ_R2",
-            candidate_asset_name="Cicatriz_Area_A.shp",
+            dossier_id="PET_CPRM_DESLIZAMENTO_AREA_FOTOINTERPRETADA_DOSSIER_V1IQ_R2",
+            candidate_asset_name=SOURCE_LAYER_ALIAS,
+            source_layer_alias=SOURCE_LAYER_ALIAS,
+            source_layer_display_name=SOURCE_LAYER_DISPLAY_NAME,
+            source_layer_original_name=SOURCE_LAYER_ORIGINAL_NAME,
             region="PET",
             event_id="PET_2022_02_15",
             source_institution="SGB/CPRM",
             source_document_name_sanitized="SIG_POS_DESASTRE_PETROPOLIS_2022_SGB_CPRM",
-            source_asset_name_sanitized="Cicatriz_Area_A.shp",
+            source_asset_name_sanitized=SOURCE_LAYER_ALIAS,
             geometry_available="YES" if vector_meta.get("shp_exists") else "UNCERTAIN",
             crs_available="YES" if vector_meta.get("crs_zone") else "YES_FROM_REGISTRY",
             phenomenon_available="YES",
@@ -1008,7 +1024,7 @@ class FocusedGroundReferenceDossierBuilder:
             minimum_evidence_needed=min_evidence,
             notes=(
                 f"SIG criado 2013-2015 por fotointerpretação (SIG_SUSCETIBILIDADE_2013). "
-                f"444 feições sem campo de data. Cicatrizes cumulativas (v1ij). "
+                f"444 feições sem campo de data. Feições de deslizamento cumulativas (v1ij). "
                 f"SIG publicado como pós-desastre 2022, mas dados são históricos. "
                 f"v1in: 0 linkages a candidatos específicos. "
                 f"Bloqueio temporal persiste.{attr_note}"
@@ -1068,7 +1084,9 @@ class FocusedGroundReferenceDossierBuilder:
         summary = {
             "status": "complete",
             "stage": "v1iq_R2",
-            "candidate": "Cicatriz_Area_A.shp",
+            "candidate": SOURCE_LAYER_ALIAS,
+            "source_layer_display_name": SOURCE_LAYER_DISPLAY_NAME,
+            "source_layer_original_name": SOURCE_LAYER_ORIGINAL_NAME,
             "region": "PET",
             "event_id": "PET_2022_02_15",
             "promotion_decision": self.stats["promotion_decision"],
@@ -1084,7 +1102,7 @@ class FocusedGroundReferenceDossierBuilder:
                 "has_date_field": vector_meta.get("has_date_field", False),
                 "crs_zone": vector_meta.get("crs_zone", ""),
                 "xml_sidecar_exists": vector_meta.get("xml_sidecar_exists", False),
-                "cicatriz_ponto_p_source": vector_meta.get("cicatriz_ponto_p_source_note", ""),
+                "feição de deslizamento_ponto_p_source": vector_meta.get("cicatriz_ponto_p_source_note", ""),
             },
             "attribute_audit_R2": {
                 "dbf_read": self.dbf_audit.get("dbf_read", False),
@@ -1107,8 +1125,8 @@ class FocusedGroundReferenceDossierBuilder:
                 ),
             },
             "critical_note": (
-                "Cicatrizes são SIG histórico (2013-2015) publicado como SIG pós-desastre 2022. "
-                "Sem campo de data. Cicatrizes cumulativas. "
+                "Feições de deslizamento são SIG histórico (2013-2015) publicado como SIG pós-desastre 2022. "
+                "Sem campo de data. Feições de deslizamento cumulativas. "
                 "Bloqueio temporal persiste."
             ),
             "can_create_training_label": False,
@@ -1175,7 +1193,9 @@ class FocusedGroundReferenceDossierBuilder:
 
         # --- 2. v1iq_cicatriz_area_attribute_summary.json ---
         attr_summary = {
-            "candidate_asset_name": "Cicatriz_Area_A.shp",
+            "candidate_asset_name": SOURCE_LAYER_ALIAS,
+            "source_layer_display_name": SOURCE_LAYER_DISPLAY_NAME,
+            "source_layer_original_name": SOURCE_LAYER_ORIGINAL_NAME,
             "total_records_audited": dbf_audit.get("total_records", 0),
             "dbf_read_ok": dbf_audit.get("dbf_read", False),
             "fields_audited": [f["name"] for f in dbf_audit.get("fields", [])],
@@ -1250,7 +1270,10 @@ class FocusedGroundReferenceDossierBuilder:
         schema_csv.parent.mkdir(parents=True, exist_ok=True)
         schema_data = [
             ("dossier_id", "string", "ID único do dossiê"),
-            ("candidate_asset_name", "string", "Nome do arquivo vetorial"),
+            ("candidate_asset_name", "string", "Alias técnico público da camada"),
+            ("source_layer_alias", "string", "Alias técnico público"),
+            ("source_layer_display_name", "string", "Nome público/conceitual"),
+            ("source_layer_original_name", "string", "Nome original bruto preservado para proveniência"),
             ("region", "string", "Região (PET)"),
             ("event_id", "string", "ID do evento"),
             ("source_institution", "string", "Instituição-fonte"),
@@ -1327,7 +1350,7 @@ class FocusedGroundReferenceDossierBuilder:
 def main():
     parser = argparse.ArgumentParser(description="v1iq R2: Focused Ground Reference Dossier + DBF Attribute Audit")
     parser.add_argument("--force", action="store_true")
-    parser.add_argument("--focus-cicatriz-area", action="store_true", default=True)
+    parser.add_argument("--focus-source-layer", dest="focus_cicatriz_area", action="store_true", default=True)
     parser.add_argument("--read-composite-evidence", action="store_true", default=True)
     parser.add_argument("--read-documentary-evidence", action="store_true", default=True)
     parser.add_argument("--read-local-metadata", action="store_true", default=True)

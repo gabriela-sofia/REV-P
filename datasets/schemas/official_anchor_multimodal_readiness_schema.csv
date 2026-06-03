@@ -4,7 +4,7 @@ official_documented_event_available,Evento documentado em relatório oficial dis
 explicit_coordinate_available,Coordenada GPS explicitamente documentada
 sentinel_patch_coverage_confirmed,Cobertura de patch Sentinel confirmada para o anchor
 dino_embedding_available,Embedding DINO disponível para patch coberto
-gis_context_available,"Contexto GIS disponível (Cicatriz_Area_A, etc.)"
+gis_context_available,"Contexto GIS disponível (PET_CPRM_DESLIZAMENTO_AREA_FOTOINTERPRETADA, etc.)"
 documentary_evidence_available,Evidência documental disponível (relatórios CPRM)
 temporal_precision,Precisão temporal do evento (EXACT_DATE / EVENT_WINDOW)
 spatial_precision,Precisão espacial do anchor

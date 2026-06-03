@@ -1,6 +1,9 @@
 field_name,field_type,description
 dossier_id,string,ID único do dossiê
-candidate_asset_name,string,Nome do arquivo vetorial
+candidate_asset_name,string,Alias técnico público da camada
+source_layer_alias,string,Alias técnico público
+source_layer_display_name,string,Nome público/conceitual
+source_layer_original_name,string,Nome original bruto preservado para proveniência
 region,string,Região (PET)
 event_id,string,ID do evento
 source_institution,string,Instituição-fonte

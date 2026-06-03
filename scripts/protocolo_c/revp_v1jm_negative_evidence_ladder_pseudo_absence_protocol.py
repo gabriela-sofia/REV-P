@@ -54,7 +54,7 @@ EXPLICIT_ABSENCE_TERMS = [
     "ausencia de instabilidade",
     "area estavel",
     "sem movimentacao",
-    "sem cicatrizes",
+    "sem feições de deslizamento",
     "vistoria sem ocorrencia",
     "ponto de controle",
     "area controle",

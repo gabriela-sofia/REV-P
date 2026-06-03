@@ -2,7 +2,7 @@ field_name,field_type,required,controlled_values,description
 dependency_id,string,true,,Identificador único da dependência (ex: DEP_REC_2022_05_001)
 observed_event_id,string,true,,Referência ao observed_event_id em observed_event_reference_candidate_registry.csv
 region,string,true,"Recife,Petrópolis,Curitiba",Região do REV-P
-dependency_type,string,true,"SOURCE_GEOMETRY,MANUAL_GEOCODING,CRS_CONFIRMATION,LICENSE_PROVENANCE,PATCH_MANIFEST_REVIEW,SENTINEL_TEMPORAL_SEARCH,HUMAN_REVIEW,PHENOMENON_SEPARATION,INDEPENDENT_CORROBORATION",Tipo de dependência metodológica
+dependency_type,string,true,"SOURCE_GEOMETRY,MANUAL_GEOCODING,CRS_CONFIRMATION,LICENSE_PROVENANCE,PATCH_MANIFEST_REVIEW,SENTINEL_TEMPORAL_SEARCH,REVIEW_GATE,PHENOMENON_SEPARATION,INDEPENDENT_CORROBORATION",Tipo de dependência metodológica
 dependency_description,string,true,,Descrição específica da dependência para este evento
 required_before_overlay,string,true,"true,false",Esta dependência deve ser resolvida antes de qualquer overlay patch-level
 required_before_human_review,string,true,"true,false",Esta dependência deve ser resolvida antes de revisão humana formal

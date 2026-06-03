@@ -1,6 +1,9 @@
 field_name,field_type,description
 composite_candidate_id,string,ID único do candidato
-candidate_asset_name,string,Nome do arquivo vetorial
+candidate_asset_name,string,Alias técnico público da camada
+source_layer_alias,string,Alias técnico público
+source_layer_display_name,string,Nome público/conceitual
+source_layer_original_name,string,Nome original bruto preservado para proveniência
 region,string,"Região (PET, REC, CTB)"
 event_id,string,ID do evento (REGION_YYYY_MM_DD)
 source_institution,string,"Instituição fonte (SGB, CPRM, etc)"

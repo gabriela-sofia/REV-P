@@ -1,6 +1,9 @@
 field_name,field_type,description
 provenance_id,string,ID único de proveniência
-candidate_asset_name,string,Arquivo vetorial auditado
+candidate_asset_name,string,Alias técnico público da camada auditada
+source_layer_alias,string,Alias técnico público
+source_layer_display_name,string,Nome público/conceitual
+source_layer_original_name,string,Nome original bruto preservado para proveniência
 source_field_value,string,Valor do campo FONTE no DBF
 source_method,string,Método de produção documentado
 source_institution,string,Instituição inferida

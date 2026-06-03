@@ -126,7 +126,7 @@ SEARCH_TERMS_HYDRO = [
     "cheia", "transbordamento", "flood", "drenagem",
 ]
 SEARCH_TERMS_MASS = [
-    "deslizamento", "escorregamento", "cicatriz", "corrida de massa",
+    "deslizamento", "escorregamento", "feição de deslizamento", "corrida de massa",
     "movimento de massa", "landslide",
 ]
 SEARCH_TERMS_EVENT = [
@@ -377,15 +377,15 @@ RIGEO_KNOWN_ITEMS = [
         "id": "RIGEO_PET_002",
         "region": "PET",
         "event_id": "PET_2022_02_15",
-        "search_term": "cicatriz deslizamento Petropolis 2022",
+        "search_term": "feição de deslizamento deslizamento Petropolis 2022",
         "query_url": "https://rigeo.sgb.gov.br/handle/doc/22668",
         "dataset_title": "SIG pos-desastre Petropolis 2022 -- SGB/CPRM",
         "dataset_url": "https://rigeo.sgb.gov.br/handle/doc/22668",
-        "resource_name": "Cicatriz_Area_A.shp (no ZIP SIG)",
+        "resource_name": "PET_CPRM_DESLIZAMENTO_AREA_FOTOINTERPRETADA (no ZIP SIG)",
         "resource_url": "https://rigeo.sgb.gov.br/handle/doc/22668",
         "resource_format": "SHP",
         "notes": (
-            "Shapefiles de cicatriz auditados localmente em v1ih. "
+            "Shapefiles de feição de deslizamento auditados localmente em v1ih. "
             "444 feicoes de deslizamento. Sem campo de data de evento. "
             "Auditado em v1ih como PET_LOCAL_005: BLOCKED_NO_DATE."
         ),
@@ -398,7 +398,7 @@ RIGEO_KNOWN_ITEMS = [
         "phenomenon_separable": "YES",
         "patch_level_candidate": "UNKNOWN",
         "classification_status": "BLOCKED_NO_DATE",
-        "blocking_reason": "gate_04_no_event_date; cicatrizes_cumulativas_sem_data_especifica",
+        "blocking_reason": "gate_04_no_event_date; feicoes_deslizamento_cumulativas_sem_data_especifica",
         "next_repository_action": (
             "Buscar metadados de levantamento em catalogo SGB/CPRM. "
             "Verificar se ha versao datada ou produto pos-2022-02-15."
@@ -425,7 +425,7 @@ def scan_rigeo() -> tuple[List[RepositoryCandidateRecord], RepositoryScanLogReco
         institution="SGB/CPRM",
         base_url="https://rigeo.sgb.gov.br",
         scan_mode="known_items + metadata_search",
-        search_terms_used="petropolis; 2022; cicatriz; inundacao; deslizamento",
+        search_terms_used="petropolis; 2022; feição de deslizamento; inundacao; deslizamento",
         scan_timestamp=datetime.now(timezone.utc).isoformat(),
     )
 
@@ -780,7 +780,7 @@ DADOS_RJ_CANDIDATES = [
         "id": "DADOS_RJ_001",
         "region": "PET",
         "event_id": "PET_2022_02_15",
-        "search_term": "Petropolis DRM carta risco cicatriz deslizamento 2022",
+        "search_term": "Petropolis DRM carta risco feição de deslizamento deslizamento 2022",
         "dataset_title": "DRM-RJ -- Cartas de Risco e Mapeamentos Geologicos (Petropolis)",
         "dataset_url": "http://www.drm.rj.gov.br/index.php/downloads/category/10-mapas-de-suscetibilidade-a-movimentos-de-massa",
         "resource_name": "Cartas DRM-RJ -- PDFs e SHPs (catalogo nao confirmado publicamente)",
@@ -833,7 +833,7 @@ def scan_dados_rj() -> tuple[List[RepositoryCandidateRecord], RepositoryScanLogR
         institution="Governo RJ / DRM-RJ",
         base_url="https://dados.rj.gov.br",
         scan_mode="portal_search + known_items",
-        search_terms_used="Petropolis; DRM; carta risco; cicatriz; inundacao; 2022",
+        search_terms_used="Petropolis; DRM; carta risco; feição de deslizamento; inundacao; 2022",
         scan_timestamp=datetime.now(timezone.utc).isoformat(),
     )
 

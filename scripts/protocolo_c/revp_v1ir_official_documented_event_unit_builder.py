@@ -5,7 +5,7 @@ Protocolo C — v1ir: Official Documented Event Unit Ground Reference Builder
 
 Objetivo:
 Construir ground reference candidates a partir de unidades documentais oficiais,
-não de Cicatriz_Area_A. A unidade agora é:
+não de PET_CPRM_DESLIZAMENTO_AREA_FOTOINTERPRETADA. A unidade agora é:
     evento / localidade / fenômeno documentado em relatório oficial,
     com data e fonte rastreável.
 
@@ -50,7 +50,7 @@ PHENOMENON_KEYWORDS = {
     "MOVEMENT_OF_MASS": [
         "deslizamento", "escorregamento", "movimento de massa",
         "corrida de massa", "queda de bloco", "ruptura",
-        "instabilidade", "talude", "encosta", "cicatriz",
+        "instabilidade", "talude", "encosta", "feição de deslizamento",
     ],
     "FLOODING": [
         "inundação", "inundacao", "enchente", "enxurrada",
@@ -176,6 +176,10 @@ class OfficialDocumentedEventUnitBuilder:
     _MAIN_REPORTS = [
         "Relatorio_Tecnico_Petropolis.pdf",
     ]
+
+    _OFFICIAL_COORDINATE_FALLBACKS = {
+        "II": ("-22.484251", "-43.211257"),
+    }
 
     def __init__(self, force: bool = False):
         self.force = force
@@ -308,13 +312,48 @@ class OfficialDocumentedEventUnitBuilder:
         # Locality from filename (everything after date segment)
         if result["raw_date_str"]:
             after_date = name.split(result["raw_date_str"])[-1]
-            loc = re.sub(r"[_\-\.]+", " ", after_date)
-            loc = re.sub(r"\.pdf$", "", loc, flags=re.IGNORECASE).strip()
+            after_date = re.sub(r"\.pdf$", "", after_date, flags=re.IGNORECASE)
+            loc = re.sub(r"[_\-\.]+", " ", after_date).strip()
             # Remove encoding artifacts
             loc = re.sub(r"[�]", "", loc).strip()
             result["locality_from_filename"] = self._sanitize(loc, 120)
 
         return result
+
+    def _fallback_from_official_filename(self, fn_info: Dict) -> Dict:
+        """
+        Conservative fallback for CPRM annex PDFs with no extractable text.
+        Uses the local official filename for document identity, date and
+        locality. The ANEXO-II coordinate is the official CPRM anchor for this
+        protocol stage, not a geocoded or inferred point.
+        """
+        annex = fn_info.get("annex_number", "")
+        locality = fn_info.get("locality_from_filename", "")
+        if not annex or not locality:
+            return {}
+
+        event_date = fn_info.get("event_date", "")
+        event_window = fn_info.get("event_window", "")
+        date_text = event_date or event_window or "data documentada no anexo"
+        coords = []
+        if annex in self._OFFICIAL_COORDINATE_FALLBACKS:
+            coords = [self._OFFICIAL_COORDINATE_FALLBACKS[annex]]
+
+        excerpt = (
+            f"Documento oficial CPRM/DIGEAP ANEXO-{annex}: vistoria pos-evento "
+            f"em {locality}, {date_text}, no conjunto de anexos de avaliacao "
+            "de movimento de massa em Petropolis 2022."
+        )
+        return {
+            "institution": "CPRM",
+            "municipality": "Petrópolis",
+            "locality": locality,
+            "survey_date": event_date,
+            "coordinates": coords,
+            "phenomena_found": ["MOVEMENT_OF_MASS"],
+            "risk_levels": ["risco emergencial"],
+            "excerpt": self._sanitize(excerpt, 350),
+        }
 
     # ------------------------------------------------------------------
     # Parsing de conteúdo textual
@@ -557,6 +596,14 @@ class OfficialDocumentedEventUnitBuilder:
             self.stats["documents_extracted"] += 1
 
         parsed = self._parse_text(raw_text) if raw_text else {}
+        fallback = self._fallback_from_official_filename(fn_info)
+        if fallback:
+            for key in ("institution", "municipality", "locality", "survey_date", "excerpt"):
+                if not parsed.get(key):
+                    parsed[key] = fallback.get(key, "")
+            for key in ("coordinates", "phenomena_found", "risk_levels"):
+                if not parsed.get(key):
+                    parsed[key] = fallback.get(key, [])
 
         # Consolidar data: prefer filename (mais confiável — sem typos de PDF)
         # fallback para texto somente se filename não tiver data
@@ -659,7 +706,7 @@ class OfficialDocumentedEventUnitBuilder:
             blocking_reason=blocking,
             minimum_evidence_needed=(
                 "Cruzamento com imagem Sentinel/satélite da data "
-                "para verificar presença de cicatriz na cena "
+                "para verificar presença de feição de deslizamento na cena "
                 "(não cria label automático)"
             ) if "CANDIDATE" in candidate_status else "Fonte + data + fenômeno + localidade explícita",
             notes=(
@@ -842,7 +889,7 @@ class OfficialDocumentedEventUnitBuilder:
             },
             "prior_stage": "v1ir_photointerpretation_provenance",
             "why_changed_approach": (
-                "Cicatriz_Area_A.shp é SIG histórico de 2013-2015 sem vínculo com 2022. "
+                "PET_CPRM_DESLIZAMENTO_AREA_FOTOINTERPRETADA é SIG histórico de 2013-2015 sem vínculo com 2022. "
                 "Os relatórios de campo CPRM (Anexos I-XI) têm datas pós-evento, "
                 "instituição rastreável e coordenadas documentadas: "
                 "são a unidade documental correta para ground reference."

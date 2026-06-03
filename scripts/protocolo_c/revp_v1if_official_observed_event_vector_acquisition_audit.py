@@ -195,7 +195,7 @@ SUSCEPTIBILITY_KEYWORDS = {
 OBSERVED_KEYWORDS = {
     "ocorr", "event", "afet", "impact", "damage",
     "inund", "alaga", "enxurr", "transbord", "flood",
-    "desliz", "escorr", "cicatriz", "scar", "desastre",
+    "desliz", "escorr", "feição de deslizamento", "landslide feature", "desastre",
     "pos_desastre", "pos-desastre", "avaliacao",
 }
 
@@ -207,7 +207,7 @@ HYDRO_KEYWORDS = {
 
 # Palavras que indicam movimento de massa
 MASS_MOVEMENT_KEYWORDS = {
-    "desliz", "escorr", "cicatriz", "scar", "corrida",
+    "desliz", "escorr", "feição de deslizamento", "landslide feature", "corrida",
     "landslide", "mass_movement", "debris", "mudflow",
     "queda", "fall", "colapso",
 }

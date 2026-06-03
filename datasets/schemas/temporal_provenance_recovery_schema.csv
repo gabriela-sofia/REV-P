@@ -4,7 +4,7 @@ consolidated_candidate_id,string,Referencia para candidato consolidado,V1IF_NNN;
 source_candidate_id,string,ID original no registry de origem,qualquer,YES,ID interno da fonte original
 region,string,Regiao geografica,PET; REC; CTB; outras,YES,Sigla de regiao
 event_id,string,ID canonico do evento,PET_2022_02_15; REC_2022_05_24_30,YES,ID do evento-alvo
-asset_name,string,Nome do ativo/arquivo,Cicatriz_Area_A.shp; etc,YES,Asset revisado
+asset_name,string,Nome do ativo/arquivo,PET_CPRM_DESLIZAMENTO_AREA_FOTOINTERPRETADA; etc,YES,Asset revisado
 asset_format,string,Formato original,SHP; GeoJSON; GPKG; etc,YES,Formato versionado
 geometry_available,string,Geometria presente,YES; NO; PARTIAL,YES,De v1ij
 crs,string,Sistema de referencia,EPSG:4326; EPSG:31983; vazio,YES,De v1ij

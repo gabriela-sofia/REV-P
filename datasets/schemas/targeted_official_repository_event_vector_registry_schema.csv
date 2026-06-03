@@ -4,7 +4,7 @@ repository_name,string,true,Nome do repositório,,RIGeo; CKAN Recife; GeoCuritib
 institution,string,true,Instituição responsável,,SGB/CPRM; Prefeitura Recife; IPPUC; etc
 region,string,true,Região alvo,PET;REC;CTB,
 event_id,string,false,Evento alvo para vínculo temporal,,Ex: PET_2022_02_15
-search_term,string,true,Termo de busca usado,,inundacao; alagamento; cicatriz; etc
+search_term,string,true,Termo de busca usado,,inundacao; alagamento; feição de deslizamento; etc
 query_url_or_api,string,true,URL de consulta ou endpoint API,,https://dados.recife.pe.gov.br/api/3/...
 dataset_title,string,true,Título oficial do dataset/pacote no repositório,,
 dataset_url,string,true,URL do dataset no repositório,,

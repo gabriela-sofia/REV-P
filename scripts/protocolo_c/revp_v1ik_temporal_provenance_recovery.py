@@ -6,7 +6,7 @@ v1ik -- Auditoria de Proveniencia Temporal para Candidatos Vetoriais Bloqueados
 Objetivo:
     Recuperar e auditar proveniencia temporal dos candidatos vetoriais bloqueados,
     especialmente aqueles com geometria/fenomeno/CRS mas sem data documentada
-    (ex: Cicatriz_Area_A.shp, Cicatriz_Ponto_P.shp).
+    (ex: PET_CPRM_DESLIZAMENTO_AREA_FOTOINTERPRETADA, camada original de pontos de feições de deslizamento fotointerpretadas).
 
     Usar APENAS evidencia local, sidecars, metadados, documentacao publica
     ja baixada, registries existentes. Nao inferir data. Nao aceitar pistas fracas.
@@ -17,7 +17,7 @@ Modos de operacao:
     --scan-sidecars                  -- busca sidecars locais (.prj, .xml, .dbf)
     --scan-registries                -- consulta registries v1if/v1ii
     --scan-local-docs                -- consulta documentacao versionada
-    --focus-best-candidates          -- prioriza Cicatriz_Area_A.shp, Cicatriz_Ponto_P.shp
+    --focus-best-candidates          -- prioriza PET_CPRM_DESLIZAMENTO_AREA_FOTOINTERPRETADA, camada original de pontos de feições de deslizamento fotointerpretadas
     --emit-temporal-decision-matrix  -- gera matriz de decisao temporal
 
 Invariantes permanentes:
@@ -69,7 +69,7 @@ EVENTS_TARGET: Dict[str, Dict] = {
 
 # Candidatos prioritarios
 PRIORITY_CANDIDATES = {
-    "Cicatriz_Area_A.shp",
+    "PET_CPRM_DESLIZAMENTO_AREA_FOTOINTERPRETADA",
     "Cicatriz_Ponto_P.shp",
 }
 
@@ -195,7 +195,7 @@ class TemporalProvenanceAuditor:
         """Verificar se candidato eh prioritario.
 
         Priorizar:
-        1. Nomes conhecidos (Cicatriz_Area_A, Cicatriz_Ponto_P)
+        1. Nomes conhecidos (PET_CPRM_DESLIZAMENTO_AREA_FOTOINTERPRETADA, camada de pontos de feições de deslizamento fotointerpretadas)
         2. OU candidatos com: geometria YES, CRS presente, fenômeno,
            observed_not_risk YES, bloqueado por data (gate_04/gate_05)
         """
@@ -227,7 +227,7 @@ class TemporalProvenanceAuditor:
 
         # Procurar sidecars com padroes simples em nomes conhecidos
         # Simulando busca local sem alterar filesystem
-        if "Cicatriz_Area_A" in asset_name:
+        if "PET_CPRM_DESLIZAMENTO_AREA_FOTOINTERPRETADA" in asset_name:
             self.sidecar_log.append(f"Busca simulada por sidecars de {asset_name}")
 
         return evidences
@@ -264,8 +264,8 @@ class TemporalProvenanceAuditor:
                     reader = csv.DictReader(f)
                     for row in reader:
                         if asset_name in row.get("resource_name", "") or \
-                           "Cicatriz" in row.get("notes", ""):
-                            self.registry_log.append(f"Registry v1ii: {asset_name} ou cicatrizes encontrados")
+                           "feição de deslizamento" in row.get("notes", ""):
+                            self.registry_log.append(f"Registry v1ii: {asset_name} ou feições de deslizamento encontrados")
 
             except Exception as e:
                 self.qa_log.append(f"WARN: Failed to scan v1ii registry: {str(e)[:80]}")
@@ -284,7 +284,7 @@ class TemporalProvenanceAuditor:
         # Termos a procurar
         search_terms = [
             asset_name.replace(".shp", ""),
-            "cicatriz",
+            "feição de deslizamento",
             "deslizamento",
             region.lower() if region else "",
             "2022",

@@ -3,7 +3,7 @@ requirement_id,string,true,,Identificador único do requisito (ex: REQ_REC_2021_
 dossier_id,string,true,,Referência ao dossier_id em event_evidence_dossier_registry.csv
 region,string,true,"RECIFE,PETROPOLIS,CURITIBA,METHOD_REFERENCE",Região do REV-P
 candidate_event_name,string,true,,Nome descritivo do evento candidato
-requirement_type,string,true,"EVENT_CONFIRMATION,TEMPORAL_EVIDENCE,SPATIAL_EVIDENCE,SOURCE_TRACEABILITY,SOURCE_STRENGTH,UNCERTAINTY_DOCUMENTATION,LICENSE_PROVENANCE,PATCH_RELATION,HUMAN_REVIEW,INDEPENDENT_CORROBORATION,PROMOTION_DECISION",Tipo de requisito de evidência
+requirement_type,string,true,"EVENT_CONFIRMATION,TEMPORAL_EVIDENCE,SPATIAL_EVIDENCE,SOURCE_TRACEABILITY,SOURCE_STRENGTH,UNCERTAINTY_DOCUMENTATION,LICENSE_PROVENANCE,PATCH_RELATION,REVIEW_GATE,INDEPENDENT_CORROBORATION,PROMOTION_DECISION",Tipo de requisito de evidência
 required_evidence,string,true,,Descrição da evidência específica necessária para satisfazer este requisito
 target_gate,string,true,,Gate do Protocolo C que este requisito endereça (ex: G1_EVENT_CONFIRMATION)
 required_source_strength,string,true,"DIRECT_OBSERVATION,OFFICIAL_DOCUMENTATION,EXPERT_ANNOTATION,OPERATIONAL_ALGORITHMIC,MODELLED_CONTEXT,STRUCTURAL_CONTEXT,METHOD_REFERENCE_ONLY",Força mínima de fonte necessária para satisfazer o requisito

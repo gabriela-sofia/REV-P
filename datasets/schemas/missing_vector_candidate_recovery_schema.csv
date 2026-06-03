@@ -1,6 +1,6 @@
 field_name,field_type,description,allowed_values,mandatory,notes
 missing_candidate_id,string,ID único de candidato missing,,YES,
-target_name,string,Nome-alvo procurado,,YES,Ex: Cicatriz_Ponto_P.shp
+target_name,string,Nome-alvo procurado,,YES,Ex: camada original de pontos de feições de deslizamento fotointerpretadas
 target_reason,string,Razão de estar missing,,YES,Por que não entrou na consolidação
 found_status,string,Status de localização,FOUND;NOT_FOUND;FOUND_INCOMPLETE,YES,
 found_as_asset_name,string,Nome do ativo encontrado,,NO,Se FOUND
