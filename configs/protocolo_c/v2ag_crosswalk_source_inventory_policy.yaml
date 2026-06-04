@@ -1,0 +1,18 @@
+protocol_version: v2ag
+policy: sentinel_date_crosswalk_source_inventory
+scan_roots:
+  - datasets
+  - configs
+  - docs
+versionable_extensions:
+  - csv
+  - json
+  - yaml
+  - yml
+excluded_non_versionable_roots:
+  - local working outputs
+  - raw run outputs
+required_guardrails:
+  crosswalk_inferred: false
+  sentinel_date_inferred: false
+  raw_data_versioned: false

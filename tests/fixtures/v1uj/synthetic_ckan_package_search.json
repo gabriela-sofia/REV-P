@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "result": {
+    "count": 2,
+    "results": [
+      {
+        "id": "pkg-alagamento-recife-2022",
+        "title": "Ocorrencias de Alagamento Recife 2022 - SEDEC",
+        "notes": "Registros de ocorrencias de alagamento e inundacao em Recife, maio 2022.",
+        "resources": [
+          {
+            "id": "res-001",
+            "name": "ocorrencias_alagamento_2022.geojson",
+            "format": "GeoJSON",
+            "url": "http://dados.recife.pe.gov.br/dataset/x/resource/res-001/download/ocorrencias_alagamento_2022.geojson"
+          },
+          {
+            "id": "res-002",
+            "name": "ocorrencias_alagamento_2022.csv",
+            "format": "CSV",
+            "url": "http://dados.recife.pe.gov.br/dataset/x/resource/res-002/download/ocorrencias_alagamento_2022.csv"
+          }
+        ]
+      },
+      {
+        "id": "pkg-drenagem-cadastro",
+        "title": "Cadastro de Rede de Drenagem EMLURB",
+        "notes": "Infraestrutura de drenagem urbana - cadastro geral.",
+        "resources": [
+          {
+            "id": "res-101",
+            "name": "rede_drenagem.shp.zip",
+            "format": "ZIP",
+            "url": "http://dados.recife.pe.gov.br/dataset/y/resource/res-101/download/rede_drenagem.shp.zip"
+          }
+        ]
+      }
+    ]
+  }
+}

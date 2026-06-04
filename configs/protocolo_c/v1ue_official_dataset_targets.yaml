@@ -1,0 +1,108 @@
+## v1ue — Official Dataset Targets
+## Alvos de dataset específicos por evento/ano/cidade/hazard.
+## Resolve datasets concretos, não apenas homepage.
+
+protocol_version: v1ue
+ground_truth_operational: false
+can_create_training_label: false
+
+targets:
+  - source_id: INMET_BDMEP
+    event_id: PET_2022_02_15
+    target_year: "2022"
+    target_city: Petrópolis
+    target_hazard: flood_landslide
+    query_terms: ["dados historicos", "2022", "A610", "Petropolis"]
+    candidate_urls:
+      - "https://portal.inmet.gov.br/uploads/dadoshistoricos/2022.zip"
+    dataset_type: meteorological_series_year
+    expected_format: ZIP
+
+  - source_id: INMET_BDMEP
+    event_id: PET_2024_03_21_28
+    target_year: "2024"
+    target_city: Petrópolis
+    target_hazard: flood_landslide
+    query_terms: ["dados historicos", "2024", "A610", "Petropolis"]
+    candidate_urls:
+      - "https://portal.inmet.gov.br/uploads/dadoshistoricos/2024.zip"
+    dataset_type: meteorological_series_year
+    expected_format: ZIP
+
+  - source_id: INMET_BDMEP
+    event_id: REC_2022_05_24_30
+    target_year: "2022"
+    target_city: Recife
+    target_hazard: urban_flooding
+    query_terms: ["dados historicos", "2022", "A301", "Recife"]
+    candidate_urls:
+      - "https://portal.inmet.gov.br/uploads/dadoshistoricos/2022.zip"
+    dataset_type: meteorological_series_year
+    expected_format: ZIP
+
+  - source_id: ANA_HIDROWEB
+    event_id: PET_2022_02_15
+    target_year: "2022"
+    target_city: Petrópolis
+    target_hazard: flood
+    query_terms: ["serie historica", "Piabanha", "fluviometrica", "Petropolis"]
+    candidate_urls:
+      - "https://www.snirh.gov.br/hidroweb/serieshistoricas"
+    dataset_type: hydrological_series
+    expected_format: HTML
+
+  - source_id: CEMADEN_PLUVIOMETROS
+    event_id: PET_2022_02_15
+    target_year: "2022"
+    target_city: Petrópolis
+    target_hazard: flood_landslide
+    query_terms: ["pluviometro", "Petropolis", "2022", "alerta"]
+    candidate_urls:
+      - "http://www2.cemaden.gov.br/mapainterativo/"
+    dataset_type: pluviometer_public_page
+    expected_format: HTML
+
+  - source_id: SGB_CPRM_CARTOGRAFIA
+    event_id: PET_2022_02_15
+    target_year: "2022"
+    target_city: Petrópolis
+    target_hazard: landslide_flood
+    query_terms: ["Petropolis", "2022", "pos-desastre", "setorizacao", "risco"]
+    candidate_urls:
+      - "https://rigeo.sgb.gov.br/handle/doc/discover?query=Petropolis"
+    dataset_type: geological_report
+    expected_format: HTML
+
+  - source_id: COPERNICUS_EMS
+    event_id: PET_2022_02_15
+    target_year: "2022"
+    target_city: Petrópolis
+    target_hazard: flood
+    query_terms: ["Brazil", "flood", "2022", "Petropolis", "EMSR"]
+    candidate_urls:
+      - "https://emergency.copernicus.eu/mapping/list-of-activations-rapid"
+    dataset_type: operational_mapping_activation
+    expected_format: HTML
+
+  - source_id: COPERNICUS_EMS
+    event_id: REC_2022_05_24_30
+    target_year: "2022"
+    target_city: Recife
+    target_hazard: urban_flooding
+    query_terms: ["Brazil", "flood", "2022", "Recife", "Pernambuco", "EMSR"]
+    candidate_urls:
+      - "https://emergency.copernicus.eu/mapping/list-of-activations-rapid"
+    dataset_type: operational_mapping_activation
+    expected_format: HTML
+
+  - source_id: INTERNATIONAL_CHARTER
+    event_id: PET_2022_02_15
+    target_year: "2022"
+    target_city: Petrópolis
+    target_hazard: flood_landslide
+    query_terms: ["Brazil", "flood", "landslide", "2022", "activation"]
+    candidate_urls:
+      - "https://disasterscharter.org/web/guest/activations"
+    dataset_type: charter_activation
+    expected_format: HTML
+    note: "Distinguir product vs quickview. Quickview = contextual only."

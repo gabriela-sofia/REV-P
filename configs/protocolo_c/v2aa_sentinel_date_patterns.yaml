@@ -1,0 +1,10 @@
+patterns:
+  - S2A_MSIL2A_YYYYMMDDT
+  - S2B_MSIL1C_YYYYMMDDT
+  - S1A_YYYYMMDDT
+  - S1B_YYYYMMDDT
+  - YYYYMMDDT
+  - YYYY-MM-DD
+  - YYYY_MM_DD
+reject_bare_year: true
+reject_ambiguous_multidate: true

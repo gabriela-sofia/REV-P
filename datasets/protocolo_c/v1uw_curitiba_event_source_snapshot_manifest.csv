@@ -1,0 +1,2 @@
+snapshot_id,candidate_event_id,source_id,source_url_hash,http_status,content_type,content_length,sha256,local_snapshot_hash,snapshot_status,public_official_source,notes
+SNAP_v1uw_0000,CE_v1uv_0000,curitiba_prefeitura_news,a198fb49062eae2222fd9301,FETCH_ERROR,text/html; charset=utf-8,196,fc1780f3766c0f59713f659d7ab3852763ad64013e03330cf21269a378e6cac0,08abe47b322307d4f405214f,SNAPSHOT_FALLBACK_OFFICIAL_METADATA,true,Raw snapshot stored only under local_only; path not versioned.

@@ -1,0 +1,4 @@
+protocol_version: v1us
+invent_sentinel_date_allowed: false
+auto_exclude_on_temporal_mismatch: false
+temporal_classes: [WITHIN_EVENT_WINDOW, PRE_EVENT_WINDOW, POST_EVENT_WINDOW, TEMPORAL_DISTANCE_UNKNOWN, SENTINEL_DATE_MISSING]

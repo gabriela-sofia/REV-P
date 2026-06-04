@@ -1,0 +1,2 @@
+diff_id,event_patch_candidate_id,source_version,target_version,old_outputs_modified,migration_additive
+DX,EPCX,v1us,v2ac,true,false

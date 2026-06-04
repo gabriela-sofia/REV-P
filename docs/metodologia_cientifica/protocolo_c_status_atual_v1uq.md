@@ -1,0 +1,21 @@
+# Status Atual - Protocolo C v1uq
+
+status_max=PETROPOLIS_PHENOMENON_SEPARATION_EVIDENCE_FOR_REVIEW
+PET_2022_02_15=PHENOMENON_SEPARATION_PARTIAL_TEXTUAL_NO_GEOMETRY
+PET_2024_03_21_28=DOCUMENT_ONLY_NO_GEOMETRY
+pdfs_audited=12
+pages_with_flood_signal=12
+pages_with_landslide_signal=56
+pages_with_mixed_signal=10
+recommended_next_action=v1ur - Petropolis Public Geodata Path Recovery
+ground_truth_operational=false
+can_create_ground_reference=false
+can_create_training_label=false
+can_reopen_protocol_b=false
+dino_usage=SUPPORT_ONLY
+no_overlay_executed=true
+no_coordinates_invented=true
+patch_bound_truth=false
+operational_validation=false
+public_official_discovery=true
+document_text_audit_only=true

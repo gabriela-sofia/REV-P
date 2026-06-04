@@ -1,0 +1,2 @@
+candidate_requires: [public_source, explicit_coordinate, event_window_date, hazard_term, occurrence_or_service_call_role]
+forbidden_statuses: [GROUND_REFERENCE, GROUND_TRUTH, TRAINING_LABEL, PATCH_POSITIVE, PATCH_NEGATIVE, OPERATIONAL_VALIDATED, OBSERVED_FLOOD_LABEL, FLOOD_DETECTED]

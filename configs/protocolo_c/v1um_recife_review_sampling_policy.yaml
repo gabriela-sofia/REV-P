@@ -1,0 +1,11 @@
+protocol_version: v1um
+event_id: REC_2022_05_24_30
+human_review_status: PREPARED_NOT_OPERATIONAL
+sampling:
+  deterministic: true
+  include_sample_types:
+    - high_confidence_sample
+    - diversity_sample
+    - edge_case_sample
+    - random_audit_sample
+    - full_queue_summary

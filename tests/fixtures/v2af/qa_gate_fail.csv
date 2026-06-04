@@ -1,0 +1,2 @@
+gate_id,qa_component,gate_status,failed_checks
+GATE0,OVERALL,QA_AUTOMATION_FAIL,3

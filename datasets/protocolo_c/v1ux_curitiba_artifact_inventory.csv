@@ -1,0 +1,7 @@
+inventory_id,download_id,artifact_type,extension,row_count,column_count,encoding,delimiter,feature_count,geometry_type,fields_hash,zip_member_count,inner_artifact_types,inventory_status,notes
+INV_v1ux_0000,DL_v1ux_0000,HTML,.html,,,,,,,,,,DOCUMENT_ONLY,Inventory metadata only; raw values not versioned.
+INV_v1ux_0001,DL_v1ux_0001,HTML,.html,,,,,,,,,,DOCUMENT_ONLY,Inventory metadata only; raw values not versioned.
+INV_v1ux_0002,DL_v1ux_0002,CSV,.csv,630,0,utf-8-sig,",",,,e3b0c44298fc1c149afbf4c8,,,INVENTORIED,Inventory metadata only; raw values not versioned.
+INV_v1ux_0003,DL_v1ux_0003,GeoJSON,.geojson,,,,,,,,,,INVENTORY_ERROR_JSONDecodeError,Inventory metadata only; raw values not versioned.
+INV_v1ux_0004,DL_v1ux_0004,ZIP,.zip,,,,,,,,,,INVENTORY_ERROR_BadZipFile,Inventory metadata only; raw values not versioned.
+INV_v1ux_0005,DL_v1ux_0005,PDF,.pdf,,,,,,,,,,DOCUMENT_ONLY,Inventory metadata only; raw values not versioned.

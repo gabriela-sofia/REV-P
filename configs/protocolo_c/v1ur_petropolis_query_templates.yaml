@@ -1,0 +1,4 @@
+protocol_version: v1ur
+templates:
+  - Petropolis SGB RIGeo SIG shapefile geodados
+  - Petropolis cicatriz deslizamento GeoSGB

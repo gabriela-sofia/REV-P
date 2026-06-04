@@ -1,0 +1,7 @@
+explicit_key_fields: [patch_id, patch_uid, source_patch_id, anchor_patch_id, refpatch_id, visual_patch_id, event_patch_id]
+use_region_as_crosswalk: false
+use_row_order_as_crosswalk: false
+use_score_or_dino_as_crosswalk: false
+use_date_as_crosswalk: false
+use_name_similarity_as_crosswalk: false
+crosswalk_inferred: false

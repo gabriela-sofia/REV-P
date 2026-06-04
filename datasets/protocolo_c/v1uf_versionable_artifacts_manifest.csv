@@ -1,0 +1,35 @@
+artifact_path,artifact_type,stage,versionable,contains_raw_data,contains_sensitive_data,notes
+scripts/protocolo_c/revp_v1uf_station_resolved_acquisition.py,script,v1uf,true,false,false,Aquisição streaming allowlisted; salva ZIP só em local_only
+scripts/protocolo_c/revp_v1uf_inmet_zip_selective_extractor.py,script,v1uf,true,false,false,Extração seletiva por estação; bloqueia path traversal
+scripts/protocolo_c/revp_v1uf_official_station_catalog_resolver.py,script,v1uf,true,false,false,Resolve coordenada só de catálogo oficial; nunca inventa
+scripts/protocolo_c/revp_v1uf_hydromet_window_metrics.py,script,v1uf,true,false,false,Métricas de precipitação por janela
+scripts/protocolo_c/revp_v1uf_station_evidence_integrity_audit.py,script,v1uf,true,false,false,8 checks de integridade por asset
+scripts/protocolo_c/revp_v1uf_event_hydromet_scorecard.py,script,v1uf,true,false,false,Scorecard hidromet + gate delta + next actions + relatório
+configs/protocolo_c/v1uf_large_official_download_policy.yaml,config,v1uf,true,false,false,Política de download maior allowlisted (até 150MB)
+configs/protocolo_c/v1uf_station_catalog_sources.yaml,config,v1uf,true,false,false,Fontes de catálogo oficial de estações
+configs/protocolo_c/v1uf_station_target_binding.yaml,config,v1uf,true,false,false,Vínculo estação-alvo por evento
+configs/protocolo_c/v1uf_hydromet_metrics_policy.yaml,config,v1uf,true,false,false,Política de parsing e métricas hidromet
+datasets/protocolo_c/v1uf_large_download_manifest.csv,dataset_derived,v1uf,true,false,false,Manifesto de download (hashes e tamanhos; sem path absoluto)
+datasets/protocolo_c/v1uf_official_station_catalog_registry.csv,dataset_derived,v1uf,true,false,false,Coordenadas oficiais com proveniência (URL+SHA do catálogo)
+datasets/protocolo_c/v1uf_station_binding_registry.csv,dataset_derived,v1uf,true,false,false,Vínculo estação-evento
+datasets/protocolo_c/v1uf_station_series_asset_registry.csv,dataset_derived,v1uf,true,false,false,Metadados dos assets extraídos (hash; caminho como hash, não absoluto)
+datasets/protocolo_c/v1uf_hydromet_window_metrics_registry.csv,dataset_derived,v1uf,true,false,false,Métricas agregadas de precipitação por janela
+datasets/protocolo_c/v1uf_station_evidence_integrity_registry.csv,dataset_derived,v1uf,true,false,false,Resultado dos checks de integridade
+datasets/protocolo_c/v1uf_event_hydromet_scorecard.csv,dataset_derived,v1uf,true,false,false,Scorecard hidromet por evento
+datasets/protocolo_c/v1uf_gate_delta_registry.csv,dataset_derived,v1uf,true,false,false,Delta de gates v1ue->v1uf
+datasets/protocolo_c/v1uf_next_actions_registry.csv,dataset_derived,v1uf,true,false,false,Próximas ações concretas por evento
+datasets/protocolo_c/v1uf_versionable_artifacts_manifest.csv,dataset_derived,v1uf,true,false,false,Este manifesto
+datasets/protocolo_c/v1ue_acceptance_audit.csv,dataset_derived,v1uf,true,false,false,Auditoria de aceitação da v1ue (16/17 PASS)
+docs/metodologia_cientifica/protocolo_c_v1uf_station_resolved_acquisition.md,doc,v1uf,true,false,false,Metodologia v1uf
+docs/metodologia_cientifica/protocolo_c_relatorio_v1uf_station_resolved_acquisition.md,doc,v1uf,true,false,false,Relatório gerado v1uf
+docs/metodologia_cientifica/protocolo_c_v1uf_completion_handoff.md,doc,v1uf,true,false,false,Handoff de conclusão v1uf
+docs/metodologia_cientifica/protocolo_c_status_atual_v1uf.md,doc,v1uf,true,false,false,Resumo público de status
+docs/metodologia_cientifica/protocolo_c_v1ue_acceptance_audit.md,doc,v1uf,true,false,false,Auditoria de aceitação v1ue
+tests/test_revp_v1uf_inmet_zip_selective_extractor.py,test,v1uf,true,false,false,Testes do extractor seletivo
+tests/test_revp_v1uf_official_station_catalog_resolver.py,test,v1uf,true,false,false,Testes do resolver de catálogo
+tests/test_revp_v1uf_hydromet_window_metrics.py,test,v1uf,true,false,false,Testes das métricas hidromet
+tests/test_revp_v1uf_station_evidence_integrity_audit.py,test,v1uf,true,false,false,Testes do integrity audit
+tests/test_revp_v1uf_event_hydromet_scorecard.py,test,v1uf,true,false,false,Testes do scorecard
+local_only/protocolo_c/evidence_raw/v1uf/INMET_BDMEP/,raw_zip_dir,v1uf,false,true,false,ZIPs INMET anuais brutos (90-102MB) — NUNCA versionar; git-ignored
+local_only/protocolo_c/evidence_staging/v1uf/inmet/,extracted_series_dir,v1uf,false,true,false,CSVs de estação extraídos — NUNCA versionar; git-ignored
+local_only/protocolo_c/evidence_raw/v1uf/INMET_BDMEP/_catalog/,raw_catalog_dir,v1uf,false,true,false,Catálogo JSON de estações INMET bruto — NUNCA versionar; git-ignored

@@ -1,0 +1,57 @@
+## v1ui — Allowed Domains for Public Artifact Discovery
+## Somente dominios oficiais publicos.
+
+protocol_version: v1ui
+
+allowed_domains:
+  federal:
+    - sgb.gov.br
+    - rigeo.sgb.gov.br
+    - geosgb.sgb.gov.br
+    - cemaden.gov.br
+    - www2.cemaden.gov.br
+    - dados.gov.br
+    - ana.gov.br
+    - snirh.gov.br
+    - inmet.gov.br
+    - apitempo.inmet.gov.br
+    - bdmep.inmet.gov.br
+    - ibge.gov.br
+
+  estadual_rj:
+    - drm.rj.gov.br
+    - www.drm.rj.gov.br
+    - defesacivil.rj.gov.br
+    - www.defesacivil.rj.gov.br
+    - inea.rj.gov.br
+
+  estadual_pe:
+    - defesacivil.pe.gov.br
+    - www.defesacivil.pe.gov.br
+
+  municipal_petropolis:
+    - petropolis.rj.gov.br
+    - www.petropolis.rj.gov.br
+
+  municipal_recife:
+    - dados.recife.pe.gov.br
+    - recife.pe.gov.br
+    - www.recife.pe.gov.br
+    - emlurb.recife.pe.gov.br
+    - www.emlurb.recife.pe.gov.br
+
+  internacional:
+    - emergency.copernicus.eu
+    - www.disasterscharter.org
+
+blocked_domains:
+  - google.com
+  - maps.google.com
+  - facebook.com
+  - twitter.com
+  - instagram.com
+  - youtube.com
+  - tiktok.com
+  - reddit.com
+  - linkedin.com
+  - wikipedia.org

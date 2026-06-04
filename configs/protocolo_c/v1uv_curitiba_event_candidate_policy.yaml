@@ -1,0 +1,3 @@
+strong_candidate_requires: [official_source, date_or_window, Curitiba, hazard, traceable_url]
+max_status: CURITIBA_PUBLIC_EVENT_CANDIDATE_FOR_REVIEW
+ground_truth_allowed: false

@@ -1,0 +1,6 @@
+protocol_version: v1up
+risk_or_susceptibility_is_context_only: true
+pdf_without_vector_is_document_only: true
+quickview_promotes: false
+geocode_textual_locality: false
+infer_coordinates: false

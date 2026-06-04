@@ -1,0 +1,4 @@
+blocker_id,event_id,gate,gate_status,blocking_reason,ground_truth_operational,can_create_ground_reference,can_create_training_label,can_reopen_protocol_b,dino_usage,no_overlay_executed,no_coordinates_invented,patch_bound_truth,operational_validation,event_registry_candidate_only,public_official_discovery,geocoding_executed,centroid_used,notes
+GB_v1uv_0000,CUR_2022_01_15,ground_reference,BLOCKED,event candidate is public-source review only,false,false,false,false,SUPPORT_ONLY,true,true,false,false,true,true,false,false,v1uv guardrail.
+GB_v1uv_0001,CUR_2022_01_15,overlay,BLOCKED,no overlay or patch intersection executed,false,false,false,false,SUPPORT_ONLY,true,true,false,false,true,true,false,false,v1uv guardrail.
+GB_v1uv_0002,CUR_2022_01_15,training_label,BLOCKED,candidate event cannot create labels,false,false,false,false,SUPPORT_ONLY,true,true,false,false,true,true,false,false,v1uv guardrail.

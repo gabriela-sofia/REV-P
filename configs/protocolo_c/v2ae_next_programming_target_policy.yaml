@@ -1,0 +1,5 @@
+ranking: score_based_not_hardcoded
+programming_weight: 0.5
+blocker_reduction_weight: 0.5
+effort_penalty: {LOW: 0, MEDIUM: 5, HIGH: 15}
+overclaim_penalty: {LOW: 0, MEDIUM: 10, HIGH: 25}

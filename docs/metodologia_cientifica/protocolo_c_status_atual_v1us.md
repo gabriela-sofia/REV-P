@@ -1,0 +1,20 @@
+# Status Atual - Protocolo C v1us
+
+status_max=EVENT_PATCH_PACKAGE_CANDIDATE_NON_OPERATIONAL
+patches_resolved=167
+event_patch_candidates=172
+recife_status=REC_2022_05_24_30=CANDIDATE_NON_OPERATIONAL
+petropolis_status=PET_2022_02_15=CANDIDATE_NON_OPERATIONAL; PET_2024_03_21_28=CANDIDATE_NON_OPERATIONAL
+curitiba_status=CUR_EVENT_REGISTRY_MISSING=BLOCKED_NO_CLEAR_EVENT
+dino_review_support_available=171
+recommended_next_action=v1ut - Recife Coordinate Recovery from Public CKAN
+ground_truth_operational=false
+can_create_ground_reference=false
+can_create_training_label=false
+can_reopen_protocol_b=false
+dino_usage=SUPPORT_ONLY
+no_overlay_executed=true
+no_coordinates_invented=true
+patch_bound_truth=false
+operational_validation=false
+event_patch_linkage_candidate_only=true

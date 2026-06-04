@@ -1,0 +1,2 @@
+prohibited_uses: [ground_reference, ground_truth, training_label, patch_truth, observed_occurrence, overlay_truth]
+safe_uses: [territorial_context, source_cataloging, future_manual_review_context]

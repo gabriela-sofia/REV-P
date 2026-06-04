@@ -1,0 +1,1 @@
+{"layers":[{"id":0,"name":"Petropolis cicatriz deslizamento campo","geometryType":"esriGeometryPolygon","fields":[{"name":"data"},{"name":"fenomeno"}],"extent":{"spatialReference":{"wkid":4326}}},{"id":1,"name":"Suscetibilidade risco geologico","geometryType":"esriGeometryPolygon","fields":[{"name":"classe"}],"extent":{"spatialReference":{"wkid":4674}}}]}

@@ -1,0 +1,4 @@
+protocol_version: v1up
+flood_terms: [inundacao, alagamento, enchente, enxurrada, transbordamento, flood]
+landslide_terms: [deslizamento, movimento de massa, escorregamento, cicatriz, landslide]
+context_terms: [risco, suscetibilidade, susceptibility]

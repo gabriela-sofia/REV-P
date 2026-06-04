@@ -1,0 +1,31 @@
+metric,value,notes
+execution_mode,LIVE_ALLOW_WEB,--allow-web --download
+execution_date,2026-06-03,
+sources_configured,10,SGB/CPRM/DRM-RJ/Petropolis/Recife/Cemaden/dados.gov.br/Copernicus/DefesaCivilRJ
+discoveries_registered,23,HEAD_PROBE para cada fonte x evento
+sources_http_200,21,responderam com sucesso
+sources_http_fail,2,DRM_RJ_PORTAL e EMLURB_RECIFE (timeout/SSL)
+links_crawled,497,depth 1-2 em portais permitidos
+links_candidate,16,todos PDFs genericos
+arcgis_geoserver_probed,3,GeoSGB — todos FETCH_FAILED (path generico)
+artifacts_downloaded,16,33.2 MB total
+artifacts_inventoried,76,PDFs descomprimidos em subcomponentes
+geometry_candidates,0,nenhuma geometria vetorial encontrada
+geometry_with_date,0,
+geometry_with_hazard,0,
+geometry_with_crs,0,
+geometry_with_locality,0,
+gate_deltas_gain,4,PET_2022 e REC_2022: public_artifact_found + event_specificity
+gate_deltas_no_change,26,
+supervisor_review_ready,0,
+events_with_artifacts,2,PET_2022_02_15 (12 PDFs) e REC_2022_05_24_30 (4 PDFs)
+events_without_artifacts,1,PET_2024_03_21_28
+can_proceed_to_v1uj,false,insuficiente — sem geometria observada
+ground_truth_created,false,
+ground_reference_created,false,
+training_label_created,false,
+overlay_executed,false,
+coordinates_invented,false,
+raw_data_versioned,false,
+formal_request_path,LEGACY_SECONDARY_ONLY,
+next_step,DEEPEN_PUBLIC_REGIONAL_SEARCH,focar em Copernicus EMSR564/EMSR602 e GeoSGB paths especificos

@@ -1,0 +1,55 @@
+## v1uj — GeoSGB ArcGIS REST Service Targets
+## A v1ui falhou em path generico GeoSGB. Aqui aprofundamos paths REST reais/provaveis.
+## Apenas metadata de services/layers — NAO baixar features massivamente.
+
+protocol_version: v1uj
+service_type: arcgis_rest
+
+## Bases REST candidatas (reais/provaveis). Probadas com ?f=pjson.
+rest_base_urls:
+  - "https://geosgb.sgb.gov.br/arcgis/rest/services"
+  - "https://geosgb.sgb.gov.br/geosgb/rest/services"
+  - "https://geoportal.sgb.gov.br/arcgis/rest/services"
+
+## Sufixos de service que tipicamente carregam camadas
+service_suffixes:
+  - "MapServer"
+  - "FeatureServer"
+
+## Termos de relevancia para pontuar layers
+relevance_terms:
+  observed_occurrence:
+    - "ocorrencia"
+    - "ponto"
+    - "cicatriz"
+    - "deslizamento"
+    - "movimento de massa"
+    - "inundacao"
+    - "pos-desastre"
+    - "pos desastre"
+  contextual_only:
+    - "suscetibilidade"
+    - "susceptibilidade"
+    - "risco geologico"
+    - "modelagem"
+    - "carta geotecnica"
+    - "geologia"
+
+event_terms:
+  PET_2022_02_15: ["Petropolis", "Petrópolis", "Serra"]
+  PET_2024_03_21_28: ["Petropolis", "Petrópolis", "Serra"]
+  REC_2022_05_24_30: ["Recife", "Pernambuco"]
+
+institution_terms:
+  - "CPRM"
+  - "SGB"
+
+## Tipos de geometria de interesse
+geometry_types_of_interest:
+  - "esriGeometryPoint"
+  - "esriGeometryPolygon"
+  - "esriGeometryPolyline"
+
+max_services_listed: 80
+max_layers_per_service: 60
+download_features: false

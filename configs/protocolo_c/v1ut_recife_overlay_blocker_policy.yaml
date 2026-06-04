@@ -1,0 +1,5 @@
+overlay_execution_allowed: false
+preflight_only: true
+ground_truth_operational: false
+can_create_ground_reference: false
+can_create_training_label: false

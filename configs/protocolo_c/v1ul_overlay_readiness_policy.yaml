@@ -1,0 +1,6 @@
+protocol_version: v1ul
+overlay_execution_allowed: false
+geocoding_allowed: false
+centroid_allowed: false
+requires_real_coordinates_or_geometry: true
+requires_supervisor_review_before_execution: true

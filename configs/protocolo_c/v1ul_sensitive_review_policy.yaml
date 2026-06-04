@@ -1,0 +1,8 @@
+protocol_version: v1ul
+public_outputs:
+  allow_hashes: true
+  allow_flags: true
+  allow_counts: true
+  forbid_literal_address: true
+  forbid_names_phone_cpf_email: true
+  forbid_full_description: true

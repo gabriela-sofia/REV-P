@@ -1,0 +1,2 @@
+hydromet_anchor_id,candidate_event_id,source_id,source_name,station_or_product,date_window,hydromet_support_class,public_access_status,can_support_temporal_gate,can_support_occurrence_claim,can_create_ground_reference,notes
+HYDA_v1uw_0000,CE_v1uv_0000,curitiba_prefeitura_news,Prefeitura/Defesa Civil official page,Simepar|Cemaden mentioned in official source,2022-01-15,HYDROMET_ANCHOR_AVAILABLE,PUBLIC_METADATA_FROM_OFFICIAL_NOTICE,true,false,false,Hydromet anchors timing only; not an observed occurrence claim.

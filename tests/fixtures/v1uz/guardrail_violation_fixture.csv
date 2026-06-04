@@ -1,0 +1,3 @@
+row_id,status,can_create_ground_reference,can_create_training_label,ground_truth_operational,path,notes
+GV0,GROUND_TRUTH,true,true,true,C:\Users\someone\private\raw.tif,produced by claude assistant
+GV1,OCCURRENCE_GEOMETRY_VALIDATED,true,false,false,/home/user/local_only/leak.shp,FLOOD_DETECTED

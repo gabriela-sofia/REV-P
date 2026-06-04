@@ -1,0 +1,3 @@
+cemaden_record_id,event_id,source_url,title,artifact_url,artifact_name,format_hint,evidence_class,is_public,is_event_specific,is_geometry_candidate,blocking_reason,notes
+CEMADEN_v1up_0000,,https://www.gov.br/cemaden,Cemaden public portal,,,html,temporal_hydromet_support,true,false,false,HYDROMET_OR_ALERT_CONTEXT_NOT_OBSERVED_GEOMETRY,Cemaden is retained as support only unless an observed geometry artifact is explicit.
+CEMADEN_v1up_0001,PET_2022_02_15,http://www2.cemaden.gov.br/mapainterativo/#,Cemaden interactive map reference,,,html,temporal_hydromet_support,true,false,false,HYDROMET_OR_ALERT_CONTEXT_NOT_OBSERVED_GEOMETRY,Cemaden is retained as support only unless an observed geometry artifact is explicit.

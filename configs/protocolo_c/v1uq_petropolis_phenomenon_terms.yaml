@@ -1,0 +1,4 @@
+protocol_version: v1uq
+flood_terms: [inundacao, alagamento, enchente, enxurrada, transbordamento, cheia, inundado]
+landslide_terms: [deslizamento, escorregamento, movimento de massa, corrida de massa, queda de barreira, instabilidade de encosta]
+context_terms: [risco geologico, suscetibilidade]

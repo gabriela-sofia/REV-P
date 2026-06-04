@@ -1,0 +1,3 @@
+validate_against: v2ab_event_patch_schema_contract
+forbidden_values_blocked: true
+overlay_ground_reference_training_must_be_blocked: true

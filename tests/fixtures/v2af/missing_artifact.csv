@@ -1,0 +1,2 @@
+input_id,artifact_path,source_version,required,existence_status
+IN0,datasets/protocolo_c/v2ae_canonical_event_registry.csv,v2ae,true,MISSING

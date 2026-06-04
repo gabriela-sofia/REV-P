@@ -1,0 +1,3 @@
+linkage_id,patch_id,alias,region,dino_allowed_use,can_create_label
+L0,REC_00001,REC_00001,REC,REVIEW_ONLY_REPRESENTATION,false
+L1,PET_00016,PET_00016,PET,REVIEW_ONLY_REPRESENTATION,false

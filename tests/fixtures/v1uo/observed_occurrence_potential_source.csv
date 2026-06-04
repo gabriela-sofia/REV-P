@@ -1,0 +1,2 @@
+source_id,region,source_type,has_geometry,observed_occurrence,is_synthetic
+SRC_OBS_SYN,SYN,OPERATIONAL_MAPPING,true,true,true

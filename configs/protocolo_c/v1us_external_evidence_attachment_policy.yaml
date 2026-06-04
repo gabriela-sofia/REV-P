@@ -1,0 +1,5 @@
+protocol_version: v1us
+can_support_overlay: false
+can_create_ground_reference: false
+recife_evidence: locality_only_human_review
+petropolis_evidence: document_only_no_geodata

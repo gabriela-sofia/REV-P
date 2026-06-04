@@ -1,0 +1,3 @@
+protocol_version: v1uo
+adapter_schema: v1uo_common_candidate_schema
+city_specific_code_duplication_allowed: false

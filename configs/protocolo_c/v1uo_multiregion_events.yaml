@@ -1,0 +1,3 @@
+protocol_version: v1uo
+regions: [REC, PET, CUR]
+status_max: MULTI_REGION_EVIDENCE_CANDIDATE_DISCOVERY_NON_OPERATIONAL

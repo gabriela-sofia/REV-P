@@ -1,0 +1,60 @@
+## v1uf — Large Official Download Policy
+## Permite downloads oficiais maiores SOMENTE para fontes allowlisted.
+## Dado bruto NUNCA versionado; extração seletiva por estação.
+
+protocol_version: v1uf
+ground_truth_operational: false
+can_create_ground_reference: false
+can_create_training_label: false
+
+global_limits:
+  max_large_download_mb: 150
+  default_max_download_mb: 25
+  timeout_seconds: 60
+  max_retries: 2
+  retry_delay_seconds: 5
+  stream_download: true
+
+user_agent: >
+  REV-P-AcademicResearch/1.0
+  (TCC ground reference evidence acquisition; contact: academic use only)
+
+## Fontes autorizadas para download maior (allowlist estrita)
+large_download_allowed_sources:
+  - source_id: INMET_BDMEP
+    domain: portal.inmet.gov.br
+    max_download_mb: 150
+    allowed_path_prefix: "/uploads/dadoshistoricos/"
+    expected_format: ZIP
+    license_status: PUBLIC_OPEN
+    note: "ZIP anual oficial INMET. Extração seletiva por estação obrigatória."
+
+download_rules:
+  - rule: "Download maior só para source_id em large_download_allowed_sources"
+    enforcement: HARD_BLOCK
+  - rule: "INMET ZIP anual pode ter até 150MB"
+    enforcement: LIMIT
+  - rule: "Download deve ser streaming"
+    enforcement: MANDATORY
+  - rule: "Salvar somente em local_only/protocolo_c/evidence_raw/v1uf/<source_id>/<event_id>/"
+    enforcement: HARD_BLOCK
+  - rule: "Calcular SHA256 após download"
+    enforcement: MANDATORY
+  - rule: "Nunca versionar o ZIP bruto"
+    enforcement: HARD_BLOCK
+  - rule: "Se exceder limite, bloquear (REJECTED_TOO_LARGE)"
+    enforcement: HARD_BLOCK
+  - rule: "Se fonte não allowlisted, bloquear (BLOCKED_SOURCE_NOT_ALLOWED)"
+    enforcement: HARD_BLOCK
+  - rule: "Se licença desconhecida, marcar LICENSE_REVIEW_REQUIRED"
+    enforcement: MANDATORY
+  - rule: "Se download falhar, registrar status e continuar (fail-closed)"
+    enforcement: MANDATORY
+
+blocked_extensions:
+  - .exe
+  - .msi
+  - .bat
+  - .ps1
+  - .sh
+  - .dll

@@ -1,0 +1,3 @@
+geodata_audit_id,download_id,geometry_type,crs_status,feature_count,fields_hash,geodata_class,event_specificity,can_support_contextual_review,can_support_observed_occurrence,can_support_overlay_preflight,can_create_ground_reference,notes
+GEO_v1ux_0000,DL_v1ux_0003,,CRS_NOT_DECLARED_IN_METADATA,,,context layer,CONTEXT_ONLY,true,false,false,false,Geodata metadata only; no feature download beyond local artifact and no overlay.
+GEO_v1ux_0001,DL_v1ux_0004,,CRS_NOT_DECLARED_IN_METADATA,,,packaged_geodata_or_context,CONTEXT_ONLY,true,false,false,false,Geodata metadata only; no feature download beyond local artifact and no overlay.

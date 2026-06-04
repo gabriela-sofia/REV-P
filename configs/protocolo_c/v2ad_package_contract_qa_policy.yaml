@@ -1,0 +1,4 @@
+validate_against: v2ab_event_patch_schema_contract
+required_fields_must_be_present: true
+optional_null_requires_blocker: true
+max_status: EVENT_PATCH_V2_QA_HARNESS_NON_OPERATIONAL

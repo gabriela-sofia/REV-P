@@ -1,0 +1,28 @@
+contract_field_id,field_name,field_group,required,nullable,requires_blocker_if_null,allowed_values,forbidden_values,description,notes
+CF_v2ab_0000,event_patch_candidate_id,identity,true,false,true,,,Required identity field for an event-patch package.,"Required field; absence must raise a schema violation, never a silent default."
+CF_v2ab_0001,event_id,identity,true,false,true,,,Required identity field for an event-patch package.,"Required field; absence must raise a schema violation, never a silent default."
+CF_v2ab_0002,event_region,identity,true,false,true,,,Required identity field for an event-patch package.,"Required field; absence must raise a schema violation, never a silent default."
+CF_v2ab_0003,patch_id,identity,true,false,true,,,Required identity field for an event-patch package.,"Required field; absence must raise a schema violation, never a silent default."
+CF_v2ab_0004,patch_namespace,identity,true,false,true,,,Required identity field for an event-patch package.,"Required field; absence must raise a schema violation, never a silent default."
+CF_v2ab_0005,patch_source_registry,provenance,true,false,true,,,Required provenance field for an event-patch package.,"Required field; absence must raise a schema violation, never a silent default."
+CF_v2ab_0006,linkage_basis,linkage,true,false,true,,,Required linkage field for an event-patch package.,"Required field; absence must raise a schema violation, never a silent default."
+CF_v2ab_0007,linkage_status,linkage,true,false,true,,,Required linkage field for an event-patch package.,"Required field; absence must raise a schema violation, never a silent default."
+CF_v2ab_0008,event_patch_candidate_only,guardrail,true,false,true,true,,Required guardrail field for an event-patch package.,"Required field; absence must raise a schema violation, never a silent default."
+CF_v2ab_0009,sentinel_date_status,temporal,true,false,true,,,Required temporal field for an event-patch package.,"Required field; absence must raise a schema violation, never a silent default."
+CF_v2ab_0010,temporal_linkage_status,temporal,true,false,true,,,Required temporal field for an event-patch package.,"Required field; absence must raise a schema violation, never a silent default."
+CF_v2ab_0011,evidence_status,evidence,true,false,true,,,Required evidence field for an event-patch package.,"Required field; absence must raise a schema violation, never a silent default."
+CF_v2ab_0012,geometry_status,geometry,true,false,true,,,Required geometry field for an event-patch package.,"Required field; absence must raise a schema violation, never a silent default."
+CF_v2ab_0013,overlay_status,geometry,true,false,true,BLOCKED,,Required geometry field for an event-patch package.,"Required field; absence must raise a schema violation, never a silent default."
+CF_v2ab_0014,ground_reference_status,guardrail,true,false,true,BLOCKED,,Required guardrail field for an event-patch package.,"Required field; absence must raise a schema violation, never a silent default."
+CF_v2ab_0015,training_label_status,guardrail,true,false,true,BLOCKED,,Required guardrail field for an event-patch package.,"Required field; absence must raise a schema violation, never a silent default."
+CF_v2ab_0016,blocker,blocker,true,false,true,,patch_date_inferred|ground_truth|training_label,Required blocker field for an event-patch package.,"Required field; absence must raise a schema violation, never a silent default."
+CF_v2ab_0017,safe_use,use_policy,true,false,true,,,Required use_policy field for an event-patch package.,"Required field; absence must raise a schema violation, never a silent default."
+CF_v2ab_0018,prohibited_use,use_policy,true,false,true,,,Required use_policy field for an event-patch package.,"Required field; absence must raise a schema violation, never a silent default."
+CF_v2ab_0019,sentinel_scene_date,temporal,false,true,true,,patch_date_inferred,Optional temporal field; if null an explicit blocker is mandatory.,Nullable but never silently empty; a null value requires a documented blocker.
+CF_v2ab_0020,sentinel_scene_datetime,temporal,false,true,true,,patch_date_inferred,Optional temporal field; if null an explicit blocker is mandatory.,Nullable but never silently empty; a null value requires a documented blocker.
+CF_v2ab_0021,sentinel_platform,temporal,false,true,true,,patch_date_inferred,Optional temporal field; if null an explicit blocker is mandatory.,Nullable but never silently empty; a null value requires a documented blocker.
+CF_v2ab_0022,scene_id,temporal,false,true,true,,patch_date_inferred,Optional temporal field; if null an explicit blocker is mandatory.,Nullable but never silently empty; a null value requires a documented blocker.
+CF_v2ab_0023,source_patch_id,crosswalk,false,true,true,,patch_date_inferred,Optional crosswalk field; if null an explicit blocker is mandatory.,Nullable but never silently empty; a null value requires a documented blocker.
+CF_v2ab_0024,anchor_patch_id,crosswalk,false,true,true,,patch_date_inferred,Optional crosswalk field; if null an explicit blocker is mandatory.,Nullable but never silently empty; a null value requires a documented blocker.
+CF_v2ab_0025,refpatch_id,crosswalk,false,true,true,,patch_date_inferred,Optional crosswalk field; if null an explicit blocker is mandatory.,Nullable but never silently empty; a null value requires a documented blocker.
+CF_v2ab_0026,explicit_crosswalk_id,crosswalk,false,true,true,,patch_date_inferred,Optional crosswalk field; if null an explicit blocker is mandatory.,Nullable but never silently empty; a null value requires a documented blocker.

@@ -1,0 +1,4 @@
+protocol_version: v1un
+final_status: LOCALITY_ONLY_HUMAN_REVIEW_EVIDENCE_CONSOLIDATED
+can_reopen_protocol_b: false
+operational_validation: false

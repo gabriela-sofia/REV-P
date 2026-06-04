@@ -1,0 +1,3 @@
+execute_search: false
+reopen_requires_new_public_source: true
+forbidden_reopen_basis: [region, name_similarity, file_order, inferred_date, inferred_crosswalk]

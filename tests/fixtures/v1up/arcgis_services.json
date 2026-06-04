@@ -1,0 +1,6 @@
+{
+  "services": [
+    {"name": "Petropolis_2022_Pos_Desastre", "type": "MapServer"},
+    {"name": "Suscetibilidade_Movimentos_Massa", "type": "MapServer"}
+  ]
+}

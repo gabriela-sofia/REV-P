@@ -1,0 +1,7 @@
+rank,next_target,programming_value,ground_truth_value,blocker_reduction_value,expected_effort,overclaim_risk,recommended_version,recommended_action,notes
+1,EVENT_PATCH_PACKAGE_SCHEMA_HARDENING,60,0,60,LOW,LOW,v2ab — Event-Patch Package Schema Hardening,SELECTED_NEXT_TARGET,Most candidate patch ids carry no recoverable Sentinel date locally; harden the event-patch package schema to make temporal fields explicit and auditable.
+2,MULTI_REGION_REGISTRY_HARDENING,55,0,35,LOW,LOW,v2ab — Multi-Region Registry Hardening,RANKED_ALTERNATIVE,Consolidate the multi-region registries with the recovered-date evidence and the persisting no_sentinel_date blocker.
+3,PUBLIC_SOURCE_RECHECK_HOLD,20,0,25,LOW,LOW,v2ab — Public Source Recheck Hold,RANKED_ALTERNATIVE,Hold until a new public source with patch-level acquisition dates appears.
+4,SENTINEL_DATE_RECOVERY_CONTINUE,15,0,10,MEDIUM,LOW,v2ab — Sentinel Date Recovery Continue,RANKED_ALTERNATIVE,Deeper local date recovery; only worthwhile while unparsed date-bearing sources remain for the candidate patch namespace.
+5,DINO_REVIEW_SUPPORT_COMPLETION,10,0,10,MEDIUM,LOW,v2ab — DINO Review Support Completion,RANKED_ALTERNATIVE,DINO review support already attached for nearly all candidates; review-only.
+6,STOP_GROUND_TRUTH_SEARCH_UNTIL_NEW_SOURCE,10,0,0,LOW,LOW,v2ab — Ground Truth Search Hold,RANKED_ALTERNATIVE,Explicit stop on ground-truth search until a qualifying public source is published.

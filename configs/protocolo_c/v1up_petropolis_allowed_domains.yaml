@@ -1,0 +1,12 @@
+protocol_version: v1up
+allowed_domains:
+  - rigeo.sgb.gov.br
+  - geoportal.sgb.gov.br
+  - sgb.gov.br
+  - rj.gov.br
+  - petropolis.rj.gov.br
+  - gov.br
+  - global-flood.emergency.copernicus.eu
+  - copernicus.eu
+  - disasterscharter.org
+authentication_allowed: false

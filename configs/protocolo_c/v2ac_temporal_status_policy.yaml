@@ -1,0 +1,3 @@
+apply_unlinkable_date_to_candidate: false
+fill_sentinel_scene_date_only_if_same_patch_confirmed: true
+sentinel_date_inferred: false

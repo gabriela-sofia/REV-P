@@ -1,0 +1,2 @@
+action_id,next_version,action_type,priority,status,requires_explicit_crosswalk,prohibited_until_new_source,notes
+NA_v2ag_000,v2ah,STOP_GROUND_TRUTH_SEARCH_UNTIL_NEW_SOURCE,1,stop_operational_search_until_explicit_source,false,true,Next action follows v2ag discovery evidence.

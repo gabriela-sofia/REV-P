@@ -1,0 +1,18 @@
+check_id,category,check_description,result,detail
+AUD_V1UE_001,files,24 arquivos v1ue existem,PASS,24/24 presentes (6 scripts + 4 configs + 7 datasets + 2 docs + 5 testes)
+AUD_V1UE_002,windows,15 temporal windows existem,PASS,5 tipos × 3 eventos = 15
+AUD_V1UE_003,windows,Janelas coerentes (5 tipos por evento),PASS,event_core/pre_3d/pre_7d/post_3d/sentinel_link
+AUD_V1UE_004,stations,7 estações candidatas existem,PASS,7 candidatas registradas
+AUD_V1UE_005,stations,Todas estações coordinate_status=MISSING,PASS,7/7 MISSING (nenhuma coordenada inventada)
+AUD_V1UE_006,stations,Estação não é geometria de inundação,PASS,can_anchor_spatial_evidence=false em 7/7
+AUD_V1UE_007,guardrail,can_create_training_label=true ausente,PASS,0 ocorrências em CSVs v1ue
+AUD_V1UE_008,guardrail,ground_truth_operational=true ausente,PASS,0 ocorrências em CSVs v1ue
+AUD_V1UE_009,guardrail,can_create_ground_reference=true ausente,PASS,0 ocorrências em CSVs v1ue
+AUD_V1UE_010,guardrail,Nenhuma coordenada inventada,PASS,Estações sem coordenada permanecem vazias/MISSING
+AUD_V1UE_011,guardrail,Nenhum path absoluto versionável,PASS,0 ocorrências C:\Users / /home/ / D:\ em CSVs v1ue
+AUD_V1UE_012,size_block,INMET ZIPs ano-específicos resolvidos,PASS,3 datasets http=200 is_year_specific=true (2022.zip 90MB x2, 2024.zip 102MB)
+AUD_V1UE_013,size_block,Bloqueio por tamanho documentado,NEEDS_REVIEW,content_length visível no registry (90362801/102772199 > limite 25MB do dominio) mas docs narrativos dizem "download direto possivel" sem registrar a rejeicao por tamanho; v1uf resolve via large download policy
+AUD_V1UE_014,locality_fix,Falso-positivo localidade portal corrigido,PASS,scorecard usa substantive_obs filtrando GENERIC_PORTAL_HOMEPAGE (linhas 93-126)
+AUD_V1UE_015,scorecard,Eventos mistos bloqueados,PASS,PET_2022/PET_2024 = BLOCKED_PHENOMENON_SEPARATION_REQUIRED
+AUD_V1UE_016,scorecard,REC bloqueado sem geometria,PASS,REC_2022 = BLOCKED_GEOMETRY_MISSING
+AUD_V1UE_017,decision,v1ue aceita para progressao v1uf,PASS,16/17 PASS; 1 NEEDS_REVIEW (documentacao de size block) tratado em v1uf

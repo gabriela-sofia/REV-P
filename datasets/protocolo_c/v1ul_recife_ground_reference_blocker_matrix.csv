@@ -1,0 +1,11 @@
+blocker_id,event_id,blocker,status,evidence_count,can_create_ground_reference,can_create_training_label,notes
+BLOCK_v1ul_0000,REC_2022_05_24_30,no_supervisor_review,ACTIVE,6672,false,false,v1ul blocks promotion before supervisor review and overlay execution
+BLOCK_v1ul_0001,REC_2022_05_24_30,no_overlay_executed,ACTIVE,25668,false,false,v1ul blocks promotion before supervisor review and overlay execution
+BLOCK_v1ul_0002,REC_2022_05_24_30,locality_only,ACTIVE,6672,false,false,v1ul blocks promotion before supervisor review and overlay execution
+BLOCK_v1ul_0003,REC_2022_05_24_30,no_coordinates,ACTIVE,25668,false,false,v1ul blocks promotion before supervisor review and overlay execution
+BLOCK_v1ul_0004,REC_2022_05_24_30,contextual_layer,INACTIVE,0,false,false,v1ul blocks promotion before supervisor review and overlay execution
+BLOCK_v1ul_0005,REC_2022_05_24_30,sensitive_review_required,ACTIVE,25668,false,false,v1ul blocks promotion before supervisor review and overlay execution
+BLOCK_v1ul_0006,REC_2022_05_24_30,schema_ambiguity,INACTIVE,0,false,false,v1ul blocks promotion before supervisor review and overlay execution
+BLOCK_v1ul_0007,REC_2022_05_24_30,event_window_uncertainty,ACTIVE,14505,false,false,v1ul blocks promotion before supervisor review and overlay execution
+BLOCK_v1ul_0008,REC_2022_05_24_30,hazard_ambiguity,ACTIVE,12093,false,false,v1ul blocks promotion before supervisor review and overlay execution
+BLOCK_v1ul_0009,REC_2022_05_24_30,label_forbidden,ACTIVE,25668,false,false,v1ul blocks promotion before supervisor review and overlay execution

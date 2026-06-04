@@ -1,0 +1,15 @@
+protocol_version: v1ul
+event_id: REC_2022_05_24_30
+max_status: RECIFE_CANDIDATE_READY_FOR_SUPERVISOR_REVIEW
+guardrails:
+  ground_truth_operational: false
+  can_create_ground_reference: false
+  can_create_training_label: false
+  can_reopen_protocol_b: false
+  dino_usage: SUPPORT_ONLY
+  no_overlay_executed: true
+  no_coordinates_invented: true
+routes:
+  coordinate: ROUTE_COORDINATE_OCCURRENCE_REVIEW
+  locality_only: ROUTE_LOCALITY_ONLY_REVIEW
+  documented_no_geometry: ROUTE_DOCUMENTED_OCCURRENCE_NO_GEOMETRY

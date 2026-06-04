@@ -1,0 +1,20 @@
+# Status Atual - Protocolo C v1up
+
+status_max=PETROPOLIS_PUBLIC_GEOMETRY_CANDIDATE_FOR_REVIEW
+PET_2022_02_15=PHENOMENON_SEPARATION_IMPROVED
+PET_2024_03_21_28=PHENOMENON_SEPARATION_IMPROVED
+downloads_realized=2
+geodata_detected=0
+observed_geometry_review_candidates=0
+recommended_next_action=v1uq - Petropolis Phenomenon Separation Deep Audit
+ground_truth_operational=false
+can_create_ground_reference=false
+can_create_training_label=false
+can_reopen_protocol_b=false
+dino_usage=SUPPORT_ONLY
+no_overlay_executed=true
+no_coordinates_invented=true
+patch_bound_truth=false
+operational_validation=false
+formal_request_required=false
+public_official_discovery=true

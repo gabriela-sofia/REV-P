@@ -1,0 +1,13 @@
+protocol_version: v2ag
+policy: lineage_crosswalk_candidate_registry
+candidate_classes:
+  - SHARED_SOURCE_ASSET_HASH
+  - SHARED_SCENE_ID
+  - SHARED_MANIFEST_ID
+  - SAME_REGISTRY_WITH_BOTH_KEYS
+  - REGION_ONLY_REJECTED
+  - ROW_ORDER_REJECTED
+  - SIMILAR_NAME_REJECTED
+  - DINO_SIMILARITY_REJECTED
+candidate_use: review_only_no_date_application
+crosswalk_inferred: false

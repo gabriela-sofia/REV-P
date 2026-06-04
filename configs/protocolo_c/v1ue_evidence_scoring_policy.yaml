@@ -1,0 +1,54 @@
+## v1ue — Evidence Scoring Policy
+## Define como dimensões de evidência são pontuadas e classificadas por evento.
+## Score alto NUNCA cria label nem ground truth — apenas define próxima ação.
+
+protocol_version: v1ue
+ground_truth_operational: false
+can_create_training_label: false
+
+## Dimensões pontuadas (0.0 a 1.0 cada)
+dimensions:
+  - name: temporal_evidence_score
+    description: "Disponibilidade de âncora temporal (estação/série na janela do evento)"
+  - name: hydrometeorological_score
+    description: "Sinal hidrometeorológico observado (precipitação, nível, vazão)"
+  - name: phenomenon_typing_score
+    description: "Capacidade de tipar/separar fenômeno (inundação vs deslizamento)"
+  - name: locality_score
+    description: "Localidade/bairro/rua identificável a partir da evidência"
+  - name: geometry_score
+    description: "Geometria observacional disponível (polígono/ponto da ocorrência)"
+  - name: source_authority_score
+    description: "Autoridade oficial da fonte (institucional vs genérica)"
+  - name: independence_score
+    description: "Independência da evidência (fonte distinta, não circular)"
+  - name: review_readiness_score
+    description: "Prontidão para revisão humana (completude do pacote)"
+
+## Classificação derivada — NUNCA promove ground truth
+classification_rules:
+  - label: CONTEXT_ONLY
+    condition: "geometry_score==0 e temporal_evidence_score<0.3"
+  - label: TEMPORAL_ANCHOR_ONLY
+    condition: "temporal_evidence_score>=0.3 e geometry_score==0 e phenomenon_typing_score<0.3"
+  - label: OBSERVATIONAL_CANDIDATE_WEAK
+    condition: "temporal_evidence_score>=0.3 e (hydrometeorological_score>0 ou locality_score>0) e geometry_score==0"
+  - label: OBSERVATIONAL_CANDIDATE_MODERATE
+    condition: "temporal>=0.5 e phenomenon>=0.3 e locality>0 e geometry_score==0"
+  - label: READY_FOR_HUMAN_REVIEW
+    condition: "geometry_score>0 e phenomenon_typing_score>=0.5 e source_authority_score>=0.5"
+  - label: BLOCKED_FORMAL_REQUEST_REQUIRED
+    condition: "fonte exige solicitacao formal para geometria/serie"
+  - label: BLOCKED_PHENOMENON_SEPARATION_REQUIRED
+    condition: "evento misto sem separacao de fenomeno"
+  - label: BLOCKED_GEOMETRY_MISSING
+    condition: "sem geometria observacional disponivel"
+
+## Invariante de promoção
+promotion_invariant:
+  can_create_ground_reference: false
+  can_create_training_label: false
+  ground_truth_operational: false
+  note: >
+    Score alto define apenas a PRÓXIMA AÇÃO (ex: READY_FOR_HUMAN_REVIEW_PACKAGE).
+    Nenhuma classificação cria rótulo, geometria ou ground truth automaticamente.

@@ -1,0 +1,5 @@
+municipio,uf,ibge_code,cobrade,data_registro,protocolo,situacao,latitude,longitude
+Petropolis,RJ,3303906,11410,2022-02-16,RJ-2022-0001,reconhecido,,
+Petropolis,RJ,3303906,12100,2022-02-16,RJ-2022-0002,reconhecido,,
+Recife,PE,2611606,12300,2022-05-25,PE-2022-0010,reconhecido,,
+Recife,PE,2611606,12100,2022-05-27,PE-2022-0011,reconhecido,-8.0539,-34.8811

@@ -1,0 +1,7 @@
+classes: [HIGH_CONFIDENCE, MEDIUM_CONFIDENCE, LOW_CONFIDENCE, BLOCKED_CONFLICT, MISSING]
+multi_source_agreement: HIGH_CONFIDENCE
+canonical_sentinel_filename: HIGH_CONFIDENCE
+explicit_sensing_date: HIGH_CONFIDENCE
+weak_generic_date_field: MEDIUM_OR_LOW
+conflict: BLOCKED_CONFLICT
+usable_requires: HIGH_OR_MEDIUM

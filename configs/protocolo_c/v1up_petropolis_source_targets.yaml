@@ -1,0 +1,4 @@
+protocol_version: v1up
+scope: Petropolis public official geometry deepening
+events: [PET_2022_02_15, PET_2024_03_21_28]
+status_max: PETROPOLIS_PUBLIC_GEOMETRY_CANDIDATE_FOR_REVIEW

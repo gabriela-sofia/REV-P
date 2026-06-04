@@ -1,0 +1,60 @@
+## v1ui — Search Terms by Event
+## Termos de busca por evento para descoberta publica.
+
+protocol_version: v1ui
+
+events:
+  PET_2022_02_15:
+    city: "Petropolis"
+    uf: "RJ"
+    date: "2022-02-15"
+    hazard: ["inundacao", "deslizamento", "movimento de massa", "enchente"]
+    terms_pt:
+      - "Petropolis fevereiro 2022"
+      - "desastre Petropolis 2022"
+      - "inundacao Petropolis"
+      - "deslizamento Petropolis"
+      - "movimento de massa Petropolis"
+      - "Defesa Civil Petropolis 2022"
+      - "ocorrencias Petropolis 2022"
+      - "relatorio tecnico Petropolis 2022"
+      - "geodados Petropolis"
+      - "shapefile Petropolis inundacao"
+      - "mapa Petropolis desastre"
+    terms_en:
+      - "Petropolis flood 2022"
+      - "Petropolis landslide 2022"
+      - "Brazil flood February 2022"
+
+  PET_2024_03_21_28:
+    city: "Petropolis"
+    uf: "RJ"
+    date: "2024-03-21"
+    hazard: ["inundacao", "deslizamento", "enchente"]
+    terms_pt:
+      - "Petropolis marco 2024"
+      - "inundacao Petropolis 2024"
+      - "deslizamento Petropolis 2024"
+      - "Defesa Civil Petropolis 2024"
+    terms_en:
+      - "Petropolis flood 2024"
+      - "Petropolis landslide March 2024"
+
+  REC_2022_05_24_30:
+    city: "Recife"
+    uf: "PE"
+    date: "2022-05-24"
+    hazard: ["inundacao", "alagamento", "enchente", "transbordamento"]
+    terms_pt:
+      - "Recife maio 2022"
+      - "inundacao Recife 2022"
+      - "alagamento Recife 2022"
+      - "enchente Recife maio 2022"
+      - "Defesa Civil Recife 2022"
+      - "COMPDEC Recife 2022"
+      - "ocorrencias Recife maio 2022"
+      - "dados abertos Recife alagamento"
+    terms_en:
+      - "Recife flood 2022"
+      - "Recife flooding May 2022"
+      - "Brazil flood Pernambuco 2022"

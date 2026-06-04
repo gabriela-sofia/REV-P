@@ -1,0 +1,2 @@
+freshness_id,artifact_path,required,exists,non_empty,freshness_status
+FR0,datasets/protocolo_c/v2ac_v2_readiness_matrix.csv,true,true,false,EMPTY_ARTIFACT

@@ -1,0 +1,4 @@
+geocuritiba_deepening_id,layer_record_id,layer_name,geometry_type,spatial_reference,fields_hash,layer_class,event_specificity,can_support_contextual_review,can_support_observed_occurrence,can_create_ground_reference,notes
+GCD_v1uw_0000,GEO_v1uv_0000,urban_drainage_context,,,e3b0c44298fc1c14,context only,CONTEXT_LAYER_NOT_EVENT,true,false,false,Metadata-only layer deepening; no feature download or overlay.
+GCD_v1uw_0001,GEO_v1uv_0001,hydrographic_basin_context,,,e3b0c44298fc1c14,context only,CONTEXT_LAYER_NOT_EVENT,true,false,false,Metadata-only layer deepening; no feature download or overlay.
+GCD_v1uw_0002,GEO_v1uv_0002,administrative_context,,,e3b0c44298fc1c14,context only,CONTEXT_LAYER_NOT_EVENT,true,false,false,Metadata-only layer deepening; no feature download or overlay.

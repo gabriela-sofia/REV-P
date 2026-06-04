@@ -1,0 +1,16 @@
+window_id,event_id,region,city,start_date,end_date,window_type,window_start,window_end,purpose,can_support_temporal_gate,can_create_label
+WIN_v1ue_0000,PET_2022_02_15,PET,Petrópolis,2022-02-15,2022-02-15,event_core_window,2022-02-15,2022-02-15,Janela central declarada do evento (start_date a end_date),true,false
+WIN_v1ue_0001,PET_2022_02_15,PET,Petrópolis,2022-02-15,2022-02-15,pre_event_window_3d,2022-02-12,2022-02-15,3 dias antes do evento — chuva acumulada precedente,true,false
+WIN_v1ue_0002,PET_2022_02_15,PET,Petrópolis,2022-02-15,2022-02-15,pre_event_window_7d,2022-02-08,2022-02-15,7 dias antes do evento — saturação de solo / antecedência,true,false
+WIN_v1ue_0003,PET_2022_02_15,PET,Petrópolis,2022-02-15,2022-02-15,post_event_window_3d,2022-02-15,2022-02-18,3 dias após o evento — recessão e persistência,true,false
+WIN_v1ue_0004,PET_2022_02_15,PET,Petrópolis,2022-02-15,2022-02-15,sentinel_link_window,2022-02-08,2022-02-22,Janela para cruzamento futuro com Sentinel scene_date (sem overlay nesta etapa),false,false
+WIN_v1ue_0005,PET_2024_03_21_28,PET,Petrópolis,2024-03-21,2024-03-28,event_core_window,2024-03-21,2024-03-28,Janela central declarada do evento (start_date a end_date),true,false
+WIN_v1ue_0006,PET_2024_03_21_28,PET,Petrópolis,2024-03-21,2024-03-28,pre_event_window_3d,2024-03-18,2024-03-21,3 dias antes do evento — chuva acumulada precedente,true,false
+WIN_v1ue_0007,PET_2024_03_21_28,PET,Petrópolis,2024-03-21,2024-03-28,pre_event_window_7d,2024-03-14,2024-03-21,7 dias antes do evento — saturação de solo / antecedência,true,false
+WIN_v1ue_0008,PET_2024_03_21_28,PET,Petrópolis,2024-03-21,2024-03-28,post_event_window_3d,2024-03-28,2024-03-31,3 dias após o evento — recessão e persistência,true,false
+WIN_v1ue_0009,PET_2024_03_21_28,PET,Petrópolis,2024-03-21,2024-03-28,sentinel_link_window,2024-03-14,2024-04-04,Janela para cruzamento futuro com Sentinel scene_date (sem overlay nesta etapa),false,false
+WIN_v1ue_0010,REC_2022_05_24_30,REC,Recife,2022-05-24,2022-05-30,event_core_window,2022-05-24,2022-05-30,Janela central declarada do evento (start_date a end_date),true,false
+WIN_v1ue_0011,REC_2022_05_24_30,REC,Recife,2022-05-24,2022-05-30,pre_event_window_3d,2022-05-21,2022-05-24,3 dias antes do evento — chuva acumulada precedente,true,false
+WIN_v1ue_0012,REC_2022_05_24_30,REC,Recife,2022-05-24,2022-05-30,pre_event_window_7d,2022-05-17,2022-05-24,7 dias antes do evento — saturação de solo / antecedência,true,false
+WIN_v1ue_0013,REC_2022_05_24_30,REC,Recife,2022-05-24,2022-05-30,post_event_window_3d,2022-05-30,2022-06-02,3 dias após o evento — recessão e persistência,true,false
+WIN_v1ue_0014,REC_2022_05_24_30,REC,Recife,2022-05-24,2022-05-30,sentinel_link_window,2022-05-17,2022-06-06,Janela para cruzamento futuro com Sentinel scene_date (sem overlay nesta etapa),false,false

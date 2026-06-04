@@ -1,0 +1,10 @@
+blocker_id,event_id,blocker,status,evidence_count,can_create_ground_reference,can_create_training_label,notes
+BLOCK_v1uk_0000,REC_2022_05_24_30,no_verified_observed_geometry,ACTIVE,0,false,false,candidate coordinates are review candidates only
+BLOCK_v1uk_0001,REC_2022_05_24_30,no_overlay,ACTIVE,0,false,false,overlay not executed
+BLOCK_v1uk_0002,REC_2022_05_24_30,no_supervisor_review,ACTIVE,1,false,false,human review not completed
+BLOCK_v1uk_0003,REC_2022_05_24_30,coordinate_absent_or_contextual,ACTIVE,6672,false,false,some rows are locality-only or contextual
+BLOCK_v1uk_0004,REC_2022_05_24_30,locality_only,ACTIVE,6672,false,false,locality cannot be converted to coordinates
+BLOCK_v1uk_0005,REC_2022_05_24_30,event_window_uncertainty,ACTIVE,25668,false,false,row dates parsed but not ground truth
+BLOCK_v1uk_0006,REC_2022_05_24_30,hazard_ambiguity,ACTIVE,25668,false,false,hazard terms need human review
+BLOCK_v1uk_0007,REC_2022_05_24_30,sensitive_data_redaction_required,ACTIVE,25668,false,false,row values are redacted
+BLOCK_v1uk_0008,REC_2022_05_24_30,label_forbidden,ACTIVE,0,false,false,labels forbidden in v1uk

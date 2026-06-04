@@ -1,0 +1,6 @@
+protocol_version: v1ut
+coordinate_recovery_from_public_data_only: true
+geocoding_allowed: false
+centroid_allowed: false
+overlay_allowed: false
+max_status: RECIFE_PUBLIC_COORDINATE_CANDIDATE_FOR_REVIEW

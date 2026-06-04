@@ -1,0 +1,4 @@
+equipment_context_id,event_id,asset_id,context_type,feature_count,geometry_type,crs_status,public_official_source,can_support_contextual_review,can_support_occurrence_review,can_support_overlay,can_create_ground_reference,notes
+EQ_v1uu_00000,REC_2022_05_24_30,054f05a9-a113-47e0-a46f-720e4828eaf2,equipamento publico,499,Polygon,CRS_NOT_DECLARED,true,true,false,false,false,Equipment/infrastructure context only; never occurrence evidence.
+EQ_v1uu_00001,REC_2022_05_24_30,08275679-ce74-4aac-82d9-34a5fc823839,equipamento publico,23,,CRS_NOT_DECLARED,true,true,false,false,false,Equipment/infrastructure context only; never occurrence evidence.
+EQ_v1uu_00002,REC_2022_05_24_30,42b2d034-37fb-46ea-8996-e4e26e52de0c,infraestrutura urbana,7,MultiLineString,CRS_PRESENT,true,true,false,false,false,Equipment/infrastructure context only; never occurrence evidence.

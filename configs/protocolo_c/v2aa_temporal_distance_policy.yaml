@@ -1,0 +1,4 @@
+near_days_threshold: 15
+classes: [WITHIN_EVENT_WINDOW, PRE_EVENT_NEAR, POST_EVENT_NEAR, PRE_EVENT_FAR, POST_EVENT_FAR, TEMPORAL_DISTANCE_BLOCKED_NO_DATE, TEMPORAL_DISTANCE_BLOCKED_LOW_CONFIDENCE]
+temporal_class_is_truth: false
+usable_for_overlay_preflight: false

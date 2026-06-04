@@ -1,0 +1,7 @@
+field_mapping_id,download_id,event_date_fields,hazard_type_fields,occurrence_type_fields,locality_fields,neighborhood_fields,address_hash_fields,coordinate_status,raw_address_versioned,geocoding_executed,notes
+FM_v1ux_0000,DL_v1ux_0000,,,,,,,NO_COORDINATES,false,false,Address field names are hashed when address-like; no literal address values and no geocoding.
+FM_v1ux_0001,DL_v1ux_0001,,,,,,,NO_COORDINATES,false,false,Address field names are hashed when address-like; no literal address values and no geocoding.
+FM_v1ux_0002,DL_v1ux_0002,,,,,,,NO_COORDINATES,false,false,Address field names are hashed when address-like; no literal address values and no geocoding.
+FM_v1ux_0003,DL_v1ux_0003,,,,,,,NO_COORDINATES,false,false,Address field names are hashed when address-like; no literal address values and no geocoding.
+FM_v1ux_0004,DL_v1ux_0004,,,,,,,NO_COORDINATES,false,false,Address field names are hashed when address-like; no literal address values and no geocoding.
+FM_v1ux_0005,DL_v1ux_0005,,,,,,,NO_COORDINATES,false,false,Address field names are hashed when address-like; no literal address values and no geocoding.

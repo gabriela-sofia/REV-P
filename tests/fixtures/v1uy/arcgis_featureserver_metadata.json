@@ -1,0 +1,1 @@
+{"name":"defesa_civil_ocorrencias","geometryType":"esriGeometryPoint","spatialReference":{"wkid":31982},"fields":[{"name":"OBJECTID","type":"esriFieldTypeOID"},{"name":"data_evento","type":"esriFieldTypeDate"},{"name":"tipo_ocorrencia","type":"esriFieldTypeString"},{"name":"bairro","type":"esriFieldTypeString"}],"objectIdField":"OBJECTID"}

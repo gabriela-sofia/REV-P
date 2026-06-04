@@ -1,0 +1,5 @@
+protocol_version: v1um
+public_outputs: hashes_flags_counts_only
+literal_address_allowed: false
+personal_data_allowed: false
+raw_text_allowed: false

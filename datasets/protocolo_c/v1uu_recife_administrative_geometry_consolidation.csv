@@ -1,0 +1,20 @@
+admin_geom_id,event_id,asset_id,admin_layer_type,feature_count,geometry_type,crs_status,coordinate_count,can_support_spatial_context,can_support_occurrence_review,can_support_overlay,can_create_ground_reference,notes
+ADM_v1uu_00000,REC_2022_05_24_30,1ba72563-ff6c-4704-9675-cff6cfc5e8b0,bairro,107010,,CRS_NOT_DECLARED,107010,true,false,false,false,Administrative/regional coordinate metadata only; raw geometry not versioned.
+ADM_v1uu_00001,REC_2022_05_24_30,1c9feb5e-38ad-4235-b3d2-771964c59c46,desconhecido,555,MultiLineString,CRS_PRESENT,552,true,false,false,false,Administrative/regional coordinate metadata only; raw geometry not versioned.
+ADM_v1uu_00002,REC_2022_05_24_30,24adb60a-9fb2-4f55-b1d5-808729f5f28e,bairro,79,,CRS_NOT_DECLARED,79,true,false,false,false,Administrative/regional coordinate metadata only; raw geometry not versioned.
+ADM_v1uu_00003,REC_2022_05_24_30,35566d21-a428-4595-89dc-eb405380b33e,bairro,17,,CRS_NOT_DECLARED,17,true,false,false,false,Administrative/regional coordinate metadata only; raw geometry not versioned.
+ADM_v1uu_00004,REC_2022_05_24_30,529e344f-85bf-4e66-9006-11812c45f65b,bairro,554,,CRS_NOT_DECLARED,554,true,false,false,false,Administrative/regional coordinate metadata only; raw geometry not versioned.
+ADM_v1uu_00005,REC_2022_05_24_30,64cc8ab3-bd69-4629-b145-74552fe31e1c,bairro,131,,CRS_NOT_DECLARED,131,true,false,false,false,Administrative/regional coordinate metadata only; raw geometry not versioned.
+ADM_v1uu_00006,REC_2022_05_24_30,75344435-aca8-4aef-ab2c-9521d6e5ff18,bairro,401,,CRS_NOT_DECLARED,401,true,false,false,false,Administrative/regional coordinate metadata only; raw geometry not versioned.
+ADM_v1uu_00007,REC_2022_05_24_30,76cb7e65-1362-4ea7-ac04-453d67e41c64,bairro,111666,,CRS_NOT_DECLARED,111666,true,false,false,false,Administrative/regional coordinate metadata only; raw geometry not versioned.
+ADM_v1uu_00008,REC_2022_05_24_30,96b741c7-058c-445a-9c17-54b232466676,bairro,157,,CRS_NOT_DECLARED,157,true,false,false,false,Administrative/regional coordinate metadata only; raw geometry not versioned.
+ADM_v1uu_00009,REC_2022_05_24_30,a48e0bec-028b-481d-a521-e04e98079268,bairro,5,,CRS_NOT_DECLARED,5,true,false,false,false,Administrative/regional coordinate metadata only; raw geometry not versioned.
+ADM_v1uu_00010,REC_2022_05_24_30,b062bad8-e130-4706-9a0c-1049ae92425c,bairro,105748,,CRS_NOT_DECLARED,105747,true,false,false,false,Administrative/regional coordinate metadata only; raw geometry not versioned.
+ADM_v1uu_00011,REC_2022_05_24_30,bd06d29e-ede2-4f0c-99ad-09dbb98a526c,bairro,110505,,CRS_NOT_DECLARED,110470,true,false,false,false,Administrative/regional coordinate metadata only; raw geometry not versioned.
+ADM_v1uu_00012,REC_2022_05_24_30,c61585b5-4e1d-40d8-86e9-c5808a2716a0,bairro,1,,CRS_NOT_DECLARED,1,true,false,false,false,Administrative/regional coordinate metadata only; raw geometry not versioned.
+ADM_v1uu_00013,REC_2022_05_24_30,c67fa150-8c69-4f6d-8fca-8204fdd61e35,desconhecido,79,MultiLineString,CRS_PRESENT,79,true,false,false,false,Administrative/regional coordinate metadata only; raw geometry not versioned.
+ADM_v1uu_00014,REC_2022_05_24_30,c99492cc-ee53-4fd0-a254-c6573aaa2cd7,bairro,10,,CRS_NOT_DECLARED,10,true,false,false,false,Administrative/regional coordinate metadata only; raw geometry not versioned.
+ADM_v1uu_00015,REC_2022_05_24_30,d2199b6f-1d24-4553-980b-e11dafc90e06,bairro,505,,CRS_NOT_DECLARED,505,true,false,false,false,Administrative/regional coordinate metadata only; raw geometry not versioned.
+ADM_v1uu_00016,REC_2022_05_24_30,ec18759d-fac2-445e-ae72-af9d9210b831,desconhecido,400,Point,CRS_NOT_DECLARED,400,true,false,false,false,Administrative/regional coordinate metadata only; raw geometry not versioned.
+ADM_v1uu_00017,REC_2022_05_24_30,f2f8d284-3f9e-4172-906a-a40df53f1743,bairro,1,,CRS_NOT_DECLARED,1,true,false,false,false,Administrative/regional coordinate metadata only; raw geometry not versioned.
+ADM_v1uu_00018,REC_2022_05_24_30,f7b0ae2a-f275-4596-81aa-eacc08c54019,bairro,3,,CRS_NOT_DECLARED,3,true,false,false,false,Administrative/regional coordinate metadata only; raw geometry not versioned.

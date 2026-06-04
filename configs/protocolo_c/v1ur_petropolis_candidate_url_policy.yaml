@@ -1,0 +1,3 @@
+protocol_version: v1ur
+deduplicate_by: url_sha1_12
+risk_susceptibility_context_only: true

@@ -1,0 +1,13 @@
+source_id,source_name,base_url,applicable_events,service_type,priority,status
+SGB_CPRM_RIGEO,SGB/CPRM — RIGeo Repositorio Institucional,https://rigeo.sgb.gov.br/,PET_2022_02_15,document_repository,1,REGISTERED
+SGB_CPRM_GEOSGB,SGB/CPRM — GeoSGB Portal de Dados,https://geosgb.sgb.gov.br/,PET_2022_02_15|PET_2024_03_21_28|REC_2022_05_24_30,arcgis_portal,1,REGISTERED
+DRM_RJ_PORTAL,DRM-RJ Portal Publico,https://www.drm.rj.gov.br/,PET_2022_02_15,portal_publico,2,REGISTERED
+PREFEITURA_PETROPOLIS,Prefeitura de Petropolis — Portal Dados Abertos,https://petropolis.rj.gov.br/,PET_2022_02_15|PET_2024_03_21_28,portal_publico,2,REGISTERED
+DADOS_ABERTOS_RECIFE,Dados Abertos Recife / Prefeitura,http://dados.recife.pe.gov.br/,REC_2022_05_24_30,ckan_portal,1,REGISTERED
+DADOS_ABERTOS_RECIFE,Dados Abertos Recife / Prefeitura,https://www.recife.pe.gov.br/,REC_2022_05_24_30,ckan_portal,1,REGISTERED
+EMLURB_RECIFE,EMLURB Recife — Dados Operacionais,https://www.emlurb.recife.pe.gov.br/,REC_2022_05_24_30,portal_publico,2,REGISTERED
+CEMADEN_PORTAL,Cemaden — Portal Publico,http://www2.cemaden.gov.br/,PET_2022_02_15|PET_2024_03_21_28|REC_2022_05_24_30,portal_publico,2,REGISTERED
+CEMADEN_PORTAL,Cemaden — Portal Publico,http://www.cemaden.gov.br/,PET_2022_02_15|PET_2024_03_21_28|REC_2022_05_24_30,portal_publico,2,REGISTERED
+DADOS_GOV_BR,dados.gov.br — Portal Nacional de Dados Abertos,https://dados.gov.br/,PET_2022_02_15|PET_2024_03_21_28|REC_2022_05_24_30,ckan_portal,2,REGISTERED
+COPERNICUS_EMS_PUBLIC,Copernicus EMS — Rapid Mapping Public,https://emergency.copernicus.eu/,PET_2022_02_15|REC_2022_05_24_30,document_repository,1,REGISTERED
+DEFESA_CIVIL_RJ_ESTADO,Defesa Civil RJ — Portal Estadual,https://www.defesacivil.rj.gov.br/,PET_2022_02_15|PET_2024_03_21_28,portal_publico,2,REGISTERED

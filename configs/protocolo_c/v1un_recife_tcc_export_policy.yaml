@@ -1,0 +1,4 @@
+protocol_version: v1un
+writing_support_scope: safe contextual paragraphs
+raw_sensitive_values_allowed: false
+absolute_paths_allowed: false

@@ -1,0 +1,7 @@
+linkage_id,visual_asset_id,patch_id,alias,region,linkage_basis,dino_allowed_use,can_create_label
+L0,VA0,REC_01,REC_01,RECIFE,manifest,REVIEW_ONLY_REPRESENTATION,false
+L1,VA1,REC_02,REC_02,RECIFE,manifest,REVIEW_ONLY_REPRESENTATION,false
+L2,VA2,PET_01,PET_01,PET,manifest,REVIEW_ONLY_REPRESENTATION,false
+L3,VA3,PET_02,PET_02,PET,manifest,REVIEW_ONLY_REPRESENTATION,false
+L4,VA4,CUR_01,CUR_01,CURITIBA,manifest,REVIEW_ONLY_REPRESENTATION,false
+L5,VA5,REC_01,REC_01,RECIFE,manifest_dup,REVIEW_ONLY_REPRESENTATION,false

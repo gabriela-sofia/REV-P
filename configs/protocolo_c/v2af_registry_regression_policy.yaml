@@ -1,0 +1,4 @@
+regions: [REC, PET, CUR]
+events: [REC_2022_05_24_30, PET_2022_02_15, PET_2024_03_21_28, CUR_2022_01_15]
+region_status_must_not_change: true
+qa_gate_must_be_preserved: true

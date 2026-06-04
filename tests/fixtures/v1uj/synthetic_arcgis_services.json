@@ -1,0 +1,8 @@
+{
+  "currentVersion": 10.91,
+  "folders": ["Geologia", "Riscos"],
+  "services": [
+    {"name": "Riscos/Ocorrencias_Petropolis", "type": "FeatureServer"},
+    {"name": "Geologia/Suscetibilidade_Movimento_Massa", "type": "MapServer"}
+  ]
+}

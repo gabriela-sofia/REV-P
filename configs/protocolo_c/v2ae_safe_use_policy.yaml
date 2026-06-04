@@ -1,0 +1,2 @@
+safe: [review_only, contextual_support, evidence_audit, dino_review_support, package_qa]
+prohibited: [ground_truth, label, patch_positive, patch_negative, overlay_truth, event_validated_by_sentinel, hydromet_as_occurrence, context_layer_as_occurrence]

@@ -1,0 +1,3 @@
+row_number,event_patch_candidate_id,patch_id,refpatch_hint
+1,EPC_SYN_005,PET_00005,
+2,,,REFPATCH_SYN_ROW_ORDER_ONLY

@@ -1,0 +1,4 @@
+action_id,event_id,action_type,priority,description,target,status,notes
+ACT_v1ui_0000,PET_2022_02_15,DEEPEN_PUBLIC_DISCOVERY,2,Aprofundar descoberta em fontes publicas especificas,Scripts de crawler com --allow-web,PENDING,
+ACT_v1ui_0001,PET_2024_03_21_28,DEEPEN_PUBLIC_DISCOVERY,2,Aprofundar descoberta em fontes publicas especificas,Scripts de crawler com --allow-web,PENDING,
+ACT_v1ui_0002,REC_2022_05_24_30,DEEPEN_PUBLIC_DISCOVERY,2,Aprofundar descoberta em fontes publicas especificas,Scripts de crawler com --allow-web,PENDING,

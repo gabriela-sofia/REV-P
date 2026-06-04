@@ -1,0 +1,3 @@
+explicit_dino_crosswalk_by_identical_patch_id_only: true
+anchor_or_refpatch_crosswalk_allowed: false
+crosswalk_inferred_allowed: false

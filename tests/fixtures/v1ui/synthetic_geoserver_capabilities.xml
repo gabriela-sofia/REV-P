@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SYNTHETIC FIXTURE — NOT REAL DATA -->
+<wfs:WFS_Capabilities xmlns:wfs="http://www.opengis.net/wfs/2.0" version="2.0.0">
+  <FeatureTypeList>
+    <FeatureType>
+      <Name>ocorrencias:inundacao_petropolis_2022</Name>
+      <Title>Ocorrencias de Inundacao Petropolis 2022 (SYNTHETIC)</Title>
+      <DefaultCRS>urn:ogc:def:crs:EPSG::4326</DefaultCRS>
+      <ows:WGS84BoundingBox xmlns:ows="http://www.opengis.net/ows/1.1">
+        <ows:LowerCorner>-43.25 -22.55</ows:LowerCorner>
+        <ows:UpperCorner>-43.10 -22.45</ows:UpperCorner>
+      </ows:WGS84BoundingBox>
+      <OutputFormats>
+        <Format>application/json</Format>
+        <Format>application/gml+xml; version=3.2</Format>
+        <Format>text/xml; subtype=gml/3.2</Format>
+      </OutputFormats>
+    </FeatureType>
+  </FeatureTypeList>
+</wfs:WFS_Capabilities>

@@ -1,0 +1,4 @@
+geocuritiba_record_id,source_id,service_url,layer_url,layer_name,layer_id,geometry_type,spatial_reference,fields,layer_class,event_specificity,can_contain_observed_geometry,can_contain_context_only,notes
+GEO_v1uv_0000,geocuritiba,https://geocuritiba.ippuc.org.br/,,urban_drainage_context,drenagem,,,,infrastructure,CONTEXT_ONLY_NOT_EVENT,false,true,Metadata target status=200; contextual layer not promoted as event.
+GEO_v1uv_0001,geocuritiba,https://geocuritiba.ippuc.org.br/,,hydrographic_basin_context,bacias_hidrograficas,,,,context layer,CONTEXT_ONLY_NOT_EVENT,false,true,Metadata target status=200; contextual layer not promoted as event.
+GEO_v1uv_0002,geocuritiba,https://geocuritiba.ippuc.org.br/,,administrative_context,regionais_bairros,,,,administrative,CONTEXT_ONLY_NOT_EVENT,false,true,Metadata target status=200; contextual layer not promoted as event.

@@ -1,0 +1,4 @@
+event_id,copernicus_products,copernicus_vector_candidates,geosgb_layers,geosgb_observed_candidates,ckan_resources,ckan_geo_candidates,s2id_records,rigeo_bitstreams,rigeo_geodata_candidates,pdf_deeplinks,downloaded_artifacts,observed_candidates_for_review,vector_artifact_found,most_promising_source,path_to_supervisor_review,status_summary
+PET_2022_02_15,0,0,0,0,0,0,0,0,0,17,0,0,false,none_yet,NOT_YET,Sem candidato observado; aprofundar fonte focada ou rodada regional
+PET_2024_03_21_28,0,0,0,0,0,0,0,0,0,0,0,0,false,none_yet,NOT_YET,Sem candidato observado; aprofundar fonte focada ou rodada regional
+REC_2022_05_24_30,0,0,0,0,343,147,0,0,0,6,64,0,true,ckan,NOT_YET,Sem candidato observado; aprofundar fonte focada ou rodada regional

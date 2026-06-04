@@ -1,0 +1,61 @@
+# v1um Recife Human Review Batch BATCH_v1um_02
+
+O pipeline REV-P organiza, redige, amostra, ranqueia e prepara os candidatos locality-only para Revisao Humana auditavel.
+
+- event_id: REC_2022_05_24_30
+- sample_type: diversity_sample
+- candidate_count: 40
+- human_review_status: PREPARED_NOT_OPERATIONAL
+- operational_decision: NOT_OPERATIONAL
+- ground_reference_status: NOT_CREATED
+- label_status: NOT_CREATED
+- no_overlay_executed: true
+- no_coordinates_invented: true
+
+## Hazard Summary
+- CIVIL_DEFENSE_GENERIC: 40
+
+## Redacted Candidate Rows
+
+| candidate_row_id | row_hash | date | hazard_class | locality_token | source_table | suggested_decision |
+|---|---|---|---|---|---|---|
+| CAND_v1uk_000874 | e4a3bf524573e191eeff2a65 | 2022-05-30 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_93199271753d | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_000885 | 8c19beb92e0bfd5fed061af8 | 2022-05-30 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_510ab8db4317 | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_000887 | fc19c66a6fadd90b9d61be65 | 2022-05-30 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_abc12ed082f2 | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_000905 | 16546cef78937635f6197667 | 2022-05-30 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_5e53d5c64b30 | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_000928 | c0789bbeea86607616a29932 | 2022-05-30 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_918c9356a040 | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_000949 | abe43772c7090e07ce9a55ce | 2022-05-30 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_94c89ff12097 | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_000996 | 62fff2039fe6d2f9f6ac1099 | 2022-05-30 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_cae219dca447 | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_000998 | 91c9102983736d01fadeca91 | 2022-05-30 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_b32f5093d0a2 | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_001014 | 5071429e6f28b791c73da496 | 2022-05-30 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_395e32a9647f | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_001032 | 7b3a99e78b2e5e1062e5db92 | 2022-05-30 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_261d2b2beb01 | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_001111 | 1221a1f71e25049242e1b371 | 2022-05-30 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_ab32b053a466 | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_001115 | 266f16b54b0559dcca57a6ac | 2022-05-30 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_cf40400eb762 | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_001117 | 0f08ffde2e3df2b8a6ed8030 | 2022-05-30 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_9d98a595f1fd | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_001118 | 288a72da47ec377cf5dfa122 | 2022-05-30 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_870a89a3fa7c | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_001119 | 54ce25a210edbb3711743aee | 2022-05-30 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_4c672ba61775 | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_001121 | f89f5b4684807dd09a344cdc | 2022-05-30 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_42acb60a6f38 | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_001126 | 57b6a8ce5275803ee49eb179 | 2022-05-30 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_9adbf3497691 | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_001127 | 3d3043a085cfede5f517c840 | 2022-05-30 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_586102ce7960 | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_001128 | b3e49e25678fe0072d0d55ae | 2022-05-30 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_0a09ec05ef8e | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_001129 | ca808afd4a7c398ee7c90df1 | 2022-05-30 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_d2c6de62e66b | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_001170 | 8ddcafe6f36e3df7af7fc7f7 | 2022-05-30 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_ffc98583ffbc | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_001171 | 93e64133838465f51711b3e6 | 2022-05-30 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_eaa7f5a5b646 | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_001175 | 5a6fe1cfb8dd144b38a71bba | 2022-05-30 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_48dab9e748de | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_001178 | 73f52a54fb248833eb45c02d | 2022-05-30 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_5592890fb61d | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_001179 | 756b4a988bfbe4d205145de1 | 2022-05-30 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_c74984b38c4a | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_001295 | 35949d0c8004fb822607263e | 2022-05-30 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_d0889c4c0406 | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_001345 | d3c2a88743e3f4f594fc80d1 | 2022-05-29 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_93199271753d | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_001350 | 56264a01e193935da1ca8aba | 2022-05-29 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_abc12ed082f2 | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_001353 | 157bced2a65ff835aa628fcd | 2022-05-29 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_6896f4045c1f | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_001355 | eba953e526af244bd1fb53b8 | 2022-05-29 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_ab32b053a466 | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_001363 | af07ad1bf89bdd5487bf7d3f | 2022-05-29 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_94c89ff12097 | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_001420 | f120db0775a4e1e16e046dec | 2022-05-29 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_065be7c2ee1c | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_001462 | ec828d08f529438d07a5328a | 2022-05-29 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_261d2b2beb01 | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_001464 | c684926bf6df8d431624b441 | 2022-05-29 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_7915dbac9b20 | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_001467 | a3ad6489844544ad6c5d45bc | 2022-05-29 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_b32f5093d0a2 | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_001474 | 075e1f88dd3142ae3800f624 | 2022-05-29 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_395e32a9647f | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_001482 | 8a7023f456ed6d4f091325c6 | 2022-05-29 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_cae219dca447 | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_001484 | b5d4ffbe72b92798e84f464e | 2022-05-29 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_b06580404b08 | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_001543 | 9fc636d8703a41027c9fe8c4 | 2022-05-29 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_510ab8db4317 | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |
+| CAND_v1uk_001568 | 3273906572b7a9ea5f1073c4 | 2022-05-29 | CIVIL_DEFENSE_GENERIC | neighborhood_hash_ac01475f707a | atendimentos-2022.csv | PREPARE_FOR_HUMAN_REVIEW_DO_NOT_PROMOTE |

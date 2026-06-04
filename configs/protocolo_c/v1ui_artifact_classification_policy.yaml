@@ -1,0 +1,61 @@
+## v1ui — Artifact Classification Policy
+## Classificacao de artefatos publicos oficiais.
+
+protocol_version: v1ui
+ground_truth_operational: false
+can_create_ground_reference: false
+
+candidate_classes:
+  EVENT_SPECIFIC_PUBLIC_CANDIDATE:
+    description: "Artefato publico oficial especifico do evento"
+    priority: 1
+  CITY_PORTAL_PUBLIC_CANDIDATE:
+    description: "Portal publico municipal com dados relevantes"
+    priority: 2
+  OPEN_DATA_PORTAL_CANDIDATE:
+    description: "Portal CKAN ou dados abertos com dataset relevante"
+    priority: 2
+  ARCGIS_REST_CANDIDATE:
+    description: "Servico ArcGIS REST publico com layer relevante"
+    priority: 2
+  GEOSERVER_WFS_CANDIDATE:
+    description: "Servico GeoServer/WFS publico com featuretype relevante"
+    priority: 2
+  DOCUMENT_REPOSITORY_CANDIDATE:
+    description: "Repositorio documental publico com relatorios/anexos"
+    priority: 3
+  GENERIC_HOMEPAGE:
+    description: "Pagina generica — nao promove gate"
+    priority: 9
+  NOT_RELEVANT:
+    description: "Nao relevante para o evento"
+    priority: 9
+
+geometry_candidate_classes:
+  OBSERVED_OCCURRENCE_POINTS_CANDIDATE:
+    is_observed: true
+    requires: [geometry, date_field, hazard_field]
+  OBSERVED_OCCURRENCE_POLYGONS_CANDIDATE:
+    is_observed: true
+    requires: [geometry, date_field, hazard_field]
+  EVENT_FOOTPRINT_CANDIDATE:
+    is_observed: true
+    requires: [geometry, date_field]
+  SUSCEPTIBILITY_CONTEXT:
+    is_observed: false
+  RISK_CONTEXT:
+    is_observed: false
+  HYDROMET_STATION_CONTEXT:
+    is_observed: false
+  DOCUMENT_ONLY:
+    is_observed: false
+  STATIC_MAP_ONLY:
+    is_observed: false
+  REJECTED_GENERIC:
+    is_observed: false
+
+blocking_rules:
+  susceptibility_not_occurrence: true
+  quickview_not_geometry: true
+  pdf_without_vector_is_document: true
+  homepage_does_not_close_gate: true

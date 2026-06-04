@@ -1,0 +1,22 @@
+artifact_id,artifact_path,artifact_type,protocol_version,sha256_prefix,file_size_bytes,is_versionable,reason
+ART_v1uj_0000,configs/protocolo_c/v1uj_ckan_targets.yaml,config,v1uj,981b2276c60806c2,1529,true,Safe for git
+ART_v1uj_0001,configs/protocolo_c/v1uj_copernicus_ems_targets.yaml,config,v1uj,9a7d6ee150ed7a08,1781,true,Safe for git
+ART_v1uj_0002,configs/protocolo_c/v1uj_download_policy.yaml,config,v1uj,1cd51df9f8424a6e,1272,true,Safe for git
+ART_v1uj_0003,configs/protocolo_c/v1uj_focused_source_targets.yaml,config,v1uj,2d9760f21bc2ddf8,1978,true,Safe for git
+ART_v1uj_0004,configs/protocolo_c/v1uj_geosgb_service_targets.yaml,config,v1uj,f9363f78e0000658,1448,true,Safe for git
+ART_v1uj_0005,configs/protocolo_c/v1uj_rigeo_targets.yaml,config,v1uj,98a6eb5fdcfd3f17,1066,true,Safe for git
+ART_v1uj_0006,configs/protocolo_c/v1uj_s2id_targets.yaml,config,v1uj,fdd0ddae9db1bd47,1352,true,Safe for git
+ART_v1uj_0007,datasets/protocolo_c/v1uj_ckan_resource_registry.csv,dataset,v1uj,10a2f2e9d6a3a586,151788,true,Safe for git
+ART_v1uj_0008,datasets/protocolo_c/v1uj_copernicus_ems_registry.csv,dataset,v1uj,fe7859ed6484a027,12469,true,Safe for git
+ART_v1uj_0009,datasets/protocolo_c/v1uj_download_collision_audit.csv,dataset,v1uj,9faf7de272453bca,87310,true,Safe for git
+ART_v1uj_0010,datasets/protocolo_c/v1uj_event_status_registry.csv,dataset,v1uj,f122e42b8495fe72,741,true,Safe for git
+ART_v1uj_0011,datasets/protocolo_c/v1uj_focused_artifact_inventory.csv,dataset,v1uj,1eedf7d39f541788,33092,true,Safe for git
+ART_v1uj_0012,datasets/protocolo_c/v1uj_focused_download_manifest.csv,dataset,v1uj,88825fa86d8ab39f,32418,true,Safe for git
+ART_v1uj_0013,datasets/protocolo_c/v1uj_geosgb_layer_registry.csv,dataset,v1uj,1b8c5226f1d21d04,544,true,Safe for git
+ART_v1uj_0014,datasets/protocolo_c/v1uj_live_execution_summary.csv,dataset,v1uj,a5eb3bfb38abf677,1921,true,Safe for git
+ART_v1uj_0015,datasets/protocolo_c/v1uj_next_actions_registry.csv,dataset,v1uj,b36eafece4e68b66,477,true,Safe for git
+ART_v1uj_0016,datasets/protocolo_c/v1uj_observed_candidate_promotion_audit.csv,dataset,v1uj,3bad6cc0af63b5c0,11355,true,Safe for git
+ART_v1uj_0017,datasets/protocolo_c/v1uj_pdf_deeplink_registry.csv,dataset,v1uj,798da06f40e3704f,5140,true,Safe for git
+ART_v1uj_0018,datasets/protocolo_c/v1uj_rigeo_bitstream_registry.csv,dataset,v1uj,ffa20dafbf4c2a6d,197,true,Safe for git
+ART_v1uj_0019,datasets/protocolo_c/v1uj_s2id_resource_registry.csv,dataset,v1uj,48e6949b4dc6b9cd,269,true,Safe for git
+ART_v1uj_0020,datasets/protocolo_c/v1uj_versionable_artifacts_manifest.csv,dataset,v1uj,7efb0eedef030c0b,2638,true,Safe for git

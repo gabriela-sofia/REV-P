@@ -1,0 +1,3 @@
+protocol_version: v1ur
+status_max: PETROPOLIS_PUBLIC_GEODATA_PATH_CANDIDATE_FOR_REVIEW
+geodata_path_recovery_only: true

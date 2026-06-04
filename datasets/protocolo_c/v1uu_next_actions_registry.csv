@@ -1,0 +1,2 @@
+action_id,event_id,action_type,priority,description,target,status,notes
+NA_v1uu_0000,,v1uv - Curitiba Event Registry and Public Source Discovery,1,Recife context is consolidated; Curitiba remains sparse.,CURITIBA_EVENT_REGISTRY_AND_PUBLIC_SOURCE_DISCOVERY,RECOMMENDED_NEXT_STEP,"Selected from v1uu ranker, not hardcoded in report."

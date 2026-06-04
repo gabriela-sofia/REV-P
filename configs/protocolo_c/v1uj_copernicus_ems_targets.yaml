@@ -1,0 +1,57 @@
+## v1uj — Copernicus EMS Targets
+## Ativações de Rapid Mapping potencialmente relacionadas aos eventos.
+## Somente artefatos publicos permitidos; quicklook nunca vira ground truth.
+
+protocol_version: v1uj
+service_type: copernicus_ems_rapid_mapping
+
+base_urls:
+  activations_index:
+    - "https://mapping.emergency.copernicus.eu/activations/"
+  activation_detail_template:
+    - "https://mapping.emergency.copernicus.eu/activations/{activation_id}/"
+
+## IDs sugeridos pelo baseline v1ui-live. VERIFICADO na live v1uj (2026-06-03):
+## EMSR564 = Storm/Madagascar e EMSR602 = Wildfire/Spain — NAO sao os eventos do
+## Brasil. Desvinculados dos eventos (event_id vazio, is_event_specific=false)
+## para nao injetar event-specificity falsa. IDs corretos do Brasil nao
+## confirmados nesta rodada (API de descoberta nao acessivel sem JS) — alvo v1uk.
+candidate_activations:
+  - activation_id: EMSR564
+    event_id: ""
+    label: "Storm / Madagascar (NAO e Petropolis; rebind v1ui equivocado)"
+    is_event_specific: false
+  - activation_id: EMSR602
+    event_id: ""
+    label: "Wildfire / Spain (NAO e Recife; rebind v1ui equivocado)"
+    is_event_specific: false
+
+search_terms:
+  - "Petropolis"
+  - "Brazil flood"
+  - "Brazil landslide"
+  - "Pernambuco"
+  - "Recife"
+  - "severe weather Brazil"
+
+## Classificação de produtos Copernicus EMS
+product_types:
+  - delineation
+  - grading
+  - reference
+  - map_pdf
+  - vector_package
+  - raster_package
+  - quicklook
+  - metadata_only
+
+vector_formats: [".zip", ".gpkg", ".geojson", ".shp", ".json", ".gml"]
+raster_formats: [".tif", ".tiff", ".jp2"]
+map_formats: [".pdf"]
+quicklook_formats: [".png", ".jpg", ".jpeg"]
+
+download:
+  allow_vector_package: true
+  allow_map_pdf: true
+  allow_quicklook: false
+  allow_raster_package: false

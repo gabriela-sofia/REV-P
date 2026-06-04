@@ -1,0 +1,7 @@
+schema_audit_id,download_id,artifact_type,row_count,column_count,has_date_field,date_field_candidates,has_hazard_field,hazard_field_candidates,has_locality_field,locality_field_candidates,has_coordinate_fields,coordinate_field_candidates,has_geometry,schema_class,notes
+SCHEMA_v1ux_0000,DL_v1ux_0000,HTML,,,false,,false,,false,,false,,false,DOCUMENT_ONLY_SCHEMA,Schema audit stores field names only; sensitive row values not versioned.
+SCHEMA_v1ux_0001,DL_v1ux_0001,HTML,,,false,,false,,false,,false,,false,DOCUMENT_ONLY_SCHEMA,Schema audit stores field names only; sensitive row values not versioned.
+SCHEMA_v1ux_0002,DL_v1ux_0002,CSV,630,0,false,,false,,false,,false,,false,UNCLASSIFIED_SCHEMA,Schema audit stores field names only; sensitive row values not versioned.
+SCHEMA_v1ux_0003,DL_v1ux_0003,GeoJSON,,,false,,false,,false,,false,,false,UNCLASSIFIED_SCHEMA,Schema audit stores field names only; sensitive row values not versioned.
+SCHEMA_v1ux_0004,DL_v1ux_0004,ZIP,,,false,,false,,false,,false,,false,UNCLASSIFIED_SCHEMA,Schema audit stores field names only; sensitive row values not versioned.
+SCHEMA_v1ux_0005,DL_v1ux_0005,PDF,,,false,,false,,false,,false,,false,DOCUMENT_ONLY_SCHEMA,Schema audit stores field names only; sensitive row values not versioned.

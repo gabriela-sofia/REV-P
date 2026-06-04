@@ -1,0 +1,2 @@
+service_record_id,event_id,service_url,service_type,layer_id,layer_name,geometry_type,spatial_reference,fields,extent,relevance_score,is_event_specific,is_observed_occurrence_candidate,is_susceptibility_or_risk_context,blocking_reason,notes
+GEOSGB_v1up_0000,,https://geoportal.sgb.gov.br/server/rest/services/ODS_18_novo_Mapa_layer/MapServer,MapServer,3,risco,esriGeometryPolygon,,,,5,false,false,true,risk_or_susceptibility_context,Metadata only; no feature download.

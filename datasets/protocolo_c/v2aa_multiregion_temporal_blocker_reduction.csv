@@ -1,0 +1,4 @@
+reduction_id,region,total_patches,patches_with_recovered_date,high_confidence_dates,medium_confidence_dates,missing_or_blocked_dates,event_patch_candidates_improved,blocker_reduction_status,notes
+TBR_v2aa_0000,CUR,54,0,0,0,54,0,BLOCKER_REMAINS_DOMINANT,Quantifies no_sentinel_date reduction from recovered dates only; no inferred dates counted.
+TBR_v2aa_0001,PET,58,4,2,2,54,0,BLOCKER_PARTIALLY_REDUCED,Quantifies no_sentinel_date reduction from recovered dates only; no inferred dates counted.
+TBR_v2aa_0002,REC,55,3,0,3,52,0,BLOCKER_PARTIALLY_REDUCED,Quantifies no_sentinel_date reduction from recovered dates only; no inferred dates counted.

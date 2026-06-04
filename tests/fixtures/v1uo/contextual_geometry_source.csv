@@ -1,0 +1,2 @@
+source_id,region,source_type,has_geometry,observed_occurrence,is_synthetic
+SRC_CONTEXT_SYN,SYN,ARCGIS_REST,true,false,true

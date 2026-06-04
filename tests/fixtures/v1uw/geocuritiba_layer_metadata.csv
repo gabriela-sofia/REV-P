@@ -1,0 +1,2 @@
+geocuritiba_record_id,layer_name,geometry_type,spatial_reference,fields
+GEO1,bacias_hidrograficas,Polygon,EPSG:31982,nome

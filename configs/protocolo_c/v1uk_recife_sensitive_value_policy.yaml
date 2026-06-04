@@ -1,0 +1,19 @@
+protocol_version: v1uk
+redact_fields_matching:
+  - endereco
+  - logradouro
+  - numero
+  - protocolo
+  - processo
+  - descricao
+  - nome
+  - avaliador
+  - cpf
+  - telefone
+  - email
+public_outputs:
+  allow_field_names: true
+  allow_counts: true
+  allow_hashes: true
+  forbid_literal_sensitive_values: true
+  forbid_absolute_paths: true

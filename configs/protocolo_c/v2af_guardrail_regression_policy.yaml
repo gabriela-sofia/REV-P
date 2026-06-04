@@ -1,0 +1,4 @@
+sweep_globs: [v2ac_*.csv, v2ad_*.csv, v2ae_*.csv, v2af_*.csv]
+forbidden_true_blocked: true
+forbidden_status_blocked: true
+overlay_ground_reference_training_must_be_blocked: true

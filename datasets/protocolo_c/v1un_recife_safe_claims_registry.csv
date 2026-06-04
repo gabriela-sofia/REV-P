@@ -1,0 +1,6 @@
+claim_id,event_id,claim_text,claim_type,allowed,required_qualifier,prohibited_reason,suggested_safe_alternative
+SAFE_v1un_0000,REC_2022_05_24_30,REC_2022 has public official Locality-Only Evidence compatible with the analyzed temporal window.,SAFE_CLAIM,true,Must state that it is non-operational Human Review Evidence.,,REC_2022 has public official Locality-Only Evidence compatible with the analyzed temporal window.
+SAFE_v1un_0001,REC_2022_05_24_30,The records do not provide observed coordinate evidence sufficient for overlay.,SAFE_CLAIM,true,Must retain the Non-Overlay Evidence qualifier.,,The records do not provide observed coordinate evidence sufficient for overlay.
+SAFE_v1un_0002,REC_2022_05_24_30,"The evidence supports contextual discussion, not operational validation.",SAFE_CLAIM,true,Must keep contextual/non-operational wording.,,"The evidence supports contextual discussion, not operational validation."
+SAFE_v1un_0003,REC_2022_05_24_30,Human Review was structured in auditable Human Review Packages.,SAFE_CLAIM,true,Must state supervisor review remains pending.,,Human Review was structured in auditable Human Review Packages.
+SAFE_v1un_0004,REC_2022_05_24_30,Protocol C remains blocked for ground reference creation.,SAFE_CLAIM,true,Must mention missing coordinate and overlay prerequisites.,,Protocol C remains blocked for ground reference creation.

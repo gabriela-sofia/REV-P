@@ -1,0 +1,20 @@
+protocol_version: v1uk
+canonical_fields:
+  - event_date
+  - event_time
+  - protocol_id
+  - occurrence_type
+  - hazard_type
+  - service_type
+  - neighborhood
+  - locality
+  - address
+  - latitude
+  - longitude
+  - geometry
+  - status
+  - source
+ambiguity_policy:
+  never_infer_hazard_from_generic_field: true
+  defense_civil_layer_is_not_occurrence: true
+  unmapped_fields_need_review: true

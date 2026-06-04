@@ -1,0 +1,7 @@
+protocol_version: v1us
+linkage_basis: region_only_candidate_no_spatial_distance
+event_patch_candidate_only: true
+patch_bound_truth: false
+use_spatial_distance: false
+use_inferred_coordinate: false
+curitiba_requires_clear_event_registry: true

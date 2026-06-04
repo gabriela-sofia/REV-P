@@ -1,0 +1,20 @@
+artifact_id,artifact_path,artifact_type,protocol_version,sha256_prefix,file_size_bytes,is_versionable,reason
+MAN_v1uw_0000,configs/protocolo_c/v1uw_curitiba_source_snapshot_policy.yaml,yaml,v1uw,6a0927dd7440a05d,78,true,v1uw public evidence metadata; no raw private path.
+MAN_v1uw_0001,configs/protocolo_c/v1uw_curitiba_text_extraction_policy.yaml,yaml,v1uw,f3f001b753088272,60,true,v1uw public evidence metadata; no raw private path.
+MAN_v1uw_0002,configs/protocolo_c/v1uw_curitiba_event_gate_policy.yaml,yaml,v1uw,7f71beb2829fa313,92,true,v1uw public evidence metadata; no raw private path.
+MAN_v1uw_0003,configs/protocolo_c/v1uw_curitiba_hydromet_anchor_policy.yaml,yaml,v1uw,c1b2456e4f5f9841,60,true,v1uw public evidence metadata; no raw private path.
+MAN_v1uw_0004,configs/protocolo_c/v1uw_curitiba_layer_deepening_policy.yaml,yaml,v1uw,424ada2a9cb56ac5,61,true,v1uw public evidence metadata; no raw private path.
+MAN_v1uw_0005,configs/protocolo_c/v1uw_curitiba_next_action_policy.yaml,yaml,v1uw,0721edafabe2b0f5,63,true,v1uw public evidence metadata; no raw private path.
+MAN_v1uw_0006,datasets/protocolo_c/v1uw_curitiba_event_source_snapshot_manifest.csv,csv,v1uw,d6f2e2c30b30a47c,484,true,v1uw public evidence metadata; no raw private path.
+MAN_v1uw_0007,datasets/protocolo_c/v1uw_curitiba_document_text_extraction_registry.csv,csv,v1uw,3d4f538ccc29e25e,452,true,v1uw public evidence metadata; no raw private path.
+MAN_v1uw_0008,datasets/protocolo_c/v1uw_curitiba_event_date_hazard_audit.csv,csv,v1uw,c839382f2aa69e64,563,true,v1uw public evidence metadata; no raw private path.
+MAN_v1uw_0009,datasets/protocolo_c/v1uw_curitiba_hydromet_anchor_registry.csv,csv,v1uw,c0d0bbd0b6a845b6,517,true,v1uw public evidence metadata; no raw private path.
+MAN_v1uw_0010,datasets/protocolo_c/v1uw_curitiba_geocuritiba_layer_deepening.csv,csv,v1uw,baadc9c374082dbe,791,true,v1uw public evidence metadata; no raw private path.
+MAN_v1uw_0011,datasets/protocolo_c/v1uw_curitiba_open_data_resource_deepening.csv,csv,v1uw,86a4f6e6881cf93d,1109,true,v1uw public evidence metadata; no raw private path.
+MAN_v1uw_0012,datasets/protocolo_c/v1uw_curitiba_event_candidate_status.csv,csv,v1uw,3a3b8339629a9366,756,true,v1uw public evidence metadata; no raw private path.
+MAN_v1uw_0013,datasets/protocolo_c/v1uw_curitiba_event_patch_prelink_update.csv,csv,v1uw,cb52164390be029f,15758,true,v1uw public evidence metadata; no raw private path.
+MAN_v1uw_0014,datasets/protocolo_c/v1uw_curitiba_ground_reference_blocker_matrix.csv,csv,v1uw,67f15e8fa9d9a888,2374,true,v1uw public evidence metadata; no raw private path.
+MAN_v1uw_0015,datasets/protocolo_c/v1uw_next_actions_registry.csv,csv,v1uw,3bef0148f7da8ba5,356,true,v1uw public evidence metadata; no raw private path.
+MAN_v1uw_0017,docs/metodologia_cientifica/protocolo_c_v1uw_curitiba_public_evidence_deepening.md,md,v1uw,b7a3bb3254de41b0,692,true,v1uw public evidence metadata; no raw private path.
+MAN_v1uw_0018,docs/metodologia_cientifica/protocolo_c_relatorio_v1uw_curitiba_public_evidence_deepening.md,md,v1uw,de094d6b8873a2cd,920,true,v1uw public evidence metadata; no raw private path.
+MAN_v1uw_0019,docs/metodologia_cientifica/protocolo_c_status_atual_v1uw.md,md,v1uw,3f05022ae4e3dfd2,356,true,v1uw public evidence metadata; no raw private path.

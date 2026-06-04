@@ -1,0 +1,3 @@
+hydromet_record_id,source_id,source_name,station_or_source,municipality,date_signal,hydromet_signal,official_source_status,temporal_support_status,can_be_observed_occurrence,notes
+HYD_v1uv_0000,curitiba_prefeitura_news,Prefeitura/Defesa Civil official page,Simepar|Cemaden mentioned in official source,Curitiba,2022-01-15,rainfall_or_wind_signal_present,OFFICIAL_PUBLIC_SOURCE,TEMPORAL_HYDROMET_SUPPORT,false,Hydromet supports timing only; it is not observed occurrence evidence.
+HYD_v1uv_0001,defesa_civil_pr_news,Prefeitura/Defesa Civil official page,Simepar|Cemaden mentioned in official source,Curitiba,2022-01-05,rainfall_or_wind_signal_present,OFFICIAL_PUBLIC_SOURCE,TEMPORAL_HYDROMET_SUPPORT,false,Hydromet supports timing only; it is not observed occurrence evidence.

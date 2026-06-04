@@ -1,0 +1,2 @@
+event_patch_candidate_id,patch_id,geometry_status,overlay_readiness,ground_reference_readiness,training_readiness
+EPCX,REC_00008,ABSENT,STRONG,BLOCKED,BLOCKED

@@ -1,0 +1,7 @@
+max_status: CURITIBA_CONTEXT_ONLY_HOLD_NON_OPERATIONAL
+context_is_not_occurrence: true
+hydromet_is_not_observed_occurrence: true
+controlled_feature_download_executed: false
+overlay_allowed: false
+ground_reference_allowed: false
+training_label_allowed: false

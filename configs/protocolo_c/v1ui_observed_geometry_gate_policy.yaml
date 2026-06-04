@@ -1,0 +1,76 @@
+## v1ui — Observed Geometry Gate Policy
+## 14 gates para candidatos a geometria observada publica.
+## G12-G14 impedem ground reference nesta etapa.
+
+protocol_version: v1ui
+ground_truth_operational: false
+can_create_ground_reference: false
+can_create_training_label: false
+public_artifact_discovery: true
+
+gates:
+  - gate_id: G01
+    name: official_public_source
+    description: "Fonte e oficial e publica"
+    blocking: true
+  - gate_id: G02
+    name: artifact_traceable
+    description: "Artefato e rastreavel (URL, SHA256, proveniencia)"
+    blocking: true
+  - gate_id: G03
+    name: license_or_public_access_ok
+    description: "Licenca permite uso academico ou acesso e publico"
+    blocking: true
+  - gate_id: G04
+    name: event_date_available
+    description: "Data do evento esta presente no artefato"
+    blocking: true
+  - gate_id: G05
+    name: event_date_compatible
+    description: "Data do artefato e compativel com janela do evento"
+    blocking: true
+  - gate_id: G06
+    name: hazard_type_available
+    description: "Tipo de perigo/fenomeno esta presente"
+    blocking: true
+  - gate_id: G07
+    name: phenomenon_separated
+    description: "Fenomeno separado (inundacao vs deslizamento)"
+    blocking: true
+  - gate_id: G08
+    name: locality_or_geometry_available
+    description: "Localidade ou geometria disponivel"
+    blocking: true
+  - gate_id: G09
+    name: geometry_available
+    description: "Geometria vetorial presente"
+    blocking: true
+  - gate_id: G10
+    name: crs_available
+    description: "CRS definido ou recuperavel"
+    blocking: true
+  - gate_id: G11
+    name: geometry_quality_sufficient
+    description: "Qualidade geometrica suficiente"
+    blocking: true
+  - gate_id: G12
+    name: supervisor_review_pending
+    description: "Revisao supervisora pendente — SEMPRE FAIL nesta etapa"
+    blocking: true
+    always_fail_in_v1ui: true
+  - gate_id: G13
+    name: patch_overlay_not_executed
+    description: "Overlay nao executado — SEMPRE FAIL nesta etapa"
+    blocking: true
+    always_fail_in_v1ui: true
+  - gate_id: G14
+    name: label_forbidden
+    description: "Label proibido — SEMPRE FAIL nesta etapa"
+    blocking: true
+    always_fail_in_v1ui: true
+
+max_status_achievable: "OBSERVED_GEOMETRY_CANDIDATE_READY_FOR_SUPERVISOR_REVIEW"
+forbidden_statuses:
+  - "GROUND_REFERENCE"
+  - "TRAINING_LABEL"
+  - "OVERLAY_EXECUTED"

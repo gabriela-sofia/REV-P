@@ -1,0 +1,55 @@
+## v1uj — S2iD / dados.gov.br Targets
+## Datasets publicos de desastres reconhecidos, ocorrencias, COBRADE, decretos.
+## Municipio NAO e geometria de inundacao. Sem geometria de ocorrencia patch-level.
+
+protocol_version: v1uj
+service_type: s2id_dadosgov
+
+portals:
+  - portal_id: DADOS_GOV_BR
+    base_url: "https://dados.gov.br"
+    api_action_path: "/api/3/action"
+  - portal_id: S2ID_DEFESACIVIL
+    base_url: "https://s2id.mi.gov.br"
+    api_action_path: null
+
+search_queries:
+  - "S2iD"
+  - "desastre"
+  - "defesa civil"
+  - "COBRADE"
+  - "reconhecimento"
+  - "decreto"
+  - "ocorrencia desastre"
+
+## Classificação de recurso S2iD/dados.gov
+record_classes:
+  - disaster_event_registry
+  - recognition_record
+  - municipal_level_context
+  - no_geometry
+  - table_with_coordinates_candidate
+
+## COBRADE de interesse (hidrologico/geologico)
+cobrade_of_interest:
+  - "12100"   # inundacoes
+  - "12200"   # enxurradas
+  - "12300"   # alagamentos
+  - "11410"   # deslizamentos / movimento de massa
+
+event_municipalities:
+  PET_2022_02_15:
+    municipio: "Petropolis"
+    uf: "RJ"
+    ibge_code: "3303906"
+  PET_2024_03_21_28:
+    municipio: "Petropolis"
+    uf: "RJ"
+    ibge_code: "3303906"
+  REC_2022_05_24_30:
+    municipio: "Recife"
+    uf: "PE"
+    ibge_code: "2611606"
+
+tabular_formats: ["CSV", "XLSX", "XLS", "JSON"]
+max_packages_per_query: 25

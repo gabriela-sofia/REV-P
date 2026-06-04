@@ -1,0 +1,2 @@
+event_id,region,source_id,row_hash,has_date,has_hazard,has_locality,has_coordinate,has_geometry,is_synthetic
+REC_SYN_2022,REC,SRC_REC_CKAN,syn_rec_001,true,true,true,false,false,true

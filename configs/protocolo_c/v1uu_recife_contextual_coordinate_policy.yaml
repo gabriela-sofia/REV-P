@@ -1,0 +1,7 @@
+protocol_version: v1uu
+max_status: RECIFE_CONTEXTUAL_COORDINATE_LAYER_CONSOLIDATED_NON_OPERATIONAL
+contextual_coordinate_layer_only: true
+occurrence_coordinate_candidate: false
+overlay_allowed: false
+geocoding_allowed: false
+centroid_allowed: false

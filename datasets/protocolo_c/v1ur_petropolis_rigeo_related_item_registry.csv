@@ -1,0 +1,3 @@
+related_item_id,event_id,seed_id,item_url,title,year,relation_type,matched_terms_hash,is_public,event_specificity,candidate_relevance,has_bitstreams,notes
+REL_v1ur_0000,PET_2022_02_15,SEED_v1ur_0000,https://rigeo.sgb.gov.br/handle/doc/22668,"Avaliação técnica pós-desastre: Petrópolis, RJ",,KNOWN_V1UP_ITEM,46fb587e2520ae5f,true,EVENT_SPECIFIC_PETROPOLIS_2022,HIGH,true,Related item candidate only; no item invented.
+REL_v1ur_0001,PET_2022_02_15,SEED_v1ur_0000,https://rigeo.sgb.gov.br/handle/doc/22668,https://rigeo.sgb.gov.br/handle/doc/22668,,INTERNAL_HANDLE_LINK,46fb587e2520ae5f,true,EVENT_SPECIFIC_PETROPOLIS_2022,HIGH,true,Related item candidate only; no item invented.

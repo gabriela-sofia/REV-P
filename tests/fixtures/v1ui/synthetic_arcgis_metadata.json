@@ -1,0 +1,43 @@
+{
+  "currentVersion": 10.81,
+  "serviceDescription": "SYNTHETIC — Ocorrencias de inundacao Petropolis 2022",
+  "layers": [
+    {
+      "id": 0,
+      "name": "Ocorrencias_Inundacao_2022",
+      "geometryType": "esriGeometryPoint",
+      "extent": {
+        "xmin": -43.25,
+        "ymin": -22.55,
+        "xmax": -43.10,
+        "ymax": -22.45,
+        "spatialReference": {"wkid": 4326}
+      },
+      "fields": [
+        {"name": "OBJECTID", "type": "esriFieldTypeOID"},
+        {"name": "data_ocorrencia", "type": "esriFieldTypeDate"},
+        {"name": "tipo_fenomeno", "type": "esriFieldTypeString"},
+        {"name": "bairro", "type": "esriFieldTypeString"},
+        {"name": "latitude", "type": "esriFieldTypeDouble"},
+        {"name": "longitude", "type": "esriFieldTypeDouble"}
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Areas_Risco_Suscetibilidade",
+      "geometryType": "esriGeometryPolygon",
+      "extent": {
+        "xmin": -43.30,
+        "ymin": -22.60,
+        "xmax": -43.05,
+        "ymax": -22.40,
+        "spatialReference": {"wkid": 4326}
+      },
+      "fields": [
+        {"name": "OBJECTID", "type": "esriFieldTypeOID"},
+        {"name": "classe_suscetibilidade", "type": "esriFieldTypeString"},
+        {"name": "area_km2", "type": "esriFieldTypeDouble"}
+      ]
+    }
+  ]
+}

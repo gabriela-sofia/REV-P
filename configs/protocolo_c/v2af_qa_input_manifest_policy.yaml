@@ -1,0 +1,4 @@
+use_absolute_path: false
+scan_local_only: false
+required_inputs_must_exist: true
+max_status: EVENT_PATCH_V2_QA_AUTOMATION_NON_OPERATIONAL

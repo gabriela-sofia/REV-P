@@ -1,0 +1,10 @@
+protocol_version: v2ag
+policy: next_programming_target_ranker
+targets:
+  - EVENT_PATCH_PACKAGE_V2_CROSSWALK_MIGRATION
+  - DINO_REVIEW_SUPPORT_COMPLETION
+  - PUBLIC_SOURCE_RECHECK_HOLD
+  - MULTI_REGION_REGISTRY_MAINTENANCE
+  - STOP_GROUND_TRUTH_SEARCH_UNTIL_NEW_SOURCE
+selection_rule: score_from_v2ag_evidence_counts
+no_commit_push: true

@@ -1,0 +1,3 @@
+negative_fixtures_must_be_detected: true
+negative_fixtures_are_not_real_outputs: true
+fixture_dir: tests/fixtures/v2ad

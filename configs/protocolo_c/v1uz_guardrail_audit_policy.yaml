@@ -1,0 +1,8 @@
+must_be_false:
+  - ground_truth_operational
+  - can_create_ground_reference
+  - can_create_training_label
+forbidden_status_tokens_blocked: true
+absolute_path_blocked: true
+local_only_leak_blocked: true
+tool_name_leak_blocked: true

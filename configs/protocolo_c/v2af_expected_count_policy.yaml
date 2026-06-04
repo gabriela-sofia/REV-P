@@ -1,0 +1,6 @@
+canonical_regions: 3
+canonical_events: 4
+canonical_event_patch_packages: 172
+v2ac_packages: 172
+v2_readiness_rows: 2580
+allow_extra_only_if_justified: false

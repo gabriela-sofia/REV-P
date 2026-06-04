@@ -1,0 +1,23 @@
+summary_id,metric,value,notes
+SUM_v1uj_0000,ckan_resources_total,361,Recursos CKAN Recife inventariados no registry v1uj
+SUM_v1uj_0001,ckan_geospatial_candidates,206,Inclui candidatos contextuais
+SUM_v1uj_0002,ckan_geospatial_noncontextual_candidates,147,Elegiveis para downloader focado
+SUM_v1uj_0003,ckan_csv_resources,194,resource_format=CSV
+SUM_v1uj_0004,ckan_geojson_resources,12,resource_format=GeoJSON
+SUM_v1uj_0005,unique_download_urls_processed,64,URLs unicas no manifest de download
+SUM_v1uj_0006,download_ok,49,download_status=DOWNLOAD_OK
+SUM_v1uj_0007,already_exists_same_url_same_hash,0,Reexecucao segura da mesma URL
+SUM_v1uj_0008,duplicate_content_different_url,15,Conteudo SHA256 identico em URLs diferentes
+SUM_v1uj_0009,blocked_or_failed_downloads,0,Falhas ou bloqueios com status explicito
+SUM_v1uj_0010,collision_rows_detected,24,Linhas do audit com colisao de basename/path
+SUM_v1uj_0011,collision_groups_detected,9,Grupos de colisao distintos
+SUM_v1uj_0012,inventoried_csv_assets,59,Arquivos CSV inventariados localmente
+SUM_v1uj_0013,inventoried_geojson_assets,5,Arquivos GeoJSON inventariados localmente
+SUM_v1uj_0014,table_with_coordinates_candidate_for_review,2,"Classificacao de inventario, nao ground reference"
+SUM_v1uj_0015,documented_occurrence_table_no_geometry,28,Tabelas com ocorrencia/data/endereco sem coordenadas formais
+SUM_v1uj_0016,contextual_official_layer,33,Camadas oficiais contextuais
+SUM_v1uj_0017,context_only,1,"Infraestrutura, risco ou suscetibilidade"
+SUM_v1uj_0018,promotion_candidate_with_blockers,24,Falha em pelo menos um gate requerido para candidato observado
+SUM_v1uj_0019,promotion_not_geometry_candidate,40,Sem geometria/coordenada candidata
+SUM_v1uj_0020,observed_candidates_for_review_total,0,Status maximo permitido
+SUM_v1uj_0021,rec_2022_path_to_supervisor_review,NOT_YET,READY somente se houver OBSERVED_GEOMETRY_CANDIDATE_FOR_REVIEW

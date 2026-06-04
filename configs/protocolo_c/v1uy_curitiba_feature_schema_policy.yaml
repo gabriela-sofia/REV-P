@@ -1,0 +1,3 @@
+max_public_sample_features: 0
+raw_samples_local_only: true
+geometry_publication_allowed: false

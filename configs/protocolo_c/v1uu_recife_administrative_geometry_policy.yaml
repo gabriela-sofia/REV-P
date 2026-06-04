@@ -1,0 +1,4 @@
+raw_geometry_versioning: false
+allowed_output: metadata_counts_only
+can_support_spatial_context: true
+can_support_occurrence_review: false

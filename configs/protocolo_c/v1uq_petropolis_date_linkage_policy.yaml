@@ -1,0 +1,3 @@
+protocol_version: v1uq
+year_only_exact_event: false
+accepted_statuses: [EXACT_EVENT_DATE, EVENT_MONTH, EVENT_YEAR, POST_EVENT_REPORT, NO_TEMPORAL_LINK]

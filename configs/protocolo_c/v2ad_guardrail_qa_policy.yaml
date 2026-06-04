@@ -1,0 +1,6 @@
+forbidden_true_blocked: true
+forbidden_status_blocked: true
+absolute_path_blocked: true
+local_only_leak_blocked: true
+tool_name_leak_blocked: true
+overlay_ground_reference_training_must_be_blocked: true

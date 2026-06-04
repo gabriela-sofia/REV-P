@@ -1,0 +1,8 @@
+protocol_version: v1ul
+promotion_policy:
+  ground_reference: forbidden
+  ground_truth: forbidden
+  label: forbidden
+  patch_positive: forbidden
+  patch_negative: forbidden
+  supervisor_review_required: true

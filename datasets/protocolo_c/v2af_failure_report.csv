@@ -1,0 +1,2 @@
+failure_id,artifact,check,severity,recommended_fix,blocking_status,notes
+FAIL_v2af_0000,NONE,NO_FAILURES_DETECTED,info,none,NON_BLOCKING,All QA automation components passed (expected blockers remain).

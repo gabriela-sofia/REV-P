@@ -1,0 +1,23 @@
+check_id,category,check_description,result,detail
+AUD_001,gitignore,local_only/ bloqueado no .gitignore,PASS,Presente nas linhas 67 e 80
+AUD_002,gitignore,evidence_raw extensões bloqueadas,PASS,.pdf/.shp/.gpkg/.geojson/.kml/.kmz
+AUD_003,gitignore,evidence_staging bloqueado,PASS,Padrão glob /**
+AUD_004,gitignore,evidence_reports bloqueado,PASS,Padrão glob /**
+AUD_005,heavy_files,Nenhum .tif/.tiff fora de local_only,PASS,0 encontrados
+AUD_006,heavy_files,Nenhum .npz fora de local_only,PASS,12 em local_runs/ (gitignored)
+AUD_007,guardrail,can_create_training_label=true ausente em CSVs,PASS,0 ocorrências
+AUD_008,guardrail,ground_truth_operational=true ausente em CSVs,PASS,0 ocorrências
+AUD_009,guardrail,can_reopen_protocol_b=true ausente em CSVs,PASS,0 ocorrências
+AUD_010,guardrail,Nenhuma coordenada inventada,PASS,Nenhuma coordenada nos registries
+AUD_011,guardrail,Nenhum path absoluto local em CSVs,PASS,0 ocorrências C:\Users ou /home/
+AUD_012,registry,evidence_source_registry tem 42 linhas de dados,PASS,14 URLs × 3 eventos = 42
+AUD_013,registry,42 registros explicáveis (não 27),PASS,5 fontes com 2 URLs + 4 com 1 URL = 14 URLs base
+AUD_014,yaml,ground_truth_operational=false no YAML,PASS,Verificado
+AUD_015,yaml,can_create_training_label=false no YAML,PASS,Verificado
+AUD_016,yaml,dino_usage=SUPPORT_ONLY no YAML,PASS,Verificado
+AUD_017,yaml,Todas as fontes can_promote_ground_reference=false,PASS,9/9 fontes
+AUD_018,gates,G10 sempre FAIL,PASS,Enforced em v1uc
+AUD_019,gates,G11 sempre FAIL,PASS,Enforced em v1uc
+AUD_020,gates,Nenhuma evidência promovida,PASS,Todos BLOCKED
+AUD_021,tests,38 testes passando,PASS,19+9+5+5
+AUD_022,decision,v1uc aceita para progressão,PASS,Todos os guardrails verificados

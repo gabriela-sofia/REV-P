@@ -1,0 +1,90 @@
+## v1ue — Station Search Policy
+## Define como estações candidatas oficiais são buscadas por cidade/evento.
+## Estação ancora tempo/plausibilidade, NUNCA geometria de inundação.
+
+protocol_version: v1ue
+ground_truth_operational: false
+can_create_training_label: false
+
+distance_policy:
+  method: haversine_city_centroid
+  max_distance_km: 50
+  note: >
+    Distância calculada do centroide oficial da cidade ao ponto da estação,
+    APENAS quando a coordenada da estação vier da fonte oficial.
+    Centroide de cidade NAO é coordenada de evento.
+
+coordinate_rules:
+  - rule: "Coordenada de estação só registrada se vier da fonte oficial"
+    enforcement: HARD
+  - rule: "Nunca inventar coordenada de estação"
+    enforcement: HARD
+  - rule: "Coordenada ausente da fonte => coordinate_status=MISSING"
+    enforcement: HARD
+  - rule: "Estação não é geometria de inundação"
+    enforcement: HARD
+
+## Centroides de cidade — referência oficial pública (IBGE/sede municipal).
+## Usados apenas para cálculo de distância estação→cidade, nunca como evento.
+city_centroids:
+  - city: Petrópolis
+    uf: RJ
+    latitude: -22.5050
+    longitude: -43.1786
+    source: IBGE_sede_municipal
+  - city: Recife
+    uf: PE
+    latitude: -8.0476
+    longitude: -34.8770
+    source: IBGE_sede_municipal
+
+## Estações oficiais candidatas conhecidas (identidade), com coordenada
+## marcada como NEEDS_OFFICIAL_RESOLUTION quando não verificada localmente
+## contra o catálogo oficial nesta sessão.
+## NUNCA inventar coordenada: lat/long só são preenchidos pelo resolver quando
+## obtidos diretamente da fonte oficial (catálogo INMET, inventário ANA, etc.).
+known_official_stations:
+  - source_id: INMET_BDMEP
+    city: Petrópolis
+    uf: RJ
+    station_name: "PETROPOLIS-PRESIDENTE VARGAS (candidata)"
+    station_code: "A610"
+    station_type: automatic_meteorological
+    coordinate_source: NEEDS_OFFICIAL_RESOLUTION
+    note: >
+      Código A610 é estação automática INMET de Petrópolis (identidade conhecida).
+      Coordenada exata NAO verificada localmente nesta sessão -> coordinate_status=MISSING.
+      Resolver deve obter lat/long do catálogo oficial INMET antes de registrar.
+
+  - source_id: INMET_BDMEP
+    city: Recife
+    uf: PE
+    station_name: "RECIFE (CURADO) (candidata)"
+    station_code: "A301"
+    station_type: automatic_meteorological
+    coordinate_source: NEEDS_OFFICIAL_RESOLUTION
+    note: >
+      Código A301 referente a estação automática INMET na região de Recife (identidade candidata).
+      Coordenada exata NAO verificada localmente -> coordinate_status=MISSING.
+
+  - source_id: CEMADEN_PLUVIOMETROS
+    city: Petrópolis
+    uf: RJ
+    station_name: "Cemaden Petropolis (rede de pluviometros)"
+    station_code: "UNKNOWN_NEEDS_RESOLUTION"
+    station_type: pluviometer_network
+    coordinate_source: NEEDS_OFFICIAL_RESOLUTION
+    note: >
+      Cemaden mantém rede de pluviômetros em Petrópolis.
+      Coordenadas individuais requerem resolução na fonte. coordinate_status=MISSING.
+
+  - source_id: ANA_HIDROWEB
+    city: Petrópolis
+    uf: RJ
+    station_name: "ANA Hidroweb (estacoes fluviometricas bacia Piabanha)"
+    station_code: "UNKNOWN_NEEDS_RESOLUTION"
+    station_type: fluviometric
+    coordinate_source: NEEDS_OFFICIAL_RESOLUTION
+    note: >
+      Estações fluviométricas ANA na bacia do Piabanha.
+      Código e coordenada requerem resolução no inventário ANA. coordinate_status=MISSING.

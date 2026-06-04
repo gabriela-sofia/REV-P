@@ -1,0 +1,26 @@
+# Status Atual - Protocolo C v1un
+
+event_id=REC_2022_05_24_30
+final_status=LOCALITY_ONLY_HUMAN_REVIEW_EVIDENCE_CONSOLIDATED
+locality_only_candidates=6672
+human_review_batches=3
+aggregation_count=179
+dominant_hazard_class=CIVIL_DEFENSE_GENERIC
+evidence_level=STRONG_CONTEXTUAL_LOCALITY_ONLY_NON_OPERATIONAL
+coordinate_support=BLOCKED
+overlay_support=BLOCKED
+ground_reference_support=BLOCKED
+ground_truth_operational=false
+patch_bound_truth=false
+operational_validation=false
+can_create_ground_reference=false
+can_create_training_label=false
+can_reopen_protocol_b=false
+dino_usage=SUPPORT_ONLY
+no_overlay_executed=true
+no_coordinates_invented=true
+human_review_package_created=true
+human_review_status=PREPARED_NOT_OPERATIONAL
+supervisor_review_completed=false
+max_status=RECIFE_HUMAN_REVIEW_EVIDENCE_CONSOLIDATED_NON_OPERATIONAL
+next_action=v1uo - Protocolo C Recife Scientific Writing Integration

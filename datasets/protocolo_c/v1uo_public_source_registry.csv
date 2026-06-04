@@ -1,0 +1,17 @@
+source_id,region,source_name,source_type,base_url,access_mode,expected_artifact_types,can_contain_observed_geometry,can_contain_locality_only_records,can_contain_temporal_anchor,can_contain_context_only,priority,crawler_strategy,notes
+SRC_REC_CKAN,REC,Recife CKAN Dados Abertos,CKAN,https://dados.recife.pe.gov.br,public_catalog,csv|geojson|json,false,true,false,true,1,ckan_package_search,Recife public portal and Defesa Civil records.
+SRC_REC_DEFESA_CIVIL,REC,Defesa Civil Recife,OPEN_DATA_PORTAL,https://dados.recife.pe.gov.br,public_catalog,csv,false,true,false,true,1,ckan_resource_scan,Locality-only records observed in prior chain.
+SRC_PET_SGB,PET,SGB CPRM,DOCUMENT_REPOSITORY,https://www.sgb.gov.br,public_catalog,pdf|zip|shp|geojson,true,true,false,true,1,document_and_geodata_scan,Priority for observed geohazard geometry.
+SRC_PET_RIGEO,PET,RIGeo,DOCUMENT_REPOSITORY,https://rigeo.sgb.gov.br,public_catalog,pdf|zip|shp,true,true,false,true,1,repository_search,Priority for Petropolis event artifacts.
+SRC_PET_GEOSGB,PET,GeoSGB,GEOSERVER,https://geosgb.sgb.gov.br,public_service,wms|wfs|geojson,true,false,false,true,2,service_capabilities,Geospatial service candidate.
+SRC_PET_DRM_RJ,PET,DRM RJ,DOCUMENT_REPOSITORY,https://www.drm.rj.gov.br,public_catalog,pdf|map|shp,true,true,false,true,2,document_scan,Regional geohazard source.
+SRC_PET_DEFESA_CIVIL,PET,Defesa Civil Petropolis,OPEN_DATA_PORTAL,https://www.petropolis.rj.gov.br,public_catalog,csv|pdf|html,false,true,true,true,2,municipal_portal_scan,Administrative records possible.
+SRC_CUR_GEOCURITIBA,CUR,GeoCuritiba,ARCGIS_REST,https://geocuritiba.curitiba.pr.gov.br,public_service,feature_service|geojson,true,true,false,true,1,arcgis_rest_inventory,Potential municipal geometry source.
+SRC_CUR_DADOS_ABERTOS,CUR,Dados Abertos Curitiba,OPEN_DATA_PORTAL,https://www.curitiba.pr.gov.br/dadosabertos,public_catalog,csv|json|geojson,true,true,false,true,1,portal_catalog_scan,Public data source candidate.
+SRC_CUR_DEFESA_CIVIL,CUR,Defesa Civil Curitiba,OPEN_DATA_PORTAL,https://www.curitiba.pr.gov.br,public_catalog,html|pdf|csv,false,true,true,true,2,municipal_portal_scan,Administrative records possible.
+SRC_SIMEPAR,CUR,Simepar,HYDROMET_SERIES,https://www.simepar.br,public_catalog,series|csv|api,false,false,true,true,2,hydromet_source_check,Hydromet anchor candidate if public access exists.
+SRC_COPERNICUS_EMS,ALL,Copernicus EMS,OPERATIONAL_MAPPING,https://emergency.copernicus.eu,public_catalog,map|vector|pdf,true,false,true,true,2,activation_search,Only useful with correct activation.
+SRC_CHARTER,ALL,International Charter,VHR_CONTEXT,https://disasterscharter.org,public_catalog,activation|map|vhr_context,true,false,true,true,3,activation_search,Context only unless event-specific product exists.
+SRC_INMET,ALL,INMET,HYDROMET_SERIES,https://bdmep.inmet.gov.br,public_catalog,csv|zip|series,false,false,true,true,1,hydromet_series_registry,Temporal anchor source.
+SRC_ANA,ALL,ANA Hidro,HYDROMET_SERIES,https://www.snirh.gov.br,public_catalog,series|csv,false,false,true,true,2,hydromet_series_registry,Hydrological context source.
+SRC_CEMADEN,ALL,Cemaden,HYDROMET_SERIES,https://www.gov.br/cemaden,public_catalog,series|alert|csv,false,true,true,true,2,alert_and_series_scan,Alerts and hydromet context.

@@ -1,0 +1,5 @@
+protocol_version: v1us
+invent_patch_id_allowed: false
+invent_sentinel_date_allowed: false
+patch_registry_sources:
+  - dino_patch_visual_linkage_registry_v1pv.csv

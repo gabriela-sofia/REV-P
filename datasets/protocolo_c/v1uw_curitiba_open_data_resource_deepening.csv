@@ -1,0 +1,5 @@
+resource_deepening_id,resource_record_id,source_id,resource_name_hash,resource_format,resource_url_hash,resource_class,event_specificity,can_contain_date,can_contain_hazard,can_contain_coordinates,download_priority,can_create_ground_reference,notes
+ODD_v1uw_0000,OD_v1uv_0000,curitiba_open_data,d9df51a0f28c8e1d013e2776,CSV,4ed98091761ed5b6c4115490,occurrence table candidate,NEEDS_DOWNLOAD_SCHEMA_AUDIT,true,true,true,HIGH,false,Metadata-only; no heavy download in v1uw.
+ODD_v1uw_0001,OD_v1uv_0001,curitiba_open_data,16485199d98fbcf1bafac34c,GeoJSON,4ed98091761ed5b6c4115490,context layer,NEEDS_DOWNLOAD_SCHEMA_AUDIT,false,false,true,MEDIUM,false,Metadata-only; no heavy download in v1uw.
+ODD_v1uw_0002,OD_v1uv_0002,curitiba_open_data,b8ffe4de4a6150fbb516f0e4,ZIP,4ed98091761ed5b6c4115490,context layer,NEEDS_DOWNLOAD_SCHEMA_AUDIT,false,false,true,MEDIUM,false,Metadata-only; no heavy download in v1uw.
+ODD_v1uw_0003,OD_v1uv_0003,curitiba_open_data,d3cbec5c1be9f1e158b76a06,PDF,4ed98091761ed5b6c4115490,unrelated_or_document,NOT_EVENT,true,true,false,LOW,false,Metadata-only; no heavy download in v1uw.

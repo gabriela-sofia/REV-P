@@ -1,0 +1,58 @@
+## v1uj — CKAN / Dados Abertos Targets
+## Portais CKAN (Recife e equivalentes) consultados via package_search.
+## Drenagem/infraestrutura generica NAO e ocorrencia observada.
+
+protocol_version: v1uj
+service_type: ckan_portal
+
+portals:
+  - portal_id: DADOS_RECIFE
+    base_url: "http://dados.recife.pe.gov.br"
+    applicable_events: [REC_2022_05_24_30]
+    api_action_path: "/api/3/action"
+  - portal_id: DADOS_GOV_BR
+    base_url: "https://dados.gov.br"
+    applicable_events: [PET_2022_02_15, PET_2024_03_21_28, REC_2022_05_24_30]
+    api_action_path: "/api/3/action"
+
+## Endpoints CKAN usados quando detectados
+ckan_endpoints:
+  package_search: "/api/3/action/package_search"
+  package_show: "/api/3/action/package_show"
+
+search_queries:
+  REC_2022_05_24_30:
+    - "alagamento"
+    - "inundacao"
+    - "defesa civil"
+    - "ocorrencia"
+    - "risco"
+    - "EMLURB"
+    - "SEDEC"
+    - "drenagem"
+    - "pontos criticos"
+  PET_2022_02_15:
+    - "deslizamento"
+    - "inundacao"
+    - "defesa civil"
+    - "ocorrencia"
+    - "Petropolis"
+  PET_2024_03_21_28:
+    - "deslizamento"
+    - "inundacao"
+    - "defesa civil"
+    - "Petropolis"
+
+## Formatos considerados candidatos geoespaciais/tabulares
+geospatial_formats: ["SHP", "GEOJSON", "GPKG", "KML", "KMZ", "ZIP", "GML"]
+tabular_formats: ["CSV", "XLSX", "XLS"]
+
+## Termos que rebaixam para contexto-apenas (infraestrutura generica)
+contextual_only_terms:
+  - "drenagem"
+  - "infraestrutura"
+  - "rede"
+  - "cadastro"
+
+max_packages_per_query: 25
+max_resources_per_package: 30

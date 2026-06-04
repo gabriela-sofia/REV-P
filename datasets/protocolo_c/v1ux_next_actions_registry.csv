@@ -1,0 +1,2 @@
+action_id,event_id,action_type,priority,description,target,status,notes
+NA_v1ux_0000,CUR_2022_01_15,v1uy - Curitiba Public Geodata Deepening,1,Selected from v1ux artifact/schema evidence classes.,CURITIBA_PUBLIC_EVIDENCE,RECOMMENDED_NEXT_STEP,No overlay or ground-reference promotion.

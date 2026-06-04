@@ -1,0 +1,2 @@
+event_id,region,source_id,has_temporal_anchor,has_geometry,phenomenon_separation_status,is_synthetic
+PET_SYN_2024,PET,SRC_PET_SGB,true,false,required,true

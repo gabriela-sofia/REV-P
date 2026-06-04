@@ -1,0 +1,11 @@
+negative_qa_id,fixture_name,injected_violation,detected,status,notes
+NEG_v2ad_0000,forbidden_ground_reference_true.csv,can_create_ground_reference_true,true,PASS_VIOLATION_DETECTED,Injected violation correctly detected.
+NEG_v2ad_0001,crosswalk_inferred_true.csv,crosswalk_inferred_true,true,PASS_VIOLATION_DETECTED,Injected violation correctly detected.
+NEG_v2ad_0002,sentinel_date_inferred_true.csv,sentinel_date_inferred_true,true,PASS_VIOLATION_DETECTED,Injected violation correctly detected.
+NEG_v2ad_0003,unlinkable_date_applied.csv,unlinkable_date_applied,true,PASS_VIOLATION_DETECTED,Injected violation correctly detected.
+NEG_v2ad_0004,overlay_not_blocked.csv,overlay_not_blocked,true,PASS_VIOLATION_DETECTED,Injected violation correctly detected.
+NEG_v2ad_0005,missing_required_field.csv,missing_required_field,true,PASS_VIOLATION_DETECTED,Injected violation correctly detected.
+NEG_v2ad_0006,readiness_inconsistency.csv,readiness_inconsistency,true,PASS_VIOLATION_DETECTED,Injected violation correctly detected.
+NEG_v2ad_0007,non_additive_migration.csv,non_additive_migration,true,PASS_VIOLATION_DETECTED,Injected violation correctly detected.
+NEG_v2ad_0008,valid_v2_package.csv,none,false,PASS_NO_FALSE_POSITIVE,Clean fixture produced no violation.
+NEG_v2ad_0009,clean_guardrail.csv,none,false,PASS_NO_FALSE_POSITIVE,Clean fixture produced no violation.

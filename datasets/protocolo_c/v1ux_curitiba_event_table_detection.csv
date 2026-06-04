@@ -1,0 +1,7 @@
+event_table_detection_id,download_id,artifact_type,event_table_class,date_gate,hazard_gate,locality_gate,coordinate_gate,can_be_event_table_candidate,can_create_ground_reference,can_create_training_label,notes
+ET_v1ux_0000,DL_v1ux_0000,HTML,UNRELATED_TABLE,FAIL,FAIL,FAIL,ABSENT,false,false,false,Event-table candidate only; no truth label.
+ET_v1ux_0001,DL_v1ux_0001,HTML,UNRELATED_TABLE,FAIL,FAIL,FAIL,ABSENT,false,false,false,Event-table candidate only; no truth label.
+ET_v1ux_0002,DL_v1ux_0002,CSV,UNRELATED_TABLE,FAIL,FAIL,FAIL,ABSENT,false,false,false,Event-table candidate only; no truth label.
+ET_v1ux_0003,DL_v1ux_0003,GeoJSON,UNRELATED_TABLE,FAIL,FAIL,FAIL,ABSENT,false,false,false,Event-table candidate only; no truth label.
+ET_v1ux_0004,DL_v1ux_0004,ZIP,UNRELATED_TABLE,FAIL,FAIL,FAIL,ABSENT,false,false,false,Event-table candidate only; no truth label.
+ET_v1ux_0005,DL_v1ux_0005,PDF,UNRELATED_TABLE,FAIL,FAIL,FAIL,ABSENT,false,false,false,Event-table candidate only; no truth label.

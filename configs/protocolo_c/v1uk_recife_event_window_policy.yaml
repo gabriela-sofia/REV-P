@@ -1,0 +1,17 @@
+protocol_version: v1uk
+event_id: REC_2022_05_24_30
+event_core_window:
+  start: 2022-05-24
+  end: 2022-05-30
+auxiliary_windows:
+  pre_event_3d:
+    start: 2022-05-21
+    end: 2022-05-23
+  pre_event_7d:
+    start: 2022-05-17
+    end: 2022-05-20
+  post_event_3d:
+    start: 2022-05-31
+    end: 2022-06-02
+max_status: EVENT_WINDOW_OCCURRENCE_CANDIDATE_FOR_REVIEW
+no_ground_reference: true

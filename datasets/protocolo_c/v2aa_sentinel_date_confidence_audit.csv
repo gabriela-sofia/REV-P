@@ -1,0 +1,9 @@
+confidence_audit_id,patch_id,selected_sentinel_date,confidence_class,confidence_score,usable_for_temporal_linkage,blocker,notes
+CA_v2aa_00000,REC_2022_05_24_30,2022-05-24,MEDIUM_CONFIDENCE,70,true,,Only HIGH/MEDIUM confidence dates are usable; LOW confidence is never promoted to usable.
+CA_v2aa_00001,REC_PATCH,2022-05-26,MEDIUM_CONFIDENCE,70,true,,Only HIGH/MEDIUM confidence dates are usable; LOW confidence is never promoted to usable.
+CA_v2aa_00002,REC_PATCH_A,,BLOCKED_CONFLICT,0,false,date_conflict_between_sources,Only HIGH/MEDIUM confidence dates are usable; LOW confidence is never promoted to usable.
+CA_v2aa_00003,REC_PATCH_WITH_DATE,2022-05-25,MEDIUM_CONFIDENCE,70,true,,Only HIGH/MEDIUM confidence dates are usable; LOW confidence is never promoted to usable.
+CA_v2aa_00004,REFPATCH_ANCHOR_PET2022_CPRM_ANEXOII_19022022_POST_EVENT_OR_SURVEY_WINDOW_V1JA,2022-03-04,MEDIUM_CONFIDENCE,70,true,,Only HIGH/MEDIUM confidence dates are usable; LOW confidence is never promoted to usable.
+CA_v2aa_00005,REFPATCH_ANCHOR_PET2022_CPRM_ANEXOII_19022022_PRE_EVENT_V1JA,2022-01-18,MEDIUM_CONFIDENCE,70,true,,Only HIGH/MEDIUM confidence dates are usable; LOW confidence is never promoted to usable.
+CA_v2aa_00006,REFPATCH_PET2022_CPRM_MOINHO_PRETO_S2_V1IX_POST_EVENT_SURVEY,2022-03-04,HIGH_CONFIDENCE,95,true,,Only HIGH/MEDIUM confidence dates are usable; LOW confidence is never promoted to usable.
+CA_v2aa_00007,REFPATCH_PET2022_CPRM_MOINHO_PRETO_S2_V1IX_PRE_EVENT,2022-02-02,HIGH_CONFIDENCE,95,true,,Only HIGH/MEDIUM confidence dates are usable; LOW confidence is never promoted to usable.

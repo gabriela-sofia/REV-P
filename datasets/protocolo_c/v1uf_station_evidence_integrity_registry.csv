@@ -1,0 +1,25 @@
+audit_id,event_id,station_candidate_id,asset_id,check_name,status,severity,reason,required_action
+AUD_v1uf_0000,PET_2022_02_15,STA_v1ue_0000,AST_v1uf_0000,zip_downloaded,PASS,LOW,ZIP status=DOWNLOADED,
+AUD_v1uf_0001,PET_2022_02_15,STA_v1ue_0000,AST_v1uf_0000,zip_hash_present,PASS,LOW,zip_sha256 recorded,
+AUD_v1uf_0002,PET_2022_02_15,STA_v1ue_0000,AST_v1uf_0000,extracted_file_exists,PASS,LOW,Asset extracted,
+AUD_v1uf_0003,PET_2022_02_15,STA_v1ue_0000,AST_v1uf_0000,columns_detected,PASS,LOW,datetime + precipitation columns found,
+AUD_v1uf_0004,PET_2022_02_15,STA_v1ue_0000,AST_v1uf_0000,window_coverage,PASS,LOW,4 windows with sufficient coverage,
+AUD_v1uf_0005,PET_2022_02_15,STA_v1ue_0000,AST_v1uf_0000,station_officially_resolved,PASS,LOW,Coordinate from official catalog,
+AUD_v1uf_0006,PET_2022_02_15,STA_v1ue_0000,AST_v1uf_0000,event_vs_year_specificity,NEEDS_REVIEW,MEDIUM,"Series is YEAR-specific, not event-specific (whole year extracted, windowed downstream)",Window metrics narrow to event; geometry still required for event-specificity
+AUD_v1uf_0007,PET_2022_02_15,STA_v1ue_0000,AST_v1uf_0000,spatial_truth_misuse_risk,PASS,CRITICAL,"Station is point sensor; metrics flagged as temporal anchor only, not flood geometry",DO_NOT_PROMOTE_GROUND_REFERENCE
+AUD_v1uf_0008,PET_2024_03_21_28,STA_v1ue_0003,AST_v1uf_0001,zip_downloaded,PASS,LOW,ZIP status=DOWNLOADED,
+AUD_v1uf_0009,PET_2024_03_21_28,STA_v1ue_0003,AST_v1uf_0001,zip_hash_present,PASS,LOW,zip_sha256 recorded,
+AUD_v1uf_0010,PET_2024_03_21_28,STA_v1ue_0003,AST_v1uf_0001,extracted_file_exists,PASS,LOW,Asset extracted,
+AUD_v1uf_0011,PET_2024_03_21_28,STA_v1ue_0003,AST_v1uf_0001,columns_detected,PASS,LOW,datetime + precipitation columns found,
+AUD_v1uf_0012,PET_2024_03_21_28,STA_v1ue_0003,AST_v1uf_0001,window_coverage,PASS,LOW,4 windows with sufficient coverage,
+AUD_v1uf_0013,PET_2024_03_21_28,STA_v1ue_0003,AST_v1uf_0001,station_officially_resolved,PASS,LOW,Coordinate from official catalog,
+AUD_v1uf_0014,PET_2024_03_21_28,STA_v1ue_0003,AST_v1uf_0001,event_vs_year_specificity,NEEDS_REVIEW,MEDIUM,"Series is YEAR-specific, not event-specific (whole year extracted, windowed downstream)",Window metrics narrow to event; geometry still required for event-specificity
+AUD_v1uf_0015,PET_2024_03_21_28,STA_v1ue_0003,AST_v1uf_0001,spatial_truth_misuse_risk,PASS,CRITICAL,"Station is point sensor; metrics flagged as temporal anchor only, not flood geometry",DO_NOT_PROMOTE_GROUND_REFERENCE
+AUD_v1uf_0016,REC_2022_05_24_30,STA_v1ue_0006,AST_v1uf_0002,zip_downloaded,PASS,LOW,ZIP status=DOWNLOADED_CACHED,
+AUD_v1uf_0017,REC_2022_05_24_30,STA_v1ue_0006,AST_v1uf_0002,zip_hash_present,PASS,LOW,zip_sha256 recorded,
+AUD_v1uf_0018,REC_2022_05_24_30,STA_v1ue_0006,AST_v1uf_0002,extracted_file_exists,PASS,LOW,Asset extracted,
+AUD_v1uf_0019,REC_2022_05_24_30,STA_v1ue_0006,AST_v1uf_0002,columns_detected,PASS,LOW,datetime + precipitation columns found,
+AUD_v1uf_0020,REC_2022_05_24_30,STA_v1ue_0006,AST_v1uf_0002,window_coverage,FAIL,MEDIUM,No window with sufficient coverage,MANUAL_REVIEW_INMET_SERIES
+AUD_v1uf_0021,REC_2022_05_24_30,STA_v1ue_0006,AST_v1uf_0002,station_officially_resolved,PASS,LOW,Coordinate from official catalog,
+AUD_v1uf_0022,REC_2022_05_24_30,STA_v1ue_0006,AST_v1uf_0002,event_vs_year_specificity,NEEDS_REVIEW,MEDIUM,"Series is YEAR-specific, not event-specific (whole year extracted, windowed downstream)",Window metrics narrow to event; geometry still required for event-specificity
+AUD_v1uf_0023,REC_2022_05_24_30,STA_v1ue_0006,AST_v1uf_0002,spatial_truth_misuse_risk,PASS,CRITICAL,"Station is point sensor; metrics flagged as temporal anchor only, not flood geometry",DO_NOT_PROMOTE_GROUND_REFERENCE

@@ -1,0 +1,12 @@
+inventory_id,event_id,download_id,asset_type,container_type,internal_path,has_geometry,geometry_type,crs,feature_count,has_date_field,has_phenomenon_field,has_locality_field,has_coordinate_fields,is_pdf_only,inventory_status,notes
+INV_v1ur_0000,PET_2022_02_15,DL_v1ur_0000,pdf,zip,ANEXO-III-CPRM_Relatório_Petrópolis_20-02-22_Bairro_Serra_Velha.pdf,false,,,0,false,false,false,false,true,INVENTORIED,PDF document only.
+INV_v1ur_0001,PET_2022_02_15,DL_v1ur_0000,pdf,zip,ANEXO-XI-CPRM_Petrópolis_02-03-22_Quitandinha.pdf,false,,,0,false,false,false,false,true,INVENTORIED,PDF document only.
+INV_v1ur_0002,PET_2022_02_15,DL_v1ur_0000,pdf,zip,ANEXO-X-CPRM_Petrópolis_01-03-22_Servidão_Alípio_Gomes_da_Costa.pdf,false,,,0,false,false,false,false,true,INVENTORIED,PDF document only.
+INV_v1ur_0003,PET_2022_02_15,DL_v1ur_0000,pdf,zip,ANEXO-IX-CPRM_Relatório_Petrópolis_28-02-22_Bairro_Sargento_Boening.pdf,false,,,0,false,false,false,false,true,INVENTORIED,PDF document only.
+INV_v1ur_0004,PET_2022_02_15,DL_v1ur_0000,pdf,zip,ANEXO-VIII-CPRM_Relatório_Petrópolis_25_e_26-02-22_EstradaVelha_e_VilaFelipe.pdf,false,,,0,false,false,false,false,true,INVENTORIED,PDF document only.
+INV_v1ur_0005,PET_2022_02_15,DL_v1ur_0000,pdf,zip,ANEXO-VI-CPRM_Relatório_Petrópolis_24-02-22_Bairro_MoinhoPreto_revisita.pdf,false,,,0,false,false,false,false,true,INVENTORIED,PDF document only.
+INV_v1ur_0006,PET_2022_02_15,DL_v1ur_0000,pdf,zip,ANEXO-VII-CPRM_Relatório_Petrópolis_24-02-22_Bairro_Mosella_revisita.pdf,false,,,0,false,false,false,false,true,INVENTORIED,PDF document only.
+INV_v1ur_0007,PET_2022_02_15,DL_v1ur_0000,pdf,zip,ANEXO-V-CPRM_Relatório_Petrópolis_23-02-22_Rua_Teresa_e_imediações.pdf,false,,,0,false,false,false,false,true,INVENTORIED,PDF document only.
+INV_v1ur_0008,PET_2022_02_15,DL_v1ur_0000,pdf,zip,ANEXO-IV-CPRM_Relatório_Petrópolis_22-02-22_Bairro_Valparaíso_Rua_Eugenio Barcelos.pdf,false,,,0,false,false,false,false,true,INVENTORIED,PDF document only.
+INV_v1ur_0009,PET_2022_02_15,DL_v1ur_0000,pdf,zip,ANEXO-II-CPRM_Relatório_Petrópolis_19-02-22_Bairro_Moinho_Preto.pdf,false,,,0,false,false,false,false,true,INVENTORIED,PDF document only.
+INV_v1ur_0010,PET_2022_02_15,DL_v1ur_0000,pdf,zip,ANEXO-I-CPRM_Relatório_Petrópolis_19-02-22_Bairro_Mosella.pdf,false,,,0,false,false,false,false,true,INVENTORIED,PDF document only.

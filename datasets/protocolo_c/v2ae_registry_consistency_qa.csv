@@ -1,0 +1,11 @@
+qa_id,check_group,check_name,expected,observed,status,severity,notes
+RCQA_0000,region,three_regions_present,REC|PET|CUR,CUR|PET|REC,PASS,critical,
+RCQA_0001,event,expected_events_present,REC_2022_05_24_30|PET_2022_02_15|PET_2024_03_21_28|CUR_2022_01_15,all_present,PASS,critical,
+RCQA_0002,event_patch,packages_preserved,172,172,PASS,critical,
+RCQA_0003,qa_gate,v2ad_gate_preserved,QA_PASS_WITH_EXPECTED_BLOCKERS,QA_PASS_WITH_EXPECTED_BLOCKERS,PASS,high,
+RCQA_0004,guardrail,overlay_ground_reference_training_blocked,0_released,0,PASS,critical,
+RCQA_0005,guardrail,forbidden_true_value,0,0,PASS,info,
+RCQA_0006,guardrail,forbidden_status,0,0,PASS,info,
+RCQA_0007,guardrail,absolute_path,0,0,PASS,info,
+RCQA_0008,guardrail,local_only_leak,0,0,PASS,info,
+RCQA_0009,guardrail,tool_name_leak,0,0,PASS,info,

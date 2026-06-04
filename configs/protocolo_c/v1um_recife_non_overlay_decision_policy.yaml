@@ -1,0 +1,6 @@
+protocol_version: v1um
+overlay_allowed: false
+ground_truth_operational: false
+can_create_ground_reference: false
+can_create_training_label: false
+max_status: RECIFE_LOCALITY_ONLY_HUMAN_REVIEW_CANDIDATE

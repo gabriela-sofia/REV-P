@@ -1,0 +1,3 @@
+numeric_pattern: (CUR|PET|REC)_NNNNN -> EVENT_PATCH_CANDIDATE_NAMESPACE
+empty_patch_id -> PATCH_ID_MISSING
+use_anchor_namespace_for_candidate: false

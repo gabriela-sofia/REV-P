@@ -1,0 +1,2 @@
+action_id,event_id,action_type,priority,description,target,status,notes
+ACT_v1us_0000,REC_2022_05_24_30,PROGRAMMING_DEEPENING,1,v1ut - Recife Coordinate Recovery from Public CKAN,REC,PENDING,Selected by v1us next-action ranker; non-operational.

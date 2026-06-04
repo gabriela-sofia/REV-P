@@ -1,0 +1,4 @@
+synthetic_id,raw_locality_text,expected_granularity,is_synthetic
+SYN_LOC_001,Bairro Sintetico,NEIGHBORHOOD,true
+SYN_LOC_002,Endereco Sintetico Redigido,ADDRESS_TEXT_REDACTED,true
+SYN_LOC_003,,MISSING,true

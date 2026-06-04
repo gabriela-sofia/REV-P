@@ -1,0 +1,5 @@
+protocol_version: v1us
+classifications: [STRONG, MODERATE, WEAK, ABSENT, BLOCKED, UNKNOWN]
+ground_reference_blocked_without_geometry: true
+overlay_readiness: BLOCKED
+training_readiness: BLOCKED

@@ -1,0 +1,2 @@
+event_id,previous_status,new_status,evidence_level,can_advance_to_overlay,can_advance_to_ground_reference,can_create_training_label,protocol_b_status,required_next_action,notes
+REC_2022_05_24_30,RECIFE_LOCALITY_ONLY_HUMAN_REVIEW_CANDIDATE,LOCALITY_ONLY_HUMAN_REVIEW_EVIDENCE_CONSOLIDATED,STRONG_CONTEXTUAL_LOCALITY_ONLY_NON_OPERATIONAL,false,false,false,CLOSED_NOT_REOPENED,v1uo - Protocolo C Recife Scientific Writing Integration,"REC_2022 consolidated as Human Review Evidence; no overlay, no coordinate inference, no operational validation."

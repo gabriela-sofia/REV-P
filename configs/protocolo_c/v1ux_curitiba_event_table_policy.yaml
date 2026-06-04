@@ -1,0 +1,2 @@
+strong_table_requires: [date, hazard, locality]
+ground_truth_allowed: false

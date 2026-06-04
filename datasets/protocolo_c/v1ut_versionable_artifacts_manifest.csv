@@ -1,0 +1,21 @@
+artifact_id,artifact_path,artifact_type,protocol_version,sha256_prefix,file_size_bytes,is_versionable,reason
+MAN_v1ut_0000,configs/protocolo_c/v1ut_recife_coordinate_recovery_policy.yaml,yaml,v1ut,53a3ee83883de9e3,207,true,v1ut public coordinate recovery audit artifact; no raw private path.
+MAN_v1ut_0001,configs/protocolo_c/v1ut_recife_coordinate_field_patterns.yaml,yaml,v1ut,86c367ee8c2a918e,256,true,v1ut public coordinate recovery audit artifact; no raw private path.
+MAN_v1ut_0002,configs/protocolo_c/v1ut_recife_geojson_classification_policy.yaml,yaml,v1ut,f66172ea432b7fe4,184,true,v1ut public coordinate recovery audit artifact; no raw private path.
+MAN_v1ut_0003,configs/protocolo_c/v1ut_recife_event_window_policy.yaml,yaml,v1ut,76bae1eb8a829a86,124,true,v1ut public coordinate recovery audit artifact; no raw private path.
+MAN_v1ut_0004,configs/protocolo_c/v1ut_recife_candidate_scoring_policy.yaml,yaml,v1ut,9e7433e0cfdf1906,286,true,v1ut public coordinate recovery audit artifact; no raw private path.
+MAN_v1ut_0005,configs/protocolo_c/v1ut_recife_overlay_blocker_policy.yaml,yaml,v1ut,ba9a97ed9a986fd7,159,true,v1ut public coordinate recovery audit artifact; no raw private path.
+MAN_v1ut_0006,datasets/protocolo_c/v1ut_recife_coordinate_asset_locator.csv,csv,v1ut,14f415bd4098c327,18760,true,v1ut public coordinate recovery audit artifact; no raw private path.
+MAN_v1ut_0007,datasets/protocolo_c/v1ut_recife_coordinate_schema_reparse.csv,csv,v1ut,efd7837db9edd9ec,8755,true,v1ut public coordinate recovery audit artifact; no raw private path.
+MAN_v1ut_0008,datasets/protocolo_c/v1ut_recife_geojson_context_classification.csv,csv,v1ut,f86cc176a60b99bd,1898,true,v1ut public coordinate recovery audit artifact; no raw private path.
+MAN_v1ut_0009,datasets/protocolo_c/v1ut_recife_coordinate_row_join_audit.csv,csv,v1ut,0d94675a4a9a16f5,6367,true,v1ut public coordinate recovery audit artifact; no raw private path.
+MAN_v1ut_0010,datasets/protocolo_c/v1ut_recife_event_window_coordinate_filter.csv,csv,v1ut,0eb616202dd69c4f,887290,true,v1ut public coordinate recovery audit artifact; no raw private path.
+MAN_v1ut_0011,datasets/protocolo_c/v1ut_recife_hazard_coordinate_crossfilter.csv,csv,v1ut,3762447bc9cd8a13,1071413,true,v1ut public coordinate recovery audit artifact; no raw private path.
+MAN_v1ut_0012,datasets/protocolo_c/v1ut_recife_coordinate_candidate_audit.csv,csv,v1ut,d6b6d20e5fde6d2a,11883,true,v1ut public coordinate recovery audit artifact; no raw private path.
+MAN_v1ut_0013,datasets/protocolo_c/v1ut_recife_overlay_preflight_blocker.csv,csv,v1ut,dbcb4c0f3308b9c2,7593,true,v1ut public coordinate recovery audit artifact; no raw private path.
+MAN_v1ut_0014,datasets/protocolo_c/v1ut_recife_event_patch_readiness_update.csv,csv,v1ut,7e0afb7a7a0d5a71,62437,true,v1ut public coordinate recovery audit artifact; no raw private path.
+MAN_v1ut_0015,datasets/protocolo_c/v1ut_recife_ground_reference_blocker_matrix.csv,csv,v1ut,01294616da2ad0ca,735,true,v1ut public coordinate recovery audit artifact; no raw private path.
+MAN_v1ut_0016,datasets/protocolo_c/v1ut_next_actions_registry.csv,csv,v1ut,aa34b8be16926080,344,true,v1ut public coordinate recovery audit artifact; no raw private path.
+MAN_v1ut_0018,docs/metodologia_cientifica/protocolo_c_v1ut_recife_coordinate_recovery.md,md,v1ut,21a67aaa238f9fea,1056,true,v1ut public coordinate recovery audit artifact; no raw private path.
+MAN_v1ut_0019,docs/metodologia_cientifica/protocolo_c_relatorio_v1ut_recife_coordinate_recovery.md,md,v1ut,66ca498d021a0f6a,1232,true,v1ut public coordinate recovery audit artifact; no raw private path.
+MAN_v1ut_0020,docs/metodologia_cientifica/protocolo_c_status_atual_v1ut.md,md,v1ut,fa95367a4efe3402,309,true,v1ut public coordinate recovery audit artifact; no raw private path.

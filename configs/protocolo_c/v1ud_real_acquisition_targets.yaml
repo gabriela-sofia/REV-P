@@ -1,0 +1,101 @@
+## v1ud — Real Acquisition Targets
+## Define quais fontes/eventos devem ser resolvidas e potencialmente baixadas.
+
+protocol_version: v1ud
+ground_truth_operational: false
+can_create_training_label: false
+
+priority_1:
+  - source_id: INMET_BDMEP
+    targets:
+      - event_id: PET_2022_02_15
+        candidate_urls:
+          - "https://portal.inmet.gov.br/dadoshistoricos"
+        notes: "Dados históricos por ano/estação. Já parcialmente adquirido em v1sg."
+      - event_id: PET_2024_03_21_28
+        candidate_urls:
+          - "https://portal.inmet.gov.br/dadoshistoricos"
+        notes: "Complementar para evento 2024."
+      - event_id: REC_2022_05_24_30
+        candidate_urls:
+          - "https://portal.inmet.gov.br/dadoshistoricos"
+        notes: "Dados de estações próximas a Recife."
+
+  - source_id: ANA_HIDROWEB
+    targets:
+      - event_id: PET_2022_02_15
+        candidate_urls:
+          - "https://www.snirh.gov.br/hidroweb/apresentacao"
+          - "https://www.snirh.gov.br/hidroweb/serieshistoricas"
+        notes: "Séries históricas de nível d'água. API SOAP instável."
+      - event_id: REC_2022_05_24_30
+        candidate_urls:
+          - "https://www.snirh.gov.br/hidroweb/apresentacao"
+          - "https://www.snirh.gov.br/hidroweb/serieshistoricas"
+        notes: "Séries históricas para estações próximas a Recife."
+
+  - source_id: CEMADEN_PLUVIOMETROS
+    targets:
+      - event_id: PET_2022_02_15
+        candidate_urls:
+          - "http://www2.cemaden.gov.br/mapainterativo/"
+          - "http://www.cemaden.gov.br/pluviometros-automaticos/"
+        notes: "Página pública de pluviômetros automáticos."
+      - event_id: REC_2022_05_24_30
+        candidate_urls:
+          - "http://www2.cemaden.gov.br/mapainterativo/"
+        notes: "Mapa interativo — metadata discovery."
+
+  - source_id: SGB_CPRM_CARTOGRAFIA
+    targets:
+      - event_id: PET_2022_02_15
+        candidate_urls:
+          - "https://rigeo.sgb.gov.br/"
+          - "https://geosgb.sgb.gov.br/"
+          - "https://www.sgb.gov.br/publique/Gestao-Territorial/Setorizacao-de-Riscos-Geologicos-702"
+        notes: "Cartografia de risco, suscetibilidade, relatórios pós-desastre Petrópolis."
+
+priority_2:
+  - source_id: COPERNICUS_EMS
+    targets:
+      - event_id: PET_2022_02_15
+        candidate_urls:
+          - "https://emergency.copernicus.eu/mapping/list-of-activations-rapid"
+        notes: "Buscar ativação EMSR para Petrópolis 2022."
+      - event_id: REC_2022_05_24_30
+        candidate_urls:
+          - "https://emergency.copernicus.eu/mapping/list-of-activations-rapid"
+        notes: "Buscar ativação EMSR para Recife 2022."
+
+  - source_id: INTERNATIONAL_CHARTER
+    targets:
+      - event_id: PET_2022_02_15
+        candidate_urls:
+          - "https://disasterscharter.org/web/guest/activations/-/article/floods-in-brazil-activation-756-"
+        notes: "Ativação 756 — Petrópolis. Quickview = contextual only."
+
+priority_3:
+  - source_id: MAXAR_OPEN_DATA
+    targets:
+      - event_id: PET_2022_02_15
+        candidate_urls:
+          - "https://www.maxar.com/open-data/brazil-702702702"
+        notes: "Verificar disponibilidade. Metadata only nesta etapa."
+
+  - source_id: PLANET_DISASTER_DATA
+    targets:
+      - event_id: PET_2022_02_15
+        candidate_urls:
+          - "https://www.planet.com/disasterdata/"
+        notes: "Verificar disponibilidade. Metadata only nesta etapa."
+
+  - source_id: EMDAT
+    targets:
+      - event_id: PET_2022_02_15
+        candidate_urls:
+          - "https://www.emdat.be/"
+        notes: "Context only. Inventário macro. Nunca patch-level."
+      - event_id: REC_2022_05_24_30
+        candidate_urls:
+          - "https://www.emdat.be/"
+        notes: "Context only."

@@ -1,0 +1,41 @@
+## v1uj — RIGeo / SGB Repositorio Tecnico Targets
+## Aprofundamento de item pages e bitstreams (DSpace) do RIGeo.
+## ZIP so com PDF = DOCUMENT_ONLY. ZIP com vetor = auditar.
+
+protocol_version: v1uj
+service_type: dspace_repository
+
+base_url: "https://rigeo.sgb.gov.br"
+
+## Endpoints DSpace tipicos para busca/descoberta
+discovery_paths:
+  simple_search: "/simple-search"
+  rest_items: "/rest/items"
+  discover: "/discover"
+
+search_terms:
+  PET_2022_02_15:
+    - "Petropolis 2022"
+    - "avaliacao pos-desastre Petropolis"
+    - "relatorio tecnico Petropolis"
+    - "movimento de massa Petropolis"
+    - "deslizamento Petropolis"
+  general:
+    - "anexos"
+    - "shapefile"
+    - "geodados"
+    - "dados geoespaciais"
+    - "zip"
+
+## Classificação por extensão de bitstream
+bitstream_classes:
+  technical_report: [".pdf"]
+  attachment_package: [".zip", ".rar", ".7z"]
+  geodata: [".shp", ".gpkg", ".geojson", ".kml", ".kmz", ".gml"]
+  tabular: [".csv", ".xlsx", ".xls"]
+
+download:
+  allow_pdf: true
+  allow_zip: true
+  allow_geodata: true
+  max_bitstream_mb: 200

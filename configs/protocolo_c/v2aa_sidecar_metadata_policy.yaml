@@ -1,0 +1,3 @@
+accepted_date_fields: [scene_date, sensing_date, sensing_time, acquisition_date, datetime, product_start_time, pre_scene_date, post_scene_date]
+forbidden_date_fields: [created_at, modified_at, file_mtime, anchor_date]
+use_file_modified_time: false

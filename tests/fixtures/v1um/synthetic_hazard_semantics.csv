@@ -1,0 +1,4 @@
+synthetic_id,hazard_text_class,expected_hazard_class,is_synthetic
+SYN_HAZ_001,alagamento,FLOOD_STRONG,true
+SYN_HAZ_002,chuva,RAIN_IMPACT,true
+SYN_HAZ_003,defesa_civil_generico,CIVIL_DEFENSE_GENERIC,true

@@ -1,0 +1,8 @@
+count_check_id,check_name,expected_count,actual_count,status,severity,notes
+CNT_v2af_0000,canonical_regions,3,3,PASS,critical,
+CNT_v2af_0001,canonical_events,4,4,PASS,critical,
+CNT_v2af_0002,canonical_event_patch_packages,172,172,PASS,critical,
+CNT_v2af_0003,v2ac_packages,172,172,PASS,critical,
+CNT_v2af_0004,v2_readiness_rows,2580,2580,PASS,high,
+CNT_v2af_0005,v2ad_gate_exists,1,1,PASS,critical,
+CNT_v2af_0006,v2ae_consistency_qa_exists,1,1,PASS,critical,

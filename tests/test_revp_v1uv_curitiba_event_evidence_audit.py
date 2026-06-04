@@ -1,0 +1,11 @@
+from tests.test_revp_v1uv_curitiba_source_target_builder import install_candidate_discovery, set_env
+import scripts.protocolo_c.revp_v1uv_curitiba_common as common
+
+
+def test_event_evidence_audit_requires_official_date_and_hazard(tmp_path, monkeypatch):
+    data = set_env(tmp_path, monkeypatch)
+    install_candidate_discovery(data, official=False, date="2022-01-15", hazard="alagamento")
+    common.run_candidate_event_builder(common.parse_args([]))
+    rows = common.run_event_evidence_audit(common.parse_args([]))
+    assert rows[0]["official_source_gate"] == "FAIL"
+    assert rows[0]["can_update_event_registry"] == "false"

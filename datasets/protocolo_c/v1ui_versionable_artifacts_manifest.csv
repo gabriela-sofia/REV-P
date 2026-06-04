@@ -1,0 +1,18 @@
+artifact_id,artifact_path,artifact_type,protocol_version,sha256_prefix,file_size_bytes,is_versionable,reason
+ART_v1ui_0000,configs/protocolo_c/v1ui_allowed_domains.yaml,config,v1ui,26d28abc96d2c771,1134,true,Safe for git
+ART_v1ui_0001,configs/protocolo_c/v1ui_artifact_classification_policy.yaml,config,v1ui,802187eac36df985,1837,true,Safe for git
+ART_v1ui_0002,configs/protocolo_c/v1ui_observed_geometry_gate_policy.yaml,config,v1ui,4a096a780a069e73,2375,true,Safe for git
+ART_v1ui_0003,configs/protocolo_c/v1ui_public_download_policy.yaml,config,v1ui,18f6466e5b2dc9b0,1168,true,Safe for git
+ART_v1ui_0004,configs/protocolo_c/v1ui_public_source_targets.yaml,config,v1ui,f8113e9937dd24c9,3560,true,Safe for git
+ART_v1ui_0005,configs/protocolo_c/v1ui_search_terms_by_event.yaml,config,v1ui,18b25e7d02d37a53,1746,true,Safe for git
+ART_v1ui_0006,datasets/protocolo_c/v1ui_arcgis_geoserver_layer_registry.csv,dataset,v1ui,eda7594dca5d5037,593,true,Safe for git
+ART_v1ui_0007,datasets/protocolo_c/v1ui_event_geometry_candidate_registry.csv,dataset,v1ui,92a837cc9abdf47b,15421,true,Safe for git
+ART_v1ui_0008,datasets/protocolo_c/v1ui_next_actions_registry.csv,dataset,v1ui,f11143407bbeb2e7,538,true,Safe for git
+ART_v1ui_0009,datasets/protocolo_c/v1ui_observed_geometry_extraction_registry.csv,dataset,v1ui,bc36df6373717de7,12381,true,Safe for git
+ART_v1ui_0010,datasets/protocolo_c/v1ui_public_artifact_download_manifest.csv,dataset,v1ui,7fe4621431ba397d,108425,true,Safe for git
+ART_v1ui_0011,datasets/protocolo_c/v1ui_public_artifact_inventory.csv,dataset,v1ui,50ac057e40251d6e,19309,true,Safe for git
+ART_v1ui_0012,datasets/protocolo_c/v1ui_public_discovery_registry.csv,dataset,v1ui,4de83fdff24d0c91,6214,true,Safe for git
+ART_v1ui_0013,datasets/protocolo_c/v1ui_public_evidence_gate_delta.csv,dataset,v1ui,ac9154649e2c30d7,2689,true,Safe for git
+ART_v1ui_0014,datasets/protocolo_c/v1ui_public_source_target_registry.csv,dataset,v1ui,72bb44d38c0d88b7,1816,true,Safe for git
+ART_v1ui_0015,datasets/protocolo_c/v1ui_supervisor_review_prequeue.csv,dataset,v1ui,b2231335655cbb18,27092,true,Safe for git
+ART_v1ui_0016,datasets/protocolo_c/v1ui_versionable_artifacts_manifest.csv,dataset,v1ui,9f86999b2cc51bcb,2245,true,Safe for git

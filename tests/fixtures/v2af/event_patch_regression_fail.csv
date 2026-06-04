@@ -1,0 +1,2 @@
+event_patch_candidate_id,crosswalk_status,sentinel_date_status,date_linkability_status,sentinel_scene_date,overlay_status
+EPCX,INFERRED_BY_REGION,SENTINEL_DATE_RECOVERED_UNLINKABLE_NAMESPACE,UNLINKABLE_NAMESPACE,2022-02-02,ALLOWED

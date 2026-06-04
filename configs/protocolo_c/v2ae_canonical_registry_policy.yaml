@@ -1,0 +1,4 @@
+canonical_registries: [region, event, event_patch]
+source_of_truth_event_patch: v2ac_event_patch_v2_package_registry.csv
+modify_prior_outputs: false
+max_status: MULTIREGION_REGISTRY_HARDENED_NON_OPERATIONAL

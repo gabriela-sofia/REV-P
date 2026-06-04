@@ -1,0 +1,5 @@
+protocol_version: v1uq
+full_text_storage: local_only
+ocr_massive_allowed: false
+preferred_backend: pypdf
+fallback_backend: pdfplumber_if_available

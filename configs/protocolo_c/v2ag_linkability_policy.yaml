@@ -1,0 +1,10 @@
+protocol_version: v2ag
+policy: sentinel_date_linkability_audit
+allowed_statuses:
+  - DATE_LINKABILITY_CONFIRMED_BY_EXPLICIT_CROSSWALK
+  - DATE_REMAINS_UNLINKABLE
+  - DATE_MISSING
+  - DATE_CONFLICT_BLOCKED
+  - DATE_LINKABILITY_CANDIDATE_NEEDS_REVIEW
+can_update_v2_package: false
+sentinel_date_inferred: false

@@ -1,0 +1,12 @@
+check_id,artifact,exists,rows,required_columns_status,guardrail_status,sensitive_value_status,absolute_path_status,status,notes
+V1UK_ACCEPT_0000,datasets/protocolo_c/v1uk_recife_asset_schema_registry.csv,true,64,OK,OK,PUBLIC_SAFE_HASHES_FLAGS_COUNTS_ONLY,OK,PASS,v1uk artifact acceptance audit
+V1UK_ACCEPT_0001,datasets/protocolo_c/v1uk_recife_field_semantics_registry.csv,true,895,OK,OK,PUBLIC_SAFE_HASHES_FLAGS_COUNTS_ONLY,OK,PASS,v1uk artifact acceptance audit
+V1UK_ACCEPT_0002,datasets/protocolo_c/v1uk_recife_occurrence_table_profile.csv,true,59,OK,OK,PUBLIC_SAFE_HASHES_FLAGS_COUNTS_ONLY,OK,PASS,v1uk artifact acceptance audit
+V1UK_ACCEPT_0003,datasets/protocolo_c/v1uk_recife_event_window_match_registry.csv,true,25668,OK,OK,PUBLIC_SAFE_HASHES_FLAGS_COUNTS_ONLY,OK,PASS,v1uk artifact acceptance audit
+V1UK_ACCEPT_0004,datasets/protocolo_c/v1uk_recife_coordinate_evidence_audit.csv,true,64,OK,OK,PUBLIC_SAFE_HASHES_FLAGS_COUNTS_ONLY,OK,PASS,v1uk artifact acceptance audit
+V1UK_ACCEPT_0005,datasets/protocolo_c/v1uk_recife_locality_evidence_audit.csv,true,64,OK,OK,PUBLIC_SAFE_HASHES_FLAGS_COUNTS_ONLY,OK,PASS,v1uk artifact acceptance audit
+V1UK_ACCEPT_0006,datasets/protocolo_c/v1uk_recife_candidate_row_registry.csv,true,25668,OK,OK,PUBLIC_SAFE_HASHES_FLAGS_COUNTS_ONLY,OK,PASS,v1uk artifact acceptance audit
+V1UK_ACCEPT_0007,datasets/protocolo_c/v1uk_recife_supervisor_review_prepackage_registry.csv,true,1,OK,OK,PUBLIC_SAFE_HASHES_FLAGS_COUNTS_ONLY,OK,PASS,v1uk artifact acceptance audit
+V1UK_ACCEPT_0008,datasets/protocolo_c/v1uk_recife_ground_reference_blocker_matrix.csv,true,9,OK,OK,PUBLIC_SAFE_HASHES_FLAGS_COUNTS_ONLY,OK,PASS,v1uk artifact acceptance audit
+V1UK_ACCEPT_0009,docs/metodologia_cientifica/protocolo_c_relatorio_v1uk_recife_ckan_schema_deep_audit.md,true,,OK,OK,NOT_APPLICABLE,OK,PASS,v1uk artifact acceptance audit
+V1UK_ACCEPT_SUMMARY,v1uk_aggregate_summary,true,25668,OK,OK,OK,OK,V1UK_COMPLETE,outputs_present=10/10;tables_audited=59;total_rows=2744469;rows_in_window=11163;rows_with_hazard=45145;rows_with_locality_or_address=4202901;rows_with_coordinates=436824;review_candidates=6672

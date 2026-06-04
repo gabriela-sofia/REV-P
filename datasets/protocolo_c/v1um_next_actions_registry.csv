@@ -1,0 +1,2 @@
+action_id,event_id,action_type,priority,description,target,status,notes
+ACT_v1um_0000,REC_2022_05_24_30,HUMAN_REVIEW_EVIDENCE_CONSOLIDATION,1,v1un - Human Review Evidence Consolidation Registry,Recife locality-only Human Review packages,PENDING,Nao implementar v1un nesta etapa.

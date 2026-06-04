@@ -1,0 +1,2 @@
+treat_as_occurrence: false
+allowed_classes: [public_equipment, civil_defense_institutional, drainage, urban_infrastructure, support_point, other_context]

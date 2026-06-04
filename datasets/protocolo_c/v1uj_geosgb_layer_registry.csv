@@ -1,0 +1,4 @@
+geosgb_record_id,event_id,service_url,layer_id,layer_name,geometry_type,spatial_reference,fields,extent,relevance_score,is_event_specific,is_observed_occurrence_candidate,is_contextual_layer,blocking_reason
+GSGB_v1uj_0000,,https://geosgb.sgb.gov.br/arcgis/rest/services,,,,,,,0,false,false,false,ENDPOINT_UNREACHABLE
+GSGB_v1uj_0001,,https://geosgb.sgb.gov.br/geosgb/rest/services,,,,,,,0,false,false,false,ENDPOINT_UNREACHABLE
+GSGB_v1uj_0002,,https://geoportal.sgb.gov.br/arcgis/rest/services,,,,,,,0,false,false,false,ENDPOINT_UNREACHABLE

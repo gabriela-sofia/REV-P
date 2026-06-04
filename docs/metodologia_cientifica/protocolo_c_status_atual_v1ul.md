@@ -1,0 +1,20 @@
+# Status Atual - Protocolo C v1ul
+
+event_id=REC_2022_05_24_30
+v1uk_exists=true
+candidate_rows=25668
+coordinate_candidates=0
+locality_only_candidates=6672
+contextual_layers=0
+supervisor_review_queue=6672
+future_overlay_preflight_candidates=0
+ground_truth_operational=false
+can_create_ground_reference=false
+can_create_training_label=false
+can_reopen_protocol_b=false
+dino_usage=SUPPORT_ONLY
+no_overlay_executed=true
+no_coordinates_invented=true
+supervisor_review_completed=false
+max_status=RECIFE_CANDIDATE_READY_FOR_SUPERVISOR_REVIEW
+next_action=v1um - Recife Locality-Only Human Review Package

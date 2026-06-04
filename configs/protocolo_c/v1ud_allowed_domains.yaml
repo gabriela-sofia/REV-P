@@ -1,0 +1,99 @@
+## v1ud — Allowed Domains for Web Access
+## Apenas domínios listados aqui podem ser acessados pelo pipeline.
+
+allowed_domains:
+  - domain: "portal.inmet.gov.br"
+    category: OFFICIAL_METEO
+    download_allowed: true
+    max_download_mb: 25
+    notes: "Portal INMET — dados históricos públicos"
+
+  - domain: "bdmep.inmet.gov.br"
+    category: OFFICIAL_METEO
+    download_allowed: true
+    max_download_mb: 25
+    notes: "BDMEP — dados meteorológicos históricos"
+
+  - domain: "www.snirh.gov.br"
+    category: OFFICIAL_HYDRO
+    download_allowed: true
+    max_download_mb: 25
+    notes: "SNIRH/HidroWeb — dados hidrológicos"
+
+  - domain: "telemetriaws1.ana.gov.br"
+    category: OFFICIAL_HYDRO
+    download_allowed: false
+    max_download_mb: 10
+    notes: "API SOAP ANA — metadata only nesta etapa"
+
+  - domain: "www2.cemaden.gov.br"
+    category: OFFICIAL_METEO
+    download_allowed: false
+    max_download_mb: 10
+    notes: "Cemaden mapa interativo — HTML discovery only"
+
+  - domain: "www.cemaden.gov.br"
+    category: OFFICIAL_METEO
+    download_allowed: false
+    max_download_mb: 10
+    notes: "Cemaden portal — HTML discovery only"
+
+  - domain: "sjc.salvar.cemaden.gov.br"
+    category: OFFICIAL_METEO
+    download_allowed: false
+    max_download_mb: 5
+    notes: "Cemaden JSON API — metadata only"
+
+  - domain: "rigeo.sgb.gov.br"
+    category: OFFICIAL_GEOLOGICAL
+    download_allowed: false
+    max_download_mb: 10
+    notes: "RIGEO — repositório institucional SGB"
+
+  - domain: "geosgb.sgb.gov.br"
+    category: OFFICIAL_GEOLOGICAL
+    download_allowed: false
+    max_download_mb: 10
+    notes: "GeoSGB — geoportal"
+
+  - domain: "www.sgb.gov.br"
+    category: OFFICIAL_GEOLOGICAL
+    download_allowed: false
+    max_download_mb: 10
+    notes: "Portal SGB — páginas públicas"
+
+  - domain: "emergency.copernicus.eu"
+    category: OPERATIONAL_MAPPING
+    download_allowed: false
+    max_download_mb: 50
+    notes: "Copernicus EMS — metadata discovery nesta etapa"
+
+  - domain: "global-flood.emergency.copernicus.eu"
+    category: OPERATIONAL_MAPPING
+    download_allowed: false
+    max_download_mb: 25
+    notes: "GloFAS — metadata discovery"
+
+  - domain: "disasterscharter.org"
+    category: OPERATIONAL_MAPPING
+    download_allowed: false
+    max_download_mb: 5
+    notes: "Charter — metadata only, quickview = contextual"
+
+  - domain: "www.maxar.com"
+    category: VHR_REVIEW
+    download_allowed: false
+    max_download_mb: 5
+    notes: "Maxar Open Data — metadata only"
+
+  - domain: "www.planet.com"
+    category: VHR_REVIEW
+    download_allowed: false
+    max_download_mb: 5
+    notes: "Planet Disaster Data — metadata only"
+
+  - domain: "www.emdat.be"
+    category: DISASTER_INVENTORY
+    download_allowed: false
+    max_download_mb: 1
+    notes: "EM-DAT — metadata/context only"

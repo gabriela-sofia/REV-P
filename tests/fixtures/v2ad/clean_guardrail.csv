@@ -1,0 +1,2 @@
+event_patch_candidate_id,patch_id,patch_namespace,overlay_status,ground_reference_status,training_label_status,blocker,can_create_ground_reference,can_create_training_label,ground_truth_operational,crosswalk_inferred,sentinel_date_inferred
+EPC0,REC_00001,EVENT_PATCH_CANDIDATE_NAMESPACE,BLOCKED,BLOCKED,BLOCKED,no_overlay,false,false,false,false,false

@@ -1,0 +1,4 @@
+protocol_version: v1um
+external_model_allowed: false
+ranking_method: rule_based_flags_from_v1uk
+classes: [FLOOD_STRONG, FLOOD_MODERATE, RAIN_IMPACT, LANDSLIDE_OR_SLOPE, CIVIL_DEFENSE_GENERIC, RISK_CONTEXT, AMBIGUOUS, NO_HAZARD_SIGNAL]

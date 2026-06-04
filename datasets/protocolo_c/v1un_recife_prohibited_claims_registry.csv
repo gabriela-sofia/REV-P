@@ -1,0 +1,7 @@
+claim_id,event_id,claim_text,claim_type,allowed,required_qualifier,prohibited_reason,suggested_safe_alternative
+PROHIB_v1un_0000,REC_2022_05_24_30,the patch contains observed flooding.,PROHIBITED_CLAIM,false,Do not use as a project finding.,patch-level observation was not established,REC_2022 has Locality-Only Evidence for contextual discussion.
+PROHIB_v1un_0001,REC_2022_05_24_30,the event was validated at patch level.,PROHIBITED_CLAIM,false,Do not use as a project finding.,patch-bound truth is false,Human Review Evidence is consolidated as non-operational.
+PROHIB_v1un_0002,REC_2022_05_24_30,ground truth was created.,PROHIBITED_CLAIM,false,Do not use as a project finding.,ground_truth_operational=false,No operational ground reference was created.
+PROHIB_v1un_0003,REC_2022_05_24_30,a training label was created.,PROHIBITED_CLAIM,false,Do not use as a project finding.,can_create_training_label=false,No training target was created.
+PROHIB_v1un_0004,REC_2022_05_24_30,Protocol B can be reopened.,PROHIBITED_CLAIM,false,Do not use as a project finding.,can_reopen_protocol_b=false,Protocol C remains constrained to Human Review Evidence.
+PROHIB_v1un_0005,REC_2022_05_24_30,Locality-Only Evidence allows overlay.,PROHIBITED_CLAIM,false,Do not use as a project finding.,coordinate_support=BLOCKED,Locality-Only Evidence supports non-overlay contextual review.

@@ -1,0 +1,3 @@
+protocol_version: v1uo
+download_raw_data_by_default: false
+discovery_mode: dry_run_registry

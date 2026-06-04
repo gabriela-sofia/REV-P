@@ -1,0 +1,2 @@
+event_id,region,city,uf,start_date,end_date,hazard_scope,is_synthetic
+NOSRC_SYN,NOSRC,Synthetic,NA,2026-01-01,2026-01-01,unknown,true

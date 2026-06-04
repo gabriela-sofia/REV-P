@@ -1,0 +1,2 @@
+update_id,previous_status,new_status,candidate_event_id,proposed_event_id,city,uf,start_date,end_date,hazard_scope,evidence_strength,can_enter_v1uw,can_create_ground_reference,can_create_training_label,notes
+UPD_v1uv_0000,CUR_EVENT_REGISTRY_MISSING,CURITIBA_PUBLIC_EVENT_CANDIDATE_FOR_REVIEW,CE_v1uv_0000,CUR_2022_01_15,Curitiba,PR,2022-01-15,2022-01-15,urban_flooding|intense_rain,STRONG,true,false,false,Additive registry update proposal only; previous registry not modified.

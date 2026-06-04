@@ -1,0 +1,16 @@
+# Status Atual - Protocolo C v1uo
+
+status_max=MULTI_REGION_EVIDENCE_CANDIDATE_DISCOVERY_NON_OPERATIONAL
+events_registered=4
+top_ranked_event=PET_2024_03_21_28
+top_ranked_region=PET
+recommended_next_action=v1up - Petrópolis Public Geometry Deepening
+ground_truth_operational=false
+can_create_ground_reference=false
+can_create_training_label=false
+can_reopen_protocol_b=false
+dino_usage=SUPPORT_ONLY
+no_overlay_executed=true
+no_coordinates_invented=true
+patch_bound_truth=false
+operational_validation=false

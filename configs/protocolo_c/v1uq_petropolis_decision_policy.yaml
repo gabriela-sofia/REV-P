@@ -1,0 +1,5 @@
+protocol_version: v1uq
+status_max: PETROPOLIS_PHENOMENON_SEPARATION_EVIDENCE_FOR_REVIEW
+can_create_ground_reference: false
+can_create_training_label: false
+overlay_allowed: false

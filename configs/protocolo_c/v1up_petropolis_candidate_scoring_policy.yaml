@@ -1,0 +1,5 @@
+protocol_version: v1up
+required_gates: [public_official_traceable, event_specificity, event_date_available, phenomenon_available, phenomenon_separated, geometry_or_coordinates_available, crs_available, not_context_only]
+ground_truth_operational: false
+can_create_ground_reference: false
+can_create_training_label: false

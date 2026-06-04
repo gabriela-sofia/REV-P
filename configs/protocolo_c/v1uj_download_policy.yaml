@@ -1,0 +1,56 @@
+## v1uj — Focused Download Policy
+## Regras de download para artefatos das fontes focadas.
+## Nunca versiona bruto. Sempre SHA256. Sem login. Sem bypass.
+
+protocol_version: v1uj
+ground_truth_operational: false
+can_create_ground_reference: false
+
+download_rules:
+  max_file_size_bytes: 209715200       # 200 MB por arquivo
+  max_total_download_bytes: 2147483648 # 2 GB total
+  timeout_seconds: 60
+  max_retries: 2
+  user_agent: "REV-P-Academic-Research/1.0 (TCC; contact: gabrielasofia.bcc@gmail.com)"
+  respect_robots_txt: true
+  min_delay_between_requests_ms: 1000
+  no_login_or_auth: true
+  no_block_bypass: true
+
+  allowed_extensions:
+    - .zip
+    - .shp
+    - .shx
+    - .dbf
+    - .prj
+    - .gpkg
+    - .geojson
+    - .gml
+    - .kml
+    - .kmz
+    - .csv
+    - .xlsx
+    - .xls
+    - .pdf
+    - .json
+    - .xml
+
+  blocked_extensions:
+    - .exe
+    - .bat
+    - .cmd
+    - .ps1
+    - .sh
+    - .py
+    - .dll
+    - .msi
+
+  storage_root: "local_only/protocolo_c/focused_public_artifacts/raw/v1uj"
+  staging_root: "local_only/protocolo_c/focused_public_artifacts/staging"
+  quarantine_root: "local_only/protocolo_c/focused_public_artifacts/quarantine"
+
+  never_version_raw: true
+  never_delete_original: true
+  always_compute_sha256: true
+
+dry_run_default: true

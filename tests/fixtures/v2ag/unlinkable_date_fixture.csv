@@ -1,0 +1,2 @@
+patch_date_id,patch_id,region,selected_sentinel_date,conflict_status,sentinel_date_recovered,sentinel_date_inferred
+PD_SYN_001,REFPATCH_UNLINKABLE_001,REC,2022-05-25,NONE,true,false

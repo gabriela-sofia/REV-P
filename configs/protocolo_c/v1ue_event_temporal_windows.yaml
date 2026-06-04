@@ -1,0 +1,44 @@
+## v1ue — Event Temporal Windows
+## Define os tipos de janela temporal construídos por evento.
+## Janelas ancoram tempo/plausibilidade, NUNCA geometria de inundação.
+
+protocol_version: v1ue
+ground_truth_operational: false
+can_create_training_label: false
+
+window_definitions:
+  - window_type: event_core_window
+    offset_start_days: 0
+    offset_end_days: 0
+    anchor: declared_event
+    purpose: "Janela central declarada do evento (start_date a end_date)"
+    can_support_temporal_gate: true
+
+  - window_type: pre_event_window_3d
+    offset_start_days: -3
+    offset_end_days: 0
+    anchor: start_date
+    purpose: "3 dias antes do evento — chuva acumulada precedente"
+    can_support_temporal_gate: true
+
+  - window_type: pre_event_window_7d
+    offset_start_days: -7
+    offset_end_days: 0
+    anchor: start_date
+    purpose: "7 dias antes do evento — saturação de solo / antecedência"
+    can_support_temporal_gate: true
+
+  - window_type: post_event_window_3d
+    offset_start_days: 0
+    offset_end_days: 3
+    anchor: end_date
+    purpose: "3 dias após o evento — recessão e persistência"
+    can_support_temporal_gate: true
+
+  - window_type: sentinel_link_window
+    offset_start_days: -7
+    offset_end_days: 7
+    anchor: event_span
+    purpose: "Janela para cruzamento futuro com Sentinel scene_date (sem overlay nesta etapa)"
+    can_support_temporal_gate: false
+    note: "Overlay NAO executado em v1ue. Janela apenas registrada."

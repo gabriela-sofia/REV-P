@@ -1,0 +1,21 @@
+# Status Atual - Protocolo C v1ur
+
+status_max=PETROPOLIS_PUBLIC_GEODATA_PATH_CANDIDATE_FOR_REVIEW
+PET_2022_02_15=DOCUMENT_ONLY_NO_GEODATA
+PET_2024_03_21_28=BLOCKED_NO_PUBLIC_PATH
+candidate_urls=37
+downloads_realized=1
+geodata_with_geometry_rows=0
+observed_geometry_review_candidates=0
+recommended_next_action=v1us - Event-Patch Package Linkage Engine
+ground_truth_operational=false
+can_create_ground_reference=false
+can_create_training_label=false
+can_reopen_protocol_b=false
+dino_usage=SUPPORT_ONLY
+no_overlay_executed=true
+no_coordinates_invented=true
+patch_bound_truth=false
+operational_validation=false
+public_official_discovery=true
+geodata_path_recovery_only=true

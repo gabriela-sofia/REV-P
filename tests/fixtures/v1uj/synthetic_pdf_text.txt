@@ -1,0 +1,15 @@
+RELATORIO TECNICO - AVALIACAO POS-DESASTRE PETROPOLIS 2022
+
+Este relatorio apresenta a avaliacao das areas afetadas pelo evento de
+fevereiro de 2022. Os dados geoespaciais (shapefile) das cicatrizes de
+deslizamento estao disponiveis como anexo no repositorio institucional.
+
+Para acessar os geodados completos, consulte:
+https://rigeo.sgb.gov.br/handle/doc/22781
+
+O pacote de anexos inclui arquivos no formato shapefile e geojson, alem
+de um mapa interativo hospedado no ArcGIS Online. Ver tambem o portal de
+dados abertos para a camada de ocorrencias.
+
+Contato: nao usar OCR massivo. Link adicional de geodados:
+https://geosgb.sgb.gov.br/arcgis/rest/services/Riscos/Ocorrencias/FeatureServer

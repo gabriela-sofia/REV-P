@@ -1,0 +1,10 @@
+fixture_id,expected_format,fixture_file,fixture_class
+fx_csv_occurrence,CSV,event_occurrence.csv,event_table_candidate
+fx_csv_date_only,CSV,date_no_hazard.csv,date_only
+fx_csv_coordinates_context,CSV,coordinates_context.csv,context_with_coordinates
+fx_geojson_context,GeoJSON,administrative_context.geojson,context_layer
+fx_geojson_possible,GeoJSON,possible_occurrence.geojson,possible_occurrence
+fx_zip_csv,ZIP,zip_with_csv.zip,packaged_csv
+fx_pdf_document,PDF,document_only.pdf,document_only
+fx_metadata,JSON,open_data_metadata.json,metadata
+fx_hydromet,CSV,hydromet_only.csv,hydromet_only

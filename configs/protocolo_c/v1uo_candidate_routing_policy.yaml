@@ -1,0 +1,4 @@
+protocol_version: v1uo
+can_create_ground_reference: false
+can_create_training_label: false
+overlay_execution_allowed: false

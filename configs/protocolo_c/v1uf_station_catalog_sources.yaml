@@ -1,0 +1,70 @@
+## v1uf — Station Catalog Sources
+## Fontes oficiais para resolver coordenadas de estações SEM inventar nada.
+## Coordenada só é preenchida se vier de catálogo oficial baixado/versionado com hash.
+
+protocol_version: v1uf
+ground_truth_operational: false
+can_create_ground_reference: false
+
+coordinate_resolution_rules:
+  - rule: "Coordenada só de catálogo oficial baixado ou arquivo oficial em local_only com hash"
+    enforcement: HARD
+  - rule: "Se não encontrar, manter coordinate_status=MISSING"
+    enforcement: HARD
+  - rule: "Match parcial -> coordinate_status=FROM_OFFICIAL_CATALOG"
+    enforcement: HARD
+  - rule: "NUNCA geocoding por nome de cidade"
+    enforcement: HARD_BLOCK
+  - rule: "NUNCA centroid de município como coordenada de estação"
+    enforcement: HARD_BLOCK
+  - rule: "NUNCA Google Maps/manual sem fonte oficial"
+    enforcement: HARD_BLOCK
+  - rule: "Estação não é geometria de inundação"
+    enforcement: HARD
+
+catalog_sources:
+  - catalog_id: INMET_STATION_CATALOG
+    source_id: INMET_BDMEP
+    base_urls:
+      - "https://apitempo.inmet.gov.br/estacoes/T"
+      - "https://portal.inmet.gov.br/paginas/catalogoaut"
+    acquisition_method: api_optional
+    expected_format: JSON
+    license_status: PUBLIC_OPEN
+    note: >
+      API INMET de estações automáticas (T). Retorna código, nome, lat, lon, alt.
+      Se acessível, fornece coordenada oficial verificável.
+
+  - catalog_id: ANA_STATION_INVENTORY
+    source_id: ANA_HIDROWEB
+    base_urls:
+      - "https://www.snirh.gov.br/hidroweb/rest/api/documento/convencionais"
+    acquisition_method: api_optional
+    expected_format: JSON
+    license_status: PUBLIC_OPEN
+    note: >
+      Inventário de estações ANA/Hidroweb. Coordenadas fluviométricas/pluviométricas.
+      Endpoint pode exigir parâmetros; metadata-first.
+
+  - catalog_id: CEMADEN_STATION_CATALOG
+    source_id: CEMADEN_PLUVIOMETROS
+    base_urls:
+      - "http://sjc.salvar.cemaden.gov.br/resources/dados/"
+    acquisition_method: html_discovery
+    expected_format: HTML
+    license_status: PUBLIC_OPEN
+    note: "Rede de pluviômetros Cemaden. Coordenadas requerem resolução na fonte."
+
+## Estações-alvo com identidade conhecida (códigos públicos).
+## Coordenadas NUNCA preenchidas aqui — só pelo resolver a partir do catálogo oficial.
+target_station_codes:
+  - source_id: INMET_BDMEP
+    city: Petrópolis
+    uf: RJ
+    station_code: A610
+    station_type: automatic_meteorological
+  - source_id: INMET_BDMEP
+    city: Recife
+    uf: PE
+    station_code: A301
+    station_type: automatic_meteorological

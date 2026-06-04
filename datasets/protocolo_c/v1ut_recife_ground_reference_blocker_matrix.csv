@@ -1,0 +1,3 @@
+blocker_id,event_id,gate,gate_status,blocking_reason,ground_truth_operational,can_create_ground_reference,can_create_training_label,can_reopen_protocol_b,dino_usage,no_overlay_executed,no_coordinates_invented,patch_bound_truth,operational_validation,notes
+GB_v1ut_0000,REC_2022_05_24_30,ground_truth_operational,BLOCKED,v1ut is review-only coordinate recovery from public data,false,false,false,false,SUPPORT_ONLY,true,true,false,false,No operational validation or truth claim.
+GB_v1ut_0001,REC_2022_05_24_30,coordinate_candidate,BLOCKED,"no row combines event window, hazard, occurrence role and explicit coordinate",false,false,false,false,SUPPORT_ONLY,true,true,false,false,Coordinate review candidate cannot become label/truth.

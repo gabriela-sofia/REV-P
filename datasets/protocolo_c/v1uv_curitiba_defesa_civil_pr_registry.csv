@@ -1,0 +1,2 @@
+defesa_civil_record_id,source_id,result_url,municipality,event_date,event_type,cobrade,official_source_status,event_specificity,record_class,notes
+DC_v1uv_0000,defesa_civil_pr_news,https://www.defesacivil.pr.gov.br/Noticia/Chuvas-fortes-causam-transtornos-em-Curitiba-e-no-Litoral-Defesa-Civil-se-mobiliza-para,Curitiba,2022-01-05,chuva_intensa|alagamento,,OFFICIAL_PUBLIC_SOURCE,DATED_HAZARD_CURITIBA_EVENT,OFFICIAL_EVENT_RECORD,Defesa Civil PR official event signal; no ground-reference promotion.

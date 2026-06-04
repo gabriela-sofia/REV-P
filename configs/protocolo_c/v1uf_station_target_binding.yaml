@@ -1,0 +1,48 @@
+## v1uf — Station Target Binding
+## Define quais estações candidatas devem ser vinculadas a quais eventos,
+## e quais códigos de estação procurar dentro dos ZIPs INMET ano-específicos.
+
+protocol_version: v1uf
+ground_truth_operational: false
+can_create_ground_reference: false
+
+bindings:
+  - event_id: PET_2022_02_15
+    city: Petrópolis
+    uf: RJ
+    year: "2022"
+    target_station_codes: ["A610"]
+    target_station_name_hints: ["PETROPOLIS", "PRESIDENTE VARGAS"]
+    source_id: INMET_BDMEP
+    binding_method: city_code_year_match
+    note: "Estação automática INMET Petrópolis dentro de 2022.zip"
+
+  - event_id: PET_2024_03_21_28
+    city: Petrópolis
+    uf: RJ
+    year: "2024"
+    target_station_codes: ["A610"]
+    target_station_name_hints: ["PETROPOLIS", "PRESIDENTE VARGAS"]
+    source_id: INMET_BDMEP
+    binding_method: city_code_year_match
+    note: "Estação automática INMET Petrópolis dentro de 2024.zip"
+
+  - event_id: REC_2022_05_24_30
+    city: Recife
+    uf: PE
+    year: "2022"
+    target_station_codes: ["A301"]
+    target_station_name_hints: ["RECIFE", "CURADO"]
+    source_id: INMET_BDMEP
+    binding_method: city_code_year_match
+    note: "Estação automática INMET Recife dentro de 2022.zip"
+
+binding_rules:
+  - rule: "Binding não cria coordenada"
+    enforcement: HARD
+  - rule: "Binding não prova inundação"
+    enforcement: HARD
+  - rule: "Sem coordenada -> distance_status=NOT_COMPUTED"
+    enforcement: HARD
+  - rule: "Estação ancora tempo/plausibilidade, não patch-level truth"
+    enforcement: HARD

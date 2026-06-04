@@ -1,0 +1,55 @@
+## v1ui — Public Download Policy
+## Regras para download de artefatos publicos oficiais.
+
+protocol_version: v1ui
+ground_truth_operational: false
+can_create_ground_reference: false
+
+download_rules:
+  max_file_size_bytes: 104857600  # 100 MB
+  max_total_download_bytes: 1073741824  # 1 GB total
+  timeout_seconds: 60
+  max_retries: 2
+  user_agent: "REV-P-Academic-Research/1.0 (TCC; contact: gabrielasofia.bcc@gmail.com)"
+  respect_robots_txt: true
+  min_delay_between_requests_ms: 1000
+
+  allowed_extensions:
+    - .zip
+    - .shp
+    - .shx
+    - .dbf
+    - .prj
+    - .gpkg
+    - .geojson
+    - .kml
+    - .kmz
+    - .csv
+    - .xlsx
+    - .xls
+    - .pdf
+    - .json
+    - .xml
+    - .png
+    - .jpg
+    - .jpeg
+
+  blocked_extensions:
+    - .exe
+    - .bat
+    - .cmd
+    - .ps1
+    - .sh
+    - .py
+    - .dll
+    - .msi
+
+  storage_root: "local_only/protocolo_c/public_official_artifacts/raw/v1ui"
+  staging_root: "local_only/protocolo_c/public_official_artifacts/staging"
+  quarantine_root: "local_only/protocolo_c/public_official_artifacts/quarantine"
+
+  never_version_raw: true
+  never_delete_original: true
+  always_compute_sha256: true
+
+dry_run_default: true

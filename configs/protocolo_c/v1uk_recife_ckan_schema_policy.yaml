@@ -1,0 +1,18 @@
+protocol_version: v1uk
+scope: recife_ckan_schema_deep_audit
+source: ckan_recife_v1uj_local_downloads
+allowed_extensions:
+  - .csv
+  - .geojson
+  - .xlsx
+guards:
+  no_web_search: true
+  no_raw_public_values: true
+  no_ground_reference: true
+  no_training_label: true
+  no_overlay: true
+schema_detection:
+  detect_encoding: true
+  detect_delimiter: true
+  detect_columns: true
+  redact_sensitive_values: true

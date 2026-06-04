@@ -1,0 +1,3 @@
+update_is_additive: true
+do_not_modify_previous_registry: true
+candidate_only: true

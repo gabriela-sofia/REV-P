@@ -1,0 +1,22 @@
+artifact_id,artifact_path,artifact_type,protocol_version,sha256_prefix,file_size_bytes,is_versionable,reason
+MAN_v1uv_0000,configs/protocolo_c/v1uv_curitiba_source_targets.yaml,yaml,v1uv,2d2d690db50de34f,98,true,v1uv official public discovery metadata; no raw private path.
+MAN_v1uv_0001,configs/protocolo_c/v1uv_curitiba_allowed_domains.yaml,yaml,v1uv,3c4182cd3a8dcf85,314,true,v1uv official public discovery metadata; no raw private path.
+MAN_v1uv_0002,configs/protocolo_c/v1uv_curitiba_search_terms.yaml,yaml,v1uv,55056d86a5030f7b,251,true,v1uv official public discovery metadata; no raw private path.
+MAN_v1uv_0003,configs/protocolo_c/v1uv_curitiba_event_candidate_policy.yaml,yaml,v1uv,6c3fa01bed69ec24,180,true,v1uv official public discovery metadata; no raw private path.
+MAN_v1uv_0004,configs/protocolo_c/v1uv_curitiba_hydromet_policy.yaml,yaml,v1uv,44736cab2e6a08a3,114,true,v1uv official public discovery metadata; no raw private path.
+MAN_v1uv_0005,configs/protocolo_c/v1uv_curitiba_event_registry_policy.yaml,yaml,v1uv,8e3427242a52fb7f,87,true,v1uv official public discovery metadata; no raw private path.
+MAN_v1uv_0006,datasets/protocolo_c/v1uv_curitiba_source_target_registry.csv,csv,v1uv,ae3f3464d675b4c9,3149,true,v1uv official public discovery metadata; no raw private path.
+MAN_v1uv_0007,datasets/protocolo_c/v1uv_curitiba_public_event_discovery.csv,csv,v1uv,4e9457dde57e5d14,963,true,v1uv official public discovery metadata; no raw private path.
+MAN_v1uv_0008,datasets/protocolo_c/v1uv_curitiba_geocuritiba_registry.csv,csv,v1uv,4cfb0dfb5b1ec482,871,true,v1uv official public discovery metadata; no raw private path.
+MAN_v1uv_0009,datasets/protocolo_c/v1uv_curitiba_open_data_registry.csv,csv,v1uv,5cc6bbe9a9fc626c,1102,true,v1uv official public discovery metadata; no raw private path.
+MAN_v1uv_0010,datasets/protocolo_c/v1uv_curitiba_defesa_civil_pr_registry.csv,csv,v1uv,14ac3113c9397178,502,true,v1uv official public discovery metadata; no raw private path.
+MAN_v1uv_0011,datasets/protocolo_c/v1uv_curitiba_hydromet_source_registry.csv,csv,v1uv,858ec3b75c0c34c0,779,true,v1uv official public discovery metadata; no raw private path.
+MAN_v1uv_0012,datasets/protocolo_c/v1uv_curitiba_candidate_event_registry.csv,csv,v1uv,423b16c4f2bdba3e,945,true,v1uv official public discovery metadata; no raw private path.
+MAN_v1uv_0013,datasets/protocolo_c/v1uv_curitiba_event_evidence_audit.csv,csv,v1uv,8f56cd0fabb3e08c,693,true,v1uv official public discovery metadata; no raw private path.
+MAN_v1uv_0014,datasets/protocolo_c/v1uv_curitiba_event_registry_update.csv,csv,v1uv,5486c492dce3e4a5,480,true,v1uv official public discovery metadata; no raw private path.
+MAN_v1uv_0015,datasets/protocolo_c/v1uv_curitiba_ground_reference_blocker_matrix.csv,csv,v1uv,011561bbc7c130cf,912,true,v1uv official public discovery metadata; no raw private path.
+MAN_v1uv_0016,datasets/protocolo_c/v1uv_next_actions_registry.csv,csv,v1uv,f999a5628608b114,310,true,v1uv official public discovery metadata; no raw private path.
+MAN_v1uv_0017,datasets/protocolo_c/v1uv_versionable_artifacts_manifest.csv,csv,v1uv,547ff83b11f5608b,3633,true,v1uv official public discovery metadata; no raw private path.
+MAN_v1uv_0018,docs/metodologia_cientifica/protocolo_c_v1uv_curitiba_event_registry_public_source_discovery.md,md,v1uv,49160a4f4cf925d3,674,true,v1uv official public discovery metadata; no raw private path.
+MAN_v1uv_0019,docs/metodologia_cientifica/protocolo_c_relatorio_v1uv_curitiba_event_registry_public_source_discovery.md,md,v1uv,daeba20623c7cb25,892,true,v1uv official public discovery metadata; no raw private path.
+MAN_v1uv_0020,docs/metodologia_cientifica/protocolo_c_status_atual_v1uv.md,md,v1uv,1409a33335e88b49,323,true,v1uv official public discovery metadata; no raw private path.

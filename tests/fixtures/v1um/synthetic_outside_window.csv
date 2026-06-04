@@ -1,0 +1,2 @@
+synthetic_id,event_id,candidate_row_id,parsed_date,expected_in_window,is_synthetic
+SYN_OUT_001,REC_2022_05_24_30,SYN_CAND_OUT_001,2022-05-20,false,true

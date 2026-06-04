@@ -1,0 +1,16 @@
+protocol_version: v1uk
+classes:
+  coordinate_review: ROW_LEVEL_OCCURRENCE_WITH_COORDINATES_FOR_REVIEW
+  locality_review: ROW_LEVEL_OCCURRENCE_WITH_LOCALITY_ONLY_FOR_REVIEW
+  documented_no_geometry: EVENT_WINDOW_DOCUMENTED_OCCURRENCE_NO_GEOMETRY
+  context: CONTEXTUAL_ROW
+  rejected_outside_window: REJECTED_OUTSIDE_EVENT_WINDOW
+hard_blocks:
+  can_create_ground_reference: false
+  can_create_training_label: false
+  patch_positive: false
+  patch_negative: false
+next_action_policy:
+  coordinate_candidate: v1ul - Recife Occurrence Candidate Supervisor Review and Overlay Preflight
+  locality_only: v1ul - Recife Locality-Only Human Review and Non-Overlay Evidence Package
+  no_match: Deepen another public dataset

@@ -1,0 +1,8 @@
+gate_id,qa_component,total_checks,passed_checks,failed_checks,expected_blockers,gate_status,required_action,notes
+GATE_v2af_0000,input_manifest,23,23,0,0,QA_AUTOMATION_PASS,none,Per-component QA gate.
+GATE_v2af_0001,artifact_freshness,23,23,0,0,QA_AUTOMATION_PASS,none,Per-component QA gate.
+GATE_v2af_0002,expected_counts,7,7,0,0,QA_AUTOMATION_PASS,none,Per-component QA gate.
+GATE_v2af_0003,guardrail_regression,288,288,0,0,QA_AUTOMATION_PASS,none,Per-component QA gate.
+GATE_v2af_0004,canonical_registry_regression,10,10,0,0,QA_AUTOMATION_PASS,none,Per-component QA gate.
+GATE_v2af_0005,event_patch_v2_regression,9,8,0,1,QA_AUTOMATION_PASS_WITH_EXPECTED_BLOCKERS,none_expected_blockers_documented,Per-component QA gate.
+GATE_v2af_OVERALL,OVERALL,360,359,0,1,QA_AUTOMATION_PASS_WITH_EXPECTED_BLOCKERS,next_stage_may_start,"Expected blockers: no observed geometry, no occurrence coordinates, unlinkable/missing Sentinel date, no explicit anchor crosswalk, no ground reference."

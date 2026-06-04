@@ -1,0 +1,2 @@
+action_id,event_id,action_type,priority,description,target,status,notes
+NA_v2ac_0000,MULTI_REGION,EVENT_PATCH_PACKAGE_V2_QA_HARNESS,1,Selected from v2ac score-based next-programming-target ranker after schema migration.,EVENT_PATCH_PACKAGE_V2,RECOMMENDED_NEXT_STEP,"No overlay, labels, ground truth, ground reference, inferred date or inferred crosswalk."

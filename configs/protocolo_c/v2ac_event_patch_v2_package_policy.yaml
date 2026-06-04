@@ -1,0 +1,4 @@
+additive_migration_only: true
+modify_prior_outputs: false
+max_status: EVENT_PATCH_SCHEMA_MIGRATED_NON_OPERATIONAL
+schema_contract_version: v2ab_event_patch_schema_contract

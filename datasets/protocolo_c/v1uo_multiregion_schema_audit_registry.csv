@@ -1,0 +1,5 @@
+schema_audit_id,event_id,region,source_id,asset_count,row_count,has_date_field,has_hazard_field,has_locality_field,has_coordinate_fields,has_geometry,schema_status,normalized_status,main_blocker,notes
+SCHEMA_v1uo_0000,PET_2022_02_15,PET,SRC_INMET,1,0,true,false,false,true,false,REUSED_V1UF_HYDROMET_REGISTRY,TEMPORAL_ANCHOR_ONLY,PHENOMENON_SEPARATION_REQUIRED,"Station coordinates are hydromet context, not observed event geometry."
+SCHEMA_v1uo_0001,PET_2024_03_21_28,PET,SRC_INMET,1,0,true,false,false,true,false,REUSED_V1UF_HYDROMET_REGISTRY,TEMPORAL_ANCHOR_ONLY,PHENOMENON_SEPARATION_REQUIRED,"Station coordinates are hydromet context, not observed event geometry."
+SCHEMA_v1uo_0002,REC_2022_05_24_30,REC,SRC_REC_CKAN,64,2744469,true,true,true,false,false,REUSED_V1UK_SCHEMA_AUDIT,LOCALITY_ONLY_SCHEMA_NORMALIZED,coordinate_support_blocked,Recife v1uk/v1un reused without modifying upstream outputs.
+SCHEMA_v1uo_0003,CUR_EVENT_REGISTRY_MISSING,CUR,SRC_CUR_GEOCURITIBA,0,0,false,false,false,false,false,NO_DOWNLOADED_ASSETS_YET,EVENT_REGISTRY_MISSING_FOR_CURITIBA,EVENT_REGISTRY_MISSING_FOR_CURITIBA,Curitiba blocked until event registry and source discovery are deepened.

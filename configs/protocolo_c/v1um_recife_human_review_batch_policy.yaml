@@ -1,0 +1,5 @@
+protocol_version: v1um
+batch_count_minimum: 3
+human_review_package_created: true
+human_review_status: PREPARED_NOT_OPERATIONAL
+supervisor_review_completed: false

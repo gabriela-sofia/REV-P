@@ -1,0 +1,5 @@
+protocol_version: v1up
+raw_storage_scope: local_only
+version_raw_artifacts: false
+overwrite_by_basename: false
+max_download_mb_default: 200

@@ -1,0 +1,10 @@
+regression_id,check_group,check_name,expected,observed,status,severity,notes
+event_patch_0000,event_patch,packages_172,172,172,PASS,critical,
+event_patch_0001,event_patch,valid_non_operational,171,171,PASS,high,
+event_patch_0002,event_patch,missing_patch_expected_blocker,1,1,PASS,expected,
+event_patch_0003,event_patch,dino_crosswalk_explicit,171,171,PASS,high,
+event_patch_0004,event_patch,no_anchor_crosswalk,0,0,PASS,critical,
+event_patch_0005,event_patch,unlinkable_date_count,171,171,PASS,high,
+event_patch_0006,event_patch,missing_date_count,1,1,PASS,high,
+event_patch_0007,event_patch,no_unlinkable_date_applied,0,0,PASS,critical,
+event_patch_0008,event_patch,overlay_gr_training_blocked,0_released,0,PASS,critical,

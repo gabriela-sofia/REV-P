@@ -1,0 +1,3 @@
+row_id,status,can_create_ground_reference,can_create_training_label,ground_truth_operational,notes
+GC0,CURITIBA_CONTEXT_ONLY_HOLD_NON_OPERATIONAL,false,false,false,context only hold
+GC1,RECIFE_CONTEXTUAL_COORDINATE_LAYER_CONSOLIDATED_NON_OPERATIONAL,false,false,false,no overlay no ground reference

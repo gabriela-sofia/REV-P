@@ -1,0 +1,4 @@
+scan_roots: [datasets, configs]
+scan_local_only_raw: false
+infer_dates_in_scanner: false
+max_status: SENTINEL_DATE_RECOVERED_FOR_EVENT_PATCH_REVIEW_ONLY

@@ -1,0 +1,18 @@
+{
+  "layers": [
+    {
+      "id": 0,
+      "name": "Petropolis 2022 cicatriz deslizamento campo",
+      "geometryType": "esriGeometryPolygon",
+      "fields": [{"name": "data"}, {"name": "fenomeno"}],
+      "extent": {"xmin": -43.3, "ymin": -22.6, "xmax": -43.1, "ymax": -22.4, "spatialReference": {"wkid": 4326}}
+    },
+    {
+      "id": 1,
+      "name": "Suscetibilidade a movimento de massa",
+      "geometryType": "esriGeometryPolygon",
+      "fields": [{"name": "classe_risco"}],
+      "extent": {"spatialReference": {"wkid": 4674}}
+    }
+  ]
+}

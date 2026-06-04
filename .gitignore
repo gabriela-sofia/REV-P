@@ -72,3 +72,30 @@ local_only/
 generate_*.py
 validate_v1q3*.py
 investigate_v1q3b.py
+
+# --- REV-P Artifact Governance (v1uq) ---
+data/external_raw/
+data/external_cache/
+local_runs/
+local_only/
+*.tmp
+*.log
+__pycache__/
+.pytest_cache/
+datasets/formal_negative_evidence_intake_registry.csv
+datasets/formal_negative_candidate_decision_audit.csv
+datasets/*_full_local.csv
+datasets/*_local_only.csv
+# --- END REV-P Artifact Governance ---
+
+# --- Protocol C Evidence Acquisition (v1uc) ---
+# Raw evidence files never versioned
+local_only/protocolo_c/evidence_raw/**/*.pdf
+local_only/protocolo_c/evidence_raw/**/*.shp
+local_only/protocolo_c/evidence_raw/**/*.gpkg
+local_only/protocolo_c/evidence_raw/**/*.geojson
+local_only/protocolo_c/evidence_raw/**/*.kml
+local_only/protocolo_c/evidence_raw/**/*.kmz
+local_only/protocolo_c/evidence_staging/**
+local_only/protocolo_c/evidence_reports/**
+# --- END Protocol C Evidence Acquisition ---

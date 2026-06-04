@@ -1,0 +1,20 @@
+artifact_id,artifact_path,artifact_type,protocol_version,sha256_prefix,file_size_bytes,is_versionable,reason
+MAN_v1uy_0000,configs/protocolo_c/v1uy_curitiba_content_mismatch_policy.yaml,yaml,v1uy,c1dc05fd37b740d8,98,true,v1uy metadata-only artifact; no raw private path.
+MAN_v1uy_0001,configs/protocolo_c/v1uy_curitiba_endpoint_probe_policy.yaml,yaml,v1uy,ec366b48cba57ebd,84,true,v1uy metadata-only artifact; no raw private path.
+MAN_v1uy_0002,configs/protocolo_c/v1uy_curitiba_layer_classification_policy.yaml,yaml,v1uy,849f9d0b6cd071b0,66,true,v1uy metadata-only artifact; no raw private path.
+MAN_v1uy_0003,configs/protocolo_c/v1uy_curitiba_feature_schema_policy.yaml,yaml,v1uy,7083842ce090df39,98,true,v1uy metadata-only artifact; no raw private path.
+MAN_v1uy_0004,configs/protocolo_c/v1uy_curitiba_occurrence_layer_policy.yaml,yaml,v1uy,d2529af6c54169ac,86,true,v1uy metadata-only artifact; no raw private path.
+MAN_v1uy_0005,configs/protocolo_c/v1uy_curitiba_next_action_policy.yaml,yaml,v1uy,42691cd064e03603,86,true,v1uy metadata-only artifact; no raw private path.
+MAN_v1uy_0006,datasets/protocolo_c/v1uy_curitiba_content_mismatch_resolution.csv,csv,v1uy,5b027ce6628d1b81,1144,true,v1uy metadata-only artifact; no raw private path.
+MAN_v1uy_0007,datasets/protocolo_c/v1uy_curitiba_geodata_endpoint_probe.csv,csv,v1uy,bf97027e0babe904,4207,true,v1uy metadata-only artifact; no raw private path.
+MAN_v1uy_0008,datasets/protocolo_c/v1uy_curitiba_layer_metadata_extraction.csv,csv,v1uy,7a56074a11f0d4fc,4474,true,v1uy metadata-only artifact; no raw private path.
+MAN_v1uy_0009,datasets/protocolo_c/v1uy_curitiba_feature_schema_sampling.csv,csv,v1uy,0b50b612a98e97f7,3439,true,v1uy metadata-only artifact; no raw private path.
+MAN_v1uy_0010,datasets/protocolo_c/v1uy_curitiba_context_layer_classification.csv,csv,v1uy,f83781cfc34cef26,4288,true,v1uy metadata-only artifact; no raw private path.
+MAN_v1uy_0011,datasets/protocolo_c/v1uy_curitiba_possible_occurrence_layer_audit.csv,csv,v1uy,4b8a8888787872e6,593,true,v1uy metadata-only artifact; no raw private path.
+MAN_v1uy_0012,datasets/protocolo_c/v1uy_curitiba_controlled_feature_download_plan.csv,csv,v1uy,fb18ba672ccb9b63,810,true,v1uy metadata-only artifact; no raw private path.
+MAN_v1uy_0013,datasets/protocolo_c/v1uy_curitiba_event_patch_readiness_update.csv,csv,v1uy,2b940fe853532c53,2031,true,v1uy metadata-only artifact; no raw private path.
+MAN_v1uy_0014,datasets/protocolo_c/v1uy_curitiba_ground_reference_blocker_matrix.csv,csv,v1uy,b068c39127e9e289,2408,true,v1uy metadata-only artifact; no raw private path.
+MAN_v1uy_0015,datasets/protocolo_c/v1uy_next_actions_registry.csv,csv,v1uy,ed319a93052331c6,311,true,v1uy metadata-only artifact; no raw private path.
+MAN_v1uy_0016,docs/metodologia_cientifica/protocolo_c_v1uy_curitiba_public_geodata_deepening.md,md,v1uy,c24e03161c6d30a4,859,true,v1uy metadata-only artifact; no raw private path.
+MAN_v1uy_0017,docs/metodologia_cientifica/protocolo_c_relatorio_v1uy_curitiba_public_geodata_deepening.md,md,v1uy,d8ca51cdf718a68b,1021,true,v1uy metadata-only artifact; no raw private path.
+MAN_v1uy_0018,docs/metodologia_cientifica/protocolo_c_status_atual_v1uy.md,md,v1uy,d314473394009261,310,true,v1uy metadata-only artifact; no raw private path.

@@ -1,0 +1,5 @@
+protocol_version: v1um
+normalization_scope: hashed_text_only
+geocoding_allowed: false
+centroid_allowed: false
+coordinate_inference_allowed: false

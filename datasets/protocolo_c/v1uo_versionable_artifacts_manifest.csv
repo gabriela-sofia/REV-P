@@ -1,0 +1,22 @@
+artifact_id,artifact_path,artifact_type,protocol_version,sha256_prefix,file_size_bytes,is_versionable,reason
+ART_v1uo_0000,configs/protocolo_c/v1uo_multiregion_events.yaml,config,v1uo,a33a5f71bc90275d,121,true,Safe v1uo engineering artifact
+ART_v1uo_0001,configs/protocolo_c/v1uo_multiregion_public_sources.yaml,config,v1uo,7e233f0a70fe9b6f,95,true,Safe v1uo engineering artifact
+ART_v1uo_0002,configs/protocolo_c/v1uo_region_adapter_policy.yaml,config,v1uo,9750c4a12e930bfe,117,true,Safe v1uo engineering artifact
+ART_v1uo_0003,configs/protocolo_c/v1uo_schema_audit_policy.yaml,config,v1uo,739718d9a5b315e9,88,true,Safe v1uo engineering artifact
+ART_v1uo_0004,configs/protocolo_c/v1uo_candidate_routing_policy.yaml,config,v1uo,01faf8a7e5c25149,128,true,Safe v1uo engineering artifact
+ART_v1uo_0005,configs/protocolo_c/v1uo_ground_truth_opportunity_policy.yaml,config,v1uo,ecd0c2c5505121a6,119,true,Safe v1uo engineering artifact
+ART_v1uo_0006,configs/protocolo_c/v1uo_event_patch_package_policy.yaml,config,v1uo,a92aae876e3d94e0,111,true,Safe v1uo engineering artifact
+ART_v1uo_0007,datasets/protocolo_c/v1uo_multiregion_event_registry.csv,dataset,v1uo,1a24e6b118a4da8c,1481,true,Safe v1uo engineering artifact
+ART_v1uo_0008,datasets/protocolo_c/v1uo_public_source_registry.csv,dataset,v1uo,d30eecc7709ee66b,3295,true,Safe v1uo engineering artifact
+ART_v1uo_0009,datasets/protocolo_c/v1uo_region_adapter_registry.csv,dataset,v1uo,0c59abbd3ea4edd6,1922,true,Safe v1uo engineering artifact
+ART_v1uo_0010,datasets/protocolo_c/v1uo_multiregion_public_discovery_registry.csv,dataset,v1uo,36711030a3668ac8,9549,true,Safe v1uo engineering artifact
+ART_v1uo_0011,datasets/protocolo_c/v1uo_multiregion_schema_audit_registry.csv,dataset,v1uo,126a122a460b15cd,1181,true,Safe v1uo engineering artifact
+ART_v1uo_0012,datasets/protocolo_c/v1uo_multiregion_candidate_router.csv,dataset,v1uo,7c973b9cfc27b54f,1432,true,Safe v1uo engineering artifact
+ART_v1uo_0013,datasets/protocolo_c/v1uo_multiregion_evidence_matrix.csv,dataset,v1uo,b6214629b038ce1e,6863,true,Safe v1uo engineering artifact
+ART_v1uo_0014,datasets/protocolo_c/v1uo_ground_truth_opportunity_ranker.csv,dataset,v1uo,0135fd584be0cc96,1245,true,Safe v1uo engineering artifact
+ART_v1uo_0015,datasets/protocolo_c/v1uo_event_patch_package_prebuild_registry.csv,dataset,v1uo,ddcf489a7f410915,1575,true,Safe v1uo engineering artifact
+ART_v1uo_0016,datasets/protocolo_c/v1uo_next_actions_registry.csv,dataset,v1uo,31b3648f4c04aabc,250,true,Safe v1uo engineering artifact
+ART_v1uo_0017,datasets/protocolo_c/v1uo_versionable_artifacts_manifest.csv,dataset,v1uo,MISSING,0,false,File not found
+ART_v1uo_0018,docs/metodologia_cientifica/protocolo_c_v1uo_multiregion_replication_engine.md,doc,v1uo,MISSING,0,false,File not found
+ART_v1uo_0019,docs/metodologia_cientifica/protocolo_c_relatorio_v1uo_multiregion_replication_engine.md,doc,v1uo,MISSING,0,false,File not found
+ART_v1uo_0020,docs/metodologia_cientifica/protocolo_c_status_atual_v1uo.md,doc,v1uo,MISSING,0,false,File not found

@@ -1,0 +1,67 @@
+## v1uf — Hydromet Metrics Policy
+## Define como métricas de precipitação são extraídas das séries INMET por janela.
+## Métrica NUNCA cria ground reference/label — só plausibilidade temporal.
+
+protocol_version: v1uf
+ground_truth_operational: false
+can_create_ground_reference: false
+can_create_training_label: false
+
+parsing:
+  candidate_encodings: ["latin-1", "utf-8", "cp1252"]
+  candidate_separators: [";", ",", "\t"]
+  decimal_separator_br: ","
+  na_tokens: ["", "null", "NULL", "-9999", "////", "nan"]
+
+## Nomes de coluna candidatos (INMET usa cabeçalhos em PT-BR variados por ano)
+column_detection:
+  datetime_hints:
+    - "data"
+    - "hora"
+    - "data medicao"
+    - "hora medicao"
+    - "data (yyyy-mm-dd)"
+    - "hora (utc)"
+  precipitation_hints:
+    - "precipitacao"
+    - "precipitação"
+    - "chuva"
+    - "precipitacao total"
+    - "precipitacao total, horario(mm)"
+    - "precipitacao total, horário (mm)"
+    - "pre"
+  temperature_hints:
+    - "temperatura"
+    - "temp"
+    - "temperatura do ar"
+  humidity_hints:
+    - "umidade"
+    - "umidade relativa"
+
+window_metrics:
+  priority_variable: precipitation
+  compute:
+    - precipitation_total_mm
+    - precipitation_max_hourly_mm
+    - precipitation_max_daily_mm
+    - valid_observation_count
+    - missing_observation_count
+    - coverage_ratio
+    - first_observation_datetime
+    - last_observation_datetime
+
+coverage_policy:
+  min_coverage_ratio: 0.5
+  insufficient_status: INSUFFICIENT_COVERAGE
+  note: >
+    coverage_ratio = valid_observation_count / expected_observation_count.
+    Abaixo de min_coverage_ratio -> metric_status=INSUFFICIENT_COVERAGE.
+
+evidence_invariant:
+  evidence_role: temporal_anchor
+  can_support_temporal_gate: true
+  can_create_ground_reference: false
+  can_create_training_label: false
+  note: >
+    Mesmo chuva forte no evento NÃO cria ground reference.
+    Precipitação ancora plausibilidade temporal, nunca patch-level truth.

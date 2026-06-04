@@ -1,0 +1,5 @@
+open_data_record_id,source_id,package_url,dataset_title_hash,resource_format,resource_count,date_signal,hazard_signal,official_source_status,dataset_class,can_create_event_without_date,notes
+OD_v1uv_0000,curitiba_open_data,https://dadosabertos.curitiba.pr.gov.br/,d9df51a0f28c8e1d013e2776,CSV,,,,OFFICIAL_PUBLIC_SOURCE,POTENTIAL_TABLE_METADATA,false,Open data metadata scan status=200; no event created without date.
+OD_v1uv_0001,curitiba_open_data,https://dadosabertos.curitiba.pr.gov.br/,16485199d98fbcf1bafac34c,GeoJSON,,,,OFFICIAL_PUBLIC_SOURCE,POTENTIAL_CONTEXT_GEODATA,false,Open data metadata scan status=200; no event created without date.
+OD_v1uv_0002,curitiba_open_data,https://dadosabertos.curitiba.pr.gov.br/,b8ffe4de4a6150fbb516f0e4,ZIP,,,,OFFICIAL_PUBLIC_SOURCE,POTENTIAL_PACKAGED_RESOURCE,false,Open data metadata scan status=200; no event created without date.
+OD_v1uv_0003,curitiba_open_data,https://dadosabertos.curitiba.pr.gov.br/,d3cbec5c1be9f1e158b76a06,PDF,,,,OFFICIAL_PUBLIC_SOURCE,POTENTIAL_DOCUMENT,false,Open data metadata scan status=200; no event created without date.

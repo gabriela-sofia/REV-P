@@ -1,0 +1,1 @@
+{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"event_id":"CUR_SYN","synthetic":true,"context":"risk_layer"},"geometry":{"type":"Point","coordinates":[-49.27,-25.43]}}]}

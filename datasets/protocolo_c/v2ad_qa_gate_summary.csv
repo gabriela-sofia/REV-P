@@ -1,0 +1,9 @@
+gate_id,qa_group,total_checks,passed_checks,failed_checks,expected_blockers,gate_status,required_action,notes
+GATE_v2ad_0000,package_contract,1032,1031,0,1,QA_PASS_WITH_EXPECTED_BLOCKERS,none_expected_blockers_documented,Per-group QA gate.
+GATE_v2ad_0001,namespace_crosswalk,687,687,0,0,QA_PASS,none,Per-group QA gate.
+GATE_v2ad_0002,temporal_safety,345,345,0,0,QA_PASS,none,Per-group QA gate.
+GATE_v2ad_0003,guardrail,48,48,0,0,QA_PASS,none,Per-group QA gate.
+GATE_v2ad_0004,readiness_consistency,689,689,0,0,QA_PASS,none,Per-group QA gate.
+GATE_v2ad_0005,migration_integrity,5,5,0,0,QA_PASS,none,Per-group QA gate.
+GATE_v2ad_0006,negative_fixture,10,10,0,0,QA_PASS,none,Per-group QA gate.
+GATE_v2ad_OVERALL,OVERALL,2816,2815,0,1,QA_PASS_WITH_EXPECTED_BLOCKERS,none_expected_blockers_documented,"Expected blockers: no geometry, no occurrence coordinate, unlinkable/missing sentinel date, no ground reference."

@@ -1,0 +1,2 @@
+action_id,event_id,action_type,priority,description,target,status,notes
+NA_v1ut_0000,REC_2022_05_24_30,v1uu - Recife Contextual Coordinate Layer Consolidation,1,"public coordinates exist, but they are contextual or not joined to event-window hazard rows",RECIFE_COORDINATE_RECOVERY,RECOMMENDED_NEXT_STEP,Selected from v1ut observed blockers.

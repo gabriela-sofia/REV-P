@@ -1,0 +1,57 @@
+## v1uj — Focused Public Official Source Deepening
+## Aprofundamento focado e source-specific a partir do baseline v1ui-live.
+## Rota principal: PUBLIC_OFFICIAL_DISCOVERY
+## formal_request_path: LEGACY_SECONDARY_ONLY
+
+protocol_version: v1uj
+baseline: v1ui-live
+route: PUBLIC_OFFICIAL_DISCOVERY
+
+guardrails:
+  ground_truth_operational: false
+  can_create_ground_reference: false
+  can_create_training_label: false
+  can_reopen_protocol_b: false
+  dino_usage: SUPPORT_ONLY
+  no_overlay_executed: true
+  no_coordinates_invented: true
+  supervisor_review_completed: false
+  formal_request_path: LEGACY_SECONDARY_ONLY
+  no_aggressive_scraping: true
+  no_login_or_auth: true
+  no_block_bypass: true
+  quickview_is_not_ground_truth: true
+  susceptibility_is_not_observed_occurrence: true
+  operational_product_max_status: OBSERVED_GEOMETRY_CANDIDATE
+
+events:
+  - PET_2022_02_15
+  - PET_2024_03_21_28
+  - REC_2022_05_24_30
+
+## Ordem de prioridade dos resolvers focados
+focused_resolvers:
+  - resolver_id: copernicus_ems
+    config: configs/protocolo_c/v1uj_copernicus_ems_targets.yaml
+    priority: 1
+    expects: [vector_package, delineation, grading, map_pdf, quicklook]
+  - resolver_id: geosgb_rest
+    config: configs/protocolo_c/v1uj_geosgb_service_targets.yaml
+    priority: 1
+    expects: [arcgis_layer_metadata, geometry_type, fields, extent]
+  - resolver_id: ckan_open_data
+    config: configs/protocolo_c/v1uj_ckan_targets.yaml
+    priority: 1
+    expects: [geojson, shp, gpkg, kml, kmz, csv, xlsx]
+  - resolver_id: s2id_dadosgov
+    config: configs/protocolo_c/v1uj_s2id_targets.yaml
+    priority: 2
+    expects: [disaster_event_registry, recognition_record, table_with_coordinates]
+  - resolver_id: rigeo_bitstream
+    config: configs/protocolo_c/v1uj_rigeo_targets.yaml
+    priority: 2
+    expects: [technical_report_pdf, attachment_package, geodata_zip]
+  - resolver_id: pdf_deeplink
+    config: null
+    priority: 3
+    expects: [pdf_internal_link, attachment_mention]

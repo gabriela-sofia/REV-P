@@ -1,0 +1,2 @@
+text_extract_id,candidate_event_id,source_id,source_url_hash,extraction_status,total_chars,term_signal_count,date_signal,hazard_signal,locality_signal,document_class,raw_text_versioned,notes
+TXT_v1uw_0000,CE_v1uv_0000,curitiba_prefeitura_news,a198fb49062eae2222fd9301,TEXT_EXTRACTED,161,10,2022-01-15,alagamento|alerta|chuva|granizo|transtornos,Curitiba,OFFICIAL_EVENT_NOTICE,false,Only term counts/signals are versioned; full text stays local_only.

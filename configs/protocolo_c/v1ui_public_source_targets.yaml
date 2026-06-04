@@ -1,0 +1,102 @@
+## v1ui — Public Source Targets
+## Fontes publicas oficiais para descoberta programatica de artefatos.
+## formal_request_path: LEGACY_SECONDARY_ONLY
+
+protocol_version: v1ui
+ground_truth_operational: false
+can_create_ground_reference: false
+public_artifact_discovery: true
+formal_request_path: LEGACY_SECONDARY_ONLY
+
+sources:
+  - source_id: SGB_CPRM_RIGEO
+    name: "SGB/CPRM — RIGeo Repositorio Institucional"
+    base_urls:
+      - "https://rigeo.sgb.gov.br/"
+    applicable_events: [PET_2022_02_15]
+    expected_content: [geodados_campo, relatorios_tecnicos, vetores_ocorrencia]
+    service_type: document_repository
+    priority: 1
+
+  - source_id: SGB_CPRM_GEOSGB
+    name: "SGB/CPRM — GeoSGB Portal de Dados"
+    base_urls:
+      - "https://geosgb.sgb.gov.br/"
+    applicable_events: [PET_2022_02_15, PET_2024_03_21_28, REC_2022_05_24_30]
+    expected_content: [mapas_geologicos, dados_geotecnicos, arcgis_services]
+    service_type: arcgis_portal
+    priority: 1
+
+  - source_id: DRM_RJ_PORTAL
+    name: "DRM-RJ Portal Publico"
+    base_urls:
+      - "https://www.drm.rj.gov.br/"
+    applicable_events: [PET_2022_02_15]
+    expected_content: [cartografia_risco, ocorrencias_georreferenciadas]
+    service_type: portal_publico
+    priority: 2
+
+  - source_id: PREFEITURA_PETROPOLIS
+    name: "Prefeitura de Petropolis — Portal Dados Abertos"
+    base_urls:
+      - "https://petropolis.rj.gov.br/"
+    applicable_events: [PET_2022_02_15, PET_2024_03_21_28]
+    expected_content: [ocorrencias_defesa_civil, boletins, mapas_interdicao]
+    service_type: portal_publico
+    priority: 2
+
+  - source_id: DADOS_ABERTOS_RECIFE
+    name: "Dados Abertos Recife / Prefeitura"
+    base_urls:
+      - "http://dados.recife.pe.gov.br/"
+      - "https://www.recife.pe.gov.br/"
+    applicable_events: [REC_2022_05_24_30]
+    expected_content: [ocorrencias_alagamento, boletins_compdec, geodados]
+    service_type: ckan_portal
+    priority: 1
+
+  - source_id: EMLURB_RECIFE
+    name: "EMLURB Recife — Dados Operacionais"
+    base_urls:
+      - "https://www.emlurb.recife.pe.gov.br/"
+    applicable_events: [REC_2022_05_24_30]
+    expected_content: [drenagem, alagamentos, infraestrutura]
+    service_type: portal_publico
+    priority: 2
+
+  - source_id: CEMADEN_PORTAL
+    name: "Cemaden — Portal Publico"
+    base_urls:
+      - "http://www2.cemaden.gov.br/"
+      - "http://www.cemaden.gov.br/"
+    applicable_events: [PET_2022_02_15, PET_2024_03_21_28, REC_2022_05_24_30]
+    expected_content: [alertas, pluviometros, boletins_evento]
+    service_type: portal_publico
+    priority: 2
+
+  - source_id: DADOS_GOV_BR
+    name: "dados.gov.br — Portal Nacional de Dados Abertos"
+    base_urls:
+      - "https://dados.gov.br/"
+    applicable_events: [PET_2022_02_15, PET_2024_03_21_28, REC_2022_05_24_30]
+    expected_content: [datasets_defesa_civil, ocorrencias, S2iD]
+    service_type: ckan_portal
+    priority: 2
+
+  - source_id: COPERNICUS_EMS_PUBLIC
+    name: "Copernicus EMS — Rapid Mapping Public"
+    base_urls:
+      - "https://emergency.copernicus.eu/"
+    applicable_events: [PET_2022_02_15, REC_2022_05_24_30]
+    expected_content: [activation_maps, delineation_products, vector_packages]
+    service_type: document_repository
+    priority: 1
+
+  - source_id: DEFESA_CIVIL_RJ_ESTADO
+    name: "Defesa Civil RJ — Portal Estadual"
+    base_urls:
+      - "https://www.defesacivil.rj.gov.br/"
+    applicable_events: [PET_2022_02_15, PET_2024_03_21_28]
+    expected_content: [boletins, ocorrencias, relatorios]
+    service_type: portal_publico
+    priority: 2

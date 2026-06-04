@@ -1,0 +1,8 @@
+required_blockers:
+  - no_observed_geometry
+  - no_occurrence_coordinates
+  - no_sentinel_date
+  - no_overlay
+  - no_ground_reference
+  - no_training_label
+auto_unblock_allowed: false

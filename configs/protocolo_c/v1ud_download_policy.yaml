@@ -1,0 +1,68 @@
+## v1ud — Download Policy
+## Regras globais de download para aquisição real controlada.
+
+policy_version: v1ud
+ground_truth_operational: false
+can_create_training_label: false
+
+global_limits:
+  max_download_mb: 25
+  max_total_session_mb: 200
+  timeout_seconds: 30
+  max_retries: 2
+  retry_delay_seconds: 5
+  concurrent_downloads: 1
+
+user_agent: >
+  REV-P-AcademicResearch/1.0
+  (TCC ground reference evidence acquisition; contact: academic use only)
+
+download_rules:
+  - rule: "Nunca baixar arquivo acima de max_download_mb"
+    enforcement: HARD_BLOCK
+  - rule: "Nunca baixar de domínio não listado em allowed_domains.yaml"
+    enforcement: HARD_BLOCK
+  - rule: "Nunca baixar com licença UNKNOWN_NEEDS_REVIEW sem marcar LICENSE_NEEDS_REVIEW"
+    enforcement: HARD_BLOCK
+  - rule: "Nunca fazer scraping agressivo (>1 req/s)"
+    enforcement: RATE_LIMIT
+  - rule: "Nunca usar browser automation"
+    enforcement: HARD_BLOCK
+  - rule: "Nunca acessar páginas autenticadas"
+    enforcement: HARD_BLOCK
+  - rule: "Nunca versionar dado bruto (local_only/ apenas)"
+    enforcement: HARD_BLOCK
+  - rule: "Sempre calcular SHA256 após download"
+    enforcement: MANDATORY
+  - rule: "Sempre registrar no manifesto antes de baixar"
+    enforcement: MANDATORY
+
+sensitive_data_policy:
+  - "Nunca versionar dado pessoal (CPF, nome de vítima, telefone, endereço individual)"
+  - "Marcar SENSITIVE_REVIEW_REQUIRED se fonte pode conter dados sensíveis"
+  - "LGPD: não redistribuir dado pessoal sem consentimento"
+
+allowed_extensions_for_download:
+  - .csv
+  - .zip
+  - .pdf
+  - .html
+  - .json
+  - .xml
+  - .geojson
+  - .gpkg
+  - .shp
+  - .kml
+  - .kmz
+  - .xlsx
+  - .xls
+  - .txt
+
+blocked_extensions:
+  - .exe
+  - .msi
+  - .bat
+  - .ps1
+  - .sh
+  - .dll
+  - .so

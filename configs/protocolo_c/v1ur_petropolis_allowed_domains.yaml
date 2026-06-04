@@ -1,0 +1,10 @@
+protocol_version: v1ur
+allowed_domains:
+  - rigeo.sgb.gov.br
+  - geoportal.sgb.gov.br
+  - sgb.gov.br
+  - cprm.gov.br
+  - rj.gov.br
+  - petropolis.rj.gov.br
+  - copernicus.eu
+  - disasterscharter.org

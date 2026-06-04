@@ -1,0 +1,4 @@
+service_id,event_id,source_id,service_url,service_type,layer_id,layer_name,geometry_type,spatial_reference,extent,fields,feature_count_estimate,event_relevance_score,can_query_features,sample_downloaded,candidate_status,notes
+SVC_v1ui_0000,PET_2022_02_15,SGB_CPRM_GEOSGB,https://geosgb.sgb.gov.br/,arcgis_rest,,,,,,,,0,false,false,FETCH_FAILED,
+SVC_v1ui_0001,PET_2024_03_21_28,SGB_CPRM_GEOSGB,https://geosgb.sgb.gov.br/,arcgis_rest,,,,,,,,0,false,false,FETCH_FAILED,
+SVC_v1ui_0002,REC_2022_05_24_30,SGB_CPRM_GEOSGB,https://geosgb.sgb.gov.br/,arcgis_rest,,,,,,,,0,false,false,FETCH_FAILED,

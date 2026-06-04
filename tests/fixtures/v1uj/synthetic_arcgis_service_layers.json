@@ -1,0 +1,34 @@
+{
+  "currentVersion": 10.91,
+  "serviceDescription": "Ocorrencias pos-desastre Petropolis - CPRM/SGB",
+  "layers": [
+    {
+      "id": 0,
+      "name": "Pontos de Ocorrencia Petropolis 2022",
+      "geometryType": "esriGeometryPoint",
+      "extent": {
+        "xmin": -43.25, "ymin": -22.55, "xmax": -43.10, "ymax": -22.45,
+        "spatialReference": {"wkid": 4326, "latestWkid": 4326}
+      },
+      "fields": [
+        {"name": "OBJECTID", "type": "esriFieldTypeOID"},
+        {"name": "data_ocorr", "type": "esriFieldTypeDate"},
+        {"name": "tipo", "type": "esriFieldTypeString"},
+        {"name": "municipio", "type": "esriFieldTypeString"}
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Suscetibilidade a Movimento de Massa",
+      "geometryType": "esriGeometryPolygon",
+      "extent": {
+        "xmin": -43.30, "ymin": -22.60, "xmax": -43.05, "ymax": -22.40,
+        "spatialReference": {"wkid": 4326}
+      },
+      "fields": [
+        {"name": "OBJECTID", "type": "esriFieldTypeOID"},
+        {"name": "grau_susc", "type": "esriFieldTypeString"}
+      ]
+    }
+  ]
+}

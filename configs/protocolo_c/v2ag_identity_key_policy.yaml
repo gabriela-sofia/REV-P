@@ -1,0 +1,18 @@
+protocol_version: v2ag
+policy: sentinel_date_identity_key_extraction
+extract_key_fields:
+  - patch_id
+  - event_patch_candidate_id
+  - source_patch_id
+  - anchor_patch_id
+  - refpatch_id
+  - reference_patch_id
+  - visual_patch_id
+  - dino_patch_id
+  - scene_id
+  - source_asset_hash
+  - asset_hash
+  - source_file_hash
+  - geotiff_hash
+public_output_rule: hash_raw_identity_values
+raw_value_versioned: false

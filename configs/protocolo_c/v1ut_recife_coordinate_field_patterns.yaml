@@ -1,0 +1,5 @@
+latitude_terms: [lat, latitude, y]
+longitude_terms: [lon, lng, long, longitude, x]
+generic_coordinate_terms: [coordenada, coordenadas, coord, geometry, geometria, wkt]
+recife_plausible_latitude: [-9.5, -7.0]
+recife_plausible_longitude: [-36.0, -33.0]

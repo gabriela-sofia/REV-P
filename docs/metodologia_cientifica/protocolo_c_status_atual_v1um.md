@@ -1,0 +1,24 @@
+# Status Atual - Protocolo C v1um
+
+event_id=REC_2022_05_24_30
+locality_only_candidates_processed=6672
+sample_rows=6672
+human_review_batches=3
+aggregation_rows=179
+dominant_hazard=CIVIL_DEFENSE_GENERIC
+contextual_evidence_strong=true
+coordinates_available=false
+overlay_blocked=true
+ground_truth_operational=false
+can_create_ground_reference=false
+can_create_training_label=false
+can_reopen_protocol_b=false
+dino_usage=SUPPORT_ONLY
+no_overlay_executed=true
+no_coordinates_invented=true
+human_review_package_created=true
+human_review_queue_ready=true
+human_review_status=PREPARED_NOT_OPERATIONAL
+supervisor_review_completed=false
+max_status=RECIFE_LOCALITY_ONLY_HUMAN_REVIEW_CANDIDATE
+next_action=v1un - Human Review Evidence Consolidation Registry

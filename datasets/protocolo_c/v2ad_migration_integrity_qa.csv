@@ -1,0 +1,6 @@
+qa_id,event_patch_candidate_id,check_group,check_name,expected,observed,status,severity,notes
+QA_migration_integrity_00000,ALL,migration_integrity,all_ids_preserved,no_lost_ids,none,PASS,critical,
+QA_migration_integrity_00001,ALL,migration_integrity,no_extra_packages,no_extra_ids,none,PASS,critical,
+QA_migration_integrity_00002,ALL,migration_integrity,package_count_preserved,172,172,PASS,critical,
+QA_migration_integrity_00003,ALL,migration_integrity,migration_additive,true,non_additive:0,PASS,critical,
+QA_migration_integrity_00004,ALL,migration_integrity,old_outputs_not_modified,false,modified:0,PASS,critical,

@@ -1,0 +1,4 @@
+explicit_dino_crosswalk_by_identical_patch_id: true
+populate_anchor_or_refpatch_crosswalk: false
+use_region_order_date_name_as_key: false
+crosswalk_inferred: false

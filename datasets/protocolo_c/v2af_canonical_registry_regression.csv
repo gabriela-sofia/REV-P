@@ -1,0 +1,11 @@
+regression_id,check_group,check_name,expected,observed,status,severity,notes
+registry_0000,registry,three_regions,REC|PET|CUR,CUR|PET|REC,PASS,critical,
+registry_0001,registry,four_events,REC_2022_05_24_30|PET_2022_02_15|PET_2024_03_21_28|CUR_2022_01_15,all_present,PASS,critical,
+registry_0002,registry,packages_172,172,172,PASS,critical,
+registry_0003,registry,region_status_REC,REGION_HARDENED_CONTEXTUAL_COORDINATE_NON_OPERATIONAL,REGION_HARDENED_CONTEXTUAL_COORDINATE_NON_OPERATIONAL,PASS,critical,
+registry_0004,registry,region_status_PET,REGION_HARDENED_DOCUMENT_ONLY_NO_GEODATA,REGION_HARDENED_DOCUMENT_ONLY_NO_GEODATA,PASS,critical,
+registry_0005,registry,region_status_CUR,REGION_HARDENED_CONTEXT_ONLY_HOLD,REGION_HARDENED_CONTEXT_ONLY_HOLD,PASS,critical,
+registry_0006,registry,qa_gate_preserved,QA_PASS_WITH_EXPECTED_BLOCKERS,QA_PASS_WITH_EXPECTED_BLOCKERS,PASS,high,
+registry_0007,registry,safe_use_policy_present,non_empty,4,PASS,critical,
+registry_0008,registry,reopen_conditions_present,3,3,PASS,critical,
+registry_0009,registry,overlay_gr_training_blocked,0_released,0,PASS,critical,

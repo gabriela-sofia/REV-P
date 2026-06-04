@@ -1,0 +1,16 @@
+protocol_version: v2ag
+policy: explicit_sentinel_date_crosswalk_detection
+strong_explicit_evidence:
+  - same_row_event_patch_and_refpatch
+  - same_row_event_patch_and_anchor_patch
+  - same_row_event_patch_and_sentinel_scene_id
+  - same_row_event_patch_and_source_asset_hash
+blocked_evidence:
+  - region_only
+  - row_order_only
+  - similar_name_only
+  - date_only
+  - visual_similarity_only
+  - dino_similarity_only_for_date
+stage_permission: discovery_only
+apply_date_to_package_v2: false

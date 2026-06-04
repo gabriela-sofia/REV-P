@@ -1,0 +1,2 @@
+check_name,expected_count,actual_count,status
+canonical_regions,3,3,PASS

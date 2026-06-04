@@ -1,0 +1,16 @@
+phenomenon_id,event_id,asset_id,source_id,phenomenon_class,flood_signal,landslide_signal,mixed_signal,separation_status,evidence_strength,can_support_phenomenon_gate,can_create_ground_reference,can_create_training_label,notes
+PHEN_v1up_0000,PET_2022_02_15,ASSET_DL_v1up_0000,SGB_RIGEO,NO_PHENOMENON_SIGNAL,false,false,false,NO_USABLE_SIGNAL,WEAK,false,false,false,Phenomenon support is review-only and cannot create labels.
+PHEN_v1up_0001,PET_2022_02_15,ASSET_DL_v1up_0001,SGB_RIGEO,NO_PHENOMENON_SIGNAL,false,false,false,NO_USABLE_SIGNAL,WEAK,false,false,false,Phenomenon support is review-only and cannot create labels.
+PHEN_v1up_0002,PET_2022_02_15,RIGEO_v1up_0000,SGB_RIGEO,NO_PHENOMENON_SIGNAL,false,false,false,NO_USABLE_SIGNAL,WEAK,false,false,false,Phenomenon support is review-only and cannot create labels.
+PHEN_v1up_0003,PET_2022_02_15,RIGEO_v1up_0001,SGB_RIGEO,NO_PHENOMENON_SIGNAL,false,false,false,NO_USABLE_SIGNAL,WEAK,false,false,false,Phenomenon support is review-only and cannot create labels.
+PHEN_v1up_0004,PET_2024_03_21_28,RIGEO_v1up_0002,SGB_RIGEO,NO_PHENOMENON_SIGNAL,false,false,false,NO_USABLE_SIGNAL,WEAK,false,false,false,Phenomenon support is review-only and cannot create labels.
+PHEN_v1up_0005,PET_2022_02_15,PORTAL_v1up_0000,DRM_RJ,NO_PHENOMENON_SIGNAL,false,false,false,NO_USABLE_SIGNAL,WEAK,false,false,false,Phenomenon support is review-only and cannot create labels.
+PHEN_v1up_0006,PET_2024_03_21_28,PORTAL_v1up_0001,PMP_DEFESA_CIVIL,NO_PHENOMENON_SIGNAL,false,false,false,NO_USABLE_SIGNAL,WEAK,false,false,false,Phenomenon support is review-only and cannot create labels.
+PHEN_v1up_0007,PET_2024_03_21_28,PORTAL_v1up_0002,PMP_DEFESA_CIVIL,LANDSLIDE_OR_MASS_MOVEMENT,false,true,false,PHENOMENON_CLASS_SEPARATED,MODERATE,true,false,false,Phenomenon support is review-only and cannot create labels.
+PHEN_v1up_0008,PET_2022_02_15,PORTAL_v1up_0003,PMP_TRANSPARENCIA,NO_PHENOMENON_SIGNAL,false,false,false,NO_USABLE_SIGNAL,WEAK,false,false,false,Phenomenon support is review-only and cannot create labels.
+PHEN_v1up_0009,PET_2022_02_15,ACT_v1up_0000,CHARTER_751,MIXED_HYDRO_GEO,true,true,true,MIXED_NOT_SEPARATED,WEAK,false,false,false,Phenomenon support is review-only and cannot create labels.
+PHEN_v1up_0010,PET_2022_02_15,ACT_v1up_0001,CHARTER_751,MIXED_HYDRO_GEO,true,true,true,MIXED_NOT_SEPARATED,WEAK,false,false,false,Phenomenon support is review-only and cannot create labels.
+PHEN_v1up_0011,PET_2022_02_15,ACT_v1up_0002,CHARTER_751,MIXED_HYDRO_GEO,true,true,true,MIXED_NOT_SEPARATED,WEAK,false,false,false,Phenomenon support is review-only and cannot create labels.
+PHEN_v1up_0012,PET_2022_02_15,ACT_v1up_0003,CHARTER_751,MIXED_HYDRO_GEO,true,true,true,MIXED_NOT_SEPARATED,WEAK,false,false,false,Phenomenon support is review-only and cannot create labels.
+PHEN_v1up_0014,PET_2022_02_15,ACT_v1up_0005,COPERNICUS_OBSERVER,LANDSLIDE_OR_MASS_MOVEMENT,false,true,false,PHENOMENON_CLASS_SEPARATED,MODERATE,true,false,false,Phenomenon support is review-only and cannot create labels.
+PHEN_v1up_0016,PET_2022_02_15,CEMADEN_v1up_0001,CEMADEN,HYDROMET_CONTEXT,false,false,false,CONTEXT_ONLY,WEAK,false,false,false,Phenomenon support is review-only and cannot create labels.
