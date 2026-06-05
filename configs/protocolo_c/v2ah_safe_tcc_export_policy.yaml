@@ -1,0 +1,17 @@
+protocol_version: v2ah
+policy: safe_tcc_export
+allowed_export:
+  - counts
+  - qa_states
+  - blockers
+  - permitted_use
+  - prohibited_use
+  - review_candidates
+  - stop_condition
+forbidden_claims:
+  - flood_detection
+  - validated_ground_truth
+  - operational_label
+  - positive_class
+  - prediction
+  - observed_flood_validation

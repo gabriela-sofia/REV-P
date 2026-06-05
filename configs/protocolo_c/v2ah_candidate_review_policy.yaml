@@ -1,0 +1,13 @@
+protocol_version: v2ah
+policy: candidate_reference_review_queue
+candidate_use: review_only
+forbidden_use:
+  - ground_reference
+  - label
+  - training
+  - overlay
+  - prediction
+  - protocol_b_reopen
+allowed_statuses:
+  - REVIEW_ONLY_CANDIDATE
+  - BLOCKED_REFERENCE_CANDIDATE

@@ -1,0 +1,11 @@
+protocol_version: v2ah
+policy: reopen_conditions
+reopen_mode: review_gate_only
+requires_human_review: true
+minimum_evidence:
+  - observed_geometry
+  - verifiable_coordinate_or_polygon
+  - compatible_temporal_window
+  - explicit_patch_date_asset_crosswalk
+  - institutional_or_operational_source
+  - no_phenomenon_conflict

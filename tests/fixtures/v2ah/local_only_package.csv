@@ -1,0 +1,2 @@
+event_patch_candidate_id,event_id,event_region,patch_id,source_path
+EPC_BAD_LOCAL,REC_2022_05_24_30,REC,REC_99994,local_only/protocolo_c/raw.tif

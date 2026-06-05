@@ -1,0 +1,2 @@
+condition_name,required_evidence,minimum_source_class,can_reopen_if_met,still_forbidden_without_human_review
+compatible_temporal_window,source date exists,source timestamp with product lineage,review_gate_only,true

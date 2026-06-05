@@ -1,0 +1,10 @@
+protocol_version: v2ah
+policy: ground_truth_search_stop_gate
+final_status: GROUND_TRUTH_SEARCH_STOPPED_UNTIL_NEW_QUALIFIED_SOURCE
+required_action: maintain_candidate_review_only_layer
+permissions:
+  can_create_ground_reference: false
+  can_create_training_label: false
+  can_reopen_protocol_b: false
+  can_apply_overlay: false
+  can_infer_sentinel_date: false

@@ -1,0 +1,2 @@
+condition_name,required_evidence,minimum_source_class,can_reopen_if_met,still_forbidden_without_human_review
+concordant_human_review,review record missing,human review record,review_gate_only,true

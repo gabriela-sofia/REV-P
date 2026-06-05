@@ -1,0 +1,16 @@
+protocol_version: v2ah
+policy: guardrail_regression
+fail_closed: true
+blocked_true_fields:
+  - ground_truth
+  - ground_reference
+  - label
+  - training
+  - overlay
+  - prediction
+  - protocol_b_reopen
+  - sentinel_date_inferred
+  - crosswalk_inferred
+blocked_paths:
+  - absolute_paths
+  - non_versionable_working_paths

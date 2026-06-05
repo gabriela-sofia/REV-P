@@ -1,0 +1,8 @@
+condition_id,condition_name,required_evidence,minimum_source_class,can_reopen_if_met,still_forbidden_without_human_review
+RC_v2ah_000,explicit_observed_geometry,observed polygon or geometry tied to the event and patch,institutional geospatial product,review_gate_only,true
+RC_v2ah_001,verifiable_coordinate_or_polygon,coordinate or polygon with source lineage and event linkage,institutional source or validated operational product,review_gate_only,true
+RC_v2ah_002,compatible_temporal_window,event-compatible timestamp or acquisition window,source timestamp with product lineage,review_gate_only,true
+RC_v2ah_003,explicit_patch_date_asset_crosswalk,same-row or documented patch to date or asset crosswalk,versionable registry or manifest,review_gate_only,true
+RC_v2ah_004,institutional_or_operational_source,institutional source or operational product with stable identifier,public institutional source,review_gate_only,true
+RC_v2ah_005,concordant_human_review,documented reviewer agreement after evidence package review,human review record,review_gate_only,true
+RC_v2ah_006,no_phenomenon_conflict,"evidence shows no flood, mass-movement, or context conflict",adjudicated evidence matrix,review_gate_only,true

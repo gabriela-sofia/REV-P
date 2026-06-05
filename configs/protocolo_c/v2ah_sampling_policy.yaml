@@ -1,0 +1,6 @@
+protocol_version: v2ah
+policy: stratified_review_sampling
+seed: 20260604
+sample_use: human_review_only
+forbidden_interpretation: supervised_balance
+max_per_stratum: 2
