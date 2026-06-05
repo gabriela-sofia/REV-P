@@ -1,0 +1,10 @@
+summary_id,metric_name,metric_value,interpretation_safe,interpretation_forbidden,source_artifact,tcc_section
+SUM_v2aj_000,total_candidates,172,172 packages are review-only candidates.,Do not report them as labels.,datasets/protocolo_c/v2ah_candidate_reference_review_queue.csv,results
+SUM_v2aj_001,total_assignments,344,Two reviewer slots were prepared per candidate.,Do not imply review was completed.,datasets/protocolo_c/v2ai_review_assignment_registry.csv,methods
+SUM_v2aj_002,pending_templates,344,Templates remain pending human review.,Do not treat templates as decisions.,datasets/protocolo_c/v2ai_reviewer_decision_template.csv,methods
+SUM_v2aj_003,pending_adjudication_packages,172,Packages wait for future adjudication.,Do not claim adjudication was executed.,datasets/protocolo_c/v2ai_adjudication_queue.csv,limitations
+SUM_v2aj_004,promotion_blocked_packages,172,Promotion is blocked for every package.,Do not claim operational promotion.,datasets/protocolo_c/v2ai_safe_promotion_blockers.csv,results
+SUM_v2aj_005,guardrail_checks_v2ah,132,v2ah guardrails are available as QA evidence.,Do not report QA as validation of events.,datasets/protocolo_c/v2ah_guardrail_regression.csv,methods
+SUM_v2aj_006,guardrail_checks_v2ai,75,v2ai guardrails are available as QA evidence.,Do not report QA as human review.,datasets/protocolo_c/v2ai_guardrail_regression.csv,methods
+SUM_v2aj_007,stop_gate_status,GROUND_TRUTH_SEARCH_STOPPED_UNTIL_NEW_QUALIFIED_SOURCE,Ground-reference search is stopped until new qualified source.,Do not say the search produced ground truth.,datasets/protocolo_c/v2ah_completion_report.csv,limitations
+SUM_v2aj_008,next_action_rank_1,HUMAN_REVIEW_EXECUTION_OR_SAFE_TCC_EXPORT,Next action remains safe communication or review execution.,Do not recommend operational modelling.,datasets/protocolo_c/v2ai_completion_report.csv,future_work

@@ -1,0 +1,6 @@
+packet_item_id,topic,short_summary,evidence_source,decision_needed,risk_if_misstated,recommended_wording
+PKT_v2aj_000,state,Protocol C is review-only with 172 candidates.,v2ah_completion_report.csv|v2ai_completion_report.csv,Confirm wording for methodology.,Overstating as operational result.,Use camada revisavel de candidatos.
+PKT_v2aj_001,closed,Stop gate and promotion blockers are closed.,v2ah_ground_truth_search_stop_gate.csv|v2ai_safe_promotion_blockers.csv,Confirm stop-gate framing.,Presenting blockers as failure.,Frame as controlled methodological limitation.
+PKT_v2aj_002,blocked,"Ground reference, labels, training, overlay and prediction remain blocked.",v2ai_guardrail_regression.csv,Confirm limitation language.,Suggesting validation or detection.,State no validation for use was produced.
+PKT_v2aj_003,review,"Human review package exists, but no review was executed.",v2ai_review_assignment_registry.csv,Define future review protocol.,Implying reviewer agreement.,Say pending human review.
+PKT_v2aj_004,questions,Ask which tables belong in main text versus appendix.,v2aj_results_tables_export_registry.csv,Advisor selection needed.,Crowding TCC with governance tables.,Use selected summary tables in text and detailed matrices in appendix.

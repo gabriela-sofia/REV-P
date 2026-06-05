@@ -1,0 +1,7 @@
+protocol_version: v2aj
+policy: evidence_summary
+inputs:
+  - v2ah_completion_report
+  - v2ai_completion_report
+use: tcc_methods_and_results_summary
+forbidden_interpretation: operational_validation

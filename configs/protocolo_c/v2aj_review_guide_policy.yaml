@@ -1,0 +1,9 @@
+protocol_version: v2aj
+policy: review_guide
+purpose: future_human_review_guidance
+review_execution: false
+disallowed_basis:
+  - dino_alone
+  - visual_similarity_alone
+  - quickview_alone
+  - contextual_gis_alone

@@ -1,0 +1,7 @@
+rank,next_action,score,allowed,blocked_operational_use,required_input,recommended_script_or_artifact,notes
+1,SAFE_TCC_PROTOCOL_C_WRITEUP,100,true,true,v2aj_safe_tcc_export.md and claims matrix,docs/metodologia_cientifica/protocolo_c_v2aj_safe_tcc_export.md,"No next action may recommend training, Protocol B, overlay, labels, ground truth, automatic date inference, or operational promotion."
+2,ORIENTATION_MEETING_REVIEW,90,true,true,orientation packet,v2aj_orientation_meeting_packet.csv,"No next action may recommend training, Protocol B, overlay, labels, ground truth, automatic date inference, or operational promotion."
+3,HUMAN_REVIEW_EXECUTION,80,true,true,v2ai assignments and review guide,v2ai_review_assignment_registry.csv,"No next action may recommend training, Protocol B, overlay, labels, ground truth, automatic date inference, or operational promotion."
+4,WAIT_FOR_NEW_QUALIFIED_SOURCE,70,true,true,stop gate and blockers,v2ah_ground_truth_search_stop_gate.csv,"No next action may recommend training, Protocol B, overlay, labels, ground truth, automatic date inference, or operational promotion."
+5,APPENDIX_TABLES_EXPORT,65,true,true,results table export registry,v2aj_results_tables_export_registry.csv,"No next action may recommend training, Protocol B, overlay, labels, ground truth, automatic date inference, or operational promotion."
+6,TRAINING_OVERLAY_LABEL_GROUND_TRUTH,0,false,true,blocked by guardrails,none,"No next action may recommend training, Protocol B, overlay, labels, ground truth, automatic date inference, or operational promotion."

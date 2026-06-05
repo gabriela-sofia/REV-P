@@ -1,0 +1,136 @@
+guardrail_check_id,artifact_path,check_type,violation_count,status,severity,notes
+GR_v2aj_00000,datasets/protocolo_c/v2ah_candidate_evidence_dossier_index.csv,forbidden_true_flag,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00001,datasets/protocolo_c/v2ah_candidate_evidence_dossier_index.csv,forbidden_promotion_status,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00002,datasets/protocolo_c/v2ah_candidate_evidence_dossier_index.csv,absolute_path,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00003,datasets/protocolo_c/v2ah_candidate_evidence_dossier_index.csv,non_versionable_path_marker,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00004,datasets/protocolo_c/v2ah_candidate_evidence_dossier_index.csv,unsafe_language,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00005,datasets/protocolo_c/v2ah_candidate_reference_review_queue.csv,forbidden_true_flag,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00006,datasets/protocolo_c/v2ah_candidate_reference_review_queue.csv,forbidden_promotion_status,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00007,datasets/protocolo_c/v2ah_candidate_reference_review_queue.csv,absolute_path,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00008,datasets/protocolo_c/v2ah_candidate_reference_review_queue.csv,non_versionable_path_marker,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00009,datasets/protocolo_c/v2ah_candidate_reference_review_queue.csv,unsafe_language,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00010,datasets/protocolo_c/v2ah_completion_report.csv,forbidden_true_flag,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00011,datasets/protocolo_c/v2ah_completion_report.csv,forbidden_promotion_status,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00012,datasets/protocolo_c/v2ah_completion_report.csv,absolute_path,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00013,datasets/protocolo_c/v2ah_completion_report.csv,non_versionable_path_marker,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00014,datasets/protocolo_c/v2ah_completion_report.csv,unsafe_language,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00015,datasets/protocolo_c/v2ah_ground_truth_search_stop_gate.csv,forbidden_true_flag,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00016,datasets/protocolo_c/v2ah_ground_truth_search_stop_gate.csv,forbidden_promotion_status,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00017,datasets/protocolo_c/v2ah_ground_truth_search_stop_gate.csv,absolute_path,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00018,datasets/protocolo_c/v2ah_ground_truth_search_stop_gate.csv,non_versionable_path_marker,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00019,datasets/protocolo_c/v2ah_ground_truth_search_stop_gate.csv,unsafe_language,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00020,datasets/protocolo_c/v2ah_guardrail_regression.csv,forbidden_true_flag,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00021,datasets/protocolo_c/v2ah_guardrail_regression.csv,forbidden_promotion_status,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00022,datasets/protocolo_c/v2ah_guardrail_regression.csv,absolute_path,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00023,datasets/protocolo_c/v2ah_guardrail_regression.csv,non_versionable_path_marker,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00024,datasets/protocolo_c/v2ah_guardrail_regression.csv,unsafe_language,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00025,datasets/protocolo_c/v2ah_next_actions_registry.csv,forbidden_true_flag,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00026,datasets/protocolo_c/v2ah_next_actions_registry.csv,forbidden_promotion_status,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00027,datasets/protocolo_c/v2ah_next_actions_registry.csv,absolute_path,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00028,datasets/protocolo_c/v2ah_next_actions_registry.csv,non_versionable_path_marker,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00029,datasets/protocolo_c/v2ah_next_actions_registry.csv,unsafe_language,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00030,datasets/protocolo_c/v2ah_reopen_conditions_registry.csv,forbidden_true_flag,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00031,datasets/protocolo_c/v2ah_reopen_conditions_registry.csv,forbidden_promotion_status,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00032,datasets/protocolo_c/v2ah_reopen_conditions_registry.csv,absolute_path,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00033,datasets/protocolo_c/v2ah_reopen_conditions_registry.csv,non_versionable_path_marker,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00034,datasets/protocolo_c/v2ah_reopen_conditions_registry.csv,unsafe_language,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00035,datasets/protocolo_c/v2ah_safe_tcc_export_registry.csv,forbidden_true_flag,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00036,datasets/protocolo_c/v2ah_safe_tcc_export_registry.csv,forbidden_promotion_status,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00037,datasets/protocolo_c/v2ah_safe_tcc_export_registry.csv,absolute_path,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00038,datasets/protocolo_c/v2ah_safe_tcc_export_registry.csv,non_versionable_path_marker,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00039,datasets/protocolo_c/v2ah_safe_tcc_export_registry.csv,unsafe_language,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00040,datasets/protocolo_c/v2ah_stratified_review_sampling.csv,forbidden_true_flag,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00041,datasets/protocolo_c/v2ah_stratified_review_sampling.csv,forbidden_promotion_status,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00042,datasets/protocolo_c/v2ah_stratified_review_sampling.csv,absolute_path,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00043,datasets/protocolo_c/v2ah_stratified_review_sampling.csv,non_versionable_path_marker,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00044,datasets/protocolo_c/v2ah_stratified_review_sampling.csv,unsafe_language,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00045,datasets/protocolo_c/v2ai_adjudication_queue.csv,forbidden_true_flag,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00046,datasets/protocolo_c/v2ai_adjudication_queue.csv,forbidden_promotion_status,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00047,datasets/protocolo_c/v2ai_adjudication_queue.csv,absolute_path,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00048,datasets/protocolo_c/v2ai_adjudication_queue.csv,non_versionable_path_marker,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00049,datasets/protocolo_c/v2ai_adjudication_queue.csv,unsafe_language,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00050,datasets/protocolo_c/v2ai_completion_report.csv,forbidden_true_flag,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00051,datasets/protocolo_c/v2ai_completion_report.csv,forbidden_promotion_status,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00052,datasets/protocolo_c/v2ai_completion_report.csv,absolute_path,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00053,datasets/protocolo_c/v2ai_completion_report.csv,non_versionable_path_marker,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00054,datasets/protocolo_c/v2ai_completion_report.csv,unsafe_language,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00055,datasets/protocolo_c/v2ai_guardrail_regression.csv,forbidden_true_flag,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00056,datasets/protocolo_c/v2ai_guardrail_regression.csv,forbidden_promotion_status,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00057,datasets/protocolo_c/v2ai_guardrail_regression.csv,absolute_path,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00058,datasets/protocolo_c/v2ai_guardrail_regression.csv,non_versionable_path_marker,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00059,datasets/protocolo_c/v2ai_guardrail_regression.csv,unsafe_language,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00060,datasets/protocolo_c/v2ai_next_actions_registry.csv,forbidden_true_flag,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00061,datasets/protocolo_c/v2ai_next_actions_registry.csv,forbidden_promotion_status,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00062,datasets/protocolo_c/v2ai_next_actions_registry.csv,absolute_path,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00063,datasets/protocolo_c/v2ai_next_actions_registry.csv,non_versionable_path_marker,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00064,datasets/protocolo_c/v2ai_next_actions_registry.csv,unsafe_language,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00065,datasets/protocolo_c/v2ai_review_assignment_registry.csv,forbidden_true_flag,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00066,datasets/protocolo_c/v2ai_review_assignment_registry.csv,forbidden_promotion_status,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00067,datasets/protocolo_c/v2ai_review_assignment_registry.csv,absolute_path,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00068,datasets/protocolo_c/v2ai_review_assignment_registry.csv,non_versionable_path_marker,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00069,datasets/protocolo_c/v2ai_review_assignment_registry.csv,unsafe_language,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00070,datasets/protocolo_c/v2ai_review_outcome_registry.csv,forbidden_true_flag,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00071,datasets/protocolo_c/v2ai_review_outcome_registry.csv,forbidden_promotion_status,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00072,datasets/protocolo_c/v2ai_review_outcome_registry.csv,absolute_path,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00073,datasets/protocolo_c/v2ai_review_outcome_registry.csv,non_versionable_path_marker,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00074,datasets/protocolo_c/v2ai_review_outcome_registry.csv,unsafe_language,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00075,datasets/protocolo_c/v2ai_reviewer_decision_template.csv,forbidden_true_flag,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00076,datasets/protocolo_c/v2ai_reviewer_decision_template.csv,forbidden_promotion_status,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00077,datasets/protocolo_c/v2ai_reviewer_decision_template.csv,absolute_path,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00078,datasets/protocolo_c/v2ai_reviewer_decision_template.csv,non_versionable_path_marker,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00079,datasets/protocolo_c/v2ai_reviewer_decision_template.csv,unsafe_language,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00080,datasets/protocolo_c/v2ai_safe_promotion_blockers.csv,forbidden_true_flag,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00081,datasets/protocolo_c/v2ai_safe_promotion_blockers.csv,forbidden_promotion_status,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00082,datasets/protocolo_c/v2ai_safe_promotion_blockers.csv,absolute_path,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00083,datasets/protocolo_c/v2ai_safe_promotion_blockers.csv,non_versionable_path_marker,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00084,datasets/protocolo_c/v2ai_safe_promotion_blockers.csv,unsafe_language,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00085,datasets/protocolo_c/v2ai_uncertainty_registry.csv,forbidden_true_flag,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00086,datasets/protocolo_c/v2ai_uncertainty_registry.csv,forbidden_promotion_status,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00087,datasets/protocolo_c/v2ai_uncertainty_registry.csv,absolute_path,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00088,datasets/protocolo_c/v2ai_uncertainty_registry.csv,non_versionable_path_marker,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00089,datasets/protocolo_c/v2ai_uncertainty_registry.csv,unsafe_language,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00090,datasets/protocolo_c/v2aj_methodological_limitations_export.csv,forbidden_true_flag,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00091,datasets/protocolo_c/v2aj_methodological_limitations_export.csv,forbidden_promotion_status,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00092,datasets/protocolo_c/v2aj_methodological_limitations_export.csv,absolute_path,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00093,datasets/protocolo_c/v2aj_methodological_limitations_export.csv,non_versionable_path_marker,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00094,datasets/protocolo_c/v2aj_methodological_limitations_export.csv,unsafe_language,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00095,datasets/protocolo_c/v2aj_orientation_meeting_packet.csv,forbidden_true_flag,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00096,datasets/protocolo_c/v2aj_orientation_meeting_packet.csv,forbidden_promotion_status,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00097,datasets/protocolo_c/v2aj_orientation_meeting_packet.csv,absolute_path,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00098,datasets/protocolo_c/v2aj_orientation_meeting_packet.csv,non_versionable_path_marker,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00099,datasets/protocolo_c/v2aj_orientation_meeting_packet.csv,unsafe_language,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00100,datasets/protocolo_c/v2aj_results_tables_export_registry.csv,forbidden_true_flag,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00101,datasets/protocolo_c/v2aj_results_tables_export_registry.csv,forbidden_promotion_status,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00102,datasets/protocolo_c/v2aj_results_tables_export_registry.csv,absolute_path,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00103,datasets/protocolo_c/v2aj_results_tables_export_registry.csv,non_versionable_path_marker,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00104,datasets/protocolo_c/v2aj_results_tables_export_registry.csv,unsafe_language,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00105,datasets/protocolo_c/v2aj_review_guide_registry.csv,forbidden_true_flag,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00106,datasets/protocolo_c/v2aj_review_guide_registry.csv,forbidden_promotion_status,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00107,datasets/protocolo_c/v2aj_review_guide_registry.csv,absolute_path,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00108,datasets/protocolo_c/v2aj_review_guide_registry.csv,non_versionable_path_marker,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00109,datasets/protocolo_c/v2aj_review_guide_registry.csv,unsafe_language,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00110,datasets/protocolo_c/v2aj_tcc_evidence_summary_table.csv,forbidden_true_flag,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00111,datasets/protocolo_c/v2aj_tcc_evidence_summary_table.csv,forbidden_promotion_status,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00112,datasets/protocolo_c/v2aj_tcc_evidence_summary_table.csv,absolute_path,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00113,datasets/protocolo_c/v2aj_tcc_evidence_summary_table.csv,non_versionable_path_marker,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00114,datasets/protocolo_c/v2aj_tcc_evidence_summary_table.csv,unsafe_language,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00115,datasets/protocolo_c/v2aj_tcc_protocol_c_claims_matrix.csv,forbidden_true_flag,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00116,datasets/protocolo_c/v2aj_tcc_protocol_c_claims_matrix.csv,forbidden_promotion_status,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00117,datasets/protocolo_c/v2aj_tcc_protocol_c_claims_matrix.csv,absolute_path,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00118,datasets/protocolo_c/v2aj_tcc_protocol_c_claims_matrix.csv,non_versionable_path_marker,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00119,datasets/protocolo_c/v2aj_tcc_protocol_c_claims_matrix.csv,unsafe_language,0,PASS,none,Fail-closed scan over v2aj and recent review exports.
+GR_v2aj_00120,docs/metodologia_cientifica/protocolo_c_v2aj_methodological_limitations_export.md,forbidden_true_flag,0,PASS,none,Fail-closed scan over v2aj markdown.
+GR_v2aj_00121,docs/metodologia_cientifica/protocolo_c_v2aj_methodological_limitations_export.md,forbidden_promotion_status,0,PASS,none,Fail-closed scan over v2aj markdown.
+GR_v2aj_00122,docs/metodologia_cientifica/protocolo_c_v2aj_methodological_limitations_export.md,absolute_path,0,PASS,none,Fail-closed scan over v2aj markdown.
+GR_v2aj_00123,docs/metodologia_cientifica/protocolo_c_v2aj_methodological_limitations_export.md,non_versionable_path_marker,0,PASS,none,Fail-closed scan over v2aj markdown.
+GR_v2aj_00124,docs/metodologia_cientifica/protocolo_c_v2aj_methodological_limitations_export.md,unsafe_language,0,PASS,none,Fail-closed scan over v2aj markdown.
+GR_v2aj_00125,docs/metodologia_cientifica/protocolo_c_v2aj_orientation_meeting_packet.md,forbidden_true_flag,0,PASS,none,Fail-closed scan over v2aj markdown.
+GR_v2aj_00126,docs/metodologia_cientifica/protocolo_c_v2aj_orientation_meeting_packet.md,forbidden_promotion_status,0,PASS,none,Fail-closed scan over v2aj markdown.
+GR_v2aj_00127,docs/metodologia_cientifica/protocolo_c_v2aj_orientation_meeting_packet.md,absolute_path,0,PASS,none,Fail-closed scan over v2aj markdown.
+GR_v2aj_00128,docs/metodologia_cientifica/protocolo_c_v2aj_orientation_meeting_packet.md,non_versionable_path_marker,0,PASS,none,Fail-closed scan over v2aj markdown.
+GR_v2aj_00129,docs/metodologia_cientifica/protocolo_c_v2aj_orientation_meeting_packet.md,unsafe_language,0,PASS,none,Fail-closed scan over v2aj markdown.
+GR_v2aj_00130,docs/metodologia_cientifica/protocolo_c_v2aj_safe_tcc_export.md,forbidden_true_flag,0,PASS,none,Fail-closed scan over v2aj markdown.
+GR_v2aj_00131,docs/metodologia_cientifica/protocolo_c_v2aj_safe_tcc_export.md,forbidden_promotion_status,0,PASS,none,Fail-closed scan over v2aj markdown.
+GR_v2aj_00132,docs/metodologia_cientifica/protocolo_c_v2aj_safe_tcc_export.md,absolute_path,0,PASS,none,Fail-closed scan over v2aj markdown.
+GR_v2aj_00133,docs/metodologia_cientifica/protocolo_c_v2aj_safe_tcc_export.md,non_versionable_path_marker,0,PASS,none,Fail-closed scan over v2aj markdown.
+GR_v2aj_00134,docs/metodologia_cientifica/protocolo_c_v2aj_safe_tcc_export.md,unsafe_language,0,PASS,none,Fail-closed scan over v2aj markdown.

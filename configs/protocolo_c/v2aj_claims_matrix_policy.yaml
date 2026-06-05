@@ -1,0 +1,13 @@
+protocol_version: v2aj
+policy: claims_matrix
+purpose: safe_tcc_claim_separation
+claim_modes:
+  - allowed_review_only
+  - forbidden_operational_overclaim
+forbidden_claims:
+  - operational_ground_truth
+  - flood_detection
+  - prediction
+  - binary_label
+  - supervised_training_ready
+  - protocol_b_open

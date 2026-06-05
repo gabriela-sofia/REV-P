@@ -1,0 +1,4 @@
+protocol_version: v2aj
+policy: methodological_limitations_export
+framing: controlled_methodological_limitation
+forbidden_framing: pipeline_failure_or_operational_validation

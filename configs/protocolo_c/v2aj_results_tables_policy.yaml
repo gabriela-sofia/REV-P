@@ -1,0 +1,15 @@
+protocol_version: v2aj
+policy: results_tables_export
+allowed_tables:
+  - candidate_state
+  - promotion_blockers
+  - claims_matrix
+  - review_queue
+  - uncertainties
+  - review_guide
+  - next_actions
+forbidden_tables:
+  - accuracy
+  - prediction
+  - training
+  - operational_validation

@@ -1,0 +1,5 @@
+protocol_version: v2aj
+policy: safe_markdown_report
+report_type: technical_export_guide
+not_final_tcc_text: true
+unsafe_language_allowed_only_when_marked_as_forbidden: true

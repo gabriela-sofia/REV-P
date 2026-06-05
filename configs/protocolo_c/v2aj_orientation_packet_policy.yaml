@@ -1,0 +1,5 @@
+protocol_version: v2aj
+policy: orientation_meeting_packet
+style: short_technical_briefing
+not_a_tcc_chapter: true
+requires_guardrail_language: true
