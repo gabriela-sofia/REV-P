@@ -1,0 +1,6 @@
+protocol_version: v2ai
+policy: adjudication_queue
+default_status: WAITING_FOR_HUMAN_REVIEW
+can_promote_after_adjudication: false
+still_requires_external_evidence: true
+simulate_adjudication: false

@@ -1,0 +1,5 @@
+protocol_version: v2ai
+policy: uncertainty_registry
+automatic_resolution_allowed: false
+effect_on_allowed_use: review_only_no_automatic_resolution
+preserve_v2ah_blockers: true

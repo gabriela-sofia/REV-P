@@ -1,0 +1,14 @@
+protocol_version: v2ai
+policy: human_review_assignment
+reviewer_slots:
+  - reviewer_a
+  - reviewer_b
+reviewer_identity_rule: slot_only_no_real_names
+assignment_status: ASSIGNED_SLOT_PENDING_HUMAN_REVIEW
+forbidden_use:
+  - ground_reference
+  - label
+  - training
+  - overlay
+  - prediction
+  - protocol_b_reopen

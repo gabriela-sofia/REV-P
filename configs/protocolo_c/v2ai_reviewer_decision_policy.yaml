@@ -1,0 +1,6 @@
+protocol_version: v2ai
+policy: reviewer_decision_template
+default_decision_status: PENDING_HUMAN_REVIEW
+default_phenomenon_observed: UNREVIEWED
+default_needs_adjudication: UNKNOWN_UNTIL_REVIEW
+simulate_human_review: false

@@ -1,0 +1,23 @@
+protocol_version: v2ai
+policy: guardrail_regression
+fail_closed: true
+blocked_true_fields:
+  - ground_truth
+  - ground_reference
+  - label
+  - training
+  - overlay
+  - prediction
+  - protocol_b_reopen
+  - sentinel_date_inferred
+  - crosswalk_inferred
+  - human_review_completed
+  - adjudication_completed
+blocked_statuses:
+  - GROUND_TRUTH_VALIDATED
+  - GROUND_REFERENCE_TRUE
+  - LABEL_POSITIVE
+  - LABEL_NEGATIVE
+  - TRAINING_READY
+  - PROTOCOL_B_OPEN
+  - OPERATIONAL_VALIDATION

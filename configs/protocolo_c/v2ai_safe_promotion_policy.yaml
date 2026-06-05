@@ -1,0 +1,9 @@
+protocol_version: v2ai
+policy: safe_promotion_blockers
+promotion_allowed: false
+required_before_promotion:
+  - real_human_review
+  - adjudication
+  - external_operational_evidence
+  - explicit_geometry_or_coordinate
+  - explicit_patch_date_asset_crosswalk

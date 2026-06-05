@@ -1,0 +1,6 @@
+rank,next_action,score,allowed,blocked_operational_use,required_input,recommended_script_or_artifact,notes
+1,HUMAN_REVIEW_EXECUTION_OR_SAFE_TCC_EXPORT,100,true,true,v2ai_review_assignment_registry.csv|v2ai_reviewer_decision_template.csv,v2ai_next_actions_registry.csv,"Safe next actions cannot create training, labels, overlay, ground truth, Protocol B, or date inference."
+2,SAFE_TCC_PROTOCOL_C_WRITEUP,85,true,true,v2ah_safe_tcc_export_registry.csv|v2ai_completion_report.csv,docs/metodologia_cientifica/protocolo_c_v2ai_completion_report.md,"Safe next actions cannot create training, labels, overlay, ground truth, Protocol B, or date inference."
+3,REVIEW_GUIDE_FOR_HUMAN_ADJUDICATION,80,true,true,v2ai_adjudication_queue.csv|v2ai_uncertainty_registry.csv,v2ai_adjudication_queue.csv,"Safe next actions cannot create training, labels, overlay, ground truth, Protocol B, or date inference."
+4,WAIT_FOR_NEW_QUALIFIED_SOURCE,65,true,true,new qualified external evidence,v2ai_safe_promotion_blockers.csv,"Safe next actions cannot create training, labels, overlay, ground truth, Protocol B, or date inference."
+5,TRAINING_OVERLAY_LABEL_PROTOCOL_B,0,false,true,blocked by v2ai guardrails,none,"Safe next actions cannot create training, labels, overlay, ground truth, Protocol B, or date inference."
