@@ -1,0 +1,9 @@
+stage: v2al
+component: manuscript_patch_plan
+apply_automatically: false
+manual_action_only: true
+overwrite_main_manuscript: false
+risk_levels:
+  - low
+  - medium
+required_human_check: true

@@ -1,0 +1,31 @@
+stage: v2al
+component: safe_language_regression
+fail_closed: true
+forbidden_kv_markers:
+  - ground_truth=true
+  - ground_reference=true
+  - label=true
+  - training=true
+  - overlay=true
+  - prediction=true
+  - protocol_b_reopen=true
+  - sentinel_date_inferred=true
+  - crosswalk_inferred=true
+  - human_review_completed=true
+  - adjudication_completed=true
+  - operational_validation=true
+forbidden_text_claims:
+  - deteccao de enchente
+  - ground truth validado
+  - classe positiva
+  - classe negativa
+  - label operacional
+  - modelo preditivo
+  - treinamento supervisionado pronto
+  - validacao operacional
+forbid_absolute_paths: true
+forbid_local_only: true
+scan:
+  - v2al_outputs
+  - v2al_docs
+  - v2ak_docs

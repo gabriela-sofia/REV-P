@@ -1,0 +1,21 @@
+stage: v2al
+component: manuscript_candidate_scanner
+search_dirs:
+  - docs
+  - paper
+  - artigo
+  - manuscript
+  - tcc
+  - repo_root
+extensions:
+  - .tex
+  - .md
+exclude_dirs:
+  - .git
+  - local_runs
+  - data
+  - __pycache__
+  - node_modules
+safe_to_autowrite: false
+overwrite_main_manuscript: false
+recommended_action: manual_review_required_no_autowrite

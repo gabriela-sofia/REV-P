@@ -1,0 +1,10 @@
+packet_item_id,category,content,decision_point,question
+OP_v2al_000,resumo,"Integracao preparou candidatos de secao Markdown/LaTeX a partir dos drafts v2ak, sem editar o manuscrito principal.",Aprovar escopo da integracao.,
+OP_v2al_001,secoes_candidatas,"Metodologia, resultados, discussao e limitacoes/trabalhos futuros estao prontos como candidatos review-only.",Definir alocacao de cada secao no TCC.,
+OP_v2al_002,ponto_sensivel_linguagem,"Manter linguagem review-only: nao afirmar deteccao de enchente, ground truth validado, classe, label ou validacao operacional.",Confirmar terminologia segura.,
+OP_v2al_003,decisao_orientador,Pontos que dependem de decisao do orientador estao nas perguntas.,Responder perguntas objetivas.,
+OP_v2al_Q00,pergunta,,Decisao do orientador necessaria.,"As secoes do Protocolo C entram como metodologia, resultado ou discussao?"
+OP_v2al_Q01,pergunta,,Decisao do orientador necessaria.,A fila de revisao humana deve entrar no corpo ou apendice?
+OP_v2al_Q02,pergunta,,Decisao do orientador necessaria.,"O termo ""ground truth operacional"" deve ser mantido ou trocado por ""referencia observacional operacional""?"
+OP_v2al_Q03,pergunta,,Decisao do orientador necessaria.,As tabelas de blockers entram nos resultados ou apendice?
+OP_v2al_Q04,pergunta,,Decisao do orientador necessaria.,O texto deve enfatizar mais limitacao ou governanca metodologica?

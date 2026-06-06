@@ -1,0 +1,17 @@
+stage: v2al
+component: markdown_section_bundle
+source_stage: v2ak
+front_matter:
+  stage: v2al
+  source_stage: v2ak
+  integration_status: manual_review_required
+  operational_claims: false
+  ground_truth_created: false
+  auto_insert: false
+allow_citation_placeholder: "[CITAR_FONTE]"
+forbid_invented_bibliography: true
+sections:
+  - metodologia
+  - resultados
+  - discussao
+  - limitacoes_trabalhos_futuros

@@ -1,0 +1,7 @@
+audit_id,file,claim_fragment,claim_status,allowed_by_v2ak,allowed_by_v2aj,requires_disclaimer,disclaimer_present,violation,violation_reason
+CA_v2al_0000,docs/tcc_exports/v2al_manuscript_integration/v2al_metodologia_section_candidate.md,evidencia contextual,allowed,true,true,true,true,false,
+CA_v2al_0001,docs/tcc_exports/v2al_manuscript_integration/v2al_metodologia_section_candidate.md,suporte territorial externo,allowed,true,true,true,true,false,
+CA_v2al_0002,docs/tcc_exports/v2al_manuscript_integration/v2al_metodologia_section_candidate.tex,evidencia contextual,allowed,true,true,true,true,false,
+CA_v2al_0003,docs/tcc_exports/v2al_manuscript_integration/v2al_metodologia_section_candidate.tex,suporte territorial externo,allowed,true,true,true,true,false,
+CA_v2al_0004,docs/tcc_exports/v2al_manuscript_integration/v2al_resultados_section_candidate.md,evidencia contextual,allowed,true,true,true,true,false,
+CA_v2al_0005,docs/tcc_exports/v2al_manuscript_integration/v2al_resultados_section_candidate.tex,evidencia contextual,allowed,true,true,true,true,false,

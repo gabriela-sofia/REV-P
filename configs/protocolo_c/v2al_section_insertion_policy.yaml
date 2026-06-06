@@ -1,0 +1,12 @@
+stage: v2al
+component: section_insertion_matrix
+insertion_mode: manual_review_required
+required_review: true
+mapping:
+  metodologia_draft: metodologia/protocolo
+  resultados_draft: resultados_protocolo_c
+  discussao_draft: discussao_metodologica
+  limitacoes_trabalhos_futuros_draft: limitacoes_e_trabalhos_futuros
+  orientador_briefing: reuniao_orientacao_fora_do_corpo
+forbid_operational_promotion: true
+forbid_auto_insert: true

@@ -1,0 +1,10 @@
+stage: v2al
+component: table_caption_export
+source_registry: v2aj_results_tables_export_registry.csv
+manual_review_required: true
+captions_must_state:
+  - governance_and_review_data
+  - not_accuracy
+  - not_operational_validation
+forbid_accuracy_claim: true
+forbid_validation_claim: true

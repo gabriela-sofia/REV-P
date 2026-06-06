@@ -1,0 +1,2 @@
+patch_id,target_candidate_file,source_section_file,anchor_to_find,insert_before_or_after,manual_action,risk_level,required_human_check
+PP_safe,docs/manuscrito.tex,docs/tcc_exports/v2al_manuscript_integration/v2al_metodologia_section_candidate.md,% v2al-anchor: metodologia,after,Inserir manualmente apos revisao humana.,low,Confirmar linguagem review-only.

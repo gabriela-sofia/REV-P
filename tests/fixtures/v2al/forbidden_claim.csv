@@ -1,0 +1,2 @@
+claim_id,claim_allowed,safe_wording,unsafe_wording
+CLM_bad,false,nao afirmar resultado,ground truth validado

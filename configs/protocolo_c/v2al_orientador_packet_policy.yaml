@@ -1,0 +1,10 @@
+stage: v2al
+component: orientador_review_packet
+mandatory_questions:
+  - "As secoes do Protocolo C entram como metodologia, resultado ou discussao?"
+  - "A fila de revisao humana deve entrar no corpo ou apendice?"
+  - "O termo ground truth operacional deve ser mantido ou trocado por referencia observacional operacional?"
+  - "As tabelas de blockers entram nos resultados ou apendice?"
+  - "O texto deve enfatizar mais limitacao ou governanca metodologica?"
+simulate_human_review: false
+simulate_adjudication: false

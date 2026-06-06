@@ -1,0 +1,16 @@
+stage: v2al
+component: latex_section_bundle
+heading_map:
+  level_1_2: subsection
+  level_3_plus: subsubsection
+escape_special_chars: true
+preserve_terms:
+  - review-only
+  - ground truth
+  - DINOv2
+  - Sentinel
+forbid_invented_cite: true
+citation_placeholder_comment: "% [CITAR_FONTE]"
+required_header_comments:
+  - "% v2al candidate section -- manual review required"
+  - "% no operational ground truth, no labels, no prediction"

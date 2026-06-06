@@ -1,0 +1,12 @@
+stage: v2al
+component: claim_alignment_audit
+align_against:
+  - v2ak_claim_usage_audit.csv
+  - v2aj_tcc_protocol_c_claims_matrix.csv
+fail_on_unauthorized_operational_claim: true
+forbidden_language_allowed_only_as:
+  - negative_example
+  - prohibition
+  - unsafe_wording
+  - limitation
+require_disclaimer: true
