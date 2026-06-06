@@ -1,0 +1,13 @@
+stage: v2am
+component: defense_question_bank
+mandatory_questions:
+  - Voces tem ground truth?
+  - Entao como validam o projeto?
+  - O que significam os 172 candidatos?
+  - DINOv2 detecta enchente?
+  - GIS virou label?
+  - Por que nao treinaram o modelo?
+  - O que falta para Protocolo B?
+  - A ausencia de ground truth invalida o trabalho?
+  - O que exatamente v2ah/v2ai/v2aj/v2ak/v2al provaram?
+answers_must_be_safe: true

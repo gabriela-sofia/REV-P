@@ -1,0 +1,5 @@
+stage: v2am
+component: claims_guardrails_appendix
+forbidden_language_allowed_only_as: [negative_example, unsafe_wording, prohibition]
+sources: [v2aj_tcc_protocol_c_claims_matrix.csv, v2ak_safe_language_glossary.csv]
+consolidate_safe_language_for_banca: true

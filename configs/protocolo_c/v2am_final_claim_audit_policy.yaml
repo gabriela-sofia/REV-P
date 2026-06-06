@@ -1,0 +1,11 @@
+stage: v2am
+component: final_claim_consistency_audit
+fail_on_positive_forbidden_assertion: true
+forbidden_allowed_only_as:
+  - unsafe_wording
+  - negative_example
+  - banca_question
+  - explicit_negation
+  - limitation
+  - guardrail
+scan: [v2ak_docs, v2al_docs, v2am_docs]

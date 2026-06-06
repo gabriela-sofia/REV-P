@@ -1,0 +1,16 @@
+completion_id,metric,value,status,notes
+CR_v2am_000,inputs_read,100,RECORDED,Read-only stage artifacts discovered for v2ah-v2al.
+CR_v2am_001,artifacts_inventoried,100,RECORDED,v2am_appendix_artifact_index.csv
+CR_v2am_002,atlas_items,9,RECORDED,Evidence atlas axes.
+CR_v2am_003,dag_nodes,9,RECORDED,Traceability nodes.
+CR_v2am_004,dag_edges,8,RECORDED,Traceability edges; promotion_created=false.
+CR_v2am_005,tables_figures_catalog,7,RECORDED,No accuracy/validation/training items.
+CR_v2am_006,claims_guardrails,14,RECORDED,Claims and guardrails consolidated.
+CR_v2am_007,review_queue_items,3,RECORDED,All pending/blocked.
+CR_v2am_008,limitations,9,RECORDED,Methodological controls.
+CR_v2am_009,defense_questions,9,RECORDED,Safe defense answers.
+CR_v2am_010,final_audit_violations,0,PASS,Final claim consistency audit.
+CR_v2am_011,guardrail_regression_failures,0,PASS,Fail-closed guardrail regression.
+CR_v2am_012,main_manuscript_overwritten,false,GUARDRAIL_OK,Outputs are v2am_ only.
+CR_v2am_013,next_action_rank_1,MANUAL_APPENDIX_REVIEW_AND_ORIENTATION_MEETING,SAFE_NEXT_ACTION,Manual appendix review and orientation meeting.
+CR_v2am_014,final_decision,evidence_atlas_and_appendix_package_ready_no_operational_promotion,NO_OPERATIONAL_PROMOTION,No science altered; v2ah-v2al inputs read-only.

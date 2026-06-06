@@ -1,0 +1,4 @@
+stage: v2am
+component: limitations_appendix
+sources: [v2aj_methodological_limitations_export.csv]
+frame_as_methodological_control: true

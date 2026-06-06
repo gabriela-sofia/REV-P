@@ -1,0 +1,7 @@
+stage: v2am
+component: artifact_inventory
+scan_prefixes: [v2ah, v2ai, v2aj, v2ak, v2al]
+include_types: [dataset_csv, doc_text, config_yaml]
+exclude_raw_data: true
+forbid_absolute_paths_in_content: true
+safe_to_autowrite: false

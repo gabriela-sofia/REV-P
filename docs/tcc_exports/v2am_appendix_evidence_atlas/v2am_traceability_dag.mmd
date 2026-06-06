@@ -1,0 +1,18 @@
+flowchart TD
+    N_v2ah_stop_gate["v2ah stop gate (v2ah)"]
+    N_v2ah_review_queue["v2ah review queue (v2ah)"]
+    N_v2ai_assignments["v2ai assignments (v2ai)"]
+    N_v2ai_adjudication["v2ai adjudication queue (v2ai)"]
+    N_v2aj_claims["v2aj claims matrix (v2aj)"]
+    N_v2aj_summary["v2aj evidence summary (v2aj)"]
+    N_v2ak_drafts["v2ak drafts (v2ak)"]
+    N_v2al_bundles["v2al bundles (v2al)"]
+    N_v2am_atlas["v2am atlas (v2am)"]
+    N_v2ah_stop_gate -->|stop_gate_bounds_queue| N_v2ah_review_queue
+    N_v2ah_review_queue -->|v2ah_to_v2ai| N_v2ai_assignments
+    N_v2ai_assignments -->|assignments_feed_adjudication| N_v2ai_adjudication
+    N_v2ai_adjudication -->|v2ai_to_v2aj| N_v2aj_claims
+    N_v2aj_claims -->|claims_inform_summary| N_v2aj_summary
+    N_v2aj_summary -->|v2aj_to_v2ak| N_v2ak_drafts
+    N_v2ak_drafts -->|v2ak_to_v2al| N_v2al_bundles
+    N_v2al_bundles -->|v2al_to_v2am| N_v2am_atlas

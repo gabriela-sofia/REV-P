@@ -1,0 +1,12 @@
+stage: v2am
+component: appendix_index
+reading_order:
+  - Appendix index
+  - Evidence atlas
+  - Traceability DAG
+  - Claims and guardrails
+  - Review queue
+  - Limitations
+  - Tables and figures catalog
+  - Defense question bank
+  - Final claim consistency audit

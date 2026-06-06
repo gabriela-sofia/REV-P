@@ -1,0 +1,10 @@
+index_item_id,appendix_file,title,purpose,source_artifacts,recommended_reader,review_priority
+IDX_v2am_00,docs/tcc_exports/v2am_appendix_evidence_atlas/v2am_appendix_index.md,Appendix index,Indice navegavel do apendice.,all v2am,orientador_e_banca,1
+IDX_v2am_01,docs/tcc_exports/v2am_appendix_evidence_atlas/v2am_protocol_c_evidence_atlas.md,Evidence atlas,Atlas de evidencia por eixo.,v2ah-v2al,banca,2
+IDX_v2am_02,docs/tcc_exports/v2am_appendix_evidence_atlas/v2am_traceability_dag.md,Traceability DAG,Grafo de rastreabilidade.,v2ah-v2am,banca,3
+IDX_v2am_03,docs/tcc_exports/v2am_appendix_evidence_atlas/v2am_claims_and_guardrails_appendix.md,Claims and guardrails,Claims permitidos/proibidos e guardrails.,v2aj/v2ak,banca,4
+IDX_v2am_04,docs/tcc_exports/v2am_appendix_evidence_atlas/v2am_review_queue_appendix.md,Review queue,Fila de revisao pendente.,v2ah/v2ai,orientador,5
+IDX_v2am_05,docs/tcc_exports/v2am_appendix_evidence_atlas/v2am_limitations_appendix.md,Limitations,Limitacoes como controle metodologico.,v2aj/v2ak,banca,6
+IDX_v2am_06,docs/tcc_exports/v2am_appendix_evidence_atlas/v2am_tables_and_figures_catalog.md,Tables and figures catalog,Catalogo de tabelas e figuras.,v2aj/v2al,orientador,7
+IDX_v2am_07,docs/tcc_exports/v2am_appendix_evidence_atlas/v2am_defense_question_bank.md,Defense question bank,Perguntas e respostas de banca.,v2ah-v2al,candidato,8
+IDX_v2am_08,docs/tcc_exports/v2am_appendix_evidence_atlas/v2am_final_claim_consistency_audit.md,Final claim consistency audit,Auditoria final de claims.,v2ak/v2al/v2am,orientador_e_banca,9

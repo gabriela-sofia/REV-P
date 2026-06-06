@@ -1,0 +1,2 @@
+catalog_id,item_type,suggested_title,safe_caption,forbidden_caption,manual_review_required
+CAT_ok,table,Candidatos review-only,Pacotes review-only de governanca.,tabela de validacao operacional,true

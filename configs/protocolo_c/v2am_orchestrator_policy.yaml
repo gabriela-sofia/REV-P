@@ -1,0 +1,18 @@
+stage: v2am
+component: master_orchestrator
+fail_fast: true
+use_internal_functions: true
+git_operations: false
+order:
+  - artifact_inventory
+  - evidence_atlas
+  - traceability_dag
+  - tables_figures_catalog
+  - claims_guardrails_appendix
+  - review_queue_appendix
+  - limitations_appendix
+  - defense_question_bank
+  - final_claim_consistency_audit
+  - appendix_index
+  - next_action_ranker
+  - completion_report

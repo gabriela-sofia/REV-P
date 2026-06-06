@@ -1,0 +1,9 @@
+stage: v2am
+component: review_queue_appendix
+sources: [v2ah_candidate_reference_review_queue.csv, v2ai_review_assignment_registry.csv]
+all_remain_candidates: true
+human_review_status: pending
+adjudication_status: pending
+promotion_status: blocked
+simulate_human_review: false
+simulate_adjudication: false

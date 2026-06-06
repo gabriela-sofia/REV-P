@@ -1,0 +1,2 @@
+edge_id,source_node,target_node,relationship,guardrail_preserved,promotion_created
+EDG_bad,N_a,N_b,promote,true,true

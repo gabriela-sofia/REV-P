@@ -1,0 +1,2 @@
+edge_id,source_node,target_node,relationship,guardrail_preserved,promotion_created
+EDG_v2am_000,N_v2ah_review_queue,N_v2ai_assignments,v2ah_to_v2ai,true,false

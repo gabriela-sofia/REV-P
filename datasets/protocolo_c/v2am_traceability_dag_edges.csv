@@ -1,0 +1,9 @@
+edge_id,source_node,target_node,relationship,guardrail_preserved,promotion_created
+EDG_v2am_000,N_v2ah_stop_gate,N_v2ah_review_queue,stop_gate_bounds_queue,true,false
+EDG_v2am_001,N_v2ah_review_queue,N_v2ai_assignments,v2ah_to_v2ai,true,false
+EDG_v2am_002,N_v2ai_assignments,N_v2ai_adjudication,assignments_feed_adjudication,true,false
+EDG_v2am_003,N_v2ai_adjudication,N_v2aj_claims,v2ai_to_v2aj,true,false
+EDG_v2am_004,N_v2aj_claims,N_v2aj_summary,claims_inform_summary,true,false
+EDG_v2am_005,N_v2aj_summary,N_v2ak_drafts,v2aj_to_v2ak,true,false
+EDG_v2am_006,N_v2ak_drafts,N_v2al_bundles,v2ak_to_v2al,true,false
+EDG_v2am_007,N_v2al_bundles,N_v2am_atlas,v2al_to_v2am,true,false

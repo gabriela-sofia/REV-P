@@ -1,0 +1,2 @@
+artifact_id,stage,artifact_type,path,exists,non_empty,sha256,row_count,column_count,schema_status,role_in_appendix,safe_use,forbidden_use
+ART_v2am_0000,v2ah,dataset_csv,datasets/protocolo_c/v2ah_candidate_reference_review_queue.csv,true,true,abc,172,14,schema_ok,appendix_data_table,read-only evidence,no ground truth

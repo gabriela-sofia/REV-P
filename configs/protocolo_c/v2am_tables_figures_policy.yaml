@@ -1,0 +1,5 @@
+stage: v2am
+component: tables_figures_catalog
+manual_review_required: true
+forbid_items: [accuracy, operational_validation, training]
+sources: [v2aj_results_tables_export_registry.csv, v2al_table_caption_export.csv]

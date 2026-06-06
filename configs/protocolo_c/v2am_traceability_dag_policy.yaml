@@ -1,0 +1,6 @@
+stage: v2am
+component: traceability_dag
+mermaid_kind: flowchart TD
+promotion_created: false
+guardrail_preserved: true
+min_edges: [v2ah->v2ai, v2ai->v2aj, v2aj->v2ak, v2ak->v2al, v2al->v2am]

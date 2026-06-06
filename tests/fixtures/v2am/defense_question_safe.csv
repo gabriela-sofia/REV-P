@@ -1,0 +1,2 @@
+question_id,question,short_answer,forbidden_terms
+Q_ok,Voces tem ground truth?,Nao temos ground truth operacional patch-level.,ground truth validado

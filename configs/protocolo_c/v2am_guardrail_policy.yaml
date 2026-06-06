@@ -1,0 +1,20 @@
+stage: v2am
+component: guardrail_regression
+fail_closed: true
+forbidden_kv_markers:
+  - ground_truth=true
+  - ground_reference=true
+  - label=true
+  - training=true
+  - overlay=true
+  - prediction=true
+  - protocol_b_reopen=true
+  - sentinel_date_inferred=true
+  - crosswalk_inferred=true
+  - human_review_completed=true
+  - adjudication_completed=true
+  - operational_validation=true
+  - promotion_allowed=true
+forbid_absolute_paths_in_content: true
+forbid_local_only: true
+scan: [v2am_outputs, v2am_docs, v2ak_docs, v2al_docs, stage_datasets]

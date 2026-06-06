@@ -1,0 +1,14 @@
+stage: v2am
+component: evidence_atlas
+axes:
+  - candidatos review-only
+  - blockers de promocao
+  - revisao humana pendente
+  - adjudicacao pendente
+  - claims permitidos/proibidos
+  - limitacoes metodologicas
+  - integracao segura no manuscrito
+  - captions/tabelas
+  - guardrails
+forbid_overclaim: true
+is_final_chapter: false
