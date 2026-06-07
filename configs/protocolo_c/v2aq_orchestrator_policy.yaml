@@ -1,0 +1,18 @@
+stage: v2aq
+component: master_orchestrator
+fail_fast: true
+git_operations: false
+order:
+  - priority_candidate
+  - spatial_anchor_strength
+  - event_geometry_candidate
+  - geojson_candidate_exporter
+  - patch_geometry_match
+  - crosswalk_geometry_join
+  - patch_link_review_packet
+  - patch_reference_candidate_scorer
+  - manual_digitization_tasks
+  - ground_truth_boundary_audit
+  - guardrail_regression
+  - next_action_ranker
+  - completion_report

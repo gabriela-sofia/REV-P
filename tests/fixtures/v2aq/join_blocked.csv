@@ -1,0 +1,2 @@
+join_id,candidate_id,join_status,patch_level_review_ready,patch_truth_allowed
+JN_no,X,NEEDS_EVENT_GEOMETRY,false,false

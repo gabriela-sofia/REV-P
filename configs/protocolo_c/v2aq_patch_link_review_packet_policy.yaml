@@ -1,0 +1,5 @@
+stage: v2aq
+component: patch_link_review_packet
+review_status: PENDING_PATCH_LINK_REVIEW
+only_strong_candidates: true
+forbidden_decisions: [GROUND_TRUTH_VALIDATED, LABEL_READY, PROTOCOL_B_OPEN, TRAINING_READY, OPERATIONAL_VALIDATION, PATCH_TRUTH_CONFIRMED]

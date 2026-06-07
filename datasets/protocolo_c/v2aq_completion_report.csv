@@ -1,0 +1,16 @@
+completion_id,metric,value,status,notes
+CR_v2aq_000,candidates_loaded,9,RECORDED,From v2ap/v2ao.
+CR_v2aq_001,anchor_strength_rows,9,RECORDED,Anchor specificity classified.
+CR_v2aq_002,event_geometry_candidates,9,RECORDED,No geometry invented.
+CR_v2aq_003,geojson_created,9,RECORDED,"real geometry=0, null=9."
+CR_v2aq_004,geojson_geometry_real,0,RECORDED,Only from explicit source.
+CR_v2aq_005,geojson_geometry_null,9,RECORDED,geometry: null; manual digitization.
+CR_v2aq_006,patch_geometry_match_candidates,9,RECORDED,overlay_executed=false.
+CR_v2aq_007,crosswalk_geometry_joins,9,RECORDED,review_ready=0.
+CR_v2aq_008,patch_link_review_packets,7,RECORDED,PENDING_PATCH_LINK_REVIEW.
+CR_v2aq_009,patch_reference_scores,9,RECORDED,ground truth/label blocked.
+CR_v2aq_010,manual_digitization_tasks,9,RECORDED,All carry do_not_infer.
+CR_v2aq_011,ground_truth_blocked_all,9,PASS,All blocked.
+CR_v2aq_012,guardrail_regression_failures,0,PASS,Fail-closed.
+CR_v2aq_013,next_action_rank_1,DIGITIZE_EVENT_GEOMETRY_FOR_TOP_CANDIDATES,SAFE_NEXT_ACTION,Geometry digitization / patch-link review path.
+CR_v2aq_014,final_decision,event_geometry_and_patch_link_readiness_built_no_operational_ground_truth,NO_OPERATIONAL_GROUND_TRUTH,patch_truth_allowed=false; protocol_b blocked.

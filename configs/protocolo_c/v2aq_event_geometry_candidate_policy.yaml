@@ -1,0 +1,7 @@
+stage: v2aq
+component: event_geometry_candidate
+allowed_status: [EXPLICIT_EVENT_GEOMETRY_AVAILABLE, EXPLICIT_POINT_OR_COORDINATE_AVAILABLE, OFFICIAL_MAP_DIGITIZATION_REQUIRED, TEXTUAL_ANCHOR_ONLY, INSUFFICIENT_GEOMETRY]
+invent_geometry: false
+invent_coordinate: false
+always:
+  can_use_for_ground_truth: false

@@ -1,0 +1,2 @@
+join_id,candidate_id,patch_level_review_ready,patch_truth_allowed
+JN_ok,X,true,false

@@ -1,0 +1,19 @@
+{
+  "features": [
+    {
+      "geometry": null,
+      "properties": {
+        "candidate_id": "PET_2022_03_20_21",
+        "geometry_status": "OFFICIAL_MAP_DIGITIZATION_REQUIRED",
+        "manual_digitization_required": "true",
+        "not_ground_truth": true,
+        "not_label": true,
+        "patch_truth_allowed": false,
+        "region": "Petropolis",
+        "source_artifact": "datasets/protocolo_c/v2an_spatial_anchor_registry.csv"
+      },
+      "type": "Feature"
+    }
+  ],
+  "type": "FeatureCollection"
+}

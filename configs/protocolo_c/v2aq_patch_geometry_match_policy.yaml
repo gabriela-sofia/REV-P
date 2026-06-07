@@ -1,0 +1,5 @@
+stage: v2aq
+component: patch_geometry_match
+overlay_executed: false
+manual_review_required: true
+compute_intersection: false

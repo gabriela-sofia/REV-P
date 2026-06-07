@@ -1,0 +1,15 @@
+# v2aq - candidatos priorizados para aquisicao geometrica
+
+Prioriza C4/C3, EVENT_AND_PATCH_GEOMETRY_READY, crosswalk explicito e ancora forte.
+
+| priority_rank | candidate_id | reference_level | geometry_readiness_status | priority_reason |
+| --- | --- | --- | --- | --- |
+| 1 | PET_2022_02_15 | C4_READY_FOR_EXTERNAL_VALIDATION_REVIEW | EVENT_AND_PATCH_GEOMETRY_READY | C4\|EVENT_AND_PATCH_GEOMETRY_READY\|strong_spatial_anchor |
+| 2 | REC_2022_05_24_30 | C3_STRONG_REFERENCE_CANDIDATE | PATCH_GEOMETRY_READY | C3\|explicit_crosswalk |
+| 3 | REC_2024_06_14_16 | C3_STRONG_REFERENCE_CANDIDATE | PATCH_GEOMETRY_READY | C3 |
+| 4 | CTB_2023_10_28_30 | C3_STRONG_REFERENCE_CANDIDATE | PATCH_GEOMETRY_READY | C3\|strong_spatial_anchor |
+| 5 | CTB_2022_01_15_16 | C3_STRONG_REFERENCE_CANDIDATE | PATCH_GEOMETRY_READY | C3 |
+| 6 | CTB_2024_02_18_20 | C3_STRONG_REFERENCE_CANDIDATE | PATCH_GEOMETRY_READY | C3 |
+| 7 | REC_2023_02_05_06 | C3_STRONG_REFERENCE_CANDIDATE | PATCH_GEOMETRY_READY | C3\|strong_spatial_anchor |
+| 8 | PET_2022_03_20_21 | C2_DOCUMENTED_OBSERVED_EVENT | EVENT_AND_PATCH_GEOMETRY_READY | EVENT_AND_PATCH_GEOMETRY_READY\|strong_spatial_anchor |
+| 9 | PET_2024_03_21_28 | C1_CONTEXTUAL_OBSERVED_EVENT | PATCH_GEOMETRY_READY | lower_priority_geometry_collection |

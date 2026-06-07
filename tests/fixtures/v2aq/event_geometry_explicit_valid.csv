@@ -1,0 +1,2 @@
+event_geometry_id,candidate_id,geometry_status,geometry_source_type,explicit_geometry_geojson,can_use_for_ground_truth,manual_digitization_required
+EG_ok,X,EXPLICIT_POINT_OR_COORDINATE_AVAILABLE,explicit_coordinate,"{""type"": ""Point"", ""coordinates"": [-34.9, -8.05]}",false,false

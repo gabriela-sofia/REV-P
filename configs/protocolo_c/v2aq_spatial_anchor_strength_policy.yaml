@@ -1,0 +1,12 @@
+stage: v2aq
+component: spatial_anchor_strength
+anchor_specificity:
+  ponto_de_alagamento: 4
+  rua: 4
+  mapa_ou_laudo: 4
+  area_tecnica: 4
+  corredor_de_rio: 2
+  bairro: 2
+  municipio: 1
+geometry_derivation_allowed_min_specificity: 4
+broad_anchor_requires_manual_digitization: true

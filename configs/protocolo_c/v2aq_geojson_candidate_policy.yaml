@@ -1,0 +1,6 @@
+stage: v2aq
+component: geojson_candidate_exporter
+real_geometry_requires_explicit_source: true
+null_geometry_when_no_explicit_source: true
+invent_coordinate: false
+feature_properties: [candidate_id, region, geometry_status, source_artifact, manual_digitization_required, not_ground_truth, not_label, patch_truth_allowed]

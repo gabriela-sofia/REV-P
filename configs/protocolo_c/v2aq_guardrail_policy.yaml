@@ -1,0 +1,24 @@
+stage: v2aq
+component: guardrail_regression
+fail_closed: true
+scope: v2aq_outputs_docs_and_geojson_only
+forbidden_kv_markers:
+  - ground_truth=true
+  - ground_reference=true
+  - label=true
+  - training=true
+  - overlay=true
+  - prediction=true
+  - protocol_b_open=true
+  - protocol_b_reopen=true
+  - sentinel_date_inferred=true
+  - crosswalk_inferred=true
+  - geometry_inferred=true
+  - operational_validation=true
+  - promotion_allowed=true
+  - can_create_ground_truth=true
+  - can_create_label=true
+  - raw_data_versioned=true
+  - patch_truth_allowed=true
+forbid_absolute_paths_in_content: true
+forbid_local_only: true

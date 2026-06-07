@@ -1,0 +1,2 @@
+event_geometry_id,candidate_id,geometry_status,geometry_source_type,explicit_geometry_geojson,can_use_for_ground_truth,manual_digitization_required
+EG_null,X,OFFICIAL_MAP_DIGITIZATION_REQUIRED,official_map_documented,,false,true

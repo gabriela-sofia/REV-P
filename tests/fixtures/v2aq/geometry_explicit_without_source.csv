@@ -1,0 +1,2 @@
+event_geometry_id,candidate_id,geometry_status,geometry_source_type
+EG_bad,X,EXPLICIT_EVENT_GEOMETRY_AVAILABLE,textual_anchor

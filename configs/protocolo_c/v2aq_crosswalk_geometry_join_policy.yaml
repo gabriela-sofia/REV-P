@@ -1,0 +1,4 @@
+stage: v2aq
+component: crosswalk_geometry_join
+patch_level_review_ready_requires: [event_geometry_candidate, patch_geometry, crosswalk_candidate]
+patch_truth_allowed: false

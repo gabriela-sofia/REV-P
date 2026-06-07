@@ -1,0 +1,19 @@
+{
+  "features": [
+    {
+      "geometry": null,
+      "properties": {
+        "candidate_id": "CTB_2022_01_15_16",
+        "geometry_status": "TEXTUAL_ANCHOR_ONLY",
+        "manual_digitization_required": "true",
+        "not_ground_truth": true,
+        "not_label": true,
+        "patch_truth_allowed": false,
+        "region": "Curitiba",
+        "source_artifact": "datasets/protocolo_c/v2an_spatial_anchor_registry.csv"
+      },
+      "type": "Feature"
+    }
+  ],
+  "type": "FeatureCollection"
+}

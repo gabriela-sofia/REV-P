@@ -1,0 +1,8 @@
+stage: v2aq
+component: patch_reference_candidate_scorer
+weights: {event_geometry: 40, patch_geometry: 25, sentinel_crosswalk: 25, source_trace: 10}
+bands: {HIGH: ">=70", MEDIUM: "40-69", LOW: "<40"}
+always:
+  can_create_ground_truth: false
+  can_create_label: false
+  protocol_b_status: BLOCKED

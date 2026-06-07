@@ -1,0 +1,5 @@
+stage: v2aq
+component: manual_digitization_tasks
+do_not_infer: true
+tasks: [open_official_map, digitize_affected_sector, register_crs, save_external_geojson, verify_license, do_not_infer_from_patch]
+version_raw_data: false

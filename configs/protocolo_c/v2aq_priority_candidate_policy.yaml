@@ -1,0 +1,5 @@
+stage: v2aq
+component: priority_candidate
+source_stage: v2ap
+prioritize: [C4, C3, EVENT_AND_PATCH_GEOMETRY_READY, explicit_crosswalk, strong_spatial_anchor]
+include_all: true

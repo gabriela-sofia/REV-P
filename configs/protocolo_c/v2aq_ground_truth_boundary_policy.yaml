@@ -1,0 +1,5 @@
+stage: v2aq
+component: ground_truth_boundary_audit
+ground_truth_blocked: true
+label_blocked: true
+protocol_b_blocked: true

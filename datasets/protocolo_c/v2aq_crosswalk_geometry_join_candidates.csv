@@ -1,0 +1,10 @@
+join_id,candidate_id,region,event_geometry_id,patch_id,crosswalk_candidate_id,has_event_geometry_candidate,has_patch_geometry,has_crosswalk_candidate,join_status,patch_level_review_ready,patch_truth_allowed,blocking_reason
+JN_v2aq_PET_2022_02_15,PET_2022_02_15,Petropolis,EG_v2aq_PET_2022_02_15,,none,true,true,false,NEEDS_SENTINEL_CROSSWALK,false,false,Sem crosswalk Sentinel candidato; nao inferir por similaridade visual.
+JN_v2aq_REC_2022_05_24_30,REC_2022_05_24_30,Recife,EG_v2aq_REC_2022_05_24_30,REC_PATCH_WITH_DATE,present:1,false,true,true,NEEDS_EVENT_GEOMETRY,false,false,Geometria de evento usavel ausente (digitalizar mapa/ponto oficial).
+JN_v2aq_REC_2024_06_14_16,REC_2024_06_14_16,Recife,EG_v2aq_REC_2024_06_14_16,,none,false,true,false,NEEDS_EVENT_GEOMETRY,false,false,Geometria de evento usavel ausente (digitalizar mapa/ponto oficial).
+JN_v2aq_CTB_2023_10_28_30,CTB_2023_10_28_30,Curitiba,EG_v2aq_CTB_2023_10_28_30,,none,true,true,false,NEEDS_SENTINEL_CROSSWALK,false,false,Sem crosswalk Sentinel candidato; nao inferir por similaridade visual.
+JN_v2aq_CTB_2022_01_15_16,CTB_2022_01_15_16,Curitiba,EG_v2aq_CTB_2022_01_15_16,,none,false,true,false,NEEDS_EVENT_GEOMETRY,false,false,Geometria de evento usavel ausente (digitalizar mapa/ponto oficial).
+JN_v2aq_CTB_2024_02_18_20,CTB_2024_02_18_20,Curitiba,EG_v2aq_CTB_2024_02_18_20,,none,false,true,false,NEEDS_EVENT_GEOMETRY,false,false,Geometria de evento usavel ausente (digitalizar mapa/ponto oficial).
+JN_v2aq_REC_2023_02_05_06,REC_2023_02_05_06,Recife,EG_v2aq_REC_2023_02_05_06,,none,true,true,false,NEEDS_SENTINEL_CROSSWALK,false,false,Sem crosswalk Sentinel candidato; nao inferir por similaridade visual.
+JN_v2aq_PET_2022_03_20_21,PET_2022_03_20_21,Petropolis,EG_v2aq_PET_2022_03_20_21,,none,true,true,false,NEEDS_SENTINEL_CROSSWALK,false,false,Sem crosswalk Sentinel candidato; nao inferir por similaridade visual.
+JN_v2aq_PET_2024_03_21_28,PET_2024_03_21_28,Petropolis,EG_v2aq_PET_2024_03_21_28,,none,false,true,false,NEEDS_EVENT_GEOMETRY,false,false,Geometria de evento usavel ausente (digitalizar mapa/ponto oficial).
