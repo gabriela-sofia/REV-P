@@ -1,0 +1,8 @@
+stage: v2ap
+component: sentinel_asset_inventory
+scan_subdirs: [datasets, outputs, data, docs, scripts]
+heavy_extensions_excluded: [.tif, .tiff, .geotiff, .npz, .npy, .zip, .tar, .gz]
+open_raw_data: false
+allowed_date_methods: [manifest_field_explicit, filename_date_explicit, metadata_field_explicit]
+forbidden_date_methods: [visual_similarity, dino_similarity, manual_guess, temporal_guess]
+dino_usable_as_crosswalk_evidence: false

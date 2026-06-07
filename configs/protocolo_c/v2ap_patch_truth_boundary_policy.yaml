@@ -1,0 +1,5 @@
+stage: v2ap
+component: patch_truth_boundary_update
+patch_truth_allowed: false
+even_if_all_explicit_only: READY_FOR_EXTERNAL_VALIDATION
+never_ground_truth: true

@@ -1,0 +1,5 @@
+stage: v2ap
+component: patch_registry_inventory
+inventory_by_header_columns_only: true
+geometry_columns: [geometry, geom, wkt, geojson, latitude, longitude, bbox, bounds, centroid, crs]
+invent_geometry: false

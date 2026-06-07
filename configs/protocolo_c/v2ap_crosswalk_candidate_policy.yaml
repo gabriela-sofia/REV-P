@@ -1,0 +1,5 @@
+stage: v2ap
+component: sentinel_crosswalk_candidates
+explicit_crosswalk_requires: [region_match, explicit_asset_date, asset_or_patch, manifest_or_filename_or_metadata_source]
+forbid_visual_or_dino_inference: true
+apply_to_ground_truth: false

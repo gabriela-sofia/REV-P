@@ -1,0 +1,4 @@
+stage: v2ap
+component: crosswalk_collection_packet
+missing_components: [asset_date, patch_id, manifest_link, region_match, patch_geometry, event_geometry]
+do_not_infer: true

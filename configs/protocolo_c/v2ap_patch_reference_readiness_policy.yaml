@@ -1,0 +1,8 @@
+stage: v2ap
+component: patch_reference_readiness_scorer
+weights: {geometry: 40, crosswalk: 40, patch_registry: 20}
+bands: {HIGH: ">=70", MEDIUM: "40-69", LOW: "<40"}
+always:
+  can_create_ground_truth: false
+  can_create_label: false
+  protocol_b_status: BLOCKED

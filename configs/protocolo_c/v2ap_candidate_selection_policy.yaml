@@ -1,0 +1,7 @@
+stage: v2ap
+component: candidate_selection
+source_stage: v2ao
+high_priority_levels: [C4_READY_FOR_EXTERNAL_VALIDATION_REVIEW, C3_STRONG_REFERENCE_CANDIDATE]
+low_priority_marker: LOW_PRIORITY_GEOMETRY_COLLECTION
+exclude_weak_candidates: false
+forbidden_use: ground_truth|label|training|overlay|prediction|protocol_b_reopen

@@ -1,0 +1,67 @@
+# v2ap - inventario de patch registries
+
+Registries de patch inventariados: 82; com colunas de geometria: 2.
+Inventario por colunas de header apenas; nenhuma geometria inventada.
+
+| registry_item_id | source_file | has_geometry | has_bbox | geometry_status |
+| --- | --- | --- | --- | --- |
+| PR_v2ap_0000 | datasets/contextual_reference_layer_registry.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0001 | datasets/dino_embedding_feature_store_registry_v1ph.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0002 | datasets/dino_patch_visual_asset_inventory_v1pn.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0003 | datasets/dino_patch_visual_linkage_registry_v1pv.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0004 | datasets/event_patch_linking_preflight_registry.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0005 | datasets/event_patch_screening_scope.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0006 | datasets/full_feature_negative_phrase_candidate_registry.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0007 | datasets/inventory_aoi_feature_level_recheck_registry.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0008 | datasets/official_anchor_dino_embedding_readiness_registry.c | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0009 | datasets/official_anchor_patch_footprint_audit.csv | true | false | HAS_GEOMETRY_COLUMNS |
+| PR_v2ap_0010 | datasets/official_anchor_sentinel_patch_quality_registry.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0011 | datasets/official_anchor_sentinel_patch_registry.csv | true | false | HAS_GEOMETRY_COLUMNS |
+| PR_v2ap_0012 | datasets/official_evidence_phrase_table_registry.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0013 | datasets/official_structured_feature_evidence_registry.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0014 | datasets/patch_event_reference_link_registry.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0015 | datasets/protocol_c_event_patch_review_sample_v1qv.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0016 | datasets/protocol_c_event_patch_review_sampling_frame_v1qv.c | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0017 | datasets/protocol_c_external_event_patch_link_candidates_v1r | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0018 | datasets/protocol_c_ground_reference_adjudication_registry_v | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0019 | datasets/recife_c3_plus_candidate_adjudication_registry.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0020 | datasets/recife_event_patch_linkage_registry_v1ox.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0021 | datasets/recife_event_patch_temporal_adjudication_v3_v1op.cs | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0022 | datasets/recife_event_patch_temporal_match_registry.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0023 | datasets/recife_event_patch_temporal_priority_queue.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0024 | datasets/recife_event_patch_temporal_rematch_registry.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0025 | datasets/recife_event_patch_temporal_rematch_v2_registry.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0026 | datasets/recife_event_patch_temporal_review_queue_v2.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0027 | datasets/recife_event_patch_temporal_unlocked_queue.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0028 | datasets/recife_official_candidate_patch_linkage_registry.cs | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0029 | datasets/recife_patch_provenance_graph_registry.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0030 | datasets/recife_patch_scene_date_adjudication_v2.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0031 | datasets/recife_patch_scene_date_confirmed_registry.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0032 | datasets/recife_patch_scene_date_resolved_v3_v1oo.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0033 | datasets/recife_patch_scene_date_unresolved_registry.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0034 | datasets/recife_sentinel_filename_date_conflict_registry.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0035 | datasets/recife_sentinel_filename_date_parse_registry.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0036 | datasets/recife_sentinel_metadata_date_conflict_registry.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0037 | datasets/recife_sentinel_metadata_date_recovery_registry.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0038 | datasets/recife_sentinel_patch_temporal_inventory.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0039 | datasets/recife_sentinel_product_date_resolution_registry.cs | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0040 | datasets/recife_sentinel_scene_date_adjudication_registry.cs | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0041 | datasets/reference_promotion_decision_registry.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0042 | datasets/review_gate_reference_registry.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0043 | datasets/protocolo_c/event_patch_evidence_package_registry.c | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0044 | datasets/protocolo_c/v1uf_station_evidence_integrity_registr | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0045 | datasets/protocolo_c/v1uf_station_series_asset_registry.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0046 | datasets/protocolo_c/v1uh_crs_geometry_quality_audit.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0047 | datasets/protocolo_c/v1uh_event_field_mapping_registry.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0048 | datasets/protocolo_c/v1uh_observed_geometry_candidate_regist | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0049 | datasets/protocolo_c/v1uk_recife_asset_schema_registry.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0050 | datasets/protocolo_c/v1uk_recife_candidate_row_registry.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0051 | datasets/protocolo_c/v1uk_recife_event_window_match_registry | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0052 | datasets/protocolo_c/v1uk_recife_field_semantics_registry.cs | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0053 | datasets/protocolo_c/v1um_recife_locality_candidate_sample_r | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0054 | datasets/protocolo_c/v1uo_event_patch_package_prebuild_regis | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0055 | datasets/protocolo_c/v1up_petropolis_observed_geometry_candi | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0056 | datasets/protocolo_c/v1up_petropolis_phenomenon_separation_r | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0057 | datasets/protocolo_c/v1uq_petropolis_page_level_evidence_reg | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0058 | datasets/protocolo_c/v1uq_petropolis_pdf_text_extraction_reg | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |
+| PR_v2ap_0059 | datasets/protocolo_c/v1us_event_patch_candidate_registry.csv | false | false | NO_GEOMETRY_COLUMNS_BLOCKER |

@@ -1,0 +1,5 @@
+stage: v2ap
+component: geometry_collection_packet
+priority_order: [C4, C3, specific_spatial_anchor]
+do_not_infer: true
+recommended_sources: [Defesa Civil, DRM, Prefeitura, laudo tecnico publico]

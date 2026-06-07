@@ -1,0 +1,6 @@
+stage: v2ap
+component: temporal_window
+margin_days: 8
+margin_is_policy_not_truth: true
+select_asset: false
+infer_sentinel_date: false

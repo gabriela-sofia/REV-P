@@ -1,0 +1,4 @@
+stage: v2ap
+component: patch_event_link_readiness
+patch_truth_allowed: false
+patch_level_reference_candidate_requires: [event_geometry, patch_geometry, explicit_sentinel_crosswalk]

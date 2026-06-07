@@ -1,0 +1,6 @@
+stage: v2ap
+component: spatial_geometry_readiness
+statuses: [EVENT_GEOMETRY_READY, PATCH_GEOMETRY_READY, EVENT_AND_PATCH_GEOMETRY_READY, ANCHOR_ONLY_NEEDS_GEOMETRY, INSUFFICIENT_SPATIAL_EVIDENCE]
+invent_coordinate: false
+invent_geometry: false
+execute_overlay: false

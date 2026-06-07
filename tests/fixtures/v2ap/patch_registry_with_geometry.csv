@@ -1,0 +1,2 @@
+patch_id,region,latitude,longitude,crs,bbox
+PET_00016,PET,-22.5,-43.1,EPSG:4326,"-43.2,-22.6,-43.0,-22.4"

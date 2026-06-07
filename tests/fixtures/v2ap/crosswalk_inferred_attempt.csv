@@ -1,0 +1,2 @@
+crosswalk_candidate_id,candidate_id,can_be_used_as_explicit_crosswalk,crosswalk_evidence_type
+CC_bad,X,true,dino_similarity

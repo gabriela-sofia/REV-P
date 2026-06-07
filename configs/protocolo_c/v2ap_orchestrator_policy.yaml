@@ -1,0 +1,19 @@
+stage: v2ap
+component: master_orchestrator
+fail_fast: true
+git_operations: false
+order:
+  - candidate_selection
+  - sentinel_asset_inventory
+  - patch_registry_inventory
+  - spatial_geometry_readiness
+  - temporal_window
+  - sentinel_crosswalk_candidates
+  - patch_event_link_readiness
+  - geometry_collection_packet
+  - crosswalk_collection_packet
+  - patch_reference_readiness_scorer
+  - patch_truth_boundary_update
+  - guardrail_regression
+  - next_action_ranker
+  - completion_report

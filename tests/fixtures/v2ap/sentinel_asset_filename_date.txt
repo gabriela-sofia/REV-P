@@ -1,0 +1,1 @@
+sentinel2_2022-05-26_REC_scene.txt placeholder (no raw data)

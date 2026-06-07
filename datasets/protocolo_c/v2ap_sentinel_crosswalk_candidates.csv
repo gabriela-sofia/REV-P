@@ -1,0 +1,10 @@
+crosswalk_candidate_id,candidate_id,region,asset_id,patch_id_detected,asset_date,event_date_start,event_date_end,within_temporal_window,region_match,patch_id_match,crosswalk_evidence_type,crosswalk_candidate_status,can_be_used_as_explicit_crosswalk,blocking_reason
+CC_v2ap_00000,PET_2022_02_15,Petropolis,,,,2022-02-15,2022-02-16,false,false,false,none,NO_SENTINEL_ASSET_IN_WINDOW,false,Nenhum asset Sentinel com data explicita na janela; crosswalk nao inferido.
+CC_v2ap_00001,REC_2022_05_24_30,Recife,SA_v2ap_00089,REC_PATCH_WITH_DATE,2022-05-25,2022-05-24,2022-05-30,true,true,true,manifest_field_explicit,EXPLICIT_CROSSWALK_CANDIDATE,true,
+CC_v2ap_00002,REC_2024_06_14_16,Recife,,,,2024-06-14,2024-06-16,false,false,false,none,NO_SENTINEL_ASSET_IN_WINDOW,false,Nenhum asset Sentinel com data explicita na janela; crosswalk nao inferido.
+CC_v2ap_00003,CTB_2023_10_28_30,Curitiba,,,,2023-10-28,2023-10-30,false,false,false,none,NO_SENTINEL_ASSET_IN_WINDOW,false,Nenhum asset Sentinel com data explicita na janela; crosswalk nao inferido.
+CC_v2ap_00004,CTB_2022_01_15_16,Curitiba,,,,2022-01-15,2022-01-16,false,false,false,none,NO_SENTINEL_ASSET_IN_WINDOW,false,Nenhum asset Sentinel com data explicita na janela; crosswalk nao inferido.
+CC_v2ap_00005,CTB_2024_02_18_20,Curitiba,,,,2024-02-18,2024-02-20,false,false,false,none,NO_SENTINEL_ASSET_IN_WINDOW,false,Nenhum asset Sentinel com data explicita na janela; crosswalk nao inferido.
+CC_v2ap_00006,REC_2023_02_05_06,Recife,,,,2023-02-05,2023-02-06,false,false,false,none,NO_SENTINEL_ASSET_IN_WINDOW,false,Nenhum asset Sentinel com data explicita na janela; crosswalk nao inferido.
+CC_v2ap_00007,PET_2022_03_20_21,Petropolis,,,,2022-03-20,2022-03-21,false,false,false,none,NO_SENTINEL_ASSET_IN_WINDOW,false,Nenhum asset Sentinel com data explicita na janela; crosswalk nao inferido.
+CC_v2ap_00008,PET_2024_03_21_28,Petropolis,,,,2024-03-21,2024-03-28,false,false,false,none,NO_SENTINEL_ASSET_IN_WINDOW,false,Nenhum asset Sentinel com data explicita na janela; crosswalk nao inferido.
