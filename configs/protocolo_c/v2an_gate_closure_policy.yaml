@@ -1,0 +1,4 @@
+stage: v2an
+component: gate_closure_matrix
+gates: [G1, G2, G3, G4, G4B, G5, G6, G7, G8, G9]
+g9_status: BLOCKED_PENDING_HUMAN_REVIEW

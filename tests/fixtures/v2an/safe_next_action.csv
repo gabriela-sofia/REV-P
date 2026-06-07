@@ -1,0 +1,2 @@
+rank,next_action,allowed
+1,EXECUTE_HUMAN_GROUND_REFERENCE_REVIEW,true

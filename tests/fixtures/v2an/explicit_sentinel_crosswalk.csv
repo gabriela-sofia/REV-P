@@ -1,0 +1,2 @@
+crosswalk_audit_id,candidate_id,explicit_crosswalk_found,sentinel_asset_id_found,temporal_gate_status
+TX_x,REC_2022_05_24_30,true,S2_DUMMY,CLOSED_EXPLICIT_CROSSWALK

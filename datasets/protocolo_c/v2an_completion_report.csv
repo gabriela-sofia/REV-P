@@ -1,0 +1,15 @@
+completion_id,metric,value,status,notes
+CR_v2an_000,inputs_read,4,RECORDED,candidate/gap/decision/manual registries.
+CR_v2an_001,candidates_normalized,9,PASS,Exactly 9 expected.
+CR_v2an_002,sources_probed,16,RECORDED,raw_data_versioned=false.
+CR_v2an_003,metadata_records,14,RECORDED,Light metadata only.
+CR_v2an_004,spatial_anchors,25,RECORDED,No invented coordinates.
+CR_v2an_005,sentinel_crosswalks_closed,0,RECORDED,No Sentinel date inferred.
+CR_v2an_006,patch_link_overlay_ready,0,GUARDRAIL_OK,overlay never executed.
+CR_v2an_007,total_closed_gates,72,RECORDED,G9 stays blocked for all.
+CR_v2an_008,candidates_can_enter_human_review,8,RECORDED,Strong candidates separated from blocked.
+CR_v2an_009,candidates_advancing,8,RECORDED,ADVANCES_TO_HUMAN_GROUND_REFERENCE_REVIEW.
+CR_v2an_010,ground_truth_blocked,9,PASS,All blocked.
+CR_v2an_011,guardrail_regression_failures,0,PASS,Fail-closed.
+CR_v2an_012,next_action_rank_1,EXECUTE_HUMAN_GROUND_REFERENCE_REVIEW,SAFE_NEXT_ACTION,Depends on advancing candidates.
+CR_v2an_013,final_decision,observational_validation_sprint_done_no_operational_ground_truth,NO_OPERATIONAL_GROUND_TRUTH,Protocol B blocked; review-only.

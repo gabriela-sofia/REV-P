@@ -1,0 +1,7 @@
+stage: v2an
+component: ground_reference_readiness_scorer
+bands: {HIGH: ">=70", MEDIUM: "45-69", LOW: "<45"}
+can_enter_threshold: 65
+can_create_ground_truth: false
+can_create_label: false
+protocol_b_status: BLOCKED

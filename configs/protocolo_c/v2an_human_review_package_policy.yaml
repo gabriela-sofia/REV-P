@@ -1,0 +1,5 @@
+stage: v2an
+component: human_ground_reference_review_package
+review_status: PENDING_HUMAN_REVIEW
+simulate_response: false
+only_candidates_that_can_enter: true

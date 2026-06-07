@@ -1,0 +1,6 @@
+stage: v2an
+component: temporal_sentinel_crosswalk_audit
+infer_sentinel_date: false
+use_dino: false
+require_explicit_crosswalk: true
+on_missing: BLOCKED_NO_EXPLICIT_SENTINEL_CROSSWALK

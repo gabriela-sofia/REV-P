@@ -1,0 +1,4 @@
+stage: v2an
+component: ground_truth_blocker_audit
+ground_truth_blocked: true
+blockers: [patch_level_geometry, event_geometry, explicit_sentinel_crosswalk, human_review, adjudication, license_review, phenomenon_ambiguity]

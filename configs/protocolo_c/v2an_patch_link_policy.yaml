@@ -1,0 +1,5 @@
+stage: v2an
+component: patch_link_readiness_audit
+overlay_ready_requires: [explicit_event_geometry, patch_geometry_available]
+execute_overlay: false
+manual_patch_review_required: true

@@ -1,0 +1,9 @@
+stage: v2an
+component: source_access_probe
+network_enabled_env: V2AN_NETWORK
+default_offline: true
+methods: [HEAD, light_GET]
+timeout_seconds: 8
+raw_data_downloaded: false
+raw_data_versioned: false
+on_network_unavailable: NETWORK_UNAVAILABLE_OR_SKIPPED

@@ -1,0 +1,2 @@
+probe_id,candidate_id,access_status,raw_data_downloaded,raw_data_versioned
+PRB_off,REC_2022_05_24_30,NETWORK_UNAVAILABLE_OR_SKIPPED,false,false

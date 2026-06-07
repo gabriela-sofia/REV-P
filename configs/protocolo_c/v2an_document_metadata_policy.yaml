@@ -1,0 +1,6 @@
+stage: v2an
+component: document_metadata_extractor
+extract: [title, description, published_date, short_fragments]
+fragment_max_chars: 140
+copy_long_text: false
+save_raw_pdf: false

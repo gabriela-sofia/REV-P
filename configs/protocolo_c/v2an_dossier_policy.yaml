@@ -1,0 +1,5 @@
+stage: v2an
+component: candidate_dossier_builder
+one_dossier_per_candidate: true
+ground_truth_status: NOT_ESTABLISHED
+sections: [identificacao, fontes, datas, ancoras_espaciais, gates, blockers, readiness, decisao, falta_para_ground_reference, continua_proibido]

@@ -1,0 +1,7 @@
+stage: v2an
+component: spatial_anchor_extractor
+anchor_types: [municipio, bairro, rua, corredor_de_rio, area_tecnica, mapa_ou_laudo, ponto_de_alagamento]
+auto_geocode: false
+invent_coordinate: false
+create_overlay: false
+manual_geometry_review_required: true

@@ -1,0 +1,20 @@
+stage: v2an
+component: master_orchestrator
+fail_fast: true
+git_operations: false
+order:
+  - candidate_inventory_normalizer
+  - source_access_probe
+  - document_metadata_extractor
+  - spatial_anchor_extractor
+  - temporal_sentinel_crosswalk_audit
+  - patch_link_readiness_audit
+  - gate_closure_matrix
+  - readiness_scorer
+  - candidate_dossier_builder
+  - human_review_package
+  - validation_decision_registry
+  - ground_truth_blocker_audit
+  - guardrail_regression
+  - next_action_ranker
+  - completion_report
