@@ -1,175 +1,179 @@
-﻿# REV-P
+# REV-P
 
-## VisÃ£o geral
+[![Status](https://img.shields.io/badge/Status-Em_Desenvolvimento_/_Auditoria-orange.svg)](https://github.com/gabriela-sofia/REV-P)
+[![Mode](https://img.shields.io/badge/Mode-Review__Only-blue.svg)](https://github.com/gabriela-sofia/REV-P)
+[![Python](https://img.shields.io/badge/Python-3.x-3776AB.svg)](https://www.python.org/)
 
-O REV-P Ã© um protocolo auditÃ¡vel para organizar e inspecionar evidÃªncias fÃ­sico-ambientais, geoespaciais e visuais sobre patches urbanos associados a suscetibilidade a inundaÃ§Ã£o e alagamento. O repositÃ³rio concentra manifests, scripts, testes e documentaÃ§Ã£o tÃ©cnica do pipeline DINO Sentinel-first.
+O **REV-P** é um pipeline auditável para organizar, validar e inspecionar evidências territoriais, geoespaciais e visuais associadas à suscetibilidade urbana a inundações e alagamentos.
 
-## Escopo cientÃ­fico
+O projeto combina imagens Sentinel, embeddings DINO, proxies GIS e documentação metodológica para apoiar revisão humana antes de qualquer etapa preditiva. Seu foco é construir uma base rastreável de evidências, com governança explícita de fontes, limites e critérios de validação.
 
-O projeto estÃ¡ em estÃ¡gio de revisÃ£o e auditoria estrutural. NÃ£o hÃ¡ classificaÃ§Ã£o supervisionada de suscetibilidade, rÃ³tulos binÃ¡rios de enchente observada, alvos de treinamento ou afirmaÃ§Ãµes preditivas.
+---
 
-O DINO Ã© usado exclusivamente como encoder visual congelado para extraÃ§Ã£o de caracterÃ­sticas estruturais de patches Sentinel. O Ã­ndice GIS (v1gqâ€“v1gt) Ã© um proxy interpretÃ¡vel para comparaÃ§Ã£o e triagem â€” nÃ£o Ã© verdade de campo nem alvo supervisionado.
+## 🎯 Por que este projeto existe
 
-## Estrutura do repositÃ³rio
+Pesquisas aplicadas a risco urbano frequentemente dependem de bases heterogêneas, incompletas ou difíceis de validar em escala local. O REV-P nasce para organizar essa etapa anterior à modelagem: a auditoria das evidências.
 
+Em vez de partir diretamente para classificação ou predição, o projeto estrutura um fluxo de validação que permite responder:
+
+* quais patches territoriais existem;
+* quais imagens Sentinel estão associadas a eles;
+* quais evidências externas apoiam a interpretação físico-ambiental;
+* quais fontes são rastreáveis;
+* quais lacunas ainda impedem validação operacional;
+* quais dados podem ser usados apenas como suporte contextual.
+
+---
+
+## ⚙️ O que o REV-P faz
+
+O pipeline atualmente executa quatro funções principais:
+
+* **Organização do corpus territorial:** estrutura patches urbanos de Recife, Petrópolis e Curitiba, preservando sua linhagem espacial.
+* **Extração visual Sentinel-first:** usa DINO como encoder visual congelado para extrair embeddings estruturais de imagens Sentinel.
+* **Análise estrutural dos patches:** aplica PCA, clustering, vizinhos próximos e detecção de outliers para inspecionar padrões visuais do corpus.
+* **Validação contextual auditável:** usa Protocolo C, registries e proxies GIS para documentar fontes, lacunas, critérios de elegibilidade e limites de interpretação.
+
+O REV-P não é apenas um conjunto de scripts. Ele funciona como uma camada de governança científica para impedir que evidências contextuais sejam confundidas com rótulos operacionais.
+
+---
+
+## 🗺️ Corpus Atual
+
+O corpus consolidado reúne **59 patches urbanos** distribuídos em três regiões brasileiras:
+
+| Região | Patches | Assets Sentinel candidatos |
+| :--- | :---: | :---: |
+| Recife | 18 | 37 |
+| Petrópolis | 27 | 48 |
+| Curitiba | 14 | 43 |
+| **Total** | **59** | **128** |
+
+Os patches representam unidades territoriais/contextuais. Os assets Sentinel representam imagens candidatas associadas ao pipeline de análise visual.
+
+---
+
+## 🧬 Trilha DINO Sentinel-first
+
+O pipeline segue uma trilha sequencial, documentada por identificadores de estado metodológico:
+
+```text
+[v1fu] Manifesto Sentinel
+   └──> [v1fv] Preflight Local
+            └──> [v1fx] Execução Smoke (Embeddings)
+                     └──> [v1fy–v1gi] Análise Estrutural
+                              └──> [v1gn–v1gp] Auditorias Operacionais
+                                       └──> [v1gq–v1gt] Auditorias GIS
 ```
-configs/          ConfiguraÃ§Ãµes de exemplo (parÃ¢metros de extraÃ§Ã£o DINO)
-manifests/        Manifests CSV/JSON auditÃ¡veis de patches, preflight e validaÃ§Ã£o
-scripts/          Scripts do pipeline (trilha DINO e preparaÃ§Ã£o de treinamento)
-tests/            Testes automatizados de cada estÃ¡gio do pipeline
-docs/             Protocolo tÃ©cnico, registro de comandos e estado metodolÃ³gico
-requirements.txt  DependÃªncias Python do projeto
+
+1. **Manifesto Sentinel:** inventário inicial dos assets Sentinel elegíveis.
+2. **Preflight local:** checagem de integridade e disponibilidade dos arquivos no workspace privado.
+3. **Execução smoke:** leitura real de pixels e extração local de embeddings DINO.
+4. **Análise estrutural:** PCA, clustering, vizinhos próximos, outliers e proveniência.
+5. **Auditorias operacionais:** verificação de saúde do pipeline e prontidão de execução.
+6. **Auditorias GIS:** cruzamento multicritério com evidências territoriais externas.
+
+---
+
+## 📂 Estrutura do Repositório
+
+```text
+REV-P/
+├── configs/          # Parâmetros e configurações do pipeline
+├── datasets/         # Registries CSV/JSON de corpus, evidências e auditorias
+├── docs/             # Documentação técnica e metodológica
+├── manifests/        # Manifests auditáveis de patches, preflight e validação
+├── scripts/          # Scripts de extração, análise e orquestração
+├── tests/            # Testes automatizados do pipeline
+└── requirements.txt  # Dependências Python
 ```
 
-## O que nÃ£o estÃ¡ versionado
+---
 
-Dados brutos, GeoTIFFs, shapefiles, GeoJSONs convertidos, embeddings `.npz`, outputs locais em `local_runs/`, caches, modelos pesados e arquivos locais de desenvolvimento nÃ£o sÃ£o versionados nem enviados ao repositÃ³rio pÃºblico.
+## 🧪 Execução Local Básica
 
-## Linhagem dos patches
+Para preparar o ambiente local:
 
-Os patches sÃ£o recortes territoriais prÃ©-existentes sobre Ã¡reas urbanas de Curitiba (14), PetrÃ³polis (27) e Recife (18), com bounding boxes originadas de bases externas anteriores ao pipeline DINO. O DINO opera sobre imagens Sentinel associadas a esses patches â€” nÃ£o define nem requalifica os limites territoriais.
+```bash
+python -m venv .venv
+source .venv/bin/activate  # Linux/macOS
+pip install -r requirements.txt
+```
 
-Detalhes em [docs/patch_lineage_and_grounding.md](docs/patch_lineage_and_grounding.md).
+Os scripts principais ficam em [`scripts/`](./scripts/) e os testes automatizados ficam em [`tests/`](./tests/).
 
-## Taxonomia de contagens
+> A reprodução integral depende dos dados locais esperados pelo pipeline. Os arquivos pesados não são versionados no GitHub.
 
-O corpus territorial consolidado tem 59 patches: Recife 18, PetrÃ³polis 27 e Curitiba 14. O manifesto Sentinel-first tem 128 assets candidatos: Recife 37, PetrÃ³polis 48 e Curitiba 43. Esses nÃºmeros nÃ£o sÃ£o concorrentes: 59 conta unidades territoriais/contextuais; 128 conta referÃªncias Sentinel candidatas para o pipeline.
+---
 
-A taxonomia formal fica em [`datasets/patch_corpus_taxonomy_registry.csv`](datasets/patch_corpus_taxonomy_registry.csv) e na metodologia v1iw. Nenhuma dessas camadas cria label, target ou ground truth operacional.
+## 📦 O que não está versionado
 
-## Trilha DINO Sentinel-first
+Por controle de tamanho, licenciamento e segurança operacional, o repositório público não versiona:
 
-O pipeline segue a ordem:
+* GeoTIFFs brutos;
+* shapefiles e GeoJSONs pesados;
+* embeddings `.npz`;
+* caches locais;
+* modelos pesados;
+* outputs de execução;
+* arquivos intermediários gerados em `local_runs/`.
 
-1. Manifesto Sentinel (v1fu) â€” inventÃ¡rio de 128 TIFs Sentinel elegÃ­veis nas trÃªs regiÃµes
-2. Preflight local (v1fv) â€” verificaÃ§Ã£o de quais referÃªncias sÃ£o acessÃ­veis no workspace privado
-3. ExecuÃ§Ã£o smoke de embeddings (v1fx) â€” leitura real de pixels, extraÃ§Ã£o local
-4. AnÃ¡lise estrutural (v1fyâ€“v1gi) â€” PCA, clustering, vizinhos, outliers, proveniÃªncia
-5. Auditorias operacionais (v1gnâ€“v1gp) â€” saÃºde, orquestraÃ§Ã£o, prontidÃ£o para release
-6. Auditorias GIS (v1gqâ€“v1gt) â€” baseline multicritÃ©rio, uso do solo, cobertura de fontes
+O GitHub mantém apenas os artefatos leves e auditáveis: código, configurações, manifests, registries, documentação e testes.
 
-Todos os outputs de execuÃ§Ã£o ficam exclusivamente em `local_runs/`.
+---
 
-## Travas metodolÃ³gicas
+## 🔍 Protocolo C
 
-- Sem labels ou targets supervisionados
-- Sem treinamento supervisionado
-- Sem afirmaÃ§Ãµes preditivas de vulnerabilidade
-- Sem ativaÃ§Ã£o multimodal (em espera)
-- Ãndice GIS nÃ£o Ã© ground truth
-- DINO nÃ£o prediz vulnerabilidade
-- `review_only=true`
+O **Protocolo C** é a camada de governança do REV-P. Ele organiza evidências externas, fontes documentais, critérios de elegibilidade e lacunas de validação antes que qualquer dado seja usado como referência observacional.
 
-## Datasets auditÃ¡veis e artefatos de pesquisa
+A função do Protocolo C é separar:
 
-O projeto produziu manifests pÃºblicos, registros de corpus e documentaÃ§Ã£o de
-evidÃªncias externas sem versionar dados pesados (rasters, embeddings, shapefiles).
+* evidência contextual;
+* suporte territorial;
+* registro observacional candidato;
+* lacuna metodológica;
+* referência que ainda exige validação humana.
 
-- [`datasets/`](datasets/) â€” registros estruturados de datasets, corpora e evidÃªncias externas
-- [`datasets/dataset_registry.csv`](datasets/dataset_registry.csv) â€” inventÃ¡rio geral de artefatos
-- [`datasets/patch_corpus_registry.csv`](datasets/patch_corpus_registry.csv) â€” corpora de patches por estÃ¡gio
-- [`datasets/external_evidence_registry.csv`](datasets/external_evidence_registry.csv) â€” evidÃªncias GIS por regiÃ£o
-- [`datasets/contextual_reference_layer_registry.csv`](datasets/contextual_reference_layer_registry.csv) â€” camada de referÃªncia contextual: status de evidÃªncia e claims por patch
-- [`datasets/ground_reference_evidence_source_registry.csv`](datasets/ground_reference_evidence_source_registry.csv) â€” inventÃ¡rio de fontes de referÃªncia categorizado pelo Protocolo C
-- [`docs/metodologia_cientifica/research_datasets_and_artifacts.md`](docs/metodologia_cientifica/research_datasets_and_artifacts.md) â€” narrativa metodolÃ³gica dos datasets
+Essa separação evita que uma heurística do próprio projeto seja tratada como verdade de campo.
 
-## Protocolo C â€” construÃ§Ã£o de referÃªncia operacional
+Os registries associados ao Protocolo C estão organizados em [`datasets/`](./datasets/), com registros CSV/JSON de eventos candidatos, fontes, lacunas, decisões e prioridades de geocodificação.
 
-A camada de referÃªncia contextual foi refinada pelo Protocolo C, que organiza evidÃªncias externas, critÃ©rios de promoÃ§Ã£o e bloqueadores de operacionalizaÃ§Ã£o de forma auditÃ¡vel. O protocolo distingue explicitamente contexto, proxy, candidato de referÃªncia e validaÃ§Ã£o operacional â€” sem declarar ground truth onde ele nÃ£o existe. Ground truth operacional continua bloqueado no estado atual.
+---
 
-- [docs/metodologia_cientifica/protocolo_c_construcao_referencia_operacional.md](docs/metodologia_cientifica/protocolo_c_construcao_referencia_operacional.md) â€” Protocolo C: critÃ©rios de promoÃ§Ã£o, bloqueadores e relaÃ§Ã£o com a literatura
-- [docs/metodologia_cientifica/protocolo_c_aquisicao_ground_reference.md](docs/metodologia_cientifica/protocolo_c_aquisicao_ground_reference.md) â€” etapa de aquisiÃ§Ã£o: registro metadata-only de eventos candidatos e vÃ­nculos patch-evento-fonte
-- [docs/metodologia_cientifica/protocolo_c_plano_aquisicao_evidencias_observacionais.md](docs/metodologia_cientifica/protocolo_c_plano_aquisicao_evidencias_observacionais.md) â€” plano de aquisiÃ§Ã£o de evidÃªncias observacionais por regiÃ£o (v1hl): fontes-alvo, prioridades, forÃ§a metodolÃ³gica e readiness regional
-- [docs/metodologia_cientifica/protocolo_c_pacote_operacional_aquisicao_evidencias.md](docs/metodologia_cientifica/protocolo_c_pacote_operacional_aquisicao_evidencias.md) â€” pacote operacional de aquisiÃ§Ã£o (v1hm): princÃ­pios, fluxo, intake, licenciamento, staging local e bloqueios
-- [docs/metodologia_cientifica/protocolo_c_runbook_aquisicao_evidencias.md](docs/metodologia_cientifica/protocolo_c_runbook_aquisicao_evidencias.md) â€” runbook passo a passo para coleta futura de evidÃªncias (v1hm)
-- [docs/metodologia_cientifica/protocolo_c_fechamento_evidencias_ground_reference.md](docs/metodologia_cientifica/protocolo_c_fechamento_evidencias_ground_reference.md) â€” etapa de fechamento: gates de promoÃ§Ã£o, nÃ­veis de evidÃªncia e matriz de lacunas por regiÃ£o
-- [docs/metodologia_cientifica/protocolo_c_revisao_supervisora_referencia.md](docs/metodologia_cientifica/protocolo_c_revisao_supervisora_referencia.md) â€” protocolo de revisão supervisora: decisÃµes possÃ­veis, critÃ©rios de bloqueio e registro obrigatÃ³rio
-- [docs/metodologia_cientifica/protocolo_c_triagem_eventos_candidatos.md](docs/metodologia_cientifica/protocolo_c_triagem_eventos_candidatos.md) â€” triagem de eventos candidatos por regiÃ£o (v1hn): status, prioridade de busca, backlog de fontes, escopo por patch e gates do Protocolo C
-- [docs/metodologia_cientifica/protocolo_c_dossies_eventos_candidatos.md](docs/metodologia_cientifica/protocolo_c_dossies_eventos_candidatos.md) â€” dossiÃªs de evidÃªncia por evento candidato (v1ho): pacote mÃ­nimo de evidÃªncias, estados do dossiÃª, critÃ©rios de bloqueio e decisÃµes de continuidade
-- [docs/metodologia_cientifica/protocolo_c_busca_externa_solicitacao_regional.md](docs/metodologia_cientifica/protocolo_c_busca_externa_solicitacao_regional.md) â€” busca externa e solicitaÃ§Ã£o regional (v1hp): planos de busca por regiÃ£o, pacotes de solicitaÃ§Ã£o, perguntas por gate e matriz de prioridade regional
-- [docs/metodologia_cientifica/protocolo_c_referencias_observacionais_candidatas.md](docs/metodologia_cientifica/protocolo_c_referencias_observacionais_candidatas.md) â€” referÃªncias observacionais candidatas (v1hq): primeira camada documental de eventos observados candidatos, diferenciaÃ§Ã£o de nÃ­veis de evidÃªncia, gates G1â€“G4 em triagem, bloqueios e inventÃ¡rio de dados externos
-- [docs/metodologia_cientifica/protocolo_c_diagnostico_dados_externos_validos.md](docs/metodologia_cientifica/protocolo_c_diagnostico_dados_externos_validos.md) â€” diagnÃ³stico de dados externos vÃ¡lidos (v1hq): o que buscar manualmente por regiÃ£o, estrutura local-only e o que vai e nÃ£o vai para o GitHub
-- [docs/metodologia_cientifica/protocolo_c_pre_ligacao_evento_patch.md](docs/metodologia_cientifica/protocolo_c_pre_ligacao_evento_patch.md) â€” prÃ©-ligaÃ§Ã£o eventoâ€“patch (v1hr): diferenÃ§a entre G4 em triagem e patch-linking real, geocodificaÃ§Ã£o manual controlada, janelas temporais Sentinel metadata-only e dependÃªncias para overlay futuro
-- [docs/metodologia_cientifica/protocolo_c_aquisicao_fontes_observacionais_publicas.md](docs/metodologia_cientifica/protocolo_c_aquisicao_fontes_observacionais_publicas.md) â€” aquisiÃ§Ã£o local-only de fontes observacionais pÃºblicas (v1hs): polÃ­tica local-only, estados de aquisiÃ§Ã£o, relaÃ§Ã£o com ground reference, limites metodolÃ³gicos
-- [docs/metodologia_cientifica/protocolo_c_relatorio_aquisicao_fontes_observacionais_v1hs.md](docs/metodologia_cientifica/protocolo_c_relatorio_aquisicao_fontes_observacionais_v1hs.md) â€” relatÃ³rio de aquisiÃ§Ã£o v1hs: fontes tentadas, adquiridas, falhas, pendÃªncias formais, buscas manuais, lacunas crÃ­ticas por regiÃ£o e confirmaÃ§Ãµes metodolÃ³gicas
-- [docs/metodologia_cientifica/protocolo_c_relatorio_execucao_aquisicao_dirigida_v1ht.md](docs/metodologia_cientifica/protocolo_c_relatorio_execucao_aquisicao_dirigida_v1ht.md) â€” relatÃ³rio v1ht: endurecimento do script, 22 alvos de busca dirigida, 11 solicitaÃ§Ãµes formais identificadas, estado atual das lacunas por regiÃ£o
-- [docs/metodologia_cientifica/protocolo_c_resolucao_programatica_lacunas_v1hx.md](docs/metodologia_cientifica/protocolo_c_resolucao_programatica_lacunas_v1hx.md) â€” metodologia v1hx: classes de lacuna, WEB_* status codes, critÃ©rio de sucesso, guardrails permanentes
-- [docs/metodologia_cientifica/protocolo_c_relatorio_resolucao_lacunas_v1hx.md](docs/metodologia_cientifica/protocolo_c_relatorio_resolucao_lacunas_v1hx.md) â€” relatÃ³rio v1hx: 8/9 portais adquiridos (LOCAL_ONLY), backend PDF ALL_MISSING, 12 pacotes formais DRAFT, re-execuÃ§Ã£o v1hw com 46 fontes
-- [docs/metodologia_cientifica/protocolo_c_revisao_profunda_pre_geocodificacao_v1hy.md](docs/metodologia_cientifica/protocolo_c_revisao_profunda_pre_geocodificacao_v1hy.md) â€” metodologia v1hy: revisÃ£o profunda de portais adquiridos, suporte PDF, fechamento prÃ©-geocodificaÃ§Ã£o
-- [docs/metodologia_cientifica/protocolo_c_relatorio_revisao_profunda_pre_geocodificacao_v1hy.md](docs/metodologia_cientifica/protocolo_c_relatorio_revisao_profunda_pre_geocodificacao_v1hy.md) â€” relatÃ³rio v1hy: pypdf instalado, 1729 links extraÃ­dos/0 event-specific, 3 eventos selecionados para geocodificaÃ§Ã£o controlada, todos guardrails false
-- [docs/metodologia_cientifica/protocolo_c_pacote_geocodificacao_controlada_v1hz.md](docs/metodologia_cientifica/protocolo_c_pacote_geocodificacao_controlada_v1hz.md) â€” metodologia v1hz: escopo espacial auditÃ¡vel, alvos de geocodificaÃ§Ã£o controlada, bloqueios espaciais, fila futura
-- [docs/metodologia_cientifica/protocolo_c_relatorio_pacote_geocodificacao_controlada_v1hz.md](docs/metodologia_cientifica/protocolo_c_relatorio_pacote_geocodificacao_controlada_v1hz.md) â€” relatÃ³rio v1hz: 13 alvos registrados (6 bloqueados/7 prontos), 13 bloqueios (1 CRITICAL), 5 itens na fila futura, nenhuma coordenada criada
-- [docs/metodologia_cientifica/protocolo_c_inventario_fontes_espaciais_autoritativas_v1ia.md](docs/metodologia_cientifica/protocolo_c_inventario_fontes_espaciais_autoritativas_v1ia.md) â€” metodologia v1ia: inventÃ¡rio de fontes espaciais autoritativas por alvo, classes de fonte, autoridade, preflight de execuÃ§Ã£o, lacunas autoritativas
-- [docs/metodologia_cientifica/protocolo_c_relatorio_inventario_fontes_espaciais_v1ia.md](docs/metodologia_cientifica/protocolo_c_relatorio_inventario_fontes_espaciais_v1ia.md) â€” relatÃ³rio v1ia: 15 fontes inventariadas, 2 alvos READY_FOR_TRIAGE_ONLY (PET_2024), 11 bloqueados, 1 lacuna CRITICAL, 5 solicitaÃ§Ãµes formais pendentes, nenhuma geocodificaÃ§Ã£o executada
-- [docs/metodologia_cientifica/protocolo_c_consolidacao_referencias_observacionais_candidatas.md](docs/metodologia_cientifica/protocolo_c_consolidacao_referencias_observacionais_candidatas.md) â€” metodologia v1ib: consolidaÃ§Ã£o positiva de evidÃªncias observacionais candidatas; nÃ­veis LEVEL_0â€“LEVEL_6; PET_2022_02_15 como candidata forte (LEVEL_5); PET_2024_03_21_28 como secundÃ¡ria (LEVEL_6); ground truth operacional nÃ£o estabelecido
-- [docs/metodologia_cientifica/protocolo_c_relatorio_consolidacao_referencias_observacionais.md](docs/metodologia_cientifica/protocolo_c_relatorio_consolidacao_referencias_observacionais.md) â€” relatÃ³rio v1ib: 1 candidata forte, 1 secundÃ¡ria, 2 em espera, 3 contextuais, 2 bloqueadas; nenhum evento vira ground truth, label ou reabre Protocolo B
-- [docs/metodologia_cientifica/protocolo_c_separacao_fenomeno_petropolis_2022_v1ic.md](docs/metodologia_cientifica/protocolo_c_separacao_fenomeno_petropolis_2022_v1ic.md) â€” metodologia v1ic: separação metodológica de fenÃ´meno por localidade para PET_2022_02_15; classes HYDROLOGICAL_CONFIRMED/MASS_MOVEMENT_CONFIRMED/MIXED_CONFIRMED; critÃ©rio de avanÃ§o; bloqueio de geocodificaÃ§Ã£o; fontes utilizadas
-- [docs/metodologia_cientifica/protocolo_c_relatorio_separacao_fenomeno_petropolis_2022_v1ic.md](docs/metodologia_cientifica/protocolo_c_relatorio_separacao_fenomeno_petropolis_2022_v1ic.md) â€” relatÃ³rio v1ic: 0 HYDROLOGICAL_CONFIRMED, 3 MASS_MOVEMENT, 5 MIXED; PARTIAL_SEPARATION; ChÃ¡cara Flora e Caxambu confirmados como deslizamento (HIGH); rio Quitandinha transbordou mas localidade permanece MIXED; geocodificaÃ§Ã£o bloqueada
-- [docs/metodologia_cientifica/protocolo_c_pacote_referencia_cartografica_petropolis_2022_v1id.md](docs/metodologia_cientifica/protocolo_c_pacote_referencia_cartografica_petropolis_2022_v1id.md) â€” metodologia v1id: registro e preparaÃ§Ã£o de ingestÃ£o de pacote cartogrÃ¡fico PKG_FR_PET_001 (DRM-RJ); crÃ­tico para separaÃ§Ã£o de fenÃ´meno; geocodificaÃ§Ã£o bloqueada atÃ© cartografia
-- [docs/metodologia_cientifica/protocolo_c_relatorio_pacote_referencia_cartografica_petropolis_2022_v1id.md](docs/metodologia_cientifica/protocolo_c_relatorio_pacote_referencia_cartografica_petropolis_2022_v1id.md) â€” relatÃ³rio v1id: PKG_FR_PET_001 registrado como REQUIRED_NOT_INGESTED; bloqueios operacionais mantidos; prÃ³xima etapa: obtenÃ§Ã£o e auditoria de cartografia
-- [docs/metodologia_cientifica/protocolo_c_ingestao_auditoria_ground_reference_petropolis_2022_v1ie.md](docs/metodologia_cientifica/protocolo_c_ingestao_auditoria_ground_reference_petropolis_2022_v1ie.md) â€” metodologia v1ie: busca real e auditoria de ground reference; 10 candidatos SGB/CPRM+FBDS com geometria SIRGAS 2000; suscetibilidade â‰  ocorrÃªncia de evento; Gate 6 (event_date_compatible) FAIL para todos; PKG_FR_PET_001 nÃ£o encontrado; status BLOCKED mantido
-- [docs/metodologia_cientifica/protocolo_c_relatorio_ingestao_auditoria_ground_reference_petropolis_2022_v1ie.md](docs/metodologia_cientifica/protocolo_c_relatorio_ingestao_auditoria_ground_reference_petropolis_2022_v1ie.md) â€” relatÃ³rio v1ie: 10 candidatos auditados, todos BLOCKED no Gate 6; 0 HYDROLOGICAL_CONFIRMED; 0 ground reference auditado; PKG_FR_PET_001 ausente; inventÃ¡rio de suscetibilidade e hidrografia corrobora contexto mas nÃ£o substitui evidÃªncia de evento
-- [docs/metodologia_cientifica/protocolo_c_aquisicao_auditoria_vetores_observados_v1if.md](docs/metodologia_cientifica/protocolo_c_aquisicao_auditoria_vetores_observados_v1if.md) â€” metodologia v1if: busca real + download de fontes oficiais; ZIP SGB/CPRM (20.9MB) baixado com sucesso; 11 PDFs de campo extraÃ­dos (nÃ£o vetores); 11 gates aplicados; todos BLOCKED; 5 solicitaÃ§Ãµes institucionais elaboradas; prÃ³xima aÃ§Ã£o: SGB/CPRM dados georref de campo
-- [docs/metodologia_cientifica/protocolo_c_relatorio_aquisicao_auditoria_vetores_observados_v1if.md](docs/metodologia_cientifica/protocolo_c_relatorio_aquisicao_auditoria_vetores_observados_v1if.md) â€” relatÃ³rio v1if: ZIP baixado mas contÃ©m 11 PDFs (nÃ£o vetores); nenhum ativo passou os 11 gates; ground truth BLOCKED; 4 instituiÃ§Ãµes prioritÃ¡rias para solicitaÃ§Ã£o formal; invariantes mantidos
-- [docs/metodologia_cientifica/camada_referencia_contextual_validada.md](docs/metodologia_cientifica/camada_referencia_contextual_validada.md) â€” hierarquia de status e guardrails por patch
+## 🧭 Limites Metodológicos
 
-O Protocolo C agora inclui pacote operacional de aquisiÃ§Ã£o/intake (v1hm), camada de busca externa e solicitaÃ§Ã£o regional (v1hp), primeira camada documental de eventos observados candidatos (v1hq), camada de prÃ©-ligaÃ§Ã£o eventoâ€“patch (v1hr), primeira aquisiÃ§Ã£o controlada de fontes observacionais pÃºblicas (v1hs/v1ht), revisão programática das fontes adquiridas (v1hu), matriz programática de decisÃ£o por evento (v1hv) e validação programática fonteâ€“eventoâ€“fenÃ´menoâ€“localidade (v1hw). A v1hq registra 9 eventos (3 por regiÃ£o) com G1/G2/G3 fechados documentalmente e G4 em triagem espacial. A v1hr prepara as condiÃ§Ãµes para patch-linking sem executÃ¡-lo: organiza escopos de preflight, alvos de geocodificaÃ§Ã£o manual (22 localidades), janelas temporais Sentinel metadata-only e dependÃªncias para overlay futuro. A v1hs/v1ht executa a aquisiÃ§Ã£o real: 6 fontes adquiridas em local_only/, 9 bloqueadas por acesso (SSL Recife + HTTP 403 Curitiba), 10 solicitaÃ§Ãµes formais e 13 buscas manuais pendentes; o GitHub recebe apenas metadados seguros, hashes reais e status de licenÃ§a. A v1hu cria uma revisão programática, programÃ¡tica e auditÃ¡vel das 38 fontes registradas: para as 4 HTMLs disponÃ­veis, extrai indÃ­cios documentais de evento, data, localidade, fenÃ´meno e impacto; gera suporte candidato para gates G1â€“G4 (2 candidatos G1, 38 candidatos G2, 3 candidatos G3, 3 candidatos G4); nenhum gate Ã© fechado automaticamente. A v1hv agrega evidÃªncias de v1hu ao nÃ­vel do evento: produz matrix 9Ã—4 gates (36 linhas), 9 registros de prontidÃ£o e 30 prÃ³ximas aÃ§Ãµes â€” PET_2022_02_15 Ã© o Ãºnico evento com READY_FOR_REVIEW e ground_reference_candidate=true, mas can_promote_to_ground_reference=false (decisão supervisora obrigatória). A v1hw executa a validação programática integral de todas as 38 fontes contra os 9 eventos: 3 fontes SOURCE_CONFIRMED (todas PetrÃ³polis), PET_2022_02_15 com REQUEST_PHENOMENON_SEPARATION (MIXED_EVENT â€” separaÃ§Ã£o deslizamento/inundaÃ§Ã£o obrigatÃ³ria), PET_2024_03_21_28 com KEEP_AS_PRIORITY; 2 eventos selecionados para geocodificaÃ§Ã£o controlada (v1hx); can_execute_overlay_now=false; can_execute_overlay_after_geocoding=false para todos. A v1ht executa a aquisiÃ§Ã£o dirigida de lacunas e fechamento: endurece o script com `--target-gaps` e 17 domÃ­nios no allowlist; cria 22 alvos de busca dirigida (7 Recife, 8 PetrÃ³polis, 7 Curitiba) e 11 solicitaÃ§Ãµes formais com templates prontos; documenta 13 lacunas abertas que bloqueiam ground reference â€” 3 BROWSER_MANUAL_REQUIRED, 7 FORMAL_REQUEST, 3 REVIEW_GATE_REQUIRED. A v1hx resolve as lacunas WEB_ACCESSIBLE: executa `--allow-web` nos 9 alvos â€” 8 homepages de portal adquiridas em `local_only/` (contexto, nÃ£o evidÃªncia especÃ­fica), 1 bloqueada (simepar.br); documenta backend PDF ALL_MISSING (`pip install pypdf` pendente); cria 12 pacotes de pedido formal preenchidos em `docs/templates/protocolo_c_solicitacoes_preenchidas/`; re-executa v1hw com 46 fontes (3 DOWNGRADE_TO_CONTEXTUAL_ONLY para Recife/Curitiba â€” portais adquiridos tÃªm vocabulÃ¡rio genÃ©rico). A v1hy aprofunda a revisÃ£o dos portais adquiridos: instala pypdf localmente (v6.12.0) como backend primÃ¡rio de PDF; extrai 1729 links dos HTMLs locais de 8 portais â€” nenhum passou o filtro simultÃ¢neo de domÃ­nio permitido + palavra-chave de evento, confirmando que todos sÃ£o PORTAL_HOMEPAGE_GENERIC; produz `pre_geocoding_closure_registry.csv` com 9 eventos registrados e guardrails operacionais explicitamente false/BLOCKED/HOLD/SUPPORT_ONLY; seleciona 3 eventos para geocodificaÃ§Ã£o controlada futura: PET_2022_02_15 (requer separaÃ§Ã£o de fenÃ´meno), PET_2024_03_21_28 (KEEP_AS_PRIORITY), REC_2022_05_24_30 (cauteloso). A v1hz constrÃ³i o pacote operacional de geocodificaÃ§Ã£o controlada: registra 9 eventos no escopo, 13 alvos de geocodificaÃ§Ã£o (5 Recife + 6 PetrÃ³polis 2022 + 2 PetrÃ³polis 2024), 13 bloqueios espaciais (1 CRITICAL: PHENOMENON_SEPARATION_REQUIRED para PET_2022_02_15) e 5 itens na fila futura; 6 alvos bloqueados por separaÃ§Ã£o de fenÃ´meno obrigatÃ³ria, 7 prontos para geocodificaÃ§Ã£o futura; nenhuma coordenada foi criada, nenhuma geometria foi inferida, nenhuma geocodificaÃ§Ã£o foi executada. A v1ia executa o inventÃ¡rio de fontes espaciais autoritativas: 15 fontes catalogadas para os 13 alvos â€” 13 PRIMARY_OFFICIAL ou PRIMARY_TECHNICAL, 5 com FORMAL_REQUEST_REQUIRED; 2 alvos PET_2024 classificados READY_FOR_TRIAGE_ONLY (ValparaÃ­so e Floresta, limites IBGE disponÃ­veis); 11 alvos ainda bloqueados (5 REC aguardam COMPDEC, 6 PET_2022 bloqueados por CRITICAL PHENOMENON_SEPARATION); 6 lacunas autoritativas registradas (1 CRITICAL, 4 HIGH, 1 MEDIUM); nenhuma geocodificaÃ§Ã£o executada, nenhuma coordenada criada, nenhuma geometria produzida. A v1ib consolida positivamente as referÃªncias observacionais candidatas: 9 eventos avaliados com nÃ­veis LEVEL_0â€“LEVEL_5; PET_2022_02_15 como candidata forte (LEVEL_5, 3 fontes SOURCE_CONFIRMED); PET_2024_03_21_28 como secundÃ¡ria (LEVEL_6 via fonte espacial de triagem); 2 eventos em espera de geometry; 3 contextuais; 2 bloqueados; `can_be_called_ground_truth_operational=false` e `can_create_training_label=false` invariantes para todos os 9 eventos. A v1ic executa a separação metodológica de fenÃ´meno para PET_2022_02_15: classifica 8 localidades com base em evidÃªncia textual do DRM-RJ (PDF, 57p.) e NHESS (artigo HTML); resultado: 0 HYDROLOGICAL_CONFIRMED, 3 MASS_MOVEMENT_CONFIRMED (ChÃ¡cara Flora e Caxambu com HIGH confidence, Morin com LOW), 5 MIXED_CONFIRMED; status PARTIAL_SEPARATION â€” nenhuma localidade pode avanÃ§ar para geocodificaÃ§Ã£o; o achado hidrolÃ³gico mais forte Ã© o transbordamento do Rio Quitandinha, mas a localidade permanece MIXED; a separaÃ§Ã£o mÃ¡xima alcanÃ§Ã¡vel com fontes textuais disponÃ­veis estÃ¡ documentada; bloqueio de geocodificaÃ§Ã£o mantido. Nenhum overlay foi executado, nenhuma geocodificaÃ§Ã£o foi realizada, nenhuma coordenada foi criada. Ground truth operacional nÃ£o estÃ¡ estabelecido. Protocolo B permanece bloqueado. Multimodal permanece em hold. O GitHub continua contendo apenas metadados pÃºblicos seguros.
+O REV-P opera em modo `review_only=true`.
 
-### Datasets das etapas de aquisiÃ§Ã£o, fechamento, triagem, busca e referÃªncias observacionais
+Isso significa que o projeto organiza, cruza e audita evidências, mas não transforma automaticamente essas evidências em rótulos operacionais.
 
-- [`datasets/regional_external_search_plan.csv`](datasets/regional_external_search_plan.csv) â€” planos de busca externa por regiÃ£o (v1hp): fonte-alvo, gate, modo, prioridade e status (`forbidden_use` bloqueia ground truth e labels)
-- [`datasets/source_request_package_registry.csv`](datasets/source_request_package_registry.csv) â€” pacotes de solicitaÃ§Ã£o formal a instituiÃ§Ãµes (v1hp): instituiÃ§Ã£o, tipo de solicitaÃ§Ã£o, status e `cannot_establish_ground_truth_alone=true`
-- [`datasets/gate_search_question_registry.csv`](datasets/gate_search_question_registry.csv) â€” perguntas de busca por gate e regiÃ£o (v1hp): `current_answer_status`, blocking_if_unanswered e forbidden_if_unanswered
-- [`datasets/regional_request_priority_matrix.csv`](datasets/regional_request_priority_matrix.csv) â€” matriz de prioridade regional de solicitaÃ§Ã£o (v1hp): `protocol_b_status=BLOCKED`, `multimodal_status=HOLD`
-- [`datasets/observed_event_reference_candidate_registry.csv`](datasets/observed_event_reference_candidate_registry.csv) â€” 9 eventos observados candidatos (v1hq): G1/G2/G3 fechados documentalmente, G4 em triagem, `operational_ground_truth_status=NOT_ESTABLISHED`, `protocol_b_status=BLOCKED`, `can_be_used_as_training_label=false`
-- [`datasets/observed_event_reference_gap_registry.csv`](datasets/observed_event_reference_gap_registry.csv) â€” lacunas metodolÃ³gicas por evento (v1hq): o que falta para avanÃ§ar Ã  ligaÃ§Ã£o patch-evento e ground reference
-- [`datasets/observed_event_reference_decision_registry.csv`](datasets/observed_event_reference_decision_registry.csv) â€” decisÃµes metodolÃ³gicas por evento (v1hq): `can_promote_to_ground_reference=false`, `can_generate_training_label=false`, `can_reopen_protocol_b=false` para todos
-- [`datasets/manual_external_evidence_needed_registry.csv`](datasets/manual_external_evidence_needed_registry.csv) â€” inventÃ¡rio de dados externos necessÃ¡rios por regiÃ£o (v1hq): o que buscar manualmente, `cannot_establish_ground_truth_alone=true` para todos
-- [`datasets/event_patch_linking_preflight_registry.csv`](datasets/event_patch_linking_preflight_registry.csv) â€” preflight de prÃ©-ligaÃ§Ã£o eventoâ€“patch (v1hr): escopo regional, status de overlay, bloqueios e guardrails por linha (`promotion_allowed=false`, `can_create_training_label=false`, `protocol_b_status=BLOCKED` para todos)
-- [`datasets/manual_geocoding_target_registry.csv`](datasets/manual_geocoding_target_registry.csv) â€” alvos de geocodificaÃ§Ã£o manual (v1hr): 22 localidades a geocodificar por evento, tipo, fonte e status (`geocoding_status=NOT_GEOCODED` ou `NEEDS_MANUAL_REVIEW`, `cannot_establish_ground_truth_alone=true` para todos)
-- [`datasets/event_sentinel_temporal_window_registry.csv`](datasets/event_sentinel_temporal_window_registry.csv) â€” janelas temporais Sentinel por evento (v1hr): perÃ­odos prÃ©/evento/pÃ³s metadata-only, relevÃ¢ncia de sensor e status de aquisiÃ§Ã£o (`acquisition_status=NOT_ACQUIRED`, `cannot_establish_ground_truth_alone=true` para todos)
-- [`datasets/patch_linking_dependency_registry.csv`](datasets/patch_linking_dependency_registry.csv) â€” dependÃªncias para patch-linking real (v1hr): o que precisa ser resolvido antes de overlay, review gate e ground reference (`current_status=OPEN` para todas)
-- [`datasets/observed_source_acquisition_manifest.csv`](datasets/observed_source_acquisition_manifest.csv) â€” manifest pÃºblico de aquisiÃ§Ã£o (v1hs): metadados de 15 fontes pÃºblicas candidatas â€” `cannot_establish_ground_truth_alone=true`, `can_generate_training_label=false`, `protocol_b_status=BLOCKED`, `multimodal_status=HOLD` para todas
-- [`datasets/observed_source_acquisition_gap_registry.csv`](datasets/observed_source_acquisition_gap_registry.csv) â€” lacunas de aquisiÃ§Ã£o (v1hs): 22 lacunas por regiÃ£o â€” 11 solicitaÃ§Ãµes formais, 12 buscas manuais, `blocks_ground_reference=true` para lacunas crÃ­ticas
-- [`datasets/acquired_source_review_registry.csv`](datasets/acquired_source_review_registry.csv) â€” revisÃ£o inicial metadata-only (v1hs/v1ht): `can_support_patch_linking=false`, `can_support_ground_reference=false`, `can_generate_training_label=false` para todas
-- [`datasets/programmatic_source_review_registry.csv`](datasets/programmatic_source_review_registry.csv) â€” revisão programática por fonte (v1hu): forÃ§a de evidÃªncia, candidatos G1â€“G4, `requires_manual_review=true`, `can_close_gate_automatically=false`, `protocol_b_status=BLOCKED` para todas
-- [`datasets/programmatic_gate_support_registry.csv`](datasets/programmatic_gate_support_registry.csv) â€” suporte candidato por gate e fonte (v1hu): `can_close_gate_automatically=false`, `can_generate_training_label=false` para todas
-- [`datasets/programmatic_source_evidence_gap_registry.csv`](datasets/programmatic_source_evidence_gap_registry.csv) â€” lacunas da revisão programática (v1hu): `REVIEW_GATE_REQUIRED` e `GEOMETRY_NOT_AVAILABLE` para todas as fontes, `blocks_ground_reference=true` para lacunas crÃ­ticas
-- [`datasets/event_gate_decision_matrix.csv`](datasets/event_gate_decision_matrix.csv) â€” matriz de decisÃ£o por gate por evento (v1hv): 36 linhas (9 eventos Ã— 4 gates), `event_gate_status`, `gate_can_advance`, `requires_reviewer_confirmation=true`, `can_close_gate_automatically=false` para todas
-- [`datasets/event_ground_reference_readiness_registry.csv`](datasets/event_ground_reference_readiness_registry.csv) â€” prontidÃ£o para ground reference por evento (v1hv): 9 linhas, `overall_readiness`, `ground_reference_candidate`, `can_promote_to_ground_reference=false`, `can_create_training_label=false` para todas
-- [`datasets/event_next_action_registry.csv`](datasets/event_next_action_registry.csv) â€” prÃ³ximas aÃ§Ãµes por evento (v1hv): 30 aÃ§Ãµes (â‰¥3 por evento), `can_automate=false` para todas
-- [`datasets/source_event_validation_registry.csv`](datasets/source_event_validation_registry.csv) â€” validação programática por fonte (v1hw): 38 linhas, `source_validation_status`, `event_confirmation_status`, `phenomenon_status`, `temporal_alignment_status`, `can_generate_training_label=false`, `can_support_ground_reference=false` para todas
-- [`datasets/event_programmatic_validation_decision_registry.csv`](datasets/event_programmatic_validation_decision_registry.csv) â€” decisão programática por evento (v1hw): 9 linhas, `validation_decision`, `event_confirmation_status_final`, `can_promote_to_ground_reference=false`, `can_create_training_label=false` para todas
-- [`datasets/event_patch_compatibility_precheck_registry.csv`](datasets/event_patch_compatibility_precheck_registry.csv) â€” precheck de compatibilidade patchâ€“evento (v1hw): 9 linhas, `precheck_status`, `can_execute_overlay_now=false` para todas
-- [`datasets/event_priority_for_geocoding_registry.csv`](datasets/event_priority_for_geocoding_registry.csv) â€” prioridade para geocodificaÃ§Ã£o controlada (v1hw): 9 linhas, 2 selecionados (PET_2022_02_15 e PET_2024_03_21_28), `can_execute_overlay_after_geocoding=false` para todas
-- [`datasets/event_evidence_dossier_registry.csv`](datasets/event_evidence_dossier_registry.csv) â€” dossiÃªs de evidÃªncia (v1ho): status do dossiÃª, lacunas, decisÃ£o de continuidade (`can_support_ground_reference_candidate=false` no estado atual)
-- [`datasets/event_evidence_requirements_registry.csv`](datasets/event_evidence_requirements_registry.csv) â€” requisitos mÃ­nimos de evidÃªncia por evento candidato (v1ho): status por gate, blocking_if_missing e forbidden_if_missing
-- [`datasets/event_dossier_decision_registry.csv`](datasets/event_dossier_decision_registry.csv) â€” decisÃµes de continuidade por dossiÃª (v1ho): `can_reassess_protocol_b=false`, `can_start_multimodal=false`
-- [`datasets/event_candidate_screening_registry.csv`](datasets/event_candidate_screening_registry.csv) â€” triagem de eventos candidatos (v1hn): status, prioridade de busca e gates por evento (`promotion_allowed=false` no estado atual)
-- [`datasets/event_source_search_backlog.csv`](datasets/event_source_search_backlog.csv) â€” backlog de fontes a pesquisar por evento candidato (v1hn): fonte, famÃ­lia, status da busca
-- [`datasets/event_patch_screening_scope.csv`](datasets/event_patch_screening_scope.csv) â€” escopo de triagem por patch (v1hn): perÃ­metro de busca, `spatial_overlap_assessed=false` e `promotion_allowed=false`
-- [`datasets/flood_event_candidate_registry.csv`](datasets/flood_event_candidate_registry.csv) â€” eventos candidatos por regiÃ£o (`eligible_for_reference_search=false` no estado atual)
-- [`datasets/patch_event_reference_link_registry.csv`](datasets/patch_event_reference_link_registry.csv) â€” vÃ­nculos patch-evento-fonte com alinhamentos e bloqueadores (`promotion_allowed=false` no estado atual)
-- [`datasets/ground_reference_gap_matrix.csv`](datasets/ground_reference_gap_matrix.csv) â€” matriz de lacunas: gates abertos, evidÃªncia faltante e prÃ³ximo passo por regiÃ£o (`promotion_blocked=true` no estado atual)
-- [`datasets/review_gate_reference_registry.csv`](datasets/review_gate_reference_registry.csv) â€” registry de revisões supervisoras ou placeholders (`promotion_allowed=false` no estado atual)
-- [`datasets/reference_promotion_decision_registry.csv`](datasets/reference_promotion_decision_registry.csv) â€” decisÃµes formais de promoÃ§Ã£o (`promotion_allowed=false`, `protocol_b_reassessment_allowed=false` no estado atual)
-- [`datasets/controlled_geocoding_event_scope_registry.csv`](datasets/controlled_geocoding_event_scope_registry.csv) â€” escopo de geocodificaÃ§Ã£o por evento (v1hz): 9 eventos, 3 selecionados, `geocoding_execution_allowed_now=false`, `overlay_execution_allowed_now=false`, `can_create_training_label=false`, `protocol_b_status=BLOCKED` para todos
-- [`datasets/controlled_geocoding_target_registry.csv`](datasets/controlled_geocoding_target_registry.csv) â€” alvos de geocodificaÃ§Ã£o controlada (v1hz): 13 localidades (6 bloqueadas/7 prontas), `coordinate_value_public=""`, `geometry_file_public=""`, `can_create_training_label=false` para todos
-- [`datasets/spatial_ground_reference_blocker_registry.csv`](datasets/spatial_ground_reference_blocker_registry.csv) â€” bloqueios espaciais registrados (v1hz): 13 bloqueios (1 CRITICAL, 4 HIGH), `blocks_training_label=true` invariante, `protocol_b_status=BLOCKED` para todos
-- [`datasets/future_controlled_geocoding_queue.csv`](datasets/future_controlled_geocoding_queue.csv) â€” fila futura de geocodificaÃ§Ã£o controlada (v1hz): 5 itens, `can_execute_now=false`, `can_create_training_label_after_execution=false` para todos
-- [`datasets/authoritative_spatial_source_inventory.csv`](datasets/authoritative_spatial_source_inventory.csv) â€” inventÃ¡rio de fontes espaciais autoritativas (v1ia): 15 entradas, 13 fontes PRIMARY_OFFICIAL/PRIMARY_TECHNICAL, 5 com FORMAL_REQUEST_REQUIRED, `can_create_training_label=false`, `can_support_ground_reference_future=false` para todas
-- [`datasets/controlled_geocoding_execution_preflight_registry.csv`](datasets/controlled_geocoding_execution_preflight_registry.csv) â€” preflight de execuÃ§Ã£o de geocodificaÃ§Ã£o controlada (v1ia): 13 alvos â€” 2 READY_FOR_TRIAGE_ONLY (PET_2024), 5 WAITING_OFFICIAL_SOURCE (REC), 6 WAITING_PHENOMENON_SEPARATION (PET_2022), `can_execute_overlay_after_geocoding=false` para todos
-- [`datasets/authoritative_spatial_gap_registry.csv`](datasets/authoritative_spatial_gap_registry.csv) â€” lacunas de fonte autoritativa (v1ia): 6 entradas â€” 1 CRITICAL (separaÃ§Ã£o fenÃ´meno PET_2022), 4 HIGH, 1 MEDIUM, `blocks_training_label=true` invariante
-- [`datasets/observational_reference_promotion_registry.csv`](datasets/observational_reference_promotion_registry.csv) â€” promoÃ§Ã£o de referÃªncias observacionais candidatas (v1ib): 9 eventos, nÃ­veis LEVEL_0â€“LEVEL_5, `can_be_called_ground_truth_operational=false`, `can_create_training_label=false` para todos
-- [`datasets/protocolo_c_event_evidence_level_matrix.csv`](datasets/protocolo_c_event_evidence_level_matrix.csv) â€” matriz de nÃ­vel de evidÃªncia por evento (v1ib): score consolidado, level_reasoning e bloqueadores por evento
-- [`datasets/event_locality_phenomenon_separation_registry.csv`](datasets/event_locality_phenomenon_separation_registry.csv) â€” separaÃ§Ã£o fenomenolÃ³gica por localidade (v1ic): 8 localidades de PET_2022_02_15; `phenomenon_class`, `phenomenon_confidence`, `blocks_controlled_geocoding=true` para todas; `can_create_training_label=false`, `multimodal_status=HOLD` invariantes
-- [`datasets/event_phenomenon_separation_decision_registry.csv`](datasets/event_phenomenon_separation_decision_registry.csv) â€” decisÃ£o de separaÃ§Ã£o para PET_2022_02_15 (v1ic): PARTIAL_SEPARATION; `can_advance_to_controlled_geocoding_future=false`; `required_next_action=obter PKG_FR_PET_001`
+No estado atual, o projeto:
 
-## DocumentaÃ§Ã£o tÃ©cnica
+* não declara *ground truth* patch-level;
+* não treina classificador supervisionado operacional;
+* não afirma detecção automática de inundação observada;
+* não promove patches automaticamente a positivos ou negativos;
+* não usa DINO como classificador físico-ambiental.
 
-- [docs/metodologia_cientifica/camada_referencia_contextual_validada.md](docs/metodologia_cientifica/camada_referencia_contextual_validada.md) â€” hierarquia de evidÃªncias e claims permitidos/proibidos por status
-- [docs/metodologia_cientifica/patch_lineage_and_grounding.md](docs/metodologia_cientifica/patch_lineage_and_grounding.md) â€” linhagem territorial dos patches, vinculaÃ§Ã£o Sentinel, claims permitidos e proibidos
-- [docs/metodologia_cientifica/dino_sentinel_embedding_protocol.md](docs/metodologia_cientifica/dino_sentinel_embedding_protocol.md) â€” protocolo completo do pipeline DINO
-- [docs/metodologia_cientifica/dino_command_registry.md](docs/metodologia_cientifica/dino_command_registry.md) â€” registro de comandos para reproduÃ§Ã£o local
-- [docs/metodologia_cientifica/dino_sentinel_scientific_evidence_summary.md](docs/metodologia_cientifica/dino_sentinel_scientific_evidence_summary.md) â€” resumo de evidÃªncias cientÃ­ficas
-- [docs/estado_metodologico_revp.md](docs/estado_metodologico_revp.md) â€” estado e limitaÃ§Ãµes metodolÃ³gicas atuais
+As evidências visuais, GIS e documentais sustentam interpretação contextual, auditoria e revisão humana.
+
+---
+
+## 📚 Documentação Técnica
+
+A documentação completa está organizada em [`docs/`](./docs/) e os registros auditáveis em [`datasets/`](./datasets/).
+
+Principais pontos de entrada:
+
+* [`docs/estado_metodologico_revp.md`](./docs/estado_metodologico_revp.md) — estado metodológico consolidado.
+* [`docs/metodologia_cientifica/dino_sentinel_embedding_protocol.md`](./docs/metodologia_cientifica/dino_sentinel_embedding_protocol.md) — protocolo de extração de embeddings DINO.
+* [`docs/metodologia_cientifica/patch_lineage_and_grounding.md`](./docs/metodologia_cientifica/patch_lineage_and_grounding.md) — linhagem territorial dos patches.
+* [`docs/metodologia_cientifica/camada_referencia_contextual_validada.md`](./docs/metodologia_cientifica/camada_referencia_contextual_validada.md) — diretrizes de claims e uso contextual das evidências.
+* [`datasets/`](./datasets/) — registries CSV/JSON usados na auditoria.
+
+---
+
+## 📌 Estado do Projeto
+
+O REV-P está em desenvolvimento e em fase de consolidação metodológica. O foco atual é fortalecer a rastreabilidade, a governança de evidências e a reprodutibilidade do pipeline antes de qualquer etapa de modelagem operacional.
+
+---
