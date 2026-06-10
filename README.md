@@ -1,25 +1,28 @@
 # REV-P — Repositório de Entrega dos Artefatos
 
-Este repositório reúne os artefatos públicos do projeto **REV-P**, desenvolvido como pipeline auditável para organização, validação e inspeção de evidências territoriais, geoespaciais e visuais associadas à suscetibilidade urbana a inundações e alagamentos.
+Este repositório reúne os artefatos públicos do projeto **REV-P**, desenvolvido como um pipeline auditável para organização, validação e inspeção de evidências territoriais, geoespaciais e visuais associadas à suscetibilidade urbana a inundações e alagamentos.
 
-A entrega disponibiliza código-fonte, configurações, documentação metodológica, registries, manifests, testes automatizados, tabelas auxiliares e artefatos públicos de resultado. Arquivos brutos pesados e saídas locais completas não são versionados no GitHub; quando aplicável, são referenciados por manifests, registries e relatórios públicos.
+A entrega disponibiliza código-fonte, configurações, documentação metodológica, registries, manifests, testes automatizados, tabelas auxiliares, métricas, figuras e relatórios finais de execução.
+
+Arquivos brutos pesados e saídas locais completas não são versionados no GitHub. Quando aplicável, esses arquivos são representados por manifests, registries, hashes, relatórios resumidos e artefatos públicos derivados.
 
 ---
 
 ## 1. Objetivo do projeto
 
-O **REV-P** tem como objetivo estruturar uma trilha auditável de evidências para apoiar análise físico-ambiental urbana com imagens Sentinel e embeddings DINOv2.
+O **REV-P** tem como objetivo estruturar uma trilha auditável de evidências para apoiar análise físico-ambiental urbana com imagens Sentinel, evidências territoriais externas e embeddings visuais DINOv2.
 
-O projeto não parte diretamente para classificação operacional. Antes disso, organiza:
+O projeto não parte diretamente para uma classificação operacional. Antes disso, organiza:
 
 - patches territoriais de Recife, Petrópolis e Curitiba;
 - assets Sentinel candidatos;
 - evidências GIS e territoriais externas;
 - registries de fontes, lacunas e decisões metodológicas;
 - embeddings visuais extraídos com encoder DINOv2 congelado;
-- auditorias de QA, rastreabilidade e governança de claims.
+- auditorias de QA, rastreabilidade e governança de claims;
+- figuras, tabelas, métricas e relatórios finais para submissão acadêmica.
 
-O foco principal é permitir revisão humana, rastreabilidade científica e controle metodológico antes de qualquer etapa supervisionada ou operacional.
+O foco principal é permitir **revisão humana**, **rastreabilidade científica** e **controle metodológico** antes de qualquer etapa supervisionada ou operacional.
 
 ---
 
@@ -34,9 +37,10 @@ No estado atual, o projeto:
 - não cria labels binários de treinamento;
 - não treina classificador supervisionado operacional;
 - não usa DINOv2 como classificador físico-ambiental;
-- não transforma evidência contextual em validação automática de evento observado.
+- não transforma evidência contextual em validação automática de evento observado;
+- não transforma coerência externa em predição.
 
-As imagens Sentinel, embeddings DINOv2, evidências GIS e fontes externas são usadas como suporte para análise estrutural, inspeção contextual, auditoria e revisão humana.
+As imagens Sentinel, os embeddings DINOv2, as evidências GIS e as fontes externas são usados como suporte para análise estrutural, inspeção contextual, auditoria e revisão humana.
 
 Essa separação é parte central da metodologia: evidência visual, evidência territorial e referência observacional candidata não são tratadas como a mesma coisa.
 
@@ -44,7 +48,7 @@ Essa separação é parte central da metodologia: evidência visual, evidência 
 
 ## 3. Corpus consolidado
 
-O corpus atual possui **59 patches territoriais/contextuais** distribuídos em três regiões brasileiras:
+O corpus atual possui **59 patches territoriais/contextuais** distribuídos em três regiões brasileiras.
 
 | Região | Patches territoriais | Assets Sentinel candidatos |
 |---|---:|---:|
@@ -53,8 +57,9 @@ O corpus atual possui **59 patches territoriais/contextuais** distribuídos em t
 | Curitiba | 14 | 43 |
 | **Total** | **59** | **128** |
 
-Os 59 patches representam unidades territoriais/contextuais.  
-Os 128 assets Sentinel representam imagens candidatas associadas ao pipeline Sentinel-first.
+Os **59 patches** representam unidades territoriais/contextuais.
+
+Os **128 assets Sentinel** representam imagens candidatas associadas ao pipeline Sentinel-first.
 
 Essas contagens não são equivalentes: uma descreve o corpus territorial consolidado; a outra descreve o inventário de imagens Sentinel candidatas.
 
@@ -71,7 +76,7 @@ REV-P/
 ├── outputs_public/          # Artefatos públicos finais da entrega
 │   ├── figures/             # Figuras finais usadas no artigo/apresentação
 │   ├── tables/              # Tabelas finais e auxiliares
-│   ├── metrics/             # Métricas finais ou resumos quantitativos
+│   ├── metrics/             # Métricas finais e resumos quantitativos
 │   ├── logs_summary/        # Logs resumidos de execução, QA e testes
 │   ├── execution_reports/   # Relatórios finais de execução/auditoria
 │   └── model/               # Declaração sobre ausência de modelo operacional treinado
@@ -89,21 +94,21 @@ A tabela abaixo descreve os principais artefatos submetidos, sua função no pro
 
 | Artefato | Diretório/arquivo | Função no projeto |
 |---|---|---|
-| README | `README.md` | Descreve a entrega, a estrutura dos artefatos, os limites metodológicos e os parâmetros relevantes de execução |
-| Código-fonte | `scripts/` | Scripts do pipeline Sentinel-first, DINO, QA, auditorias, análises estruturais, exportação de figuras/tabelas e orquestração |
-| Configurações | `configs/` | Templates e checklists de execução local, incluindo variáveis de ambiente para execução DINO local controlada |
-| Dependências | `requirements.txt` | Lista de bibliotecas Python necessárias para o pipeline |
-| Registries públicos | `datasets/*.csv`, `datasets/*.json` | Tabelas auditáveis com corpus, fontes externas, decisões, lacunas, evidências, claims permitidos/proibidos e estados metodológicos |
-| Schemas dos registries | `datasets/schemas/` | Estrutura esperada dos campos dos registries públicos |
-| Manifests | `manifests/` | Inventários e registros auditáveis de patches, assets, preflight e validação |
-| Documentação técnica | `docs/` | Explicação metodológica do pipeline, Protocolo C, DINO Sentinel-first, linhagem dos patches e governança dos claims |
-| Testes automatizados | `tests/` | Testes de consistência e regressão do pipeline |
-| Figuras finais | `outputs_public/figures/` | Figuras finais ou publicáveis usadas como apoio visual no artigo/apresentação |
-| Tabelas finais | `outputs_public/tables/` | Tabelas consolidadas de resultados, corpus ou apoio ao artigo |
-| Métricas finais | `outputs_public/metrics/` | Métricas estruturais, quantitativas ou de QA usadas como evidência de resultado |
-| Logs resumidos | `outputs_public/logs_summary/` | Registros resumidos de execução, testes e QA |
-| Relatórios de execução | `outputs_public/execution_reports/` | Relatórios finais de preflight, readiness, auditorias, validação externa ou execução do pipeline |
-| Declaração sobre modelo | `outputs_public/model/NO_OPERATIONAL_TRAINED_MODEL.md` | Explicita que o projeto não entrega pesos de classificador supervisionado operacional |
+| README | `README.md` | Descreve a entrega, a estrutura dos artefatos, os limites metodológicos e os parâmetros relevantes de execução. |
+| Código-fonte | `scripts/` | Scripts do pipeline Sentinel-first, DINOv2, QA, auditorias, análises estruturais, exportação de figuras/tabelas e orquestração. |
+| Configurações | `configs/` | Templates e checklists de execução local, incluindo variáveis de ambiente para execução DINO local controlada. |
+| Dependências | `requirements.txt` | Lista de bibliotecas Python necessárias para execução do pipeline. |
+| Registries públicos | `datasets/*.csv`, `datasets/*.json` | Tabelas auditáveis com corpus, fontes externas, decisões, lacunas, evidências, claims permitidos/proibidos e estados metodológicos. |
+| Schemas dos registries | `datasets/schemas/` | Estrutura esperada dos campos dos registries públicos. |
+| Manifests | `manifests/` | Inventários e registros auditáveis de patches, assets Sentinel, preflight e validação. |
+| Documentação técnica | `docs/` | Explicação metodológica do pipeline, Protocolo C, DINO Sentinel-first, linhagem dos patches e governança dos claims. |
+| Testes automatizados | `tests/` | Testes de consistência e regressão do pipeline. |
+| Figuras finais | `outputs_public/figures/` | Figuras finais ou publicáveis usadas como apoio visual no artigo/apresentação. |
+| Tabelas finais | `outputs_public/tables/` | Tabelas consolidadas de corpus, evidência externa, análise estrutural e apoio ao artigo. |
+| Métricas finais | `outputs_public/metrics/` | Métricas estruturais, quantitativas ou de QA usadas como evidência de resultado. |
+| Logs resumidos | `outputs_public/logs_summary/` | Registros resumidos de execução, testes e QA. |
+| Relatórios de execução | `outputs_public/execution_reports/` | Relatórios finais de preflight, readiness, QA automation, validação externa, rastreabilidade e execução do pipeline. |
+| Declaração sobre modelo | `outputs_public/model/NO_OPERATIONAL_TRAINED_MODEL.md` | Explicita que o projeto não entrega pesos de classificador supervisionado operacional. |
 
 ---
 
@@ -111,347 +116,364 @@ A tabela abaixo descreve os principais artefatos submetidos, sua função no pro
 
 A pasta `outputs_public/` concentra os arquivos finais leves usados para comprovar os resultados apresentados no artigo e na apresentação.
 
-### `outputs_public/figures/`
+O índice principal dos artefatos está em:
 
-Contém figuras finais ou publicáveis, como:
+```text
+outputs_public/execution_reports/final_delivery_artifact_index.md
+```
 
-- figura visual/espectral de Recife;
+Esse índice lista os arquivos finais entregues, seus caminhos, sua função no projeto e sua observação metodológica.
+
+### 6.1. Figuras finais
+
+Diretório:
+
+```text
+outputs_public/figures/
+```
+
+Contém figuras finais ou publicáveis, incluindo:
+
+- figura principal validada de Recife;
 - figuras finais de Petrópolis e Curitiba, quando disponíveis;
-- gráficos de PCA, clustering, vizinhança, outliers ou análise estrutural;
-- imagens finais usadas no artigo ou apresentação.
+- gráficos de PCA;
+- gráficos de clustering;
+- grafos de vizinhança;
+- mapas/matrizes de similaridade;
+- figuras de outliers, medoids e análise estrutural;
+- figuras finais usadas no artigo e/ou apresentação.
 
-### `outputs_public/tables/`
+A figura principal validada de Recife está registrada como:
 
-Contém tabelas finais ou auxiliares, como:
+```text
+outputs_public/figures/fig_recife_main_publication_v15_final.png
+```
+
+Essa figura usa o patch principal `REC_00205` como entrada visual/espectral e preserva o uso contextual da evidência, sem declarar ground truth operacional, classe, label ou predição.
+
+### 6.2. Tabelas finais
+
+Diretório:
+
+```text
+outputs_public/tables/
+```
+
+Contém tabelas finais ou auxiliares, incluindo:
 
 - tabela do corpus consolidado;
 - tabela dos 59 patches;
-- tabela por região;
+- distribuição por região;
 - tabelas de evidência externa;
-- tabelas de resultados ou apoio ao artigo.
+- tabelas de resultados usadas no artigo;
+- tabelas de DINOv2, PCA, vizinhos próximos, outliers e similaridade;
+- tabelas de apoio à interpretação metodológica.
 
-### `outputs_public/metrics/`
+### 6.3. Métricas finais
 
-Contém métricas finais ou resumos quantitativos, como:
+Diretório:
+
+```text
+outputs_public/metrics/
+```
+
+Contém métricas finais ou resumos quantitativos, incluindo:
 
 - métricas de QA;
-- métricas de PCA ou clustering;
+- métricas de PCA;
+- métricas de clustering;
 - resumos de vizinhos próximos;
 - resumos de outliers;
-- resultados quantitativos citados no artigo.
+- análise de similaridade;
+- robustez;
+- readiness;
+- sensibilidade;
+- resultados quantitativos citados ou derivados do artigo.
 
-### `outputs_public/logs_summary/`
+Essas métricas têm função descritiva, diagnóstica e estrutural. Elas não medem desempenho operacional de detecção de inundação.
 
-Contém logs leves e resumidos, como:
+### 6.4. Logs resumidos
+
+Diretório:
+
+```text
+outputs_public/logs_summary/
+```
+
+Contém logs leves e resumidos, incluindo:
 
 - log resumido de execução;
 - resultado de testes;
 - resumo de QA;
-- mensagens finais de validação.
+- mensagens finais de validação;
+- registros que documentam que o pipeline foi executado.
 
-### `outputs_public/execution_reports/`
+Logs brutos completos e diretórios locais pesados permanecem fora do repositório público.
 
-Contém relatórios finais de execução/auditoria, como:
+### 6.5. Relatórios de execução e auditoria
 
-- preflight;
-- readiness;
-- QA automation;
-- validação externa;
-- relatórios finais do pipeline.
+Diretório:
 
-### `outputs_public/model/`
+```text
+outputs_public/execution_reports/
+```
 
-O REV-P não entrega modelo supervisionado operacional treinado. Por isso, esta pasta contém uma declaração metodológica, e não pesos finais de classificador.
+Contém relatórios finais de execução/auditoria, incluindo:
 
-O arquivo esperado é:
+- report de preflight;
+- report de readiness;
+- report de QA automation;
+- report de validação externa;
+- report de rastreabilidade;
+- report de guardrails;
+- report final do pipeline;
+- índice final de artefatos da entrega.
+
+### 6.6. Modelo
+
+Diretório:
+
+```text
+outputs_public/model/
+```
+
+Este projeto **não entrega modelo supervisionado operacional treinado**.
+
+O arquivo abaixo explicita essa decisão metodológica:
 
 ```text
 outputs_public/model/NO_OPERATIONAL_TRAINED_MODEL.md
 ```
 
-Esse arquivo documenta que o uso de DINOv2 ocorre como encoder visual congelado para extração de embeddings, não como modelo operacional treinado para detecção ou predição.
+O REV-P usa DINOv2 como encoder visual congelado para extração de embeddings e análise estrutural. Não há pesos finais de classificador supervisionado a serem submetidos nesta etapa.
 
 ---
 
-## 7. Dados e arquivos não versionados
+## 7. DINOv2 Sentinel-first
 
-Por limite de tamanho, rastreabilidade operacional, licenciamento e organização científica, o repositório público não versiona arquivos brutos ou pesados.
+A trilha DINOv2 Sentinel-first usa imagens Sentinel como entrada visual e um encoder DINOv2 congelado para extração de embeddings.
 
-Não são versionados:
+No estado consolidado da entrega:
 
-- GeoTIFFs Sentinel brutos;
-- shapefiles e GeoJSONs pesados;
-- embeddings `.npz`;
-- caches locais;
-- arquivos intermediários completos;
-- modelos pesados;
-- outputs integrais de execução local;
-- pastas `local_runs/`;
-- ambientes virtuais Python;
-- arquivos temporários.
+- há 12 embeddings reais;
+- são 4 embeddings por região;
+- cada vetor possui 768 dimensões;
+- as dimensões individuais não são interpretadas como variáveis físicas diretas;
+- o vetor completo é usado para análise de similaridade, vizinhança, PCA, medoids, outliers e revisão estrutural.
 
-Esses artefatos são tratados como dados locais ou reprodutíveis a partir dos scripts, configurações e manifests. O que é versionado publicamente é a camada auditável: código, registries, manifests, documentação, testes, métricas resumidas, figuras finais, tabelas finais e relatórios públicos.
-
-Essa decisão evita que o repositório se torne impraticável para avaliação e preserva a separação entre:
-
-- dado bruto local;
-- evidência auditável pública;
-- resultado leve de entrega;
-- documentação metodológica.
+O DINOv2 não é usado como detector, classificador supervisionado ou preditor operacional de inundação.
 
 ---
 
-## 8. Parâmetros relevantes de execução
+## 8. Protocolo C e referência observacional
 
-O projeto não segue o formato simples `train.py` / `test.py`, pois não há treinamento supervisionado operacional nesta etapa. A execução é organizada por scripts numerados do pipeline, principalmente em `scripts/dino/`.
+O **Protocolo C** organiza o uso de evidências externas e referências observacionais candidatas.
 
-Os parâmetros de execução local são configurados por variáveis de ambiente e arquivos em `configs/`.
+Ele existe para separar:
 
-Principais variáveis usadas na execução DINO local controlada:
+- evidência contextual;
+- proxy físico-ambiental;
+- suporte territorial externo;
+- candidato de referência observacional;
+- ground truth operacional.
 
-| Variável | Função |
-|---|---|
-| `REVP_DINO_MODEL_PATH` | Caminho local para o modelo DINOv2. Não deve ser commitado com path absoluto real |
-| `REVP_SENTINEL_LOCAL_ROOT` | Diretório local contendo os arquivos Sentinel |
-| `REVP_DINO_VISUAL_ROOT` | Diretório local de assets visuais usados na execução |
-| `REVP_DINO_ASSET_ROOT` | Diretório local de assets auxiliares do pipeline |
-| `REVP_V1PQ_QUEUE_PATH` | Caminho relativo para a fila de execução DINO |
-| `REVP_DINO_ALLOW_DOWNLOAD` | Controla download automático de modelo. Deve permanecer `false` por segurança/reprodutibilidade |
-| `REVP_DINO_DRY_RUN` | Controla execução simulada. Valor padrão seguro: `true` |
-| `REVP_DINO_PIXEL_READ_ALLOWED` | Controla permissão de leitura real de pixels Sentinel |
-| `HF_HUB_OFFLINE` | Força modo offline do HuggingFace Hub |
-| `REVP_DINO_BATCH_SIZE` | Tamanho de lote para execução local |
-| `REVP_DINO_MAX_EXECUTE` | Número máximo de itens processados em execução controlada |
+No estado atual, o REV-P não promove automaticamente fontes externas a ground truth operacional. A ausência de ground truth operacional patch-level é tratada como uma limitação metodológica explícita e auditável.
 
-O template público de configuração não contém caminhos absolutos reais. Para executar localmente, deve-se copiar o template, preencher os caminhos apenas no ambiente local e nunca versionar o arquivo preenchido.
+Documentos relacionados estão em:
+
+```text
+docs/metodologia_cientifica/
+```
 
 ---
 
-## 9. Como preparar o ambiente local
+## 9. Linhagem dos patches
 
-### 9.1. Criar ambiente virtual
+Os patches são recortes territoriais pré-existentes sobre áreas urbanas de Recife, Petrópolis e Curitiba.
+
+O pipeline DINOv2 opera sobre imagens Sentinel associadas a esses patches, mas não redefine automaticamente seus limites territoriais.
+
+A documentação de linhagem e grounding está em:
+
+```text
+docs/patch_lineage_and_grounding.md
+```
+
+---
+
+## 10. O que não está versionado
+
+Por limitação de tamanho, licença, reprodutibilidade local ou política de entrega pública, os seguintes arquivos não são versionados no GitHub:
+
+- GeoTIFFs brutos;
+- shapefiles brutos;
+- GeoJSONs locais convertidos;
+- PE3D/MDE bruto;
+- embeddings `.npz` completos;
+- modelo DINO original;
+- caches;
+- ambientes virtuais;
+- diretórios `local_runs/` completos;
+- logs brutos extensos;
+- arquivos temporários de desenvolvimento;
+- dados privados do workspace original.
+
+Esses itens permanecem locais quando necessário. A entrega pública disponibiliza manifests, registries, relatórios, tabelas resumidas, figuras derivadas e logs leves.
+
+---
+
+## 11. Execução local
+
+### 11.1. Preparação do ambiente
+
+Exemplo de preparação em ambiente Python:
 
 ```bash
 python -m venv .venv
-```
-
-Linux/macOS:
-
-```bash
 source .venv/bin/activate
-```
-
-Windows PowerShell:
-
-```powershell
-.venv\Scripts\Activate.ps1
-```
-
-### 9.2. Instalar dependências
-
-```bash
 pip install -r requirements.txt
 ```
 
-Principais bibliotecas usadas:
+No Windows PowerShell:
 
-- `numpy`
-- `pandas`
-- `scikit-learn`
-- `matplotlib`
-- `torch`
-- `torchvision`
-- `timm`
-- `transformers`
-- `faiss-cpu`
-- `umap-learn`
-- `hdbscan`
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+```
 
----
-
-## 10. Execução básica dos testes
-
-Quando o ambiente de teste estiver disponível:
+### 11.2. Execução dos testes
 
 ```bash
-pip install pytest
 python -m pytest tests
 ```
 
-Os testes verificam consistência de scripts, registries, guardrails e etapas automatizadas do pipeline.
+### 11.3. Geração/validação dos artefatos públicos
 
----
+A pasta `outputs_public/` pode ser gerada, finalizada ou validada pelos scripts de organização da entrega.
 
-## 11. Execução local controlada do pipeline DINO
-
-A reprodução integral depende dos dados locais não versionados. Para execução controlada:
-
-1. Copiar o template de configuração local.
-2. Preencher os caminhos locais no ambiente da máquina.
-3. Executar os scripts de auditoria antes de qualquer leitura real de pixels.
-4. Manter `REVP_DINO_DRY_RUN=true` até que todos os gates passem.
-5. Habilitar leitura de pixels apenas em execução controlada e revisada.
-
-Exemplo de variáveis em PowerShell:
-
-```powershell
-$env:REVP_DINO_MODEL_PATH = "<CAMINHO_LOCAL_DO_MODELO_DINO>"
-$env:REVP_SENTINEL_LOCAL_ROOT = "<CAMINHO_LOCAL_DOS_SENTINEL>"
-$env:REVP_DINO_ALLOW_DOWNLOAD = "false"
-$env:HF_HUB_OFFLINE = "1"
-$env:REVP_DINO_DRY_RUN = "true"
-$env:REVP_DINO_PIXEL_READ_ALLOWED = "false"
-```
-
-Scripts de auditoria e execução local controlada ficam em:
-
-```text
-scripts/dino/
-```
-
-Exemplos de etapas documentadas no pipeline:
+Execução base:
 
 ```bash
-python scripts/dino/revp_v1qn_local_root_environment_audit.py
-python scripts/dino/revp_v1qo_smoke_asset_local_reconciliation.py
-python scripts/dino/revp_v1qg_local_dino_model_offline_audit.py
-python scripts/dino/revp_v1qi_local_asset_preprocessing_audit.py
-python scripts/dino/revp_v1qj_controlled_real_smoke_embedding_executor.py
+python scripts/repository/build_outputs_public_delivery.py
 ```
 
-A execução real só deve ocorrer após validação dos gates de auditoria e com os dados locais disponíveis.
+Finalização:
+
+```bash
+python scripts/repository/build_outputs_public_delivery.py --finalize
+```
+
+Validação:
+
+```bash
+python scripts/repository/build_outputs_public_delivery.py --validate-only
+```
+
+Esses comandos produzem ou verificam os artefatos públicos finais sem exigir que dados brutos pesados sejam versionados no GitHub.
 
 ---
 
-## 12. Principais scripts do projeto
+## 12. Parâmetros e decisões metodológicas relevantes
 
-A pasta `scripts/dino/` contém os scripts centrais da trilha Sentinel-first e DINO.
+Parâmetros e decisões fixadas nesta entrega:
 
-| Script | Função |
+| Item | Estado adotado |
 |---|---|
-| `revp_v1fu_dino_sentinel_input_manifest.py` | Gera/organiza o manifesto Sentinel-first de assets candidatos |
-| `revp_v1fv_dino_local_asset_preflight.py` | Executa preflight local de assets |
-| `revp_v1fx_dino_smoke_embedding_execution.py` | Executa etapa smoke de embeddings |
-| `revp_v1fy_dino_embedding_corpus_analysis.py` | Analisa o corpus de embeddings |
-| `revp_v1fz_dino_balanced_embedding_corpus.py` | Organiza corpus balanceado de embeddings |
-| `revp_v1ga_dino_embedding_structural_consistency_analysis.py` | Avalia consistência estrutural dos embeddings |
-| `revp_v1gd_dino_embedding_perturbation_robustness_diagnostics.py` | Executa diagnóstico de robustez por perturbação |
-| `revp_v1ge_dino_expanded_sentinel_embedding_corpus.py` | Expande o corpus Sentinel para embeddings |
-| `revp_v1gk_dino_pipeline_reproducibility_audit.py` | Audita reprodutibilidade do pipeline |
-| `revp_v1go_dino_pipeline_orchestrator.py` | Orquestra etapas do pipeline |
-| `revp_v1gq_gis_multicriteria_vulnerability_baseline.py` | Constrói baseline multicritério GIS |
-| `revp_v1gx_tcc_figures_and_tables_export_plan.py` | Planeja exportação de figuras e tabelas do TCC |
-| `revp_v1gy_tcc_visual_evidence_export_package.py` | Organiza pacote de evidência visual |
-| `revp_v1hc_sentinel_visual_review_preview_package.py` | Gera pacote de previews visuais Sentinel para revisão |
-
-Essa lista não esgota todos os scripts, mas indica os principais pontos de entrada da trilha metodológica.
-
----
-
-## 13. Como os artefatos comprovam os resultados do artigo
-
-Os resultados apresentados no artigo são comprovados por uma combinação de artefatos:
-
-| Resultado/afirmação | Artefatos correspondentes |
-|---|---|
-| Existência do corpus territorial de 59 patches | `datasets/`, `manifests/`, documentação em `docs/` |
-| Inventário Sentinel-first de 128 assets candidatos | manifests e scripts `revp_v1fu*` |
-| Separação entre corpus territorial e assets Sentinel | registries em `datasets/` e documentação metodológica |
-| Uso de DINOv2 como encoder congelado | scripts DINO, configs e documentação técnica |
-| Auditoria de evidências externas | registries de evidência externa em `datasets/` |
-| Governança de claims | registries e documentação sobre Protocolo C e limites metodológicos |
-| Figuras finais do artigo/apresentação | `outputs_public/figures/` |
-| Tabelas finais do artigo/apresentação | `outputs_public/tables/` |
-| Métricas e resultados quantitativos | `outputs_public/metrics/` |
-| Logs e relatórios de execução | `outputs_public/logs_summary/` e `outputs_public/execution_reports/` |
-| Ausência de modelo supervisionado operacional | `outputs_public/model/NO_OPERATIONAL_TRAINED_MODEL.md` |
+| Modo do projeto | `review-only` |
+| Fonte visual principal | Sentinel-first |
+| Encoder visual | DINOv2 congelado |
+| Dimensão dos embeddings | 768D |
+| Número de embeddings reais | 12 |
+| Regiões | Recife, Petrópolis e Curitiba |
+| Corpus territorial/contextual | 59 patches |
+| Assets Sentinel candidatos | 128 |
+| Modelo operacional treinado | Não entregue |
+| Ground truth operacional patch-level | Não declarado |
+| Labels binários | Não criados |
+| Classificação supervisionada | Não realizada como entrega operacional |
+| Uso das evidências externas | Contextual, auditável e metodológico |
+| Uso das figuras | Interpretação visual/espectral e suporte territorial externo |
+| Uso das métricas | Análise estrutural, QA, similaridade e revisão |
 
 ---
 
-## 14. Protocolo C e governança de claims
+## 13. Interpretação correta dos resultados
 
-O **Protocolo C** é a camada de governança que organiza evidências externas e referências observacionais candidatas.
+Os resultados do REV-P devem ser lidos como evidência de organização, auditoria e análise estrutural do corpus.
 
-Ele impede que evidências contextuais sejam promovidas automaticamente a:
+Interpretação permitida:
 
-- ground truth operacional;
-- label supervisionado;
-- classe binária;
-- validação de evento observado;
-- positivo/negativo de treinamento.
+- análise de coerência externa de suscetibilidade;
+- suporte territorial externo;
+- leitura visual/espectral Sentinel;
+- análise estrutural por embeddings;
+- identificação de vizinhos próximos;
+- identificação de outliers e medoids;
+- PCA e clustering exploratórios;
+- QA e rastreabilidade;
+- revisão humana orientada por evidências.
 
-A função do Protocolo C é separar:
+Interpretação não permitida:
 
-- evidência contextual;
-- suporte territorial;
-- referência observacional candidata;
-- lacuna metodológica;
-- uso permitido;
-- uso proibido.
-
-Essa camada é fundamental para manter a validade científica da entrega.
-
----
-
-## 15. Observação sobre modelo treinado
-
-Esta entrega não inclui pesos de modelo supervisionado operacional porque o projeto ainda não possui esse tipo de modelo.
-
-O componente DINOv2 é usado como **encoder visual congelado**, responsável por gerar representações vetoriais de imagens Sentinel. Esses embeddings apoiam análise estrutural, vizinhança, clusterização, outliers e revisão humana.
-
-Portanto, não há arquivo equivalente a:
-
-```text
-output/model/final_model.pt
-```
-
-ou
-
-```text
-output/model/weights.pth
-```
-
-A ausência desses arquivos é intencional e está documentada em:
-
-```text
-outputs_public/model/NO_OPERATIONAL_TRAINED_MODEL.md
-```
+- detecção operacional de inundação;
+- predição de enchente;
+- validação automática de evento observado;
+- classe supervisionada;
+- label binário;
+- negativo por ausência de evidência;
+- ground truth patch-level;
+- desempenho operacional de classificador.
 
 ---
 
-## 16. Observação sobre cronograma e integridade da entrega
+## 14. Relação com a entrega acadêmica
 
-Este repositório deve ser avaliado conforme o estado existente até a data de entrega definida na tarefa.
+Este repositório foi organizado para atender à exigência de disponibilizar uma pasta pública com todos os artefatos relevantes do projeto.
 
-Após a data de entrega, não devem ser considerados commits, arquivos ou atualizações posteriores.
+A entrega inclui:
 
-Para garantir reprodutibilidade da avaliação, recomenda-se que o avaliador considere:
-
-- o link público do repositório;
-- o histórico de commits até a data de entrega;
-- os artefatos públicos presentes em `outputs_public/`;
-- os registries e manifests públicos;
-- a documentação metodológica em `docs/`;
-- os testes e scripts versionados.
-
----
-
-## 17. Resumo final da entrega
-
-Esta entrega contém:
-
-- README objetivo com descrição dos artefatos;
-- código-fonte do pipeline;
-- dependências Python;
-- configurações e templates de execução;
-- registries e schemas públicos;
-- manifests auditáveis;
+- código-fonte;
 - documentação técnica;
-- testes automatizados;
+- README objetivo;
+- parâmetros de execução;
+- registries e manifests;
+- tabelas auxiliares;
 - figuras finais;
-- tabelas finais;
-- métricas e logs resumidos;
-- relatórios públicos de execução;
-- declaração formal de ausência de modelo supervisionado operacional.
+- métricas finais;
+- logs resumidos;
+- relatórios de execução;
+- declaração explícita sobre ausência de modelo operacional treinado.
 
-A estrutura submetida comprova a evolução metodológica do projeto, os resultados apresentados no artigo e a organização dos artefatos relevantes para avaliação.
+Os arquivos estão organizados por função e identificados por diretório, com índice final em:
+
+```text
+outputs_public/execution_reports/final_delivery_artifact_index.md
+```
+
+---
+
+## 15. Como citar ou navegar pelo repositório
+
+Para uma revisão rápida, recomenda-se seguir esta ordem:
+
+1. `README.md`
+2. `outputs_public/README.md`
+3. `outputs_public/execution_reports/final_delivery_artifact_index.md`
+4. `outputs_public/figures/`
+5. `outputs_public/tables/`
+6. `outputs_public/metrics/`
+7. `outputs_public/execution_reports/`
+8. `docs/`
+9. `datasets/`
+10. `manifests/`
+11. `scripts/`
+12. `tests/`
+
+---
+
+## 16. Observação final
+
+O REV-P deve ser entendido como um pipeline auditável, Sentinel-first e review-only para organizar evidências físico-ambientais urbanas, suporte territorial externo e análise visual-estrutural com DINOv2.
+
+A contribuição principal do projeto não é entregar um detector operacional, mas consolidar uma base rastreável, validável e metodologicamente segura para futuras etapas de referência observacional, revisão supervisionada e eventual modelagem operacional.
