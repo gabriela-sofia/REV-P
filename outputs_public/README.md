@@ -10,6 +10,11 @@ Este diretorio reune os artefatos finais utilizados na entrega do REV-P. Os resu
 - `logs_summary/`: registros resumidos das validacoes executadas durante a preparacao da entrega.
 - `execution_reports/`: relatorios de execucao, rastreabilidade, QA, selecao de figuras, DINO e limites metodologicos.
 - `model/`: declaracao da ausencia de modelo supervisionado operacional.
+- `article_crosswalk/`: correspondencia entre as figuras do artigo e os artefatos publicos.
+- `appendix_figures/`: figuras de apendice organizadas por funcao metodologica.
+- `appendix_visual_audit/`: figuras diagnosticas e justificativas de curadoria.
+- `selection_audit/`: matriz e relatorio das decisoes de selecao.
+- `review_package/`: navegacao curta para banca, orientacao e avaliacao.
 
 ## Resultados comprovados
 
@@ -33,3 +38,11 @@ python scripts/repository/build_outputs_public_delivery.py --validate-only
 ```
 
 O indice principal dos artefatos esta em [`execution_reports/final_delivery_artifact_index.md`](execution_reports/final_delivery_artifact_index.md).
+
+## Regeneracao das figuras auxiliares
+
+As figuras auxiliares em `figures/` foram regeneradas com os mesmos caminhos publicos, usando as tabelas e metricas resumidas desta entrega. As figuras principais de patches e regioes foram preservadas.
+
+- Relatorio: [`execution_reports/figures_regeneration_report.md`](execution_reports/figures_regeneration_report.md)
+- Manifesto: [`tables/figure_regeneration_manifest.csv`](tables/figure_regeneration_manifest.csv)
+- Versoes anteriores: [`appendix_visual_audit/original_auxiliary_figures/`](appendix_visual_audit/original_auxiliary_figures/)
