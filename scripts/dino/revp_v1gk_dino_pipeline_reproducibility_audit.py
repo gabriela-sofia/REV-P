@@ -4,6 +4,7 @@ import argparse
 import csv
 import json
 import shutil
+import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -84,15 +85,21 @@ def local_runs_ignored() -> bool:
 
 
 def forbidden_versioned_artifacts() -> list[str]:
-    found: list[str] = []
-    for path in ROOT.rglob("*"):
-        if ".git" in path.parts or "local_runs" in path.parts:
-            continue
-        if path.is_file() and path.suffix.lower() in FORBIDDEN_VERSIONED_EXTENSIONS:
-            found.append(path.as_posix())
-        if path.is_dir() and path.name in {"data", "outputs"}:
-            found.append(path.as_posix())
-    return sorted(found)
+    result = subprocess.run(
+        ["git", "ls-files", "-z"],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+    )
+    return sorted(
+        path.as_posix()
+        for item in result.stdout.split("\0")
+        if item
+        for path in [Path(item)]
+        if path.parts[0] in {"data", "outputs"} or path.suffix.lower() in FORBIDDEN_VERSIONED_EXTENSIONS
+    )
 
 
 def file_has_any(path: Path, terms: list[str]) -> bool:

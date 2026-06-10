@@ -6,6 +6,7 @@ import hashlib
 import json
 import math
 import shutil
+import subprocess
 import sys
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
@@ -91,15 +92,21 @@ def is_local_runs_ignored() -> bool:
 
 
 def forbidden_versioned_artifacts() -> list[str]:
-    found: list[str] = []
-    for path in ROOT.rglob("*"):
-        if ".git" in path.parts or "local_runs" in path.parts:
-            continue
-        if path.is_dir() and path.name in FORBIDDEN_REPO_DIRS:
-            found.append(rel(path))
-        elif path.is_file() and path.suffix.lower() in FORBIDDEN_VERSIONED_EXTENSIONS:
-            found.append(rel(path))
-    return sorted(found)
+    result = subprocess.run(
+        ["git", "ls-files", "-z"],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+    )
+    return sorted(
+        path.as_posix()
+        for item in result.stdout.split("\0")
+        if item
+        for path in [Path(item)]
+        if path.parts[0] in FORBIDDEN_REPO_DIRS or path.suffix.lower() in FORBIDDEN_VERSIONED_EXTENSIONS
+    )
 
 
 def npz_sha256(path: Path) -> str:

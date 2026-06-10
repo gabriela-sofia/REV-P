@@ -1,0 +1,5 @@
+comandos_executados: git status --short; git diff --check; python -m pytest tests --collect-only -q
+status_inicial: COLETA_BLOQUEADA_POR_DOIS_MODULOS_AUSENTES_EM_SCRIPTS_REFACTOR
+diagnostico: os testes de terminologia dependiam de APIs reais ausentes; a validacao DINO confundia diretorios locais ignorados com artefatos versionados
+decisao_metodologica: corrigir compatibilidade e consultar somente arquivos rastreados pelo Git
+observacao_metodologica: Os limites cientificos do REV-P foram preservados.

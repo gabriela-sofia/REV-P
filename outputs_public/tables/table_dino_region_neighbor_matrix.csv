@@ -1,0 +1,10 @@
+query_region,neighbor_region,edge_count,edge_share,methodological_note
+Curitiba,Curitiba,6,0.5,"Resultado estrutural destinado a revisao. Nao constitui ground truth operacional, confirmacao de evento observado, classe, label, predicao ou treinamento supervisionado."
+Curitiba,Petropolis,1,0.083333,"Resultado estrutural destinado a revisao. Nao constitui ground truth operacional, confirmacao de evento observado, classe, label, predicao ou treinamento supervisionado."
+Curitiba,Recife,5,0.416667,"Resultado estrutural destinado a revisao. Nao constitui ground truth operacional, confirmacao de evento observado, classe, label, predicao ou treinamento supervisionado."
+Petropolis,Curitiba,3,0.25,"Resultado estrutural destinado a revisao. Nao constitui ground truth operacional, confirmacao de evento observado, classe, label, predicao ou treinamento supervisionado."
+Petropolis,Petropolis,4,0.333333,"Resultado estrutural destinado a revisao. Nao constitui ground truth operacional, confirmacao de evento observado, classe, label, predicao ou treinamento supervisionado."
+Petropolis,Recife,5,0.416667,"Resultado estrutural destinado a revisao. Nao constitui ground truth operacional, confirmacao de evento observado, classe, label, predicao ou treinamento supervisionado."
+Recife,Curitiba,4,0.333333,"Resultado estrutural destinado a revisao. Nao constitui ground truth operacional, confirmacao de evento observado, classe, label, predicao ou treinamento supervisionado."
+Recife,Petropolis,4,0.333333,"Resultado estrutural destinado a revisao. Nao constitui ground truth operacional, confirmacao de evento observado, classe, label, predicao ou treinamento supervisionado."
+Recife,Recife,4,0.333333,"Resultado estrutural destinado a revisao. Nao constitui ground truth operacional, confirmacao de evento observado, classe, label, predicao ou treinamento supervisionado."

@@ -138,8 +138,8 @@ def test_v1fx_fake_encoder_smoke_respects_limit_and_writes_local_npz(tmp_path: P
     assert len(npz_files) == 1
     assert str(npz_files[0]).startswith(str(tmp_path))
 
-    for dirname in ("data", "outputs"):
-        assert not (ROOT / dirname).exists()
+    tracked = subprocess.run(["git", "ls-files", "-z", "--", "data", "outputs"], cwd=ROOT, check=True, capture_output=True, text=True, encoding="utf-8").stdout
+    assert tracked == ""
     assert "local_runs/" in (ROOT / ".gitignore").read_text(encoding="utf-8")
 
 

@@ -1,0 +1,11 @@
+{
+  "file_count": 55,
+  "indexed_artifact_count": 55,
+  "expected_artifact_count": 55,
+  "missing_required_files": [],
+  "missing_indexed_files": [],
+  "oversize_files": [],
+  "absolute_path_hits": [],
+  "risky_language_context_hits": [],
+  "status": "PASS"
+}

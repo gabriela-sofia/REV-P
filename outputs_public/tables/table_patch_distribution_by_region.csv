@@ -1,0 +1,4 @@
+region,patch_count,coherent_count,partially_coherent_count,sentinel_candidate_assets,dino_embeddings
+Recife,18,18,0,37,4
+Curitiba,14,6,8,43,4
+Petropolis,27,8,19,48,4

@@ -33,16 +33,13 @@ def test_v1fu_script_creates_review_only_dino_manifest() -> None:
         for path in tracked_outputs:
             assert path.exists(), path
 
-        for dirname in FORBIDDEN_DIRS:
-            assert not (ROOT / dirname).exists(), dirname
-
+        tracked = subprocess.run(["git", "ls-files", "-z"], cwd=ROOT, check=True, capture_output=True, text=True, encoding="utf-8").stdout.split("\0")
         forbidden_files = [
             path
-            for path in ROOT.rglob("*")
-            if ".git" not in path.parts
-            and "local_runs" not in path.parts
-            and path.is_file()
-            and path.suffix.lower() in FORBIDDEN_EXTENSIONS
+            for item in tracked
+            if item
+            for path in [Path(item)]
+            if path.parts[0] in FORBIDDEN_DIRS or path.suffix.lower() in FORBIDDEN_EXTENSIONS
         ]
         assert forbidden_files == []
 

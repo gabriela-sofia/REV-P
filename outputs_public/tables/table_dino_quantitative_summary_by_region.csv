@@ -1,0 +1,4 @@
+region,embedding_count,mean_intra_region_similarity,medoid_patch_id,outlier_patch_id,methodological_note
+Curitiba,4,0.822869,CUR_00038,CUR_00350,"Resultado estrutural destinado a revisao. Nao constitui ground truth operacional, confirmacao de evento observado, classe, label, predicao ou treinamento supervisionado."
+Petropolis,4,0.666301,PET_00104,PET_00016,"Resultado estrutural destinado a revisao. Nao constitui ground truth operacional, confirmacao de evento observado, classe, label, predicao ou treinamento supervisionado."
+Recife,4,0.648344,REC_00205,REC_00019,"Resultado estrutural destinado a revisao. Nao constitui ground truth operacional, confirmacao de evento observado, classe, label, predicao ou treinamento supervisionado."

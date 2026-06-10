@@ -1,0 +1,13 @@
+patch_id,region,pca_1,pca_2,review_only,methodological_note
+CUR_00038,Curitiba,4.136553,2.784849,True,"Resultado estrutural destinado a revisao. Nao constitui ground truth operacional, confirmacao de evento observado, classe, label, predicao ou treinamento supervisionado."
+CUR_00249,Curitiba,2.952177,1.383736,True,"Resultado estrutural destinado a revisao. Nao constitui ground truth operacional, confirmacao de evento observado, classe, label, predicao ou treinamento supervisionado."
+CUR_00350,Curitiba,3.916777,12.190525,True,"Resultado estrutural destinado a revisao. Nao constitui ground truth operacional, confirmacao de evento observado, classe, label, predicao ou treinamento supervisionado."
+CUR_00357,Curitiba,1.567863,6.416767,True,"Resultado estrutural destinado a revisao. Nao constitui ground truth operacional, confirmacao de evento observado, classe, label, predicao ou treinamento supervisionado."
+PET_00016,Petropolis,-16.824894,-2.469243,True,"Resultado estrutural destinado a revisao. Nao constitui ground truth operacional, confirmacao de evento observado, classe, label, predicao ou treinamento supervisionado."
+PET_00104,Petropolis,3.83604,-6.078326,True,"Resultado estrutural destinado a revisao. Nao constitui ground truth operacional, confirmacao de evento observado, classe, label, predicao ou treinamento supervisionado."
+PET_00119,Petropolis,1.220571,-2.60467,True,"Resultado estrutural destinado a revisao. Nao constitui ground truth operacional, confirmacao de evento observado, classe, label, predicao ou treinamento supervisionado."
+PET_00140,Petropolis,4.305045,-3.129788,True,"Resultado estrutural destinado a revisao. Nao constitui ground truth operacional, confirmacao de evento observado, classe, label, predicao ou treinamento supervisionado."
+REC_00019,Recife,-16.091707,2.651436,True,"Resultado estrutural destinado a revisao. Nao constitui ground truth operacional, confirmacao de evento observado, classe, label, predicao ou treinamento supervisionado."
+REC_00183,Recife,5.001636,-1.005195,True,"Resultado estrutural destinado a revisao. Nao constitui ground truth operacional, confirmacao de evento observado, classe, label, predicao ou treinamento supervisionado."
+REC_00204,Recife,2.117644,-6.80359,True,"Resultado estrutural destinado a revisao. Nao constitui ground truth operacional, confirmacao de evento observado, classe, label, predicao ou treinamento supervisionado."
+REC_00205,Recife,3.862295,-3.3365,True,"Resultado estrutural destinado a revisao. Nao constitui ground truth operacional, confirmacao de evento observado, classe, label, predicao ou treinamento supervisionado."

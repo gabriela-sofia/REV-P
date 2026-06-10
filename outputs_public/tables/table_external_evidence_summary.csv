@@ -1,0 +1,4 @@
+region,role,support,limitation
+Recife,Strong contextual case,PE3D terrain plus external susceptibility evidence,"Resultado estrutural destinado a revisao. Nao constitui ground truth operacional, confirmacao de evento observado, classe, label, predicao ou treinamento supervisionado."
+Curitiba,Methodological contrast,GeoCuritiba local terrain context,"Contrast does not create formal negatives. Resultado estrutural destinado a revisao. Nao constitui ground truth operacional, confirmacao de evento observado, classe, label, predicao ou treinamento supervisionado."
+Petropolis,Complex contextual case,Partial terrain and hydrographic sidecar context,"Contextual sidecar does not reclassify patches. Resultado estrutural destinado a revisao. Nao constitui ground truth operacional, confirmacao de evento observado, classe, label, predicao ou treinamento supervisionado."

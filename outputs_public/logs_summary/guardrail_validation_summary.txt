@@ -1,0 +1,7 @@
+comando_executado: verificacao dos limites metodologicos dos artefatos publicos
+status: PASS_COM_LIMITES_METODOLOGICOS
+inputs_usados: tabelas, metricas, relatorios e figuras selecionadas
+outputs_gerados: final_guardrails_report.md and table_claims_guardrails_summary.csv
+falhas_ou_bloqueadores_esperados: termos restritos aparecem somente em negacoes ou na descricao de limitacoes
+data_hora_local: 2026-06-09T19:01:39-03:00
+observacao_metodologica: Resultado estrutural destinado a revisao. Nao constitui ground truth operacional, confirmacao de evento observado, classe, label, predicao ou treinamento supervisionado.

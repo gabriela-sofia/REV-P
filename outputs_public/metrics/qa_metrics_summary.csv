@@ -1,0 +1,8 @@
+metric,value,status
+canonical_patch_count,59,PASS
+regional_patch_sum,59,PASS
+status_patch_sum,59,PASS
+sentinel_candidate_asset_count,128,PASS
+real_dino_embedding_count,12,PASS
+dino_embedding_dimension,768,PASS
+umap_status,OMITIDO_DEPENDENCIA_OPCIONAL_AUSENTE,INFO

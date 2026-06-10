@@ -1,0 +1,15 @@
+comandos_executados:
+- python -m pytest tests --collect-only -q
+- python -m pytest tests -k dino -q
+- python -m pytest tests -k "qa or guardrail or registry" -q
+- python -m pytest tests/test_revp_v1gq_gis_multicriteria_vulnerability_baseline.py tests/test_revp_v1gr_gis_land_use_readiness_and_conversion_audit.py tests/test_revp_v1gs_gis_land_use_geometry_enablement.py tests/test_revp_v1gt_gis_land_use_coverage_expansion_audit.py tests/test_revp_v1mm_arcgis_full_feature_pagination_domain_decode.py tests/test_revp_v1ui_arcgis_geoserver_resolver.py -q
+- python -m pytest tests -q --tb=short --durations=30
+status: PASS_NOS_SUBCONJUNTOS_COM_TIMEOUT_DA_SUITE_COMPLETA
+coleta: 4854 testes coletados
+bateria_dino: 392 aprovados; 4462 nao selecionados
+qa_guardrails_registries: 692 aprovados; 2 omitidos; 4160 nao selecionados
+gis_explicito: 337 aprovados
+suite_completa: tempo limite de 30 minutos atingido sem conclusao
+dependencia_opcional: UMAP omitido por ausencia de umap-learn
+falhas_restantes_confirmadas: nenhuma nos subconjuntos concluidos
+observacao_metodologica: Nenhum guardrail cientifico foi relaxado.

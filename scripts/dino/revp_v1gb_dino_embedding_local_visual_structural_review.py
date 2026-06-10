@@ -6,6 +6,7 @@ import importlib.util
 import json
 import math
 import shutil
+import subprocess
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
@@ -80,15 +81,19 @@ def local_runs_ignored() -> bool:
 
 
 def forbidden_versioned_artifacts() -> list[str]:
-    found: list[str] = []
-    for path in ROOT.rglob("*"):
-        if ".git" in path.parts or "local_runs" in path.parts:
-            continue
-        if path.is_dir() and path.name in FORBIDDEN_REPO_DIRS:
-            found.append(str(path))
-        elif path.is_file() and path.suffix.lower() in FORBIDDEN_VERSIONED_EXTENSIONS:
-            found.append(str(path))
-    return found
+    result = subprocess.run(["git", "ls-files", "-z"], cwd=ROOT, capture_output=True, check=False)
+    if result.returncode != 0:
+        return ["GIT_LS_FILES_FAILED"]
+    tracked = [Path(item.decode("utf-8", errors="replace")) for item in result.stdout.split(b"\0") if item]
+    return [
+        path.as_posix()
+        for path in tracked
+        if path.parts
+        and (
+            path.parts[0] in FORBIDDEN_REPO_DIRS
+            or path.suffix.lower() in FORBIDDEN_VERSIONED_EXTENSIONS
+        )
+    ]
 
 
 def load_embeddings(manifest: Path) -> tuple[list[dict[str, str]], np.ndarray, list[str]]:

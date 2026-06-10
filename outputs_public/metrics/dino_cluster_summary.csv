@@ -1,0 +1,4 @@
+exploratory_cluster_id,patch_count,regions_present,patch_ids,silhouette_cosine_global,cluster_is_class,methodological_note
+0,10,Curitiba|Petropolis|Recife,CUR_00038|CUR_00249|CUR_00350|CUR_00357|PET_00104|PET_00119|PET_00140|REC_00183|REC_00204|REC_00205,0.536497,False,"Resultado estrutural destinado a revisao. Nao constitui ground truth operacional, confirmacao de evento observado, classe, label, predicao ou treinamento supervisionado."
+1,1,Recife,REC_00019,0.536497,False,"Resultado estrutural destinado a revisao. Nao constitui ground truth operacional, confirmacao de evento observado, classe, label, predicao ou treinamento supervisionado."
+2,1,Petropolis,PET_00016,0.536497,False,"Resultado estrutural destinado a revisao. Nao constitui ground truth operacional, confirmacao de evento observado, classe, label, predicao ou treinamento supervisionado."

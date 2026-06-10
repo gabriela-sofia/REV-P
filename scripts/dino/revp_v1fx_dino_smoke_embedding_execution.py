@@ -6,6 +6,7 @@ import hashlib
 import json
 import os
 import shutil
+import subprocess
 import sys
 import time
 from collections import Counter
@@ -174,15 +175,21 @@ def is_local_runs_ignored() -> bool:
 
 
 def forbidden_versioned_artifacts() -> list[str]:
-    found: list[str] = []
-    for path in ROOT.rglob("*"):
-        if ".git" in path.parts or "local_runs" in path.parts:
-            continue
-        if path.is_dir() and path.name in FORBIDDEN_REPO_DIRS:
-            found.append(rel(path))
-        elif path.is_file() and path.suffix.lower() in FORBIDDEN_VERSIONED_EXTENSIONS:
-            found.append(rel(path))
-    return sorted(found)
+    result = subprocess.run(
+        ["git", "ls-files", "-z"],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+    )
+    return sorted(
+        path.as_posix()
+        for item in result.stdout.split("\0")
+        if item
+        for path in [Path(item)]
+        if path.parts[0] in FORBIDDEN_REPO_DIRS or path.suffix.lower() in FORBIDDEN_VERSIONED_EXTENSIONS
+    )
 
 
 def environment_diagnostics() -> dict[str, Any]:
@@ -655,7 +662,7 @@ def make_qa(
         all(row.get("claim_scope") == REVIEW_ONLY_CLAIM for row in smoke_rows) if smoke_rows else True,
         REVIEW_ONLY_CLAIM,
     )
-    add("no data/, outputs/, docs/ created", not any((ROOT / name).exists() for name in FORBIDDEN_REPO_DIRS), "repo root checked")
+    add("no forbidden files are versioned", not forbidden, "; ".join(forbidden) if forbidden else "none found")
     add("local_runs/ is gitignored", is_local_runs_ignored(), ".gitignore contains local_runs/")
     add("embeddings are local-only and ignored by Git", is_local_runs_ignored(), "embedding files are under local_runs only")
     add("failures CSV exists", True, "failures CSV written")

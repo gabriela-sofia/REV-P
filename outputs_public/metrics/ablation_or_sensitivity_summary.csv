@@ -1,0 +1,7 @@
+context_layer_removed,expected_effect,operational_metric
+terrain_topography,"Weakens contextual interpretation, especially Recife and Curitiba.",NOT_APPLICABLE
+hydrology_drainage,Weakens contextual interpretation in all regions.,NOT_APPLICABLE
+institutional_context,Reduces context without redefining status.,NOT_APPLICABLE
+visual_cartographic_review,Requires renewed manual review.,NOT_APPLICABLE
+sar_exploratory,Reduces exploratory context where available.,NOT_APPLICABLE
+geocuritiba_sidecar,Reduces local Curitiba context without reclassification.,NOT_APPLICABLE

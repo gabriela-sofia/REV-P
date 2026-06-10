@@ -1,0 +1,6 @@
+claim_type,statement
+allowed,Contextual evidence and external territorial support.
+allowed,Frozen DINOv2 embeddings support visual-structural similarity and review prioritization.
+permitido,"PCA, vizinhancas, medoides, valores atipicos e robustez constituem diagnosticos estruturais exploratorios."
+forbidden,Operational flood detection or prediction.
+forbidden,"Observed-event validation, binary patch label, operational accuracy, or supervised classifier claim."

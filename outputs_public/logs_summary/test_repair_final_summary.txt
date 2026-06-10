@@ -1,0 +1,6 @@
+comandos_executados: coleta; bateria DINO; QA/guardrails/registries; GIS explicito; suite completa; validacao de outputs_public
+status: PASS_NOS_SUBCONJUNTOS_COM_TIMEOUT_DA_SUITE_COMPLETA
+resultados: coleta=4854; DINO=392 aprovados; QA_guardrails_registries=692 aprovados e 2 omitidos; GIS_explicito=337 aprovados
+suite_completa: tempo limite de 30 minutos atingido sem conclusao
+guardrails: nenhum limite cientifico foi relaxado; C4 e treinamento supervisionado permanecem bloqueados
+observacao_metodologica: Os resultados DINO permanecem restritos a analise estrutural e revisao.

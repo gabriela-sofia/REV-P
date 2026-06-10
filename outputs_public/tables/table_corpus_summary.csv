@@ -1,0 +1,6 @@
+corpus_layer,count,unit,scientific_role,can_create_label
+territorial_contextual_patches,59,patch,Revisao contextual e territorial,False
+coherent_external_susceptibility,32,patch,Coerencia contextual externa,False
+partially_coherent_external_susceptibility,27,patch,Coerencia contextual externa parcial,False
+sentinel_candidate_assets,128,referencia_de_ativo,Inventario de candidatos Sentinel-first,False
+real_dinov2_embeddings,12,embedding,Analise visual-estrutural destinada a revisao,False

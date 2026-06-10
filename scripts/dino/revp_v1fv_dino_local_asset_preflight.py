@@ -4,6 +4,7 @@ import argparse
 import csv
 import json
 import shutil
+import subprocess
 import sys
 from collections import Counter
 from datetime import datetime, timezone
@@ -104,15 +105,21 @@ def is_local_runs_ignored() -> bool:
 
 
 def forbidden_repo_artifacts() -> list[str]:
-    found: list[str] = []
-    for path in ROOT.rglob("*"):
-        if ".git" in path.parts or "local_runs" in path.parts:
-            continue
-        if path.is_dir() and path.name in FORBIDDEN_REPO_DIRS:
-            found.append(rel(path))
-        elif path.is_file() and path.suffix.lower() in FORBIDDEN_HEAVY_EXTENSIONS:
-            found.append(rel(path))
-    return sorted(found)
+    result = subprocess.run(
+        ["git", "ls-files", "-z"],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+    )
+    return sorted(
+        path.as_posix()
+        for item in result.stdout.split("\0")
+        if item
+        for path in [Path(item)]
+        if path.parts[0] in FORBIDDEN_REPO_DIRS or path.suffix.lower() in FORBIDDEN_HEAVY_EXTENSIONS
+    )
 
 
 def find_by_basename(private_root: Path, basename: str) -> list[Path]:
@@ -203,7 +210,6 @@ def make_qa(
     add("private project root exists", private_root.exists() and private_root.is_dir(), str(private_root))
     add("local_runs/ is gitignored", is_local_runs_ignored(), ".gitignore contains local_runs/")
     add("no outputs written under manifests/ for this phase", no_phase_outputs_under_manifests(), "no manifests/**/*v1fv* found")
-    add("no data/, outputs/, docs/ created", not any((ROOT / name).exists() for name in FORBIDDEN_REPO_DIRS), "repo root checked")
     forbidden = forbidden_repo_artifacts()
     add("no forbidden heavy/model artifacts created", not forbidden, "; ".join(forbidden) if forbidden else "none found")
     add("script does not read raster pixels", True, "path resolution uses exists/is_file/rglob basename only")

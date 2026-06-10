@@ -1,0 +1,5 @@
+area,status,reason
+public_delivery,PRONTO_PARA_REVISAO,Os artefatos finais e os registros de rastreabilidade foram consolidados.
+dino_structural_analysis,PRONTO_PARA_REVISAO_ESTRUTURAL,Foram analisados 12 embeddings reais extraidos com codificador congelado.
+supervised_operational_model,BLOCKED,Nao ha ground truth operacional no nivel de patch nem negativos formais.
+protocol_c_c4,C4_BLOCKED_NO_FORMAL_NEGATIVES,A evidencia de negativos formais permanece ausente.

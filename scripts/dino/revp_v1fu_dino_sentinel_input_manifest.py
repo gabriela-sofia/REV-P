@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import csv
 import json
+import subprocess
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
@@ -133,20 +134,27 @@ def is_inside_repo(path: Path) -> bool:
 
 
 def forbidden_paths() -> list[str]:
+    result = subprocess.run(
+        ["git", "ls-files", "-z"],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+    )
     found: list[str] = []
-    for path in ROOT.rglob("*"):
-        if ".git" in path.parts or "local_runs" in path.parts:
+    for item in result.stdout.split("\0"):
+        if not item:
             continue
+        path = Path(item)
         name_lower = path.name.lower()
-        if path.is_dir() and name_lower in FORBIDDEN_DIR_NAMES:
-            found.append(rel(path))
-        elif path.is_file():
-            if path.name in FORBIDDEN_FILE_NAMES:
-                found.append(rel(path))
-            elif path.suffix.lower() in FORBIDDEN_EXTENSIONS:
-                found.append(rel(path))
-            elif "cbers" in name_lower:
-                found.append(rel(path))
+        if (
+            path.parts[0].lower() in FORBIDDEN_DIR_NAMES
+            or path.name in FORBIDDEN_FILE_NAMES
+            or path.suffix.lower() in FORBIDDEN_EXTENSIONS
+            or "cbers" in name_lower
+        ):
+            found.append(path.as_posix())
     return sorted(found)
 
 

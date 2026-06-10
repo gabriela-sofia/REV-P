@@ -1,0 +1,4 @@
+region,mean_cosine_drift,max_cosine_drift,robustness_status,methodological_note
+Curitiba,0.043464762469132744,0.2517693042755127,PASS,Estabilidade sob perturbacoes para revisao estrutural; nao representa desempenho operacional.
+Petrópolis,0.07756141324838002,0.3943045735359192,PASS,Estabilidade sob perturbacoes para revisao estrutural; nao representa desempenho operacional.
+Recife,0.06020529319842657,0.2789589762687683,PASS,Estabilidade sob perturbacoes para revisao estrutural; nao representa desempenho operacional.

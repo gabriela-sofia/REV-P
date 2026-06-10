@@ -1,0 +1,8 @@
+metric,value,interpretation
+embedding_count,12,"Embeddings reais com 768 dimensoes, destinados a revisao estrutural."
+pair_count,66,Pares unicos usados no calculo de similaridade cosseno.
+mean_similarity_all_pairs,0.696339,Media descritiva da similaridade estrutural.
+min_similarity_all_pairs,0.350524,Menor similaridade estrutural observada.
+max_similarity_all_pairs,0.916735,Maior similaridade estrutural observada.
+mean_similarity_same_region,0.712505,Resumo descritivo; a regiao nao define classe.
+mean_similarity_cross_region,0.690276,Resumo descritivo; a regiao nao define classe.

@@ -129,8 +129,8 @@ def test_v1fv_resolves_found_missing_and_ambiguous_without_repo_outputs(tmp_path
     assert summary["embeddings_extracted"] is False
     assert summary["ready_for_v1fw"] is True
 
-    for dirname in ("data", "outputs"):
-        assert not (ROOT / dirname).exists()
+    tracked = subprocess.run(["git", "ls-files", "-z", "--", "data", "outputs"], cwd=ROOT, check=True, capture_output=True, text=True, encoding="utf-8").stdout
+    assert tracked == ""
     assert "local_runs/" in (ROOT / ".gitignore").read_text(encoding="utf-8")
 
 

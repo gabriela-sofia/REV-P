@@ -1,0 +1,6 @@
+comando_executado: python -m pytest tests -k dino -q
+status: PASS
+resultado: 392 testes aprovados; 4462 testes nao selecionados
+correcao: a verificacao de artefatos proibidos passou a usar git ls-files; diretorios locais ignorados nao sao tratados como versionados
+dependencia_opcional: UMAP=OMITIDO_DEPENDENCIA_OPCIONAL_AUSENTE
+observacao_metodologica: Os limites cientificos do REV-P foram preservados.

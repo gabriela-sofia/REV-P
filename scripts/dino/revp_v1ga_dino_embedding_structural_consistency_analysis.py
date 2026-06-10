@@ -4,6 +4,7 @@ import argparse
 import csv
 import json
 import shutil
+import subprocess
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
@@ -15,7 +16,7 @@ ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_MANIFEST = ROOT / "local_runs" / "dino_embeddings" / "v1fz" / "dino_balanced_embedding_manifest_v1fz.csv"
 DEFAULT_OUTPUT_DIR = ROOT / "local_runs" / "dino_embeddings" / "v1ga"
 REVIEW_ONLY_CLAIM = "REVIEW_ONLY_NO_PREDICTIVE_CLAIM"
-FORBIDDEN_REPO_DIRS = {"data", "outputs", "docs"}
+FORBIDDEN_REPO_DIRS = {"data", "outputs"}
 FORBIDDEN_VERSIONED_EXTENSIONS = {".npy", ".npz", ".parquet", ".pt", ".pth", ".ckpt", ".safetensors", ".index", ".tif", ".tiff"}
 
 
@@ -64,15 +65,24 @@ def local_runs_ignored() -> bool:
 
 
 def forbidden_versioned_artifacts() -> list[str]:
-    found: list[str] = []
-    for path in ROOT.rglob("*"):
-        if ".git" in path.parts or "local_runs" in path.parts:
-            continue
-        if path.is_dir() and path.name in FORBIDDEN_REPO_DIRS and path.name != "docs":
-            found.append(str(path))
-        elif path.is_file() and path.suffix.lower() in FORBIDDEN_VERSIONED_EXTENSIONS:
-            found.append(str(path))
-    return found
+    result = subprocess.run(
+        ["git", "ls-files", "-z"],
+        cwd=ROOT,
+        capture_output=True,
+        check=False,
+    )
+    if result.returncode != 0:
+        return ["GIT_LS_FILES_FAILED"]
+    tracked = [Path(item.decode("utf-8", errors="replace")) for item in result.stdout.split(b"\0") if item]
+    return [
+        path.as_posix()
+        for path in tracked
+        if path.parts
+        and (
+            path.parts[0] in FORBIDDEN_REPO_DIRS
+            or path.suffix.lower() in FORBIDDEN_VERSIONED_EXTENSIONS
+        )
+    ]
 
 
 def load_embeddings(manifest_path: Path) -> tuple[list[dict[str, str]], np.ndarray, list[str]]:

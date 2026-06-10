@@ -1,0 +1,6 @@
+gate,status,value,interpretation
+formal_negative_count,BLOCKED,0,Nao ha negativos formais explicitos e auditaveis.
+can_create_training_label,BLOCKED,False,Ausencia de registro e pseudo-ausencia nao constituem negativos.
+can_train_supervised_model,BLOCKED,False,Nao ha ground truth operacional no nivel de patch.
+dino_allowed_use,USO_RESTRITO_A_REVISAO,analise estrutural,"Codificador congelado, sem classificacao ou predicao."
+scientific_conclusion,C4_BLOCKED_NO_FORMAL_NEGATIVES,inalterada,A transicao operacional permanece bloqueada.

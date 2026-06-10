@@ -1,0 +1,5 @@
+scope,patch_id,mean_similarity_within_scope,definition,methodological_note
+Curitiba,CUR_00038,0.831461,Maior similaridade cosseno media no recorte analisado.,"Resultado estrutural destinado a revisao. Nao constitui ground truth operacional, confirmacao de evento observado, classe, label, predicao ou treinamento supervisionado."
+Petropolis,PET_00104,0.735816,Maior similaridade cosseno media no recorte analisado.,"Resultado estrutural destinado a revisao. Nao constitui ground truth operacional, confirmacao de evento observado, classe, label, predicao ou treinamento supervisionado."
+Recife,REC_00205,0.73548,Maior similaridade cosseno media no recorte analisado.,"Resultado estrutural destinado a revisao. Nao constitui ground truth operacional, confirmacao de evento observado, classe, label, predicao ou treinamento supervisionado."
+Corpus,REC_00183,0.770649,Maior similaridade cosseno media no recorte analisado.,"Resultado estrutural destinado a revisao. Nao constitui ground truth operacional, confirmacao de evento observado, classe, label, predicao ou treinamento supervisionado."
