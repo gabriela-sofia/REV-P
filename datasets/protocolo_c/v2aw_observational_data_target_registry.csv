@@ -1,0 +1,7 @@
+target_id,source_id,official_url,source_role,target_class,acquisition_priority,public_data_assumed,legal_use_assumed,can_create_ground_truth,can_create_patch_truth,can_create_label,can_create_negative,can_train_model,license_blocker,provenance_required,source_publicity_is_not_ground_truth,temporal_observation_is_not_geometry
+TARGET_v2aw_001,ANA_HIDROWEB,https://www.snirh.gov.br/hidroweb/,OFFICIAL_OBSERVED_TIME_SERIES,TEMPORAL_OBSERVATION_TARGET,HIGH,true,true,false,false,false,false,false,false,true,true,true
+TARGET_v2aw_002,CEMADEN,https://www.cemaden.gov.br/mapainterativo/,OFFICIAL_OBSERVED_TIME_SERIES,TEMPORAL_OBSERVATION_TARGET,HIGH,true,true,false,false,false,false,false,false,true,true,true
+TARGET_v2aw_003,COPERNICUS_EMS,https://emergency.copernicus.eu/,OFFICIAL_SPATIAL_PRODUCT,PUBLIC_DATA_CITATION_REQUIRED,MEDIUM,true,true,false,false,false,false,false,false,true,true,true
+TARGET_v2aw_004,INMET,https://portal.inmet.gov.br/dadoshistoricos,OFFICIAL_OBSERVED_TIME_SERIES,TEMPORAL_OBSERVATION_TARGET,HIGH,true,true,false,false,false,false,false,false,true,true,true
+TARGET_v2aw_005,INTERNATIONAL_CHARTER,https://disasterscharter.org/,QUICKVIEW_OR_PRODUCT,REVIEW_ONLY_QUICKVIEW,MEDIUM,true,true,false,false,false,false,false,false,true,true,true
+TARGET_v2aw_006,SGB_CPRM,https://www.sgb.gov.br/,SUSCEPTIBILITY_OR_RISK_CONTEXT,CONTEXT_ONLY_SUSCEPTIBILITY,MEDIUM,true,true,false,false,false,false,false,false,true,true,true

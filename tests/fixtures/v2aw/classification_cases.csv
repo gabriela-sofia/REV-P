@@ -1,0 +1,12 @@
+kind,a,b,c,expected
+license,true,true,false,PUBLIC_SOURCE_PROVENANCE_PENDING
+license,true,true,true,PUBLIC_DATA_ACCEPTED_FOR_RESEARCH
+license,true,false,false,PUBLIC_DATA_CITATION_REQUIRED
+license,false,true,false,PUBLIC_SOURCE_PROVENANCE_PENDING
+temporal,true,true,,TEMPORAL_OBSERVATION_READY
+temporal,true,false,,TEMPORAL_OBSERVATION_TARGET
+temporal,false,false,,TEMPORAL_OBSERVATION_MISSING
+package,true,true,true,EVENT_PATCH_PACKAGE_READY_FOR_REVIEW
+package,false,true,true,NOT_READY_FOR_REVIEW
+package,true,false,true,NOT_READY_FOR_REVIEW
+package,true,true,false,NOT_READY_FOR_REVIEW

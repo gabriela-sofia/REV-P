@@ -1,0 +1,4 @@
+report_id,metric,value,status,can_create_ground_truth,can_create_patch_truth,can_create_label,can_create_negative,can_train_model,license_blocker,provenance_required,source_publicity_is_not_ground_truth,temporal_observation_is_not_geometry
+READ_v2aw_001,event_patch_packages,9,RECORDED,false,false,false,false,false,false,true,true,true
+READ_v2aw_002,packages_ready_for_review,0,RECORDED,false,false,false,false,false,false,true,true,true
+READ_v2aw_003,next_action_rank_1,ACQUIRE_PUBLIC_HYDROMETEOROLOGICAL_TIME_SERIES_FOR_EVENT_PATCH_REVIEW,SAFE_NEXT_ACTION,false,false,false,false,false,false,true,true,true

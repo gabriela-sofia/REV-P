@@ -1,0 +1,7 @@
+provenance_id,source_id,official_url,institutional_source,public_data_assumed,legal_use_assumed,source_citation_required,access_date_required,provenance_status,can_create_ground_truth,can_create_patch_truth,can_create_label,can_create_negative,can_train_model,license_blocker,provenance_required,source_publicity_is_not_ground_truth,temporal_observation_is_not_geometry
+PROV_v2aw_001,INMET,https://portal.inmet.gov.br/dadoshistoricos,true,true,true,true,true,PUBLIC_SOURCE_PROVENANCE_PENDING,false,false,false,false,false,false,true,true,true
+PROV_v2aw_002,CEMADEN,https://www.cemaden.gov.br/mapainterativo/,true,true,true,true,true,PUBLIC_SOURCE_PROVENANCE_PENDING,false,false,false,false,false,false,true,true,true
+PROV_v2aw_003,ANA_HIDROWEB,https://www.snirh.gov.br/hidroweb/,true,true,true,true,true,PUBLIC_SOURCE_PROVENANCE_PENDING,false,false,false,false,false,false,true,true,true
+PROV_v2aw_004,SGB_CPRM,https://www.sgb.gov.br/,true,true,true,true,true,PUBLIC_SOURCE_PROVENANCE_PENDING,false,false,false,false,false,false,true,true,true
+PROV_v2aw_005,COPERNICUS_EMS,https://emergency.copernicus.eu/,true,true,true,true,true,PUBLIC_SOURCE_PROVENANCE_PENDING,false,false,false,false,false,false,true,true,true
+PROV_v2aw_006,INTERNATIONAL_CHARTER,https://disasterscharter.org/,true,true,true,true,true,PUBLIC_SOURCE_PROVENANCE_PENDING,false,false,false,false,false,false,true,true,true
