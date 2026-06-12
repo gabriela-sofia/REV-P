@@ -1,0 +1,2 @@
+stage: v2bi
+default_status: BLOCKED_MANUAL_ACCESS_REQUIRED

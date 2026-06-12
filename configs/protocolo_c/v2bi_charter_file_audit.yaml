@@ -1,0 +1,3 @@
+stage: v2bi
+default_without_file: NO_MANUAL_CHARTER_FILE_FOUND
+zip_inspection: metadata_only

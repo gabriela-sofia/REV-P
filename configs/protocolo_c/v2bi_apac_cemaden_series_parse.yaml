@@ -1,0 +1,3 @@
+stage: v2bi
+defensive_parse: true
+accepted_delimiters: [comma, semicolon]

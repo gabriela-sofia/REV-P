@@ -1,0 +1,3 @@
+stage: v2bi
+cache_groups: [manual_charter_758, manual_temporal]
+raw_payload_versioned: false

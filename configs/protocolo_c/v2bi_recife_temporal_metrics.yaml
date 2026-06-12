@@ -1,0 +1,3 @@
+stage: v2bi
+ready_missing_rate_max: 0.2
+rainfall_is_not_flood_extent: true

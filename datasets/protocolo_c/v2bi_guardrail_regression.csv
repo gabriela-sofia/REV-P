@@ -1,0 +1,12 @@
+regression_id,artifact_path,violation_count,status
+GR_v2bi_001,datasets/protocolo_c/v2bi_manual_intake_cache_inventory.csv,0,PASS
+GR_v2bi_002,datasets/protocolo_c/v2bi_charter_file_audit.csv,0,PASS
+GR_v2bi_003,datasets/protocolo_c/v2bi_charter_vector_metadata.csv,0,PASS
+GR_v2bi_004,datasets/protocolo_c/v2bi_charter_crs_geometry_validation.csv,0,PASS
+GR_v2bi_005,datasets/protocolo_c/v2bi_charter_candidate_geometry_readiness.csv,0,PASS
+GR_v2bi_006,datasets/protocolo_c/v2bi_temporal_series_cache_inventory.csv,0,PASS
+GR_v2bi_007,datasets/protocolo_c/v2bi_apac_cemaden_series_parse_report.csv,0,PASS
+GR_v2bi_008,datasets/protocolo_c/v2bi_recife_temporal_metrics.csv,0,PASS
+GR_v2bi_009,datasets/protocolo_c/v2bi_recife_protocol_gate_update.csv,0,PASS
+GR_v2bi_010,datasets/protocolo_c/v2bi_manual_blocker_tasks.csv,0,PASS
+GR_v2bi_011,C7_FINAL_GROUND_TRUTH,0,PASS

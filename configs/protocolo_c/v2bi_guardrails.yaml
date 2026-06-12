@@ -1,0 +1,13 @@
+stage: v2bi
+can_create_ground_truth: false
+can_create_patch_truth: false
+can_create_label: false
+can_create_negative: false
+can_train_model: false
+charter_vector_is_not_final_ground_truth: true
+charter_geometry_requires_human_review: true
+temporal_series_is_not_spatial_geometry: true
+rainfall_is_not_flood_extent: true
+landslide_geometry_is_not_flood_extent: true
+crs_missing_blocks_geometry_promotion: true
+raw_data_versioned: false
