@@ -1,0 +1,4 @@
+stage: v2bd
+step: build_seed_dino_crosswalk
+dino_allowed_use: REVIEW_ONLY_REPRESENTATION
+dino_can_decide_event: false

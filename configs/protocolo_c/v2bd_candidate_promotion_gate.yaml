@@ -1,0 +1,4 @@
+stage: v2bd
+step: candidate_promotion_gate
+target_status: CANDIDATE_REFERENCE_FOR_ADJUDICATION
+final_ground_truth_allowed: false

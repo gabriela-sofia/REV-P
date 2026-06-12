@@ -1,0 +1,5 @@
+stage: v2bd
+step: select_curitiba_seeds
+scope: Curitiba A807 LOCAL v2bc candidate seeds only
+minimum_score_class: MODERATE_SEED_FOR_REVIEW
+promotion_allowed: false

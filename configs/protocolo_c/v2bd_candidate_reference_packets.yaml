@@ -1,0 +1,3 @@
+stage: v2bd
+step: generate_candidate_reference_packets
+next_action_rank_1: RESOLVE_CURITIBA_SENTINEL_ASSET_CROSSWALK

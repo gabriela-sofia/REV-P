@@ -1,0 +1,3 @@
+stage: v2bd
+step: compute_candidate_reference_readiness
+required: [explicit_patch_link, explicit_sentinel_link, sentinel_date, geometry, human_review]

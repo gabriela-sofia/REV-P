@@ -1,0 +1,4 @@
+stage: v2bd
+step: build_seed_sentinel_crosswalk
+require_explicit_patch_link: true
+require_acquisition_date: true

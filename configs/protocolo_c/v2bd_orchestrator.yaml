@@ -1,0 +1,5 @@
+stage: v2bd
+mode: offline_deterministic
+strictly_additive: true
+expected_seed_count: 3
+expected_promotions: 0

@@ -1,0 +1,4 @@
+stage: v2bd
+step: discover_sentinel_assets
+mode: registered_metadata_only
+region_match_is_explicit_link: false
