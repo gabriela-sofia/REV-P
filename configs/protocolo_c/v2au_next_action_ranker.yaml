@@ -1,0 +1,3 @@
+stage: v2au
+component: next_action_ranker
+promotion_allowed: false

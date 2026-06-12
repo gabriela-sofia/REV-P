@@ -1,0 +1,4 @@
+stage: v2au
+component: source_endpoint_attempts
+network_opt_in_env: V2AU_NETWORK
+offline_status: NETWORK_DISABLED_DETERMINISTIC_RUN

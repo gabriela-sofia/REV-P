@@ -1,0 +1,4 @@
+stage: v2au
+component: temporal_data_request_plan
+sources: [INMET, CEMADEN, ANA_HIDROWEB]
+manual_review_required: true

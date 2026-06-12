@@ -1,0 +1,4 @@
+stage: v2au
+component: resolution_task_registry
+one_task_per_factual_blocker: true
+source_resolution_is_not_ground_truth: true

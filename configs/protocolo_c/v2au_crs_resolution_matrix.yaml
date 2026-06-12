@@ -1,0 +1,3 @@
+stage: v2au
+component: crs_resolution_matrix
+classes: [EPSG_EXPLICIT, CRS_DOCUMENTED, CRS_UNKNOWN, NOT_SPATIAL]

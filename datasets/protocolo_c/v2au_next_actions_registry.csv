@@ -1,0 +1,5 @@
+rank,next_action,score,allowed_resolution_work,promotion_allowed,can_create_ground_truth,can_create_patch_truth,can_create_label,can_create_negative,can_train_model,quickview_can_promote,susceptibility_can_promote,dino_can_decide_event,source_resolution_is_not_ground_truth
+1,MANUALLY_RESOLVE_LICENSE_AND_CRS_FOR_HIGH_PRIORITY_SOURCES,100,true,false,false,false,false,false,false,false,false,false,true
+2,DOWNLOAD_OFFICIAL_HYDROMETEOROLOGICAL_SERIES_FOR_REVIEW_PACKETS,90,true,false,false,false,false,false,false,false,false,false,true
+3,BUILD_SOURCE_RESOLUTION_REVIEW_PACKETS,80,true,false,false,false,false,false,false,false,false,false,true
+4,MAINTAIN_SOURCE_RESOLUTION_AS_NON_GROUND_TRUTH,60,true,false,false,false,false,false,false,false,false,false,true

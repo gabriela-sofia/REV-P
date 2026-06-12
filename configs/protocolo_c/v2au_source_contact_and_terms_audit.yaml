@@ -1,0 +1,3 @@
+stage: v2au
+component: source_contact_and_terms_audit
+terms_require_human_review: true

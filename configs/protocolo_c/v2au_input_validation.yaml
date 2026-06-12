@@ -1,0 +1,8 @@
+stage: v2au
+component: input_validation
+required_inputs:
+  - v2at_fact_assertion_registry.csv
+  - v2at_non_fact_gap_report.csv
+  - v2at_promotion_blocker_audit.csv
+  - v2at_download_target_manifest.csv
+fail_closed: true

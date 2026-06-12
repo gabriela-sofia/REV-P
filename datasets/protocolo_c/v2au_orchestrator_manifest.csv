@@ -1,0 +1,13 @@
+step_order,step_name,status,output,output_hash,notes
+1,validate_v2at_inputs,OK,datasets/protocolo_c/v2au_input_validation.csv,df5ac8ea9cbd9aef,Completed.
+2,resolution_task_registry,OK,datasets/protocolo_c/v2au_resolution_task_registry.csv,f63f0c9727baf314,Completed.
+3,source_contact_and_terms_audit,OK,datasets/protocolo_c/v2au_source_contact_and_terms_audit.csv,f2388d2266e7ea2b,Completed.
+4,license_resolution_matrix,OK,datasets/protocolo_c/v2au_license_resolution_matrix.csv,b61b5791d2460363,Completed.
+5,crs_resolution_matrix,OK,datasets/protocolo_c/v2au_crs_resolution_matrix.csv,93d6b2b7b6332009,Completed.
+6,temporal_data_request_plan,OK,datasets/protocolo_c/v2au_temporal_data_request_plan.csv,8a8a088c17d3e8ab,Completed.
+7,manual_download_instructions,OK,datasets/protocolo_c/v2au_manual_download_instructions.csv,bc9723857ef0e6d3,Completed.
+8,source_endpoint_attempts,OK,datasets/protocolo_c/v2au_source_endpoint_attempts.csv,c3708d0ac956845b,Completed.
+9,review_packet_priority_queue,OK,datasets/protocolo_c/v2au_review_packet_priority_queue.csv,5fd695b411dd2e67,Completed.
+10,blocker_to_action_map,OK,datasets/protocolo_c/v2au_blocker_to_action_map.csv,6c4bb1519fc29455,Completed.
+11,next_action_ranker,OK,datasets/protocolo_c/v2au_next_actions_registry.csv,6aebdbfc0cd43b27,Completed.
+12,guardrail_regression,OK,datasets/protocolo_c/v2au_guardrail_regression.csv,924146d307ea1a3f,Completed.

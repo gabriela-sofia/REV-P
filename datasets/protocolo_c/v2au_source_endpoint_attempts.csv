@@ -1,0 +1,7 @@
+attempt_id,source_id,target_url,network_enabled,attempt_status,cache_path,cache_sha256,raw_data_versioned,can_create_ground_truth,can_create_patch_truth,can_create_label,can_create_negative,can_train_model,quickview_can_promote,susceptibility_can_promote,dino_can_decide_event,source_resolution_is_not_ground_truth
+ENDPOINT_v2au_001,INMET,https://portal.inmet.gov.br/dadoshistoricos,false,NETWORK_DISABLED_DETERMINISTIC_RUN,,,false,false,false,false,false,false,false,false,false,true
+ENDPOINT_v2au_002,CEMADEN,https://www.cemaden.gov.br/mapainterativo/,false,NETWORK_DISABLED_DETERMINISTIC_RUN,,,false,false,false,false,false,false,false,false,false,true
+ENDPOINT_v2au_003,ANA_HIDROWEB,https://www.snirh.gov.br/hidroweb/,false,NETWORK_DISABLED_DETERMINISTIC_RUN,,,false,false,false,false,false,false,false,false,false,true
+ENDPOINT_v2au_004,SGB_CPRM,https://www.sgb.gov.br/,false,NETWORK_DISABLED_DETERMINISTIC_RUN,,,false,false,false,false,false,false,false,false,false,true
+ENDPOINT_v2au_005,COPERNICUS_EMS,https://emergency.copernicus.eu/,false,NETWORK_DISABLED_DETERMINISTIC_RUN,,,false,false,false,false,false,false,false,false,false,true
+ENDPOINT_v2au_006,INTERNATIONAL_CHARTER,https://disasterscharter.org/,false,NETWORK_DISABLED_DETERMINISTIC_RUN,,,false,false,false,false,false,false,false,false,false,true

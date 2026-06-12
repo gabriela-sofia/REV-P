@@ -1,0 +1,5 @@
+input_id,input_role,input_path,row_count,validation_status,can_create_ground_truth,can_create_patch_truth,can_create_label,can_create_negative,can_train_model,quickview_can_promote,susceptibility_can_promote,dino_can_decide_event,source_resolution_is_not_ground_truth
+INPUT_v2au_01,facts,datasets/protocolo_c/v2at_fact_assertion_registry.csv,9,PRESENT_AND_READABLE,false,false,false,false,false,false,false,false,true
+INPUT_v2au_02,gaps,datasets/protocolo_c/v2at_non_fact_gap_report.csv,9,PRESENT_AND_READABLE,false,false,false,false,false,false,false,false,true
+INPUT_v2au_03,blockers,datasets/protocolo_c/v2at_promotion_blocker_audit.csv,10,PRESENT_AND_READABLE,false,false,false,false,false,false,false,false,true
+INPUT_v2au_04,downloads,datasets/protocolo_c/v2at_download_target_manifest.csv,6,PRESENT_AND_READABLE,false,false,false,false,false,false,false,false,true
