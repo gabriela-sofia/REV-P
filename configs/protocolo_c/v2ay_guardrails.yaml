@@ -1,0 +1,7 @@
+stage: v2ay
+can_create_ground_truth: false
+can_create_patch_truth: false
+can_create_label: false
+can_create_negative: false
+can_train_model: false
+raw_data_versioned: false

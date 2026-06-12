@@ -1,0 +1,10 @@
+quality_id,event_patch_package_id,missing_rate,precip_signal_status,quality_status,can_create_ground_truth,can_create_patch_truth,can_create_label,can_create_negative,can_train_model,hydromet_time_series_is_not_geometry,precipitation_signal_is_not_flood_truth,temporal_readiness_is_not_truth_readiness,raw_data_versioned
+QUALITY_v2ay_0001,FACT_v2at_0001,0.000,PRECIPITATION_PRESENT,QUALITY_ACCEPTABLE_FOR_REVIEW,false,false,false,false,false,true,true,true,false
+QUALITY_v2ay_0002,FACT_v2at_0002,0.000,PRECIPITATION_PRESENT,QUALITY_ACCEPTABLE_FOR_REVIEW,false,false,false,false,false,true,true,true,false
+QUALITY_v2ay_0003,FACT_v2at_0003,1.000,UNKNOWN,QUALITY_INCOMPLETE,false,false,false,false,false,true,true,true,false
+QUALITY_v2ay_0004,FACT_v2at_0004,0.000,PRECIPITATION_PRESENT,QUALITY_ACCEPTABLE_FOR_REVIEW,false,false,false,false,false,true,true,true,false
+QUALITY_v2ay_0005,FACT_v2at_0005,1.000,UNKNOWN,QUALITY_INCOMPLETE,false,false,false,false,false,true,true,true,false
+QUALITY_v2ay_0006,FACT_v2at_0006,1.000,UNKNOWN,QUALITY_INCOMPLETE,false,false,false,false,false,true,true,true,false
+QUALITY_v2ay_0007,FACT_v2at_0007,0.000,PRECIPITATION_PRESENT,QUALITY_ACCEPTABLE_FOR_REVIEW,false,false,false,false,false,true,true,true,false
+QUALITY_v2ay_0008,FACT_v2at_0008,0.000,PRECIPITATION_PRESENT,QUALITY_ACCEPTABLE_FOR_REVIEW,false,false,false,false,false,true,true,true,false
+QUALITY_v2ay_0009,FACT_v2at_0009,0.000,PRECIPITATION_PRESENT,QUALITY_ACCEPTABLE_FOR_REVIEW,false,false,false,false,false,true,true,true,false

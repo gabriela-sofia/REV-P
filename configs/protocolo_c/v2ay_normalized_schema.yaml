@@ -1,0 +1,2 @@
+stage: v2ay
+fields: [source_name, station_id, station_name, municipality, state, latitude, longitude, timestamp, variable_name, variable_unit, observed_value, quality_flag, raw_file_hash, parse_status]

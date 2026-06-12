@@ -1,0 +1,3 @@
+stage: v2ay
+source: ANA_HIDROWEB
+formats: [CSV, ZIP]

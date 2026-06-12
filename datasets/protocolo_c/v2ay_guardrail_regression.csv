@@ -1,0 +1,12 @@
+regression_id,artifact_path,violation_count,status
+GR_v2ay_000,datasets/protocolo_c/v2ay_cached_timeseries_inventory.csv,0,PASS
+GR_v2ay_001,datasets/protocolo_c/v2ay_event_patch_temporal_readiness_update.csv,0,PASS
+GR_v2ay_002,datasets/protocolo_c/v2ay_guardrail_regression.csv,0,PASS
+GR_v2ay_003,datasets/protocolo_c/v2ay_ingestion_gap_report.csv,0,PASS
+GR_v2ay_004,datasets/protocolo_c/v2ay_normalized_timeseries_manifest.csv,0,PASS
+GR_v2ay_005,datasets/protocolo_c/v2ay_orchestrator_manifest.csv,0,PASS
+GR_v2ay_006,datasets/protocolo_c/v2ay_station_metadata_registry.csv,0,PASS
+GR_v2ay_007,datasets/protocolo_c/v2ay_timeseries_parse_audit.csv,0,PASS
+GR_v2ay_008,datasets/protocolo_c/v2ay_timeseries_quality_report.csv,0,PASS
+GR_v2ay_009,datasets/protocolo_c/v2ay_window_precipitation_metrics.csv,0,PASS
+GR_v2ay_010,docs/protocolo_c/v2ay_hydromet_series_ingestion/evidence_cache/.gitignore|evidence_cache/raw/.gitignore,0,PASS

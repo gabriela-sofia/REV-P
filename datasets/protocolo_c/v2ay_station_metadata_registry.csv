@@ -1,0 +1,4 @@
+station_metadata_id,source_name,station_id,station_name,municipality,state,latitude,longitude,can_create_ground_truth,can_create_patch_truth,can_create_label,can_create_negative,can_train_model,hydromet_time_series_is_not_geometry,precipitation_signal_is_not_flood_truth,temporal_readiness_is_not_truth_readiness,raw_data_versioned
+ST_v2ay_001,INMET,A301,RECIFE,RECIFE,PE,"-8,05916666","-34,95916666",false,false,false,false,false,true,true,true,false
+ST_v2ay_002,INMET,A610,PICO DO COUTO,PICO DO COUTO,RJ,"-22,46472222","-43,29138888",false,false,false,false,false,true,true,true,false
+ST_v2ay_003,INMET,A807,CURITIBA,CURITIBA,PR,"-25,4486111","-49,23055554",false,false,false,false,false,true,true,true,false
