@@ -1,0 +1,4 @@
+stage: v2bc
+require_explicit_event_asset_crosswalk: true
+sentinel_context_is_not_ground_truth: true
+dino_signal_is_not_ground_truth: true

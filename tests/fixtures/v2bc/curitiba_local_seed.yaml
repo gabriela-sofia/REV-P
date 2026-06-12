@@ -1,0 +1,5 @@
+city: Curitiba
+station_id: A807
+station_role: LOCAL
+temporal_readiness_status: TEMPORAL_EVIDENCE_READY_FOR_REVIEW
+expected_selected: true

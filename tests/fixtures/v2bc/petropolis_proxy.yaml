@@ -1,0 +1,5 @@
+city: Petropolis
+station_id: A610
+station_role: REGIONAL_PROXY
+expected_selected: false
+reason: REGIONAL_PROXY_LIMITATION

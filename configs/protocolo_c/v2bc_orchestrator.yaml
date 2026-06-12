@@ -1,0 +1,4 @@
+stage: v2bc
+expected_steps: 9
+expected_curitiba_seeds: 3
+offline_deterministic: true

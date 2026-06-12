@@ -1,0 +1,5 @@
+stage: v2bc
+city: Curitiba
+station_id: A807
+station_role: LOCAL
+require_positive_temporal_readiness: true

@@ -1,0 +1,7 @@
+queue_id,event_patch_package_id,candidate_id,region,city,reason_not_selected,required_action,can_create_ground_truth,can_create_patch_truth,can_create_label,can_create_negative,can_train_model,seed_is_not_final_ground_truth,temporal_seed_is_not_spatial_truth,local_station_is_not_patch_geometry,sentinel_context_is_not_ground_truth,dino_signal_is_not_ground_truth,no_geometry_no_final_truth,raw_data_versioned
+QUEUE_v2bc_0001,FACT_v2at_0001,PET_2022_02_15,Petropolis,Petropolis,REGIONAL_PROXY_LIMITATION,RESOLVE_WITH_LOCAL_STATION,false,false,false,false,false,true,true,true,true,true,true,false
+QUEUE_v2bc_0002,FACT_v2at_0003,,Recife,Recife,TEMPORAL_GAP,RESOLVE_WITH_CEMADEN,false,false,false,false,false,true,true,true,true,true,true,false
+QUEUE_v2bc_0003,FACT_v2at_0004,PET_2022_03_20_21,Petropolis,Petropolis,REGIONAL_PROXY_LIMITATION,RESOLVE_WITH_LOCAL_STATION,false,false,false,false,false,true,true,true,true,true,true,false
+QUEUE_v2bc_0004,FACT_v2at_0005,,Recife,Recife,TEMPORAL_GAP,RESOLVE_WITH_CEMADEN,false,false,false,false,false,true,true,true,true,true,true,false
+QUEUE_v2bc_0005,FACT_v2at_0006,,Recife,Recife,TEMPORAL_GAP,RESOLVE_WITH_CEMADEN,false,false,false,false,false,true,true,true,true,true,true,false
+QUEUE_v2bc_0006,FACT_v2at_0009,PET_2024_03_21_28,Petropolis,Petropolis,REGIONAL_PROXY_LIMITATION,RESOLVE_WITH_LOCAL_STATION,false,false,false,false,false,true,true,true,true,true,true,false
