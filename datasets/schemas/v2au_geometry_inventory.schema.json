@@ -1,0 +1,110 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "v2au geometry inventory",
+  "description": "Row contract for v2au_geometry_inventory.csv. v2au overlay engine. No operational label, no training target; max decision C4_CANDIDATE_REQUIRES_HUMAN_REVIEW.",
+  "type": "object",
+  "required": [
+    "geometry_id",
+    "geometry_role",
+    "linked_event_id",
+    "linked_patch_id",
+    "source_id",
+    "source_name",
+    "geometry_type",
+    "geometry_format",
+    "geometry_path",
+    "crs",
+    "crs_status",
+    "area_m2",
+    "bbox_minx",
+    "bbox_miny",
+    "bbox_maxx",
+    "bbox_maxy",
+    "is_valid_geometry",
+    "geometry_hash",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "geometry_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "geometry_role": {
+      "type": "string",
+      "enum": [
+        "patch_boundary",
+        "event_observed_geometry",
+        "event_context_geometry",
+        "risk_context_geometry",
+        "point_anchor",
+        "unknown"
+      ]
+    },
+    "linked_event_id": {
+      "type": "string"
+    },
+    "linked_patch_id": {
+      "type": "string"
+    },
+    "source_id": {
+      "type": "string"
+    },
+    "source_name": {
+      "type": "string"
+    },
+    "geometry_type": {
+      "type": "string"
+    },
+    "geometry_format": {
+      "type": "string"
+    },
+    "geometry_path": {
+      "type": "string"
+    },
+    "crs": {
+      "type": "string"
+    },
+    "crs_status": {
+      "type": "string",
+      "enum": [
+        "KNOWN",
+        "UNKNOWN"
+      ]
+    },
+    "area_m2": {
+      "type": "string"
+    },
+    "bbox_minx": {
+      "type": "string"
+    },
+    "bbox_miny": {
+      "type": "string"
+    },
+    "bbox_maxx": {
+      "type": "string"
+    },
+    "bbox_maxy": {
+      "type": "string"
+    },
+    "is_valid_geometry": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "geometry_hash": {
+      "type": "string"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "x_id_field": "geometry_id",
+  "x_csv_file": "datasets/v2au_geometry_inventory.csv"
+}

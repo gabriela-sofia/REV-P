@@ -1,0 +1,86 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "v2at reviewer queue seed",
+  "description": "Row contract for v2at_reviewer_queue_seed.csv. Generated/validated by v2at engine. No operational label, no training target.",
+  "type": "object",
+  "required": [
+    "review_item_id",
+    "package_id",
+    "event_id",
+    "patch_id",
+    "region",
+    "city",
+    "hazard_type",
+    "priority_rank",
+    "priority_reason",
+    "suggested_review_action",
+    "evidence_score",
+    "uncertainty_score",
+    "blocking_reason",
+    "nearest_dino_neighbors_available",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "review_item_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "package_id": {
+      "type": "string"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "patch_id": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "hazard_type": {
+      "type": "string",
+      "enum": [
+        "urban_flood",
+        "flash_flood",
+        "flood",
+        "mass_movement",
+        "landslide",
+        "unknown_hazard"
+      ]
+    },
+    "priority_rank": {
+      "type": "string"
+    },
+    "priority_reason": {
+      "type": "string"
+    },
+    "suggested_review_action": {
+      "type": "string"
+    },
+    "evidence_score": {
+      "type": "string"
+    },
+    "uncertainty_score": {
+      "type": "string"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "nearest_dino_neighbors_available": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "x_id_field": "review_item_id",
+  "x_csv_file": "datasets/v2at_reviewer_queue_seed.csv"
+}

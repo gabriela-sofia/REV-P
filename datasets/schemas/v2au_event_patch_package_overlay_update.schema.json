@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "v2au event-patch package overlay update",
+  "description": "Row contract for v2au_event_patch_package_overlay_update.csv. v2au overlay engine. No operational label, no training target; max decision C4_CANDIDATE_REQUIRES_HUMAN_REVIEW.",
+  "type": "object",
+  "required": [
+    "package_id",
+    "previous_promotion_decision",
+    "previous_blocking_reason",
+    "has_patch_overlay_before",
+    "has_patch_overlay_after",
+    "intersection_ratio",
+    "overlay_status",
+    "new_promotion_candidate_level",
+    "new_promotion_decision",
+    "new_allowed_use",
+    "remaining_blocking_reason",
+    "requires_human_review",
+    "can_create_operational_label"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "package_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "previous_promotion_decision": {
+      "type": "string"
+    },
+    "previous_blocking_reason": {
+      "type": "string"
+    },
+    "has_patch_overlay_before": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "has_patch_overlay_after": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "intersection_ratio": {
+      "type": "string"
+    },
+    "overlay_status": {
+      "type": "string"
+    },
+    "new_promotion_candidate_level": {
+      "type": "string"
+    },
+    "new_promotion_decision": {
+      "type": "string"
+    },
+    "new_allowed_use": {
+      "type": "string"
+    },
+    "remaining_blocking_reason": {
+      "type": "string"
+    },
+    "requires_human_review": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "can_create_operational_label": {
+      "type": "string",
+      "enum": [
+        "false"
+      ]
+    }
+  },
+  "x_id_field": "package_id",
+  "x_csv_file": "datasets/v2au_event_patch_package_overlay_update.csv"
+}

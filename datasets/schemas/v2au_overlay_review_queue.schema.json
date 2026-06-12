@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "v2au overlay review queue",
+  "description": "Row contract for v2au_overlay_review_queue.csv. v2au overlay engine. No operational label, no training target; max decision C4_CANDIDATE_REQUIRES_HUMAN_REVIEW.",
+  "type": "object",
+  "required": [
+    "review_item_id",
+    "package_id",
+    "event_id",
+    "patch_id",
+    "region",
+    "city",
+    "hazard_type",
+    "priority_rank",
+    "priority_reason",
+    "missing_geometry_type",
+    "suggested_action",
+    "evidence_score",
+    "overlay_status",
+    "remaining_blocking_reason"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "review_item_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "package_id": {
+      "type": "string"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "patch_id": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "hazard_type": {
+      "type": "string"
+    },
+    "priority_rank": {
+      "type": "string"
+    },
+    "priority_reason": {
+      "type": "string"
+    },
+    "missing_geometry_type": {
+      "type": "string"
+    },
+    "suggested_action": {
+      "type": "string"
+    },
+    "evidence_score": {
+      "type": "string"
+    },
+    "overlay_status": {
+      "type": "string"
+    },
+    "remaining_blocking_reason": {
+      "type": "string"
+    }
+  },
+  "x_id_field": "review_item_id",
+  "x_csv_file": "datasets/v2au_overlay_review_queue.csv"
+}

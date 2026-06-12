@@ -1,0 +1,8 @@
+[v2at] Evidence Registry + Event-Patch Package Engine
+[v2at] inputs_found=8 outputs_written=11
+[v2at] sources=23 observations=21 packages=172 gates=2580 queue=172 blocklist=181
+[v2at] c4_candidate=0 candidate_reference=55 review_only=0
+[v2at] can_train_model=False can_create_operational_labels=False
+[v2at] methodological_status=EVIDENCE_SYSTEM_READY_FOR_HUMAN_REVIEW_NOT_FOR_TRAINING
+[v2at] structural_errors=0
+[v2at] status=OK

@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "v2at promotion gate decision audit",
+  "description": "Row contract for v2at_promotion_gate_decision_audit.csv. Generated/validated by v2at engine. No operational label, no training target.",
+  "type": "object",
+  "required": [
+    "decision_id",
+    "package_id",
+    "event_id",
+    "patch_id",
+    "gate_name",
+    "gate_passed",
+    "gate_status",
+    "required_condition",
+    "observed_value",
+    "severity",
+    "blocking_reason",
+    "recommended_action"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "decision_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "package_id": {
+      "type": "string"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "patch_id": {
+      "type": "string"
+    },
+    "gate_name": {
+      "type": "string",
+      "enum": [
+        "GATE_01_EVENT_ID_EXISTS",
+        "GATE_02_HAZARD_TYPE_TYPED",
+        "GATE_03_TEMPORAL_WINDOW_EXISTS",
+        "GATE_04_SENTINEL_OBSERVATION_EXISTS",
+        "GATE_05_TIME_DELTA_ACCEPTABLE",
+        "GATE_06_OFFICIAL_OR_VALIDATED_SOURCE_EXISTS",
+        "GATE_07_GEOMETRY_AVAILABLE",
+        "GATE_08_PATCH_OVERLAY_AVAILABLE",
+        "GATE_09_INTERSECTION_RATIO_ACCEPTABLE",
+        "GATE_10_CONTEXT_ONLY_NOT_PROMOTED",
+        "GATE_11_QUICKVIEW_NOT_PROMOTED_ALONE",
+        "GATE_12_BENCHMARK_NOT_LOCAL_TRUTH",
+        "GATE_13_CONFLICTS_RESOLVED",
+        "GATE_14_UNCERTAINTY_RECORDED",
+        "GATE_15_NO_TRAINING_LABEL_CREATED"
+      ]
+    },
+    "gate_passed": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "gate_status": {
+      "type": "string"
+    },
+    "required_condition": {
+      "type": "string"
+    },
+    "observed_value": {
+      "type": "string"
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "BLOCKING",
+        "GUARDRAIL",
+        "INFO"
+      ]
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "recommended_action": {
+      "type": "string"
+    }
+  },
+  "x_id_field": "decision_id",
+  "x_csv_file": "datasets/v2at_promotion_gate_decision_audit.csv"
+}

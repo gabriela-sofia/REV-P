@@ -1,0 +1,209 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "v2at event-patch package registry",
+  "description": "Row contract for v2at_event_patch_package_registry.csv. Generated/validated by v2at engine. No operational label, no training target.",
+  "type": "object",
+  "required": [
+    "package_id",
+    "event_id",
+    "patch_id",
+    "region",
+    "city",
+    "hazard_type",
+    "sentinel_asset_id",
+    "sentinel_sensor_family",
+    "sentinel_observation_date",
+    "event_window_start",
+    "event_window_end",
+    "time_delta_days",
+    "has_temporal_anchor",
+    "has_spatial_support",
+    "has_official_source",
+    "has_vhr_support",
+    "has_only_contextual_sources",
+    "has_geometry",
+    "has_patch_overlay",
+    "intersection_ratio",
+    "valid_data_fraction",
+    "urban_context",
+    "permanent_water_risk",
+    "occlusion_risk",
+    "evidence_count",
+    "strong_evidence_count",
+    "weak_evidence_count",
+    "conflict_count",
+    "evidence_score",
+    "uncertainty_score",
+    "promotion_candidate_level",
+    "promotion_decision",
+    "blocking_reason",
+    "allowed_use",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "package_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "patch_id": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "hazard_type": {
+      "type": "string",
+      "enum": [
+        "urban_flood",
+        "flash_flood",
+        "flood",
+        "mass_movement",
+        "landslide",
+        "unknown_hazard"
+      ]
+    },
+    "sentinel_asset_id": {
+      "type": "string"
+    },
+    "sentinel_sensor_family": {
+      "type": "string"
+    },
+    "sentinel_observation_date": {
+      "type": "string"
+    },
+    "event_window_start": {
+      "type": "string"
+    },
+    "event_window_end": {
+      "type": "string"
+    },
+    "time_delta_days": {
+      "type": "string"
+    },
+    "has_temporal_anchor": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "has_spatial_support": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "has_official_source": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "has_vhr_support": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "has_only_contextual_sources": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "has_geometry": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "has_patch_overlay": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "intersection_ratio": {
+      "type": "string"
+    },
+    "valid_data_fraction": {
+      "type": "string"
+    },
+    "urban_context": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "permanent_water_risk": {
+      "type": "string"
+    },
+    "occlusion_risk": {
+      "type": "string"
+    },
+    "evidence_count": {
+      "type": "string"
+    },
+    "strong_evidence_count": {
+      "type": "string"
+    },
+    "weak_evidence_count": {
+      "type": "string"
+    },
+    "conflict_count": {
+      "type": "string"
+    },
+    "evidence_score": {
+      "type": "string"
+    },
+    "uncertainty_score": {
+      "type": "string"
+    },
+    "promotion_candidate_level": {
+      "type": "string",
+      "enum": [
+        "C0",
+        "C1",
+        "C2",
+        "C3",
+        "C4_CANDIDATE"
+      ]
+    },
+    "promotion_decision": {
+      "type": "string"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "allowed_use": {
+      "type": "string",
+      "enum": [
+        "review_only",
+        "candidate_reference",
+        "secondary_evaluation_candidate",
+        "operational_label_blocked",
+        "methodological_benchmark_only",
+        "rejected_context_only"
+      ]
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "x_id_field": "package_id",
+  "x_csv_file": "datasets/v2at_event_patch_package_registry.csv"
+}

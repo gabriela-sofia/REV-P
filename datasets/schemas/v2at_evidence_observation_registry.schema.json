@@ -1,0 +1,145 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "v2at evidence observation registry",
+  "description": "Row contract for v2at_evidence_observation_registry.csv. Generated/validated by v2at engine. No operational label, no training target.",
+  "type": "object",
+  "required": [
+    "evidence_id",
+    "event_id",
+    "patch_id",
+    "region",
+    "city",
+    "hazard_type",
+    "source_id",
+    "source_class",
+    "source_name",
+    "observed_start",
+    "observed_end",
+    "published_at",
+    "temporal_precision",
+    "spatial_precision",
+    "geometry_type",
+    "geometry_available",
+    "geometry_uri",
+    "raw_uri",
+    "derived_uri",
+    "license_status",
+    "download_hash",
+    "evidence_strength",
+    "evidence_role",
+    "review_status",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "evidence_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "patch_id": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "hazard_type": {
+      "type": "string"
+    },
+    "source_id": {
+      "type": "string"
+    },
+    "source_class": {
+      "type": "string",
+      "enum": [
+        "official_hydromet",
+        "official_geological",
+        "official_disaster_record",
+        "official_geoinfo",
+        "operational_mapping",
+        "vhr_optical",
+        "methodological_benchmark",
+        "context_low"
+      ]
+    },
+    "source_name": {
+      "type": "string"
+    },
+    "observed_start": {
+      "type": "string"
+    },
+    "observed_end": {
+      "type": "string"
+    },
+    "published_at": {
+      "type": "string"
+    },
+    "temporal_precision": {
+      "type": "string"
+    },
+    "spatial_precision": {
+      "type": "string"
+    },
+    "geometry_type": {
+      "type": "string"
+    },
+    "geometry_available": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "geometry_uri": {
+      "type": "string"
+    },
+    "raw_uri": {
+      "type": "string"
+    },
+    "derived_uri": {
+      "type": "string"
+    },
+    "license_status": {
+      "type": "string"
+    },
+    "download_hash": {
+      "type": "string"
+    },
+    "evidence_strength": {
+      "type": "string",
+      "enum": [
+        "strong",
+        "moderate",
+        "weak",
+        "none"
+      ]
+    },
+    "evidence_role": {
+      "type": "string",
+      "enum": [
+        "temporal_anchor",
+        "spatial_support",
+        "territorial_context",
+        "context_only",
+        "methodological_benchmark"
+      ]
+    },
+    "review_status": {
+      "type": "string"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "x_id_field": "evidence_id",
+  "x_csv_file": "datasets/v2at_evidence_observation_registry.csv"
+}

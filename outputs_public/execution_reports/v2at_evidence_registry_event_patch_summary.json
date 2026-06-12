@@ -1,0 +1,53 @@
+{
+  "stage": "v2at",
+  "status": "OK_WITH_EXPECTED_BLOCKERS",
+  "inputs_found": [
+    "protocolo_c/v1us_event_patch_candidate_registry.csv",
+    "protocolo_c/v1us_dino_review_support_attachment.csv",
+    "protocolo_c/v2aa_sentinel_date_confidence_audit.csv",
+    "protocolo_c/v2ab_event_patch_package_validation.csv",
+    "protocolo_c/v2bm_cross_region_candidate_registry.csv",
+    "protocolo_c/v2bm_cross_region_evidence_scorecard.csv",
+    "ground_reference_event_registry.csv",
+    "external_evidence_registry.csv"
+  ],
+  "outputs_written": [
+    "datasets/v2at_external_evidence_source_catalog.csv",
+    "datasets/v2at_evidence_observation_registry.csv",
+    "datasets/v2at_event_patch_package_registry.csv",
+    "datasets/v2at_promotion_gate_decision_audit.csv",
+    "datasets/v2at_reviewer_queue_seed.csv",
+    "datasets/v2at_operational_label_blocklist.csv",
+    "outputs_public/execution_reports/v2at_evidence_registry_event_patch_report.md",
+    "outputs_public/execution_reports/v2at_evidence_registry_event_patch_summary.json",
+    "outputs_public/logs_summary/v2at_evidence_registry_event_patch.log",
+    "outputs_public/logs_summary/v2at_evidence_registry_event_patch.txt",
+    "outputs_public/execution_reports/v2at_artifact_index_supplement.md"
+  ],
+  "total_sources": 23,
+  "total_observations": 21,
+  "total_packages": 172,
+  "total_gate_checks": 2580,
+  "total_blocked_labels": 181,
+  "total_review_queue_items": 172,
+  "promotion_distribution": {
+    "C3_CANDIDATE_REFERENCE_HOLD_FOR_OVERLAY": 55,
+    "C3_SECONDARY_EVALUATION_HOLD_FOR_OVERLAY": 116,
+    "REJECTED_EVENT_REGISTRY_MISSING": 1
+  },
+  "allowed_use_distribution": {
+    "candidate_reference": 55,
+    "rejected_context_only": 1,
+    "secondary_evaluation_candidate": 116
+  },
+  "blocking_reason_distribution": {
+    "EVENT_REGISTRY_MISSING_OR_UNTYPED": 1,
+    "NO_PATCH_EVENT_OVERLAY_GEOMETRY": 171
+  },
+  "c4_candidate_count": 0,
+  "candidate_reference_count": 55,
+  "review_only_count": 0,
+  "can_train_model": false,
+  "can_create_operational_labels": false,
+  "methodological_status": "EVIDENCE_SYSTEM_READY_FOR_HUMAN_REVIEW_NOT_FOR_TRAINING"
+}

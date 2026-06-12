@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "v2au overlay gate decision audit",
+  "description": "Row contract for v2au_overlay_gate_decision_audit.csv. v2au overlay engine. No operational label, no training target; max decision C4_CANDIDATE_REQUIRES_HUMAN_REVIEW.",
+  "type": "object",
+  "required": [
+    "decision_id",
+    "package_id",
+    "event_id",
+    "patch_id",
+    "gate_name",
+    "gate_passed",
+    "gate_status",
+    "required_condition",
+    "observed_value",
+    "severity",
+    "blocking_reason",
+    "recommended_action"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "decision_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "package_id": {
+      "type": "string"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "patch_id": {
+      "type": "string"
+    },
+    "gate_name": {
+      "type": "string",
+      "enum": [
+        "OVERLAY_GATE_01_PATCH_GEOMETRY_EXISTS",
+        "OVERLAY_GATE_02_EVENT_GEOMETRY_EXISTS",
+        "OVERLAY_GATE_03_PATCH_CRS_KNOWN",
+        "OVERLAY_GATE_04_EVENT_CRS_KNOWN",
+        "OVERLAY_GATE_05_GEOMETRIES_VALID",
+        "OVERLAY_GATE_06_AREA_COMPUTABLE",
+        "OVERLAY_GATE_07_INTERSECTION_COMPUTABLE",
+        "OVERLAY_GATE_08_INTERSECTION_RATIO_ACCEPTABLE",
+        "OVERLAY_GATE_09_CONTEXT_GEOMETRY_NOT_PROMOTED",
+        "OVERLAY_GATE_10_POINT_ANCHOR_NOT_OVERLAY",
+        "OVERLAY_GATE_11_NO_OPERATIONAL_LABEL_CREATED",
+        "OVERLAY_GATE_12_HUMAN_REVIEW_REQUIRED_FOR_C4"
+      ]
+    },
+    "gate_passed": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "gate_status": {
+      "type": "string"
+    },
+    "required_condition": {
+      "type": "string"
+    },
+    "observed_value": {
+      "type": "string"
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "BLOCKING",
+        "GUARDRAIL"
+      ]
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "recommended_action": {
+      "type": "string"
+    }
+  },
+  "x_id_field": "decision_id",
+  "x_csv_file": "datasets/v2au_overlay_gate_decision_audit.csv"
+}

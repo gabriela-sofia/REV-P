@@ -1,0 +1,23 @@
+{
+  "stage": "v2au",
+  "description": "Patch-Event Overlay Geometry Engine. Computes patch ∩ event intersection from real geometries when they exist. Never creates ground truth, operational/binary label, or training target. Maximum decision is C4_CANDIDATE_REQUIRES_HUMAN_REVIEW.",
+  "accepted_crs": ["EPSG:4326", "EPSG:3857", "EPSG:31982", "EPSG:31983"],
+  "target_crs_for_area": "EPSG:3857",
+  "minimum_intersection_ratio": 0.01,
+  "minimum_event_area_m2": 1.0,
+  "allow_point_event_buffer": false,
+  "optional_point_buffer_meters": null,
+  "strict_crs": true,
+  "offline_mode": true,
+  "fail_on_missing_optional_geometry": false,
+  "methodological_invariants": {
+    "can_train_model": false,
+    "can_create_operational_labels": false,
+    "can_declare_ground_truth_final": false,
+    "max_decision": "C4_CANDIDATE_REQUIRES_HUMAN_REVIEW",
+    "point_is_not_overlay_without_buffer": true,
+    "context_geometry_cannot_promote_c4": true,
+    "unknown_crs_blocks_overlay": true,
+    "never_invent_geometry": true
+  }
+}

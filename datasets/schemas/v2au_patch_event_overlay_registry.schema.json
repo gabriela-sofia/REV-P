@@ -1,0 +1,136 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "v2au patch-event overlay registry",
+  "description": "Row contract for v2au_patch_event_overlay_registry.csv. v2au overlay engine. No operational label, no training target; max decision C4_CANDIDATE_REQUIRES_HUMAN_REVIEW.",
+  "type": "object",
+  "required": [
+    "overlay_id",
+    "package_id",
+    "event_id",
+    "patch_id",
+    "region",
+    "city",
+    "hazard_type",
+    "patch_geometry_id",
+    "event_geometry_id",
+    "patch_crs",
+    "event_crs",
+    "target_crs",
+    "patch_area_m2",
+    "event_area_m2",
+    "intersection_area_m2",
+    "intersection_ratio_patch",
+    "intersection_ratio_event",
+    "has_intersection",
+    "has_patch_overlay",
+    "overlay_quality",
+    "overlay_status",
+    "blocking_reason",
+    "allowed_use",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "overlay_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "package_id": {
+      "type": "string"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "patch_id": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "hazard_type": {
+      "type": "string"
+    },
+    "patch_geometry_id": {
+      "type": "string"
+    },
+    "event_geometry_id": {
+      "type": "string"
+    },
+    "patch_crs": {
+      "type": "string"
+    },
+    "event_crs": {
+      "type": "string"
+    },
+    "target_crs": {
+      "type": "string"
+    },
+    "patch_area_m2": {
+      "type": "string"
+    },
+    "event_area_m2": {
+      "type": "string"
+    },
+    "intersection_area_m2": {
+      "type": "string"
+    },
+    "intersection_ratio_patch": {
+      "type": "string"
+    },
+    "intersection_ratio_event": {
+      "type": "string"
+    },
+    "has_intersection": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "has_patch_overlay": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "overlay_quality": {
+      "type": "string"
+    },
+    "overlay_status": {
+      "type": "string",
+      "enum": [
+        "OVERLAY_CONFIRMED",
+        "OVERLAY_CANDIDATE_REVIEW_REQUIRED",
+        "NO_INTERSECTION",
+        "BLOCKED_MISSING_PATCH_GEOMETRY",
+        "BLOCKED_MISSING_EVENT_GEOMETRY",
+        "BLOCKED_UNKNOWN_CRS",
+        "BLOCKED_INVALID_GEOMETRY",
+        "BLOCKED_POINT_ONLY_NO_BUFFER",
+        "BLOCKED_CONTEXT_GEOMETRY_ONLY"
+      ]
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "allowed_use": {
+      "type": "string",
+      "enum": [
+        "geometry_review_only",
+        "c4_candidate_requires_human_review",
+        "blocked_missing_geometry",
+        "blocked_invalid_geometry",
+        "blocked_context_only"
+      ]
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "x_id_field": "overlay_id",
+  "x_csv_file": "datasets/v2au_patch_event_overlay_registry.csv"
+}

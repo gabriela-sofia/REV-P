@@ -1,0 +1,39 @@
+{
+  "stage": "v2au",
+  "status": "OK_WITH_EXPECTED_BLOCKERS",
+  "inputs_found": [
+    "v2at_event_patch_package_registry.csv",
+    "ground_reference_event_registry.csv"
+  ],
+  "outputs_written": [
+    "datasets/v2au_geometry_inventory.csv",
+    "datasets/v2au_patch_event_overlay_registry.csv",
+    "datasets/v2au_event_patch_package_overlay_update.csv",
+    "datasets/v2au_overlay_gate_decision_audit.csv",
+    "datasets/v2au_overlay_review_queue.csv",
+    "outputs_public/execution_reports/v2au_patch_event_overlay_geometry_report.md",
+    "outputs_public/execution_reports/v2au_patch_event_overlay_geometry_summary.json",
+    "outputs_public/logs_summary/v2au_patch_event_overlay_geometry.txt",
+    "outputs_public/execution_reports/v2au_artifact_index_supplement.md"
+  ],
+  "total_packages": 172,
+  "total_geometries": 9,
+  "total_overlays": 172,
+  "confirmed_overlays": 0,
+  "blocked_missing_patch_geometry": 172,
+  "blocked_missing_event_geometry": 0,
+  "blocked_unknown_crs": 0,
+  "blocked_invalid_geometry": 0,
+  "blocked_point_only_no_buffer": 0,
+  "blocked_context_geometry_only": 0,
+  "no_intersection": 0,
+  "c4_candidate_requires_human_review": 0,
+  "overlay_status_distribution": {
+    "BLOCKED_MISSING_PATCH_GEOMETRY": 172
+  },
+  "total_gate_checks": 2064,
+  "total_review_queue_items": 172,
+  "can_train_model": false,
+  "can_create_operational_labels": false,
+  "methodological_status": "GEOMETRY_OVERLAY_READY_FOR_HUMAN_REVIEW_NOT_FOR_TRAINING"
+}

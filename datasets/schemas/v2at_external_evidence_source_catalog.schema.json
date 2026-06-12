@@ -1,0 +1,92 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "v2at external evidence source catalog",
+  "description": "Row contract for v2at_external_evidence_source_catalog.csv. Generated/validated by v2at engine. No operational label, no training target.",
+  "type": "object",
+  "required": [
+    "source_id",
+    "source_name",
+    "source_class",
+    "institution_type",
+    "country_scope",
+    "spatial_role",
+    "temporal_role",
+    "geometry_role",
+    "license_status",
+    "access_mode",
+    "expected_data_type",
+    "evidence_weight",
+    "can_open_candidate",
+    "can_promote_alone",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "source_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_name": {
+      "type": "string"
+    },
+    "source_class": {
+      "type": "string",
+      "enum": [
+        "official_hydromet",
+        "official_geological",
+        "official_disaster_record",
+        "official_geoinfo",
+        "operational_mapping",
+        "vhr_optical",
+        "methodological_benchmark",
+        "context_low"
+      ]
+    },
+    "institution_type": {
+      "type": "string"
+    },
+    "country_scope": {
+      "type": "string"
+    },
+    "spatial_role": {
+      "type": "string"
+    },
+    "temporal_role": {
+      "type": "string"
+    },
+    "geometry_role": {
+      "type": "string"
+    },
+    "license_status": {
+      "type": "string"
+    },
+    "access_mode": {
+      "type": "string"
+    },
+    "expected_data_type": {
+      "type": "string"
+    },
+    "evidence_weight": {
+      "type": "string"
+    },
+    "can_open_candidate": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "can_promote_alone": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "x_id_field": "source_id",
+  "x_csv_file": "datasets/v2at_external_evidence_source_catalog.csv"
+}

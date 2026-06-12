@@ -1,0 +1,9 @@
+[v2au] Patch-Event Overlay Geometry Engine
+[v2au] inputs_found=2 outputs_written=9
+[v2au] packages=172 geometries=9 overlays=172 confirmed=0
+[v2au] blocked_missing_patch=172 blocked_missing_event=0 blocked_unknown_crs=0 blocked_invalid=0 blocked_point=0 blocked_context=0
+[v2au] c4_candidate_requires_human_review=0
+[v2au] can_train_model=False can_create_operational_labels=False
+[v2au] methodological_status=GEOMETRY_OVERLAY_READY_FOR_HUMAN_REVIEW_NOT_FOR_TRAINING
+[v2au] structural_errors=0
+[v2au] status=OK

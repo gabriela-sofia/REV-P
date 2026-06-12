@@ -1,0 +1,52 @@
+{
+  "stage": "v2at",
+  "description": "Evidence Registry + Event-Patch Package Engine. Review-only evidence system. Never trains a model, never creates an operational/binary label, never declares ground truth.",
+  "time_delta_threshold_days": 30,
+  "minimum_intersection_ratio": 0.10,
+  "minimum_valid_data_fraction": 0.50,
+  "source_weight_by_class": {
+    "official_hydromet": 0.90,
+    "official_geological": 0.88,
+    "official_disaster_record": 0.80,
+    "official_geoinfo": 0.60,
+    "operational_mapping": 0.75,
+    "vhr_optical": 0.70,
+    "methodological_benchmark": 0.40,
+    "context_low": 0.15
+  },
+  "promotion_thresholds": {
+    "c4_candidate_min_score": 0.80,
+    "c3_min_score": 0.55,
+    "c2_min_score": 0.35,
+    "c1_min_score": 0.15
+  },
+  "allowed_hazard_types": [
+    "urban_flood",
+    "flash_flood",
+    "flood",
+    "mass_movement",
+    "landslide",
+    "unknown_hazard"
+  ],
+  "allowed_use_values": [
+    "review_only",
+    "candidate_reference",
+    "secondary_evaluation_candidate",
+    "operational_label_blocked",
+    "methodological_benchmark_only",
+    "rejected_context_only"
+  ],
+  "strict_mode": false,
+  "offline_mode": true,
+  "fail_on_missing_optional_inputs": false,
+  "methodological_invariants": {
+    "can_train_model": false,
+    "can_create_operational_labels": false,
+    "can_declare_ground_truth": false,
+    "dino_is_physical_evidence": false,
+    "absence_is_negative": false,
+    "benchmark_is_local_truth": false,
+    "quickview_promotes_alone": false,
+    "media_social_is_strong_evidence": false
+  }
+}
