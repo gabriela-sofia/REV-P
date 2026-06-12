@@ -1,0 +1,7 @@
+snapshot_id,source_id,official_url,http_status,snapshot_status,snapshot_path,snapshot_sha256,raw_data_versioned,terms_classification,license_candidate_status,can_create_ground_truth,can_create_patch_truth,can_create_label,can_create_negative,can_train_model,quickview_can_promote,susceptibility_can_promote,dino_can_decide_event,terms_snapshot_is_not_legal_clearance
+SNAP_v2av_001,INMET,https://portal.inmet.gov.br/dadoshistoricos,,NETWORK_DISABLED_DETERMINISTIC_RUN,,,false,TERMS_STILL_UNKNOWN,LICENSE_STILL_UNKNOWN,false,false,false,false,false,false,false,false,true
+SNAP_v2av_002,CEMADEN,https://www.cemaden.gov.br/mapainterativo/,,NETWORK_DISABLED_DETERMINISTIC_RUN,,,false,TERMS_STILL_UNKNOWN,LICENSE_STILL_UNKNOWN,false,false,false,false,false,false,false,false,true
+SNAP_v2av_003,ANA_HIDROWEB,https://www.snirh.gov.br/hidroweb/,,NETWORK_DISABLED_DETERMINISTIC_RUN,,,false,TERMS_STILL_UNKNOWN,LICENSE_STILL_UNKNOWN,false,false,false,false,false,false,false,false,true
+SNAP_v2av_004,SGB_CPRM,https://www.sgb.gov.br/,,NETWORK_DISABLED_DETERMINISTIC_RUN,,,false,TERMS_STILL_UNKNOWN,LICENSE_STILL_UNKNOWN,false,false,false,false,false,false,false,false,true
+SNAP_v2av_005,COPERNICUS_EMS,https://emergency.copernicus.eu/,,NETWORK_DISABLED_DETERMINISTIC_RUN,,,false,TERMS_STILL_UNKNOWN,LICENSE_STILL_UNKNOWN,false,false,false,false,false,false,false,false,true
+SNAP_v2av_006,INTERNATIONAL_CHARTER,https://disasterscharter.org/,,NETWORK_DISABLED_DETERMINISTIC_RUN,,,false,TERMS_STILL_UNKNOWN,LICENSE_STILL_UNKNOWN,false,false,false,false,false,false,false,false,true

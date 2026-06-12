@@ -1,0 +1,4 @@
+stage: v2av
+component: access_page_registry
+public_download_is_not_public_license: true
+official_source_is_not_observed_event: true

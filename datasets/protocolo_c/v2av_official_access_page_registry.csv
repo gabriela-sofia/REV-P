@@ -1,0 +1,7 @@
+access_id,source_id,official_url,source_role,access_page_status,download_public_is_public_license,official_source_is_observed_event,can_create_ground_truth,can_create_patch_truth,can_create_label,can_create_negative,can_train_model,quickview_can_promote,susceptibility_can_promote,dino_can_decide_event,terms_snapshot_is_not_legal_clearance
+ACCESS_v2av_001,INMET,https://portal.inmet.gov.br/dadoshistoricos,OFFICIAL_OBSERVED_TIME_SERIES,REQUIRES_MANUAL_REVIEW,false,false,false,false,false,false,false,false,false,false,true
+ACCESS_v2av_002,CEMADEN,https://www.cemaden.gov.br/mapainterativo/,OFFICIAL_OBSERVED_TIME_SERIES,REQUIRES_MANUAL_REVIEW,false,false,false,false,false,false,false,false,false,false,true
+ACCESS_v2av_003,ANA_HIDROWEB,https://www.snirh.gov.br/hidroweb/,OFFICIAL_OBSERVED_TIME_SERIES,REQUIRES_MANUAL_REVIEW,false,false,false,false,false,false,false,false,false,false,true
+ACCESS_v2av_004,SGB_CPRM,https://www.sgb.gov.br/,SUSCEPTIBILITY_OR_RISK_CONTEXT,REQUIRES_MANUAL_REVIEW,false,false,false,false,false,false,false,false,false,false,true
+ACCESS_v2av_005,COPERNICUS_EMS,https://emergency.copernicus.eu/,OFFICIAL_SPATIAL_PRODUCT,REQUIRES_MANUAL_REVIEW,false,false,false,false,false,false,false,false,false,false,true
+ACCESS_v2av_006,INTERNATIONAL_CHARTER,https://disasterscharter.org/,QUICKVIEW_OR_PRODUCT,REQUIRES_MANUAL_REVIEW,false,false,false,false,false,false,false,false,false,false,true

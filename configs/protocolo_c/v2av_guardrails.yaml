@@ -1,0 +1,11 @@
+stage: v2av
+component: guardrails
+can_create_ground_truth: false
+can_create_patch_truth: false
+can_create_label: false
+can_create_negative: false
+can_train_model: false
+quickview_can_promote: false
+susceptibility_can_promote: false
+dino_can_decide_event: false
+terms_snapshot_is_not_legal_clearance: true

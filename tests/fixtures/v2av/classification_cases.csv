@@ -1,0 +1,12 @@
+kind,a,b,c,expected
+page,true,false,false,TERMS_PAGE_FOUND
+page,false,true,false,DOWNLOAD_PAGE_FOUND
+page,false,false,true,DATA_ACCESS_CONFIRMED
+page,false,false,false,TERMS_STILL_UNKNOWN
+license,true,false,true,LICENSE_CANDIDATE_EXPLICIT
+license,true,false,false,NOT_REUSABLE_FOR_PUBLIC_REPO
+license,false,true,true,REQUIRES_MANUAL_REVIEW
+license,false,false,true,LICENSE_STILL_UNKNOWN
+crs,false,false,,NOT_SPATIAL
+crs,true,true,,CRS_CANDIDATE_EXPLICIT
+crs,true,false,,CRS_STILL_UNKNOWN

@@ -1,0 +1,3 @@
+stage: v2av
+component: license_resolution_candidates
+unknown_changes_only_with_explicit_traceable_text: true

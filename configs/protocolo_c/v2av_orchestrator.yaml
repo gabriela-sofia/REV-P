@@ -1,0 +1,4 @@
+stage: v2av
+component: orchestrator
+previous_outputs_read_only: true
+git_operations: forbidden

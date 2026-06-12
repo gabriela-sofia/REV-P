@@ -1,0 +1,3 @@
+stage: v2av
+component: unresolved_terms_report
+allowed_actions: [REQUIRES_MANUAL_REVIEW, REQUIRES_CONTACT]

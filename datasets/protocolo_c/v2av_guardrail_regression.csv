@@ -1,0 +1,11 @@
+regression_id,artifact_path,violation_count,status
+GR_v2av_000,datasets/protocolo_c/v2av_guardrail_regression.csv,0,PASS
+GR_v2av_001,datasets/protocolo_c/v2av_license_resolution_candidates.csv,0,PASS
+GR_v2av_002,datasets/protocolo_c/v2av_manual_acquisition_packet_index.csv,0,PASS
+GR_v2av_003,datasets/protocolo_c/v2av_official_access_page_registry.csv,0,PASS
+GR_v2av_004,datasets/protocolo_c/v2av_orchestrator_manifest.csv,0,PASS
+GR_v2av_005,datasets/protocolo_c/v2av_source_priority_recheck.csv,0,PASS
+GR_v2av_006,datasets/protocolo_c/v2av_source_terms_snapshot_registry.csv,0,PASS
+GR_v2av_007,datasets/protocolo_c/v2av_temporal_observation_targets.csv,0,PASS
+GR_v2av_008,datasets/protocolo_c/v2av_unresolved_terms_report.csv,0,PASS
+GR_v2av_009,docs/protocolo_c/v2av_official_source_terms_snapshot/evidence_cache/.gitignore,0,PASS
