@@ -1,0 +1,20 @@
+{
+  "features": [
+    {
+      "geometry": null,
+      "properties": {
+        "candidate_id": "CTB_2023_10_28_30",
+        "geometry_status": "MANUAL_DIGITIZATION_REQUIRED",
+        "not_ground_truth": true,
+        "not_label": true,
+        "overlay_executed": false,
+        "patch_truth_allowed": false,
+        "raw_data_versioned": false,
+        "region": "Curitiba",
+        "source_trace": "datasets/protocolo_c/v2aq_event_geometry_candidates.csv"
+      },
+      "type": "Feature"
+    }
+  ],
+  "type": "FeatureCollection"
+}

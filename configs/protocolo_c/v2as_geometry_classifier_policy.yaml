@@ -1,0 +1,5 @@
+stage: v2as
+component: geometry_candidate_classifier
+statuses: [EXPLICIT_VALID_GEOMETRY_AVAILABLE, EXPLICIT_COORDINATE_AVAILABLE, EXPLICIT_BBOX_AVAILABLE, EXPLICIT_GEOMETRY_INVALID, NO_EXPLICIT_GEOMETRY_STILL_NULL, MANUAL_DIGITIZATION_REQUIRED]
+can_use_for_ground_truth: false
+can_export_real_geometry_requires_explicit_status: true

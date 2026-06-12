@@ -1,0 +1,8 @@
+stage: v2as
+component: coordinate_sanity_validator
+brazil_bounds: {lat: [-34.0, 6.0], lon: [-74.0, -34.0]}
+region_bounds:
+  Recife: {lat: [-8.6, -7.6], lon: [-35.3, -34.6]}
+  Petropolis: {lat: [-22.9, -22.1], lon: [-43.6, -42.8]}
+  Curitiba: {lat: [-25.9, -25.0], lon: [-49.7, -48.8]}
+no_explicit_coordinate_status: NO_EXPLICIT_COORDINATE

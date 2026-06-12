@@ -1,0 +1,5 @@
+stage: v2as
+component: patch_link_readiness_update
+patch_link_review_ready_requires: [explicit_real_geometry, patch_geometry_available, crosswalk_candidate_available]
+patch_truth_allowed: false
+no_crosswalk_inference_by_visual_similarity: true

@@ -1,0 +1,24 @@
+stage: v2as
+component: guardrail_regression
+scan: [datasets/protocolo_c/v2as_*.csv, docs/protocolo_c/v2as_official_geometry_deep_probe/*.md, docs/protocolo_c/v2as_official_geometry_deep_probe/geojson_candidates/*.geojson]
+exclude_from_scan: [docs/protocolo_c/v2as_official_geometry_deep_probe/evidence_cache]
+fail_on:
+  - ground_truth=true
+  - label=true
+  - training=true
+  - overlay=true
+  - prediction=true
+  - protocol_b_open=true
+  - protocol_b_reopen=true
+  - sentinel_date_inferred=true
+  - crosswalk_inferred=true
+  - geometry_inferred=true
+  - operational_validation=true
+  - promotion_allowed=true
+  - can_create_ground_truth=true
+  - can_create_label=true
+  - patch_truth_allowed=true
+  - raw_data_versioned=true
+  - local_only
+  - absolute_path_in_content
+unsafe_language_allowed_only_in_safe_context: true

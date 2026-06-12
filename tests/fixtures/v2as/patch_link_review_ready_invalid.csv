@@ -1,0 +1,2 @@
+candidate_id,geometry_present,patch_geometry_available,crosswalk_candidate_available,patch_link_review_ready,patch_truth_allowed
+PET_2022_02_15,false,false,false,true,false

@@ -1,0 +1,6 @@
+stage: v2as
+component: geojson_candidate_exporter
+real_geometry_requires_explicit_payload: true
+null_geometry_allowed: true
+properties: [candidate_id, region, geometry_status, source_trace, not_ground_truth, not_label, patch_truth_allowed, overlay_executed, raw_data_versioned]
+fixed_flags: {not_ground_truth: true, not_label: true, patch_truth_allowed: false, overlay_executed: false, raw_data_versioned: false}

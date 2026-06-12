@@ -1,0 +1,5 @@
+stage: v2as
+component: geojson_validation
+required_properties: [candidate_id, region, geometry_status, source_trace, not_ground_truth, not_label, patch_truth_allowed, overlay_executed, raw_data_versioned]
+fail_on: [real_geometry_without_explicit_source, missing_required_properties, not_feature_collection, invalid_json]
+geometry_null_allowed: true

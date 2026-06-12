@@ -1,0 +1,4 @@
+stage: v2as
+component: digitization_gap_report
+do_not_infer: true
+report: [missing_geometry, missing_license, missing_crs, missing_external_validation, missing_patch_link_review]

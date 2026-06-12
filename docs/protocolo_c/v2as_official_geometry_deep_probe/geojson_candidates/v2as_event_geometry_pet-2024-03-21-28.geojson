@@ -1,0 +1,20 @@
+{
+  "features": [
+    {
+      "geometry": null,
+      "properties": {
+        "candidate_id": "PET_2024_03_21_28",
+        "geometry_status": "NO_EXPLICIT_GEOMETRY_STILL_NULL",
+        "not_ground_truth": true,
+        "not_label": true,
+        "overlay_executed": false,
+        "patch_truth_allowed": false,
+        "raw_data_versioned": false,
+        "region": "Petropolis",
+        "source_trace": "datasets/protocolo_c/v2aq_event_geometry_candidates.csv"
+      },
+      "type": "Feature"
+    }
+  ],
+  "type": "FeatureCollection"
+}

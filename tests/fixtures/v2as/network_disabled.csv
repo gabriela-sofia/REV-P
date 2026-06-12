@@ -1,0 +1,2 @@
+candidate_id,network_enabled,probe_status
+X,false,NETWORK_DISABLED_DETERMINISTIC_RUN

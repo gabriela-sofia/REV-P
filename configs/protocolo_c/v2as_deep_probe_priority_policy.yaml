@@ -1,0 +1,5 @@
+stage: v2as
+component: deep_probe_priority
+source_stage: v2ar
+prioritize: [HIGH_PRIORITY, can_digitize_now, OFFICIAL_MAP_DIGITIZATION_REQUIRED, C4, C3, mapa_laudo_ponto_rua]
+bands: [DEEP_PROBE_HIGH, DEEP_PROBE_MEDIUM, DEEP_PROBE_LOW]

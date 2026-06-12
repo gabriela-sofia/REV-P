@@ -1,0 +1,8 @@
+stage: v2as
+component: patch_truth_boundary_audit
+fixed:
+  patch_truth_allowed: false
+  can_create_ground_truth: false
+  can_create_label: false
+  protocol_b_status: BLOCKED
+external_validation_pending: true

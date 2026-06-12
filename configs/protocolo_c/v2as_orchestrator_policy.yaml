@@ -1,0 +1,18 @@
+stage: v2as
+component: master_orchestrator
+fail_fast: true
+git_operations: forbidden
+order:
+  - deep_probe_priority
+  - source_deep_probe
+  - geometry_payload_detector
+  - coordinate_sanity_validator
+  - geometry_candidate_classifier
+  - geojson_candidate_exporter
+  - geojson_validation
+  - patch_link_readiness_update
+  - digitization_gap_report
+  - patch_truth_boundary_audit
+  - guardrail_regression
+  - next_action_ranker
+  - completion_report

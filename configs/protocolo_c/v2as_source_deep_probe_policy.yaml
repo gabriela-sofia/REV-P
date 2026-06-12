@@ -1,0 +1,11 @@
+stage: v2as
+component: source_deep_probe
+network_opt_in_env: V2AS_NETWORK
+network_opt_in_value: "1"
+offline_status: NETWORK_DISABLED_DETERMINISTIC_RUN
+user_agent: "REV-P-v2as-deep-probe/1.0 (audit-only; light fetch to ignored cache)"
+timeout_seconds: 8
+max_cache_bytes: 2097152
+cache_dir: docs/protocolo_c/v2as_official_geometry_deep_probe/evidence_cache
+cache_is_git_ignored: true
+raw_data_versioned: false

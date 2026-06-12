@@ -1,0 +1,2 @@
+candidate_id,geometry_present,patch_geometry_available,crosswalk_candidate_available,patch_link_review_ready,patch_truth_allowed
+REC_2023_02_05_06,true,true,true,true,false

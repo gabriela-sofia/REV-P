@@ -1,0 +1,16 @@
+completion_id,metric,value,status,notes
+CR_v2as_000,deep_probe_candidates,9,RECORDED,Prioritized from v2ar.
+CR_v2as_001,source_probes,9,RECORDED,Offline deterministic by default; raw never versioned.
+CR_v2as_002,geometry_payloads_detected,0,RECORDED,Explicit structured payloads only.
+CR_v2as_003,coordinates_plausible,0,RECORDED,Explicit coordinates within Brazil/region bounds.
+CR_v2as_004,can_export_real_geometry,0,RECORDED,Only explicit geometry statuses.
+CR_v2as_005,geojson_created,9,RECORDED,"real geometry=0, null=9."
+CR_v2as_006,geojson_geometry_real,0,RECORDED,Only from explicit payload.
+CR_v2as_007,geojson_geometry_null,9,RECORDED,geometry: null; manual digitization or proven gap.
+CR_v2as_008,geojson_validation_valid,9,PASS,All exported GeoJSON valid.
+CR_v2as_009,patch_link_review_ready,0,RECORDED,Requires explicit geometry + patch + crosswalk.
+CR_v2as_010,digitization_gap_rows,9,RECORDED,All carry do_not_infer=true.
+CR_v2as_011,patch_truth_boundary_blocked_all,9,PASS,patch_truth/ground_truth/label blocked; protocol_b BLOCKED.
+CR_v2as_012,guardrail_regression_failures,0,PASS,Fail-closed.
+CR_v2as_013,next_action_rank_1,MANUAL_DIGITIZE_EVENT_GEOMETRY_FROM_OFFICIAL_SOURCES,SAFE_NEXT_ACTION,Digitization / external validation / patch-link path.
+CR_v2as_014,final_decision,deep_probe_executed_geometry_candidate_extracted_or_gap_proven_no_operational_ground_truth,NO_OPERATIONAL_GROUND_TRUTH,patch_truth_allowed=false; protocol_b blocked; no raw data versioned.

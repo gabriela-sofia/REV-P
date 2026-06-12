@@ -1,0 +1,6 @@
+stage: v2as
+component: geometry_payload_detector
+accept_only_explicit: true
+accepted_payloads: [coordinate, bbox, geojson, kml, wkt, csv_points, versioned_registry_geometry]
+reject: [broad_textual_mention, neighborhood_geocoding, street_geocoding, raster_to_polygon_without_digitization]
+no_invented_geometry: true
