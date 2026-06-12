@@ -1,0 +1,10 @@
+step_order,step_name,status,output,output_hash,notes
+0,refresh_v2bj_v2bi_inputs,REFRESHED,datasets/protocolo_c/v2bj_recife_candidate_gate_reconciliation.csv,ce10cf5e4c6f079e,Regenerates upstream intake from the live cache; no promotion.
+1,build_recife_human_review_dossier,OK,datasets/protocolo_c/v2bk_recife_human_review_dossier_index.csv,44016c039d094419,Strictly additive; request pack is not evidence; no ground truth.
+2,build_charter_vector_crs_request_pack,OK,datasets/protocolo_c/v2bk_charter_vector_crs_request_pack.csv,ad57fdd2d42cd66c,Strictly additive; request pack is not evidence; no ground truth.
+3,build_cemaden_apac_temporal_request_pack,OK,datasets/protocolo_c/v2bk_cemaden_apac_temporal_request_pack.csv,b201645bff245250,Strictly additive; request pack is not evidence; no ground truth.
+4,build_c5_c6_adjudication_checklist,OK,datasets/protocolo_c/v2bk_c5_c6_adjudication_checklist.csv,111605f538669aa9,Strictly additive; request pack is not evidence; no ground truth.
+5,build_recife_decision_matrix,OK,datasets/protocolo_c/v2bk_recife_candidate_decision_matrix.csv,8793771e947739bb,Strictly additive; request pack is not evidence; no ground truth.
+6,generate_review_ready_markdown,OK,docs/protocolo_c/v2bk_recife_human_review_dossier/dossier/REC_2022_05_24_30_review_dossier.md,cd2dad250b5bf02e,Strictly additive; request pack is not evidence; no ground truth.
+7,generate_readme,OK,docs/protocolo_c/v2bk_recife_human_review_dossier/README.md,78f7e02a3184e09f,Strictly additive; request pack is not evidence; no ground truth.
+8,run_guardrail_regression,OK,datasets/protocolo_c/v2bk_guardrail_regression.csv,d6148826a0fe7ee5,Strictly additive; request pack is not evidence; no ground truth.

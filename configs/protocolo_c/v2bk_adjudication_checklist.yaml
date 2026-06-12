@@ -1,0 +1,7 @@
+stage: v2bk
+component: c5_c6_adjudication_checklist
+decision_stages: [C5_HUMAN_REVIEW, C6_CANDIDATE_REFERENCE]
+acceptable_decisions: [ACCEPT_FOR_CANDIDATE_REFERENCE, KEEP_PENDING, REJECT_FOR_NOW, REQUEST_MORE_EVIDENCE, MARK_HAZARD_AMBIGUOUS]
+final_ground_truth_allowed: false
+can_create_ground_truth: false
+can_create_label: false

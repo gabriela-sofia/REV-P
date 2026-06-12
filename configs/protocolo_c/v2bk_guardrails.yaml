@@ -1,0 +1,14 @@
+stage: v2bk
+can_create_ground_truth: false
+can_create_patch_truth: false
+can_create_label: false
+can_create_negative: false
+can_train_model: false
+request_pack_is_not_evidence: true
+human_review_dossier_is_not_ground_truth: true
+charter_raster_is_not_vector_geometry: true
+ana_stage_is_not_precipitation: true
+apac_pdf_is_not_station_series: true
+inmet_proxy_is_not_local_station: true
+candidate_reference_is_not_final_truth: true
+raw_data_versioned: false

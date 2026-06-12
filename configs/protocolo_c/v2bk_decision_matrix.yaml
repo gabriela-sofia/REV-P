@@ -1,0 +1,7 @@
+stage: v2bk
+component: recife_candidate_decision_matrix
+decision_axes: [TEMPORALITY, LOCAL_PRECIPITATION, HYDROLOGICAL_CONTEXT, CHARTER_SPATIAL_PRODUCT, GEOMETRY_ACCESS, HAZARD_TYPING, HUMAN_REVIEW, FINAL_TRUTH]
+final_truth_status: BLOCKED
+promotion_allowed: false
+can_create_ground_truth: false
+can_create_label: false

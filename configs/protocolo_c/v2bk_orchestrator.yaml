@@ -1,0 +1,14 @@
+stage: v2bk
+strictly_additive: true
+refresh_env: V2BK_REFRESH
+refresh_default: true
+steps:
+  - build_recife_human_review_dossier
+  - build_charter_vector_crs_request_pack
+  - build_cemaden_apac_temporal_request_pack
+  - build_c5_c6_adjudication_checklist
+  - build_recife_decision_matrix
+  - generate_review_ready_markdown
+  - generate_readme
+  - run_guardrail_regression
+c7_final_ground_truth: BLOCKED

@@ -1,0 +1,9 @@
+regression_id,check,detail,violation_count,status
+GR_v2bk_001,forbidden_flags::v2bk_recife_human_review_dossier_index.csv,no forbidden invariant is true,0,PASS
+GR_v2bk_002,forbidden_flags::v2bk_charter_vector_crs_request_pack.csv,no forbidden invariant is true,0,PASS
+GR_v2bk_003,forbidden_flags::v2bk_cemaden_apac_temporal_request_pack.csv,no forbidden invariant is true,0,PASS
+GR_v2bk_004,forbidden_flags::v2bk_c5_c6_adjudication_checklist.csv,no forbidden invariant is true,0,PASS
+GR_v2bk_005,forbidden_flags::v2bk_recife_candidate_decision_matrix.csv,no forbidden invariant is true,0,PASS
+GR_v2bk_006,final_truth_blocked,decision FINAL_TRUTH axis stays blocked,0,PASS
+GR_v2bk_007,no_promotion,no decision axis promotes,0,PASS
+GR_v2bk_008,reference_not_final,candidate reference is not final truth,0,PASS

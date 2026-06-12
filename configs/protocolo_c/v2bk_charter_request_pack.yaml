@@ -1,0 +1,10 @@
+stage: v2bk
+component: charter_vector_crs_request_pack
+target_institution: CENAD / International Charter
+activation_id: "758"
+product_title: "Landslides after effects in Recife/PE - Brazil"
+requested_artifacts: [VECTOR_FILE, CRS_METADATA, FEATURE_DEFINITION, LICENSE_TERMS, REDISTRIBUTION_TERMS, METHOD_DESCRIPTION]
+blocks_gate: C4_CANDIDATE_GEOMETRY
+send_email_automatically: false
+request_pack_is_not_evidence: true
+can_create_ground_truth: false

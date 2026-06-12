@@ -1,0 +1,13 @@
+stage: v2bk
+component: human_review_dossier
+candidate_id: REC_2022_05_24_30
+recife_package_id: ARP_v2az_0005
+inputs:
+  - v2bj_recife_candidate_gate_reconciliation.csv
+  - v2bj_recife_candidate_reference_queue.csv
+  - v2bj_inmet_proxy_availability_audit.csv
+  - v2bi_charter_candidate_geometry_readiness.csv
+output: v2bk_recife_human_review_dossier_index.csv
+ready_for_human_review: true
+can_create_ground_truth: false
+can_create_label: false
