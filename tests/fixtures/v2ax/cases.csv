@@ -1,0 +1,11 @@
+kind,a,b,c,d,expected
+window,REC_2023_02_05_06,,,,DATE_RANGE
+window,PET_2022_02_15,,,,EXACT_DATE
+window,UNKNOWN,,,,UNKNOWN
+quality,100,95,true,,QUALITY_ACCEPTABLE_FOR_REVIEW
+quality,100,70,true,,QUALITY_INCOMPLETE
+quality,100,95,false,,PRECIPITATION_VARIABLE_MISSING
+readiness,true,true,true,0.10,TEMPORAL_EVIDENCE_READY_FOR_REVIEW
+readiness,true,true,true,0.30,TEMPORAL_EVIDENCE_NOT_READY
+readiness,true,false,true,0.10,TEMPORAL_EVIDENCE_NOT_READY
+readiness,false,true,true,0.10,TEMPORAL_EVIDENCE_NOT_READY

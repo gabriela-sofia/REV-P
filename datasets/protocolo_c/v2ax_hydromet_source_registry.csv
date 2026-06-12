@@ -1,0 +1,4 @@
+source_registry_id,source_id,source_name,official_url,source_public,provenance_status,source_type,station_or_series_candidate,citation_required,can_create_ground_truth,can_create_patch_truth,can_create_label,can_create_negative,can_train_model,hydromet_time_series_is_not_geometry,precipitation_signal_is_not_flood_truth,temporal_readiness_is_not_truth_readiness,raw_data_versioned
+SRC_v2ax_001,INMET,INMET,https://portal.inmet.gov.br/dadoshistoricos,true,PUBLIC_SOURCE_PROVENANCE_PENDING,PUBLIC_TIMESERIES,true,true,false,false,false,false,false,true,true,true,false
+SRC_v2ax_002,CEMADEN,CEMADEN,https://www.cemaden.gov.br/mapainterativo/,true,PUBLIC_SOURCE_PROVENANCE_PENDING,PUBLIC_TIMESERIES,true,true,false,false,false,false,false,true,true,true,false
+SRC_v2ax_003,ANA_HIDROWEB,ANA_HIDROWEB,https://www.snirh.gov.br/hidroweb/,true,PUBLIC_SOURCE_PROVENANCE_PENDING,DYNAMIC_MANUAL,true,true,false,false,false,false,false,true,true,true,false

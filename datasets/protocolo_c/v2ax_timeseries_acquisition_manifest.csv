@@ -1,0 +1,4 @@
+manifest_id,source_id,official_url,network_enabled,acquisition_status,cache_path,cache_sha256,file_size_bytes,raw_data_versioned,derived_light_outputs_only,can_create_ground_truth,can_create_patch_truth,can_create_label,can_create_negative,can_train_model,hydromet_time_series_is_not_geometry,precipitation_signal_is_not_flood_truth,temporal_readiness_is_not_truth_readiness
+MAN_v2ax_001,INMET,https://portal.inmet.gov.br/dadoshistoricos,false,NETWORK_DISABLED_DETERMINISTIC_RUN,,,,false,true,false,false,false,false,false,true,true,true
+MAN_v2ax_002,CEMADEN,https://www.cemaden.gov.br/mapainterativo/,false,NETWORK_DISABLED_DETERMINISTIC_RUN,,,,false,true,false,false,false,false,false,true,true,true
+MAN_v2ax_003,ANA_HIDROWEB,https://www.snirh.gov.br/hidroweb/,false,NETWORK_DISABLED_DETERMINISTIC_RUN,,,,false,true,false,false,false,false,false,true,true,true

@@ -1,0 +1,3 @@
+stage: v2ax
+default_window_days: [-7, 3]
+unknown_status: TEMPORAL_WINDOW_INCOMPLETE

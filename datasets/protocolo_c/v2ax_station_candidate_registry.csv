@@ -1,0 +1,4 @@
+station_candidate_id,source_id,station_id,station_name,municipality,state,latitude,longitude,distance_to_patch_km,variable,station_or_series_candidate,candidate_status,nearby_station_proves_patch_event,can_create_ground_truth,can_create_patch_truth,can_create_label,can_create_negative,can_train_model,hydromet_time_series_is_not_geometry,precipitation_signal_is_not_flood_truth,temporal_readiness_is_not_truth_readiness,raw_data_versioned
+STATION_v2ax_001,INMET,,,,,,,,precipitation,true,STATION_DISCOVERY_REQUIRED_OFFLINE,false,false,false,false,false,false,true,true,true,false
+STATION_v2ax_002,CEMADEN,,,,,,,,precipitation,true,STATION_DISCOVERY_REQUIRED_OFFLINE,false,false,false,false,false,false,true,true,true,false
+STATION_v2ax_003,ANA_HIDROWEB,,,,,,,,precipitation,true,STATION_DISCOVERY_REQUIRED_OFFLINE,false,false,false,false,false,false,true,true,true,false

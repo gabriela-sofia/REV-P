@@ -1,0 +1,3 @@
+stage: v2ax
+previous_outputs_read_only: true
+git_operations: forbidden

@@ -1,0 +1,4 @@
+quality_id,station_id,station_name,source_name,municipality,state,latitude,longitude,distance_to_patch_km,variable,observed_start,observed_end,expected_records,available_records,missing_rate,max_precip_1h,precip_24h_max,precip_window_total,quality_status,can_create_ground_truth,can_create_patch_truth,can_create_label,can_create_negative,can_train_model,hydromet_time_series_is_not_geometry,precipitation_signal_is_not_flood_truth,temporal_readiness_is_not_truth_readiness,raw_data_versioned
+QUALITY_v2ax_001,,,INMET,,,,,,precipitation,,,0,0,1.000,,,,QUALITY_INCOMPLETE,false,false,false,false,false,true,true,true,false
+QUALITY_v2ax_002,,,CEMADEN,,,,,,precipitation,,,0,0,1.000,,,,QUALITY_INCOMPLETE,false,false,false,false,false,true,true,true,false
+QUALITY_v2ax_003,,,ANA_HIDROWEB,,,,,,precipitation,,,0,0,1.000,,,,QUALITY_INCOMPLETE,false,false,false,false,false,true,true,true,false
