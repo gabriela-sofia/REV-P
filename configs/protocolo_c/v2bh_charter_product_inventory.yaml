@@ -1,0 +1,3 @@
+stage: v2bh
+offline_deterministic: true
+do_not_invent_unconfirmed_titles: true

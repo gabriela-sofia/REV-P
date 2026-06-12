@@ -1,0 +1,4 @@
+stage: v2bh
+strictly_additive: true
+offline_deterministic: true
+network_env: V2BH_NETWORK

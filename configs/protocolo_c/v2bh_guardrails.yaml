@@ -1,0 +1,14 @@
+stage: v2bh
+can_create_ground_truth: false
+can_create_patch_truth: false
+can_create_label: false
+can_create_negative: false
+can_train_model: false
+charter_product_is_not_final_ground_truth: true
+preview_is_not_vector_geometry: true
+landslide_product_is_not_flood_extent: true
+olinda_product_is_not_recife: true
+vector_without_review_is_not_label: true
+crs_missing_blocks_geometry_promotion: true
+temporal_gap_still_requires_apac_cemaden_ana: true
+raw_data_versioned: false

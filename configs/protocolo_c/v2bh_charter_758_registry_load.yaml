@@ -1,0 +1,3 @@
+stage: v2bh
+required_activation_id: "758"
+fail_closed: true

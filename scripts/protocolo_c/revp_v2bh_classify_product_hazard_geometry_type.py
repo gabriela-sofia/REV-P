@@ -1,0 +1,2 @@
+from revp_v2bh_common import parse_args, run_classify_product_hazard_geometry_type
+if __name__ == "__main__": run_classify_product_hazard_geometry_type(parse_args())
