@@ -1,0 +1,8 @@
+regression_id,check,detail,violation_count,status
+GR_v2bj_001,forbidden_flags::v2bj_recife_intake_result_summary.csv,no forbidden invariant is true,0,PASS
+GR_v2bj_002,forbidden_flags::v2bj_inmet_proxy_availability_audit.csv,no forbidden invariant is true,0,PASS
+GR_v2bj_003,forbidden_flags::v2bj_recife_candidate_gate_reconciliation.csv,no forbidden invariant is true,0,PASS
+GR_v2bj_004,forbidden_flags::v2bj_recife_candidate_reference_queue.csv,no forbidden invariant is true,0,PASS
+GR_v2bj_005,c7_blocked,C7 stays BLOCKED,0,PASS
+GR_v2bj_006,no_promotion,no gate promotes,0,PASS
+GR_v2bj_007,proxy_not_substituted,no INMET proxy marked usable as local rainfall,0,PASS
