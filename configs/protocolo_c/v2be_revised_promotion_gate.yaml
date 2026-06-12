@@ -1,0 +1,4 @@
+stage: v2be
+step: apply_revised_promotion_gate
+allowed_confidence: [HIGH, MODERATE]
+promotion_is_methodological_only: true

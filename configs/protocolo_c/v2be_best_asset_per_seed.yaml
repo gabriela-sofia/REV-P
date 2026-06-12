@@ -1,0 +1,5 @@
+stage: v2be
+step: build_best_asset_per_seed
+primary_limit: 1
+alternate_limit: 3
+tie_breaker: sentinel_asset_id_ascending

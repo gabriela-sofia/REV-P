@@ -1,0 +1,6 @@
+stage: v2be
+step: score_sentinel_asset_candidates
+expanded_review_window_days: 15
+unknown_date_penalty: -10
+missing_explicit_patch_penalty: -10
+region_only_penalty: -5

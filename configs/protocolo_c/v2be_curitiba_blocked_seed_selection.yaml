@@ -1,0 +1,3 @@
+stage: v2be
+step: select_curitiba_blocked_seeds
+scope: Curitiba A807 LOCAL promotion-blocked seeds

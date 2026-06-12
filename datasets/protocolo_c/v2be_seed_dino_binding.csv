@@ -1,0 +1,4 @@
+seed_id,patch_id,sentinel_asset_id,dino_embedding_id,embedding_available,dino_link_status,dino_review_available,dino_is_ground_truth,dino_can_create_label,can_create_ground_truth,can_create_patch_truth,can_create_label,can_create_negative,can_train_model,candidate_seed_asset_link_is_not_truth,sentinel_asset_is_not_ground_truth,visual_review_asset_is_not_label,dino_signal_is_not_truth,patch_boundary_is_not_event_geometry,no_geometry_no_final_truth,raw_data_versioned
+SEED_v2bc_0001,,V1PU_VA_00001,,false,NOT_LINKED,false,false,false,false,false,false,false,false,true,true,true,true,true,true,false
+SEED_v2bc_0002,,V1PU_VA_00001,,false,NOT_LINKED,false,false,false,false,false,false,false,false,true,true,true,true,true,true,false
+SEED_v2bc_0003,,V1PU_VA_00001,,false,NOT_LINKED,false,false,false,false,false,false,false,false,true,true,true,true,true,true,false

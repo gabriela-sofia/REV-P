@@ -1,0 +1,3 @@
+stage: v2be
+step: attempt_seed_dino_binding
+dino_is_ground_truth: false

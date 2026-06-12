@@ -1,0 +1,3 @@
+stage: v2be
+step: bind_visual_review_assets
+reference_only_is_ready: false
