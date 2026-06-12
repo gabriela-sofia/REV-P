@@ -1,0 +1,3 @@
+stage: v2ba
+null_geometry_when_blocked: true
+validation_required: true

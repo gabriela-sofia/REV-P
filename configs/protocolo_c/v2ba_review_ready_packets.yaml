@@ -1,0 +1,4 @@
+stage: v2ba
+required_status: READY_FOR_ASSISTED_GEOMETRY_REVIEW
+expected_selected: 6
+recife_gap_excluded: 3

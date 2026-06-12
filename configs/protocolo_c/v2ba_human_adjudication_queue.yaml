@@ -1,0 +1,3 @@
+stage: v2ba
+current_truth_status: NOT_GROUND_TRUTH
+required_for_all_candidates_or_blocked_packages: true

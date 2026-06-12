@@ -1,0 +1,20 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "candidate_geometry_id": "CG_v2ba_0007",
+        "review_packet_id": "ARP_v2az_0007",
+        "event_patch_package_id": "FACT_v2at_0007",
+        "candidate_status": "NOT_CREATED",
+        "blocker_reason": "NO_TRACEABLE_GEOMETRY; TEXTUAL_OR_VISUAL_CONTEXT_CANNOT_BE_AUTO_DIGITIZED",
+        "geometry_null_allowed": true,
+        "validation_required": true,
+        "can_create_ground_truth": false,
+        "can_create_label": false
+      }
+    }
+  ]
+}

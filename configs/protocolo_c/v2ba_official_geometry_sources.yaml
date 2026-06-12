@@ -1,0 +1,3 @@
+stage: v2ba
+source_registry: datasets/protocolo_c/v2ar_official_geometry_source_registry.csv
+official_source_is_not_automatic_truth: true

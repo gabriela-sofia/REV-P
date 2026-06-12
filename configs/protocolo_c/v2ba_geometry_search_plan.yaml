@@ -1,0 +1,4 @@
+stage: v2ba
+default_mode: OFFLINE_DETERMINISTIC
+network_env: V2BA_NETWORK
+can_promote_directly: false

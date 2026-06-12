@@ -1,0 +1,5 @@
+stage: v2ba
+automatic_digitization_allowed: false
+textual_location_is_not_geometry: true
+quickview_is_not_validated_product: true
+susceptibility_is_not_observed_event: true

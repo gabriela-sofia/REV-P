@@ -1,0 +1,14 @@
+report_id,metric,value,status,can_create_ground_truth,can_create_patch_truth,can_create_label,can_create_negative,can_train_model,candidate_geometry_is_not_ground_truth,candidate_digitization_is_not_label,official_source_is_not_automatic_truth,quickview_is_not_validated_product,susceptibility_is_not_observed_event,textual_location_is_not_geometry,rainfall_is_not_flood_extent,patch_boundary_is_not_event_geometry,raw_data_versioned
+REPORT_v2ba_001,review_ready_packets,6,RECORDED,false,false,false,false,false,true,true,true,true,true,true,true,true,false
+REPORT_v2ba_002,recife_gap_packets,3,RECORDED,false,false,false,false,false,true,true,true,true,true,true,true,true,false
+REPORT_v2ba_003,search_tasks,12,RECORDED,false,false,false,false,false,true,true,true,true,true,true,true,true,false
+REPORT_v2ba_004,official_geometries_found,0,RECORDED,false,false,false,false,false,true,true,true,true,true,true,true,true,false
+REPORT_v2ba_005,candidate_geometries_created,0,RECORDED,false,false,false,false,false,true,true,true,true,true,true,true,true,false
+REPORT_v2ba_006,null_geojsons,6,RECORDED,false,false,false,false,false,true,true,true,true,true,true,true,true,false
+REPORT_v2ba_007,human_adjudication_packets,6,RECORDED,false,false,false,false,false,true,true,true,true,true,true,true,true,false
+REPORT_v2ba_008,ground_truth_created,0,RECORDED,false,false,false,false,false,true,true,true,true,true,true,true,true,false
+REPORT_v2ba_009,labels_created,0,RECORDED,false,false,false,false,false,true,true,true,true,true,true,true,true,false
+REPORT_v2ba_010,negatives_created,0,RECORDED,false,false,false,false,false,true,true,true,true,true,true,true,true,false
+REPORT_v2ba_011,training_runs,0,RECORDED,false,false,false,false,false,true,true,true,true,true,true,true,true,false
+REPORT_v2ba_012,next_action_rank_1,MANUAL_DIGITIZATION_FROM_REVIEWABLE_EVIDENCE_OR_SECONDARY_SOURCE_SEARCH,SAFE_NEXT_ACTION,false,false,false,false,false,true,true,true,true,true,true,true,true,false
+REPORT_v2ba_013,recife_next_action,RESOLVE_RECIFE_TEMPORAL_GAP_WITH_CEMADEN_OR_SECONDARY_STATIONS,SAFE_NEXT_ACTION,false,false,false,false,false,true,true,true,true,true,true,true,true,false

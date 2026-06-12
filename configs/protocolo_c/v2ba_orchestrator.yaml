@@ -1,0 +1,4 @@
+stage: v2ba
+expected_steps: 11
+offline_deterministic: true
+expected_candidate_geojsons: 6

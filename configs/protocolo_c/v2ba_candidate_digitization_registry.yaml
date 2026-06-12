@@ -1,0 +1,4 @@
+stage: v2ba
+require_traceable_geometry: true
+candidate_digitization_is_not_label: true
+patch_boundary_is_not_event_geometry: true
