@@ -1,0 +1,3 @@
+stage: v2bg
+cache_policy: RAW_HEAVY_LOCAL_GIT_IGNORED_ONLY
+derived_manifest: LIGHTWEIGHT_ONLY

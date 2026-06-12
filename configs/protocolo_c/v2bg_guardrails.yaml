@@ -1,0 +1,13 @@
+stage: v2bg
+can_create_ground_truth: false
+can_create_patch_truth: false
+can_create_label: false
+can_create_negative: false
+can_train_model: false
+charter_product_is_not_ground_truth: true
+published_map_is_not_confirmed_vector: true
+landslide_scar_is_not_flood_extent: true
+olinda_product_is_not_recife_evidence: true
+copernicus_not_found_is_not_positive_evidence: true
+regional_proxy_does_not_replace_a301: true
+raw_data_versioned: false

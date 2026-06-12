@@ -1,0 +1,3 @@
+stage: v2bg
+offline_deterministic: true
+strictly_additive: true
