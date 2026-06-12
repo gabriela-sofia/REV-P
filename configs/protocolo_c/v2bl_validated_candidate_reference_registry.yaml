@@ -1,0 +1,6 @@
+stage: v2bl
+component: validated_candidate_reference_registry
+reference_status: PROTOCOL_VALIDATED_CANDIDATE_REFERENCE
+allowed_use: [PROTOCOL_C_REFERENCE_REVIEW, ARTICLE_EVIDENCE, PUBLIC_DELIVERY_TABLE]
+forbidden_use: [SUPERVISED_LABEL, NEGATIVE_LABEL, TRAINING_TARGET, FLOOD_EXTENT_TRUTH]
+uncertainty_level: MODERATE

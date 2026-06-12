@@ -1,0 +1,3 @@
+stage: v2bl
+component: reapplication_learning_matrix
+regions: [CURITIBA, PETROPOLIS, RECIFE, ALL]

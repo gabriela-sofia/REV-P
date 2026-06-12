@@ -1,0 +1,11 @@
+step_order,step_name,status,output,output_hash,notes
+0,refresh_v2bk_v2bj_v2bi_inputs,REFRESHED,datasets/protocolo_c/v2bj_recife_candidate_gate_reconciliation.csv,ce10cf5e4c6f079e,Regenerates upstream intake from the live cache; automated protocol adjudication.
+1,load_recife_real_evidence_state,OK,datasets/protocolo_c/v2bl_recife_real_evidence_state.csv,a2d0713af55e4a6d,Strictly additive; candidate reference is not an operational label.
+2,reclassify_non_blocking_limitations,OK,datasets/protocolo_c/v2bl_non_blocking_limitations_reclassification.csv,56a9ba68ff163585,Strictly additive; candidate reference is not an operational label.
+3,apply_automated_protocol_adjudication,OK,datasets/protocolo_c/v2bl_automated_protocol_adjudication.csv,42afd8a5c351c360,Strictly additive; candidate reference is not an operational label.
+4,promote_recife_candidate_reference,OK,datasets/protocolo_c/v2bl_recife_candidate_reference_promotion.csv,7cfa909ab8d69c1e,Strictly additive; candidate reference is not an operational label.
+5,build_validated_candidate_reference_registry,OK,datasets/protocolo_c/v2bl_validated_candidate_reference_registry.csv,08fa629dad1e4cb4,Strictly additive; candidate reference is not an operational label.
+6,build_protocol_evidence_scorecard,OK,datasets/protocolo_c/v2bl_protocol_evidence_scorecard.csv,fc6a695c8766c227,Strictly additive; candidate reference is not an operational label.
+7,build_reapplication_learning_matrix,OK,datasets/protocolo_c/v2bl_reapplication_learning_matrix.csv,31d5a308bef54681,Strictly additive; candidate reference is not an operational label.
+8,generate_validated_reference_report,OK,docs/protocolo_c/v2bl_protocol_validated_candidate_reference/reports/recife_protocol_validated_candidate_reference_report.md,eb6dc0d31b31f07b,Strictly additive; candidate reference is not an operational label.
+9,run_guardrail_regression,OK,datasets/protocolo_c/v2bl_guardrail_regression.csv,739296b5f4c1cde0,Strictly additive; candidate reference is not an operational label.

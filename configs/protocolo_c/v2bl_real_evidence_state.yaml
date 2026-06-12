@@ -1,0 +1,6 @@
+stage: v2bl
+component: real_evidence_state
+candidate_id: REC_2022_05_24_30
+charter_activation_id: "758"
+event_window: "2022-05-24 a 2022-06-02"
+output: v2bl_recife_real_evidence_state.csv

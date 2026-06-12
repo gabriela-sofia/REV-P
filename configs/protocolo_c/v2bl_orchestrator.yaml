@@ -1,0 +1,11 @@
+stage: v2bl
+strictly_additive: true
+refresh_env: V2BL_REFRESH
+refresh_default: true
+public_outputs:
+  - outputs_public/tables/protocol_c_validated_candidate_reference_registry.csv
+  - outputs_public/tables/protocol_c_evidence_scorecard.csv
+  - outputs_public/tables/protocol_c_reapplication_learning_matrix.csv
+  - outputs_public/execution_reports/protocol_c_recife_validated_candidate_reference_report.md
+  - outputs_public/logs_summary/protocol_c_current_status_summary.md
+c7_operational_label: NOT_CREATED_BLOCKED_FOR_TRAINING

@@ -1,0 +1,7 @@
+stage: v2bl
+component: candidate_reference_promotion
+promoted_status: PROTOCOL_VALIDATED_CANDIDATE_REFERENCE
+promotion_type: PROTOCOL_LEVEL_REFERENCE
+can_create_operational_label: false
+can_create_negative: false
+can_train_model: false

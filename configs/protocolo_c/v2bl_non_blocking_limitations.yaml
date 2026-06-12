@@ -1,0 +1,9 @@
+stage: v2bl
+component: non_blocking_limitations
+public_source_license_not_blocker: true
+vector_absence_blocks_candidate_reference: false
+crs_absence_blocks_vector_overlay: true
+apac_pdf_blocks_hourly_station_series: true
+ana_stage_supports_context_not_precipitation: true
+inmet_empty_precip_is_instrument_gap: true
+raster_is_evidence_not_vector: true
