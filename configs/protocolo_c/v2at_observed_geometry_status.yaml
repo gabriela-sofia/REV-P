@@ -1,0 +1,4 @@
+stage: v2at
+component: observed_geometry_status
+explicit_geometry_or_observed_measurement_required: true
+geometry_inference_forbidden: true

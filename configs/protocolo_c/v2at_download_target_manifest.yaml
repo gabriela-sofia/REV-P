@@ -1,0 +1,6 @@
+stage: v2at
+component: download_target_manifest
+network_opt_in_env: V2AT_NETWORK
+network_opt_in_value: "1"
+offline_default: true
+raw_data_versioned: false

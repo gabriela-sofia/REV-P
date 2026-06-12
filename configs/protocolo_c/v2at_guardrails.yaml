@@ -1,0 +1,8 @@
+stage: v2at
+component: guardrails
+quickview_can_promote: false
+susceptibility_can_promote: false
+absence_can_create_negative: false
+can_create_ground_truth: false
+can_create_training_label: false
+raw_data_versioned: false

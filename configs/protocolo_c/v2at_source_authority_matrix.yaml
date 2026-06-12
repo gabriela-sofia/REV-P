@@ -1,0 +1,4 @@
+stage: v2at
+component: source_authority_matrix
+target_sources: [INMET, CEMADEN, ANA_HIDROWEB, SGB_CPRM, COPERNICUS_EMS, INTERNATIONAL_CHARTER]
+authority_does_not_equal_observed_fact: true

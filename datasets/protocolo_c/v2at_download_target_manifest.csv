@@ -1,0 +1,7 @@
+target_id,source_id,target_url,network_enabled,download_status,cache_path,cache_sha256,raw_data_versioned,promotion_allowed
+DL_v2at_001,INMET,https://portal.inmet.gov.br/dadoshistoricos,false,NETWORK_DISABLED_DETERMINISTIC_RUN,,,false,false
+DL_v2at_002,CEMADEN,https://www.cemaden.gov.br/mapainterativo/,false,NETWORK_DISABLED_DETERMINISTIC_RUN,,,false,false
+DL_v2at_003,ANA_HIDROWEB,https://www.snirh.gov.br/hidroweb/,false,NETWORK_DISABLED_DETERMINISTIC_RUN,,,false,false
+DL_v2at_004,SGB_CPRM,https://www.sgb.gov.br/,false,NETWORK_DISABLED_DETERMINISTIC_RUN,,,false,false
+DL_v2at_005,COPERNICUS_EMS,https://emergency.copernicus.eu/,false,NETWORK_DISABLED_DETERMINISTIC_RUN,,,false,false
+DL_v2at_006,INTERNATIONAL_CHARTER,https://disasterscharter.org/,false,NETWORK_DISABLED_DETERMINISTIC_RUN,,,false,false

@@ -1,0 +1,13 @@
+step_order,step_name,status,outputs,output_hashes,notes
+1,source_authority_matrix,OK,datasets/protocolo_c/v2at_source_authority_matrix.csv,514e865af21c797b,Completed.
+2,fact_assertion_registry,OK,datasets/protocolo_c/v2at_fact_assertion_registry.csv,be86109ab9e65243,Completed.
+3,license_crs_audit,OK,datasets/protocolo_c/v2at_license_crs_audit.csv,58bc64c62931d966,Completed.
+4,temporal_alignment,OK,datasets/protocolo_c/v2at_temporal_alignment_audit.csv,c803561510211675,Completed.
+5,hazard_typing,OK,datasets/protocolo_c/v2at_hazard_typing_audit.csv,cb3e8120d3b9d106,Completed.
+6,observed_geometry_status,OK,datasets/protocolo_c/v2at_observed_geometry_status.csv,21965b338072a591,Completed.
+7,event_patch_packages,OK,datasets/protocolo_c/v2at_event_patch_package_index.csv,ab977e510920b9ec,Completed.
+8,download_target_manifest,OK,datasets/protocolo_c/v2at_download_target_manifest.csv,891234cad88e253b,Completed.
+9,cache_policy,OK,datasets/protocolo_c/v2at_promotion_blocker_audit.csv,ece42a955aea4cb7,Completed.
+10,evidence_strength,OK,datasets/protocolo_c/v2at_evidence_strength_scores.csv,ab9b1c27d6b3d922,Completed.
+11,non_fact_gap_report,OK,datasets/protocolo_c/v2at_non_fact_gap_report.csv,02be238d44aa3f79,Completed.
+12,guardrail_regression,OK,datasets/protocolo_c/v2at_guardrail_regression.csv,e0a3bc7424f84023,Completed.

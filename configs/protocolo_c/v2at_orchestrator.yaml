@@ -1,0 +1,6 @@
+stage: v2at
+component: orchestrator
+fail_fast: true
+git_operations: forbidden
+previous_outputs_read_only: true
+offline_deterministic_default: true

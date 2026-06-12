@@ -1,0 +1,4 @@
+stage: v2at
+component: fact_assertion_registry
+classes: [FACT_VERIFIED, SUPPORTED_CANDIDATE, CONTEXT_ONLY, REVIEW_ONLY_SIGNAL, BLOCKED_CRITICAL_GAP]
+fact_verified_requires: [source_identified, license_explicit, crs_resolved_or_irrelevant, observed_event, temporal_compatible, hazard_typed, geometry_or_measurement_compatible, human_review_complete, independent_corroboration]

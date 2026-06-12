@@ -1,0 +1,11 @@
+blocker_id,scope,marker_content_valid,tracked_candidate_count,cache_policy_valid,promotion_allowed,can_create_ground_truth,can_create_training_label,blocking_reason
+BLOCK_v2at_0001,FACT_v2at_0001,,,,false,false,false,BLOCKED_LICENSE_UNKNOWN
+BLOCK_v2at_0002,FACT_v2at_0002,,,,false,false,false,BLOCKED_LICENSE_UNKNOWN
+BLOCK_v2at_0003,FACT_v2at_0003,,,,false,false,false,BLOCKED_LICENSE_UNKNOWN
+BLOCK_v2at_0004,FACT_v2at_0004,,,,false,false,false,BLOCKED_LICENSE_UNKNOWN
+BLOCK_v2at_0005,FACT_v2at_0005,,,,false,false,false,BLOCKED_LICENSE_UNKNOWN
+BLOCK_v2at_0006,FACT_v2at_0006,,,,false,false,false,BLOCKED_LICENSE_UNKNOWN
+BLOCK_v2at_0007,FACT_v2at_0007,,,,false,false,false,BLOCKED_LICENSE_UNKNOWN
+BLOCK_v2at_0008,FACT_v2at_0008,,,,false,false,false,BLOCKED_LICENSE_UNKNOWN
+BLOCK_v2at_0009,FACT_v2at_0009,,,,false,false,false,BLOCKED_LICENSE_UNKNOWN
+CACHE_v2at_001,evidence_cache,true,0,true,false,false,false,Cache is local review support only.

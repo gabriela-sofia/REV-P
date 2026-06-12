@@ -1,0 +1,17 @@
+case_id,evidence_role,source_identified,license_explicit,crs_resolved,observed_event,temporal_compatible,hazard_typed,geometry_or_measurement_compatible,human_review_complete,independent_corroboration,expected
+fact_verified,PRODUCT,true,true,true,true,true,true,true,true,true,FACT_VERIFIED
+supported_review_pending,PRODUCT,true,true,true,true,true,true,true,false,true,SUPPORTED_CANDIDATE
+supported_independence_pending,PRODUCT,true,true,true,true,true,true,true,true,false,SUPPORTED_CANDIDATE
+license_unknown,PRODUCT,true,false,true,true,true,true,true,true,true,BLOCKED_LICENSE_UNKNOWN
+crs_unknown,PRODUCT,true,true,false,true,true,true,true,true,true,BLOCKED_CRS_UNKNOWN
+temporal_mismatch,PRODUCT,true,true,true,true,false,true,true,true,true,BLOCKED_TEMPORAL_MISMATCH
+hazard_ambiguity,PRODUCT,true,true,true,true,true,false,true,true,true,BLOCKED_HAZARD_AMBIGUOUS
+geometry_null,PRODUCT,true,true,true,true,true,true,false,true,true,BLOCKED_GEOMETRY_OR_MEASUREMENT_MISSING
+geometry_explicit,PRODUCT,true,true,true,true,true,true,true,true,true,FACT_VERIFIED
+observed_measurement,OBSERVED_MEASUREMENT,true,true,true,true,true,true,true,true,true,FACT_VERIFIED
+quickview,QUICKVIEW,true,true,true,true,true,true,true,true,true,REVIEW_ONLY_SIGNAL
+susceptibility,SUSCEPTIBILITY_CONTEXT,true,true,true,false,false,true,true,true,true,CONTEXT_ONLY
+dino,DINO_SIGNAL,true,true,true,false,false,false,false,false,false,CONTEXT_ONLY
+gis_proxy,GIS_PROXY,true,true,true,false,false,false,false,false,false,CONTEXT_ONLY
+source_missing,PRODUCT,false,true,true,true,true,true,true,true,true,BLOCKED_SOURCE_UNIDENTIFIED
+event_missing,PRODUCT,true,true,true,false,true,true,true,true,true,BLOCKED_NO_OBSERVED_EVENT

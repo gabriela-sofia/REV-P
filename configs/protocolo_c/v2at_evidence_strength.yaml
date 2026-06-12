@@ -1,0 +1,4 @@
+stage: v2at
+component: evidence_strength
+score_is_not_promotion: true
+score_per_resolved_dimension: 10
