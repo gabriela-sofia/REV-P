@@ -1,0 +1,3 @@
+stage: v2bf
+mode: offline_deterministic
+strictly_additive: true

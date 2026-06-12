@@ -1,0 +1,3 @@
+stage: v2bf
+step: update_seed_asset_crosswalk_status
+require_date_for_adjudication: true

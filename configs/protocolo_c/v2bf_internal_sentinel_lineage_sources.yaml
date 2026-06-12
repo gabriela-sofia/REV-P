@@ -1,0 +1,3 @@
+stage: v2bf
+step: discover_internal_sentinel_lineage_sources
+scope: internal_metadata_only

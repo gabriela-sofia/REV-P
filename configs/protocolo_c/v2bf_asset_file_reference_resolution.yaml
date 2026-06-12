@@ -1,0 +1,3 @@
+stage: v2bf
+step: resolve_asset_file_references
+allow_local_preview_reference: true

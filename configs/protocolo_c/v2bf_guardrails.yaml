@@ -1,0 +1,13 @@
+stage: v2bf
+can_create_ground_truth: false
+can_create_patch_truth: false
+can_create_label: false
+can_create_negative: false
+can_train_model: false
+recovered_lineage_is_not_ground_truth: true
+sentinel_review_asset_is_not_truth: true
+dino_signal_is_not_truth: true
+patch_boundary_is_not_event_geometry: true
+review_derivative_is_not_label: true
+no_geometry_no_final_truth: true
+raw_data_versioned: false

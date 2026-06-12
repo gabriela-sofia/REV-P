@@ -1,0 +1,4 @@
+stage: v2bf
+step: materialize_sentinel_review_assets
+copy_raw_payload: false
+reference_existing_preview: true

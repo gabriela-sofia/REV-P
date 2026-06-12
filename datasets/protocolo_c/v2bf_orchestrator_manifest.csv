@@ -1,0 +1,11 @@
+step_order,step_name,status,output,output_hash,notes
+1,discover_internal_sentinel_lineage_sources,OK,datasets/protocolo_c/v2bf_internal_sentinel_lineage_sources.csv,f710bdb7a22420b8,Internal lineage recovery completed without truth promotion.
+2,recover_asset_dates,OK,datasets/protocolo_c/v2bf_asset_date_recovery.csv,16a8aaff2aa4b3a0,Internal lineage recovery completed without truth promotion.
+3,recover_asset_patch_links,OK,datasets/protocolo_c/v2bf_asset_patch_link_recovery.csv,f461f6116d31387b,Internal lineage recovery completed without truth promotion.
+4,resolve_asset_file_references,OK,datasets/protocolo_c/v2bf_asset_file_reference_resolution.csv,33e65e2a33b6b5e2,Internal lineage recovery completed without truth promotion.
+5,materialize_sentinel_review_assets,OK,datasets/protocolo_c/v2bf_sentinel_review_asset_materialization.csv,470484100b7b32f5,Internal lineage recovery completed without truth promotion.
+6,recover_dino_links,OK,datasets/protocolo_c/v2bf_dino_link_recovery.csv,83dc1a628505a99a,Internal lineage recovery completed without truth promotion.
+7,build_lineage_confidence_scores,OK,datasets/protocolo_c/v2bf_lineage_confidence_scores.csv,3686b7ad58358cd4,Internal lineage recovery completed without truth promotion.
+8,update_seed_asset_crosswalk_status,OK,datasets/protocolo_c/v2bf_seed_asset_crosswalk_status_update.csv,e7ee78adb4f67113,Internal lineage recovery completed without truth promotion.
+9,generate_curitiba_lineage_review_packets,OK,datasets/protocolo_c/v2bf_curitiba_lineage_review_packet_index.csv,44fccc3d5c68f996,Internal lineage recovery completed without truth promotion.
+10,guardrail_regression,OK,datasets/protocolo_c/v2bf_guardrail_regression.csv,e4a22c415e456730,Internal lineage recovery completed without truth promotion.
