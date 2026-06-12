@@ -1,0 +1,5 @@
+stage: v2bm
+component: cross_region_gate_table
+can_create_operational_label: false
+can_train_model: false
+no_supervised_training_target_created: true

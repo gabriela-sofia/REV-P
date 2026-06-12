@@ -1,0 +1,13 @@
+regression_id,check,detail,violation_count,status
+GR_v2bm_001,forbidden_flags::v2bm_cross_region_state.csv,no operational-label/negative/training flag is true,0,PASS
+GR_v2bm_002,forbidden_flags::v2bm_refined_protocol_policy_application.csv,no operational-label/negative/training flag is true,0,PASS
+GR_v2bm_003,forbidden_flags::v2bm_curitiba_candidate_reassessment.csv,no operational-label/negative/training flag is true,0,PASS
+GR_v2bm_004,forbidden_flags::v2bm_petropolis_candidate_reassessment.csv,no operational-label/negative/training flag is true,0,PASS
+GR_v2bm_005,forbidden_flags::v2bm_cross_region_candidate_registry.csv,no operational-label/negative/training flag is true,0,PASS
+GR_v2bm_006,forbidden_flags::v2bm_cross_region_gate_table.csv,no operational-label/negative/training flag is true,0,PASS
+GR_v2bm_007,forbidden_flags::v2bm_cross_region_evidence_scorecard.csv,no operational-label/negative/training flag is true,0,PASS
+GR_v2bm_008,c7_blocked_all_regions,C7 not-created/blocked in every region,0,PASS
+GR_v2bm_009,no_label_no_training,gate table forbids operational label and training,0,PASS
+GR_v2bm_010,registry_forbidden_use,registry forbids label/training,0,PASS
+GR_v2bm_011,proxy_not_local,Petropolis proxy never becomes a local station,0,PASS
+GR_v2bm_012,public_outputs_safe,outputs_public has only derived csv/md,0,PASS

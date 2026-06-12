@@ -1,0 +1,11 @@
+step_order,step_name,status,output,output_hash,notes
+0,refresh_v2bl_chain,REFRESHED,datasets/protocolo_c/v2bl_validated_candidate_reference_registry.csv,08fa629dad1e4cb4,Regenerates the v2bl chain from the live cache; automated cross-region adjudication.
+1,load_cross_region_state,OK,datasets/protocolo_c/v2bm_cross_region_state.csv,770ebc5ada2cf7b3,Strictly additive; references are not operational labels.
+2,apply_refined_protocol_policy,OK,datasets/protocolo_c/v2bm_refined_protocol_policy_application.csv,87833af494b6b2a4,Strictly additive; references are not operational labels.
+3,reassess_curitiba_candidates,OK,datasets/protocolo_c/v2bm_curitiba_candidate_reassessment.csv,51bdca63cd3b8dde,Strictly additive; references are not operational labels.
+4,reassess_petropolis_candidates,OK,datasets/protocolo_c/v2bm_petropolis_candidate_reassessment.csv,750936348e1114a1,Strictly additive; references are not operational labels.
+5,build_cross_region_candidate_registry,OK,datasets/protocolo_c/v2bm_cross_region_candidate_registry.csv,265b757283e38124,Strictly additive; references are not operational labels.
+6,build_cross_region_gate_table,OK,datasets/protocolo_c/v2bm_cross_region_gate_table.csv,28646bbceb1ad9c7,Strictly additive; references are not operational labels.
+7,build_cross_region_evidence_scorecard,OK,datasets/protocolo_c/v2bm_cross_region_evidence_scorecard.csv,e7804cffe460b57f,Strictly additive; references are not operational labels.
+8,generate_reapplication_report,OK,docs/protocolo_c/v2bm_cross_region_reapplication/reports/protocol_c_cross_region_reapplication_report.md,f2833923d9df17f1,Strictly additive; references are not operational labels.
+9,run_guardrail_regression,OK,datasets/protocolo_c/v2bm_guardrail_regression.csv,4188a35a2e0b0868,Strictly additive; references are not operational labels.
