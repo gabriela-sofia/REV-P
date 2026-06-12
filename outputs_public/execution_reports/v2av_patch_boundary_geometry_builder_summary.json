@@ -1,0 +1,34 @@
+{
+  "stage": "v2av",
+  "status": "OK_WITH_EXPECTED_BLOCKERS",
+  "inputs_found": [
+    "v2at_event_patch_package_registry.csv",
+    "protocolo_c/v1us_patch_registry_resolution.csv"
+  ],
+  "outputs_written": [
+    "datasets/v2av_patch_boundary_source_manifest.csv",
+    "datasets/v2av_patch_boundary_geometry_registry.csv",
+    "datasets/v2av_patch_boundary_build_audit.csv",
+    "datasets/v2av_patch_boundary_recovery_queue.csv",
+    "outputs_public/execution_reports/v2av_patch_boundary_geometry_builder_report.md",
+    "outputs_public/execution_reports/v2av_patch_boundary_geometry_builder_summary.json",
+    "outputs_public/logs_summary/v2av_patch_boundary_geometry_builder.txt",
+    "outputs_public/execution_reports/v2av_artifact_index_supplement.md"
+  ],
+  "total_unique_patches": 167,
+  "patches_with_spatial_metadata": 0,
+  "patches_with_crs": 0,
+  "patch_boundaries_built": 0,
+  "patch_boundaries_blocked": 167,
+  "geojson_files_written": 0,
+  "ready_for_v2au_overlay": 0,
+  "blocking_reason_distribution": {
+    "NO_SPATIAL_METADATA_FOUND": 167
+  },
+  "recife_priority_patches": 55,
+  "total_gate_checks": 1670,
+  "total_recovery_queue_items": 167,
+  "can_train_model": false,
+  "can_create_operational_labels": false,
+  "methodological_status": "PATCH_BOUNDARY_RECOVERY_READY_FOR_OVERLAY_NOT_FOR_TRAINING"
+}

@@ -1,0 +1,9 @@
+[v2av] Patch Boundary Source Manifest + Patch Geometry Builder
+[v2av] inputs_found=2 outputs_written=8
+[v2av] unique_patches=167 with_spatial_metadata=0 with_crs=0
+[v2av] boundaries_built=0 boundaries_blocked=167 geojson_written=0 ready_for_v2au_overlay=0
+[v2av] recife_priority_patches=55
+[v2av] can_train_model=False can_create_operational_labels=False
+[v2av] methodological_status=PATCH_BOUNDARY_RECOVERY_READY_FOR_OVERLAY_NOT_FOR_TRAINING
+[v2av] structural_errors=0
+[v2av] status=OK

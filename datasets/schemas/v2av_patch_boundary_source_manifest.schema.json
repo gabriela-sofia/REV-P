@@ -1,0 +1,127 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "v2av patch boundary source manifest",
+  "description": "Row contract for v2av_patch_boundary_source_manifest.csv. v2av patch boundary builder. No operational label, no training target, no final ground truth; built boundary max meaning READY_FOR_V2AU_OVERLAY.",
+  "type": "object",
+  "required": [
+    "patch_id",
+    "region",
+    "city",
+    "source_file",
+    "source_field",
+    "source_type",
+    "has_bbox",
+    "has_wkt",
+    "has_geojson",
+    "has_raster_transform",
+    "has_center_point",
+    "has_resolution",
+    "has_crs",
+    "crs",
+    "can_build_boundary",
+    "boundary_build_method",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "patch_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "region": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "source_file": {
+      "type": "string"
+    },
+    "source_field": {
+      "type": "string"
+    },
+    "source_type": {
+      "type": "string"
+    },
+    "has_bbox": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "has_wkt": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "has_geojson": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "has_raster_transform": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "has_center_point": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "has_resolution": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "has_crs": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "crs": {
+      "type": "string"
+    },
+    "can_build_boundary": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "boundary_build_method": {
+      "type": "string",
+      "enum": [
+        "from_bbox",
+        "from_wkt",
+        "from_geojson",
+        "from_raster_bounds",
+        "from_tile_bounds",
+        "from_center_buffer",
+        "NONE"
+      ]
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "x_id_field": "patch_id",
+  "x_csv_file": "datasets/v2av_patch_boundary_source_manifest.csv"
+}

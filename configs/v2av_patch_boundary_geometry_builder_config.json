@@ -1,0 +1,23 @@
+{
+  "stage": "v2av",
+  "description": "Patch Boundary Source Manifest + Patch Geometry Builder. Discovers patch_ids, traces spatial provenance, and builds auditable patch boundary geometry ONLY when sufficient metadata + CRS exist. Never invents geometry, never creates a label, ground truth or trained model.",
+  "accepted_crs": ["EPSG:4326", "EPSG:3857", "EPSG:31982", "EPSG:31983"],
+  "target_crs": "EPSG:3857",
+  "allow_center_point_buffer": false,
+  "default_patch_size_meters": 640.0,
+  "allow_default_patch_size": false,
+  "strict_crs": true,
+  "offline_mode": true,
+  "fail_on_missing_optional_patch_geometry": false,
+  "minimum_required_fields_for_boundary": ["crs", "geometry_payload"],
+  "search_paths": ["manifests", "datasets", "outputs_public", "docs"],
+  "methodological_invariants": {
+    "can_train_model": false,
+    "can_create_operational_labels": false,
+    "can_declare_ground_truth_final": false,
+    "never_invent_geometry": true,
+    "no_boundary_without_crs": true,
+    "no_boundary_from_unverified_default_size": true,
+    "center_point_buffer_requires_explicit_opt_in": true
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "v2av patch boundary geometry registry",
+  "description": "Row contract for v2av_patch_boundary_geometry_registry.csv. v2av patch boundary builder. No operational label, no training target, no final ground truth; built boundary max meaning READY_FOR_V2AU_OVERLAY.",
+  "type": "object",
+  "required": [
+    "patch_geometry_id",
+    "patch_id",
+    "region",
+    "city",
+    "geometry_type",
+    "geometry_format",
+    "crs",
+    "crs_status",
+    "geometry_wkt",
+    "geometry_geojson_path",
+    "bbox_minx",
+    "bbox_miny",
+    "bbox_maxx",
+    "bbox_maxy",
+    "area_m2",
+    "geometry_hash",
+    "build_method",
+    "source_file",
+    "source_confidence",
+    "is_valid_geometry",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "patch_geometry_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "patch_id": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "geometry_type": {
+      "type": "string"
+    },
+    "geometry_format": {
+      "type": "string"
+    },
+    "crs": {
+      "type": "string"
+    },
+    "crs_status": {
+      "type": "string",
+      "enum": [
+        "KNOWN",
+        "UNKNOWN"
+      ]
+    },
+    "geometry_wkt": {
+      "type": "string"
+    },
+    "geometry_geojson_path": {
+      "type": "string"
+    },
+    "bbox_minx": {
+      "type": "string"
+    },
+    "bbox_miny": {
+      "type": "string"
+    },
+    "bbox_maxx": {
+      "type": "string"
+    },
+    "bbox_maxy": {
+      "type": "string"
+    },
+    "area_m2": {
+      "type": "string"
+    },
+    "geometry_hash": {
+      "type": "string"
+    },
+    "build_method": {
+      "type": "string",
+      "enum": [
+        "from_bbox",
+        "from_wkt",
+        "from_geojson",
+        "from_raster_bounds",
+        "from_tile_bounds",
+        "from_center_buffer",
+        "NONE"
+      ]
+    },
+    "source_file": {
+      "type": "string"
+    },
+    "source_confidence": {
+      "type": "string"
+    },
+    "is_valid_geometry": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "x_id_field": "patch_geometry_id",
+  "x_csv_file": "datasets/v2av_patch_boundary_geometry_registry.csv"
+}

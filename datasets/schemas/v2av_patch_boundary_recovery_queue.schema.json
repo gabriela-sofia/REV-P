@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "v2av patch boundary recovery queue",
+  "description": "Row contract for v2av_patch_boundary_recovery_queue.csv. v2av patch boundary builder. No operational label, no training target, no final ground truth; built boundary max meaning READY_FOR_V2AU_OVERLAY.",
+  "type": "object",
+  "required": [
+    "review_item_id",
+    "patch_id",
+    "region",
+    "city",
+    "priority_rank",
+    "priority_reason",
+    "missing_fields",
+    "suggested_recovery_action",
+    "candidate_source_files",
+    "is_needed_by_packages_count",
+    "is_recife_priority",
+    "blocking_reason"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "review_item_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "patch_id": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "priority_rank": {
+      "type": "string"
+    },
+    "priority_reason": {
+      "type": "string"
+    },
+    "missing_fields": {
+      "type": "string"
+    },
+    "suggested_recovery_action": {
+      "type": "string"
+    },
+    "candidate_source_files": {
+      "type": "string"
+    },
+    "is_needed_by_packages_count": {
+      "type": "string"
+    },
+    "is_recife_priority": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "blocking_reason": {
+      "type": "string"
+    }
+  },
+  "x_id_field": "review_item_id",
+  "x_csv_file": "datasets/v2av_patch_boundary_recovery_queue.csv"
+}

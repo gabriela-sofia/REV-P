@@ -274,3 +274,107 @@ def v2au_make_package():
 @pytest.fixture
 def v2au_make_geom():
     return _v2au_geom
+
+
+# --------------------------------------------------------------------------- #
+# Shared helpers for the v2av Patch Boundary Geometry Builder.
+# --------------------------------------------------------------------------- #
+
+V2AV_ENGINE_PATH = ROOT / "scripts" / "v2av_patch_boundary_geometry_builder.py"
+
+
+def _load_v2av_engine():
+    spec = importlib.util.spec_from_file_location("v2av_engine", V2AV_ENGINE_PATH)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+@pytest.fixture
+def v2av_engine():
+    return _load_v2av_engine()
+
+
+_V2AV_RESOLUTION_COLUMNS = [
+    "patch_resolution_id", "patch_id", "region", "city", "uf", "source_registry",
+    "has_patch_geometry", "has_patch_bounds", "resolution_status", "notes",
+]
+
+_V2AV_GEOM_SOURCE_COLUMNS = [
+    "patch_id", "region", "city", "source_file", "source_field", "source_type",
+    "geometry_value", "geometry_path", "crs", "center_lat", "center_lon",
+    "size_meters", "source_confidence",
+]
+
+
+def _v2av_patch(patch_id, region="REC", city="Recife", **over):
+    base = {
+        "patch_resolution_id": f"PR_{patch_id}", "patch_id": patch_id, "region": region,
+        "city": city, "uf": "PE", "source_registry": "test",
+        "has_patch_geometry": "false", "has_patch_bounds": "false",
+        "resolution_status": "RESOLVED_PATCH_SENTINEL_DATE_MISSING", "notes": "test",
+    }
+    base.update(over)
+    return base
+
+
+def _v2av_geom_source(patch_id, source_type="bbox", value="", crs="EPSG:3857", **over):
+    base = {
+        "patch_id": patch_id, "region": "REC", "city": "Recife",
+        "source_file": "manual_test.csv", "source_field": "geometry_value",
+        "source_type": source_type, "geometry_value": value, "geometry_path": "",
+        "crs": crs, "center_lat": "", "center_lon": "", "size_meters": "",
+        "source_confidence": "PROVIDED",
+    }
+    base.update(over)
+    return base
+
+
+def _v2av_pkg(patch_id, region="Recife", allowed_use="candidate_reference"):
+    return {"package_id": f"PKG_{patch_id}", "event_id": "REC_2022_05_24_30",
+            "patch_id": patch_id, "region": region, "city": region,
+            "hazard_type": "urban_flood", "allowed_use": allowed_use}
+
+
+def build_v2av_dataset(dataset_dir, *, patches=None, packages=None, geometry_sources=None):
+    """Create a minimal v2av input dataset."""
+    pc = dataset_dir / "protocolo_c"
+    if patches is None:
+        patches = [_v2av_patch("REC_00205")]
+    _write_csv(pc / "v1us_patch_registry_resolution.csv",
+               [{c: p.get(c, "") for c in _V2AV_RESOLUTION_COLUMNS} for p in patches])
+
+    if packages is None:
+        packages = [_v2av_pkg(p["patch_id"], region=__region_name(p["region"])) for p in patches]
+    pkg_cols = ["package_id", "event_id", "patch_id", "region", "city", "hazard_type", "allowed_use"]
+    _write_csv(dataset_dir / "v2at_event_patch_package_registry.csv",
+               [{c: p.get(c, "") for c in pkg_cols} for p in packages])
+
+    if geometry_sources:
+        _write_csv(dataset_dir / "v2av_patch_geometry_sources.csv",
+                   [{c: g.get(c, "") for c in _V2AV_GEOM_SOURCE_COLUMNS} for g in geometry_sources])
+    return dataset_dir
+
+
+def __region_name(code):
+    return {"REC": "Recife", "PET": "Petropolis", "CUR": "Curitiba"}.get(code, code)
+
+
+@pytest.fixture
+def v2av_dataset(tmp_path):
+    def _build(**kwargs):
+        ds = tmp_path / "datasets"
+        ds.mkdir(parents=True, exist_ok=True)
+        build_v2av_dataset(ds, **kwargs)
+        return ds
+    return _build
+
+
+@pytest.fixture
+def v2av_make_patch():
+    return _v2av_patch
+
+
+@pytest.fixture
+def v2av_make_geom_source():
+    return _v2av_geom_source
