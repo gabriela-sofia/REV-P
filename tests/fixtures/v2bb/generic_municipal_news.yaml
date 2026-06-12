@@ -1,0 +1,6 @@
+source_type: OFFICIAL_MUNICIPAL
+confirmed: true
+location_relation: MUNICIPALITY_LEVEL
+supports_event_date: true
+expected_class: OFFICIAL_TEXTUAL_LOCATION
+can_reduce_uncertainty: false

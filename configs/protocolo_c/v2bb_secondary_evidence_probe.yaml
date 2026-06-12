@@ -1,0 +1,4 @@
+stage: v2bb
+default_mode: OFFLINE_DETERMINISTIC
+network_env: V2BB_NETWORK
+raw_data_versioned: false

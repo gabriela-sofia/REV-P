@@ -1,0 +1,3 @@
+stage: v2bb
+initial_uncertainty: VERY_HIGH
+require_specific_dated_locality_for_reduction: true

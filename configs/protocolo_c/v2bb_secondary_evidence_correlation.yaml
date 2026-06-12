@@ -1,0 +1,3 @@
+stage: v2bb
+specific_locations: [PATCH_LEVEL, NEIGHBORHOOD_LEVEL]
+municipality_does_not_reduce_below_high: true

@@ -1,0 +1,3 @@
+stage: v2bb
+require_specific_locality_or_event_map: true
+digitization_review_candidate_is_not_label: true

@@ -1,0 +1,7 @@
+source_type: OFFICIAL_BULLETIN
+confirmed: true
+has_map: true
+location_relation: NEIGHBORHOOD_LEVEL
+supports_event_date: true
+expected_class: OFFICIAL_PDF_MAP
+can_reduce_uncertainty: true
