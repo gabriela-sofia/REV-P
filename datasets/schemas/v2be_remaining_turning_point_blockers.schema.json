@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "blocker_id",
+    "turning_point_level",
+    "target_type",
+    "target_id",
+    "package_id",
+    "event_id",
+    "current_status",
+    "blocking_reason",
+    "required_next_input",
+    "where_to_put_it",
+    "validation_command",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "blocker_id": {
+      "type": "string"
+    },
+    "turning_point_level": {
+      "type": "string"
+    },
+    "target_type": {
+      "type": "string"
+    },
+    "target_id": {
+      "type": "string"
+    },
+    "package_id": {
+      "type": "string"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "current_status": {
+      "type": "string"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "required_next_input": {
+      "type": "string"
+    },
+    "where_to_put_it": {
+      "type": "string"
+    },
+    "validation_command": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

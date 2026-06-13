@@ -1,0 +1,2 @@
+crs_audit_id,patch_id,source_stage,original_crs,normalized_crs,original_bounds,normalized_bbox,reprojection_method,reprojection_supported,crs_preserved,crs_normalized,blocking_reason,notes
+V2BE_CRS_cbe444ffbf93,REC_00019,v2bd,EPSG:32725,EPSG:4326,"280830.0,9090040.0,281860.0,9091050.0","-34.989584251195,-8.227246154998,-34.980192616635,-8.218069609709",rasterio.warp.transform_geom,true,true,true,,EPSG:32725 is accepted only as the preserved source CRS; EPSG:4326 is the normalized export CRS.

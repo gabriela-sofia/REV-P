@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "sync_step_id",
+    "step_order",
+    "target_stage",
+    "input_feed",
+    "command",
+    "will_run_now",
+    "precondition",
+    "precondition_met",
+    "expected_output",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "sync_step_id": {
+      "type": "string"
+    },
+    "step_order": {
+      "type": "string"
+    },
+    "target_stage": {
+      "type": "string"
+    },
+    "input_feed": {
+      "type": "string"
+    },
+    "command": {
+      "type": "string"
+    },
+    "will_run_now": {
+      "type": "boolean"
+    },
+    "precondition": {
+      "type": "string"
+    },
+    "precondition_met": {
+      "type": "boolean"
+    },
+    "expected_output": {
+      "type": "string"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

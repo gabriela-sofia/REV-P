@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "search_id",
+    "target_event_id",
+    "target_package_id",
+    "source_name",
+    "source_category",
+    "search_query",
+    "expected_artifact",
+    "expected_geometry_type",
+    "expected_file_format",
+    "source_public",
+    "download_allowed",
+    "must_attempt_download",
+    "result_url",
+    "local_raw_path",
+    "current_status",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "search_id": {
+      "type": "string"
+    },
+    "target_event_id": {
+      "type": "string"
+    },
+    "target_package_id": {
+      "type": "string"
+    },
+    "source_name": {
+      "type": "string"
+    },
+    "source_category": {
+      "type": "string"
+    },
+    "search_query": {
+      "type": "string"
+    },
+    "expected_artifact": {
+      "type": "string"
+    },
+    "expected_geometry_type": {
+      "type": "string"
+    },
+    "expected_file_format": {
+      "type": "string"
+    },
+    "source_public": {
+      "type": "boolean"
+    },
+    "download_allowed": {
+      "type": "boolean"
+    },
+    "must_attempt_download": {
+      "type": "boolean"
+    },
+    "result_url": {
+      "type": "string"
+    },
+    "local_raw_path": {
+      "type": "string"
+    },
+    "current_status": {
+      "type": "string"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

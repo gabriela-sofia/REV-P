@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "gcp_id",
+    "product_id",
+    "pixel_x",
+    "pixel_y",
+    "lon",
+    "lat",
+    "crs",
+    "control_point_type",
+    "source_reference",
+    "confidence",
+    "review_status",
+    "gcp_valid",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "gcp_id": {
+      "type": "string"
+    },
+    "product_id": {
+      "type": "string"
+    },
+    "pixel_x": {
+      "type": "string"
+    },
+    "pixel_y": {
+      "type": "string"
+    },
+    "lon": {
+      "type": "string"
+    },
+    "lat": {
+      "type": "string"
+    },
+    "crs": {
+      "type": "string"
+    },
+    "control_point_type": {
+      "type": "string"
+    },
+    "source_reference": {
+      "type": "string"
+    },
+    "confidence": {
+      "type": "string"
+    },
+    "review_status": {
+      "type": "string"
+    },
+    "gcp_valid": {
+      "type": "string"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

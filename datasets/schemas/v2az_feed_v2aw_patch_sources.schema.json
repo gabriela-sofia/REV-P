@@ -1,0 +1,87 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "v2az_feed_v2aw_patch_sources.schema.json",
+  "description": "v2az fail-closed replay adapter; no invented geometry, label, model, final ground truth or automatic C4.",
+  "type": "object",
+  "required": [
+    "geometry_source_id",
+    "linked_patch_id",
+    "region",
+    "city",
+    "priority_rank",
+    "source_type",
+    "geometry_value",
+    "geometry_path",
+    "crs",
+    "provenance_type",
+    "provenance_note",
+    "digitized_by",
+    "digitized_at",
+    "source_document",
+    "source_document_page",
+    "source_confidence",
+    "license_status",
+    "review_status",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "geometry_source_id": {
+      "type": "string"
+    },
+    "linked_patch_id": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "priority_rank": {
+      "type": "string"
+    },
+    "source_type": {
+      "type": "string"
+    },
+    "geometry_value": {
+      "type": "string"
+    },
+    "geometry_path": {
+      "type": "string"
+    },
+    "crs": {
+      "type": "string"
+    },
+    "provenance_type": {
+      "type": "string"
+    },
+    "provenance_note": {
+      "type": "string"
+    },
+    "digitized_by": {
+      "type": "string"
+    },
+    "digitized_at": {
+      "type": "string"
+    },
+    "source_document": {
+      "type": "string"
+    },
+    "source_document_page": {
+      "type": "string"
+    },
+    "source_confidence": {
+      "type": "string"
+    },
+    "license_status": {
+      "type": "string"
+    },
+    "review_status": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

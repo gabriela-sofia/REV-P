@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "external_file_id",
+    "target_type",
+    "target_id",
+    "file_path",
+    "file_name",
+    "file_extension",
+    "file_size_bytes",
+    "detected_format",
+    "geometry_candidate",
+    "crs_detected",
+    "crs_value",
+    "hash_sha256",
+    "source_public",
+    "access_status",
+    "can_parse",
+    "can_validate_geometry",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "external_file_id": {
+      "type": "string"
+    },
+    "target_type": {
+      "type": "string"
+    },
+    "target_id": {
+      "type": "string"
+    },
+    "file_path": {
+      "type": "string"
+    },
+    "file_name": {
+      "type": "string"
+    },
+    "file_extension": {
+      "type": "string"
+    },
+    "file_size_bytes": {
+      "type": "string"
+    },
+    "detected_format": {
+      "type": "string"
+    },
+    "geometry_candidate": {
+      "type": "boolean"
+    },
+    "crs_detected": {
+      "type": "boolean"
+    },
+    "crs_value": {
+      "type": "string"
+    },
+    "hash_sha256": {
+      "type": "string"
+    },
+    "source_public": {
+      "type": "boolean"
+    },
+    "access_status": {
+      "type": "string"
+    },
+    "can_parse": {
+      "type": "boolean"
+    },
+    "can_validate_geometry": {
+      "type": "boolean"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "stage": "v2be_tp1_patch_boundary_integration_gate",
+  "status": "OK_TP1_CANDIDATE_REQUIRES_HUMAN_REVIEW",
+  "priority_patch_id": "REC_00019",
+  "priority_package_id": "PKG_34713b8aab96",
+  "priority_event_id": "REC_2022_05_24_30",
+  "source_stage": "v2bd",
+  "boundary_geojson_exists": true,
+  "boundary_geometry_valid": true,
+  "original_crs": "EPSG:32725",
+  "normalized_crs": "EPSG:4326",
+  "feeds_ready": 4,
+  "tp1_gate_passed": true,
+  "tp1_requires_human_review": true,
+  "tp2_available": false,
+  "tp3_available": false,
+  "tp4_available": false,
+  "turning_point_level": "TP1_ONE_PATCH_BOUNDARY_CANDIDATE_REQUIRES_HUMAN_REVIEW",
+  "turning_point_ready": true,
+  "can_train_model": false,
+  "can_create_operational_labels": false,
+  "methodological_status": "TP1_PATCH_BOUNDARY_CANDIDATE_READY_FOR_HUMAN_REVIEW_NOT_FOR_TRAINING"
+}

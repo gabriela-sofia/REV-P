@@ -378,3 +378,128 @@ def v2av_make_patch():
 @pytest.fixture
 def v2av_make_geom_source():
     return _v2av_geom_source
+
+
+# --------------------------------------------------------------------------- #
+# Shared helpers for the v2aw Geometry Source Intake engine.
+# --------------------------------------------------------------------------- #
+
+V2AW_ENGINE_PATH = ROOT / "scripts" / "v2aw_geometry_source_intake_engine.py"
+
+
+def _load_v2aw_engine():
+    spec = importlib.util.spec_from_file_location("v2aw_engine", V2AW_ENGINE_PATH)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+@pytest.fixture
+def v2aw_engine():
+    return _load_v2aw_engine()
+
+
+_V2AW_QUEUE_COLUMNS = [
+    "review_item_id", "patch_id", "region", "city", "priority_rank", "priority_reason",
+    "missing_fields", "suggested_recovery_action", "candidate_source_files",
+    "is_needed_by_packages_count", "is_recife_priority", "blocking_reason",
+]
+_V2AW_PKG_COLUMNS = ["package_id", "event_id", "patch_id", "region", "city", "hazard_type", "allowed_use"]
+_V2AW_GROUND_COLUMNS = ["event_id", "region", "municipality", "event_or_survey_date",
+                        "coordinate_status", "latitude", "longitude", "phenomenon_group"]
+_V2AW_PROVIDED_PATCH_COLUMNS = ["geometry_source_id", "linked_patch_id", "region", "city",
+                                "source_type", "geometry_value", "geometry_path", "crs",
+                                "geometry_role", "provenance_note"]
+_V2AW_PROVIDED_EVENT_COLUMNS = ["event_geometry_source_id", "linked_event_id", "region", "city",
+                                "source_type", "geometry_value", "geometry_path", "crs",
+                                "event_geometry_role", "provenance_note"]
+
+
+def _v2aw_queue_row(patch_id, region="Recife", rank="1", recife="true", count="1"):
+    return {"review_item_id": f"OVRQ_{patch_id}", "patch_id": patch_id, "region": region,
+            "city": region, "priority_rank": rank, "priority_reason": "test",
+            "missing_fields": "crs|spatial_geometry_source", "suggested_recovery_action": "digitize",
+            "candidate_source_files": "test", "is_needed_by_packages_count": count,
+            "is_recife_priority": recife, "blocking_reason": "NO_SPATIAL_METADATA_FOUND"}
+
+
+def _v2aw_patch_source(patch_id="REC_00001", source_type="bbox", value="0,0,10,10",
+                       crs="EPSG:3857", **overrides):
+    row = {"geometry_source_id": f"PGS_{patch_id}", "linked_patch_id": patch_id,
+           "region": "Recife", "city": "Recife", "source_type": source_type,
+           "geometry_value": value, "geometry_path": "", "crs": crs,
+           "geometry_role": "patch_boundary", "provenance_note": "real test fixture source"}
+    row.update(overrides)
+    return row
+
+
+def _v2aw_event_source(event_id="REC_2022_05_24_30", source_type="wkt",
+                       value="POLYGON((0 0, 10 0, 10 10, 0 10, 0 0))",
+                       crs="EPSG:3857", role="observed_event_polygon", **overrides):
+    row = {"event_geometry_source_id": f"EGS_{event_id}", "linked_event_id": event_id,
+           "region": "Recife", "city": "Recife", "source_type": source_type,
+           "geometry_value": value, "geometry_path": "", "crs": crs,
+           "event_geometry_role": role, "provenance_note": "real test fixture source"}
+    row.update(overrides)
+    return row
+
+
+def build_v2aw_dataset(dataset_dir, *, n_recife=3, queue=None, packages=None, ground_events=None,
+                       provided_patch=None, provided_event=None):
+    """Create a minimal v2aw input dataset (v2av recovery queue + v2at packages + ...)."""
+    if queue is None:
+        queue = [_v2aw_queue_row(f"REC_{i:05d}") for i in range(1, n_recife + 1)]
+        # one non-priority row to confirm filtering
+        queue.append(_v2aw_queue_row("CUR_00038", region="Curitiba", rank="5", recife="false"))
+    _write_csv(dataset_dir / "v2av_patch_boundary_recovery_queue.csv",
+               [{c: r.get(c, "") for c in _V2AW_QUEUE_COLUMNS} for r in queue])
+
+    if packages is None:
+        packages = [{"package_id": f"PKG_{r['patch_id']}", "event_id": "REC_2022_05_24_30",
+                     "patch_id": r["patch_id"], "region": r["region"], "city": r["city"],
+                     "hazard_type": "urban_flood", "allowed_use": "candidate_reference"}
+                    for r in queue if r["region"] == "Recife"]
+    _write_csv(dataset_dir / "v2at_event_patch_package_registry.csv",
+               [{c: p.get(c, "") for c in _V2AW_PKG_COLUMNS} for p in packages])
+
+    if ground_events:
+        _write_csv(dataset_dir / "ground_reference_event_registry.csv",
+                   [{c: e.get(c, "") for c in _V2AW_GROUND_COLUMNS} for e in ground_events])
+
+    if provided_patch:
+        _write_csv(dataset_dir / "v2aw_patch_geometry_sources.csv",
+                   [{c: g.get(c, "") for c in _V2AW_PROVIDED_PATCH_COLUMNS} for g in provided_patch])
+    if provided_event:
+        _write_csv(dataset_dir / "v2aw_event_geometry_sources.csv",
+                   [{c: g.get(c, "") for c in _V2AW_PROVIDED_EVENT_COLUMNS} for g in provided_event])
+    return dataset_dir
+
+
+@pytest.fixture
+def v2aw_dataset(tmp_path):
+    def _build(**kwargs):
+        ds = tmp_path / "datasets"
+        ds.mkdir(parents=True, exist_ok=True)
+        build_v2aw_dataset(ds, **kwargs)
+        return ds
+    return _build
+
+
+@pytest.fixture
+def v2aw_cprm_event():
+    def _make(event_id="EVENT_PET2022_CPRM", region="PET", lat="-22.48", lon="-43.21",
+              date="19/02/2022"):
+        return {"event_id": event_id, "region": region, "municipality": "Petropolis",
+                "event_or_survey_date": date, "coordinate_status": "EXPLICIT_COORDINATE",
+                "latitude": lat, "longitude": lon, "phenomenon_group": "MOVEMENT_OF_MASS"}
+    return _make
+
+
+@pytest.fixture
+def v2aw_make_patch_source():
+    return _v2aw_patch_source
+
+
+@pytest.fixture
+def v2aw_make_event_source():
+    return _v2aw_event_source

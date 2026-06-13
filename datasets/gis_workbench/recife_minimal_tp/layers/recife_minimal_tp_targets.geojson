@@ -1,0 +1,32 @@
+{
+  "type": "FeatureCollection",
+  "name": "recife_minimal_tp_targets",
+  "properties": {
+    "geometry_role": "missing_targets",
+    "can_feed_pipeline": false
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "target_type": "patch_boundary",
+        "target_id": "REC_00019",
+        "package_id": "PKG_34713b8aab96",
+        "geometry_role": "missing_patch_boundary",
+        "can_feed_pipeline": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "target_type": "event_polygon",
+        "target_id": "REC_2022_05_24_30",
+        "package_id": "PKG_34713b8aab96",
+        "geometry_role": "missing_event_polygon",
+        "can_feed_pipeline": false
+      },
+      "geometry": null
+    }
+  ]
+}

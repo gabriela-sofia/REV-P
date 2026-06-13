@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "digitization_id",
+    "product_id",
+    "event_id",
+    "package_id",
+    "patch_id",
+    "official_product_file",
+    "official_product_url",
+    "visual_product_type",
+    "contains_drawn_observed_features",
+    "contains_map_scale",
+    "contains_north_arrow",
+    "contains_coordinates_or_grid",
+    "is_georeferenceable",
+    "can_digitize_from_product",
+    "digitization_allowed",
+    "digitization_status",
+    "output_expected",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "digitization_id": {
+      "type": "string"
+    },
+    "product_id": {
+      "type": "string"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "package_id": {
+      "type": "string"
+    },
+    "patch_id": {
+      "type": "string"
+    },
+    "official_product_file": {
+      "type": "string"
+    },
+    "official_product_url": {
+      "type": "string"
+    },
+    "visual_product_type": {
+      "type": "string"
+    },
+    "contains_drawn_observed_features": {
+      "type": "boolean"
+    },
+    "contains_map_scale": {
+      "type": "boolean"
+    },
+    "contains_north_arrow": {
+      "type": "boolean"
+    },
+    "contains_coordinates_or_grid": {
+      "type": "boolean"
+    },
+    "is_georeferenceable": {
+      "type": "boolean"
+    },
+    "can_digitize_from_product": {
+      "type": "boolean"
+    },
+    "digitization_allowed": {
+      "type": "string"
+    },
+    "digitization_status": {
+      "type": "string"
+    },
+    "output_expected": {
+      "type": "string"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

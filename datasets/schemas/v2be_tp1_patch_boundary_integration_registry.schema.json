@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "integration_id",
+    "patch_id",
+    "package_id",
+    "event_id",
+    "source_stage",
+    "source_geojson",
+    "source_method",
+    "asset_id",
+    "asset_file",
+    "original_crs",
+    "normalized_crs",
+    "geometry_type",
+    "geometry_valid",
+    "bbox_minx",
+    "bbox_miny",
+    "bbox_maxx",
+    "bbox_maxy",
+    "area_m2_approx",
+    "vertex_count",
+    "geometry_hash",
+    "requires_human_review",
+    "can_feed_v2ba",
+    "can_feed_v2aw",
+    "can_feed_v2av",
+    "can_feed_v2az",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "integration_id": {
+      "type": "string"
+    },
+    "patch_id": {
+      "type": "string"
+    },
+    "package_id": {
+      "type": "string"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "source_stage": {
+      "type": "string"
+    },
+    "source_geojson": {
+      "type": "string"
+    },
+    "source_method": {
+      "type": "string"
+    },
+    "asset_id": {
+      "type": "string"
+    },
+    "asset_file": {
+      "type": "string"
+    },
+    "original_crs": {
+      "type": "string"
+    },
+    "normalized_crs": {
+      "type": "string"
+    },
+    "geometry_type": {
+      "type": "string"
+    },
+    "geometry_valid": {
+      "type": "boolean"
+    },
+    "bbox_minx": {
+      "type": "string"
+    },
+    "bbox_miny": {
+      "type": "string"
+    },
+    "bbox_maxx": {
+      "type": "string"
+    },
+    "bbox_maxy": {
+      "type": "string"
+    },
+    "area_m2_approx": {
+      "type": "string"
+    },
+    "vertex_count": {
+      "type": "string"
+    },
+    "geometry_hash": {
+      "type": "string"
+    },
+    "requires_human_review": {
+      "type": "boolean"
+    },
+    "can_feed_v2ba": {
+      "type": "boolean"
+    },
+    "can_feed_v2aw": {
+      "type": "boolean"
+    },
+    "can_feed_v2av": {
+      "type": "boolean"
+    },
+    "can_feed_v2az": {
+      "type": "boolean"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

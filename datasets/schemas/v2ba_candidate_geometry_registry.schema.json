@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "candidate_geometry_id",
+    "target_type",
+    "target_id",
+    "source_file_id",
+    "geometry_role",
+    "geometry_type",
+    "geometry_format",
+    "crs",
+    "crs_status",
+    "geometry_valid",
+    "is_point",
+    "is_polygon_or_bbox",
+    "area_m2",
+    "bbox_minx",
+    "bbox_miny",
+    "bbox_maxx",
+    "bbox_maxy",
+    "geometry_hash",
+    "source_public",
+    "access_status",
+    "provenance_note",
+    "can_feed_v2aw",
+    "can_feed_v2av",
+    "can_feed_v2au",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "candidate_geometry_id": {
+      "type": "string"
+    },
+    "target_type": {
+      "type": "string"
+    },
+    "target_id": {
+      "type": "string"
+    },
+    "source_file_id": {
+      "type": "string"
+    },
+    "geometry_role": {
+      "type": "string"
+    },
+    "geometry_type": {
+      "type": "string"
+    },
+    "geometry_format": {
+      "type": "string"
+    },
+    "crs": {
+      "type": "string"
+    },
+    "crs_status": {
+      "type": "string"
+    },
+    "geometry_valid": {
+      "type": "boolean"
+    },
+    "is_point": {
+      "type": "boolean"
+    },
+    "is_polygon_or_bbox": {
+      "type": "boolean"
+    },
+    "area_m2": {
+      "type": "string"
+    },
+    "bbox_minx": {
+      "type": "string"
+    },
+    "bbox_miny": {
+      "type": "string"
+    },
+    "bbox_maxx": {
+      "type": "string"
+    },
+    "bbox_maxy": {
+      "type": "string"
+    },
+    "geometry_hash": {
+      "type": "string"
+    },
+    "source_public": {
+      "type": "boolean"
+    },
+    "access_status": {
+      "type": "string"
+    },
+    "provenance_note": {
+      "type": "string"
+    },
+    "can_feed_v2aw": {
+      "type": "boolean"
+    },
+    "can_feed_v2av": {
+      "type": "boolean"
+    },
+    "can_feed_v2au": {
+      "type": "boolean"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

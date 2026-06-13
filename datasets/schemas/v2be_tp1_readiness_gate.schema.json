@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "gate_id",
+    "turning_point_level",
+    "gate_name",
+    "required_condition",
+    "observed_value",
+    "gate_passed",
+    "severity",
+    "blocking_reason",
+    "recommended_action",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "gate_id": {
+      "type": "boolean"
+    },
+    "turning_point_level": {
+      "type": "string"
+    },
+    "gate_name": {
+      "type": "boolean"
+    },
+    "required_condition": {
+      "type": "string"
+    },
+    "observed_value": {
+      "type": "string"
+    },
+    "gate_passed": {
+      "type": "boolean"
+    },
+    "severity": {
+      "type": "string"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "recommended_action": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

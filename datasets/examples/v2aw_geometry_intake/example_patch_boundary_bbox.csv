@@ -1,0 +1,2 @@
+geometry_source_id,linked_patch_id,region,city,priority_rank,source_type,geometry_value,geometry_path,crs,provenance_type,provenance_note,digitized_by,digitized_at,source_document,source_document_page,source_confidence,license_status,review_status,notes
+PGS_EXAMPLE_BBOX,EXAMPLE_PATCH_0001,ExampleCity,ExampleCity,1,bbox,"-34.95,-8.10,-34.90,-8.05",,EPSG:4326,sentinel_footprint,Synthetic example bbox; not real data,example,2026-01-01,example_doc,1,EXAMPLE,example_license,provided_unreviewed,SYNTHETIC EXAMPLE - do not use as real data

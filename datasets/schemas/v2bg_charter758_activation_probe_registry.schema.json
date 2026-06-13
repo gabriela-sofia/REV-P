@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "probe_id",
+    "activation_id",
+    "url_or_endpoint",
+    "probe_type",
+    "attempted",
+    "success",
+    "http_status_or_error",
+    "content_type",
+    "response_size_bytes",
+    "local_path",
+    "hash_sha256",
+    "contains_products",
+    "contains_product_ids",
+    "contains_file_ids",
+    "contains_download_links",
+    "contains_api_links",
+    "contains_vector_hints",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "probe_id": {
+      "type": "string"
+    },
+    "activation_id": {
+      "type": "string"
+    },
+    "url_or_endpoint": {
+      "type": "string"
+    },
+    "probe_type": {
+      "type": "string"
+    },
+    "attempted": {
+      "type": "boolean"
+    },
+    "success": {
+      "type": "boolean"
+    },
+    "http_status_or_error": {
+      "type": "string"
+    },
+    "content_type": {
+      "type": "string"
+    },
+    "response_size_bytes": {
+      "type": "string"
+    },
+    "local_path": {
+      "type": "string"
+    },
+    "hash_sha256": {
+      "type": "string"
+    },
+    "contains_products": {
+      "type": "boolean"
+    },
+    "contains_product_ids": {
+      "type": "boolean"
+    },
+    "contains_file_ids": {
+      "type": "boolean"
+    },
+    "contains_download_links": {
+      "type": "boolean"
+    },
+    "contains_api_links": {
+      "type": "boolean"
+    },
+    "contains_vector_hints": {
+      "type": "boolean"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,2 @@
+precheck_id,package_id,patch_id,event_id,tp1_patch_boundary_available,tp2_event_polygon_available,same_package,ready_for_pair_overlay_test,can_attempt_v2az_dry_run,can_attempt_v2az_replay,blocking_reason,notes
+V2BF_PRECHECK_1269e3a15ed7,PKG_34713b8aab96,REC_00019,REC_2022_05_24_30,true,false,true,false,false,false,TP2_EVENT_POLYGON_REQUIRED,TP4 remains unavailable until a controlled v2au overlay is reviewed.

@@ -1,0 +1,6 @@
+[v2az] mode=dry_run manual_patch=55 manual_event=1
+[v2az] valid_patch=0 valid_event=0 pairs=0
+[v2az] feeds_v2aw=0 feeds_v2av=0 feeds_v2au=0
+[v2az] turning_point=TP0_DOCUMENTED_ABSENCE replay=False tp4=False
+[v2az] can_train_model=False can_create_operational_labels=False
+[v2az] status=OK_WITH_EXPECTED_BLOCKERS

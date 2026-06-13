@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "query_id",
+    "target_type",
+    "target_id",
+    "source_name",
+    "query_goal",
+    "suggested_query",
+    "expected_result",
+    "expected_geometry",
+    "manual_download_needed",
+    "download_destination",
+    "source_public",
+    "access_status",
+    "validation_after_download",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "query_id": {
+      "type": "string"
+    },
+    "target_type": {
+      "type": "string"
+    },
+    "target_id": {
+      "type": "string"
+    },
+    "source_name": {
+      "type": "string"
+    },
+    "query_goal": {
+      "type": "string"
+    },
+    "suggested_query": {
+      "type": "string"
+    },
+    "expected_result": {
+      "type": "string"
+    },
+    "expected_geometry": {
+      "type": "string"
+    },
+    "manual_download_needed": {
+      "type": "boolean"
+    },
+    "download_destination": {
+      "type": "string"
+    },
+    "source_public": {
+      "type": "boolean"
+    },
+    "access_status": {
+      "type": "string"
+    },
+    "validation_after_download": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

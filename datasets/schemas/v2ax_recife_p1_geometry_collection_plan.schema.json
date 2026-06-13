@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "v2ax_recife_p1_geometry_collection_plan",
+  "description": "v2ax fail-closed row contract. No operational label, training, final ground truth, or automatic C4.",
+  "type": "object",
+  "required": [
+    "collection_task_id",
+    "target_type",
+    "target_id",
+    "region",
+    "city",
+    "priority_rank",
+    "recommended_source_class",
+    "recommended_source_name",
+    "what_to_collect",
+    "accepted_formats",
+    "required_crs",
+    "why_needed",
+    "current_blocker",
+    "collection_status",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "collection_task_id": {
+      "type": "string"
+    },
+    "target_type": {
+      "type": "string"
+    },
+    "target_id": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "priority_rank": {
+      "type": "string"
+    },
+    "recommended_source_class": {
+      "type": "string"
+    },
+    "recommended_source_name": {
+      "type": "string"
+    },
+    "what_to_collect": {
+      "type": "string"
+    },
+    "accepted_formats": {
+      "type": "string"
+    },
+    "required_crs": {
+      "type": "string"
+    },
+    "why_needed": {
+      "type": "string"
+    },
+    "current_blocker": {
+      "type": "string"
+    },
+    "collection_status": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

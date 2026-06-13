@@ -1,0 +1,606 @@
+check_id,patch_id,priority_rank,check_item,is_required,current_status,blocking_reason,how_to_complete,notes
+V2AX_PCHK_cf671551d7b3,REC_00019,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_4a36c838909e,REC_00019,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_10f19b3d8dfa,REC_00019,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_a6cd18e0faaf,REC_00019,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_d558749dfc6b,REC_00019,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_eb27ba1601fa,REC_00019,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_da3c0ad3b624,REC_00019,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_c9a43a7955e4,REC_00019,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_d9248a91f162,REC_00019,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_2c6b3b9849aa,REC_00019,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_8028c9119675,REC_00019,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_379479b3b83e,REC_00183,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_836e06fb4c53,REC_00183,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_23d31ebc2086,REC_00183,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_a85f6a3d7a08,REC_00183,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_0e73f2569f23,REC_00183,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_4e67b957e784,REC_00183,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_3cbe3ff3dead,REC_00183,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_05785e83df3c,REC_00183,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_2624d0fd61be,REC_00183,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_125da32bf77a,REC_00183,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_798a2ded2af4,REC_00183,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_d0d3bb6aef81,REC_00204,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_9ca84af972a7,REC_00204,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_6bd3bedb3007,REC_00204,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_ac02993a44c7,REC_00204,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_ed3040c6dce9,REC_00204,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_9fca639dd18e,REC_00204,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_c33038d3758e,REC_00204,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_7633f772696e,REC_00204,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_6b68370b5c0b,REC_00204,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_5f371a0743d4,REC_00204,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_7296634ffce9,REC_00204,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_e5ecfd3327d2,REC_00205,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_544e5b644b2f,REC_00205,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_f51d3a11efe4,REC_00205,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_43ff59e60465,REC_00205,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_b15b8b23e785,REC_00205,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_fd370f19a9b9,REC_00205,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_392dc13f3924,REC_00205,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_7c76a149bd07,REC_00205,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_cbd2f232231a,REC_00205,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_59ac794b4a8c,REC_00205,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_38e4468fbdc7,REC_00205,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_7f0e2cea10d7,REC_00227,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_46c90d7690e9,REC_00227,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_af0091d56df8,REC_00227,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_2f9f7004bc65,REC_00227,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_3bb01e163ece,REC_00227,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_4d7d491b6ba2,REC_00227,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_d085fc206a61,REC_00227,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_e21c1cd6fb8b,REC_00227,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_83ab279a3536,REC_00227,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_b436f07e5dd5,REC_00227,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_6d0a1b3809c0,REC_00227,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_a4fe2dd037a2,REC_00260,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_9cbbbc1dca5e,REC_00260,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_333c5a6b9e4e,REC_00260,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_e261fecbd9f3,REC_00260,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_36c7cd09ceea,REC_00260,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_5e8cb346043b,REC_00260,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_635d130e1abf,REC_00260,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_fdb9665ba62c,REC_00260,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_9af707f51afe,REC_00260,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_be3e3dd1a872,REC_00260,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_a9e6baf69958,REC_00260,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_2a1c1d35a81e,REC_00276,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_39de11440b05,REC_00276,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_b051a35e0dcc,REC_00276,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_a3489f9405db,REC_00276,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_a5a9770088f9,REC_00276,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_24603b8524f0,REC_00276,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_abc1febd767f,REC_00276,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_d90936a4f6bf,REC_00276,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_80249d601a66,REC_00276,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_80bb9b6ecec9,REC_00276,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_1a341bb84304,REC_00276,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_0077a1aca63e,REC_00279,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_b28ba93ebb38,REC_00279,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_1b8398e5b67a,REC_00279,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_25116b2c77eb,REC_00279,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_bdc956305973,REC_00279,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_afc0e61502ed,REC_00279,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_7152400dd87a,REC_00279,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_25105b4ae080,REC_00279,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_2363c297380f,REC_00279,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_0867265ecc25,REC_00279,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_eb713a71d22e,REC_00279,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_6be6d66f737d,REC_00289,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_ccd3a4f34951,REC_00289,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_98675c89a195,REC_00289,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_58ca136c12d4,REC_00289,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_88425a8acdaa,REC_00289,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_e8f5c0d38c96,REC_00289,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_bf0ec56bad8f,REC_00289,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_7ece698efeff,REC_00289,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_8936c5cffde1,REC_00289,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_077c88ed7ed2,REC_00289,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_38bded2ad97d,REC_00289,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_fc674c156c39,REC_00290,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_4ca8f44bec06,REC_00290,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_de2975814c22,REC_00290,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_0f939a9ebb18,REC_00290,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_95f9d84b28ee,REC_00290,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_8d10f067aaf2,REC_00290,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_19fc930b058b,REC_00290,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_61802e991d53,REC_00290,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_dc1dc190f5d9,REC_00290,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_86f547e4a606,REC_00290,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_c512e1ea1a9a,REC_00290,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_ded6ca2573b1,REC_00291,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_1f26bce7ff19,REC_00291,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_ba0065b5af57,REC_00291,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_da4627496f3c,REC_00291,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_5657297c8c0e,REC_00291,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_5bae2bf4ad27,REC_00291,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_48bbd37e01b7,REC_00291,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_666cbf842b17,REC_00291,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_97cef6db49c1,REC_00291,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_9e88e11b7f06,REC_00291,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_1d7808d569cc,REC_00291,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_b3e756d5faae,REC_00292,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_cd4b8d35aa71,REC_00292,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_7c508e7b403e,REC_00292,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_6b6f4dd0ea98,REC_00292,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_4b0d411f3054,REC_00292,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_450d1476fb5a,REC_00292,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_d9d5af8425ba,REC_00292,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_8ef102ea9e32,REC_00292,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_74d229388550,REC_00292,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_a9f339c4e239,REC_00292,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_e9b81f3d2887,REC_00292,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_4df64a3b7476,REC_00294,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_63739167e775,REC_00294,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_fb98ec9a2700,REC_00294,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_4c71ab3645c8,REC_00294,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_bcafd6283b07,REC_00294,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_f22bc3807795,REC_00294,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_fecd96c28984,REC_00294,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_69fbfc94e4b0,REC_00294,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_ee70aaf1464e,REC_00294,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_25d75cdd02e5,REC_00294,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_84762f413e59,REC_00294,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_ba925976aa4a,REC_00296,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_ed76228cc457,REC_00296,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_62ed535c89ff,REC_00296,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_09a5f431a72b,REC_00296,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_3c2d16015fa9,REC_00296,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_213caf963449,REC_00296,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_7ebcc2e3c9d2,REC_00296,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_26aff47ebc2d,REC_00296,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_ad308cc93077,REC_00296,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_b61d9a5d3a10,REC_00296,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_63a4e57e2f49,REC_00296,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_da56858c481d,REC_00299,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_3e9f98b9a2d0,REC_00299,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_e6d250d15a1f,REC_00299,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_3126271b8c5c,REC_00299,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_b29c0f2df028,REC_00299,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_c9b283873d2b,REC_00299,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_1ab1a997220c,REC_00299,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_5890a52e1d48,REC_00299,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_4d35c8de31a4,REC_00299,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_7fc6d58c5a17,REC_00299,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_927a8901fb97,REC_00299,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_1c570eded52b,REC_00302,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_222e729d7386,REC_00302,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_c584d823c8e0,REC_00302,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_1357b94649b3,REC_00302,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_1323dc613d05,REC_00302,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_e1189a26b28c,REC_00302,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_3710ee850423,REC_00302,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_5d84547af150,REC_00302,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_fbb91dc321b0,REC_00302,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_47054e8c96f5,REC_00302,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_0351fd802bcb,REC_00302,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_e606b2200188,REC_00313,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_a8518cf82f54,REC_00313,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_ea39e000fe75,REC_00313,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_8ba0004e5e14,REC_00313,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_6eadf1750309,REC_00313,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_fea94ffb4483,REC_00313,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_c61fadef2bb9,REC_00313,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_d8119fc9dccf,REC_00313,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_e4f80b79ecbe,REC_00313,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_d5c547fe5568,REC_00313,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_f6cfeb7bdac5,REC_00313,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_2eecf30a7fbd,REC_00314,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_c03b30f1c9dd,REC_00314,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_6e09f18f5006,REC_00314,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_7864d6e41f63,REC_00314,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_0d79af96da6b,REC_00314,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_901718c40c66,REC_00314,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_d77fe30c8f9c,REC_00314,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_97b384349e6a,REC_00314,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_947815d8f028,REC_00314,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_76e162330f53,REC_00314,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_5e23b196941d,REC_00314,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_fcec333d353e,REC_00354,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_635ecfea8f79,REC_00354,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_24f572e27408,REC_00354,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_c58c6fd0d946,REC_00354,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_e08c7ab425c0,REC_00354,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_62a2ee63f9a4,REC_00354,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_10a3605d9b86,REC_00354,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_b2f0e2e99f28,REC_00354,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_794e3c5712b2,REC_00354,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_5bfe2029bd21,REC_00354,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_2bded331738e,REC_00354,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_7e43a1db1f1b,REC_00355,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_ada5d59f4b2e,REC_00355,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_baf9db6c64c5,REC_00355,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_d6ad8cb92570,REC_00355,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_c19723919189,REC_00355,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_f4fff23d2db1,REC_00355,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_dbd01f33a859,REC_00355,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_2b6a4249b900,REC_00355,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_356b43384d09,REC_00355,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_bd5ee602a4a9,REC_00355,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_24d6e6dc8266,REC_00355,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_e13b9224d936,REC_00364,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_e26db082da0b,REC_00364,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_b9cd85429b4b,REC_00364,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_05abcecf1df9,REC_00364,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_b67a23154b63,REC_00364,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_6b2abe03afa2,REC_00364,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_8ad94d362e0f,REC_00364,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_f41e77eefa6b,REC_00364,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_10e61d81e941,REC_00364,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_b1e744164b2c,REC_00364,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_85521fcf6d3d,REC_00364,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_c09169e92916,REC_00388,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_0729626a99ff,REC_00388,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_4b231a7995ef,REC_00388,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_cfc3183c69de,REC_00388,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_8592f5673cbd,REC_00388,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_6cee8a20b45d,REC_00388,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_26dfdd07c910,REC_00388,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_794e024f6ab3,REC_00388,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_bac3d25ff064,REC_00388,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_a73a33510e98,REC_00388,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_8e3364b0ae3b,REC_00388,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_b23e2ed7b5d5,REC_00458,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_3bd8cc62723d,REC_00458,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_da09e9348512,REC_00458,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_a2360e90a0e8,REC_00458,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_357683174b80,REC_00458,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_222fc0e6006f,REC_00458,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_f256a9248b82,REC_00458,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_b9c6bbf7ab16,REC_00458,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_6bb9b257ac66,REC_00458,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_c62189470e52,REC_00458,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_cec92b3bfdd4,REC_00458,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_c28b80df7863,REC_00460,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_13ced4d6f11b,REC_00460,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_93a0e3f0555c,REC_00460,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_4d185331d120,REC_00460,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_c071481ec6a4,REC_00460,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_26d176b31aa2,REC_00460,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_0d4dfdd0cdf7,REC_00460,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_6fd5eaadbcbf,REC_00460,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_36d777aedd3a,REC_00460,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_16dff6c84ea8,REC_00460,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_9cd276c0382f,REC_00460,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_04a4182fa247,REC_00481,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_4e4fa840c188,REC_00481,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_29d81b629cae,REC_00481,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_277d61931052,REC_00481,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_0599be31a620,REC_00481,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_92f43273269e,REC_00481,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_dc40904019d1,REC_00481,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_86e9c1606ed4,REC_00481,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_c77f22df9ff9,REC_00481,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_bd5ddfeda17c,REC_00481,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_891e307ad808,REC_00481,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_9908163c4619,REC_00482,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_6cf081d20b76,REC_00482,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_cb86f666eb12,REC_00482,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_4c5cebde9d44,REC_00482,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_feb8eec1ba87,REC_00482,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_6d165044ff0e,REC_00482,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_6a9aa105d95c,REC_00482,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_a3a8bd8d50bb,REC_00482,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_b48e02eb60d7,REC_00482,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_bb9614693b01,REC_00482,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_b38ff839bf20,REC_00482,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_af6c84c5d4c2,REC_00483,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_f17a45d8c29a,REC_00483,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_acaa2e733b9d,REC_00483,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_b2cdba479782,REC_00483,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_164cd40c8b2b,REC_00483,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_4df2e26dc9f5,REC_00483,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_c7ee0f68dc55,REC_00483,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_11af6c7c2a6e,REC_00483,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_9789b2de90f7,REC_00483,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_9439a4c758b8,REC_00483,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_b701d542e967,REC_00483,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_bf7c2ca4c20e,REC_00501,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_2f3ceabc80af,REC_00501,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_a801753dd78b,REC_00501,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_cc8d2c84e1a8,REC_00501,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_20134f08cf6a,REC_00501,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_f3e40a33bb39,REC_00501,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_ffbf69302384,REC_00501,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_9b8c8191cb5d,REC_00501,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_185b6ca6be2e,REC_00501,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_c5aa3d5fd43b,REC_00501,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_215b6de8b047,REC_00501,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_d5a43d5b61fb,REC_00502,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_8d684bc4732f,REC_00502,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_df861634784e,REC_00502,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_01780a1f22a7,REC_00502,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_177d2c95a7fe,REC_00502,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_daf5e42fa2b7,REC_00502,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_4153674751fe,REC_00502,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_6d2a7111a2a9,REC_00502,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_8d49964ee84d,REC_00502,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_b679a837deb5,REC_00502,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_023331975f88,REC_00502,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_a3a45a5f6029,REC_00503,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_1b7b23f7f784,REC_00503,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_8a0df8ce0465,REC_00503,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_26d53c29e755,REC_00503,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_9afc4f9a7cc9,REC_00503,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_d44a1e263360,REC_00503,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_de411260e254,REC_00503,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_e280c78cc5bc,REC_00503,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_0778ad096247,REC_00503,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_2ea5077cee91,REC_00503,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_f34f20481c4e,REC_00503,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_c32d906ca463,REC_00505,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_a46b9d9450d7,REC_00505,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_507c04579545,REC_00505,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_70e11aafb73b,REC_00505,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_a948a07dea6c,REC_00505,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_251eeb8238c5,REC_00505,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_5ee65aef6b45,REC_00505,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_11851437a320,REC_00505,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_6c8082298619,REC_00505,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_1cbd4a6d932c,REC_00505,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_6acf7fb618dd,REC_00505,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_95c4237e10a8,REC_00506,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_f63d654b293e,REC_00506,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_8bf1c99158bd,REC_00506,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_b3af7baa3e4e,REC_00506,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_8d2b4b8c7ffe,REC_00506,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_2602dc81f4ba,REC_00506,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_a6c731314bf9,REC_00506,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_460c7fd162df,REC_00506,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_0e0601491432,REC_00506,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_be2e4e1c6218,REC_00506,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_337829c77f4e,REC_00506,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_e1f566b2ef63,REC_00525,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_9822da656ffe,REC_00525,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_e0bf9b72f903,REC_00525,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_a8ce7caca957,REC_00525,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_28e2c62c4943,REC_00525,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_21ce8bc61b5c,REC_00525,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_f80ca1ee12b2,REC_00525,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_8024be9eadc9,REC_00525,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_879ff3b90afa,REC_00525,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_505f0c211218,REC_00525,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_3811d8ab3b87,REC_00525,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_12844cf7f65a,REC_00526,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_40f4c6668312,REC_00526,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_0db51479629e,REC_00526,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_65dd21f87db0,REC_00526,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_38a42af907c7,REC_00526,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_67a6aa58eb85,REC_00526,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_08e2bf3730e8,REC_00526,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_aca5a34f5073,REC_00526,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_c1c967339a45,REC_00526,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_af55c9e74844,REC_00526,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_09c020c1ee4d,REC_00526,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_ff5adf825cc7,REC_00529,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_ced78b43503a,REC_00529,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_7c5c7484ffd7,REC_00529,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_2694a9cad496,REC_00529,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_3de74544e86b,REC_00529,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_70ebef030e3c,REC_00529,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_a17175d6df4f,REC_00529,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_0294ffe1fb1e,REC_00529,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_992b15fb7447,REC_00529,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_d89c97464057,REC_00529,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_1501f3260683,REC_00529,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_30311318fafc,REC_00548,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_5efddd4c6509,REC_00548,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_87e1a16ae97f,REC_00548,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_f9c1cdd88536,REC_00548,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_589de57b0e8e,REC_00548,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_62ff8b824e6f,REC_00548,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_9630d30dc61b,REC_00548,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_8d32c10c8e4f,REC_00548,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_28aeeb8bd7d1,REC_00548,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_35ce29efb4c8,REC_00548,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_160805d212de,REC_00548,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_993541473942,REC_00550,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_ab275b6a8d8a,REC_00550,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_a28a0e882bac,REC_00550,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_15e4d1c85ccb,REC_00550,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_a4f80cc4c81b,REC_00550,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_713ee65e56ca,REC_00550,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_a7e7606f04ba,REC_00550,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_e6a490361691,REC_00550,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_5509349cb4c2,REC_00550,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_e9d0faa8557d,REC_00550,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_05141adc9261,REC_00550,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_22f1fbdfc863,REC_01,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_35c88f7659ee,REC_01,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_861c2c72744a,REC_01,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_d6e24e5a8f6f,REC_01,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_bb77e692107e,REC_01,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_4ae8b04763b5,REC_01,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_e099590d1ca4,REC_01,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_214ca8bb934f,REC_01,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_ec8027c5344e,REC_01,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_40cb9d79e32a,REC_01,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_399afa0301df,REC_01,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_98cdb0fe20d8,REC_02,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_47471c540ea3,REC_02,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_4bcfdec1a648,REC_02,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_16afbcc872da,REC_02,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_fc972f599cb1,REC_02,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_a52aa87a319f,REC_02,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_014143001714,REC_02,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_97687126a043,REC_02,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_d090c025e8a5,REC_02,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_776d69cafafb,REC_02,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_0a92af9fae84,REC_02,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_79de7543550d,REC_03,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_ce80ca4df180,REC_03,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_7c2c97fbaac4,REC_03,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_d2c1c93b7ed9,REC_03,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_188e85154ee1,REC_03,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_ae907760bafe,REC_03,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_9718e8735746,REC_03,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_e5cc5c223064,REC_03,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_c33a9cb37b70,REC_03,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_427c81abe688,REC_03,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_a7e8348e82ab,REC_03,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_3b8399d6e5f6,REC_04,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_81f80f7aa25a,REC_04,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_ac5034c4e4ee,REC_04,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_c833c158da98,REC_04,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_96ff552ef2d8,REC_04,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_85135ccf6af9,REC_04,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_0914c52bf68f,REC_04,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_c12838d1601b,REC_04,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_6b74d7a80aa1,REC_04,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_9864c1c5d53d,REC_04,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_85ae633d7d59,REC_04,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_3027636e43fb,REC_05,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_7461eab4624d,REC_05,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_66640f5edd8d,REC_05,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_d985bdb47c5b,REC_05,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_0203f6e94230,REC_05,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_d81b65b7a122,REC_05,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_dea5c158aca1,REC_05,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_f0ba0bfa454a,REC_05,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_99bf0b3b9424,REC_05,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_3991f1c93bd6,REC_05,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_9f141e9b2715,REC_05,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_f28193fcbde7,REC_06,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_754961f41311,REC_06,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_82f63aa5cc79,REC_06,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_c3db3bd98ea7,REC_06,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_f0634c140e27,REC_06,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_cb0728fabba7,REC_06,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_77e3db2f4c5f,REC_06,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_90985d679c80,REC_06,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_d8750f697462,REC_06,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_5b4368e415c5,REC_06,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_0dce155bc13a,REC_06,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_e99ec0b1e688,REC_07,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_34fe1644e103,REC_07,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_4cb94520e244,REC_07,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_02a7203fd937,REC_07,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_5bbc68805d45,REC_07,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_0b91fabe01ab,REC_07,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_952ca7de5ede,REC_07,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_63335adf31d5,REC_07,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_0342acd76b2c,REC_07,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_54ff8932297b,REC_07,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_fed593af346f,REC_07,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_7124c315c2f7,REC_08,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_971ee26d8964,REC_08,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_ae4af1cc9679,REC_08,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_97062fe6fa2c,REC_08,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_01721fe12241,REC_08,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_371a3417d132,REC_08,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_4596d2a5f800,REC_08,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_7911f97d3edd,REC_08,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_c73535199221,REC_08,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_a5343c0a7763,REC_08,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_2e9854d588e3,REC_08,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_d224c944dc73,REC_09,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_aad09a8f88c3,REC_09,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_8083c631fe90,REC_09,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_ab5395a27ab3,REC_09,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_8a535ec0fe3c,REC_09,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_a8a204be3583,REC_09,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_22a5525eb104,REC_09,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_b42cd95cfa23,REC_09,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_a8e2a1c299b4,REC_09,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_9cbf939d5e54,REC_09,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_a1b39463f063,REC_09,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_d4bb3c7e0d40,REC_10,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_5c9889fdb9c9,REC_10,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_82f13bf756e1,REC_10,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_d5e22bb193ad,REC_10,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_e03b09b5bc32,REC_10,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_849f938af44a,REC_10,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_e8ac638c44fe,REC_10,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_8b171e18f831,REC_10,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_4b091144cec6,REC_10,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_20a2d556fd52,REC_10,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_7242b4943252,REC_10,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_c59a770156ff,REC_11,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_e386d6a2b26b,REC_11,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_71f473fc4a7f,REC_11,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_765aedcd503e,REC_11,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_330f51401985,REC_11,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_98353c2e08e2,REC_11,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_09433a2f7c86,REC_11,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_9309cd28dd12,REC_11,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_d0d0b2806b30,REC_11,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_17622167c06e,REC_11,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_2789e31d09e1,REC_11,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_ec6012b78770,REC_12,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_928f97ae0311,REC_12,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_e4ce9f4cfae0,REC_12,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_03b20258e21e,REC_12,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_b6eb5ed826b5,REC_12,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_63b1083fd819,REC_12,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_e368caa0868e,REC_12,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_44ad89434e9a,REC_12,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_d57391143c7b,REC_12,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_f0e39cf80df9,REC_12,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_b42af9f77351,REC_12,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_a7b75fe5b01a,REC_13,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_17774a4e6e45,REC_13,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_62177bee12b5,REC_13,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_0c240ffa29e9,REC_13,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_92470afaeb7f,REC_13,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_9fadf314fa5a,REC_13,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_aceed827ef72,REC_13,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_eb4967f4b903,REC_13,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_44b5e3b880f4,REC_13,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_e802e0ba2267,REC_13,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_85e9dbf908aa,REC_13,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_4686037989d4,REC_14,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_b53095b81c34,REC_14,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_f8c7eecad018,REC_14,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_8eca1f8b893b,REC_14,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_78fe97544618,REC_14,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_13c492b77f92,REC_14,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_861bb5c71a0e,REC_14,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_a15f4df45e57,REC_14,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_bb4a429a460c,REC_14,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_d2428dbe9732,REC_14,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_f43b3f7ae6c0,REC_14,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_0e11158dd83c,REC_15,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_aaf242b6c6d0,REC_15,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_c12b862e3dce,REC_15,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_dae9b6651d8b,REC_15,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_47125e53d270,REC_15,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_52d861c97507,REC_15,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_a487243ae5c9,REC_15,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_75abf2cfed3b,REC_15,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_dc4c241ed4e5,REC_15,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_ca3bc4bba6ce,REC_15,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_5f85cc8b2cc7,REC_15,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_ada9d0a31ae8,REC_16,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_202f8724cc0c,REC_16,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_7f9e41afb8bd,REC_16,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_aed059f1bb3c,REC_16,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_8b8c4d327260,REC_16,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_3d829a80922b,REC_16,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_bc11f19d96e1,REC_16,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_fa48f07d94ea,REC_16,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_53937091f326,REC_16,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_c37145a63458,REC_16,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_34ff3f3c1602,REC_16,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_6e65f499919a,REC_17,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_4c1bc6be06cd,REC_17,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_19669896cfa5,REC_17,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_d795ac3eecad,REC_17,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_2c9afef78ad9,REC_17,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_6ffa81a1bf32,REC_17,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_ced80c5dac6b,REC_17,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_cfeb9124e430,REC_17,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_2a014895e823,REC_17,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_fd2eb3358a5d,REC_17,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_5ea30353d1d2,REC_17,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_e2d8d2bec526,REC_18,1,Confirmar patch_id,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm patch identity against v2aw/v2av.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_80e3b5afce50,REC_18,1,Obter boundary vetorial real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect real patch boundary.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_48bb7155281c,REC_18,1,Registrar formato bbox/WKT/GeoJSON,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill source_type.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_4d2be8a8c98f,REC_18,1,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_9e901999d259,REC_18,1,Registrar fonte/proveniencia,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_839c83f47676,REC_18,1,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_da4c87332f6f,REC_18,1,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_41e209f66692,REC_18,1,Registrar data de digitalizacao,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_at.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_4974e16a214f,REC_18,1,Validar geometria,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Run v2ax validation.,Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_2d063e82912e,REC_18,1,Validar que nao e ponto/centroide,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,"Provide area polygon, never centroid.",Checklist does not authorize labels or automatic C4.
+V2AX_PCHK_db711c870023,REC_18,1,Aprovar para v2aw/v2av,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Checklist does not authorize labels or automatic C4.

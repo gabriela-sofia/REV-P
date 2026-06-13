@@ -1,0 +1,16 @@
+{
+  "offline_mode": true,
+  "priority_patch_id": "REC_00019",
+  "priority_package_id": "PKG_34713b8aab96",
+  "priority_event_id": "REC_2022_05_24_30",
+  "accepted_crs": ["EPSG:4326", "EPSG:3857", "EPSG:31982", "EPSG:31983"],
+  "allow_default_patch_size": false,
+  "allow_center_point_buffer": false,
+  "allow_filename_coordinate_inference": false,
+  "allow_transform_based_boundary": true,
+  "allow_bbox_based_boundary": true,
+  "allow_window_based_boundary": true,
+  "allow_unverified_sentinel_tile_boundary": false,
+  "can_train_model": false,
+  "can_create_operational_labels": false
+}

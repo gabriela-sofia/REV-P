@@ -1,0 +1,2 @@
+target_type,target_id,package_id,required_input,accepted_formats,required_crs,where_to_put_it,review_status,blocking_reason,notes
+event_polygon,REC_2022_05_24_30,PKG_34713b8aab96,event-specific observed Polygon/MultiPolygon with provenance,wkt|geojson|geojson_file|kml|kmz|shp_zip|csv_wkt|csv_bbox,EPSG:4326|EPSG:3857|EPSG:31982|EPSG:31983|EPSG:32725,datasets/external_sources/recife_minimal_tp/event_polygon_REC_2022_05_24_30/derived,not_started,NO_PUBLIC_EVENT_SPECIFIC_VECTOR_FOUND,"Risk points, quickview, precipitation, AOI and patch envelope cannot satisfy TP2."

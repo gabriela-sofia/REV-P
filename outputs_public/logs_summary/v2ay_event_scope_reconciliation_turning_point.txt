@@ -1,0 +1,6 @@
+[v2ay] recife_expected=3 recife_observed=1 reconciled=True invented=False
+[v2ay] patch_boundaries=0 event_polygons=0 overlays=0
+[v2ay] gaps=56 acquisition_targets=56
+[v2ay] turning_point=TP0_DOCUMENTED_ABSENCE ready=False
+[v2ay] can_train_model=False can_create_operational_labels=False
+[v2ay] status=OK_WITH_EXPECTED_BLOCKERS

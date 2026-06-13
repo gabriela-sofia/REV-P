@@ -1,0 +1,2 @@
+aoi_id,source_basis,target_patch_id,target_event_id,target_package_id,geometry_type,crs,bbox_minx,bbox_miny,bbox_maxx,bbox_maxy,area_m2,aoi_role,can_feed_overlay,blocking_reason,notes
+V2BC_AOI_3c7970129420,envelope_of_400_context_points,REC_00019,REC_2022_05_24_30,PKG_34713b8aab96,Polygon,EPSG:4326,-34.95727133781799,-8.138516680134959,-34.92907433234659,-8.108520197722704,,digitization_support_only,false,CONTEXT_ENVELOPE_NOT_OPERATIONAL_GEOMETRY,AOI is not event extent or patch boundary.

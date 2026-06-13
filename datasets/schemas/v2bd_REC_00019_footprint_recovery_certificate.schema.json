@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "certificate_id",
+    "patch_id",
+    "package_id",
+    "event_id",
+    "references_scanned",
+    "direct_asset_links_found",
+    "spatial_metadata_records_found",
+    "valid_reconstruction_methods",
+    "boundary_candidates_valid",
+    "boundary_recovered",
+    "turning_point_unlocked",
+    "status",
+    "blocking_reason",
+    "minimum_required_next_input",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "certificate_id": {
+      "type": "string"
+    },
+    "patch_id": {
+      "type": "string"
+    },
+    "package_id": {
+      "type": "string"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "references_scanned": {
+      "type": "string"
+    },
+    "direct_asset_links_found": {
+      "type": "string"
+    },
+    "spatial_metadata_records_found": {
+      "type": "string"
+    },
+    "valid_reconstruction_methods": {
+      "type": "string"
+    },
+    "boundary_candidates_valid": {
+      "type": "string"
+    },
+    "boundary_recovered": {
+      "type": "boolean"
+    },
+    "turning_point_unlocked": {
+      "type": "boolean"
+    },
+    "status": {
+      "type": "string"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "minimum_required_next_input": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

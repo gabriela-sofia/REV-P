@@ -1,0 +1,2 @@
+quickview_id,source_file,source_name,target_event_id,visual_support_role,is_georeferenced,can_extract_geometry,can_feed_event_polygon,blocking_reason,recommended_manual_use,notes
+V2BC_QV_e50c441eb285,raw/charter_758_recife_quickview.png,Charter 758 Recife quickview,REC_2022_05_24_30,visual_support_only,false,false,false,QUICKVIEW_NOT_GEOREFERENCED_OR_VERIFIED_VECTOR,Visual orientation only alongside verified/georeferenced source.,Never trace as final geometry without verified georeferencing.

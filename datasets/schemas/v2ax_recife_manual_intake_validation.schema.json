@@ -1,0 +1,151 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "v2ax_recife_manual_intake_validation",
+  "description": "v2ax fail-closed row contract. No operational label, training, final ground truth, or automatic C4.",
+  "type": "object",
+  "required": [
+    "validation_id",
+    "target_type",
+    "target_id",
+    "package_id",
+    "patch_id",
+    "event_id",
+    "source_file",
+    "geometry_present",
+    "geometry_format",
+    "geometry_format_valid",
+    "crs_present",
+    "crs_accepted",
+    "provenance_present",
+    "license_present",
+    "review_status_valid",
+    "is_point",
+    "is_polygon_or_bbox",
+    "can_feed_v2aw",
+    "can_feed_v2av",
+    "can_feed_v2au",
+    "blocking_reason",
+    "recommended_fix",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "validation_id": {
+      "type": "string"
+    },
+    "target_type": {
+      "type": "string"
+    },
+    "target_id": {
+      "type": "string"
+    },
+    "package_id": {
+      "type": "string"
+    },
+    "patch_id": {
+      "type": "string"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "source_file": {
+      "type": "string"
+    },
+    "geometry_present": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "geometry_format": {
+      "type": "string"
+    },
+    "geometry_format_valid": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "crs_present": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "crs_accepted": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "provenance_present": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "license_present": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "review_status_valid": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "is_point": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "is_polygon_or_bbox": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "can_feed_v2aw": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "can_feed_v2av": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "can_feed_v2au": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "recommended_fix": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

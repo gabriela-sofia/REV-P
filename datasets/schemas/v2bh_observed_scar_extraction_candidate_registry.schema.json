@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "scar_candidate_id",
+    "product_id",
+    "event_id",
+    "package_id",
+    "patch_id",
+    "source_product_file",
+    "candidate_source_method",
+    "pixel_geometry_type",
+    "pixel_area_px",
+    "pixel_bbox_minx",
+    "pixel_bbox_miny",
+    "pixel_bbox_maxx",
+    "pixel_bbox_maxy",
+    "color_or_symbol_basis",
+    "matches_legend",
+    "georeferenced",
+    "crs",
+    "geometry_valid",
+    "can_be_event_polygon_candidate",
+    "requires_human_review",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "scar_candidate_id": {
+      "type": "string"
+    },
+    "product_id": {
+      "type": "string"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "package_id": {
+      "type": "string"
+    },
+    "patch_id": {
+      "type": "string"
+    },
+    "source_product_file": {
+      "type": "string"
+    },
+    "candidate_source_method": {
+      "type": "string"
+    },
+    "pixel_geometry_type": {
+      "type": "string"
+    },
+    "pixel_area_px": {
+      "type": "string"
+    },
+    "pixel_bbox_minx": {
+      "type": "string"
+    },
+    "pixel_bbox_miny": {
+      "type": "string"
+    },
+    "pixel_bbox_maxx": {
+      "type": "string"
+    },
+    "pixel_bbox_maxy": {
+      "type": "string"
+    },
+    "color_or_symbol_basis": {
+      "type": "string"
+    },
+    "matches_legend": {
+      "type": "string"
+    },
+    "georeferenced": {
+      "type": "string"
+    },
+    "crs": {
+      "type": "string"
+    },
+    "geometry_valid": {
+      "type": "string"
+    },
+    "can_be_event_polygon_candidate": {
+      "type": "string"
+    },
+    "requires_human_review": {
+      "type": "string"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

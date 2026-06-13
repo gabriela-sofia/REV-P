@@ -1,0 +1,17 @@
+{
+  "offline_mode": true,
+  "priority_patch_id": "REC_00019",
+  "priority_package_id": "PKG_34713b8aab96",
+  "priority_event_id": "REC_2022_05_24_30",
+  "source_boundary_geojson": "datasets/external_sources/recife_minimal_tp/derived/patch_boundary_REC_00019_from_lineage.geojson",
+  "original_crs": "EPSG:32725",
+  "normalized_crs": "EPSG:4326",
+  "accepted_crs": ["EPSG:4326", "EPSG:3857", "EPSG:31982", "EPSG:31983", "EPSG:32725"],
+  "allow_tp1_candidate": true,
+  "require_human_review_for_tp1": true,
+  "allow_event_polygon_inference": false,
+  "allow_ground_truth_creation": false,
+  "allow_operational_label_creation": false,
+  "can_train_model": false,
+  "can_create_operational_labels": false
+}

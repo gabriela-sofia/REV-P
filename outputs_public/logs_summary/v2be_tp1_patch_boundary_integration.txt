@@ -1,0 +1,4 @@
+[v2be] patch=REC_00019 valid=true feeds_ready=4
+[v2be] original_crs=EPSG:32725 normalized_crs=EPSG:4326 reprojection_match=true
+[v2be] turning_point=TP1_ONE_PATCH_BOUNDARY_CANDIDATE_REQUIRES_HUMAN_REVIEW human_review=true
+[v2be] can_train_model=false can_create_operational_labels=false

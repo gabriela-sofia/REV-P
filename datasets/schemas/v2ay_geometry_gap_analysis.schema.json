@@ -1,0 +1,91 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "v2ay_geometry_gap_analysis.schema.json",
+  "description": "v2ay fail-closed contract; no invented event/geometry, label, model, final ground truth, or automatic C4.",
+  "type": "object",
+  "required": [
+    "gap_id",
+    "target_type",
+    "target_id",
+    "region",
+    "city",
+    "related_event_id",
+    "related_patch_id",
+    "related_package_count",
+    "required_geometry",
+    "accepted_formats",
+    "accepted_crs",
+    "current_status",
+    "is_required_for_turning_point",
+    "is_required_for_c4_candidate",
+    "blocking_reason",
+    "minimum_valid_input_example",
+    "next_action",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "gap_id": {
+      "type": "string"
+    },
+    "target_type": {
+      "type": "string"
+    },
+    "target_id": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "related_event_id": {
+      "type": "string"
+    },
+    "related_patch_id": {
+      "type": "string"
+    },
+    "related_package_count": {
+      "type": "string"
+    },
+    "required_geometry": {
+      "type": "string"
+    },
+    "accepted_formats": {
+      "type": "string"
+    },
+    "accepted_crs": {
+      "type": "string"
+    },
+    "current_status": {
+      "type": "string"
+    },
+    "is_required_for_turning_point": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "is_required_for_c4_candidate": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "minimum_valid_input_example": {
+      "type": "string"
+    },
+    "next_action": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

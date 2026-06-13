@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "intake_id",
+    "patch_id",
+    "region",
+    "city",
+    "priority_rank",
+    "package_count",
+    "required_geometry_kind",
+    "source_type",
+    "geometry_value",
+    "geometry_path",
+    "crs",
+    "provenance_type",
+    "provenance_note",
+    "source_document",
+    "source_document_page",
+    "source_document_url_or_path",
+    "digitized_by",
+    "digitized_at",
+    "source_confidence",
+    "review_status",
+    "validation_status",
+    "blocking_reason",
+    "notes",
+    "source_public",
+    "access_status",
+    "next_action"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "intake_id": {
+      "type": "string"
+    },
+    "patch_id": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "priority_rank": {
+      "type": "string"
+    },
+    "package_count": {
+      "type": "string"
+    },
+    "required_geometry_kind": {
+      "type": "string"
+    },
+    "source_type": {
+      "type": "string"
+    },
+    "geometry_value": {
+      "type": "string"
+    },
+    "geometry_path": {
+      "type": "string"
+    },
+    "crs": {
+      "type": "string"
+    },
+    "provenance_type": {
+      "type": "string"
+    },
+    "provenance_note": {
+      "type": "string"
+    },
+    "source_document": {
+      "type": "string"
+    },
+    "source_document_page": {
+      "type": "string"
+    },
+    "source_document_url_or_path": {
+      "type": "string"
+    },
+    "digitized_by": {
+      "type": "string"
+    },
+    "digitized_at": {
+      "type": "string"
+    },
+    "source_confidence": {
+      "type": "string"
+    },
+    "review_status": {
+      "type": "string"
+    },
+    "validation_status": {
+      "type": "string"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "source_public": {
+      "type": "boolean"
+    },
+    "access_status": {
+      "type": "string"
+    },
+    "next_action": {
+      "type": "string"
+    }
+  }
+}

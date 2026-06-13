@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "candidate_event_polygon_id",
+    "event_id",
+    "package_id",
+    "patch_id",
+    "source_name",
+    "source_url_or_reference",
+    "source_file",
+    "local_derived_path",
+    "geometry_format",
+    "geometry_type",
+    "crs",
+    "crs_status",
+    "geometry_valid",
+    "area_m2_approx",
+    "bbox_minx",
+    "bbox_miny",
+    "bbox_maxx",
+    "bbox_maxy",
+    "vertex_count",
+    "geometry_hash",
+    "is_observed_event_specific",
+    "requires_human_review",
+    "can_feed_v2ba",
+    "can_feed_v2aw",
+    "can_feed_v2au",
+    "can_feed_v2az",
+    "can_support_tp2",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "candidate_event_polygon_id": {
+      "type": "string"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "package_id": {
+      "type": "string"
+    },
+    "patch_id": {
+      "type": "string"
+    },
+    "source_name": {
+      "type": "string"
+    },
+    "source_url_or_reference": {
+      "type": "string"
+    },
+    "source_file": {
+      "type": "string"
+    },
+    "local_derived_path": {
+      "type": "string"
+    },
+    "geometry_format": {
+      "type": "string"
+    },
+    "geometry_type": {
+      "type": "string"
+    },
+    "crs": {
+      "type": "string"
+    },
+    "crs_status": {
+      "type": "string"
+    },
+    "geometry_valid": {
+      "type": "boolean"
+    },
+    "area_m2_approx": {
+      "type": "string"
+    },
+    "bbox_minx": {
+      "type": "string"
+    },
+    "bbox_miny": {
+      "type": "string"
+    },
+    "bbox_maxx": {
+      "type": "string"
+    },
+    "bbox_maxy": {
+      "type": "string"
+    },
+    "vertex_count": {
+      "type": "string"
+    },
+    "geometry_hash": {
+      "type": "string"
+    },
+    "is_observed_event_specific": {
+      "type": "boolean"
+    },
+    "requires_human_review": {
+      "type": "boolean"
+    },
+    "can_feed_v2ba": {
+      "type": "boolean"
+    },
+    "can_feed_v2aw": {
+      "type": "boolean"
+    },
+    "can_feed_v2au": {
+      "type": "boolean"
+    },
+    "can_feed_v2az": {
+      "type": "boolean"
+    },
+    "can_support_tp2": {
+      "type": "boolean"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

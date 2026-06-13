@@ -1,0 +1,21 @@
+{
+  "stage": "v2ay_event_scope_reconciliation_turning_point",
+  "status": "OK_WITH_EXPECTED_BLOCKERS",
+  "recife_events_expected_from_previous_prompt": 3,
+  "recife_events_observed": 1,
+  "event_scope_reconciled": true,
+  "event_invention_detected": false,
+  "patch_boundaries_found": 0,
+  "event_polygons_found": 0,
+  "usable_overlay_geometries_found": 0,
+  "turning_point_level": "TP0_DOCUMENTED_ABSENCE",
+  "turning_point_ready": false,
+  "total_gap_items": 56,
+  "total_acquisition_targets": 56,
+  "canonical_event_rows": 4,
+  "turning_point_gates_passed": 5,
+  "can_train_model": false,
+  "can_create_operational_labels": false,
+  "methodological_status": "EVENT_SCOPE_RECONCILED_GEOMETRY_ACQUISITION_REQUIRED_NOT_FOR_TRAINING",
+  "namespace_note": "A pre-existing Protocolo C hydrometeorological v2ay track is preserved separately."
+}

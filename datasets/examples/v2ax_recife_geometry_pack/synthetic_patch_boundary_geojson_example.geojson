@@ -1,0 +1,34 @@
+{
+  "type": "Feature",
+  "properties": {
+    "id": "SYNTHETIC_PATCH_001",
+    "synthetic": true
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          0,
+          0
+        ],
+        [
+          10,
+          0
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    ]
+  }
+}

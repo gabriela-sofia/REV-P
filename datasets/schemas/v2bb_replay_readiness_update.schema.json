@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "readiness_id",
+    "priority_package_id",
+    "priority_patch_id",
+    "priority_event_id",
+    "valid_patch_boundary_found",
+    "valid_event_polygon_found",
+    "valid_pair_ready",
+    "feed_v2ba_ready",
+    "feed_v2az_ready",
+    "feed_v2aw_ready",
+    "feed_v2av_ready",
+    "feed_v2au_ready",
+    "can_attempt_v2az_dry_run",
+    "can_attempt_v2az_replay",
+    "turning_point_level",
+    "blocking_reason",
+    "next_action",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "readiness_id": {
+      "type": "string"
+    },
+    "priority_package_id": {
+      "type": "string"
+    },
+    "priority_patch_id": {
+      "type": "string"
+    },
+    "priority_event_id": {
+      "type": "string"
+    },
+    "valid_patch_boundary_found": {
+      "type": "boolean"
+    },
+    "valid_event_polygon_found": {
+      "type": "boolean"
+    },
+    "valid_pair_ready": {
+      "type": "boolean"
+    },
+    "feed_v2ba_ready": {
+      "type": "boolean"
+    },
+    "feed_v2az_ready": {
+      "type": "boolean"
+    },
+    "feed_v2aw_ready": {
+      "type": "boolean"
+    },
+    "feed_v2av_ready": {
+      "type": "boolean"
+    },
+    "feed_v2au_ready": {
+      "type": "boolean"
+    },
+    "can_attempt_v2az_dry_run": {
+      "type": "boolean"
+    },
+    "can_attempt_v2az_replay": {
+      "type": "boolean"
+    },
+    "turning_point_level": {
+      "type": "string"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "next_action": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

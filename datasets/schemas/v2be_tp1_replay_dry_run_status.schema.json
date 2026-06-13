@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "dry_run_id",
+    "stage",
+    "command",
+    "executed",
+    "exit_code",
+    "status",
+    "tp1_recognized",
+    "tp2_available",
+    "tp3_available",
+    "tp4_available",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "dry_run_id": {
+      "type": "string"
+    },
+    "stage": {
+      "type": "string"
+    },
+    "command": {
+      "type": "string"
+    },
+    "executed": {
+      "type": "boolean"
+    },
+    "exit_code": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "tp1_recognized": {
+      "type": "boolean"
+    },
+    "tp2_available": {
+      "type": "boolean"
+    },
+    "tp3_available": {
+      "type": "boolean"
+    },
+    "tp4_available": {
+      "type": "boolean"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

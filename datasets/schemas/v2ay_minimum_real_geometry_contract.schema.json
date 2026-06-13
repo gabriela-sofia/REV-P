@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "v2ay_minimum_real_geometry_contract.schema.json",
+  "description": "v2ay fail-closed contract; no invented event/geometry, label, model, final ground truth, or automatic C4.",
+  "type": "object",
+  "required": [
+    "contract_id",
+    "turning_point_level",
+    "required_input",
+    "target_type",
+    "target_id_or_scope",
+    "minimum_count",
+    "accepted_formats",
+    "accepted_crs",
+    "required_provenance",
+    "required_license_status",
+    "required_review_status",
+    "unlocks_stage",
+    "does_not_unlock",
+    "blocking_reason_if_missing",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "contract_id": {
+      "type": "string"
+    },
+    "turning_point_level": {
+      "type": "string"
+    },
+    "required_input": {
+      "type": "string"
+    },
+    "target_type": {
+      "type": "string"
+    },
+    "target_id_or_scope": {
+      "type": "string"
+    },
+    "minimum_count": {
+      "type": "string"
+    },
+    "accepted_formats": {
+      "type": "string"
+    },
+    "accepted_crs": {
+      "type": "string"
+    },
+    "required_provenance": {
+      "type": "string"
+    },
+    "required_license_status": {
+      "type": "string"
+    },
+    "required_review_status": {
+      "type": "string"
+    },
+    "unlocks_stage": {
+      "type": "string"
+    },
+    "does_not_unlock": {
+      "type": "string"
+    },
+    "blocking_reason_if_missing": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

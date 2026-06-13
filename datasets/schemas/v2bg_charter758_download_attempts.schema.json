@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "download_id",
+    "product_id",
+    "source_url",
+    "download_url",
+    "target_event_id",
+    "target_package_id",
+    "attempted",
+    "success",
+    "http_status_or_error",
+    "content_type",
+    "file_size_bytes",
+    "local_raw_path",
+    "hash_sha256",
+    "retrieved_at",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "download_id": {
+      "type": "string"
+    },
+    "product_id": {
+      "type": "string"
+    },
+    "source_url": {
+      "type": "string"
+    },
+    "download_url": {
+      "type": "string"
+    },
+    "target_event_id": {
+      "type": "string"
+    },
+    "target_package_id": {
+      "type": "string"
+    },
+    "attempted": {
+      "type": "boolean"
+    },
+    "success": {
+      "type": "boolean"
+    },
+    "http_status_or_error": {
+      "type": "string"
+    },
+    "content_type": {
+      "type": "string"
+    },
+    "file_size_bytes": {
+      "type": "string"
+    },
+    "local_raw_path": {
+      "type": "string"
+    },
+    "hash_sha256": {
+      "type": "string"
+    },
+    "retrieved_at": {
+      "type": "string"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "vector_candidate_id",
+    "product_id",
+    "event_id",
+    "package_id",
+    "patch_id",
+    "source_file",
+    "source_url_or_reference",
+    "geometry_format",
+    "geometry_type",
+    "crs",
+    "crs_status",
+    "geometry_valid",
+    "is_observed_event_specific",
+    "is_landslide_scar_or_flood_effect",
+    "is_contextual",
+    "area_m2_approx",
+    "bbox_minx",
+    "bbox_miny",
+    "bbox_maxx",
+    "bbox_maxy",
+    "vertex_count",
+    "geometry_hash",
+    "can_support_tp2",
+    "requires_human_review",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "vector_candidate_id": {
+      "type": "string"
+    },
+    "product_id": {
+      "type": "string"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "package_id": {
+      "type": "string"
+    },
+    "patch_id": {
+      "type": "string"
+    },
+    "source_file": {
+      "type": "string"
+    },
+    "source_url_or_reference": {
+      "type": "string"
+    },
+    "geometry_format": {
+      "type": "string"
+    },
+    "geometry_type": {
+      "type": "string"
+    },
+    "crs": {
+      "type": "string"
+    },
+    "crs_status": {
+      "type": "string"
+    },
+    "geometry_valid": {
+      "type": "boolean"
+    },
+    "is_observed_event_specific": {
+      "type": "boolean"
+    },
+    "is_landslide_scar_or_flood_effect": {
+      "type": "boolean"
+    },
+    "is_contextual": {
+      "type": "boolean"
+    },
+    "area_m2_approx": {
+      "type": "string"
+    },
+    "bbox_minx": {
+      "type": "string"
+    },
+    "bbox_miny": {
+      "type": "string"
+    },
+    "bbox_maxx": {
+      "type": "string"
+    },
+    "bbox_maxy": {
+      "type": "string"
+    },
+    "vertex_count": {
+      "type": "string"
+    },
+    "geometry_hash": {
+      "type": "string"
+    },
+    "can_support_tp2": {
+      "type": "boolean"
+    },
+    "requires_human_review": {
+      "type": "boolean"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

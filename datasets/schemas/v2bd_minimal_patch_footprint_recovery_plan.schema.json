@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "plan_id",
+    "patch_id",
+    "required_input",
+    "why_required",
+    "where_to_put_it",
+    "accepted_formats",
+    "required_crs",
+    "example_value_format",
+    "validation_command",
+    "unlocks",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "plan_id": {
+      "type": "string"
+    },
+    "patch_id": {
+      "type": "string"
+    },
+    "required_input": {
+      "type": "string"
+    },
+    "why_required": {
+      "type": "string"
+    },
+    "where_to_put_it": {
+      "type": "string"
+    },
+    "accepted_formats": {
+      "type": "string"
+    },
+    "required_crs": {
+      "type": "string"
+    },
+    "example_value_format": {
+      "type": "string"
+    },
+    "validation_command": {
+      "type": "string"
+    },
+    "unlocks": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+method_id,patch_id,method_name,required_inputs,observed_inputs,method_allowed,method_sufficient,can_build_boundary,blocking_reason,recommended_action,notes
+V2BD_METHOD_92f420de9f83,REC_00019,bbox_explicit,explicit bbox|CRS|direct lineage,bbox=True|crs=True|direct=True,true,true,true,,Build candidate and require human review,Unsafe inference methods remain blocked.
+V2BD_METHOD_3229337da6ca,REC_00019,geojson_explicit,explicit GeoJSON|CRS|direct lineage,none,true,false,false,NO_EXPLICIT_GEOJSON,Provide missing explicit inputs,Unsafe inference methods remain blocked.
+V2BD_METHOD_d844117dfec4,REC_00019,wkt_explicit,explicit WKT|CRS|direct lineage,none,true,false,false,NO_EXPLICIT_WKT,Provide missing explicit inputs,Unsafe inference methods remain blocked.
+V2BD_METHOD_bedb81dcaf63,REC_00019,raster_bounds,raster header bounds|CRS|direct lineage,bbox=True|crs=True|direct=True,true,true,true,,Build candidate and require human review,Unsafe inference methods remain blocked.
+V2BD_METHOD_d6094e5c4910,REC_00019,affine_transform_plus_window,affine|window|CRS|direct lineage,none,true,false,false,NO_AFFINE_WINDOW,Provide missing explicit inputs,Unsafe inference methods remain blocked.
+V2BD_METHOD_a533c095105c,REC_00019,sentinel_tile_plus_patch_window,verified tile|patch window|CRS,none,true,false,false,NO_VERIFIED_TILE_WINDOW,Provide missing explicit inputs,Unsafe inference methods remain blocked.
+V2BD_METHOD_86a32cfe86cd,REC_00019,center_plus_size,explicit center|size|CRS|provenance,none,false,false,false,CENTER_SIZE_CRS_NOT_COMPLETE,Provide missing explicit inputs,Unsafe inference methods remain blocked.
+V2BD_METHOD_f15440b85808,REC_00019,filename_inference,filename coordinates,filename only,false,false,false,FILENAME_INFERENCE_FORBIDDEN,Provide missing explicit inputs,Unsafe inference methods remain blocked.
+V2BD_METHOD_1edd656d32fb,REC_00019,default_patch_size,default size,none,false,false,false,DEFAULT_PATCH_SIZE_FORBIDDEN,Provide missing explicit inputs,Unsafe inference methods remain blocked.
+V2BD_METHOD_b3c4c16dc4c2,REC_00019,manual_digitization,verified source|human review,future action,true,false,false,FUTURE_MANUAL_ACTION,Provide missing explicit inputs,Unsafe inference methods remain blocked.

@@ -1,0 +1,6 @@
+execution_id,step_order,stage,command,mode,executed,exit_code,status,stdout_summary,stderr_summary,outputs_checked,blocking_reason,notes
+V2AZ_EXEC_8b1e5db9f3e3,1,v2ax_validate_manual_intake,python scripts/run_v2ax_recife_geometry_intake_pack.py,dry_run,false,,NOT_EXECUTED_DRY_RUN,,,,DRY_RUN_NO_SUBPROCESS,Canonical prior-stage outputs remain untouched.
+V2AZ_EXEC_686d5e86149d,2,v2aw_geometry_source_intake,python scripts/run_v2aw_geometry_source_intake.py,dry_run,false,,NOT_EXECUTED_DRY_RUN,,,,DRY_RUN_NO_SUBPROCESS,Canonical prior-stage outputs remain untouched.
+V2AZ_EXEC_1df7b66aa589,3,v2av_patch_boundary_geometry_builder,python scripts/run_v2av_patch_boundary_geometry_builder.py,dry_run,false,,NOT_EXECUTED_DRY_RUN,,,,DRY_RUN_NO_SUBPROCESS,Canonical prior-stage outputs remain untouched.
+V2AZ_EXEC_e50e76c93138,4,v2au_patch_event_overlay_geometry,python scripts/run_v2au_patch_event_overlay_geometry.py,dry_run,false,,NOT_EXECUTED_DRY_RUN,,,,DRY_RUN_NO_SUBPROCESS,Canonical prior-stage outputs remain untouched.
+V2AZ_EXEC_1944aa28ac95,5,v2ay_turning_point_recheck,python scripts/run_v2ay_event_scope_reconciliation_turning_point.py,dry_run,false,,NOT_EXECUTED_DRY_RUN,,,,DRY_RUN_NO_SUBPROCESS,Canonical prior-stage outputs remain untouched.

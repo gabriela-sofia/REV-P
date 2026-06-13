@@ -1,0 +1,18 @@
+{
+  "stage": "v2ay_event_scope_reconciliation_turning_point",
+  "offline_mode": true,
+  "strict_mode": true,
+  "regions": ["Recife", "Petropolis", "Curitiba"],
+  "priority_region": "Recife",
+  "expected_recife_events_from_previous_prompt": 3,
+  "allow_expected_event_override": false,
+  "allow_event_invention": false,
+  "allow_geometry_invention": false,
+  "turning_point_requires_real_patch_geometry": true,
+  "turning_point_requires_real_event_geometry": true,
+  "turning_point_requires_pipeline_replay": true,
+  "accepted_patch_geometry_formats": ["bbox", "wkt", "geojson_inline", "geojson_file"],
+  "accepted_event_geometry_formats": ["wkt", "geojson_inline", "geojson_file"],
+  "accepted_crs": ["EPSG:4326", "EPSG:3857", "EPSG:31982", "EPSG:31983"],
+  "minimum_turning_point_overlay_count": 1
+}

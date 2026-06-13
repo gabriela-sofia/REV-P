@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "policy_id",
+    "geometry_source",
+    "geometry_role",
+    "allowed_use",
+    "not_allowed_use",
+    "can_feed_v2aw",
+    "can_feed_v2av",
+    "can_feed_v2au",
+    "can_support_digitization",
+    "can_be_ground_truth",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "policy_id": {
+      "type": "string"
+    },
+    "geometry_source": {
+      "type": "string"
+    },
+    "geometry_role": {
+      "type": "string"
+    },
+    "allowed_use": {
+      "type": "string"
+    },
+    "not_allowed_use": {
+      "type": "string"
+    },
+    "can_feed_v2aw": {
+      "type": "boolean"
+    },
+    "can_feed_v2av": {
+      "type": "boolean"
+    },
+    "can_feed_v2au": {
+      "type": "boolean"
+    },
+    "can_support_digitization": {
+      "type": "boolean"
+    },
+    "can_be_ground_truth": {
+      "type": "boolean"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "v2aw recife p1 geometry readiness",
+  "description": "Row contract for v2aw_recife_p1_geometry_readiness.csv. v2aw geometry intake. No operational label, no training target, no final ground truth; max meaning READY_FOR_V2AV/READY_FOR_V2AU.",
+  "type": "object",
+  "required": [
+    "readiness_id",
+    "patch_id",
+    "region",
+    "city",
+    "priority_rank",
+    "package_count",
+    "has_patch_boundary_source",
+    "patch_boundary_valid",
+    "has_event_geometry_source",
+    "event_geometry_valid",
+    "ready_for_v2av",
+    "ready_for_v2au_overlay",
+    "remaining_blocker",
+    "next_required_action",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "readiness_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "patch_id": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "priority_rank": {
+      "type": "string"
+    },
+    "package_count": {
+      "type": "string"
+    },
+    "has_patch_boundary_source": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "patch_boundary_valid": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "has_event_geometry_source": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "event_geometry_valid": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "ready_for_v2av": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "ready_for_v2au_overlay": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "remaining_blocker": {
+      "type": "string"
+    },
+    "next_required_action": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "x_id_field": "readiness_id",
+  "x_csv_file": "datasets/v2aw_recife_p1_geometry_readiness.csv"
+}

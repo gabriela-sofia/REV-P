@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "risk_area_id",
+    "source_file",
+    "feature_index",
+    "geometry_type",
+    "crs",
+    "area_m2",
+    "bbox_minx",
+    "bbox_miny",
+    "bbox_maxx",
+    "bbox_maxy",
+    "attributes_summary",
+    "geometry_hash",
+    "allowed_use",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "risk_area_id": {
+      "type": "string"
+    },
+    "source_file": {
+      "type": "string"
+    },
+    "feature_index": {
+      "type": "string"
+    },
+    "geometry_type": {
+      "type": "string"
+    },
+    "crs": {
+      "type": "string"
+    },
+    "area_m2": {
+      "type": "string"
+    },
+    "bbox_minx": {
+      "type": "string"
+    },
+    "bbox_miny": {
+      "type": "string"
+    },
+    "bbox_maxx": {
+      "type": "string"
+    },
+    "bbox_maxy": {
+      "type": "string"
+    },
+    "attributes_summary": {
+      "type": "string"
+    },
+    "geometry_hash": {
+      "type": "string"
+    },
+    "allowed_use": {
+      "type": "string"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

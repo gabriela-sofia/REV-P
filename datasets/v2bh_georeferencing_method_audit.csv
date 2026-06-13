@@ -1,0 +1,8 @@
+method_id,product_id,method_name,required_inputs,observed_inputs,method_allowed,method_sufficient,can_georeference,blocking_reason,recommended_action,notes
+V2BH_METHOD_d4a9323e38b6,MEDIA-871-16,embedded_georeference,embedded raster transform,none,false,false,false,NO_EMBEDDED_GEOREFERENCE,Use printed coordinate grid,Only sufficient evidence-backed methods can create a TP2 candidate.
+V2BH_METHOD_914b0f854023,MEDIA-871-16,world_file,matching world file,none,false,false,false,WORLD_FILE_NOT_AVAILABLE,Use printed coordinate grid,Only sufficient evidence-backed methods can create a TP2 candidate.
+V2BH_METHOD_4333005b5438,MEDIA-871-16,coordinate_grid,known CRS and >=3 grid controls,EPSG:32725; gcps=20; residual_m=1.105,true,true,true,,Require human review,Only sufficient evidence-backed methods can create a TP2 candidate.
+V2BH_METHOD_b28dce1fc4ed,MEDIA-871-16,map_corner_coordinates,explicit map corners,not directly printed,true,false,false,MAP_CORNERS_NOT_EXPLICIT,Use grid controls,Only sufficient evidence-backed methods can create a TP2 candidate.
+V2BH_METHOD_e1a7e0ced4c9,MEDIA-871-16,gcp_affine_transform,>=3 valid GCPs,valid_gcps=20; residual_m=1.105,true,true,true,,Require human review,Only sufficient evidence-backed methods can create a TP2 candidate.
+V2BH_METHOD_4bd7a97ac9cd,MEDIA-871-16,manual_qgis_georeferencing,operator and reviewed GCPs,QGIS package prepared,true,false,false,HUMAN_REVIEW_PENDING,Review generated candidate in QGIS,Only sufficient evidence-backed methods can create a TP2 candidate.
+V2BH_METHOD_c517ad4d4521,MEDIA-871-16,visual_only_ungeoreferenced,visual product,available but prohibited for TP2,false,false,false,VISUAL_ONLY_NEVER_TP2,Do not promote,Only sufficient evidence-backed methods can create a TP2 candidate.

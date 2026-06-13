@@ -1,0 +1,111 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "v2ax_recife_manual_intake_manifest",
+  "description": "v2ax fail-closed row contract. No operational label, training, final ground truth, or automatic C4.",
+  "type": "object",
+  "required": [
+    "intake_manifest_id",
+    "package_id",
+    "patch_id",
+    "event_id",
+    "region",
+    "city",
+    "hazard_type",
+    "priority_rank",
+    "manual_patch_file",
+    "manual_event_file",
+    "needs_patch_boundary",
+    "needs_event_geometry",
+    "patch_boundary_status",
+    "event_geometry_status",
+    "ready_for_v2aw",
+    "ready_for_v2av",
+    "ready_for_v2au",
+    "blocking_reason",
+    "next_action",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "intake_manifest_id": {
+      "type": "string"
+    },
+    "package_id": {
+      "type": "string"
+    },
+    "patch_id": {
+      "type": "string"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "hazard_type": {
+      "type": "string"
+    },
+    "priority_rank": {
+      "type": "string"
+    },
+    "manual_patch_file": {
+      "type": "string"
+    },
+    "manual_event_file": {
+      "type": "string"
+    },
+    "needs_patch_boundary": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "needs_event_geometry": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "patch_boundary_status": {
+      "type": "string"
+    },
+    "event_geometry_status": {
+      "type": "string"
+    },
+    "ready_for_v2aw": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "ready_for_v2av": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "ready_for_v2au": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "next_action": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

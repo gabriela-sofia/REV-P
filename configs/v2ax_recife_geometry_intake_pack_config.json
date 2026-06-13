@@ -1,0 +1,26 @@
+{
+  "stage": "v2ax",
+  "offline_mode": true,
+  "strict_mode": true,
+  "priority_region": "Recife",
+  "expected_priority_patches": 55,
+  "expected_recife_events": 3,
+  "accepted_crs": ["EPSG:4326", "EPSG:3857", "EPSG:31982", "EPSG:31983"],
+  "preferred_crs": "EPSG:4326",
+  "target_crs_for_area": "EPSG:3857",
+  "allowed_patch_geometry_formats": ["bbox", "wkt", "geojson_inline", "geojson_file"],
+  "allowed_event_geometry_formats": ["wkt", "geojson_inline", "geojson_file"],
+  "allow_auto_geometry_generation": false,
+  "allow_point_as_patch_boundary": false,
+  "allow_point_as_event_polygon": false,
+  "allow_default_patch_size": false,
+  "manual_pack_dir": "datasets/manual_intake/recife_p1",
+  "examples_dir": "datasets/examples/v2ax_recife_geometry_pack",
+  "methodological_invariants": {
+    "can_train_model": false,
+    "can_create_operational_labels": false,
+    "can_declare_ground_truth_final": false,
+    "max_decision": "C4_CANDIDATE_REQUIRES_HUMAN_REVIEW",
+    "never_invent_geometry": true
+  }
+}

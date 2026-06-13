@@ -1,0 +1,20 @@
+{
+  "offline_mode": true,
+  "allow_web_downloads": false,
+  "allow_manual_external_files": true,
+  "allow_public_source_ingestion": true,
+  "priority_region": "Recife",
+  "priority_patch_id": "REC_00019",
+  "priority_event_id": "REC_2022_05_24_30",
+  "priority_package_id": "PKG_34713b8aab96",
+  "external_source_dir": "datasets/external_sources/recife_minimal_tp",
+  "accepted_crs": ["EPSG:4326", "EPSG:3857", "EPSG:31982", "EPSG:31983"],
+  "accepted_patch_geometry_formats": ["bbox", "wkt", "geojson", "geojson_file", "kml", "gpkg", "shp_zip"],
+  "accepted_event_geometry_formats": ["wkt", "geojson", "geojson_file", "kml", "gpkg", "shp_zip"],
+  "allow_point_as_patch_boundary": false,
+  "allow_point_as_event_polygon": false,
+  "allow_quickview_as_verified_product": false,
+  "allow_auto_geometry_generation": false,
+  "can_train_model": false,
+  "can_create_operational_labels": false
+}

@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "metadata_id",
+    "patch_id",
+    "source_file",
+    "source_type",
+    "metadata_key",
+    "metadata_value",
+    "crs",
+    "crs_status",
+    "has_bbox",
+    "has_transform",
+    "has_window",
+    "has_pixel_size",
+    "has_width_height",
+    "has_center",
+    "has_tile_id",
+    "can_support_boundary",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "metadata_id": {
+      "type": "string"
+    },
+    "patch_id": {
+      "type": "string"
+    },
+    "source_file": {
+      "type": "string"
+    },
+    "source_type": {
+      "type": "string"
+    },
+    "metadata_key": {
+      "type": "string"
+    },
+    "metadata_value": {
+      "type": "string"
+    },
+    "crs": {
+      "type": "string"
+    },
+    "crs_status": {
+      "type": "string"
+    },
+    "has_bbox": {
+      "type": "boolean"
+    },
+    "has_transform": {
+      "type": "boolean"
+    },
+    "has_window": {
+      "type": "boolean"
+    },
+    "has_pixel_size": {
+      "type": "boolean"
+    },
+    "has_width_height": {
+      "type": "boolean"
+    },
+    "has_center": {
+      "type": "boolean"
+    },
+    "has_tile_id": {
+      "type": "boolean"
+    },
+    "can_support_boundary": {
+      "type": "boolean"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}
