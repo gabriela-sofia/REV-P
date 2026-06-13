@@ -1,0 +1,99 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "v2ay_event_package_patch_crosswalk.schema.json",
+  "description": "v2ay fail-closed contract; no invented event/geometry, label, model, final ground truth, or automatic C4.",
+  "type": "object",
+  "required": [
+    "crosswalk_id",
+    "canonical_event_id",
+    "event_id",
+    "package_id",
+    "patch_id",
+    "region",
+    "city",
+    "hazard_type",
+    "allowed_use",
+    "promotion_decision",
+    "priority_rank",
+    "needs_patch_boundary",
+    "needs_event_polygon",
+    "has_patch_boundary_source",
+    "has_event_geometry_source",
+    "current_blocker",
+    "next_required_input",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "crosswalk_id": {
+      "type": "string"
+    },
+    "canonical_event_id": {
+      "type": "string"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "package_id": {
+      "type": "string"
+    },
+    "patch_id": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "hazard_type": {
+      "type": "string"
+    },
+    "allowed_use": {
+      "type": "string"
+    },
+    "promotion_decision": {
+      "type": "string"
+    },
+    "priority_rank": {
+      "type": "string"
+    },
+    "needs_patch_boundary": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "needs_event_polygon": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "has_patch_boundary_source": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "has_event_geometry_source": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "current_blocker": {
+      "type": "string"
+    },
+    "next_required_input": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

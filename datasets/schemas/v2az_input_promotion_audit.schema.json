@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "v2az_input_promotion_audit.schema.json",
+  "description": "v2az fail-closed replay adapter; no invented geometry, label, model, final ground truth or automatic C4.",
+  "type": "object",
+  "required": [
+    "promotion_audit_id",
+    "source_row_id",
+    "target_stage",
+    "target_file",
+    "target_type",
+    "target_id",
+    "promotion_attempted",
+    "promotion_allowed",
+    "promotion_status",
+    "required_conditions",
+    "observed_conditions",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "promotion_audit_id": {
+      "type": "string"
+    },
+    "source_row_id": {
+      "type": "string"
+    },
+    "target_stage": {
+      "type": "string"
+    },
+    "target_file": {
+      "type": "string"
+    },
+    "target_type": {
+      "type": "string"
+    },
+    "target_id": {
+      "type": "string"
+    },
+    "promotion_attempted": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "promotion_allowed": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "promotion_status": {
+      "type": "string"
+    },
+    "required_conditions": {
+      "type": "string"
+    },
+    "observed_conditions": {
+      "type": "string"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

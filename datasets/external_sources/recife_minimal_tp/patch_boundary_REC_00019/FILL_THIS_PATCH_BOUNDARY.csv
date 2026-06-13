@@ -1,0 +1,2 @@
+target_type,target_id,package_id,source_type,geometry_value,geometry_path,crs,provenance_type,provenance_note,source_document,source_public,access_status,review_status,instructions
+patch_boundary,REC_00019,PKG_34713b8aab96,missing,,,UNKNOWN,,,,true,public_or_project_access,not_started,"Fill geometry_value or geometry_path, CRS, provenance_note and source_document."

@@ -1,0 +1,815 @@
+
+ 
+
+      
+
+ 
+
+XVI Simpósio de Recursos Hídricos do Nordeste 
+15º Simpósio de Hidráulica e Recursos Hídricos dos Países de Língua Portuguesa 
+  
+
+1 
+
+  
+
+ 
+
+XVI SIMPÓSIO DE RECURSOS HÍDRICOS DO NORDESTE   
+
+15º SIMPÓSIO DE HIDRÁULICA E RECURSOS HÍDRICOS DOS PAÍSES 
+
+DE LÍNGUA PORTUGUESA 
+
+ 
+
+ 
+
+AVALIAÇÃO DA RELAÇÃO ENTRE PRECIPITAÇÕES EXTREMAS EM 
+
+2022 E A IMINÊNCIA DE DESLIZAMENTOS, EM RECIFE  
+
+ 
+
+Cristiane Ribeiro de Melo 
+1
+ ; Paulo Abadie Guedes 
+
+2
+& Solange Cavalcanti de Melo 
+
+3 
+ 
+
+ 
+
+RESUMO – Nos últimos anos as mudanças climáticas têm afetado o planeta, aumentando os riscos 
+
+relacionados às secas e precipitações extremas. São diversos os impactos sociais associados ao 
+excesso de chuva, tais como enchentes e movimentos de massa. Diante do exposto, o presente 
+
+trabalho tem como objetivos avaliar as chuvas registradas em maio e junho de 2022 em relação à 
+
+série histórica e avaliar a relação entre a pluviosidade e a iminência de deslizamentos em Recife/PE. 
+Neste contexto, conclui-se que a cidade apresentou para o ano de 2022 precipitações muito acima 
+
+do esperado histórico para a quadra chuvosa. Os meses de maio e junho apresentaram totais mensais 
+acima do dobro do valor médio esperado. No período, houve 07 dias de Chuva Muito Forte (CMF), 
+
+considerados potencialmente danosos ao município. Dois destes dias foram classificados como de 
+
+Chuva Muito Extrema, com probabilidade de tais intensidades serem igualadas ou superadas de 4% 
+e 2%. O volume acumulado infiltrado durante os meses que antecederam maio, associados às fortes 
+
+chuvas diárias, contribuíram para os deslizamentos ocorridos. Mesmo com os movimentos de massa 
+mais danosos ocorrendo após o dia 25/05/22, observa-se que pela metodologia de Gusmão Filho et 
+
+al. (1987) a cidade já apresentava iminência de deslizamentos.. 
+
+ 
+ABSTRACT – In recent years, climate change has affected the planet, increasing the risks related 
+
+to droughts and extreme precipitation. There are several social impacts associated with excess mass, 
+such as floods and mass movements. In view of the above, the present work aims to evaluate the 
+
+rainfall recorded in May and June, 2022, in relation to the historical series, and to evaluate the 
+
+relationship between rainfall and the imminence of landslides in Recife/PE. In this context, it is 
+concluded that the city presented values much above of the expected historical rainfall for the year 
+
+2022, for the rainy season. The months of May and June presented the average values above the 
+double of the expected value. In the period, there were 07 days of Very Strong Rain (CMF), 
+
+considered potentially dangerous to the city. Two of these days were classified as Very Extreme 
+
+Rain, with a probability of such intensities being equaled or exceeded of 4% and 2%. The 
+accumulated volume infiltrated during the months before May, associated with the strong daily 
+
+rains, contributed to the observed landslides. Even with the mass movements happening after 
+5/25/22, it is observed that, according to the Gusmão Filho et al. (1987) methodology, the city 
+
+already was in the imminence of landslides, in the susceptible areas. 
+
+ 
+
+Palavras-Chave – Chuvas intensas; Recife; Iminência de deslizamento. 
+
+ 
+
+                                                           
+1) Serviço Geológico do Brasil. Rua Escritor Souza Barros, 1001 - Cabanga Recife, PE, Brasil. e-mail: cristiane.melo@cprm.gov.br 
+2) Instituto Federal de Pernambuco. Av. Prof. Luís Freire, 500 - Cidade Universitária, Recife, PE, Brasil. e-mail: paulo.guedes@recife.ifpe.edu.br.  
+3)
+
+ Serviço Geológico do Brasil. Rua Escritor Souza Barros, 1001 - Cabanga Recife, PE, Brasil. e-mail: solange.melo@cprm.gov.br 
+
+
+
+ 
+
+      
+
+ 
+
+XVI Simpósio de Recursos Hídricos do Nordeste 
+
+15º Simpósio de Hidráulica e Recursos Hídricos dos Países de Língua Portuguesa 
+  
+
+2 
+
+  
+ 
+
+1 – INTRODUÇÃO 
+
+ 
+
+O grande volume precipitado no final do mês de maio de 2022 causou muitos deslizamentos e 
+
+mortes na cidade do Recife. Uma das localidades mais prejudicadas foi o bairro do Ibura, onde 
+
+morreram 11 pessoas da mesma família em apenas um deslizamento ocorrido na comunidade de 
+
+Jardim Monte Verde, que fica na divisa entre os municípios do Recife e de Jaboatão dos 
+
+Guararapes. 
+
+A umidade acumulada no solo antes de um movimento de massa está diretamente ligada à 
+
+chuva infiltrada e acumulada, antecedente ao evento. Dessa forma, as fortes chuvas podem ser mais 
+
+perigosas quando precipitadas em solos com alta saturação inicial.  
+
+Em seu trabalho, Lima (2002) afirma que avaliar as precipitações para prever os 
+
+escorregamentos é mais fácil e de mais baixo custo do que acompanhar o nível de água e o grau de 
+
+saturação do solo. Várias pesquisas no Brasil e no mundo tentam estabelecer correlações que 
+
+associam as relações entre os índices pluviométricos e os deslizamentos, em áreas suscetíveis a 
+
+movimentos de massa. 
+
+Um estudo de destaque sobre a relação entre índice pluviométrico e os deslizamentos foi 
+
+realizado por Gusmão Filho et al. (1987), para a cidade de Olinda, na Região Metropolitana do 
+
+Recife - RMR. Segundo Gusmão Filho (1995), os morros do Recife podem ter um desempenho 
+
+próximo ou semelhante ao observado em Olinda, ainda que possa haver alguma diferença nos 
+
+resultados devido à diferença no tipo de ocupação do solo. 
+
+Este trabalho tem como objetivo avaliar as chuvas ocorridas em maio de 2022 em relação à 
+
+série histórica, e avaliar a relação entre a pluviosidade e os escorregamentos ocorridos com base nos 
+
+estudos de Gusmão Filho et al. (1987). 
+
+ 
+
+2 – CARACTERIZAÇÃO DA ÁREA 
+
+ 
+
+O bairro do Ibura, localizado na Zona Sul da cidade do Recife/PE, tem sofrido historicamente 
+
+com ocorrências de deslizamentos sucedidos no período chuvoso. O bairro está localizado em 
+
+região com morros ocupados a partir da segunda metade do século XX (Miranda, 2018), e possui o 
+
+menor Índice de Desenvolvimento Humano (IDH) da cidade. 
+
+As frequentes ocorrências de deslizamento são consequência do tipo de solo e da precipitação 
+
+intensa no inverno, em conjunto com as intervenções humanas e moradias construídas sem critérios  
+
+ 
+
+
+
+ 
+
+      
+
+ 
+
+XVI Simpósio de Recursos Hídricos do Nordeste 
+
+15º Simpósio de Hidráulica e Recursos Hídricos dos Países de Língua Portuguesa 
+  
+
+3 
+
+  
+ 
+
+técnicos (Melo, 2021). Tais características fazem da região uma localidade amplamente pesquisada 
+
+no que se refere aos estudos relacionados a deslizamento, infiltração e características de solo.  
+
+Localizadas em região de Formação Barreiras (Unidade Geológica), que possui horizontes 
+
+mais arenosos, as comunidades de Jardim Monte Verde e Lagoa Encantada, ambas no Ibura, são 
+
+localidades onde acidentes com vítimas fatais são frequentemente registrados no inverno pela 
+
+imprensa local.  
+
+Para melhor monitorar a área, em maio de 2015, foram instaladas Plataformas de Coleta de 
+
+Dados (PCD) na comunidade e em seu entorno. A região passou assim a ter a precipitação 
+
+monitorada através das estações automáticas operadas pela Agência Pernambucana de Águas e 
+
+Climas - APAC e pelo Centro Nacional de Monitoramento e Alertas de Desastres Naturais - 
+
+CEMADEN. 
+
+ 
+
+3 – MATERIAIS E MÉTODOS 
+
+ 
+
+O trabalho aqui apresentado busca avaliar a chuva registrada nos meses de maio e junho de 
+
+2022, baseada na classificação dos eventos de chuva de Souza et al. (2012) e avaliar o tempo de 
+
+retorno (frequência) dos eventos diários extremos, de acordo com a curva IDF de Ramos (2010), 
+
+para o município de Recife. 
+
+Considerando que os eventos extremos de chuva muitas vezes estão associados a movimentos 
+
+de massa, aplicou-se a metodologia de Gusmão Filho et al. (1987) para avaliar o limiar de 
+
+precipitação necessário para causar deslizamentos no Recife, em relação à chuva ocorrida no mês 
+
+de maio/2022. 
+
+ 
+
+3.1. Série pluviométrica  
+
+ 
+
+As séries pluviométricas disponíveis das estações localizadas no bairro do Ibura são inferiores 
+
+a 10 anos de dados, pois suas instalações foram iniciadas no ano de 2015. Para o tipo de análise em 
+
+questão, tornava-se necessária uma séria maior e mais representiva da precipitação na região. 
+
+Optou-se pela utilização da serie pluviométrica da Estação Recife (código 00834017), estação 
+
+pluviométrica mais próxima da área de estudo com série de dados mais extensa (2000 a 2022). A 
+
+referida estação é operada pelo Serviço Geológico do Brasil - SGB/CPRM, faz parte da Rede 
+
+Hidrometeorológica Nacional – RHN, e está localizada a aproximadamente 10km do Ibura. A série  
+
+ 
+
+
+
+ 
+
+      
+
+ 
+
+XVI Simpósio de Recursos Hídricos do Nordeste 
+
+15º Simpósio de Hidráulica e Recursos Hídricos dos Países de Língua Portuguesa 
+  
+
+4 
+
+  
+ 
+
+de dados pode ser obtida no site http://hidroweb.ana.gov.br/ da Agência Nacional de Águas e 
+
+Saneamento Básico – ANA. 
+
+Considerando a utilização de um posto pluviométrico distante da área de estudo como sendo 
+
+uma hipótese aproximada, a premissa do uso da estação pluviométrica Recife é reforçada através do 
+
+mapa de isoietas anuais médias de 1977 a 2006 (CPRM, 2021), para a cidade do Recife. 
+
+Para garantir a linearidade da série da Estação Recife (código 00834017), foi realizado o 
+
+preenchimento de falhas dos totais mensais, utilizando-se o programa HidroPlu (versão 2010). Não 
+
+foi realizada análise de consistência. Entretanto, os dados analisados apresentavam-se consistidos 
+
+para o período de 2000 a 2006 e brutos de 2007 a 2022. As estações de apoio utilizadas no 
+
+preenchimento e as referidas correlações encontram-se apresentadas no Quadro 1.  
+
+ 
+
+Quadro 1 – Estações de apoio para preenchimento de falhas 
+
+Código Nome Correlação Entidade 
+
+834007 Recife (CURADO) 0,97 INMET 
+
+734011 Igarassu 0,92 SUDENE 
+
+835048 São Lourenço da Mata II 0,91 ANA 
+
+835138 Pirapama 0,89 ANA 
+
+ 
+
+Para melhor compreensão da excepcionalidade dos eventos ocorridos nos meses de maio e 
+
+junho de 2022, a série de chuva para os referidos meses foi analisada em relação à série existente 
+
+para a estação pluviométrica Recife, entre os anos de 2001 e 2021, anos de serie mensal completa. 
+
+Os registros diários de chuva foram avaliados de acordo com Souza et al. (2012), que avalia a 
+
+partir de quantos milímetros uma chuva pode ser definida como um evento danoso para a cidade do 
+
+Recife. O referido trabalho concluiu que 55,3mm é considerada uma Chuva Muito Forte, de acordo 
+
+com a classificação da intensidade da precipitação acumulada em 24 horas. O estudo também 
+
+classifica os eventos extremos de chuva acumulada em 24 horas para Recife-PE como apresentado 
+
+no Quadro 2. 
+
+Para avaliação do tempo de retorno das Chuvas Muito Extremas utilizou-se a equação 
+
+intensidade-duração-freqüência (IDF) estabelecida por Ramos (2010), para o município de 
+
+Recife/PE. O trabalho determina as relações IDF de chuvas intensas ocorridas na cidade do Recife, 
+
+a partir de dados obtidos de pluviogramas da estação do aeroporto da cidade (1968 a 2007), 
+
+utilizando a distribuição probabilística de Gumbel para a análise de freqüência dos dados. 
+
+ 
+
+
+
+ 
+
+      
+
+ 
+
+XVI Simpósio de Recursos Hídricos do Nordeste 
+
+15º Simpósio de Hidráulica e Recursos Hídricos dos Países de Língua Portuguesa 
+  
+
+5 
+
+  
+ 
+
+Quadro 2. Classificação dos eventos extremos de chuva acumulada em 24 horas. 
+
+Classificação Intensidade (mm) 
+
+Chuva Muito Forte (CMF) 55,3 ≤ P < 100 
+
+Chuva Extrema (CE) 100 ≤ P < 150 
+
+Chuva Muito Extrema (CME) P ≥ 150 
+
+   Fonte: Souza et al. (2012). 
+
+ 
+
+3.2. Precipitação representativa do movimento iminente 
+
+ 
+
+Os índices pluviométricos críticos para a deflagração dos movimentos de massa variam com o 
+
+regime de infiltração do solo, a dinâmica das águas subterrâneas no maciço e o tipo de 
+
+instabilização (Melo, 2021).  
+
+A cidade do Recife possui estudos e pesquisas que buscam parâmetros de precipitação que 
+
+possam desencadear movimentos de massa, tais como Bandeira & Coutinho (2015) e Cavalcanti et 
+
+al. (2018). Entretanto, uma significativa contribuição foi trazida pelos estudos apresentados em 
+
+(Gusmão Filho et al., 1987). O estudo foi realizado para a cidade de Olinda, localizada na Zona 
+
+Norte da Região Metropolitana do Recife – RMR, e definiu o parâmetro R = 60.000mm
+2
+ como 
+
+valor representativo para um movimento iminente, ou seja: a partir deste valor de R, o nível d'água 
+
+é máximo e assim permanece.  
+
+O parâmetro R mostra que a instabilidade das encostas é o resultado da multiplicação entre a 
+
+intensidade de chuva acumulada (Pac ) de janeiro até a data do deslizamento, e a ocorrência de uma 
+
+nova chuva de intensidade mínima (I) capaz de causar instabilidade (R = Pac x I). A Figura 1 
+
+apresenta a correlação gráfica de R entre a intensidade da chuva e a chuva acumulada. 
+
+ 
+
+  
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+ 
+
+      
+
+ 
+
+XVI Simpósio de Recursos Hídricos do Nordeste 
+
+15º Simpósio de Hidráulica e Recursos Hídricos dos Países de Língua Portuguesa 
+  
+
+6 
+
+  
+
+ 
+
+Figura 1. Correlação entre a intensidade da chuva e a chuva acumulada 
+Fonte: Gusmão Filho, 1997. 
+
+ 
+Para melhor entender a relação, pode-se tomar como exemplo que, para uma chuva acumulada de 
+
+600mm, de janeiro de um certo ano até o dia em questão no mesmo ano, bastaria uma chuva de 
+
+100mm para haver uma desestabilização iminente de uma encosta. 
+
+ 
+
+4 – RESULTADOS 
+
+ 
+
+4.1 Avaliação da precipitação 
+
+ 
+
+A avaliação da série pluviométrica da estação Recife (código 00834017), apresentado na 
+
+Figura 2, mostra que o total parcial precipitado para o ano de 2022 (entre janeiro e junho) em 
+
+laranja, quando comparado ao total anual (2001 a 2021) apresenta o maior volume precipitado nos 
+
+últimos 10 anos, antes mesmo do final do ano civil. Ou seja, Para o ano de 2022, antes mesmo do 
+
+final do período da quadra chuvosa para a região (Figura 3), que ocorre entre os meses de abril e 
+
+julho, o total precipitado é maior do que o esperado para um ano.  
+
+ 
+
+ 
+Figura 2. Precipitação anual (2001 a 2021) em relação ao total parcial (jan a jun/2022) 
+
+ 
+
+ 
+
+
+
+ 
+
+      
+
+ 
+
+XVI Simpósio de Recursos Hídricos do Nordeste 
+
+15º Simpósio de Hidráulica e Recursos Hídricos dos Países de Língua Portuguesa 
+  
+
+7 
+
+  
+ 
+
+ 
+ Figura 3. Precipitação média mensal (2001 a 2021) - Estação Pluviométrica Recife/CPRM 
+
+ 
+
+A precipitação ocorrida nos meses de maio e junho de 2022, apresentados em laranja na 
+
+Figura 4, superaram o valor médio esperado de 289mm e 373mm respectivamente. Observa-se que 
+
+a precipitação ocorrida em maio/2022 (824,5 mm) é 285% maior do que a média mensal. O mesmo 
+
+ocorre para o mês de junho, onde o total mensal registrado de 537,4 mm apresenta-se 144% maior 
+
+do que o esperado. 
+
+ 
+
+ 
+ 
+
+Figura 4. Total mensal para os meses de maio e junho (2001 a 2021), em relação ao ano de 2022 
+
+ 
+
+De acordo com a série da estação Recife/CPRM, o mês de maio/2022 apresentou 04 dias de 
+
+precipitação potencialmente perigosa com Chuva Muito Forte (P>55,3mm/24h): 24/05/22 
+
+(75,5mm); 25/05/22 (179,4mm); 28/05/22 (188,4mm); 29/05/22 (99,9mm). Enquanto o mês de 
+
+junho/2022 apresentou 03 eventos: 03/06/22 (74,8mm); 07/06/22 (89,7mm); 23/06/22 (90,8mm). 
+
+Observa-se que apenas o mês de maio apresentou dias mais críticos com Chuva Muito Extrema 
+
+(P>150mm/24h). 
+
+Para averiguar a veracidade de valores precipitados tão altos, registrados na estação 
+
+Recife/CPRM, realizou-se uma comparação com os registros existentes na estação automática 
+
+Recife/APAC (código 261160623A), os quais foram obtidos a partir do site do CEMADEN  
+
+
+
+ 
+
+      
+
+ 
+
+XVI Simpósio de Recursos Hídricos do Nordeste 
+
+15º Simpósio de Hidráulica e Recursos Hídricos dos Países de Língua Portuguesa 
+  
+
+8 
+
+  
+ 
+
+(http://www2.cemaden.gov.br/mapainterativo/#). A estação Recife/APAC apresenta um total 
+
+mensal de 688,1mm, o que corresponde a uma diferença de 17% entre os valores registrados nas 
+
+estações. Atribui-se a diferença à distância entre as estações e à metodologia utilizada para a 
+
+obtenção dos registros, pois a estação Recife/CPRM utiliza-se de pluviômetro (leitura realizada por 
+
+observador hidrológico) e a Recife/APAC de leituras automáticas feitas por sensores. 
+
+De acordo com a IDF definida por Ramos (2010), a Tabela 2 apresenta os tempos de retorno e 
+
+a probabilidade das intensidades das Chuva Muito Extremas serem igualadas ou superadas, em um 
+
+ano qualquer. 
+
+ 
+
+Tabela 2. Tempo de retorno e probabilidade da chuva ocorrida nos dias 25 e 28/05/2022. 
+
+Data do Evento Precipitação/24h (mm) Tempo de Retorno (anos) Probabilidade (%) 
+
+25/05/2022 179,4 mm 29 anos 4% 
+
+28/05/2022 188,4 mm 44 anos 2% 
+
+ 
+
+4.2 Iminência de deslizamento causada pela precipitação 
+
+ 
+
+Ao avaliar a precipitação necessária para colocar as áreas de morro em alerta na cidade do 
+
+Recife, com base no cálculo do parâmetro R determinado por Gusmão Filho et al. (1987), em 
+
+relação às chuvas extremas ocorridas nos dias 25 e 28/05/2022, observa-se que a precipitação 
+
+acumulada entre 01/janeiro e 30/abril era de 976,8mm. Dessa forma, espera-se que uma 
+
+precipitação diária de 61,4mm seja capaz de causar desestabilizações. 
+
+As precipitações diárias registradas entre os dias 01 e 23 de maio/2022 apresentaram-se 
+
+inferiores ao valor crítico diário esperado, fazendo apenas com que o somatório acumulado 
+
+diminuísse o limiar de precipitação diária crítico para 53,2mm. 
+
+Entretanto, como a Pac de 1.127,2mm, a chuva I de 75,5mm ocorrida no dia 24/05/2022 já seria 
+
+suficiente para o início de um alerta de possíveis deslizamentos. Diante do novo acumulado de 
+
+chuva e infiltração, a nova precipitação de alerta passa a ser de 49,9mm para o dia 25/05/2022. 
+
+Observa-se que o registrado para o dia 25/05/2022 foi de 179,4mm, excedendo muito o valor 
+
+crítico, tornando quase que inevitável pela metodologia utilizada, a ocorrência de deslizamentos.  
+
+A evolução da iminência de deslizamento baseada na precipitação diária crítica, para a chuva 
+
+ocorrida no mês de maio/2022, pode ser observada na Tabela 3. Nota-se que à medida que a Pac 
+
+aumenta, com a contribuição da chuva diária I, ocorre uma diminuição da precipitação crítica 
+
+mínima capaz de causar deslizamentos. 
+
+
+
+ 
+
+      
+
+ 
+
+XVI Simpósio de Recursos Hídricos do Nordeste 
+
+15º Simpósio de Hidráulica e Recursos Hídricos dos Países de Língua Portuguesa 
+  
+
+9 
+
+  
+ 
+
+Tabela 3. Evolução da iminência de deslizamento para a cidade do recife em relação ao parâmetro R 
+
+Data Pac (mm) I (mm) Chuva crítica capaz de causar deslizamento (mm) 
+
+23/05/2022 1127,2 - 53,2 
+
+24/05/2022 1202,7 75,5 49,9 
+
+25/05/2022 1382,1 179,4 43,4 
+
+26/05/2022 1429,8 47,7 42,0 
+
+27/05/2022 1446,3 16,5 41,5 
+
+28/05/2022 - 188,4 Deslizamentos 
+
+ 
+
+6 – CONCLUSÃO 
+
+ 
+
+As mudanças climáticas ocorridas no planeta têm tornado os eventos extremos cada vez mais 
+
+frequentes e danosos. Os meses de maio e junho de 2022 registraram precipitação acima da média 
+
+esperada para o mês. Eventos de chuva muito forte e chuva muito extrema causaram alagamentos e 
+
+movimentos de massa, com e sem vítimas, em várias regiões da cidade.  
+
+Mesmo com o tempo de retorno de 29 anos e 44 anos das chuvas extremas ocorridas nos dias 
+
+25 e 28/05/2022 respectivamente, observa-se que o poder público deve manter-se sempre atento às 
+
+ações estruturais e não estruturais para evitar os transtornos e desastres registrados nos períodos 
+
+chuvosos. As análises mostraram que mesmo antes da ocorrência da chuva extrema, já havia alta 
+
+probabilidade de ocorrência de deslizamentos no município. 
+
+É importante ressaltar a necessidade de que hajam investimentos no desenvolvimento de 
+
+sistemas de alerta, que sejam baseados em modelos que considerem a precipitação e previsão de 
+
+chuva, de modo a manejar adequadamente as situações de risco, tanto para evitar falsos negativos 
+
+(não avisar quando há risco) como evitar falsos positivos (alertar desnecessariamente), pois ambas 
+
+as situações envolvem grande estresse e transtornos às comunidades. 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+ 
+
+      
+
+ 
+
+XVI Simpósio de Recursos Hídricos do Nordeste 
+
+15º Simpósio de Hidráulica e Recursos Hídricos dos Países de Língua Portuguesa 
+  
+
+10 
+
+  
+ 
+
+REFERÊNCIAS 
+
+ 
+
+CAVALCANTI, R. L. C.; SILVA, C. H. S.; JESUS, E. S.; CUNHA FILHO, M. & STOŠIĆ, T. 
+
+Study of Probable Maximum Precipitation and Return Time in Recife (PE). In: III CONGRESSO 
+ 
+
+INTERNACIONAL DAS CIÊNCIAS AGRÁRIAS – COINTER, 2018, João Pessoa. 1-9 p. 
+
+https://doi.org/10.31692/2526-7701.IIICOINTERPDVAGRO.2018.00125 
+CPRM. Serviço Geológico do Brasil. (2021) Acesso ao site: 
+
+http://rigeo.cprm.gov.br/jspui/handle/doc/15030 em fevereiro de 2021. 
+ 
+
+BANDEIRA, A. P. N. & COUTINHO, R. Q. Critical Rainfall Parameters: Proposed Landslide 
+
+Warning System for the Metropolitan Region of Recife, PE, Brazil. Soils and Rocks, 38 (1): 27-48 
+p. 2015. 
+
+ 
+GUSMÃO FILHO, J. A. (1995), A Experiência em Encostas Ocupadas do Recife: Integração 
+
+Técnica Institucional e Comunitária. Rev. IG. São Paulo, Volume Especial. 
+
+ 
+GUSMÃO FILHO, J.A.; JUCÁ, J.F.T.; JUSTINO DA SILVA, J.M. 1987. Groundwater effects in 
+
+the moving mechanisms in the hills of Olinda, Brazil. ln: EUROPEAN CONFERENCE ON SOIL 
+MECHANICS AND FOUNDA TION ENGINEERING , 9º , Dublin , Irlanda, ISSMFE. 
+
+Proceedings. v.l, p. 431-434. 
+
+LIMA, A. F. (2002), Comportamento Geomecânico e Análise de Estabilidade de uma Encosta da 
+Formação Barreiras na Área Urbana da Cidade do Recife . Dissertação de Mestrado. UFPE. CTG. 
+
+Engenharia Civil, Recife-PE. 
+ 
+
+MELO, C. R. (2021). Utilização de Informações Espaciais de Alta Resolução para Análise de 
+
+Suscetibilidade de Deslizamento sob Situação de Precipitações Intensas. Tese (Doutorado em 
+Engenharia Civil) - Universidade Federal de Pernambuco, Recife. 
+
+http://rigeo.cprm.gov.br/jspui/handle/doc/22181. 
+ 
+
+MIRANDA, L. Desenvolvimento Humano e Habitação no Recife. Desenvolvimento Humano no 
+
+Recife. Atlas Municipal. Acesso ao site: 
+https://www.recife.pe.gov.br/pr/secplanejamento/pnud2006/doc/analiticos/Desenvolvimento%20Hu
+
+mano%20e%20Habita%C3%A7%C3%A3o%20no%20Recife.pdf em janeiro de 2018. 
+ 
+
+RAMOS, A. M. Influência das mudanças climáticas devido ao efeito estufa na drenagem urbana de 
+
+uma grande cidade. 2010. 160 f. Tese (Doutorado em Engenharia civil) - Centro de Tecnologia e 
+Geociências. Universidade Federal de Pernambuco, Recife. 2010. 
+
+ 
+SOUZA, W. M.; AZEVEDO, P. V. & ARAÚJO, L. E. Classificação da Precipitação Diária e 
+
+Impactos Decorrentes dos Desastres Associados às Chuvas na Cidade do Recife-PE. Revista 
+Brasileira de Geografia Física. 5 (2): 250-268 p. 2012. https://doi.org/10.26848/rbgf.v5i2.232788 
+
+ 
+
+http://rigeo.cprm.gov.br/jspui/handle/doc/15030%20em%20fevereiro%20de%202021
+

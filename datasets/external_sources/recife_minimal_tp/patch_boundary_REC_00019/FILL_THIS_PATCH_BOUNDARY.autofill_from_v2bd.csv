@@ -1,0 +1,2 @@
+target_type,target_id,package_id,source_type,geometry_path,crs,provenance_note,source_document,review_status,instructions
+patch_boundary,REC_00019,PKG_34713b8aab96,geojson_file,datasets/external_sources/recife_minimal_tp/derived/patch_boundary_REC_00019_from_lineage.geojson,EPSG:4326,Recovered from explicit preserved raster header bounds and reprojected from EPSG:32725.,manifests/training_readiness/revp_v1fs_self_supervised_asset_sanity_and_embedding_plan/asset_sanity_audit_v1fs.csv,provided_unreviewed,Human must confirm lineage/header before promotion.

@@ -1,0 +1,19 @@
+{
+  "offline_mode": true,
+  "priority_region": "Recife",
+  "priority_patch_id": "REC_00019",
+  "priority_event_id": "REC_2022_05_24_30",
+  "priority_package_id": "PKG_34713b8aab96",
+  "raw_dir": "datasets/external_sources/recife_minimal_tp/raw",
+  "derived_dir": "datasets/external_sources/recife_minimal_tp/derived",
+  "gis_workbench_dir": "datasets/gis_workbench/recife_minimal_tp",
+  "accepted_crs": ["EPSG:4326", "EPSG:3857", "EPSG:31982", "EPSG:31983"],
+  "default_output_crs": "EPSG:4326",
+  "allow_context_as_event_polygon": false,
+  "allow_risk_area_as_ground_truth": false,
+  "allow_quickview_as_verified_product": false,
+  "allow_point_as_event_polygon": false,
+  "allow_auto_geometry_generation": false,
+  "can_train_model": false,
+  "can_create_operational_labels": false
+}

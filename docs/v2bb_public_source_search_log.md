@@ -1,0 +1,72 @@
+# v2bb public source search log
+
+- Prefeitura Recife geodados: MANUAL_SEARCH_REQUIRED Prefeitura Recife geodados inundacao deslizamento
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_00289 real vector geometry CRS
+- SGB CPRM: MANUAL_SEARCH_REQUIRED SGB CPRM Recife May 2022 disaster point polygon
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_00313 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_09 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_00355 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_00483 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_01 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_00227 real vector geometry CRS
+- Charter activation 758 products: MANUAL_SEARCH_REQUIRED Recife May 2022 Charter activation 758 vector product
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_00294 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_00276 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_00529 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_00482 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_08 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_00292 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_00364 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_11 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_00296 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_00548 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_10 real vector geometry CRS
+- Copernicus EMS: MANUAL_SEARCH_REQUIRED Copernicus EMS Recife May 2022 mapping product
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_04 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_05 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_00314 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_02 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_17 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_00550 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_00458 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_00291 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_12 real vector geometry CRS
+- SGB Recife May 2022 precipitation study: DIRECT_PUBLIC_URL_IDENTIFIED https://rigeo.sgb.gov.br/server/api/core/bitstreams/5163f1c7-0905-40ba-9fba-f14a3173eac1/content
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_16 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_00205 real vector geometry CRS
+- Recife Defesa Civil risk areas GeoJSON: DIRECT_PUBLIC_URL_IDENTIFIED https://dados.recife.pe.gov.br/dataset/c1d733d9-5867-481e-9c18-5fe572300ab2/resource/ec18759d-fac2-445e-ae72-af9d9210b831/download/coordenadas-geograficas-da-regiao-sul.geojson
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_00204 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_06 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_15 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_00299 real vector geometry CRS
+- Charter 758 Recife quickview: DIRECT_PUBLIC_URL_IDENTIFIED https://disasterscharter.org/cos-api/api/file/public/article-image/28495218
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_00501 real vector geometry CRS
+- Sentinel patch metadata: MANUAL_SEARCH_REQUIRED Sentinel patch metadata REC_00019
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_00302 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_00505 real vector geometry CRS
+- Cemaden ANA INMET: MANUAL_SEARCH_REQUIRED Cemaden ANA INMET Recife May 2022
+- Verified observed-event product: MANUAL_SEARCH_REQUIRED REC_2022_05_24_30 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_00388 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_00526 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_00506 real vector geometry CRS
+- Recife Defesa Civil risk areas CSV: DIRECT_PUBLIC_URL_IDENTIFIED https://dados.recife.pe.gov.br/dataset/c1d733d9-5867-481e-9c18-5fe572300ab2/resource/75344435-aca8-4aef-ab2c-9521d6e5ff18/download/areas-de-risco-da-regional-sul.csv
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_03 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_13 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_00502 real vector geometry CRS
+- Recife May 2022 flood landslide vector: MANUAL_SEARCH_REQUIRED Recife May 2022 flood landslide GeoJSON
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_00481 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_00525 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_07 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_00460 real vector geometry CRS
+- Defesa Civil Pernambuco: MANUAL_SEARCH_REQUIRED Defesa Civil Pernambuco Recife May 2022 shapefile
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_18 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_00290 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_00354 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_00279 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_00260 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_00503 real vector geometry CRS
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_14 real vector geometry CRS
+- Patch footprint: MANUAL_SEARCH_REQUIRED REC_00019 patch footprint
+- Verified patch-generation source: MANUAL_SEARCH_REQUIRED REC_00183 real vector geometry CRS
+
+Downloads attempted: 4; successful: 4.

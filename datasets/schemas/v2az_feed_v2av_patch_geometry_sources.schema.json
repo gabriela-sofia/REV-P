@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "v2az_feed_v2av_patch_geometry_sources.schema.json",
+  "description": "v2az fail-closed replay adapter; no invented geometry, label, model, final ground truth or automatic C4.",
+  "type": "object",
+  "required": [
+    "patch_id",
+    "region",
+    "city",
+    "source_file",
+    "source_field",
+    "source_type",
+    "geometry_value",
+    "geometry_path",
+    "crs",
+    "center_lat",
+    "center_lon",
+    "size_meters",
+    "source_confidence"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "patch_id": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "source_file": {
+      "type": "string"
+    },
+    "source_field": {
+      "type": "string"
+    },
+    "source_type": {
+      "type": "string"
+    },
+    "geometry_value": {
+      "type": "string"
+    },
+    "geometry_path": {
+      "type": "string"
+    },
+    "crs": {
+      "type": "string"
+    },
+    "center_lat": {
+      "type": "string"
+    },
+    "center_lon": {
+      "type": "string"
+    },
+    "size_meters": {
+      "type": "string"
+    },
+    "source_confidence": {
+      "type": "string"
+    }
+  }
+}

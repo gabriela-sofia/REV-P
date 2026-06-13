@@ -1,0 +1,2 @@
+dry_run_id,stage,command,executed,exit_code,status,tp1_recognized,tp2_available,tp3_available,tp4_available,blocking_reason,notes
+V2BE_DRY_270c978c890a,v2be_internal_integration_dry_run,internal validation only; no subprocess replay,true,0,TP1_RECOGNIZED_CANDIDATE_REQUIRES_HUMAN_REVIEW,true,false,false,false,EVENT_POLYGON_REQUIRED_FOR_TP2_TP3_TP4,No prior-stage outputs or subprocesses were modified or executed.

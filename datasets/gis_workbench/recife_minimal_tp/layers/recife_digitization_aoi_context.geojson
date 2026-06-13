@@ -1,0 +1,45 @@
+{
+  "type": "FeatureCollection",
+  "name": "recife_digitization_aoi_context",
+  "properties": {
+    "geometry_role": "digitization_support_only",
+    "can_feed_pipeline": false
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "geometry_role": "digitization_support_only",
+        "can_feed_overlay": false,
+        "source_basis": "envelope_of_400_context_points"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -34.95727133781799,
+              -8.138516680134959
+            ],
+            [
+              -34.92907433234659,
+              -8.138516680134959
+            ],
+            [
+              -34.92907433234659,
+              -8.108520197722704
+            ],
+            [
+              -34.95727133781799,
+              -8.108520197722704
+            ],
+            [
+              -34.95727133781799,
+              -8.138516680134959
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

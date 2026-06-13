@@ -1,0 +1,120 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "v2ay_region_event_canonical_registry.schema.json",
+  "description": "v2ay fail-closed contract; no invented event/geometry, label, model, final ground truth, or automatic C4.",
+  "type": "object",
+  "required": [
+    "canonical_event_id",
+    "source_event_id",
+    "region",
+    "city",
+    "hazard_type",
+    "event_window_start",
+    "event_window_end",
+    "source_ids",
+    "source_names",
+    "package_count",
+    "patch_count",
+    "has_temporal_anchor",
+    "has_spatial_anchor",
+    "has_event_polygon",
+    "has_only_point_anchor",
+    "has_context_only",
+    "event_scope_status",
+    "evidence_strength",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "canonical_event_id": {
+      "type": "string"
+    },
+    "source_event_id": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "hazard_type": {
+      "type": "string"
+    },
+    "event_window_start": {
+      "type": "string"
+    },
+    "event_window_end": {
+      "type": "string"
+    },
+    "source_ids": {
+      "type": "string"
+    },
+    "source_names": {
+      "type": "string"
+    },
+    "package_count": {
+      "type": "string"
+    },
+    "patch_count": {
+      "type": "string"
+    },
+    "has_temporal_anchor": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "has_spatial_anchor": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "has_event_polygon": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "has_only_point_anchor": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "has_context_only": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "event_scope_status": {
+      "type": "string",
+      "enum": [
+        "CONFIRMED_IN_REGISTRIES",
+        "CONTEXT_ONLY",
+        "POINT_ANCHOR_ONLY",
+        "MISSING_EVENT_GEOMETRY",
+        "EXPECTED_BUT_NOT_FOUND",
+        "REGION_MISMATCH",
+        "UNRESOLVED"
+      ]
+    },
+    "evidence_strength": {
+      "type": "string"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

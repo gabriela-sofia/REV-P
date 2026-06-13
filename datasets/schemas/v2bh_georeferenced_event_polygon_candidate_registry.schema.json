@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "candidate_polygon_id",
+    "product_id",
+    "event_id",
+    "package_id",
+    "patch_id",
+    "source_product_file",
+    "source_method",
+    "local_derived_path",
+    "geometry_type",
+    "crs",
+    "crs_status",
+    "geometry_valid",
+    "area_m2_approx",
+    "bbox_minx",
+    "bbox_miny",
+    "bbox_maxx",
+    "bbox_maxy",
+    "vertex_count",
+    "geometry_hash",
+    "is_from_public_charter_product",
+    "is_observed_scar_digitized",
+    "is_patch_boundary_duplicate",
+    "requires_human_review",
+    "can_support_tp2",
+    "can_feed_v2ba",
+    "can_feed_v2aw",
+    "can_feed_v2au",
+    "can_feed_v2az",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "candidate_polygon_id": {
+      "type": "string"
+    },
+    "product_id": {
+      "type": "string"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "package_id": {
+      "type": "string"
+    },
+    "patch_id": {
+      "type": "string"
+    },
+    "source_product_file": {
+      "type": "string"
+    },
+    "source_method": {
+      "type": "string"
+    },
+    "local_derived_path": {
+      "type": "string"
+    },
+    "geometry_type": {
+      "type": "string"
+    },
+    "crs": {
+      "type": "string"
+    },
+    "crs_status": {
+      "type": "string"
+    },
+    "geometry_valid": {
+      "type": "string"
+    },
+    "area_m2_approx": {
+      "type": "string"
+    },
+    "bbox_minx": {
+      "type": "string"
+    },
+    "bbox_miny": {
+      "type": "string"
+    },
+    "bbox_maxx": {
+      "type": "string"
+    },
+    "bbox_maxy": {
+      "type": "string"
+    },
+    "vertex_count": {
+      "type": "string"
+    },
+    "geometry_hash": {
+      "type": "string"
+    },
+    "is_from_public_charter_product": {
+      "type": "string"
+    },
+    "is_observed_scar_digitized": {
+      "type": "string"
+    },
+    "is_patch_boundary_duplicate": {
+      "type": "string"
+    },
+    "requires_human_review": {
+      "type": "string"
+    },
+    "can_support_tp2": {
+      "type": "string"
+    },
+    "can_feed_v2ba": {
+      "type": "string"
+    },
+    "can_feed_v2aw": {
+      "type": "string"
+    },
+    "can_feed_v2au": {
+      "type": "string"
+    },
+    "can_feed_v2az": {
+      "type": "string"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

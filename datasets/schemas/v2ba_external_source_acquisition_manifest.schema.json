@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "acquisition_source_id",
+    "target_type",
+    "target_id",
+    "priority_package_id",
+    "region",
+    "city",
+    "source_category",
+    "source_name",
+    "source_url_or_reference",
+    "expected_artifact",
+    "expected_geometry_type",
+    "expected_crs_metadata",
+    "source_public",
+    "access_status",
+    "provenance_requirement",
+    "can_promote_alone",
+    "current_status",
+    "local_path",
+    "blocking_reason",
+    "recommended_action",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "acquisition_source_id": {
+      "type": "string"
+    },
+    "target_type": {
+      "type": "string"
+    },
+    "target_id": {
+      "type": "string"
+    },
+    "priority_package_id": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "source_category": {
+      "type": "string"
+    },
+    "source_name": {
+      "type": "string"
+    },
+    "source_url_or_reference": {
+      "type": "string"
+    },
+    "expected_artifact": {
+      "type": "string"
+    },
+    "expected_geometry_type": {
+      "type": "string"
+    },
+    "expected_crs_metadata": {
+      "type": "string"
+    },
+    "source_public": {
+      "type": "boolean"
+    },
+    "access_status": {
+      "type": "string"
+    },
+    "provenance_requirement": {
+      "type": "string"
+    },
+    "can_promote_alone": {
+      "type": "boolean"
+    },
+    "current_status": {
+      "type": "string"
+    },
+    "local_path": {
+      "type": "string"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "recommended_action": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

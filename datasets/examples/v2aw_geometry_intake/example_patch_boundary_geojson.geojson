@@ -1,0 +1,35 @@
+{
+  "type": "Feature",
+  "properties": {
+    "crs": "EPSG:4326",
+    "example": true,
+    "note": "SYNTHETIC EXAMPLE - not real patch geometry"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -34.95,
+          -8.1
+        ],
+        [
+          -34.9,
+          -8.1
+        ],
+        [
+          -34.9,
+          -8.05
+        ],
+        [
+          -34.95,
+          -8.05
+        ],
+        [
+          -34.95,
+          -8.1
+        ]
+      ]
+    ]
+  }
+}

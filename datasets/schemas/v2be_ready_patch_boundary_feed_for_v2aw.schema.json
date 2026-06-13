@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "feed_id",
+    "patch_id",
+    "package_id",
+    "event_id",
+    "geometry_path",
+    "geometry_format",
+    "original_crs",
+    "normalized_crs",
+    "geometry_hash",
+    "source_stage",
+    "source_method",
+    "asset_id",
+    "source_document",
+    "source_public",
+    "access_status",
+    "review_status",
+    "requires_human_review",
+    "ready",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "feed_id": {
+      "type": "string"
+    },
+    "patch_id": {
+      "type": "string"
+    },
+    "package_id": {
+      "type": "string"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "geometry_path": {
+      "type": "string"
+    },
+    "geometry_format": {
+      "type": "string"
+    },
+    "original_crs": {
+      "type": "string"
+    },
+    "normalized_crs": {
+      "type": "string"
+    },
+    "geometry_hash": {
+      "type": "string"
+    },
+    "source_stage": {
+      "type": "string"
+    },
+    "source_method": {
+      "type": "string"
+    },
+    "asset_id": {
+      "type": "string"
+    },
+    "source_document": {
+      "type": "string"
+    },
+    "source_public": {
+      "type": "string"
+    },
+    "access_status": {
+      "type": "string"
+    },
+    "review_status": {
+      "type": "string"
+    },
+    "requires_human_review": {
+      "type": "boolean"
+    },
+    "ready": {
+      "type": "boolean"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

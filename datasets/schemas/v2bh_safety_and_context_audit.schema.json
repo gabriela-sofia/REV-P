@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "audit_id",
+    "rule",
+    "observed_value",
+    "passed",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "audit_id": {
+      "type": "string"
+    },
+    "rule": {
+      "type": "string"
+    },
+    "observed_value": {
+      "type": "string"
+    },
+    "passed": {
+      "type": "string"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

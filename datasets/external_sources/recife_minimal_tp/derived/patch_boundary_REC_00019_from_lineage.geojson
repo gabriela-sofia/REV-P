@@ -1,0 +1,40 @@
+{
+  "type": "Feature",
+  "properties": {
+    "patch_id": "REC_00019",
+    "package_id": "PKG_34713b8aab96",
+    "source_method": "preserved_raster_header_bounds_reprojected",
+    "source_crs": "EPSG:32725",
+    "source_file": "manifests/training_readiness/revp_v1fs_self_supervised_asset_sanity_and_embedding_plan/asset_sanity_audit_v1fs.csv",
+    "source_asset_hash": "edb27d26929fdd644875a8c86a882884c16c68b477f954fbd07a15d6edb0bd02",
+    "requires_human_review": true,
+    "can_be_ground_truth": false
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -34.989584251195,
+          -8.227199976692
+        ],
+        [
+          -34.980237936224,
+          -8.227246154998
+        ],
+        [
+          -34.980192616635,
+          -8.218115736086
+        ],
+        [
+          -34.989538718049,
+          -8.218069609709
+        ],
+        [
+          -34.989584251195,
+          -8.227199976692
+        ]
+      ]
+    ]
+  }
+}

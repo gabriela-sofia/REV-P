@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "task_id",
+    "task_type",
+    "target_id",
+    "priority_package_id",
+    "priority_patch_id",
+    "priority_event_id",
+    "input_layers",
+    "output_expected",
+    "output_file_to_fill",
+    "required_format",
+    "required_crs",
+    "step_by_step",
+    "validation_command",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "task_id": {
+      "type": "string"
+    },
+    "task_type": {
+      "type": "string"
+    },
+    "target_id": {
+      "type": "string"
+    },
+    "priority_package_id": {
+      "type": "string"
+    },
+    "priority_patch_id": {
+      "type": "string"
+    },
+    "priority_event_id": {
+      "type": "string"
+    },
+    "input_layers": {
+      "type": "string"
+    },
+    "output_expected": {
+      "type": "string"
+    },
+    "output_file_to_fill": {
+      "type": "string"
+    },
+    "required_format": {
+      "type": "string"
+    },
+    "required_crs": {
+      "type": "string"
+    },
+    "step_by_step": {
+      "type": "string"
+    },
+    "validation_command": {
+      "type": "string"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

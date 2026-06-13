@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "v2ay_turning_point_readiness_gate.schema.json",
+  "description": "v2ay fail-closed contract; no invented event/geometry, label, model, final ground truth, or automatic C4.",
+  "type": "object",
+  "required": [
+    "gate_id",
+    "turning_point_level",
+    "gate_name",
+    "required_condition",
+    "observed_value",
+    "gate_passed",
+    "severity",
+    "blocking_reason",
+    "recommended_action",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "gate_id": {
+      "type": "string"
+    },
+    "turning_point_level": {
+      "type": "string"
+    },
+    "gate_name": {
+      "type": "string"
+    },
+    "required_condition": {
+      "type": "string"
+    },
+    "observed_value": {
+      "type": "string"
+    },
+    "gate_passed": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "severity": {
+      "type": "string"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "recommended_action": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

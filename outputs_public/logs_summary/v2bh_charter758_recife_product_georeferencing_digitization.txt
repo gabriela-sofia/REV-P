@@ -1,0 +1,2 @@
+[v2bh] mode=full gcps=20 scars=12 polygons=1 feeds=1
+[v2bh] turning_point=TP2_CHARTER_DIGITIZED_POLYGON_CANDIDATE_REQUIRES_HUMAN_REVIEW can_train_model=false can_create_operational_labels=false

@@ -1,0 +1,7 @@
+audit_id,rule,observed_value,passed,blocking_reason,notes
+V2BH_SAFETY_73dfc7ed4575,patch boundary not used as event polygon,true,true,,Fail-closed safety audit.
+V2BH_SAFETY_b19382701599,context not promoted,true,true,,Fail-closed safety audit.
+V2BH_SAFETY_704be19585cf,visual without georeferencing not promoted,true,true,,Fail-closed safety audit.
+V2BH_SAFETY_dc5047be1955,no label,true,true,,Fail-closed safety audit.
+V2BH_SAFETY_f62c7d17e241,no model,true,true,,Fail-closed safety audit.
+V2BH_SAFETY_8160fb2d4c2e,no ground truth,true,true,,Fail-closed safety audit.

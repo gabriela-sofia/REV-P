@@ -1,0 +1,2 @@
+intake_id,patch_id,region,city,priority_rank,package_count,required_geometry_kind,source_type,geometry_value,geometry_path,crs,provenance_type,provenance_note,source_document,source_document_page,source_document_url_or_path,digitized_by,digitized_at,source_confidence,license_status,review_status,validation_status,blocking_reason,notes
+SYNTHETIC_INTAKE,SYNTHETIC_PATCH_001,Example,Example,1,1,patch_boundary_polygon,bbox,"0,0,10,10",,EPSG:3857,manual_digitization,SYNTHETIC EXAMPLE,example_doc,,,example,2026-01-01,EXAMPLE,example_license,provided_unreviewed,,,SYNTHETIC EXAMPLE

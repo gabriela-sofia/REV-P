@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "v2az_replay_execution_log.schema.json",
+  "description": "v2az fail-closed replay adapter; no invented geometry, label, model, final ground truth or automatic C4.",
+  "type": "object",
+  "required": [
+    "execution_id",
+    "step_order",
+    "stage",
+    "command",
+    "mode",
+    "executed",
+    "exit_code",
+    "status",
+    "stdout_summary",
+    "stderr_summary",
+    "outputs_checked",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "execution_id": {
+      "type": "string"
+    },
+    "step_order": {
+      "type": "string"
+    },
+    "stage": {
+      "type": "string"
+    },
+    "command": {
+      "type": "string"
+    },
+    "mode": {
+      "type": "string"
+    },
+    "executed": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "exit_code": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "stdout_summary": {
+      "type": "string"
+    },
+    "stderr_summary": {
+      "type": "string"
+    },
+    "outputs_checked": {
+      "type": "string"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

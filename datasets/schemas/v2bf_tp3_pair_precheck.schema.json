@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "precheck_id",
+    "package_id",
+    "patch_id",
+    "event_id",
+    "tp1_patch_boundary_available",
+    "tp2_event_polygon_available",
+    "same_package",
+    "ready_for_pair_overlay_test",
+    "can_attempt_v2az_dry_run",
+    "can_attempt_v2az_replay",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "precheck_id": {
+      "type": "string"
+    },
+    "package_id": {
+      "type": "string"
+    },
+    "patch_id": {
+      "type": "string"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "tp1_patch_boundary_available": {
+      "type": "boolean"
+    },
+    "tp2_event_polygon_available": {
+      "type": "boolean"
+    },
+    "same_package": {
+      "type": "boolean"
+    },
+    "ready_for_pair_overlay_test": {
+      "type": "boolean"
+    },
+    "can_attempt_v2az_dry_run": {
+      "type": "boolean"
+    },
+    "can_attempt_v2az_replay": {
+      "type": "boolean"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

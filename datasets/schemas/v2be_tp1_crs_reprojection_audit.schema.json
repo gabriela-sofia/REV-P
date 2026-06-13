@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "crs_audit_id",
+    "patch_id",
+    "source_stage",
+    "original_crs",
+    "normalized_crs",
+    "original_bounds",
+    "normalized_bbox",
+    "reprojection_method",
+    "reprojection_supported",
+    "crs_preserved",
+    "crs_normalized",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "crs_audit_id": {
+      "type": "string"
+    },
+    "patch_id": {
+      "type": "string"
+    },
+    "source_stage": {
+      "type": "string"
+    },
+    "original_crs": {
+      "type": "string"
+    },
+    "normalized_crs": {
+      "type": "string"
+    },
+    "original_bounds": {
+      "type": "string"
+    },
+    "normalized_bbox": {
+      "type": "string"
+    },
+    "reprojection_method": {
+      "type": "boolean"
+    },
+    "reprojection_supported": {
+      "type": "boolean"
+    },
+    "crs_preserved": {
+      "type": "boolean"
+    },
+    "crs_normalized": {
+      "type": "boolean"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

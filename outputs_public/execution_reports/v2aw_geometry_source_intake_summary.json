@@ -1,0 +1,38 @@
+{
+  "stage": "v2aw",
+  "status": "OK_WITH_EXPECTED_BLOCKERS",
+  "priority_region": "Recife",
+  "total_priority_patches": 55,
+  "patch_sources_provided": 0,
+  "patch_sources_valid": 0,
+  "event_sources_provided": 9,
+  "event_sources_valid": 0,
+  "ready_for_v2av_count": 0,
+  "ready_for_v2au_count": 0,
+  "blocked_missing_geometry_count": 0,
+  "blocked_unknown_crs_count": 0,
+  "blocked_invalid_geometry_count": 0,
+  "point_anchor_not_overlay_count": 9,
+  "event_point_anchors_seeded": 9,
+  "total_recife_readiness_rows": 55,
+  "can_train_model": false,
+  "can_create_operational_labels": false,
+  "methodological_status": "GEOMETRY_SOURCE_INTAKE_READY_NOT_FOR_TRAINING",
+  "inputs_found": [
+    "v2av_patch_boundary_recovery_queue.csv",
+    "v2at_event_patch_package_registry.csv",
+    "ground_reference_event_registry.csv"
+  ],
+  "outputs_written": [
+    "datasets/v2aw_patch_geometry_sources_template.csv",
+    "datasets/v2aw_event_geometry_sources_template.csv",
+    "datasets/v2aw_geometry_source_validation_registry.csv",
+    "datasets/v2aw_recife_p1_geometry_readiness.csv",
+    "docs/v2aw_geometry_source_intake_instructions.md",
+    "datasets/examples/v2aw_geometry_intake/",
+    "outputs_public/execution_reports/v2aw_geometry_source_intake_report.md",
+    "outputs_public/execution_reports/v2aw_geometry_source_intake_summary.json",
+    "outputs_public/logs_summary/v2aw_geometry_source_intake.txt",
+    "outputs_public/execution_reports/v2aw_artifact_index_supplement.md"
+  ]
+}

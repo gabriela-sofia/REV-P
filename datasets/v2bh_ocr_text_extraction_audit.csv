@@ -1,0 +1,2 @@
+ocr_id,product_id,ocr_available,method,text_detected,text_excerpt,coordinate_like_tokens,place_like_tokens,confidence,can_support_georeferencing,blocking_reason,notes
+V2BH_OCR_5a3e636e4d35,MEDIA-871-16,false,not_available_safe_fallback,false,,286200|286800|287400|288000|9117000|9116500|9116000|9115500|9115000,Recife|Rua Eng. Armando Falcao|Rua da Bica,0.99,false,OCR_NOT_AVAILABLE,OCR is optional; deterministic printed-grid controls do not depend on OCR.

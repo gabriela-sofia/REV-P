@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "cue_id",
+    "product_id",
+    "cue_type",
+    "cue_text_or_description",
+    "pixel_x",
+    "pixel_y",
+    "pixel_bbox",
+    "confidence",
+    "method",
+    "can_support_georeferencing",
+    "requires_human_review",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "cue_id": {
+      "type": "string"
+    },
+    "product_id": {
+      "type": "string"
+    },
+    "cue_type": {
+      "type": "string"
+    },
+    "cue_text_or_description": {
+      "type": "string"
+    },
+    "pixel_x": {
+      "type": "string"
+    },
+    "pixel_y": {
+      "type": "string"
+    },
+    "pixel_bbox": {
+      "type": "string"
+    },
+    "confidence": {
+      "type": "string"
+    },
+    "method": {
+      "type": "string"
+    },
+    "can_support_georeferencing": {
+      "type": "string"
+    },
+    "requires_human_review": {
+      "type": "string"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

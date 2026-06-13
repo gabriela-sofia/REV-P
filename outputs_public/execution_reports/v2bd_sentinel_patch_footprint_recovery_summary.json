@@ -1,0 +1,19 @@
+{
+  "stage": "v2bd_sentinel_patch_footprint_recovery_drilldown",
+  "status": "OK_WITH_HUMAN_REVIEW_REQUIRED",
+  "priority_patch_id": "REC_00019",
+  "priority_package_id": "PKG_34713b8aab96",
+  "priority_event_id": "REC_2022_05_24_30",
+  "references_scanned": 458,
+  "direct_asset_links_found": 1,
+  "spatial_metadata_records_found": 1,
+  "valid_reconstruction_methods": 2,
+  "boundary_candidates_valid": 1,
+  "boundary_recovered": true,
+  "ready_patch_feed_rows": 1,
+  "turning_point_level": "TP1_ONE_PATCH_BOUNDARY_CANDIDATE_REQUIRES_HUMAN_REVIEW",
+  "turning_point_ready": true,
+  "can_train_model": false,
+  "can_create_operational_labels": false,
+  "methodological_status": "PATCH_FOOTPRINT_RECOVERED_FROM_EXPLICIT_LINEAGE_REQUIRES_HUMAN_REVIEW_NOT_FOR_TRAINING"
+}

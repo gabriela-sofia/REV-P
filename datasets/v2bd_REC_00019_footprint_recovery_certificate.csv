@@ -1,0 +1,2 @@
+certificate_id,patch_id,package_id,event_id,references_scanned,direct_asset_links_found,spatial_metadata_records_found,valid_reconstruction_methods,boundary_candidates_valid,boundary_recovered,turning_point_unlocked,status,blocking_reason,minimum_required_next_input,notes
+V2BD_CERT_4ea83a7769a4,REC_00019,PKG_34713b8aab96,REC_2022_05_24_30,458,1,1,2,1,true,true,BOUNDARY_RECOVERED_FROM_LINEAGE,,Human review of recovered footprint and current raster/header confirmation,Recovered footprint is TP1 candidate only; it does not create event geometry or truth.

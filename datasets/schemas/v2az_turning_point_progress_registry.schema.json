@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "v2az_turning_point_progress_registry.schema.json",
+  "description": "v2az fail-closed replay adapter; no invented geometry, label, model, final ground truth or automatic C4.",
+  "type": "object",
+  "required": [
+    "tp_id",
+    "turning_point_level",
+    "required_condition",
+    "observed_value",
+    "gate_passed",
+    "unlocked",
+    "remaining_blocker",
+    "next_action",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "tp_id": {
+      "type": "string"
+    },
+    "turning_point_level": {
+      "type": "string"
+    },
+    "required_condition": {
+      "type": "string"
+    },
+    "observed_value": {
+      "type": "string"
+    },
+    "gate_passed": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "unlocked": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "remaining_blocker": {
+      "type": "string"
+    },
+    "next_action": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

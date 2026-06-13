@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "v2ay_spatial_metadata_absence_certificate.schema.json",
+  "description": "v2ay fail-closed contract; no invented event/geometry, label, model, final ground truth, or automatic C4.",
+  "type": "object",
+  "required": [
+    "certificate_id",
+    "scan_scope",
+    "files_scanned",
+    "patches_scanned",
+    "spatial_metadata_found",
+    "patch_boundaries_found",
+    "event_polygons_found",
+    "usable_overlay_geometries_found",
+    "status",
+    "evidence_summary",
+    "blocking_reason",
+    "recommended_action",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "certificate_id": {
+      "type": "string"
+    },
+    "scan_scope": {
+      "type": "string"
+    },
+    "files_scanned": {
+      "type": "string"
+    },
+    "patches_scanned": {
+      "type": "string"
+    },
+    "spatial_metadata_found": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "patch_boundaries_found": {
+      "type": "string"
+    },
+    "event_polygons_found": {
+      "type": "string"
+    },
+    "usable_overlay_geometries_found": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "evidence_summary": {
+      "type": "string"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "recommended_action": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

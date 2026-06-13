@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "aoi_id",
+    "source_basis",
+    "target_patch_id",
+    "target_event_id",
+    "target_package_id",
+    "geometry_type",
+    "crs",
+    "bbox_minx",
+    "bbox_miny",
+    "bbox_maxx",
+    "bbox_maxy",
+    "area_m2",
+    "aoi_role",
+    "can_feed_overlay",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "aoi_id": {
+      "type": "string"
+    },
+    "source_basis": {
+      "type": "string"
+    },
+    "target_patch_id": {
+      "type": "string"
+    },
+    "target_event_id": {
+      "type": "string"
+    },
+    "target_package_id": {
+      "type": "string"
+    },
+    "geometry_type": {
+      "type": "string"
+    },
+    "crs": {
+      "type": "string"
+    },
+    "bbox_minx": {
+      "type": "string"
+    },
+    "bbox_miny": {
+      "type": "string"
+    },
+    "bbox_maxx": {
+      "type": "string"
+    },
+    "bbox_maxy": {
+      "type": "string"
+    },
+    "area_m2": {
+      "type": "string"
+    },
+    "aoi_role": {
+      "type": "string"
+    },
+    "can_feed_overlay": {
+      "type": "boolean"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

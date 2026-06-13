@@ -1,0 +1,119 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "v2ax_recife_p1_package_review_matrix",
+  "description": "v2ax fail-closed row contract. No operational label, training, final ground truth, or automatic C4.",
+  "type": "object",
+  "required": [
+    "matrix_id",
+    "package_id",
+    "patch_id",
+    "event_id",
+    "region",
+    "city",
+    "hazard_type",
+    "priority_rank",
+    "current_allowed_use",
+    "current_promotion_decision",
+    "needs_patch_boundary",
+    "needs_event_polygon",
+    "has_patch_boundary_source",
+    "has_event_polygon_source",
+    "ready_for_v2aw",
+    "ready_for_v2av",
+    "ready_for_v2au",
+    "remaining_blocker",
+    "next_action",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "matrix_id": {
+      "type": "string"
+    },
+    "package_id": {
+      "type": "string"
+    },
+    "patch_id": {
+      "type": "string"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "hazard_type": {
+      "type": "string"
+    },
+    "priority_rank": {
+      "type": "string"
+    },
+    "current_allowed_use": {
+      "type": "string"
+    },
+    "current_promotion_decision": {
+      "type": "string"
+    },
+    "needs_patch_boundary": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "needs_event_polygon": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "has_patch_boundary_source": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "has_event_polygon_source": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "ready_for_v2aw": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "ready_for_v2av": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "ready_for_v2au": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "remaining_blocker": {
+      "type": "string"
+    },
+    "next_action": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

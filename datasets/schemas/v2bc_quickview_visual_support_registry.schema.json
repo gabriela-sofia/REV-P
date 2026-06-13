@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "quickview_id",
+    "source_file",
+    "source_name",
+    "target_event_id",
+    "visual_support_role",
+    "is_georeferenced",
+    "can_extract_geometry",
+    "can_feed_event_polygon",
+    "blocking_reason",
+    "recommended_manual_use",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "quickview_id": {
+      "type": "string"
+    },
+    "source_file": {
+      "type": "string"
+    },
+    "source_name": {
+      "type": "string"
+    },
+    "target_event_id": {
+      "type": "string"
+    },
+    "visual_support_role": {
+      "type": "string"
+    },
+    "is_georeferenced": {
+      "type": "string"
+    },
+    "can_extract_geometry": {
+      "type": "boolean"
+    },
+    "can_feed_event_polygon": {
+      "type": "boolean"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "recommended_manual_use": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

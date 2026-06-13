@@ -1,0 +1,114 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "v2ax_recife_p1_patch_geometry_intake",
+  "description": "v2ax fail-closed row contract. No operational label, training, final ground truth, or automatic C4.",
+  "type": "object",
+  "required": [
+    "intake_id",
+    "patch_id",
+    "region",
+    "city",
+    "priority_rank",
+    "package_count",
+    "required_geometry_kind",
+    "source_type",
+    "geometry_value",
+    "geometry_path",
+    "crs",
+    "provenance_type",
+    "provenance_note",
+    "source_document",
+    "source_document_page",
+    "source_document_url_or_path",
+    "digitized_by",
+    "digitized_at",
+    "source_confidence",
+    "license_status",
+    "review_status",
+    "validation_status",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "intake_id": {
+      "type": "string"
+    },
+    "patch_id": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "priority_rank": {
+      "type": "string"
+    },
+    "package_count": {
+      "type": "string"
+    },
+    "required_geometry_kind": {
+      "type": "string"
+    },
+    "source_type": {
+      "type": "string",
+      "enum": [
+        "missing",
+        "bbox",
+        "wkt",
+        "geojson_inline",
+        "geojson_file"
+      ]
+    },
+    "geometry_value": {
+      "type": "string"
+    },
+    "geometry_path": {
+      "type": "string"
+    },
+    "crs": {
+      "type": "string"
+    },
+    "provenance_type": {
+      "type": "string"
+    },
+    "provenance_note": {
+      "type": "string"
+    },
+    "source_document": {
+      "type": "string"
+    },
+    "source_document_page": {
+      "type": "string"
+    },
+    "source_document_url_or_path": {
+      "type": "string"
+    },
+    "digitized_by": {
+      "type": "string"
+    },
+    "digitized_at": {
+      "type": "string"
+    },
+    "source_confidence": {
+      "type": "string"
+    },
+    "license_status": {
+      "type": "string"
+    },
+    "review_status": {
+      "type": "string"
+    },
+    "validation_status": {
+      "type": "string"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

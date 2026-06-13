@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "pair_feed_id",
+    "package_id",
+    "patch_id",
+    "event_id",
+    "patch_feed_id",
+    "event_feed_id",
+    "pair_ready",
+    "can_attempt_v2az_replay",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "pair_feed_id": {
+      "type": "string"
+    },
+    "package_id": {
+      "type": "string"
+    },
+    "patch_id": {
+      "type": "string"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "patch_feed_id": {
+      "type": "string"
+    },
+    "event_feed_id": {
+      "type": "string"
+    },
+    "pair_ready": {
+      "type": "boolean"
+    },
+    "can_attempt_v2az_replay": {
+      "type": "boolean"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

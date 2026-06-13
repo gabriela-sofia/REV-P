@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "rejection_id",
+    "source_name",
+    "source_file",
+    "geometry_or_evidence_type",
+    "reason_not_tp2",
+    "allowed_use",
+    "not_allowed_use",
+    "can_support_manual_digitization",
+    "can_feed_pipeline",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "rejection_id": {
+      "type": "string"
+    },
+    "source_name": {
+      "type": "string"
+    },
+    "source_file": {
+      "type": "string"
+    },
+    "geometry_or_evidence_type": {
+      "type": "string"
+    },
+    "reason_not_tp2": {
+      "type": "string"
+    },
+    "allowed_use": {
+      "type": "string"
+    },
+    "not_allowed_use": {
+      "type": "string"
+    },
+    "can_support_manual_digitization": {
+      "type": "boolean"
+    },
+    "can_feed_pipeline": {
+      "type": "boolean"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

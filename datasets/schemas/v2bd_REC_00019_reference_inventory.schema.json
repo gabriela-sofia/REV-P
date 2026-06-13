@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "reference_id",
+    "patch_id",
+    "file_path",
+    "file_type",
+    "line_number",
+    "field_name",
+    "field_value",
+    "reference_role",
+    "contains_spatial_hint",
+    "contains_asset_hint",
+    "contains_crs_hint",
+    "contains_window_hint",
+    "contains_transform_hint",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "reference_id": {
+      "type": "string"
+    },
+    "patch_id": {
+      "type": "string"
+    },
+    "file_path": {
+      "type": "string"
+    },
+    "file_type": {
+      "type": "string"
+    },
+    "line_number": {
+      "type": "string"
+    },
+    "field_name": {
+      "type": "string"
+    },
+    "field_value": {
+      "type": "string"
+    },
+    "reference_role": {
+      "type": "string"
+    },
+    "contains_spatial_hint": {
+      "type": "boolean"
+    },
+    "contains_asset_hint": {
+      "type": "boolean"
+    },
+    "contains_crs_hint": {
+      "type": "boolean"
+    },
+    "contains_window_hint": {
+      "type": "boolean"
+    },
+    "contains_transform_hint": {
+      "type": "boolean"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "manifest_id",
+    "artifact_type",
+    "artifact_path",
+    "artifact_role",
+    "source_file",
+    "can_be_used_for_digitization",
+    "can_feed_pipeline",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "manifest_id": {
+      "type": "string"
+    },
+    "artifact_type": {
+      "type": "string"
+    },
+    "artifact_path": {
+      "type": "string"
+    },
+    "artifact_role": {
+      "type": "string"
+    },
+    "source_file": {
+      "type": "string"
+    },
+    "can_be_used_for_digitization": {
+      "type": "boolean"
+    },
+    "can_feed_pipeline": {
+      "type": "boolean"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

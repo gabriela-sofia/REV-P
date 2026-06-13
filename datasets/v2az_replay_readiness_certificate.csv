@@ -1,0 +1,2 @@
+certificate_id,mode,manual_patch_rows,manual_event_rows,valid_patch_boundaries,valid_event_polygons,valid_patch_event_pairs,feed_v2aw_rows,feed_v2av_rows,feed_v2au_rows,can_replay_v2aw,can_replay_v2av,can_replay_v2au,can_attempt_tp4,turning_point_level,turning_point_ready,blocking_reason,notes
+V2AZ_CERT_84d91a99359c,dry_run,55,1,0,0,0,0,0,0,false,false,false,false,TP0_DOCUMENTED_ABSENCE,false,WAITING_FOR_REAL_GEOMETRY,Replay readiness is fail-closed and creates no label/model/ground truth.

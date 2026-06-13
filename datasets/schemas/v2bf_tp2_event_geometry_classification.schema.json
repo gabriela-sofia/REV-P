@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "classification_id",
+    "target_event_id",
+    "source_inventory_id",
+    "source_name",
+    "geometry_id",
+    "geometry_type",
+    "geometry_role",
+    "crs",
+    "crs_status",
+    "is_point",
+    "is_polygon_or_bbox",
+    "is_observed_event_specific",
+    "is_contextual",
+    "is_risk_or_susceptibility",
+    "is_visual_only",
+    "can_be_tp2_candidate",
+    "requires_human_review",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "classification_id": {
+      "type": "string"
+    },
+    "target_event_id": {
+      "type": "string"
+    },
+    "source_inventory_id": {
+      "type": "string"
+    },
+    "source_name": {
+      "type": "string"
+    },
+    "geometry_id": {
+      "type": "string"
+    },
+    "geometry_type": {
+      "type": "string"
+    },
+    "geometry_role": {
+      "type": "string"
+    },
+    "crs": {
+      "type": "string"
+    },
+    "crs_status": {
+      "type": "string"
+    },
+    "is_point": {
+      "type": "boolean"
+    },
+    "is_polygon_or_bbox": {
+      "type": "boolean"
+    },
+    "is_observed_event_specific": {
+      "type": "boolean"
+    },
+    "is_contextual": {
+      "type": "boolean"
+    },
+    "is_risk_or_susceptibility": {
+      "type": "boolean"
+    },
+    "is_visual_only": {
+      "type": "boolean"
+    },
+    "can_be_tp2_candidate": {
+      "type": "boolean"
+    },
+    "requires_human_review": {
+      "type": "boolean"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

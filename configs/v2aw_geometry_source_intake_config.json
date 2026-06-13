@@ -1,0 +1,35 @@
+{
+  "stage": "v2aw",
+  "description": "Geometry Source Intake + Recife Patch Boundary Filling Scaffold. Auditable intake channel for REAL patch boundary and observed event geometries. Never invents geometry, never creates a label, ground truth or trained model. A point is never a patch boundary; a point event is never an overlay.",
+  "offline_mode": true,
+  "strict_crs": true,
+  "accepted_crs": ["EPSG:4326", "EPSG:3857", "EPSG:31982", "EPSG:31983"],
+  "preferred_crs": "EPSG:4326",
+  "target_crs_for_area": "EPSG:3857",
+  "priority_region": "Recife",
+  "priority_allowed_use": "candidate_reference",
+  "allow_bbox": true,
+  "allow_wkt": true,
+  "allow_geojson_inline": true,
+  "allow_geojson_file": true,
+  "allow_point_as_patch_boundary": false,
+  "allow_default_patch_size": false,
+  "fail_on_missing_optional_geometry": false,
+  "required_source_fields": [
+    "geometry_source_id",
+    "geometry_role",
+    "linked_patch_id",
+    "source_type",
+    "crs",
+    "provenance_note"
+  ],
+  "methodological_invariants": {
+    "can_train_model": false,
+    "can_create_operational_labels": false,
+    "can_declare_ground_truth_final": false,
+    "never_invent_geometry": true,
+    "point_is_not_patch_boundary": true,
+    "point_event_is_not_overlay": true,
+    "context_or_risk_geometry_cannot_promote_c4": true
+  }
+}

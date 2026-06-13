@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "endpoint_id",
+    "source_url",
+    "discovered_url",
+    "endpoint_type",
+    "relation_to_product",
+    "attempted",
+    "success",
+    "content_type",
+    "local_path",
+    "hash_sha256",
+    "contains_geodata",
+    "contains_high_res_product",
+    "contains_metadata",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "endpoint_id": {
+      "type": "string"
+    },
+    "source_url": {
+      "type": "string"
+    },
+    "discovered_url": {
+      "type": "string"
+    },
+    "endpoint_type": {
+      "type": "string"
+    },
+    "relation_to_product": {
+      "type": "string"
+    },
+    "attempted": {
+      "type": "boolean"
+    },
+    "success": {
+      "type": "boolean"
+    },
+    "content_type": {
+      "type": "string"
+    },
+    "local_path": {
+      "type": "string"
+    },
+    "hash_sha256": {
+      "type": "string"
+    },
+    "contains_geodata": {
+      "type": "boolean"
+    },
+    "contains_high_res_product": {
+      "type": "boolean"
+    },
+    "contains_metadata": {
+      "type": "boolean"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

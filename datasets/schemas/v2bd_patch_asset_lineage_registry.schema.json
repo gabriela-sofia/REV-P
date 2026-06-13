@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "lineage_id",
+    "patch_id",
+    "region",
+    "city",
+    "package_id",
+    "event_id",
+    "candidate_asset_id",
+    "asset_file",
+    "asset_type",
+    "asset_sensor",
+    "asset_date",
+    "asset_band_or_product",
+    "lineage_source_file",
+    "lineage_confidence",
+    "has_direct_link",
+    "has_indirect_link",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "lineage_id": {
+      "type": "string"
+    },
+    "patch_id": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "package_id": {
+      "type": "string"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "candidate_asset_id": {
+      "type": "string"
+    },
+    "asset_file": {
+      "type": "string"
+    },
+    "asset_type": {
+      "type": "string"
+    },
+    "asset_sensor": {
+      "type": "string"
+    },
+    "asset_date": {
+      "type": "string"
+    },
+    "asset_band_or_product": {
+      "type": "string"
+    },
+    "lineage_source_file": {
+      "type": "string"
+    },
+    "lineage_confidence": {
+      "type": "string"
+    },
+    "has_direct_link": {
+      "type": "boolean"
+    },
+    "has_indirect_link": {
+      "type": "boolean"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

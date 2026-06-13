@@ -1,0 +1,9 @@
+[v2aw] Geometry Source Intake + Recife Patch Boundary Filling Scaffold
+[v2aw] inputs_found=3 outputs_written=10
+[v2aw] priority_region=Recife priority_patches=55
+[v2aw] patch_sources_provided=0 patch_sources_valid=0 event_sources_provided=9 event_sources_valid=0
+[v2aw] ready_for_v2av=0 ready_for_v2au=0 point_anchors=9
+[v2aw] can_train_model=False can_create_operational_labels=False
+[v2aw] methodological_status=GEOMETRY_SOURCE_INTAKE_READY_NOT_FOR_TRAINING
+[v2aw] structural_errors=0
+[v2aw] status=OK

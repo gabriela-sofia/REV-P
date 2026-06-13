@@ -1,0 +1,2 @@
+target_type,target_id,package_id,source_type,geometry_value,geometry_path,crs,provenance_note,source_document,review_status,accepted_source_types,accepted_crs,blocking_reason,instructions
+event_polygon,REC_2022_05_24_30,PKG_34713b8aab96,missing,,,UNKNOWN,,,not_started,wkt|geojson_file|geojson_inline,EPSG:4326|EPSG:3857|EPSG:31982|EPSG:31983,REAL_GEOMETRY_REQUIRED,"Digitize from verified source, save geometry, record CRS/provenance, then set provided_unreviewed."

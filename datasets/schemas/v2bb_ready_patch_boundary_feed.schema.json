@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "feed_id",
+    "patch_id",
+    "package_id",
+    "source_public",
+    "access_status",
+    "source_url_or_reference",
+    "local_derived_path",
+    "geometry_format",
+    "crs",
+    "geometry_hash",
+    "provenance_note",
+    "review_status"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "feed_id": {
+      "type": "boolean"
+    },
+    "patch_id": {
+      "type": "string"
+    },
+    "package_id": {
+      "type": "string"
+    },
+    "source_public": {
+      "type": "boolean"
+    },
+    "access_status": {
+      "type": "string"
+    },
+    "source_url_or_reference": {
+      "type": "string"
+    },
+    "local_derived_path": {
+      "type": "string"
+    },
+    "geometry_format": {
+      "type": "string"
+    },
+    "crs": {
+      "type": "string"
+    },
+    "geometry_hash": {
+      "type": "string"
+    },
+    "provenance_note": {
+      "type": "string"
+    },
+    "review_status": {
+      "type": "string"
+    }
+  }
+}

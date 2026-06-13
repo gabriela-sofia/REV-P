@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "inspection_id",
+    "product_id",
+    "event_id",
+    "package_id",
+    "product_file",
+    "file_exists",
+    "file_size_bytes",
+    "hash_sha256",
+    "image_width_px",
+    "image_height_px",
+    "channels",
+    "dpi",
+    "has_alpha",
+    "can_open_image",
+    "contains_visual_map",
+    "contains_legend",
+    "contains_scale_bar",
+    "contains_north_arrow",
+    "contains_coordinate_grid",
+    "contains_coordinate_text",
+    "contains_place_labels",
+    "contains_drawn_scars",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "inspection_id": {
+      "type": "string"
+    },
+    "product_id": {
+      "type": "string"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "package_id": {
+      "type": "string"
+    },
+    "product_file": {
+      "type": "string"
+    },
+    "file_exists": {
+      "type": "string"
+    },
+    "file_size_bytes": {
+      "type": "string"
+    },
+    "hash_sha256": {
+      "type": "string"
+    },
+    "image_width_px": {
+      "type": "string"
+    },
+    "image_height_px": {
+      "type": "string"
+    },
+    "channels": {
+      "type": "string"
+    },
+    "dpi": {
+      "type": "string"
+    },
+    "has_alpha": {
+      "type": "string"
+    },
+    "can_open_image": {
+      "type": "string"
+    },
+    "contains_visual_map": {
+      "type": "string"
+    },
+    "contains_legend": {
+      "type": "string"
+    },
+    "contains_scale_bar": {
+      "type": "string"
+    },
+    "contains_north_arrow": {
+      "type": "string"
+    },
+    "contains_coordinate_grid": {
+      "type": "string"
+    },
+    "contains_coordinate_text": {
+      "type": "string"
+    },
+    "contains_place_labels": {
+      "type": "string"
+    },
+    "contains_drawn_scars": {
+      "type": "string"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

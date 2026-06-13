@@ -1,0 +1,6 @@
+[v2ax] patches=55 events=1 expected_events=3 packages=55
+[v2ax] patch_sources=0 event_sources=0
+[v2ax] ready_v2aw=0 ready_v2av=0 ready_v2au=0
+[v2ax] pending_manual=56 event_mismatch=True
+[v2ax] can_train_model=False can_create_operational_labels=False
+[v2ax] status=OK_WITH_EXPECTED_BLOCKERS_AND_EVENT_COUNT_MISMATCH

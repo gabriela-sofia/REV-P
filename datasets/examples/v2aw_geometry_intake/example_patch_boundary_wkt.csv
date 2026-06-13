@@ -1,0 +1,2 @@
+geometry_source_id,linked_patch_id,region,city,priority_rank,source_type,geometry_value,geometry_path,crs,provenance_type,provenance_note,digitized_by,digitized_at,source_document,source_document_page,source_confidence,license_status,review_status,notes
+PGS_EXAMPLE_WKT,EXAMPLE_PATCH_0002,ExampleCity,ExampleCity,1,wkt,"POLYGON((0 0, 100 0, 100 100, 0 100, 0 0))",,EPSG:3857,manual_digitization,Synthetic example WKT; not real data,example,2026-01-01,example_doc,1,EXAMPLE,example_license,provided_unreviewed,SYNTHETIC EXAMPLE - do not use as real data

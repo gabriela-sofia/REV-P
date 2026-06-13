@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "update_id",
+    "target_type",
+    "target_id",
+    "source_file_to_edit",
+    "field_name",
+    "current_value",
+    "expected_value_or_instruction",
+    "is_required",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "update_id": {
+      "type": "string"
+    },
+    "target_type": {
+      "type": "string"
+    },
+    "target_id": {
+      "type": "string"
+    },
+    "source_file_to_edit": {
+      "type": "string"
+    },
+    "field_name": {
+      "type": "string"
+    },
+    "current_value": {
+      "type": "string"
+    },
+    "expected_value_or_instruction": {
+      "type": "string"
+    },
+    "is_required": {
+      "type": "boolean"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

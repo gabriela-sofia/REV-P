@@ -1,0 +1,5 @@
+policy_id,geometry_source,geometry_role,allowed_use,not_allowed_use,can_feed_v2aw,can_feed_v2av,can_feed_v2au,can_support_digitization,can_be_ground_truth,blocking_reason,notes
+V2BC_POLICY_c907860443b2,risk_points,context_risk_location_point,context_only,event_polygon|patch_boundary|ground_truth,false,false,false,true,false,POINT_CONTEXT_NOT_OBSERVED_EVENT_POLYGON,No automatic promotion.
+V2BC_POLICY_77bc862989d9,Charter quickview,visual_support_only,manual visual reference,verified_product|automatic_geometry,false,false,false,true,false,QUICKVIEW_NOT_GEOREFERENCED,No automatic promotion.
+V2BC_POLICY_3186e87fd8f3,SGB study,temporal_contextual_support,documentary support,event_polygon|patch_boundary,false,false,false,true,false,DOCUMENT_NOT_GEOMETRY,No automatic promotion.
+V2BC_POLICY_86f1d49c4954,CPRM points,point_anchor_only,spatial anchor/context,event_polygon|overlay,false,false,false,true,false,POINT_ANCHOR_NOT_OVERLAY,No automatic promotion.

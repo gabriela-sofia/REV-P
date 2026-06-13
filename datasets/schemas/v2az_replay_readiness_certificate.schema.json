@@ -1,0 +1,103 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "v2az_replay_readiness_certificate.schema.json",
+  "description": "v2az fail-closed replay adapter; no invented geometry, label, model, final ground truth or automatic C4.",
+  "type": "object",
+  "required": [
+    "certificate_id",
+    "mode",
+    "manual_patch_rows",
+    "manual_event_rows",
+    "valid_patch_boundaries",
+    "valid_event_polygons",
+    "valid_patch_event_pairs",
+    "feed_v2aw_rows",
+    "feed_v2av_rows",
+    "feed_v2au_rows",
+    "can_replay_v2aw",
+    "can_replay_v2av",
+    "can_replay_v2au",
+    "can_attempt_tp4",
+    "turning_point_level",
+    "turning_point_ready",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "certificate_id": {
+      "type": "string"
+    },
+    "mode": {
+      "type": "string"
+    },
+    "manual_patch_rows": {
+      "type": "string"
+    },
+    "manual_event_rows": {
+      "type": "string"
+    },
+    "valid_patch_boundaries": {
+      "type": "string"
+    },
+    "valid_event_polygons": {
+      "type": "string"
+    },
+    "valid_patch_event_pairs": {
+      "type": "string"
+    },
+    "feed_v2aw_rows": {
+      "type": "string"
+    },
+    "feed_v2av_rows": {
+      "type": "string"
+    },
+    "feed_v2au_rows": {
+      "type": "string"
+    },
+    "can_replay_v2aw": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "can_replay_v2av": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "can_replay_v2au": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "can_attempt_tp4": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "turning_point_level": {
+      "type": "string"
+    },
+    "turning_point_ready": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

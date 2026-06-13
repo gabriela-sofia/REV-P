@@ -1,0 +1,3 @@
+[v2bg] mode=full products=51 endpoints=102 downloads=100/100
+[v2bg] vectors=0 tp2_feeds=0 digitization_ready=true
+[v2bg] turning_point=TP2_DIGITIZATION_READY_FROM_PUBLIC_CHARTER_PRODUCT can_train_model=false can_create_operational_labels=false

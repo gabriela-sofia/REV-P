@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "candidate_boundary_id",
+    "patch_id",
+    "boundary_source_method",
+    "source_file",
+    "geometry_format",
+    "crs",
+    "crs_status",
+    "geometry_present",
+    "geometry_valid",
+    "area_m2",
+    "bbox_minx",
+    "bbox_miny",
+    "bbox_maxx",
+    "bbox_maxy",
+    "geometry_hash",
+    "can_feed_v2av",
+    "can_feed_v2az",
+    "can_feed_v2aw",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "candidate_boundary_id": {
+      "type": "string"
+    },
+    "patch_id": {
+      "type": "string"
+    },
+    "boundary_source_method": {
+      "type": "string"
+    },
+    "source_file": {
+      "type": "string"
+    },
+    "geometry_format": {
+      "type": "string"
+    },
+    "crs": {
+      "type": "string"
+    },
+    "crs_status": {
+      "type": "string"
+    },
+    "geometry_present": {
+      "type": "boolean"
+    },
+    "geometry_valid": {
+      "type": "boolean"
+    },
+    "area_m2": {
+      "type": "string"
+    },
+    "bbox_minx": {
+      "type": "string"
+    },
+    "bbox_miny": {
+      "type": "string"
+    },
+    "bbox_maxx": {
+      "type": "string"
+    },
+    "bbox_maxy": {
+      "type": "string"
+    },
+    "geometry_hash": {
+      "type": "string"
+    },
+    "can_feed_v2av": {
+      "type": "boolean"
+    },
+    "can_feed_v2az": {
+      "type": "boolean"
+    },
+    "can_feed_v2aw": {
+      "type": "boolean"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

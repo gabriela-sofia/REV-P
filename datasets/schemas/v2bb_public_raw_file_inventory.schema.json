@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "raw_file_id",
+    "target_type",
+    "target_id",
+    "source_name",
+    "source_url_or_reference",
+    "local_raw_path",
+    "file_name",
+    "file_extension",
+    "file_size_bytes",
+    "hash_sha256",
+    "detected_format",
+    "source_public",
+    "access_status",
+    "can_parse",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "raw_file_id": {
+      "type": "string"
+    },
+    "target_type": {
+      "type": "string"
+    },
+    "target_id": {
+      "type": "string"
+    },
+    "source_name": {
+      "type": "string"
+    },
+    "source_url_or_reference": {
+      "type": "string"
+    },
+    "local_raw_path": {
+      "type": "string"
+    },
+    "file_name": {
+      "type": "string"
+    },
+    "file_extension": {
+      "type": "string"
+    },
+    "file_size_bytes": {
+      "type": "string"
+    },
+    "hash_sha256": {
+      "type": "string"
+    },
+    "detected_format": {
+      "type": "string"
+    },
+    "source_public": {
+      "type": "boolean"
+    },
+    "access_status": {
+      "type": "string"
+    },
+    "can_parse": {
+      "type": "boolean"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

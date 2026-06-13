@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "ocr_id",
+    "product_id",
+    "ocr_available",
+    "method",
+    "text_detected",
+    "text_excerpt",
+    "coordinate_like_tokens",
+    "place_like_tokens",
+    "confidence",
+    "can_support_georeferencing",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "ocr_id": {
+      "type": "string"
+    },
+    "product_id": {
+      "type": "string"
+    },
+    "ocr_available": {
+      "type": "string"
+    },
+    "method": {
+      "type": "string"
+    },
+    "text_detected": {
+      "type": "string"
+    },
+    "text_excerpt": {
+      "type": "string"
+    },
+    "coordinate_like_tokens": {
+      "type": "string"
+    },
+    "place_like_tokens": {
+      "type": "string"
+    },
+    "confidence": {
+      "type": "string"
+    },
+    "can_support_georeferencing": {
+      "type": "string"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

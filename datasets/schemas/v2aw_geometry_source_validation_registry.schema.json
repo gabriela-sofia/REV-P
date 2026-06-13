@@ -1,0 +1,130 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "v2aw geometry source validation registry",
+  "description": "Row contract for v2aw_geometry_source_validation_registry.csv. v2aw geometry intake. No operational label, no training target, no final ground truth; max meaning READY_FOR_V2AV/READY_FOR_V2AU.",
+  "type": "object",
+  "required": [
+    "validation_id",
+    "geometry_source_id",
+    "geometry_kind",
+    "linked_patch_id",
+    "linked_event_id",
+    "region",
+    "city",
+    "source_type",
+    "geometry_role",
+    "crs",
+    "crs_status",
+    "geometry_present",
+    "geometry_valid",
+    "geometry_format_valid",
+    "geometry_hash",
+    "can_be_used_by_v2av",
+    "can_be_used_by_v2au",
+    "blocking_reason",
+    "recommended_fix",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "validation_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "geometry_source_id": {
+      "type": "string"
+    },
+    "geometry_kind": {
+      "type": "string",
+      "enum": [
+        "patch_boundary",
+        "event_geometry",
+        "unknown"
+      ]
+    },
+    "linked_patch_id": {
+      "type": "string"
+    },
+    "linked_event_id": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "source_type": {
+      "type": "string",
+      "enum": [
+        "bbox",
+        "wkt",
+        "geojson_inline",
+        "geojson_file",
+        "missing"
+      ]
+    },
+    "geometry_role": {
+      "type": "string"
+    },
+    "crs": {
+      "type": "string"
+    },
+    "crs_status": {
+      "type": "string",
+      "enum": [
+        "KNOWN",
+        "UNKNOWN"
+      ]
+    },
+    "geometry_present": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "geometry_valid": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "geometry_format_valid": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "geometry_hash": {
+      "type": "string"
+    },
+    "can_be_used_by_v2av": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "can_be_used_by_v2au": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "recommended_fix": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "x_id_field": "validation_id",
+  "x_csv_file": "datasets/v2aw_geometry_source_validation_registry.csv"
+}

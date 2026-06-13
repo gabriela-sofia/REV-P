@@ -1,0 +1,91 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "v2ay_geometry_acquisition_targets.schema.json",
+  "description": "v2ay fail-closed contract; no invented event/geometry, label, model, final ground truth, or automatic C4.",
+  "type": "object",
+  "required": [
+    "acquisition_id",
+    "target_type",
+    "target_id",
+    "region",
+    "city",
+    "priority_rank",
+    "recommended_source_category",
+    "recommended_source_name",
+    "what_to_acquire",
+    "why_needed",
+    "accepted_formats",
+    "required_crs",
+    "provenance_requirement",
+    "license_requirement",
+    "suggested_search_terms",
+    "manual_collection_steps",
+    "validation_command",
+    "feeds_file",
+    "blocks_until_filled",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "acquisition_id": {
+      "type": "string"
+    },
+    "target_type": {
+      "type": "string"
+    },
+    "target_id": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "priority_rank": {
+      "type": "string"
+    },
+    "recommended_source_category": {
+      "type": "string"
+    },
+    "recommended_source_name": {
+      "type": "string"
+    },
+    "what_to_acquire": {
+      "type": "string"
+    },
+    "why_needed": {
+      "type": "string"
+    },
+    "accepted_formats": {
+      "type": "string"
+    },
+    "required_crs": {
+      "type": "string"
+    },
+    "provenance_requirement": {
+      "type": "string"
+    },
+    "license_requirement": {
+      "type": "string"
+    },
+    "suggested_search_terms": {
+      "type": "string"
+    },
+    "manual_collection_steps": {
+      "type": "string"
+    },
+    "validation_command": {
+      "type": "string"
+    },
+    "feeds_file": {
+      "type": "string"
+    },
+    "blocks_until_filled": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

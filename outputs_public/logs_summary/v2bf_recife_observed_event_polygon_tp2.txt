@@ -1,0 +1,3 @@
+[v2bf] mode=full searches=17 attempts=5 downloads=5
+[v2bf] candidates=0 feeds=0 tp2=false tp3=false tp4=false
+[v2bf] can_train_model=false can_create_operational_labels=false

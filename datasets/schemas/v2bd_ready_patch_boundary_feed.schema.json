@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "feed_id",
+    "patch_id",
+    "package_id",
+    "event_id",
+    "source_method",
+    "source_file",
+    "geometry_path",
+    "crs",
+    "geometry_hash",
+    "ready_for_v2aw",
+    "ready_for_v2av",
+    "ready_for_v2az",
+    "requires_human_review",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "feed_id": {
+      "type": "string"
+    },
+    "patch_id": {
+      "type": "string"
+    },
+    "package_id": {
+      "type": "string"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "source_method": {
+      "type": "string"
+    },
+    "source_file": {
+      "type": "string"
+    },
+    "geometry_path": {
+      "type": "string"
+    },
+    "crs": {
+      "type": "string"
+    },
+    "geometry_hash": {
+      "type": "string"
+    },
+    "ready_for_v2aw": {
+      "type": "boolean"
+    },
+    "ready_for_v2av": {
+      "type": "boolean"
+    },
+    "ready_for_v2az": {
+      "type": "boolean"
+    },
+    "requires_human_review": {
+      "type": "boolean"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

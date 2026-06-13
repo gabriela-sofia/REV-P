@@ -1,0 +1,11 @@
+check_id,event_id,check_item,is_required,current_status,blocking_reason,how_to_complete,notes
+V2AX_ECHK_79978ef36e26,REC_2022_05_24_30,Confirmar evento,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm event identity.,Observed polygon remains review-only evidence.
+V2AX_ECHK_64ca48f2ffd3,REC_2022_05_24_30,Confirmar fenomeno,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Confirm hazard semantics.,Observed polygon remains review-only evidence.
+V2AX_ECHK_c33603230059,REC_2022_05_24_30,Obter poligono observado real,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Collect observed event polygon.,Observed polygon remains review-only evidence.
+V2AX_ECHK_7aad54b7d3ef,REC_2022_05_24_30,Distinguir observado de risco/contexto,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Do not promote context geometry.,Observed polygon remains review-only evidence.
+V2AX_ECHK_4c138c3c20f5,REC_2022_05_24_30,Registrar CRS,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill a verified accepted CRS.,Observed polygon remains review-only evidence.
+V2AX_ECHK_d5dbfd733601,REC_2022_05_24_30,Registrar fonte,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill provenance fields.,Observed polygon remains review-only evidence.
+V2AX_ECHK_fa39552df236,REC_2022_05_24_30,Registrar licenca,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill license_status.,Observed polygon remains review-only evidence.
+V2AX_ECHK_dc101640d151,REC_2022_05_24_30,Registrar responsavel,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Fill digitized_by.,Observed polygon remains review-only evidence.
+V2AX_ECHK_01e4e8848027,REC_2022_05_24_30,Validar que ponto CPRM nao e overlay,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Keep CPRM point anchor-only.,Observed polygon remains review-only evidence.
+V2AX_ECHK_b5046b5312c6,REC_2022_05_24_30,Aprovar para v2au,true,pending,BLOCKED_PENDING_MANUAL_GEOMETRY,Human review then approved status.,Observed polygon remains review-only evidence.

@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "task_id",
+    "target_event_id",
+    "target_package_id",
+    "input_support_layers",
+    "output_required",
+    "output_path_expected",
+    "required_crs",
+    "required_format",
+    "step_by_step",
+    "validation_command",
+    "blocking_reason",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "task_id": {
+      "type": "string"
+    },
+    "target_event_id": {
+      "type": "string"
+    },
+    "target_package_id": {
+      "type": "string"
+    },
+    "input_support_layers": {
+      "type": "string"
+    },
+    "output_required": {
+      "type": "string"
+    },
+    "output_path_expected": {
+      "type": "string"
+    },
+    "required_crs": {
+      "type": "string"
+    },
+    "required_format": {
+      "type": "string"
+    },
+    "step_by_step": {
+      "type": "string"
+    },
+    "validation_command": {
+      "type": "string"
+    },
+    "blocking_reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

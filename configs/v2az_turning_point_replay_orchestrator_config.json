@@ -1,0 +1,22 @@
+{
+  "stage": "v2az_turning_point_replay_orchestrator",
+  "offline_mode": true,
+  "default_mode": "dry_run",
+  "allow_subprocess_replay": true,
+  "run_v2aw_on_replay": true,
+  "run_v2av_on_replay": true,
+  "run_v2au_on_replay": true,
+  "priority_region": "Recife",
+  "priority_event_id": "REC_2022_05_24_30",
+  "minimum_tp1_patch_boundaries": 1,
+  "minimum_tp2_event_polygons": 1,
+  "minimum_tp4_confirmed_overlays": 1,
+  "accepted_crs": ["EPSG:4326", "EPSG:3857", "EPSG:31982", "EPSG:31983"],
+  "accepted_patch_geometry_formats": ["bbox", "wkt", "geojson_inline", "geojson_file"],
+  "accepted_event_geometry_formats": ["wkt", "geojson_inline", "geojson_file"],
+  "allow_point_as_patch_boundary": false,
+  "allow_point_as_event_polygon": false,
+  "allow_auto_geometry_generation": false,
+  "can_create_operational_labels": false,
+  "can_train_model": false
+}

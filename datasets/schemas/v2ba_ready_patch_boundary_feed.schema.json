@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "feed_id",
+    "patch_id",
+    "package_id",
+    "region",
+    "city",
+    "source_type",
+    "geometry_value",
+    "geometry_path",
+    "crs",
+    "provenance_note",
+    "source_public",
+    "access_status",
+    "source_file",
+    "hash_sha256"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "feed_id": {
+      "type": "string"
+    },
+    "patch_id": {
+      "type": "string"
+    },
+    "package_id": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "source_type": {
+      "type": "string"
+    },
+    "geometry_value": {
+      "type": "string"
+    },
+    "geometry_path": {
+      "type": "string"
+    },
+    "crs": {
+      "type": "string"
+    },
+    "provenance_note": {
+      "type": "string"
+    },
+    "source_public": {
+      "type": "boolean"
+    },
+    "access_status": {
+      "type": "string"
+    },
+    "source_file": {
+      "type": "string"
+    },
+    "hash_sha256": {
+      "type": "string"
+    }
+  }
+}

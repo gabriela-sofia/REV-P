@@ -1,0 +1,11 @@
+cue_id,product_id,cue_type,cue_text_or_description,pixel_x,pixel_y,pixel_bbox,confidence,method,can_support_georeferencing,requires_human_review,blocking_reason,notes
+V2BH_CUE_710e7c6f0ae8,MEDIA-871-16,coordinate_text,"Printed x-axis UTM ticks: 286200, 286800, 287400, 288000",494,2358,"494,2353,2186,2400",0.99,fixed_public_product_visual_and_pixel_inspection,true,true,,Cue is traceable to MEDIA-871-16.
+V2BH_CUE_752aecc82341,MEDIA-871-16,coordinate_text,Printed y-axis UTM ticks: 9117000 to 9115000,88,424,"30,424,88,2306",0.99,fixed_public_product_visual_and_pixel_inspection,true,true,,Cue is traceable to MEDIA-871-16.
+V2BH_CUE_ac58adb8f72c,MEDIA-871-16,grid_tick,Four high-confidence printed UTM grid intersections used as affine controls,,,,0.99,fixed_public_product_visual_and_pixel_inspection,true,true,,Cue is traceable to MEDIA-871-16.
+V2BH_CUE_c5b9fd18960b,MEDIA-871-16,map_frame,Main map frame excluding legend and inset,,,"88,95,2635,2358",0.99,fixed_public_product_visual_and_pixel_inspection,true,true,,Cue is traceable to MEDIA-871-16.
+V2BH_CUE_d48246a22286,MEDIA-871-16,legend_item,Orange outline explicitly labeled Landslides scars,2826,411,"2767,382,2890,443",0.99,fixed_public_product_visual_and_pixel_inspection,false,true,,Cue is traceable to MEDIA-871-16.
+V2BH_CUE_fca87a065756,MEDIA-871-16,scar_symbol_legend,Orange outline is the observed scar symbol basis,2826,411,"2767,382,2890,443",0.99,fixed_public_product_visual_and_pixel_inspection,false,true,,Cue is traceable to MEDIA-871-16.
+V2BH_CUE_bfae1b505519,MEDIA-871-16,scale_bar,Printed 0 to 1 km scale bar,2085,2277,"1560,2210,2607,2350",0.99,fixed_public_product_visual_and_pixel_inspection,false,true,,Cue is traceable to MEDIA-871-16.
+V2BH_CUE_12240d19e984,MEDIA-871-16,north_arrow,North arrow in upper-left map frame,166,227,"105,113,235,381",0.99,fixed_public_product_visual_and_pixel_inspection,false,true,,Cue is traceable to MEDIA-871-16.
+V2BH_CUE_1e734ec13293,MEDIA-871-16,place_label,Street labels printed over imagery,,,,0.95,fixed_public_product_visual_and_pixel_inspection,false,true,,Cue is traceable to MEDIA-871-16.
+V2BH_CUE_ce1cdd9a48e2,MEDIA-871-16,coordinate_text,Projected coordinate system WGS 84 / UTM ZONE 25S,3068,2358,"2710,2260,3490,2390",0.99,fixed_public_product_visual_and_pixel_inspection,true,true,,Cue is traceable to MEDIA-871-16.
