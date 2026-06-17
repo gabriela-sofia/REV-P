@@ -1,0 +1,4 @@
+source_id,source_family,region,event_name,url,expected_file_type,license_status,license_reference,download_allowed,public_repo_allowed,manual_review_required,notes
+SRC_v2co_RECIFE_CHARTER_758,INTERNATIONAL_CHARTER,Recife,Recife May 2022 Charter Activation 758,,VECTOR_OR_RASTER_PACKAGE,UNKNOWN,,false,false,true,Registro preparado; acesso manual e licenca ainda pendentes.
+SRC_v2co_PETROPOLIS_SGB_CPRM,SGB_CPRM,Petropolis,Petropolis disaster evidence candidate,,OFFICIAL_GEOSPATIAL_LAYER,UNKNOWN,,false,false,true,Fonte oficial permitida para catalogacao; arquivo e licenca nao confirmados.
+SRC_v2co_CURITIBA_OFFICIAL_LOCAL,OFFICIAL_MUNICIPAL_STATE,Curitiba,Curitiba official local evidence candidate,,OFFICIAL_RECORD_OR_GEOSPATIAL_LAYER,UNKNOWN,,false,false,true,Preparado para cadastro controlado sem busca livre.

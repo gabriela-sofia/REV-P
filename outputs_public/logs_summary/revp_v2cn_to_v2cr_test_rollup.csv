@@ -1,0 +1,6 @@
+stage,command,status,output,detail
+v2cn,gap_matrix,PASS,outputs_public/tables/revp_external_evidence_gap_matrix_v2cn.csv,executado
+v2co,external_acquisition,PASS,outputs_public/tables/revp_external_source_registry_v2co.csv,executado
+v2cp,manifest,PASS,datasets/external_evidence/external_evidence_manifest_v2cp.csv,executado
+v2cq,geospatial_qa,PASS,outputs_public/tables/revp_external_geospatial_qa_v2cq.csv,executado
+v2cr,patch_pairing,PASS,outputs_public/tables/revp_external_patch_pairing_v2cr.csv,executado

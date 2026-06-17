@@ -1,0 +1,5 @@
+stage,command,status,output,detail
+v2cj,priorizacao,PASS,outputs_public/tables/revp_tp2_candidate_priority_v2cj.csv,executado
+v2ck,pacote_digitizacao,PASS,outputs_public/tables/revp_digitization_task_queue_v2ck.csv,executado
+v2cl,validacao_geometria,PASS,outputs_public/tables/revp_observed_geometry_validation_v2cl.csv,executado
+v2cm,replay_bloqueavel,PASS,outputs_public/tables/revp_patch_event_replay_v2cm.csv,executado
