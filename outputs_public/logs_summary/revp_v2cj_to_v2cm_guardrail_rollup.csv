@@ -1,0 +1,10 @@
+guardrail,expected_value,observed_value,status,detail
+ground_truth_operational,ABSENT,ABSENT,PASS,trava global preservada
+formal_labels_available,ABSENT,ABSENT,PASS,trava global preservada
+formal_negatives_available,ABSENT,ABSENT,PASS,trava global preservada
+training_ready,BLOCKED,BLOCKED,PASS,trava global preservada
+supervised_model_allowed,false,false,PASS,trava global preservada
+prediction_claim_allowed,false,false,PASS,trava global preservada
+automatic_detection_claim_allowed,false,false,PASS,trava global preservada
+operational_validation_claim_allowed,false,false,PASS,trava global preservada
+pipeline_integrado_executado,PASS,PASS,PASS,v2cj-v2cm executado em ordem
