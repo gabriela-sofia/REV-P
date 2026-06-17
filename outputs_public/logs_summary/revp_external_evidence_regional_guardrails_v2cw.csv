@@ -1,0 +1,9 @@
+guardrail,expected_value,observed_value,status,detail
+review_only,true,true,PASS,fontes registradas nao promovem evidencia operacional
+patch_level_ground_truth,absent,absent,PASS,nenhum ground truth patch-level criado
+binary_labels,absent,absent,PASS,nenhuma fonte vira label
+formal_negatives,absent,absent,PASS,nenhum negativo formal criado
+training_dataset,absent,absent,PASS,nenhum dataset supervisionado criado
+tp2_not_closed,true,true,PASS,nenhum TP2 fechado
+regional_status_blocks_tp2,true,true,PASS,status regional nunca fecha TP2
+curitiba_gap_explicit,true,true,PASS,Curitiba permanece sem dataset observado inventado
