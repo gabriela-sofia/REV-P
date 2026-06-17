@@ -1,0 +1,9 @@
+guardrail,expected_value,observed_value,status,detail
+review_only,true,true,PASS,fontes registradas nao promovem evidencia operacional
+patch_level_ground_truth,absent,absent,PASS,nenhum ground truth patch-level criado
+binary_labels,absent,absent,PASS,nenhuma fonte vira label
+formal_negatives,absent,absent,PASS,nenhum negativo formal criado
+training_dataset,absent,absent,PASS,nenhum dataset supervisionado criado
+tp2_not_closed,true,true,PASS,nenhum TP2 fechado
+unknown_license_blocks_public_download,true,true,PASS,licenca UNKNOWN gera raw_download_allowed=false
+raw_public_output_blocked,true,true,PASS,arquivo bruto externo nao vai para outputs_public

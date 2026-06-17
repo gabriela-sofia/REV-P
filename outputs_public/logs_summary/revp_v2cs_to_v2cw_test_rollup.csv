@@ -1,0 +1,6 @@
+stage,command,status,output,detail
+v2cs,real_source_seeding,PASS,datasets/external_evidence/real_sources_registry_v2cs.csv,executado
+v2ct,source_license_triage,PASS,outputs_public/tables/revp_source_license_triage_v2ct.csv,executado
+v2cu,external_registry_sync,PASS,datasets/external_evidence/sources_registry_v2cu.csv,executado
+v2cv,product_discovery_checklist,PASS,outputs_public/tables/revp_external_product_discovery_checklist_v2cv.csv,executado
+v2cw,regional_report,PASS,outputs_public/tables/revp_external_evidence_regional_readiness_v2cw.csv,executado
