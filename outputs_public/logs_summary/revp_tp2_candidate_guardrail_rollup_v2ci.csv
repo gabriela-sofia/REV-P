@@ -1,0 +1,9 @@
+guardrail,expected_value,observed_value,status,detail
+formal_labels_available,ABSENT,ABSENT,PASS,Nenhum label formal criado.
+formal_negatives_available,ABSENT,ABSENT,PASS,Nenhum negativo formal criado.
+training_ready,BLOCKED,BLOCKED,PASS,Treino permanece bloqueado.
+ground_truth_operational,ABSENT,ABSENT,PASS,Sem ground truth operacional patch-level.
+supervised_model_allowed,false,false,PASS,Classificador supervisionado nao permitido.
+prediction_claim_allowed,false,false,PASS,Sem reivindicacao preditiva.
+intersection_claim_allowed,false_unless_validated_vector_geometry_and_explicit_test,false,PASS,Nenhuma intersecao observada foi afirmada neste marco.
+ground_truth_ready_status_absent,true,true,PASS,Status de promocao operacional nao utilizado.
