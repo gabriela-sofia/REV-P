@@ -1,0 +1,8 @@
+stage_id,guardrail_file,overall,checks_total,checks_pass,checks_not_pass,interpretation
+v2ca,curitiba_acquisition_guardrails_v2ca.json,PASS,14,14,0,ALL_PASS
+v2cb,curitiba_evidence_acquisition_guardrails_v2cb.json,PASS,16,16,0,ALL_PASS
+v2cc,curitiba_external_intake_guardrails_v2cc.json,PASS,19,19,0,ALL_PASS
+v2cd,curitiba_live_download_guardrails_v2cd.json,PASS,20,20,0,ALL_PASS
+v2ce,curitiba_deep_crawler_guardrails_v2ce.json,PASS,24,24,0,ALL_PASS
+v2cf,curitiba_qa_geometry_guardrails_v2cf.json,PASS,17,17,0,ALL_PASS
+v2cg,curitiba_overlay_guardrails_v2cg.json,PASS,16,16,0,ALL_PASS

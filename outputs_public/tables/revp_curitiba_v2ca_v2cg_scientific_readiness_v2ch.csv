@@ -1,0 +1,15 @@
+readiness_item,current_status,evidence_stage,blocks_overlay,blocks_gt,blocks_training,recommended_next_action
+curitiba_events_repaired,PRESENT_2,v2ca,false,false,false,nenhuma
+curitiba_patch_boundaries_available,PRESENT_43,v2ca,false,false,false,nenhuma
+curitiba_patch_event_bindings_available,PRESENT_86,v2ca,false,false,false,nenhuma
+external_evidence_package_available,PRESENT,v2cc,false,false,false,nenhuma
+live_download_pass_completed,COMPLETED,v2cd,false,false,false,nenhuma
+deep_crawl_completed,COMPLETED,v2ce,false,false,false,nenhuma
+official_data_request_dossier_available,PRESENT,v2ce,false,false,false,solicitar_dado_oficial
+valid_event_geometry_available,ABSENT,v2cf,true,true,true,obter_csv_geojson_kml_wkt_ou_bbox_oficial
+qa_geometry_available,ABSENT,v2cf,true,true,true,fornecer_geometria_evento_valida_e_rerodar_v2cf
+overlay_executor_available,AVAILABLE_BUT_BLOCKED,v2cg,false,false,false,rerodar_v2cg_apos_geometria_qa
+dry_run_positive_candidates_available,ABSENT,v2cg,false,true,true,revisao_humana_apos_simulacao_metodologica
+formal_labels_available,ABSENT,chain,false,true,true,bloqueado_por_desenho
+formal_negatives_available,ABSENT,chain,false,true,true,bloqueado_por_desenho
+training_ready,BLOCKED,chain,false,false,true,treino_bloqueado_ate_pegada_validada
