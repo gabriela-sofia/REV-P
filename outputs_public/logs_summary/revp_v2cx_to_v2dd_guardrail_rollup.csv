@@ -1,0 +1,4 @@
+guardrail,expected_value,observed_value,status,detail
+offline_default,true,true,PASS,network disabled unless flag is passed
+download_default,false,false,PASS,downloads disabled by default
+ground_truth_operational,ABSENT,ABSENT,PASS,no operational ground truth emitted
