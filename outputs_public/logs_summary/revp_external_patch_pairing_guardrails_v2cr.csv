@@ -1,0 +1,9 @@
+guardrail,expected_value,observed_value,status,detail
+review_only,true,true,PASS,infraestrutura nao promove evidencia operacional
+patch_level_ground_truth,absent,absent,PASS,nenhum fechamento patch-level
+binary_labels,absent,absent,PASS,nenhum label binario criado
+formal_negatives,absent,absent,PASS,nenhum negativo formal criado
+training_dataset,absent,absent,PASS,nenhum dataset supervisionado criado
+operational_classifier,absent,absent,PASS,nenhum classificador operacional criado
+raw_external_files_in_outputs_public,absent,absent,PASS,outputs_public recebe apenas tabelas e relatorios
+blocked_intersections_have_empty_area,true,true,PASS,areas permanecem vazias quando bloqueado
