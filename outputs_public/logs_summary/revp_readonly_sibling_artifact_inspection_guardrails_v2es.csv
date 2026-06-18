@@ -1,0 +1,12 @@
+stage,guardrail,value,status
+v2es,ground_truth_operational_status,ABSENT,PASS
+v2es,formal_labels_available,ABSENT,PASS
+v2es,formal_negatives_available,ABSENT,PASS
+v2es,training_ready,false,PASS
+v2es,supervised_model_allowed,false,PASS
+v2es,prediction_claim_allowed,false,PASS
+v2es,automatic_detection_claim_allowed,false,PASS
+v2es,operational_validation_claim_allowed,false,PASS
+v2es,negative_by_absence_allowed,false,PASS
+v2es,random_background_negative_allowed,false,PASS
+v2es,decision_locked,false,PASS
