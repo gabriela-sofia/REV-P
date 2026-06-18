@@ -1,48 +1,47 @@
-# Artefatos finais publicos do REV-P
+# Artefatos públicos do REV-P
 
-Este diretorio reune os artefatos finais utilizados na entrega do REV-P. Os resultados documentam evidencias contextuais, suporte territorial externo e analise visual-estrutural destinada a revisao. O projeto nao apresenta detector operacional, preditor ou classificador supervisionado de inundacao.
+Este diretório reúne os artefatos finais da entrega do REV-P: figuras, tabelas, métricas, relatórios e registros de validação. O projeto não apresenta detector operacional, classificador supervisionado ou preditor de inundação — os resultados documentam evidências contextuais, suporte territorial externo e análise visual-estrutural destinada a revisão.
 
 ## Estrutura
 
-- `figures/`: figuras utilizadas no artigo e na apresentacao, alem de resultados estruturais DINOv2.
-- `tables/`: tabelas auxiliares com contagens canonicas, inventarios, vizinhos, PCA, medoides, valores atipicos e limites de interpretacao.
-- `metrics/`: metricas descritivas de similaridade, PCA, agrupamentos exploratorios, robustez, QA, estado de prontidao e sensibilidade.
-- `logs_summary/`: registros resumidos das validacoes executadas durante a preparacao da entrega.
-- `execution_reports/`: relatorios de execucao, rastreabilidade, QA, selecao de figuras, DINO e limites metodologicos.
-- `model/`: declaracao da ausencia de modelo supervisionado operacional.
-- `article_crosswalk/`: correspondencia entre as figuras do artigo e os artefatos publicos.
-- `appendix_figures/`: figuras de apendice organizadas por funcao metodologica.
-- `appendix_visual_audit/`: figuras diagnosticas e justificativas de curadoria.
-- `selection_audit/`: matriz e relatorio das decisoes de selecao.
-- `review_package/`: navegacao curta para banca, orientacao e avaliacao.
+- `figures/`: figuras de publicação e resultados estruturais DINOv2.
+- `tables/`: tabelas com contagens canônicas, inventários, vizinhos k-NN, coordenadas PCA, medoides, outliers e limites de interpretação.
+- `metrics/`: métricas descritivas de similaridade, PCA, agrupamentos exploratórios, robustez, QA, prontidão e sensibilidade.
+- `logs_summary/`: registros resumidos das validações executadas durante a entrega.
+- `execution_reports/`: relatórios de execução, rastreabilidade, QA, análise DINOv2 e restrições metodológicas.
+- `model/`: declaração da ausência de modelo supervisionado operacional.
+- `article_crosswalk/`: correspondência entre as figuras do artigo e os artefatos públicos.
+- `appendix_figures/`: figuras de apêndice organizadas por função metodológica.
+- `appendix_visual_audit/`: figuras diagnósticas e justificativas de curadoria visual.
+- `selection_audit/`: matriz e relatório das decisões de seleção de patches.
+- `review_package/`: navegação para banca, orientação e avaliação.
 
-## Resultados comprovados
+## Resultados principais
 
-- Corpus: 59 recortes territoriais/contextuais; 32 coerentes e 27 parcialmente coerentes.
-- Distribuicao regional: Recife 18, Curitiba 14, Petropolis 27.
+- Corpus: 59 recortes territoriais/contextuais — 32 coerentes, 27 parcialmente coerentes.
+- Distribuição regional: Recife 18, Curitiba 14, Petrópolis 27.
 - Manifesto Sentinel-first: 128 assets candidatos.
-- DINOv2: 12 embeddings reais, quatro por regiao, 768 dimensoes, codificador congelado.
-- Figura principal validada de Recife: `figures/fig_recife_main_publication_v15_final.png`, com patch principal `REC_00205`.
+- DINOv2: 12 embeddings reais, quatro por região, 768 dimensões, codificador visual congelado.
+- Figura principal validada de Recife: `figures/fig_recife_main_publication_v15_final.png`, patch principal `REC_00205`.
 
-## Dados mantidos fora
+## O que não está aqui
 
-GeoTIFFs, arquivos vetoriais, PE3D/MDE bruto, embeddings `.npz`, modelo DINO, ambientes virtuais, caches, `local_runs/` completo e logs brutos permanecem locais. A entrega publica apenas manifestos, hashes, tabelas resumidas e figuras derivadas.
+GeoTIFFs, vetores brutos, PE3D/MDE, embeddings `.npz`, modelo DINO, ambientes virtuais, caches e `local_runs/` permanecem locais. Este diretório contém apenas manifests, tabelas resumidas, métricas e figuras derivadas.
 
-## Reproducao parcial
+## Reprodução parcial
 
-```powershell
+```bash
 python scripts/repository/build_outputs_public_delivery.py
 python -m pytest tests
-python scripts/repository/build_outputs_public_delivery.py --finalize
 python scripts/repository/build_outputs_public_delivery.py --validate-only
 ```
 
-O indice principal dos artefatos esta em [`execution_reports/final_delivery_artifact_index.md`](execution_reports/final_delivery_artifact_index.md).
+O índice completo dos artefatos está em [`execution_reports/final_delivery_artifact_index.md`](execution_reports/final_delivery_artifact_index.md).
 
-## Regeneracao das figuras auxiliares
+## Regeneração das figuras auxiliares
 
-As figuras auxiliares em `figures/` foram regeneradas com os mesmos caminhos publicos, usando as tabelas e metricas resumidas desta entrega. As figuras principais de patches e regioes foram preservadas.
+As figuras auxiliares em `figures/` foram regeneradas com os mesmos caminhos públicos, usando as tabelas e métricas desta entrega. As figuras principais de patches e regiões foram preservadas sem alteração.
 
-- Relatorio: [`execution_reports/figures_regeneration_report.md`](execution_reports/figures_regeneration_report.md)
+- Relatório: [`execution_reports/figures_regeneration_report.md`](execution_reports/figures_regeneration_report.md)
 - Manifesto: [`tables/figure_regeneration_manifest.csv`](tables/figure_regeneration_manifest.csv)
-- Versoes anteriores: [`appendix_visual_audit/original_auxiliary_figures/`](appendix_visual_audit/original_auxiliary_figures/)
+- Versões anteriores: [`appendix_visual_audit/original_auxiliary_figures/`](appendix_visual_audit/original_auxiliary_figures/)

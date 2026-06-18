@@ -1,0 +1,53 @@
+codigo_interno,nome_publico,finalidade,entradas_principais,saidas_principais,status_cientifico,executavel,somente_auditoria,depende_revisao_humana
+v1fu,Manifesto de entrada DINOv2,Inventaria assets Sentinel candidatos para extração de embeddings,Lista de patches e assets locais,Manifesto CSV com inventário e QA,Concluído,Sim,Não,Não
+v1fv,Preflight de assets locais,Verifica condições locais antes da extração de embeddings,Manifesto v1fu,Relatório de preflight e checks locais,Concluído,Sim,Não,Não
+v1fw,Contrato de extração de embeddings,Define estrutura esperada da extração antes de executar,Preflight v1fv,Esqueleto de contrato de extração,Concluído,Sim,Não,Não
+v1fx,Extração experimental de embeddings,Executa extração de 1–4 embeddings por região como ensaio,Assets locais GeoTIFF,Embeddings .npz locais (não publicados),Concluído,Local apenas,Não,Não
+v1fz,Corpus balanceado de embeddings,Verifica equilíbrio do corpus entre regiões,Manifesto de embeddings,Relatório de balanceamento,Concluído,Sim,Não,Não
+v1ge-v1gg,Trilha de revisão DINOv2,Gera pacote de revisão estrutural (similaridade k-NN PCA),Embeddings locais,Figuras e tabelas públicas de análise estrutural,Concluído,Local apenas,Não,Não
+v1gh-v1gj,Proveniência longitudinal e prontidão,Audita rastreabilidade dos embeddings e estado de prontidão,Manifesto e embeddings,Relatório de proveniência e prontidão,Concluído,Sim,Não,Não
+v1gk,Fechamento de reprodutibilidade DINOv2,Verifica que os resultados são reprodutíveis localmente,Embeddings e tabelas,Relatório de reprodutibilidade,Concluído,Local apenas,Não,Não
+v1gp,Auditoria de prontidão para publicação,Verifica que os artefatos públicos estão prontos para entrega,outputs_public,Relatório de prontidão,Concluído,Sim,Sim,Não
+v1gq,Linha de base multicritério de vulnerabilidade GIS,Cria matriz de vulnerabilidade física com dados GIS,Dados GIS locais,Tabela de vulnerabilidade,Concluído,Sim,Não,Não
+v1gr,Auditoria de prontidão de uso do solo,Verifica disponibilidade e prontidão de dados de uso do solo,Dados GIS,Relatório de auditoria,Concluído,Sim,Sim,Não
+v1gs,Habilitação de geometria de uso do solo,Ativa uso de geometrias de cobertura do solo,Camadas GIS locais,Registro de habilitação,Concluído,Sim,Não,Não
+v1gt,Expansão de cobertura GIS,Estende análise GIS para áreas de cobertura adicional,Geometrias locais,Relatório de expansão,Concluído,Sim,Não,Não
+v1gv,Matriz de cobertura de evidência externa,Mapeia disponibilidade de evidência por região e patch,Registries de evidência,Tabela de cobertura,Concluído,Sim,Sim,Não
+v1if,Aquisição de vetores oficiais observados,Busca e audita vetores oficiais de eventos observados,Repositórios públicos SGB/CPRM,Registry de vetores auditados,Bloqueado — 0 vetores encontrados,Sim,Sim,Sim
+v1ih,Descoberta de vetores em bases abertas,Valida candidatos de bases geoespaciais abertas,Bases abertas locais,Registry de descoberta,Bloqueado — 0 confirmados,Sim,Sim,Sim
+v1ii,Mineração dirigida em repositórios oficiais,Audita repositórios oficiais com APIs para vetores de evento,APIs RIGeo/CKAN/GeoCuritiba,Registry de mineração,Bloqueado — 0 confirmados,Sim,Sim,Sim
+v1hq,Referências observacionais candidatas,Organiza 9 eventos candidatos com G1–G3 documentados,Fontes locais adquiridas,Registry de referências candidatas,Em andamento,Sim,Sim,Sim
+v1hr,Preflight de ligação evento-patch,Prepara estrutura para patch-linking sem executá-lo,Candidatos v1hq,Registry de preflight e dependências,Aguardando geometria,Sim,Sim,Sim
+v1ib,Consolidação de referências observacionais,Classifica eventos por nível de evidência acumulada (L0–L6),Gates G1–G7 por evento,Registry de promoção graduada,PET_2022 em L5 / PET_2024 em L6,Sim,Sim,Sim
+v1ic,Separação de fenômeno por localidade,Classifica fenômeno (inundação vs. deslizamento) por localidade,Fontes textuais locais,Registry de separação fenomenológica,Bloqueado em Petrópolis 2022,Sim,Sim,Sim
+v2at,Vinculação evento-patch Recife,Registra vínculos entre eventos observados e patches Recife,Registry de eventos e patches,Registry de vínculos evento-patch,Concluído (metadata),Sim,Sim,Sim
+v2au,Sobreposição de geometria de evento,Prepara sobreposição espacial evento-patch,Geometria de evento (ausente),Registry de sobreposição,Bloqueado por geometria ausente,Sim,Sim,Sim
+v2av,Construção de limites de patch,Gera limites geométricos dos patches,Corpus de patches,Geometrias de limites de patch,Concluído,Sim,Não,Não
+v2aw,Entrada de fonte geométrica,Organiza intake de fontes geométricas externas,Fontes geométricas externas,Registry de intake,Concluído,Sim,Sim,Sim
+v2ax,Ingestão de geometria Recife,Processa geometrias de eventos em Recife,Fontes locais,Registry de ingestão,Concluído (metadata),Sim,Sim,Sim
+v2ay,Reconciliação de escopo do evento candidato,Ajusta escopo e limites dos eventos candidatos,Candidatos e patches,Registry de reconciliação,Concluído,Sim,Sim,Sim
+v2az,Orquestrador de replay de ponto de virada,Coordena replay de eventos a partir de ponto de virada,Eventos candidatos e geometrias,Relatório de orquestração,Concluído,Sim,Sim,Sim
+v2ba,Bancada mínima de aquisição real,Executa aquisição mínima real de geometria,Fontes externas,Registro de aquisição mínima,Concluído,Sim,Sim,Sim
+v2bb,Construtor de feed de recuperação geométrica pública,Monta feed de fontes geométricas públicas,Fontes públicas,Feed de recuperação,Concluído,Sim,Não,Não
+v2bc,Bancada de digitalização GIS Recife,Suporte à digitalização manual em Recife,Produto cartográfico Charter 758,Geometria digitalizada (pendente),Em andamento,Manual,Não,Sim
+v2bd,Recuperação de footprint de patch Sentinel,Recupera limites espaciais dos patches Sentinel,Manifesto Sentinel,Registry de footprints,Concluído,Sim,Não,Não
+v2be,Integração de limites de patch TP1,Integra limites de patch da etapa TP1 ao corpus,Geometrias TP1,Corpus de patches atualizado,Concluído,Sim,Não,Não
+v2bf,Polígono de evento observado Recife TP2,Organiza candidatos de polígono de evento para TP2 em Recife,Produto oficial (pendente),Registry de polígonos candidatos,Aguardando produto oficial,Manual,Sim,Sim
+v2bg,Mineração de produto Charter 758 para TP2,Busca e processa produto cartográfico Charter 758,Charter 758 raster,Registry de mineração,Concluído,Sim,Sim,Sim
+v2bh,Georreferenciamento e digitalização Charter 758,Orienta digitalização do produto Charter 758,Charter 758 raster,Geometria digitalizada (pendente),Em andamento,Manual,Não,Sim
+v2ca-v2cg,Cadeia de evidências Curitiba,Sete estágios de aquisição e QA de evidência para Curitiba,Fontes públicas Curitiba,Registries e relatórios de evidência,Concluído — sobreposição bloqueada por geometria de evento,Sim/Local,Sim,Sim
+v2ci,Inventário de candidatos TP2,Inventaria 38 candidatos observacionais para etapa TP2,Registries de eventos e patches,Inventário CSV de candidatos e pares,Concluído — 23 candidatos / 15 bloqueados,Sim,Sim,Sim
+v2cj,Priorização de candidatos TP2,Prioriza candidatos TP2 por critério metodológico,Inventário v2ci,Tabela de prioridade CSV,Concluído,Sim,Sim,Sim
+v2ck,Protocolo de digitalização manual,Guia para digitalização manual de geometrias de evento,Produto cartográfico externo,Guia metodológico e registro de tarefas,Em andamento,Manual,Sim,Sim
+v2cl,Validação de geometria observada,Valida geometrias de eventos observados registrados,Geometrias candidatas,Registry de validação,Concluído (metadata),Sim,Sim,Sim
+v2cm,Replay de evento por patch,Simula replay de evento sobre patches sem promover rótulo,Eventos e patches,Registro de replay,Concluído,Sim,Sim,Não
+v2cn,Matriz de lacunas de evidência externa,Mapeia lacunas de evidência geoespacial por região,Registries de evidência,Tabela de lacunas CSV,Concluído — 38 lacunas,Sim,Sim,Não
+v2co,Aquisição e auditoria de evidência externa,Adquire e audita fontes externas registradas,Fontes externas offline,Registry e manifesto público,Concluído,Sim,Sim,Não
+v2cp,Manifesto público de evidência externa,Gera manifesto público de evidências externas (3 entradas),Fontes auditadas,Manifesto CSV público,Concluído,Sim,Sim,Não
+v2cq,QA geoespacial externo,Verifica qualidade geoespacial das evidências (CRS hash limites),Manifesto v2cp,Tabela de QA CSV,Concluído — 3 auditorias,Sim,Sim,Não
+v2cr,Pareamento de patch com evidência externa,Registra pares patch-evidência com critérios de validade,Manifesto e patches,Tabela de pareamentos CSV,Concluído — 3 pares,Sim,Sim,Sim
+v2cs,Semeadura de fontes externas reais,Registra metadados de fontes externas reais,Fontes identificadas,Registry público de fontes,Concluído,Sim,Sim,Não
+v2ct,Triagem de licença de fontes,Classifica licença e redistribuição por fonte,Registry de fontes,Tabela de triagem de licença,Concluído,Sim,Sim,Sim
+v2cu,Sync de registro de fontes externas,Sincroniza registro de fontes com manifesto público,Registries internos,Registry público sincronizado,Concluído,Sim,Não,Não
+v2cv,Checklist de descoberta de produtos externos,Organiza checklist de produtos externos identificados,Fontes externas,Checklist CSV,Concluído,Sim,Sim,Sim
+v2cw,Leitura regional de prontidão de evidência,Consolida prontidão de evidência por região,Registries regionais,Tabela regional de prontidão,Concluído,Sim,Sim,Não
