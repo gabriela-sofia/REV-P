@@ -102,7 +102,7 @@ Isso não acrescenta informação — qualquer leitor entende após a primeira o
 **Problema**: títulos genéricos como "v2aw geometry source intake report" sem nome humano.
 
 **Classificação**: `ADD_PUBLIC_ALIAS`
-**Ação**: criar índice público de estágios com nomes legíveis em `revp_stage_index.md`.
+**Ação**: criar índice público de estágios com nomes legíveis em `revp_indice_etapas.md`.
 
 ---
 
@@ -167,7 +167,7 @@ Isso não acrescenta informação — qualquer leitor entende após a primeira o
 **Problema**: nomes como `test_revp_v1fw_dino_embedding_extraction_scaffold.py` contêm termos como `scaffold`. Esses nomes são internos e aparecem em imports Python.
 
 **Classificação**: `DO_NOT_TOUCH` (renomear quebraria a suíte de testes)
-**Ação**: criar camada de nomes públicos no `revp_stage_index.md`.
+**Ação**: criar camada de nomes públicos no `revp_indice_etapas.md`.
 
 ---
 
@@ -213,7 +213,7 @@ Os seguintes arquivos **não devem ser renomeados** porque têm dependências em
 
 ## 11. Arquivos que podem receber nome público mais legível (sem renomear)
 
-Criação de índice público em `revp_stage_index.md`:
+Criação de índice público em `revp_indice_etapas.md`:
 
 | Código interno | Nome público sugerido |
 |---|---|
@@ -270,8 +270,8 @@ Criação de índice público em `revp_stage_index.md`:
 | 3 | `protocol_c_current_status_summary.md` | `REWRITE_TEXT_ONLY` | Humanizar status em inglês |
 | 4 | `protocol_c_cross_region_status_summary.md` | `REWRITE_TEXT_ONLY` | Humanizar status em inglês |
 | 5 | `final_guardrails_report.md` | `REWRITE_TEXT_ONLY` | Adicionar contexto em português |
-| 6 | Criação de `revp_stage_index.md` | `ADD_PUBLIC_ALIAS` | Novo arquivo de índice |
-| 7 | Criação de `revp_style_and_naming_guide.md` | Novo | Guia editorial canônico |
+| 6 | Criação de `revp_indice_etapas.md` | `ADD_PUBLIC_ALIAS` | Novo arquivo de índice |
+| 7 | Criação de `revp_guia_estilo_nomenclatura.md` | Novo | Guia editorial canônico |
 | 8 | Relatórios de sprint individuais | `REWRITE_TEXT_ONLY` | Baixa prioridade |
 | 9 | `datasets/README.md` | `NEEDS_HUMAN_REVIEW` | Verificar encoding |
 | 10 | `docs/metodologia_cientifica/*.md` | `DO_NOT_TOUCH` (maioria) | Conteúdo técnico correto |

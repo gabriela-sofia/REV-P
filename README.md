@@ -2,6 +2,10 @@
 
 O REV-P organiza uma cadeia auditável de evidências para análise físico-ambiental urbana em três regiões brasileiras: Recife, Petrópolis e Curitiba. O projeto usa imagens Sentinel-2, fontes territoriais externas e representações visuais auto-supervisionadas (DINOv2 congelado) para estruturar corpus, inspeções e relatórios destinados à revisão humana. Não há classificador supervisionado, rótulo de treinamento ou predição operacional nesta entrega.
 
+**Contribuição em uma frase:** um protocolo reprodutível que separa, com rastreabilidade auditável, evidência contextual de referência candidata e de ground truth operacional — e documenta explicitamente o que ainda não pode ser afirmado.
+
+A narrativa científica completa (problema, motivação, contribuição, limites) está em [`docs/metodologia_cientifica/revp_narrativa_cientifica_consolidada.md`](docs/metodologia_cientifica/revp_narrativa_cientifica_consolidada.md).
+
 ---
 
 ## O que o projeto faz
@@ -53,6 +57,23 @@ REV-P/
 
 ---
 
+## Como ler este repositório
+
+- **`README.md`** — mapa principal. Comece por aqui.
+- **`outputs_public/`** — a entrega pública: figuras, tabelas, métricas, relatórios e a declaração de ausência de modelo operacional. É o que sustenta a banca.
+- **`docs/metodologia_cientifica/`** — base metodológica e histórico, incluindo a narrativa consolidada e o índice legível de estágios.
+- **`scripts/`** — reprodução técnica do pipeline.
+- **`tests/`** — validação técnica (determinismo, travas metodológicas, offline).
+- **Códigos `v1*`/`v2*`** — rastreabilidade de etapas, **não** narrativa obrigatória para a banca.
+
+Três camadas de leitura:
+
+- **Principal** — README, narrativa consolidada, figuras e tabelas de `outputs_public/figures/` e `outputs_public/tables/`, declaração em `outputs_public/model/`.
+- **Apêndice** — relatórios de execução, métricas descritivas, auditoria visual.
+- **Histórico** — dossiês por etapa, relatórios em `outputs_public/execution_reports/arquivo_etapas/`, tabelas em `outputs_public/tables/saidas_intermediarias/` e os scripts/testes por microversão. São evidência reproduzível, não resultado final.
+
+---
+
 ## Cadeia metodológica
 
 O pipeline segue esta sequência:
@@ -61,9 +82,33 @@ O pipeline segue esta sequência:
 2. **Pipeline Sentinel-first** — inventário dos 128 assets candidatos, preflight e controle de qualidade de entrada;
 3. **Embeddings DINOv2** — extração com encoder congelado, análise de similaridade, vizinhança, PCA e detecção de outliers;
 4. **Protocolo C** — organização de evidências externas candidatas por região (fontes oficiais, meteorológicas, cartográficas), separação de tipos de referência, adjudicação de gates;
-5. **Auditoria e entrega** — geração de figuras, tabelas, métricas, relatórios e manifests para submissão e revisão.
+5. **Busca por ground truth** — tentativa de obter geometria oficial de evento e sobreposição patch-evento; documentada como busca e bloqueio auditável, não como validação;
+6. **Auditoria de continuidade** — rastreabilidade e recuperabilidade da base de trabalho candidata anterior (`v2dz`–`v2ef`), via cadeias `v2es`–`v2ey` e `v2ez`–`v2ff`, sem recuperar ground truth nem substituir base por fallback;
+7. **Auditoria e entrega** — geração de figuras, tabelas, métricas, relatórios e manifests para submissão e revisão.
 
-Cada etapa tem testes automatizados, registries auditáveis e documentação metodológica em `docs/metodologia_cientifica/`.
+Cada etapa tem testes automatizados, registries auditáveis e documentação metodológica em `docs/metodologia_cientifica/`. O mapeamento completo dos códigos internos para nomes legíveis está em `docs/metodologia_cientifica/revp_indice_etapas.md`.
+
+---
+
+## Como interpretar os resultados
+
+Para evitar leitura equivocada dos artefatos, três pontos são centrais:
+
+- **Protocolo C** é uma cadeia de **evidência para revisão**, não validação operacional. Ele separa evidência contextual, referência temporal, referência candidata e ground truth operacional. As pontuações regionais (Recife 0.76, Curitiba 0.70, Petrópolis 0.55) qualificam **referências candidatas**, não confirmam evento observado. O gate `can_create_training_label` está bloqueado (`C4_BLOCKED_NO_FORMAL_NEGATIVES`): ausência de registro e pseudo-ausência não constituem negativo formal.
+- **DINOv2** entra apenas como **encoder visual congelado** (`facebook/dinov2-with-registers-base`). Os 12 embeddings reais (4 por região, 768 dimensões, com SHA256 registrado) servem a análise estrutural exploratória — similaridade, k-NN, PCA, medoids, outliers. O encoder não é ajustado nem retreinado, não é classificador, não mede acurácia de detecção e não valida inundação observada.
+- **Ground truth ausente** é uma condição declarada, não contornada. Não há rótulo binário, negativo formal ou referência operacional patch-level em nenhuma região (`ground_truth_operational_status = ABSENT`, `training_ready = false`). A base de trabalho candidata anterior (`v2dz`–`v2ef`) está em `ORIGINAL_BASE_REQUIRES_MANUAL_RESTORE`: 53 registros não recuperáveis automaticamente, sem fallback. Referência recuperável não é conteúdo recuperado, e fallback não substitui base original.
+
+---
+
+## Como ler a linha do tempo técnica
+
+O REV-P foi construído em muitas trilhas internas de execução, identificadas por códigos `v1*` e `v2*`. Para leitura pública:
+
+- as **microversões não precisam ser lidas uma a uma** pela banca — são rastreabilidade interna;
+- o que importa são os **marcos científicos**: corpus territorial → Sentinel-first → embeddings DINOv2 → Protocolo C → busca por ground truth (bloqueada) → auditoria de continuidade → entrega;
+- os arquivos granulares (scripts, testes, dossiês por etapa) permanecem no repositório como evidência reproduzível, mas em papel de **anexo**;
+- o índice legível dos estágios, com finalidade e status de cada código, está em `docs/metodologia_cientifica/revp_indice_etapas.md`;
+- relatórios de execução intermediários já arquivados ficam em `outputs_public/execution_reports/arquivo_etapas/` e tabelas intermediárias em `outputs_public/tables/saidas_intermediarias/`.
 
 ---
 
