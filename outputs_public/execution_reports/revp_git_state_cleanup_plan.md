@@ -9,9 +9,9 @@ Este relatório registra o estado atual do repositório Git para referência e p
 
 ## 1. Branch atual
 
-`chore/public-repository-curation`
+`chore/public-repository-curation` (histórico — mesclado em `main` via PR #21)
 
-Branch de trabalho da curadoria editorial. Criada a partir de `main` (commit `efb1668` — "Merge pull request #19").
+Branch da primeira fase da curadoria editorial em inglês. O presente trabalho de curadoria em português é realizado na branch `curadoria/repositorio-publico-ptbr`.
 
 ---
 
@@ -109,4 +109,4 @@ docs: organiza camada publica e linguagem metodologica do REV-P
 
 - Não executar `git reset --hard` nem `git clean` sem validação explícita.
 - O commit desta curadoria é separado dos commits de sprint (v2ca–v2cw) e não afeta o histórico deles.
-- Push deve ir para `chore/public-repository-curation` com `git push -u origin chore/public-repository-curation`.
+- A primeira fase de curadoria foi entregue em `chore/public-repository-curation` e mesclada em `main` via PR #21. A curadoria em português prossegue em `curadoria/repositorio-publico-ptbr`.

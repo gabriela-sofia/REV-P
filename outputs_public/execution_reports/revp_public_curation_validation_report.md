@@ -1,8 +1,8 @@
 # REV-P — Relatório de validação da curadoria pública
 
 Data: 2026-06-18
-Branch: `chore/public-repository-curation`
-Fase: validação pós-curadoria editorial — Fase 9
+Branch: `chore/public-repository-curation` (histórico — mesclado em `main` via PR #21)
+Fase: validação pós-curadoria editorial — Fase 9 (curadoria anterior em inglês)
 
 ---
 
@@ -101,7 +101,7 @@ git status --short
 1. Verificar encoding de `datasets/README.md` (comando: `file -i datasets/README.md` no ambiente local).
 2. Instalar dependências completas (`pip install -r requirements.txt`) para rodar a suíte completa.
 3. Fazer stage seletivo dos arquivos listados na seção 3 e commitar com a mensagem sugerida.
-4. Push para `chore/public-repository-curation`.
+4. ~~Push para `chore/public-repository-curation`~~ — concluído; mesclado em `main` via PR #21.
 
 ### Mensagem de commit sugerida
 
