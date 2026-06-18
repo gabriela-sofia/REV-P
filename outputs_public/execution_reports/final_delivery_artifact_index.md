@@ -4,97 +4,117 @@ Todos os artefatos listados aqui são resultados estruturais destinados à revis
 
 Legenda da coluna de uso: `apêndice/artigo` = figura ou tabela candidata ao artigo ou apêndice; `apoio` = documentação, log ou registro de processo.
 
+Todos os caminhos abaixo apontam para arquivos ou pastas que existem nesta entrega. Categorias ainda não materializadas como pasta estão descritas ao final, em texto, sem link.
+
+Os códigos `v1*` e `v2*` que aparecem em nomes de artefato são **rastreabilidade técnica de etapas**, não narrativa obrigatória de leitura. A banca pode navegar pelos agrupamentos abaixo; a linha do tempo legível dos estágios está em `docs/metodologia_cientifica/revp_indice_etapas.md`.
+
+---
+
+## Figuras finais (`outputs_public/figures/`)
+
 | Artefato | Caminho | Função no projeto | Uso |
 |---|---|---|---|
-| fig_apendice_similaridade_dinov2.png | `outputs_public/figuras_apendice/dino_extra/fig_apendice_similaridade_dinov2.png` | Figura de apêndice — artigo, apresentação ou avaliação. | apêndice/artigo |
-| fig_article_06_dinov2_embedding_768d.png | `outputs_public/figuras_apendice/dino_extra/fig_article_06_dinov2_embedding_768d.png` | Figura de apêndice — artigo, apresentação ou avaliação. | apêndice/artigo |
-| fig_article_01_fluxo_metodologico.png | `outputs_public/figuras_apendice/protocol_c_extra/fig_article_01_fluxo_metodologico.png` | Figura de apêndice — artigo, apresentação ou avaliação. | apêndice/artigo |
-| fig_article_05_fluxo_protocolo_c.png | `outputs_public/figuras_apendice/protocol_c_extra/fig_article_05_fluxo_protocolo_c.png` | Figura de apêndice — artigo, apresentação ou avaliação. | apêndice/artigo |
-| fig_apendice_rastreabilidade_decisoes.png | `outputs_public/figuras_apendice/qa_traceability_extra/fig_apendice_rastreabilidade_decisoes.png` | Figura de apêndice — artigo, apresentação ou avaliação. | apêndice/artigo |
-| fig_apendice_evidencias_externas_regionais.png | `outputs_public/figuras_apendice/regional_context_extra/fig_apendice_evidencias_externas_regionais.png` | Figura de apêndice — artigo, apresentação ou avaliação. | apêndice/artigo |
-| fig_apendice_pe3d_mde.png | `outputs_public/figuras_apendice/regional_context_extra/fig_apendice_pe3d_mde.png` | Figura de apêndice — artigo, apresentação ou avaliação. | apêndice/artigo |
-| fig_apendice_bandas_indices_sentinel2.png | `outputs_public/figuras_apendice/sentinel_extra/fig_apendice_bandas_indices_sentinel2.png` | Figura de apêndice — artigo, apresentação ou avaliação. | apêndice/artigo |
-| fig_apendice_corpus_sentinel.png | `outputs_public/figuras_apendice/sentinel_extra/fig_apendice_corpus_sentinel.png` | Figura de apêndice — artigo, apresentação ou avaliação. | apêndice/artigo |
-| contact_sheet_regional_main_figures.png | `outputs_public/appendix_visual_audit/contact_sheets/contact_sheet_regional_main_figures.png` | Figura ou registro diagnóstico — auditoria visual. | apoio |
-| dino_knn_neighbor_network_publication.png | `outputs_public/appendix_visual_audit/original_auxiliary_figures/dino_knn_neighbor_network_publication.png` | Figura ou registro diagnóstico — auditoria visual. | apoio |
-| dino_medoids_outliers_publication.png | `outputs_public/appendix_visual_audit/original_auxiliary_figures/dino_medoids_outliers_publication.png` | Figura ou registro diagnóstico — auditoria visual. | apoio |
-| dino_pca_projection_publication.png | `outputs_public/appendix_visual_audit/original_auxiliary_figures/dino_pca_projection_publication.png` | Figura ou registro diagnóstico — auditoria visual. | apoio |
-| dino_region_neighbor_matrix_publication.png | `outputs_public/appendix_visual_audit/original_auxiliary_figures/dino_region_neighbor_matrix_publication.png` | Figura ou registro diagnóstico — auditoria visual. | apoio |
-| dino_similarity_heatmap_publication.png | `outputs_public/appendix_visual_audit/original_auxiliary_figures/dino_similarity_heatmap_publication.png` | Figura ou registro diagnóstico — auditoria visual. | apoio |
-| fig_corpus_counts_by_region_status.png | `outputs_public/appendix_visual_audit/original_auxiliary_figures/fig_corpus_counts_by_region_status.png` | Figura ou registro diagnóstico — auditoria visual. | apoio |
-| fig_decision_trace_summary.png | `outputs_public/appendix_visual_audit/original_auxiliary_figures/fig_decision_trace_summary.png` | Figura ou registro diagnóstico — auditoria visual. | apoio |
-| fig_dino_input_corpus_publication.png | `outputs_public/appendix_visual_audit/original_auxiliary_figures/fig_dino_input_corpus_publication.png` | Figura ou registro diagnóstico — auditoria visual. | apoio |
-| fig_evidence_layer_availability.png | `outputs_public/appendix_visual_audit/original_auxiliary_figures/fig_evidence_layer_availability.png` | Figura ou registro diagnóstico — auditoria visual. | apoio |
-| fig_local_context_coverage.png | `outputs_public/appendix_visual_audit/original_auxiliary_figures/fig_local_context_coverage.png` | Figura ou registro diagnóstico — auditoria visual. | apoio |
-| fig_methodological_contribution_matrix.png | `outputs_public/appendix_visual_audit/original_auxiliary_figures/fig_methodological_contribution_matrix.png` | Figura ou registro diagnóstico — auditoria visual. | apoio |
-| fig_regional_roles_summary.png | `outputs_public/appendix_visual_audit/original_auxiliary_figures/fig_regional_roles_summary.png` | Figura ou registro diagnóstico — auditoria visual. | apoio |
-| diagnostic_regional_roles_summary.png | `outputs_public/appendix_visual_audit/region_validation/diagnostic_regional_roles_summary.png` | Figura ou registro diagnóstico — auditoria visual. | apoio |
-| rejected_rec_00019_not_main.png | `outputs_public/appendix_visual_audit/rejected_or_not_main/rejected_rec_00019_not_main.png` | Figura ou registro diagnóstico — auditoria visual. | apoio |
-| technical_render_recife_sentinel.png | `outputs_public/appendix_visual_audit/technical_renders/technical_render_recife_sentinel.png` | Figura ou registro diagnóstico — auditoria visual. | apoio |
-| visual_audit_manifest.csv | `outputs_public/appendix_visual_audit/visual_audit_manifest.csv` | Figura ou registro diagnóstico — auditoria visual. | apoio |
-| visual_audit_report.md | `outputs_public/appendix_visual_audit/visual_audit_report.md` | Figura ou registro diagnóstico — auditoria visual. | apoio |
-| article_figure_crosswalk.csv | `outputs_public/correspondencia_artigo/article_figure_crosswalk.csv` | Correspondência entre figura do artigo e artefato público. | apoio |
-| article_figure_crosswalk.md | `outputs_public/correspondencia_artigo/article_figure_crosswalk.md` | Correspondência entre figura do artigo e artefato público. | apoio |
-| figures_regeneration_report.md | `outputs_public/execution_reports/figures_regeneration_report.md` | Relatório de execução, QA, rastreabilidade ou entrega. | apoio |
-| final_dino_structural_analysis_report.md | `outputs_public/execution_reports/final_dino_structural_analysis_report.md` | Relatório de execução, QA, rastreabilidade ou entrega. | apoio |
-| final_execution_report.md | `outputs_public/execution_reports/final_execution_report.md` | Relatório de execução, QA, rastreabilidade ou entrega. | apoio |
-| final_figures_selection.csv | `outputs_public/execution_reports/final_figures_selection.csv` | Relatório de execução, QA, rastreabilidade ou entrega. | apoio |
-| final_figures_selection_report.md | `outputs_public/execution_reports/final_figures_selection_report.md` | Relatório de execução, QA, rastreabilidade ou entrega. | apoio |
-| final_guardrails_report.md | `outputs_public/execution_reports/final_guardrails_report.md` | Relatório de execução, QA, rastreabilidade ou entrega. | apoio |
-| final_qa_report.md | `outputs_public/execution_reports/final_qa_report.md` | Relatório de execução, QA, rastreabilidade ou entrega. | apoio |
-| final_traceability_report.md | `outputs_public/execution_reports/final_traceability_report.md` | Relatório de execução, QA, rastreabilidade ou entrega. | apoio |
-| final_validation_summary.json | `outputs_public/execution_reports/final_validation_summary.json` | Relatório de execução, QA, rastreabilidade ou entrega. | apoio |
-| private_artifact_discovery_inventory.csv | `outputs_public/execution_reports/private_artifact_discovery_inventory.csv` | Relatório de execução, QA, rastreabilidade ou entrega. | apoio |
-| public_appendix_expansion_report.md | `outputs_public/execution_reports/public_appendix_expansion_report.md` | Relatório de execução, QA, rastreabilidade ou entrega. | apoio |
-| dino_knn_neighbor_network_publication.png | `outputs_public/figures/dino_knn_neighbor_network_publication.png` | Figura final — artigo, apresentação ou revisão estrutural. | apêndice/artigo |
-| dino_medoids_outliers_publication.png | `outputs_public/figures/dino_medoids_outliers_publication.png` | Figura final — artigo, apresentação ou revisão estrutural. | apêndice/artigo |
-| dino_pca_projection_publication.png | `outputs_public/figures/dino_pca_projection_publication.png` | Figura final — artigo, apresentação ou revisão estrutural. | apêndice/artigo |
-| dino_region_neighbor_matrix_publication.png | `outputs_public/figures/dino_region_neighbor_matrix_publication.png` | Figura final — artigo, apresentação ou revisão estrutural. | apêndice/artigo |
-| dino_similarity_heatmap_publication.png | `outputs_public/figures/dino_similarity_heatmap_publication.png` | Figura final — artigo, apresentação ou revisão estrutural. | apêndice/artigo |
-| fig_corpus_counts_by_region_status.png | `outputs_public/figures/fig_corpus_counts_by_region_status.png` | Figura final — artigo, apresentação ou revisão estrutural. | apêndice/artigo |
-| fig_curitiba_main_publication_v17.png | `outputs_public/figures/fig_curitiba_main_publication_v17.png` | Figura final — artigo, apresentação ou revisão estrutural. | apêndice/artigo |
-| fig_decision_trace_summary.png | `outputs_public/figures/fig_decision_trace_summary.png` | Figura final — artigo, apresentação ou revisão estrutural. | apêndice/artigo |
-| fig_dino_input_corpus_publication.png | `outputs_public/figures/fig_dino_input_corpus_publication.png` | Figura final — artigo, apresentação ou revisão estrutural. | apêndice/artigo |
-| fig_evidence_layer_availability.png | `outputs_public/figures/fig_evidence_layer_availability.png` | Figura final — artigo, apresentação ou revisão estrutural. | apêndice/artigo |
-| fig_local_context_coverage.png | `outputs_public/figures/fig_local_context_coverage.png` | Figura final — artigo, apresentação ou revisão estrutural. | apêndice/artigo |
-| fig_methodological_contribution_matrix.png | `outputs_public/figures/fig_methodological_contribution_matrix.png` | Figura final — artigo, apresentação ou revisão estrutural. | apêndice/artigo |
-| fig_petropolis_main_publication_v17.png | `outputs_public/figures/fig_petropolis_main_publication_v17.png` | Figura final — artigo, apresentação ou revisão estrutural. | apêndice/artigo |
-| fig_recife_main_publication_v15_final.png | `outputs_public/figures/fig_recife_main_publication_v15_final.png` | Figura final — artigo, apresentação ou revisão estrutural. | apêndice/artigo |
-| fig_recife_pe3d_mde_publication.png | `outputs_public/figures/fig_recife_pe3d_mde_publication.png` | Figura final — artigo, apresentação ou revisão estrutural. | apêndice/artigo |
-| fig_recife_sentinel_technical_publication.png | `outputs_public/figures/fig_recife_sentinel_technical_publication.png` | Figura final — artigo, apresentação ou revisão estrutural. | apêndice/artigo |
-| fig_regional_roles_summary.png | `outputs_public/figures/fig_regional_roles_summary.png` | Figura final — artigo, apresentação ou revisão estrutural. | apêndice/artigo |
-| dino_test_repair_diagnosis.txt | `outputs_public/logs_summary/dino_test_repair_diagnosis.txt` | Registro resumido de execução ou QA. | apoio |
-| guardrail_validation_summary.txt | `outputs_public/logs_summary/guardrail_validation_summary.txt` | Registro resumido de execução ou QA. | apoio |
-| pytest_summary.txt | `outputs_public/logs_summary/pytest_summary.txt` | Registro resumido de execução ou QA. | apoio |
-| test_repair_final_summary.txt | `outputs_public/logs_summary/test_repair_final_summary.txt` | Registro resumido de execução ou QA. | apoio |
-| test_repair_initial_diagnosis.txt | `outputs_public/logs_summary/test_repair_initial_diagnosis.txt` | Registro resumido de execução ou QA. | apoio |
-| ablation_or_sensitivity_summary.csv | `outputs_public/metrics/ablation_or_sensitivity_summary.csv` | Métrica descritiva — não representa desempenho de modelo operacional. | apêndice/artigo |
-| dino_cluster_summary.csv | `outputs_public/metrics/dino_cluster_summary.csv` | Métrica descritiva — não representa desempenho de modelo operacional. | apêndice/artigo |
-| dino_pca_summary.csv | `outputs_public/metrics/dino_pca_summary.csv` | Métrica descritiva — não representa desempenho de modelo operacional. | apêndice/artigo |
-| dino_robustness_summary.csv | `outputs_public/metrics/dino_robustness_summary.csv` | Métrica descritiva — não representa desempenho de modelo operacional. | apêndice/artigo |
-| dino_similarity_summary.csv | `outputs_public/metrics/dino_similarity_summary.csv` | Métrica descritiva — não representa desempenho de modelo operacional. | apêndice/artigo |
-| qa_metrics_summary.csv | `outputs_public/metrics/qa_metrics_summary.csv` | Métrica descritiva — não representa desempenho de modelo operacional. | apêndice/artigo |
-| readiness_summary.csv | `outputs_public/metrics/readiness_summary.csv` | Métrica descritiva — não representa desempenho de modelo operacional. | apêndice/artigo |
-| NO_OPERATIONAL_TRAINED_MODEL.md | `outputs_public/model/NO_OPERATIONAL_TRAINED_MODEL.md` | Declaração metodológica. | apoio |
+| dino_similarity_heatmap_publication.png | `outputs_public/figures/dino_similarity_heatmap_publication.png` | Mapa de calor de similaridade entre embeddings DINOv2. | apêndice/artigo |
+| dino_pca_projection_publication.png | `outputs_public/figures/dino_pca_projection_publication.png` | Projeção PCA dos embeddings. | apêndice/artigo |
+| dino_knn_neighbor_network_publication.png | `outputs_public/figures/dino_knn_neighbor_network_publication.png` | Rede de vizinhos mais próximos (k-NN). | apêndice/artigo |
+| dino_medoids_outliers_publication.png | `outputs_public/figures/dino_medoids_outliers_publication.png` | Medoids e outliers por região. | apêndice/artigo |
+| dino_region_neighbor_matrix_publication.png | `outputs_public/figures/dino_region_neighbor_matrix_publication.png` | Matriz de vizinhança entre regiões. | apêndice/artigo |
+| fig_dino_input_corpus_publication.png | `outputs_public/figures/fig_dino_input_corpus_publication.png` | Corpus de entrada DINOv2. | apêndice/artigo |
+| fig_corpus_counts_by_region_status.png | `outputs_public/figures/fig_corpus_counts_by_region_status.png` | Contagem de corpus por região e estado. | apêndice/artigo |
+| fig_recife_main_publication_v15_final.png | `outputs_public/figures/fig_recife_main_publication_v15_final.png` | Figura principal de Recife. | apêndice/artigo |
+| fig_petropolis_main_publication_v17.png | `outputs_public/figures/fig_petropolis_main_publication_v17.png` | Figura principal de Petrópolis. | apêndice/artigo |
+| fig_curitiba_main_publication_v17.png | `outputs_public/figures/fig_curitiba_main_publication_v17.png` | Figura principal de Curitiba. | apêndice/artigo |
+| fig_recife_pe3d_mde_publication.png | `outputs_public/figures/fig_recife_pe3d_mde_publication.png` | Modelo digital de elevação (PE3D/MDE) de Recife. | apêndice/artigo |
+| fig_recife_sentinel_technical_publication.png | `outputs_public/figures/fig_recife_sentinel_technical_publication.png` | Render técnico Sentinel de Recife. | apêndice/artigo |
+| fig_evidence_layer_availability.png | `outputs_public/figures/fig_evidence_layer_availability.png` | Disponibilidade de camadas de evidência. | apêndice/artigo |
+| fig_local_context_coverage.png | `outputs_public/figures/fig_local_context_coverage.png` | Cobertura de contexto local. | apêndice/artigo |
+| fig_methodological_contribution_matrix.png | `outputs_public/figures/fig_methodological_contribution_matrix.png` | Matriz de contribuição metodológica. | apêndice/artigo |
+| fig_regional_roles_summary.png | `outputs_public/figures/fig_regional_roles_summary.png` | Resumo dos papéis regionais. | apêndice/artigo |
+
+## Figuras auxiliares de auditoria visual (`outputs_public/appendix_visual_audit/original_auxiliary_figures/`)
+
+A pasta `outputs_public/appendix_visual_audit/original_auxiliary_figures/` guarda as versões auxiliares das figuras DINOv2 e de corpus, mais `fig_decision_trace_summary.png` (resumo do traço de decisões), usadas como registro diagnóstico da auditoria visual. Uso: apoio.
+
+## Tabelas centrais (`outputs_public/tables/`)
+
+| Artefato | Caminho | Função no projeto | Uso |
+|---|---|---|---|
+| table_corpus_summary.csv | `outputs_public/tables/table_corpus_summary.csv` | Resumo do corpus (59 patches, 128 assets, 12 embeddings). | apêndice/artigo |
+| table_patch_distribution_by_region.csv | `outputs_public/tables/table_patch_distribution_by_region.csv` | Distribuição de patches por região. | apêndice/artigo |
+| table_dino_embedding_inventory.csv | `outputs_public/tables/table_dino_embedding_inventory.csv` | Inventário dos 12 embeddings (SHA256, encoder congelado, sem rótulo). | apêndice/artigo |
+| table_dino_quantitative_summary_by_region.csv | `outputs_public/tables/table_dino_quantitative_summary_by_region.csv` | Similaridade intra-região, medoid e outlier por região. | apêndice/artigo |
+| table_dino_similarity_matrix.csv | `outputs_public/tables/table_dino_similarity_matrix.csv` | Matriz de similaridade entre embeddings. | apêndice/artigo |
+| table_dino_nearest_neighbors.csv | `outputs_public/tables/table_dino_nearest_neighbors.csv` | Vizinhos mais próximos por embedding. | apêndice/artigo |
+| table_dino_pca_coordinates.csv | `outputs_public/tables/table_dino_pca_coordinates.csv` | Coordenadas PCA dos embeddings. | apêndice/artigo |
+| table_dino_medoids.csv | `outputs_public/tables/table_dino_medoids.csv` | Medoids por região. | apêndice/artigo |
+| table_dino_outliers.csv | `outputs_public/tables/table_dino_outliers.csv` | Outliers por região. | apêndice/artigo |
+| table_dino_region_neighbor_matrix.csv | `outputs_public/tables/table_dino_region_neighbor_matrix.csv` | Matriz de vizinhança regional. | apêndice/artigo |
+| table_protocol_c_summary.csv | `outputs_public/tables/table_protocol_c_summary.csv` | Estado dos gates do Protocolo C (C4 bloqueado, sem negativos formais). | apêndice/artigo |
+| table_external_evidence_summary.csv | `outputs_public/tables/table_external_evidence_summary.csv` | Resumo de evidência externa por região. | apêndice/artigo |
+| table_claims_guardrails_summary.csv | `outputs_public/tables/table_claims_guardrails_summary.csv` | Resumo de afirmações permitidas e proibidas. | apêndice/artigo |
+| table_artifact_index.csv | `outputs_public/tables/table_artifact_index.csv` | Índice tabular dos artefatos públicos. | apoio |
+
+As demais tabelas de registro (registries do Protocolo C, scorecards e tabelas da cadeia forense `v2es`–`v2ff`) também residem em `outputs_public/tables/`. Tabelas intermediárias de sprint estão em `outputs_public/tables/saidas_intermediarias/`.
+
+## Métricas descritivas (`outputs_public/metrics/`)
+
+A pasta `outputs_public/metrics/` contém `dino_similarity_summary.csv`, `dino_cluster_summary.csv`, `dino_pca_summary.csv`, `dino_robustness_summary.csv`, `ablation_or_sensitivity_summary.csv`, `qa_metrics_summary.csv` e `readiness_summary.csv`. São métricas descritivas — **não representam desempenho de modelo operacional**. Uso: apêndice/artigo.
+
+## Relatórios finais e de rastreabilidade (`outputs_public/execution_reports/`)
+
+| Artefato | Caminho | Função no projeto | Uso |
+|---|---|---|---|
+| final_dino_structural_analysis_report.md | `outputs_public/execution_reports/final_dino_structural_analysis_report.md` | Análise estrutural consolidada dos embeddings. | apoio |
+| final_execution_report.md | `outputs_public/execution_reports/final_execution_report.md` | Relatório geral de execução. | apoio |
+| final_qa_report.md | `outputs_public/execution_reports/final_qa_report.md` | Relatório de QA. | apoio |
+| final_guardrails_report.md | `outputs_public/execution_reports/final_guardrails_report.md` | Relatório de travas metodológicas. | apoio |
+| final_traceability_report.md | `outputs_public/execution_reports/final_traceability_report.md` | Relatório de rastreabilidade. | apoio |
+| final_figures_selection_report.md | `outputs_public/execution_reports/final_figures_selection_report.md` | Decisão de seleção de figuras. | apoio |
+| final_figures_selection.csv | `outputs_public/execution_reports/final_figures_selection.csv` | Matriz da decisão de figuras. | apoio |
+| figures_regeneration_report.md | `outputs_public/execution_reports/figures_regeneration_report.md` | Registro de regeneração de figuras. | apoio |
+| final_validation_summary.json | `outputs_public/execution_reports/final_validation_summary.json` | Resumo de validação em JSON. | apoio |
+
+## Cadeia de auditoria de continuidade e recuperação (`outputs_public/execution_reports/`)
+
+| Artefato | Caminho | Função no projeto | Uso |
+|---|---|---|---|
+| revp_v2es_to_v2ey_integrated_report.md | `outputs_public/execution_reports/revp_v2es_to_v2ey_integrated_report.md` | Relatório integrado da tentativa de recuperação controlada. | apoio |
+| revp_v2es_to_v2ey_scientific_summary.md | `outputs_public/execution_reports/revp_v2es_to_v2ey_scientific_summary.md` | Resumo científico da recuperação. | apoio |
+| revp_v2ez_to_v2ff_relatorio_integrado.md | `outputs_public/execution_reports/revp_v2ez_to_v2ff_relatorio_integrado.md` | Relatório integrado da auditoria forense de recuperabilidade. | apoio |
+| revp_v2ez_to_v2ff_resumo_cientifico.md | `outputs_public/execution_reports/revp_v2ez_to_v2ff_resumo_cientifico.md` | Resumo científico da auditoria forense. | apoio |
+| revp_relatorio_painel_perda_recuperacao_base_original_v2ff.md | `outputs_public/execution_reports/revp_relatorio_painel_perda_recuperacao_base_original_v2ff.md` | Painel de perda e recuperabilidade da base original. | apoio |
+
+Os demais relatórios da cadeia (`revp_relatorio_*_v2ez`–`v2fe`, checklist de entrega) residem na mesma pasta.
+
+## Relatórios da curadoria pública
+
+| Artefato | Caminho | Função no projeto | Uso |
+|---|---|---|---|
+| revp_auditoria_curadoria_repositorio_publico.md | `outputs_public/execution_reports/revp_auditoria_curadoria_repositorio_publico.md` | Auditoria da curadoria da camada pública. | apoio |
+| revp_relatorio_limpeza_linguagem.md | `outputs_public/execution_reports/revp_relatorio_limpeza_linguagem.md` | Relatório de limpeza de linguagem. | apoio |
+| revp_plano_organizacao_estado_git.md | `outputs_public/execution_reports/revp_plano_organizacao_estado_git.md` | Plano de organização do estado Git. | apoio |
+| revp_relatorio_validacao_curadoria_publica.md | `outputs_public/execution_reports/revp_relatorio_validacao_curadoria_publica.md` | Validação da curadoria pública. | apoio |
+
+## Registros resumidos de execução e QA (`outputs_public/logs_summary/`)
+
+A pasta `outputs_public/logs_summary/` reúne `pytest_summary.txt`, `guardrail_validation_summary.txt`, os resumos de limites e testes da cadeia forense (`revp_v2ez_to_v2ff_resumo_limites.csv`, `revp_v2ez_to_v2ff_resumo_testes.csv`) e os summaries de status do Protocolo C (`protocol_c_current_status_summary.md`, `protocol_c_cross_region_status_summary.md`). Uso: apoio.
+
+## Declaração e documentação de leitura
+
+| Artefato | Caminho | Função no projeto | Uso |
+|---|---|---|---|
+| NO_OPERATIONAL_TRAINED_MODEL.md | `outputs_public/model/NO_OPERATIONAL_TRAINED_MODEL.md` | Declaração formal de ausência de modelo operacional. | apoio |
 | README.md | `outputs_public/README.md` | Documentação dos resultados públicos. | apoio |
-| README.md | `outputs_public/pacote_revisao/README.md` | Orientação de navegação para avaliação da entrega. | apoio |
-| reviewer_navigation.md | `outputs_public/pacote_revisao/reviewer_navigation.md` | Orientação de navegação para avaliação da entrega. | apoio |
-| what_to_check_first.md | `outputs_public/pacote_revisao/what_to_check_first.md` | Orientação de navegação para avaliação da entrega. | apoio |
-| figure_selection_decision_matrix.csv | `outputs_public/auditoria_selecao/figure_selection_decision_matrix.csv` | Registro da decisão de seleção de figuras. | apoio |
-| figure_selection_report.md | `outputs_public/auditoria_selecao/figure_selection_report.md` | Registro da decisão de seleção de figuras. | apoio |
-| figure_regeneration_manifest.csv | `outputs_public/tables/figure_regeneration_manifest.csv` | Tabela pública — auditoria direta ou apoio ao artigo. | apêndice/artigo |
-| table_claims_guardrails_summary.csv | `outputs_public/tables/table_claims_guardrails_summary.csv` | Tabela pública — auditoria direta ou apoio ao artigo. | apêndice/artigo |
-| table_corpus_summary.csv | `outputs_public/tables/table_corpus_summary.csv` | Tabela pública — auditoria direta ou apoio ao artigo. | apêndice/artigo |
-| table_dino_embedding_inventory.csv | `outputs_public/tables/table_dino_embedding_inventory.csv` | Tabela pública — auditoria direta ou apoio ao artigo. | apêndice/artigo |
-| table_dino_medoids.csv | `outputs_public/tables/table_dino_medoids.csv` | Tabela pública — auditoria direta ou apoio ao artigo. | apêndice/artigo |
-| table_dino_nearest_neighbors.csv | `outputs_public/tables/table_dino_nearest_neighbors.csv` | Tabela pública — auditoria direta ou apoio ao artigo. | apêndice/artigo |
-| table_dino_outliers.csv | `outputs_public/tables/table_dino_outliers.csv` | Tabela pública — auditoria direta ou apoio ao artigo. | apêndice/artigo |
-| table_dino_pca_coordinates.csv | `outputs_public/tables/table_dino_pca_coordinates.csv` | Tabela pública — auditoria direta ou apoio ao artigo. | apêndice/artigo |
-| table_dino_quantitative_summary_by_region.csv | `outputs_public/tables/table_dino_quantitative_summary_by_region.csv` | Tabela pública — auditoria direta ou apoio ao artigo. | apêndice/artigo |
-| table_dino_region_neighbor_matrix.csv | `outputs_public/tables/table_dino_region_neighbor_matrix.csv` | Tabela pública — auditoria direta ou apoio ao artigo. | apêndice/artigo |
-| table_dino_similarity_matrix.csv | `outputs_public/tables/table_dino_similarity_matrix.csv` | Tabela pública — auditoria direta ou apoio ao artigo. | apêndice/artigo |
-| table_external_evidence_summary.csv | `outputs_public/tables/table_external_evidence_summary.csv` | Tabela pública — auditoria direta ou apoio ao artigo. | apêndice/artigo |
-| table_patch_distribution_by_region.csv | `outputs_public/tables/table_patch_distribution_by_region.csv` | Tabela pública — auditoria direta ou apoio ao artigo. | apêndice/artigo |
-| table_protocol_c_summary.csv | `outputs_public/tables/table_protocol_c_summary.csv` | Tabela pública — auditoria direta ou apoio ao artigo. | apêndice/artigo |
-| final_delivery_artifact_index.md | `outputs_public/execution_reports/final_delivery_artifact_index.md` | Relatório de execução, QA, rastreabilidade ou entrega. | apoio |
-| table_artifact_index.csv | `outputs_public/tables/table_artifact_index.csv` | Tabela pública — auditoria direta ou apoio ao artigo. | apoio |
+| final_delivery_artifact_index.md | `outputs_public/execution_reports/final_delivery_artifact_index.md` | Este índice. | apoio |
+
+---
+
+## Categorias planejadas (ainda não materializadas como pasta)
+
+As categorias abaixo descrevem agrupamentos conceituais previstos para versões futuras da entrega. **Não existem como pastas nesta versão** e por isso aparecem apenas como descrição textual, sem caminho:
+
+- **Figuras de apêndice dedicadas** — uma pasta `figuras_apendice/` separando figuras estritamente de apêndice (fluxo metodológico, fluxo do Protocolo C, bandas/índices Sentinel) das figuras principais. Hoje as figuras de apoio equivalentes estão em `outputs_public/appendix_visual_audit/original_auxiliary_figures/`.
+- **Correspondência com o artigo** — uma pasta `correspondencia_artigo/` com o mapeamento explícito figura-do-artigo → artefato público. Hoje a decisão de figuras está em `final_figures_selection_report.md` e `final_figures_selection.csv`.
+- **Pacote de revisão** — uma pasta `pacote_revisao/` com guia de navegação para o avaliador (o que checar primeiro). Hoje a orientação de leitura está no `README.md` da raiz e em `outputs_public/README.md`.
+
+Quando (e se) essas pastas forem criadas, devem ser adicionadas às tabelas acima com caminho real.

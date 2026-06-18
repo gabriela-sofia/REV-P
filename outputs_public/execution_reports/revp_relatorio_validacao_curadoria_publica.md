@@ -59,14 +59,14 @@ Todos os arquivos modificados são documentos públicos (`.md`, `.csv`). Nenhum 
 
 | Arquivo | Função |
 |---|---|
-| `outputs_public/execution_reports/revp_public_repository_curation_audit.md` | Auditoria editorial — Fase 1 |
-| `docs/metodologia_cientifica/revp_style_and_naming_guide.md` | Guia editorial canônico — Fase 2 |
-| `docs/metodologia_cientifica/revp_stage_index.md` | Índice de estágios com nomes públicos — Fase 4 |
-| `outputs_public/tables/revp_public_stage_index.csv` | Versão CSV do índice de estágios — Fase 4 |
-| `outputs_public/execution_reports/revp_language_cleanup_report.md` | Relatório de limpeza de linguagem — Fase 6 |
-| `outputs_public/execution_reports/revp_git_state_cleanup_plan.md` | Diagnóstico Git — Fase 7 |
-| `outputs_public/tables/revp_public_export_filelist.csv` | Lista de exportação pública — Fase 8 |
-| `outputs_public/execution_reports/revp_public_curation_validation_report.md` | Este relatório — Fase 9 |
+| `outputs_public/execution_reports/revp_auditoria_curadoria_repositorio_publico.md` | Auditoria editorial — Fase 1 |
+| `docs/metodologia_cientifica/revp_guia_estilo_nomenclatura.md` | Guia editorial canônico — Fase 2 |
+| `docs/metodologia_cientifica/revp_indice_etapas.md` | Índice de estágios com nomes públicos — Fase 4 |
+| `outputs_public/tables/revp_indice_etapas_publicas.csv` | Versão CSV do índice de estágios — Fase 4 |
+| `outputs_public/execution_reports/revp_relatorio_limpeza_linguagem.md` | Relatório de limpeza de linguagem — Fase 6 |
+| `outputs_public/execution_reports/revp_plano_organizacao_estado_git.md` | Diagnóstico Git — Fase 7 |
+| `outputs_public/tables/revp_lista_arquivos_exportacao_publica.csv` | Lista de exportação pública — Fase 8 |
+| `outputs_public/execution_reports/revp_relatorio_validacao_curadoria_publica.md` | Este relatório — Fase 9 |
 
 ---
 

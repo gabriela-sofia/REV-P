@@ -1,6 +1,6 @@
 # REV-P v2ez indice de busca forense no repositorio
 
-Linhas geradas: 191
+Linhas geradas: 196
 
 A busca local indexa nomes e referencias em textos pequenos; nao copia, extrai, restaura nem apaga arquivos.
 

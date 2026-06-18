@@ -1,6 +1,6 @@
 # REV-P v2fd validacao de candidatos forenses
 
-Linhas geradas: 243
+Linhas geradas: 250
 
 Candidatos sao classificados como completos, parciais, somente referencia, bloqueados ou nao originais; nenhuma copia e feita.
 

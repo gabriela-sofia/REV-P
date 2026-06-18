@@ -29,13 +29,13 @@ outputs_public/execution_reports/revp_source_license_triage_report_v2ct.md,Triag
 outputs_public/execution_reports/revp_v2cj_to_v2cm_integrated_report.md,Relatório integrado v2cj-v2cm,Sim,Sprint de replay e validação,Baixo,Não,Adequado
 outputs_public/execution_reports/revp_v2cn_to_v2cr_integrated_report.md,Relatório integrado v2cn-v2cr,Sim,Sprint de aquisição e QA geoespacial,Baixo,Não,Adequado
 outputs_public/execution_reports/revp_v2cs_to_v2cw_integrated_report.md,Relatório integrado v2cs-v2cw,Sim,Sprint de registry real e triagem,Baixo,Não,Adequado
-outputs_public/execution_reports/revp_public_repository_curation_audit.md,Auditoria editorial do repositório,Sim,Fase 1 da curadoria,Baixo,Não,Criado na curadoria
-outputs_public/execution_reports/revp_language_cleanup_report.md,Relatório de limpeza de linguagem,Sim,Fase 6 da curadoria,Baixo,Não,Criado na curadoria
-outputs_public/execution_reports/revp_git_state_cleanup_plan.md,Diagnóstico do estado Git,Sim,Fase 7 da curadoria,Baixo,Não,Criado na curadoria
-outputs_public/execution_reports/revp_public_curation_validation_report.md,Relatório de validação da curadoria,Sim,Fase 9 da curadoria,Baixo,Não,Criado na curadoria
-outputs_public/tables/revp_public_stage_index.csv,Índice de estágios em CSV,Sim,Fase 4 da curadoria,Baixo,Não,Criado na curadoria
-docs/metodologia_cientifica/revp_stage_index.md,Índice de estágios em Markdown,Sim,Fase 4 da curadoria,Baixo,Não,Criado na curadoria
-docs/metodologia_cientifica/revp_style_and_naming_guide.md,Guia editorial canônico,Sim,Fase 2 da curadoria,Baixo,Não,Criado na curadoria
+outputs_public/execution_reports/revp_auditoria_curadoria_repositorio_publico.md,Auditoria editorial do repositório,Sim,Fase 1 da curadoria,Baixo,Não,Criado na curadoria
+outputs_public/execution_reports/revp_relatorio_limpeza_linguagem.md,Relatório de limpeza de linguagem,Sim,Fase 6 da curadoria,Baixo,Não,Criado na curadoria
+outputs_public/execution_reports/revp_plano_organizacao_estado_git.md,Diagnóstico do estado Git,Sim,Fase 7 da curadoria,Baixo,Não,Criado na curadoria
+outputs_public/execution_reports/revp_relatorio_validacao_curadoria_publica.md,Relatório de validação da curadoria,Sim,Fase 9 da curadoria,Baixo,Não,Criado na curadoria
+outputs_public/tables/revp_indice_etapas_publicas.csv,Índice de estágios em CSV,Sim,Fase 4 da curadoria,Baixo,Não,Criado na curadoria
+docs/metodologia_cientifica/revp_indice_etapas.md,Índice de estágios em Markdown,Sim,Fase 4 da curadoria,Baixo,Não,Criado na curadoria
+docs/metodologia_cientifica/revp_guia_estilo_nomenclatura.md,Guia editorial canônico,Sim,Fase 2 da curadoria,Baixo,Não,Criado na curadoria
 outputs_public/logs_summary/protocol_c_current_status_summary.md,Resumo de estado atual do Protocolo C,Sim,Estado metodológico de Recife,Baixo,Não,Editado — humanizado
 outputs_public/logs_summary/protocol_c_cross_region_status_summary.md,Resumo multiregional do Protocolo C,Sim,Estado metodológico das 3 regiões,Baixo,Não,Editado — humanizado
 outputs_public/logs_summary/pytest_summary.txt,Resumo de testes executados,Sim,Evidência de execução da suíte de testes,Baixo,Não,Log leve — adequado
@@ -61,8 +61,8 @@ outputs_public/tables/table_claims_guardrails_summary.csv,Resumo de claims e res
 outputs_public/tables/revp_external_evidence_manifest_public_v2cp.csv,Manifesto público de evidência externa,Sim,3 evidências geoespaciais públicas,Baixo,Sim,Verificar licenças antes de redistribuir
 outputs_public/tables/revp_external_geospatial_qa_v2cq.csv,QA geoespacial externo,Sim,3 auditorias de qualidade,Baixo,Não,Adequado
 outputs_public/tables/revp_external_patch_pairing_v2cr.csv,Pareamentos patch-evidência,Sim,3 pares documentados,Baixo,Sim,Verificar critérios de validade
-outputs_public/tables/revp_public_stage_index.csv,Índice de estágios CSV,Sim,Criado na curadoria,Baixo,Não,Novo
-outputs_public/tables/revp_public_export_filelist.csv,Esta lista de exportação,Sim,Criado na curadoria,Baixo,Não,Este arquivo
+outputs_public/tables/revp_indice_etapas_publicas.csv,Índice de estágios CSV,Sim,Criado na curadoria,Baixo,Não,Novo
+outputs_public/tables/revp_lista_arquivos_exportacao_publica.csv,Esta lista de exportação,Sim,Criado na curadoria,Baixo,Não,Este arquivo
 outputs_public/metrics/dino_cluster_summary.csv,Métricas de agrupamento DINOv2,Sim,Resultado descritivo,Baixo,Não,Não alterar
 outputs_public/metrics/dino_pca_summary.csv,Métricas de PCA,Sim,Resultado descritivo,Baixo,Não,Não alterar
 outputs_public/metrics/dino_similarity_summary.csv,Métricas de similaridade,Sim,Resultado descritivo,Baixo,Não,Não alterar

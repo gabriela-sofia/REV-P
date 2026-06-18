@@ -17,6 +17,29 @@ Este documento mapeia os códigos internos do pipeline REV-P para nomes público
 
 ---
 
+## Marcos científicos (linha do tempo)
+
+Esta é a leitura de alto nível para a banca. As microversões `v1*`/`v2*` são rastreabilidade técnica; o que importa são os marcos abaixo. Cada marco indica função, artefatos principais, claim permitido, claim proibido e estado.
+
+| Marco | Função | Artefatos principais | Claim permitido | Claim proibido | Estado |
+|---|---|---|---|---|---|
+| `v1f`–`v1g` | Corpus territorial, manifesto Sentinel e scaffold DINO/multimodal | Manifesto `v1fu` (128 assets), corpus de 59 patches | "inventário de entrada reprodutível" | "classe / rótulo / alvo" | Concluído |
+| `v1g` (DINOv2) | Extração de embeddings reais com encoder congelado | 12 embeddings 768D, tabelas de similaridade/k-NN/PCA, 5 figuras | "representação auto-supervisionada exploratória" | "detector / preditor / acurácia operacional" | Concluído |
+| `v1i`–`v2a` | Protocolo C — aquisição e adjudicação de evidência externa | Registries, scorecards, gates C1–C4 | "evidência candidata para revisão" | "ground truth / evento confirmado" | Bloqueado em `C4_BLOCKED_NO_FORMAL_NEGATIVES` |
+| `v2ah`–`v2am` | Atlas de evidência e integração para manuscrito | Atlas, apêndices, bundles LaTeX/Markdown | "empacotamento para revisão humana" | "resultado operacional" | Concluído |
+| `v2an`–`v2bm` | Validação regional de referência | Pontuações Recife 0.76 / Curitiba 0.70 / Petrópolis 0.55 | "referência candidata/temporal/contextual" | "ground truth / label" | Concluído (referências, não GT) |
+| `v2bn`–`v2ca` | Dry-run de ground truth sem criação de label | Planos de protocolo, scaffolds, adjudicações | "modelagem de protocolo hipotético" | "label criado / treino liberado" | Bloqueado (poucos positivos / sem geometria) |
+| `v2cb`–`v2ch` | Cadeia operacional Curitiba | Intake de evidência, QA geométrico, release | "aquisição auditável bloqueada" | "geometria de evento confirmada" | Bloqueado auditável |
+| `v2ci`–`v2cj` | Auditoria e normalização terminológica PT-BR | Mapa de termos, renomeações seguras | "padronização de linguagem" | — | Concluído |
+| `v2dz`–`v2ef` | Base de trabalho candidata anterior | Base de 53 registros (referenciada por etapas posteriores) | "base de processo intermediária" | "ground truth / base recuperada" | Artefatos não recuperados diretamente |
+| `v2es`–`v2ey` | Tentativa de recuperação controlada | Inspeção de artefatos vizinhos, validação de candidatos | "auditoria de continuidade" | "recuperação concluída / fallback como base" | Bloqueado — sem fonte válida nem fallback |
+| `v2ez`–`v2ff` | Busca forense, validação de candidatos e decisão de recuperabilidade | Índice forense, extrator diff/patch, inspetor Git/reflog, painel de perda | "auditoria forense somente para revisão" | "ground truth / label / treino / detecção / predição" | Concluído — `ORIGINAL_BASE_REQUIRES_MANUAL_RESTORE` |
+| `curadoria/repositorio-publico-ptbr` | Reorganização pública em português | README, índices, narrativa consolidada, relatórios | "consolidação editorial em PT-BR" | — | Em andamento |
+
+As seções abaixo detalham os códigos internos de cada marco.
+
+---
+
 ## Estágios de corpus e linhagem de patches
 
 | Código interno | Nome público | Finalidade | Executável | Revisão humana | Status científico |
@@ -120,6 +143,29 @@ Este documento mapeia os códigos internos do pipeline REV-P para nomes público
 | `v2cu` | Sync de registro de fontes externas | Sincroniza registro de fontes com manifesto público | Sim | Não | Concluído |
 | `v2cv` | Checklist de descoberta de produtos externos | Organiza checklist de produtos externos identificados | Sim | Sim | Concluído |
 | `v2cw` | Leitura regional de prontidão de evidência | Consolida prontidão de evidência por região | Sim | Não | Concluído |
+
+---
+
+## Estágios de auditoria de continuidade e recuperação da base original
+
+Esta faixa de estágios trata da **rastreabilidade e recuperabilidade** de uma base de trabalho candidata anterior (códigos `v2dz`–`v2ef`), cujos artefatos não estavam disponíveis localmente. É uma **auditoria de continuidade**: documenta o que existe, o que se perdeu e o que é recuperável. Não recupera ground truth operacional, não fecha rótulo, não libera treino e não substitui a base original por um fallback.
+
+| Código interno | Nome público | Finalidade | Executável | Revisão humana | Status científico |
+|---|---|---|---|---|---|
+| `v2dz`–`v2ef` | Base de trabalho candidata anterior | Conjunto de trabalho intermediário de etapa anterior, referenciado por etapas posteriores | — | Sim | Artefatos ausentes/não recuperados localmente |
+| `v2es`–`v2ey` | Tentativa de recuperação controlada | Inspeciona artefatos vizinhos, valida candidatos e tenta restaurar a base por cópia controlada | Sim | Sim | Bloqueado — nenhuma fonte válida e nenhum fallback disponível |
+| `v2ez`–`v2ff` | Auditoria forense de recuperabilidade | Índice de busca forense, extração por diff/patch, inspeção de objetos Git/reflog, plano de backups, validação de candidatos, registro de decisão e painel de perda | Sim | Sim | Concluído — decisão `ORIGINAL_BASE_REQUIRES_MANUAL_RESTORE` |
+| `curadoria/repositorio-publico-ptbr` | Reorganização pública em português | Consolida a camada pública (README, índices, relatórios) em português brasileiro e integra a linha do tempo metodológica | Sim | Sim | Em andamento |
+
+**Estado consolidado da base original** (saída de `v2ez`–`v2ff`):
+
+- `original_base_status = ORIGINAL_BASE_REQUIRES_MANUAL_RESTORE`;
+- 53 registros candidatos da base original: **não recuperáveis** automaticamente (`original_53_recoverable = false`);
+- fallback de 38 linhas: **indisponível** (`fallback_38_available = false`);
+- somente referências/pistas recuperáveis foram encontradas — **referência não é conteúdo**;
+- `ground_truth_operational_status = ABSENT`; `training_ready = false`.
+
+Limite preservado: esta auditoria **não recupera ground truth operacional, não fecha rótulo, não libera treino e não substitui a base original por fallback**. A recuperação efetiva, se ocorrer, depende de ação manual (restauração por diff ou objeto Git) e de revisão humana.
 
 ---
 

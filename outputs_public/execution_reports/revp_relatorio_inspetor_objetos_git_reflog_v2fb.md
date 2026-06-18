@@ -1,6 +1,6 @@
 # REV-P v2fb inspetor de objetos Git e reflog
 
-Linhas geradas: 85
+Linhas geradas: 87
 
 Log Git, reflog e objetos candidatos sao inspecionados somente leitura; nenhum objeto e restaurado.
 

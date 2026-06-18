@@ -33,14 +33,14 @@ Os seguintes arquivos foram alterados como parte da curadoria editorial (Fases 3
 
 | Arquivo | Função |
 |---|---|
-| `docs/metodologia_cientifica/revp_stage_index.md` | Índice público de estágios |
-| `docs/metodologia_cientifica/revp_style_and_naming_guide.md` | Guia editorial canônico |
-| `outputs_public/execution_reports/revp_public_repository_curation_audit.md` | Auditoria editorial |
-| `outputs_public/execution_reports/revp_language_cleanup_report.md` | Relatório de limpeza de linguagem |
-| `outputs_public/execution_reports/revp_git_state_cleanup_plan.md` | Este arquivo |
-| `outputs_public/execution_reports/revp_public_curation_validation_report.md` | Relatório de validação |
-| `outputs_public/tables/revp_public_stage_index.csv` | Índice de estágios em CSV |
-| `outputs_public/tables/revp_public_export_filelist.csv` | Lista de exportação pública |
+| `docs/metodologia_cientifica/revp_indice_etapas.md` | Índice público de estágios |
+| `docs/metodologia_cientifica/revp_guia_estilo_nomenclatura.md` | Guia editorial canônico |
+| `outputs_public/execution_reports/revp_auditoria_curadoria_repositorio_publico.md` | Auditoria editorial |
+| `outputs_public/execution_reports/revp_relatorio_limpeza_linguagem.md` | Relatório de limpeza de linguagem |
+| `outputs_public/execution_reports/revp_plano_organizacao_estado_git.md` | Este arquivo |
+| `outputs_public/execution_reports/revp_relatorio_validacao_curadoria_publica.md` | Relatório de validação |
+| `outputs_public/tables/revp_indice_etapas_publicas.csv` | Índice de estágios em CSV |
+| `outputs_public/tables/revp_lista_arquivos_exportacao_publica.csv` | Lista de exportação pública |
 
 ---
 
@@ -82,14 +82,14 @@ git add outputs_public/execution_reports/final_delivery_artifact_index.md
 git add outputs_public/execution_reports/final_guardrails_report.md
 git add outputs_public/logs_summary/protocol_c_current_status_summary.md
 git add outputs_public/logs_summary/protocol_c_cross_region_status_summary.md
-git add docs/metodologia_cientifica/revp_stage_index.md
-git add docs/metodologia_cientifica/revp_style_and_naming_guide.md
-git add outputs_public/execution_reports/revp_public_repository_curation_audit.md
-git add outputs_public/execution_reports/revp_language_cleanup_report.md
-git add outputs_public/execution_reports/revp_git_state_cleanup_plan.md
-git add outputs_public/execution_reports/revp_public_curation_validation_report.md
-git add outputs_public/tables/revp_public_stage_index.csv
-git add outputs_public/tables/revp_public_export_filelist.csv
+git add docs/metodologia_cientifica/revp_indice_etapas.md
+git add docs/metodologia_cientifica/revp_guia_estilo_nomenclatura.md
+git add outputs_public/execution_reports/revp_auditoria_curadoria_repositorio_publico.md
+git add outputs_public/execution_reports/revp_relatorio_limpeza_linguagem.md
+git add outputs_public/execution_reports/revp_plano_organizacao_estado_git.md
+git add outputs_public/execution_reports/revp_relatorio_validacao_curadoria_publica.md
+git add outputs_public/tables/revp_indice_etapas_publicas.csv
+git add outputs_public/tables/revp_lista_arquivos_exportacao_publica.csv
 ```
 
 ### O que NÃO deve ser staged
