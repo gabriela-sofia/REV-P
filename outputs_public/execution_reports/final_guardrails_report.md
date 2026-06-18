@@ -1,10 +1,9 @@
-# Relatorio final de guardrails
+# Relatório de restrições metodológicas
 
-## Estado preservado
+## Restrições em vigor nesta entrega
 
-- DINOv2 usado como codificador visual congelado, com uso restrito a revisao estrutural.
-- Nenhum rotulo binario ou alvo supervisionado criado.
-- Nenhum classificador supervisionado operacional treinado.
-- Nenhuma afirmacao de deteccao, predicao ou acuracia operacional.
-- Protocolo C permanece `C4_BLOCKED_NO_FORMAL_NEGATIVES`.
-- Ausencia de registro, pseudo-ausencia, area de fundo aleatoria e distancia de ancora nao sao tratadas como negativos formais.
+O DINOv2 é usado exclusivamente como codificador visual congelado para análise estrutural e revisão. Não há rótulo binário, alvo supervisionado, classificador treinado nem afirmação de detecção, predição ou acurácia operacional.
+
+O Protocolo C permanece bloqueado no gate C4 por ausência de negativos formais (código interno: `C4_BLOCKED_NO_FORMAL_NEGATIVES`). Isso significa que ausência de registro de evento, pseudo-ausência, área de fundo aleatória e distância de âncora não são tratadas como negativos formais nesta versão.
+
+Essas restrições são deliberadas e auditáveis. Elas não serão removidas sem evidência que satisfaça os gates correspondentes.

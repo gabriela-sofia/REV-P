@@ -1,6 +1,9 @@
-# Protocol C - cross-region status summary
+# Protocolo C — estado de referência por região
 
-- Recife: PROTOCOL_VALIDATED_CANDIDATE_REFERENCE (score 0.76).
-- Curitiba: PROTOCOL_VALIDATED_TEMPORAL_REFERENCE (score 0.7) - A807 LOCAL strong temporal; Sentinel date missing.
-- Petropolis: PROTOCOL_VALIDATED_CONTEXTUAL_REFERENCE (score 0.55) - A610 regional proxy temporal context.
-- Operational label = 0 | negative = 0 | training = 0 | C7 = NOT_CREATED_BLOCKED_FOR_TRAINING (all regions).
+| Região | Tipo de referência | Pontuação | Incerteza | Evidência principal |
+|---|---|---|---|---|
+| Recife | Referência candidata validada | 0.76 | Moderada | Raster Charter 758 (2022-06-02, cicatrizes) |
+| Curitiba | Referência temporal validada | 0.70 | Moderada | Estação INMET A807 LOCAL — precipitação forte (3/3 seeds); data Sentinel ausente |
+| Petrópolis | Referência contextual validada | 0.55 | Alta | Estação INMET A610 REGIONAL_PROXY — contexto temporal regional; sem âncora espacial local |
+
+**Estado metodológico (todas as regiões)**: nenhum rótulo operacional, negativo formal ou amostra de treinamento foi criado. O gate C7 permanece não criado e bloqueado para treinamento em todas as regiões. Código interno: `C7 = NOT_CREATED_BLOCKED_FOR_TRAINING`.

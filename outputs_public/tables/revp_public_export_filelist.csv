@@ -1,0 +1,83 @@
+file_path,public_role,include_in_public_layer,reason,risk_level,needs_human_review,notes
+README.md,Documentação principal de entrada,Sim,Descreve o projeto para qualquer leitor externo,Baixo,Não,Reestruturado na curadoria editorial
+outputs_public/README.md,Guia de navegação dos resultados públicos,Sim,Orienta leitura dos artefatos entregues,Baixo,Não,Já adequado
+outputs_public/model/NO_OPERATIONAL_TRAINED_MODEL.md,Declaração de ausência de modelo operacional,Sim,Contrato metodológico central; parte da entrega,Baixo,Não,Não alterar
+outputs_public/execution_reports/final_delivery_artifact_index.md,Índice de artefatos da entrega,Sim,Lista completa dos 97 artefatos entregues,Baixo,Não,Editado — disclaimers consolidados
+outputs_public/execution_reports/final_execution_report.md,Relatório de execução da entrega,Sim,Documenta contagens e resultado da preparação,Baixo,Não,Adequado
+outputs_public/execution_reports/final_qa_report.md,Relatório de QA,Sim,Documenta validações executadas,Baixo,Não,Adequado
+outputs_public/execution_reports/final_traceability_report.md,Relatório de rastreabilidade,Sim,Documenta origem dos artefatos e cadeia de evidência,Baixo,Não,Adequado
+outputs_public/execution_reports/final_guardrails_report.md,Relatório de restrições metodológicas,Sim,Declara restrições científicas em vigor,Baixo,Não,Editado — texto humanizado
+outputs_public/execution_reports/final_dino_structural_analysis_report.md,Análise estrutural DINOv2,Sim,Descreve resultados da análise de embeddings,Baixo,Não,Adequado
+outputs_public/execution_reports/figures_regeneration_report.md,Relatório de regeneração de figuras,Sim,Documenta processo de regeneração,Baixo,Não,Adequado
+outputs_public/execution_reports/protocol_c_cross_region_reapplication_report.md,Relatório de reaplicação multiregional do Protocolo C,Sim,Documenta estado por região com tabelas de gates,Baixo,Não,Contém tabelas com status técnicos — adequado
+outputs_public/execution_reports/protocol_c_recife_validated_candidate_reference_report.md,Relatório de referência candidata Recife,Sim,Documenta Recife como referência candidata validada,Baixo,Não,Adequado
+outputs_public/execution_reports/revp_curitiba_v2ca_v2cg_release_report_v2ch.md,Relatório de release da cadeia Curitiba,Sim,Documenta consolidação da cadeia Curitiba,Baixo,Não,Contém status em inglês — adequado com contexto
+outputs_public/execution_reports/revp_curitiba_v2ca_v2cg_commit_checklist_v2ch.md,Checklist de commit Curitiba,Sim,Registro de integridade do commit da cadeia Curitiba,Baixo,Não,Documento técnico interno — manter
+outputs_public/execution_reports/revp_tp2_candidate_inventory_report_v2ci.md,Inventário de candidatos TP2,Sim,Documenta 38 candidatos observacionais,Baixo,Não,Adequado
+outputs_public/execution_reports/revp_tp2_candidate_priority_report_v2cj.md,Relatório de priorização TP2,Sim,Documenta priorização dos candidatos,Baixo,Não,Adequado
+outputs_public/execution_reports/revp_tp2_candidate_commit_checklist_v2ci.md,Checklist de commit TP2,Sim,Registro de integridade do commit TP2,Baixo,Não,Documento técnico interno — manter
+outputs_public/execution_reports/revp_external_evidence_acquisition_report_v2co.md,Relatório de aquisição de evidência externa,Sim,Documenta processo de aquisição offline,Baixo,Não,Adequado
+outputs_public/execution_reports/revp_external_evidence_gap_matrix_report_v2cn.md,Relatório de lacunas de evidência externa,Sim,38 lacunas documentadas por região,Baixo,Não,Adequado
+outputs_public/execution_reports/revp_external_evidence_manifest_report_v2cp.md,Relatório de manifesto de evidência externa,Sim,3 evidências manifestadas públicas,Baixo,Não,Adequado
+outputs_public/execution_reports/revp_external_evidence_regional_report_v2cw.md,Leitura regional de prontidão,Sim,Consolida estado de prontidão por região,Baixo,Não,Adequado
+outputs_public/execution_reports/revp_external_geospatial_qa_report_v2cq.md,Relatório de QA geoespacial externo,Sim,3 auditorias geoespaciais documentadas,Baixo,Não,Adequado
+outputs_public/execution_reports/revp_external_patch_pairing_report_v2cr.md,Relatório de pareamento patch-evidência,Sim,3 pares documentados,Baixo,Não,Adequado
+outputs_public/execution_reports/revp_observed_geometry_validation_report_v2cl.md,Validação de geometria observada,Sim,Geometrias candidatas validadas (metadata),Baixo,Não,Adequado
+outputs_public/execution_reports/revp_patch_event_replay_report_v2cm.md,Relatório de replay de evento por patch,Sim,Replay sem promoção de rótulo documentado,Baixo,Não,Adequado
+outputs_public/execution_reports/revp_real_external_source_seeding_report_v2cs.md,Relatório de semeadura de fontes,Sim,Metadados de fontes externas reais registrados,Baixo,Não,Adequado
+outputs_public/execution_reports/revp_source_license_triage_report_v2ct.md,Triagem de licença de fontes,Sim,Licença e redistribuição por fonte documentadas,Baixo,Sim,Verificar licenças antes de redistribuir
+outputs_public/execution_reports/revp_v2cj_to_v2cm_integrated_report.md,Relatório integrado v2cj-v2cm,Sim,Sprint de replay e validação,Baixo,Não,Adequado
+outputs_public/execution_reports/revp_v2cn_to_v2cr_integrated_report.md,Relatório integrado v2cn-v2cr,Sim,Sprint de aquisição e QA geoespacial,Baixo,Não,Adequado
+outputs_public/execution_reports/revp_v2cs_to_v2cw_integrated_report.md,Relatório integrado v2cs-v2cw,Sim,Sprint de registry real e triagem,Baixo,Não,Adequado
+outputs_public/execution_reports/revp_public_repository_curation_audit.md,Auditoria editorial do repositório,Sim,Fase 1 da curadoria,Baixo,Não,Criado na curadoria
+outputs_public/execution_reports/revp_language_cleanup_report.md,Relatório de limpeza de linguagem,Sim,Fase 6 da curadoria,Baixo,Não,Criado na curadoria
+outputs_public/execution_reports/revp_git_state_cleanup_plan.md,Diagnóstico do estado Git,Sim,Fase 7 da curadoria,Baixo,Não,Criado na curadoria
+outputs_public/execution_reports/revp_public_curation_validation_report.md,Relatório de validação da curadoria,Sim,Fase 9 da curadoria,Baixo,Não,Criado na curadoria
+outputs_public/tables/revp_public_stage_index.csv,Índice de estágios em CSV,Sim,Fase 4 da curadoria,Baixo,Não,Criado na curadoria
+docs/metodologia_cientifica/revp_stage_index.md,Índice de estágios em Markdown,Sim,Fase 4 da curadoria,Baixo,Não,Criado na curadoria
+docs/metodologia_cientifica/revp_style_and_naming_guide.md,Guia editorial canônico,Sim,Fase 2 da curadoria,Baixo,Não,Criado na curadoria
+outputs_public/logs_summary/protocol_c_current_status_summary.md,Resumo de estado atual do Protocolo C,Sim,Estado metodológico de Recife,Baixo,Não,Editado — humanizado
+outputs_public/logs_summary/protocol_c_cross_region_status_summary.md,Resumo multiregional do Protocolo C,Sim,Estado metodológico das 3 regiões,Baixo,Não,Editado — humanizado
+outputs_public/logs_summary/pytest_summary.txt,Resumo de testes executados,Sim,Evidência de execução da suíte de testes,Baixo,Não,Log leve — adequado
+outputs_public/logs_summary/guardrail_validation_summary.txt,Resumo de validação de guardrails,Sim,Evidência de validação metodológica,Baixo,Não,Log leve — adequado
+outputs_public/figures/fig_recife_main_publication_v15_final.png,Figura principal validada de Recife,Sim,Figura de publicação principal,Baixo,Não,Não alterar — figura validada
+outputs_public/figures/fig_petropolis_main_publication_v17.png,Figura regional Petrópolis,Sim,Figura de publicação regional,Baixo,Não,Não alterar
+outputs_public/figures/fig_curitiba_main_publication_v17.png,Figura regional Curitiba,Sim,Figura de publicação regional,Baixo,Não,Não alterar
+outputs_public/figures/dino_knn_neighbor_network_publication.png,Grafo de vizinhança k-NN DINOv2,Sim,Resultado estrutural para publicação,Baixo,Não,Não alterar
+outputs_public/figures/dino_pca_projection_publication.png,Projeção PCA DINOv2,Sim,Resultado estrutural para publicação,Baixo,Não,Não alterar
+outputs_public/figures/dino_medoids_outliers_publication.png,Medoids e outliers DINOv2,Sim,Resultado estrutural para publicação,Baixo,Não,Não alterar
+outputs_public/figures/dino_similarity_heatmap_publication.png,Mapa de similaridade DINOv2,Sim,Resultado estrutural para publicação,Baixo,Não,Não alterar
+outputs_public/figures/dino_region_neighbor_matrix_publication.png,Matriz de vizinhança regional,Sim,Resultado estrutural para publicação,Baixo,Não,Não alterar
+outputs_public/tables/table_corpus_summary.csv,Resumo do corpus,Sim,Contagens canônicas do corpus,Baixo,Não,Não alterar
+outputs_public/tables/table_patch_distribution_by_region.csv,Distribuição de patches por região,Sim,Tabela canônica de distribuição,Baixo,Não,Não alterar
+outputs_public/tables/table_dino_embedding_inventory.csv,Inventário de embeddings DINOv2,Sim,Registro dos 12 embeddings reais,Baixo,Não,Não alterar
+outputs_public/tables/table_dino_similarity_matrix.csv,Matriz de similaridade DINOv2,Sim,Resultado estrutural,Baixo,Não,Não alterar
+outputs_public/tables/table_dino_nearest_neighbors.csv,Tabela de vizinhos mais próximos,Sim,Resultado estrutural,Baixo,Não,Não alterar
+outputs_public/tables/table_dino_pca_coordinates.csv,Coordenadas PCA,Sim,Resultado estrutural,Baixo,Não,Não alterar
+outputs_public/tables/table_dino_medoids.csv,Medoids por região,Sim,Resultado estrutural,Baixo,Não,Não alterar
+outputs_public/tables/table_dino_outliers.csv,Outliers por região,Sim,Resultado estrutural,Baixo,Não,Não alterar
+outputs_public/tables/table_external_evidence_summary.csv,Resumo de evidência externa,Sim,Síntese de evidências por região,Baixo,Não,Não alterar
+outputs_public/tables/table_claims_guardrails_summary.csv,Resumo de claims e restrições,Sim,Registro de claims permitidos e proibidos,Baixo,Não,Não alterar
+outputs_public/tables/revp_external_evidence_manifest_public_v2cp.csv,Manifesto público de evidência externa,Sim,3 evidências geoespaciais públicas,Baixo,Sim,Verificar licenças antes de redistribuir
+outputs_public/tables/revp_external_geospatial_qa_v2cq.csv,QA geoespacial externo,Sim,3 auditorias de qualidade,Baixo,Não,Adequado
+outputs_public/tables/revp_external_patch_pairing_v2cr.csv,Pareamentos patch-evidência,Sim,3 pares documentados,Baixo,Sim,Verificar critérios de validade
+outputs_public/tables/revp_public_stage_index.csv,Índice de estágios CSV,Sim,Criado na curadoria,Baixo,Não,Novo
+outputs_public/tables/revp_public_export_filelist.csv,Esta lista de exportação,Sim,Criado na curadoria,Baixo,Não,Este arquivo
+outputs_public/metrics/dino_cluster_summary.csv,Métricas de agrupamento DINOv2,Sim,Resultado descritivo,Baixo,Não,Não alterar
+outputs_public/metrics/dino_pca_summary.csv,Métricas de PCA,Sim,Resultado descritivo,Baixo,Não,Não alterar
+outputs_public/metrics/dino_similarity_summary.csv,Métricas de similaridade,Sim,Resultado descritivo,Baixo,Não,Não alterar
+outputs_public/metrics/qa_metrics_summary.csv,Métricas de QA,Sim,Resultado de auditoria,Baixo,Não,Não alterar
+outputs_public/metrics/readiness_summary.csv,Resumo de prontidão,Sim,Estado de prontidão do pipeline,Baixo,Não,Não alterar
+outputs_public/metrics/dino_robustness_summary.csv,Métricas de robustez DINOv2,Sim,Resultado de análise de sensibilidade,Baixo,Não,Não alterar
+datasets/,Registries e tabelas auditáveis,Sim (referência),Necessário para rastreabilidade,Médio,Não,Não alterar — contratos de schema
+docs/metodologia_cientifica/,Documentação metodológica,Sim (referência),Contexto científico do pipeline,Baixo,Não,Não alterar documentos existentes
+manifests/,Manifests de corpus e validação,Sim (referência),Auditabilidade do corpus,Médio,Não,Não alterar
+configs/,Templates e checklists,Sim (referência),Reprodutibilidade local,Baixo,Não,Não alterar
+local_runs/,Execução local pesada,Não,Dados pesados locais,N/A,N/A,Fora do Git por design
+*.npz,Embeddings brutos,Não,Dados pesados locais,Alto,Não,Nunca publicar
+*.npy,Arrays brutos,Não,Dados pesados locais,Alto,Não,Nunca publicar
+*.parquet,Dados brutos em parquet,Não,Dados pesados locais,Alto,Não,Nunca publicar
+GeoTIFFs,Rasters brutos,Não,Dados pesados locais,Alto,Não,Nunca publicar
+shapefiles,Vetores brutos,Não,Dados brutos com licença variável,Alto,Sim,Verificar licença antes de qualquer publicação
+__pycache__/,Cache Python,Não,Artefato temporário,N/A,Não,Ignorado pelo .gitignore
+.venv/,Ambiente virtual,Não,Dependência de ambiente,N/A,Não,Ignorado pelo .gitignore
