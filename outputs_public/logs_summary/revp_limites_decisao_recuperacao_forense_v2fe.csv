@@ -1,0 +1,12 @@
+etapa,limite_metodologico,valor,status
+v2fe,ground_truth_operational_status,ABSENT,PASS
+v2fe,formal_labels_available,ABSENT,PASS
+v2fe,formal_negatives_available,ABSENT,PASS
+v2fe,training_ready,false,PASS
+v2fe,supervised_model_allowed,false,PASS
+v2fe,prediction_claim_allowed,false,PASS
+v2fe,automatic_detection_claim_allowed,false,PASS
+v2fe,operational_validation_claim_allowed,false,PASS
+v2fe,negative_by_absence_allowed,false,PASS
+v2fe,random_background_negative_allowed,false,PASS
+v2fe,decision_locked,false,PASS
