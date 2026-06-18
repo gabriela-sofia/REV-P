@@ -1,0 +1,2 @@
+summary_id,events_count,packets_count,review_items_count,positive_gate_closed_count,negative_gate_closed_count,ground_truth_absent_count,all_core_tables_verified,allowed_claim,forbidden_claim
+SUMMARY_v2ev_0001,0,0,0,0,0,0,false,"review-only controlled recovery workflow; restores traceability when valid artifacts exist but does not close operational ground truth, labels, negatives, training, detection, or prediction",operational ground truth|binary label|formal negative|supervised dataset|training release|detection claim|prediction claim|automatic human decision

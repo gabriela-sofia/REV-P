@@ -6,15 +6,15 @@ Legenda da coluna de uso: `apêndice/artigo` = figura ou tabela candidata ao art
 
 | Artefato | Caminho | Função no projeto | Uso |
 |---|---|---|---|
-| fig_apendice_similaridade_dinov2.png | `outputs_public/appendix_figures/dino_extra/fig_apendice_similaridade_dinov2.png` | Figura de apêndice — artigo, apresentação ou avaliação. | apêndice/artigo |
-| fig_article_06_dinov2_embedding_768d.png | `outputs_public/appendix_figures/dino_extra/fig_article_06_dinov2_embedding_768d.png` | Figura de apêndice — artigo, apresentação ou avaliação. | apêndice/artigo |
-| fig_article_01_fluxo_metodologico.png | `outputs_public/appendix_figures/protocol_c_extra/fig_article_01_fluxo_metodologico.png` | Figura de apêndice — artigo, apresentação ou avaliação. | apêndice/artigo |
-| fig_article_05_fluxo_protocolo_c.png | `outputs_public/appendix_figures/protocol_c_extra/fig_article_05_fluxo_protocolo_c.png` | Figura de apêndice — artigo, apresentação ou avaliação. | apêndice/artigo |
-| fig_apendice_rastreabilidade_decisoes.png | `outputs_public/appendix_figures/qa_traceability_extra/fig_apendice_rastreabilidade_decisoes.png` | Figura de apêndice — artigo, apresentação ou avaliação. | apêndice/artigo |
-| fig_apendice_evidencias_externas_regionais.png | `outputs_public/appendix_figures/regional_context_extra/fig_apendice_evidencias_externas_regionais.png` | Figura de apêndice — artigo, apresentação ou avaliação. | apêndice/artigo |
-| fig_apendice_pe3d_mde.png | `outputs_public/appendix_figures/regional_context_extra/fig_apendice_pe3d_mde.png` | Figura de apêndice — artigo, apresentação ou avaliação. | apêndice/artigo |
-| fig_apendice_bandas_indices_sentinel2.png | `outputs_public/appendix_figures/sentinel_extra/fig_apendice_bandas_indices_sentinel2.png` | Figura de apêndice — artigo, apresentação ou avaliação. | apêndice/artigo |
-| fig_apendice_corpus_sentinel.png | `outputs_public/appendix_figures/sentinel_extra/fig_apendice_corpus_sentinel.png` | Figura de apêndice — artigo, apresentação ou avaliação. | apêndice/artigo |
+| fig_apendice_similaridade_dinov2.png | `outputs_public/figuras_apendice/dino_extra/fig_apendice_similaridade_dinov2.png` | Figura de apêndice — artigo, apresentação ou avaliação. | apêndice/artigo |
+| fig_article_06_dinov2_embedding_768d.png | `outputs_public/figuras_apendice/dino_extra/fig_article_06_dinov2_embedding_768d.png` | Figura de apêndice — artigo, apresentação ou avaliação. | apêndice/artigo |
+| fig_article_01_fluxo_metodologico.png | `outputs_public/figuras_apendice/protocol_c_extra/fig_article_01_fluxo_metodologico.png` | Figura de apêndice — artigo, apresentação ou avaliação. | apêndice/artigo |
+| fig_article_05_fluxo_protocolo_c.png | `outputs_public/figuras_apendice/protocol_c_extra/fig_article_05_fluxo_protocolo_c.png` | Figura de apêndice — artigo, apresentação ou avaliação. | apêndice/artigo |
+| fig_apendice_rastreabilidade_decisoes.png | `outputs_public/figuras_apendice/qa_traceability_extra/fig_apendice_rastreabilidade_decisoes.png` | Figura de apêndice — artigo, apresentação ou avaliação. | apêndice/artigo |
+| fig_apendice_evidencias_externas_regionais.png | `outputs_public/figuras_apendice/regional_context_extra/fig_apendice_evidencias_externas_regionais.png` | Figura de apêndice — artigo, apresentação ou avaliação. | apêndice/artigo |
+| fig_apendice_pe3d_mde.png | `outputs_public/figuras_apendice/regional_context_extra/fig_apendice_pe3d_mde.png` | Figura de apêndice — artigo, apresentação ou avaliação. | apêndice/artigo |
+| fig_apendice_bandas_indices_sentinel2.png | `outputs_public/figuras_apendice/sentinel_extra/fig_apendice_bandas_indices_sentinel2.png` | Figura de apêndice — artigo, apresentação ou avaliação. | apêndice/artigo |
+| fig_apendice_corpus_sentinel.png | `outputs_public/figuras_apendice/sentinel_extra/fig_apendice_corpus_sentinel.png` | Figura de apêndice — artigo, apresentação ou avaliação. | apêndice/artigo |
 | contact_sheet_regional_main_figures.png | `outputs_public/appendix_visual_audit/contact_sheets/contact_sheet_regional_main_figures.png` | Figura ou registro diagnóstico — auditoria visual. | apoio |
 | dino_knn_neighbor_network_publication.png | `outputs_public/appendix_visual_audit/original_auxiliary_figures/dino_knn_neighbor_network_publication.png` | Figura ou registro diagnóstico — auditoria visual. | apoio |
 | dino_medoids_outliers_publication.png | `outputs_public/appendix_visual_audit/original_auxiliary_figures/dino_medoids_outliers_publication.png` | Figura ou registro diagnóstico — auditoria visual. | apoio |
@@ -33,8 +33,8 @@ Legenda da coluna de uso: `apêndice/artigo` = figura ou tabela candidata ao art
 | technical_render_recife_sentinel.png | `outputs_public/appendix_visual_audit/technical_renders/technical_render_recife_sentinel.png` | Figura ou registro diagnóstico — auditoria visual. | apoio |
 | visual_audit_manifest.csv | `outputs_public/appendix_visual_audit/visual_audit_manifest.csv` | Figura ou registro diagnóstico — auditoria visual. | apoio |
 | visual_audit_report.md | `outputs_public/appendix_visual_audit/visual_audit_report.md` | Figura ou registro diagnóstico — auditoria visual. | apoio |
-| article_figure_crosswalk.csv | `outputs_public/article_crosswalk/article_figure_crosswalk.csv` | Correspondência entre figura do artigo e artefato público. | apoio |
-| article_figure_crosswalk.md | `outputs_public/article_crosswalk/article_figure_crosswalk.md` | Correspondência entre figura do artigo e artefato público. | apoio |
+| article_figure_crosswalk.csv | `outputs_public/correspondencia_artigo/article_figure_crosswalk.csv` | Correspondência entre figura do artigo e artefato público. | apoio |
+| article_figure_crosswalk.md | `outputs_public/correspondencia_artigo/article_figure_crosswalk.md` | Correspondência entre figura do artigo e artefato público. | apoio |
 | figures_regeneration_report.md | `outputs_public/execution_reports/figures_regeneration_report.md` | Relatório de execução, QA, rastreabilidade ou entrega. | apoio |
 | final_dino_structural_analysis_report.md | `outputs_public/execution_reports/final_dino_structural_analysis_report.md` | Relatório de execução, QA, rastreabilidade ou entrega. | apoio |
 | final_execution_report.md | `outputs_public/execution_reports/final_execution_report.md` | Relatório de execução, QA, rastreabilidade ou entrega. | apoio |
@@ -77,11 +77,11 @@ Legenda da coluna de uso: `apêndice/artigo` = figura ou tabela candidata ao art
 | readiness_summary.csv | `outputs_public/metrics/readiness_summary.csv` | Métrica descritiva — não representa desempenho de modelo operacional. | apêndice/artigo |
 | NO_OPERATIONAL_TRAINED_MODEL.md | `outputs_public/model/NO_OPERATIONAL_TRAINED_MODEL.md` | Declaração metodológica. | apoio |
 | README.md | `outputs_public/README.md` | Documentação dos resultados públicos. | apoio |
-| README.md | `outputs_public/review_package/README.md` | Orientação de navegação para avaliação da entrega. | apoio |
-| reviewer_navigation.md | `outputs_public/review_package/reviewer_navigation.md` | Orientação de navegação para avaliação da entrega. | apoio |
-| what_to_check_first.md | `outputs_public/review_package/what_to_check_first.md` | Orientação de navegação para avaliação da entrega. | apoio |
-| figure_selection_decision_matrix.csv | `outputs_public/selection_audit/figure_selection_decision_matrix.csv` | Registro da decisão de seleção de figuras. | apoio |
-| figure_selection_report.md | `outputs_public/selection_audit/figure_selection_report.md` | Registro da decisão de seleção de figuras. | apoio |
+| README.md | `outputs_public/pacote_revisao/README.md` | Orientação de navegação para avaliação da entrega. | apoio |
+| reviewer_navigation.md | `outputs_public/pacote_revisao/reviewer_navigation.md` | Orientação de navegação para avaliação da entrega. | apoio |
+| what_to_check_first.md | `outputs_public/pacote_revisao/what_to_check_first.md` | Orientação de navegação para avaliação da entrega. | apoio |
+| figure_selection_decision_matrix.csv | `outputs_public/auditoria_selecao/figure_selection_decision_matrix.csv` | Registro da decisão de seleção de figuras. | apoio |
+| figure_selection_report.md | `outputs_public/auditoria_selecao/figure_selection_report.md` | Registro da decisão de seleção de figuras. | apoio |
 | figure_regeneration_manifest.csv | `outputs_public/tables/figure_regeneration_manifest.csv` | Tabela pública — auditoria direta ou apoio ao artigo. | apêndice/artigo |
 | table_claims_guardrails_summary.csv | `outputs_public/tables/table_claims_guardrails_summary.csv` | Tabela pública — auditoria direta ou apoio ao artigo. | apêndice/artigo |
 | table_corpus_summary.csv | `outputs_public/tables/table_corpus_summary.csv` | Tabela pública — auditoria direta ou apoio ao artigo. | apêndice/artigo |

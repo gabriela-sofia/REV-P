@@ -10,11 +10,11 @@ Este diretório reúne os artefatos finais da entrega do REV-P: figuras, tabelas
 - `logs_summary/`: registros resumidos das validações executadas durante a entrega.
 - `execution_reports/`: relatórios de execução, rastreabilidade, QA, análise DINOv2 e restrições metodológicas.
 - `model/`: declaração da ausência de modelo supervisionado operacional.
-- `article_crosswalk/`: correspondência entre as figuras do artigo e os artefatos públicos.
-- `appendix_figures/`: figuras de apêndice organizadas por função metodológica.
+- `correspondencia_artigo/`: correspondência entre as figuras do artigo e os artefatos públicos.
+- `figuras_apendice/`: figuras de apêndice organizadas por função metodológica.
 - `appendix_visual_audit/`: figuras diagnósticas e justificativas de curadoria visual.
-- `selection_audit/`: matriz e relatório das decisões de seleção de patches.
-- `review_package/`: navegação para banca, orientação e avaliação.
+- `auditoria_selecao/`: matriz e relatório das decisões de seleção de patches.
+- `pacote_revisao/`: navegação para banca, orientação e avaliação.
 
 ## Resultados principais
 

@@ -35,7 +35,7 @@ Os seguintes materiais **não devem ser versionados** no repositório público:
 
 ---
 
-## O que vai para archive interno
+## O que vai para arquivo de etapas
 
 Arquivos intermediários de sprint que já cumpriram sua função e não precisam ficar na raiz dos diretórios públicos podem ser movidos para subdiretórios de arquivo. Isso não significa exclusão — significa organização.
 
@@ -43,26 +43,26 @@ Subdiretórios de arquivo:
 
 | Diretório de origem | Subdiretório de arquivo |
 |---|---|
-| `outputs_public/execution_reports/` | `outputs_public/execution_reports/stage_archive/` |
-| `outputs_public/logs_summary/` | `outputs_public/logs_summary/stage_archive/` |
-| `outputs_public/tables/` | `outputs_public/tables/stage_outputs/` |
-| `datasets/protocolo_c/` | `datasets/protocolo_c/stage_outputs/` |
-| `docs/` (notas de sprint) | `docs/archive_stage_notes/` |
+| `outputs_public/execution_reports/` | `outputs_public/execution_reports/arquivo_etapas/` |
+| `outputs_public/logs_summary/` | `outputs_public/logs_summary/arquivo_etapas/` |
+| `outputs_public/tables/` | `outputs_public/tables/saidas_intermediarias/` |
+| `datasets/protocolo_c/` | `datasets/protocolo_c/saidas_intermediarias/` |
+| `docs/` (notas de sprint) | `docs/arquivo_notas_etapas/` |
 
-**Candidatos típicos para archive:**
+**Candidatos típicos para arquivo de etapas:**
 
-- Checklists de commit (`*_commit_checklist.md`)
-- Summaries JSON de sprint (`*_summary.json`)
-- Rollups de guardrail ou teste (`*_guardrail_rollup.csv`, `*_test_rollup.csv`)
-- Filas de recheck (`*_queue.csv`, `*_recheck*.csv`)
-- Fixtures de negativo (`*_negative_fixture*.csv`)
-- Notas de handoff de operador (`*_operator_handoff.md`)
+- Listas de verificação de entrega (`*_commit_checklist.md`)
+- Resumos JSON de sprint (`*_summary.json`)
+- Resumos de validação por etapa (`*_guardrail_rollup.csv`, `*_test_rollup.csv`)
+- Filas de reprocessamento (`*_queue.csv`, `*_recheck*.csv`)
+- Registros de exemplares negativos (`*_negative_fixture*.csv`)
+- Notas de transição de operador (`*_operator_handoff.md`)
 - Guias de preenchimento interno (`*_how_to_fill*.md`)
-- Notas de turning point (`*_turning_point*.md`)
-- Workbenches de sprint (`*_workbench*.md`)
+- Notas de ponto de virada metodológico (`*_turning_point*.md`)
+- Bancadas de sprint (`*_workbench*.md`)
 - Relatórios integrados de sprint com código de versão no nome (`revp_v2*.md`, `revp_v1*.md`) — exceto os que fazem parte do índice público canônico
 
-**O que nunca vai para archive:**
+**O que nunca vai para arquivo de etapas:**
 
 - Relatórios finais de entrega (`final_*.md`, `final_*.csv`, `final_*.json`)
 - Figuras validadas de publicação
