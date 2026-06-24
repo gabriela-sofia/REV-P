@@ -1,0 +1,11 @@
+patch_id,asset_id,provider,scene_id,product_id,datetime_utc,mgrs_tile,datatake_identifier,generation_time,cloudy_pixel_percentage,nodata_pixel_percentage,thin_cirrus_percentage,geometry,bbox,odata_id,odata_name,odata_geofootprint,odata_s3path,consensus_status,blocked_reason
+REC_00019,e07eacbc8a366650,CDSE_STAC,,,,,,,,,,,,,,,,NO_CALL,BLOCKED_NO_CONFIG
+REC_00183,37c34f5a6f1e21e2,CDSE_STAC,,,,,,,,,,,,,,,,NO_CALL,BLOCKED_NO_CONFIG
+REC_00204,f7d34b2045dd441d,CDSE_STAC,,,,,,,,,,,,,,,,NO_CALL,BLOCKED_NO_CONFIG
+REC_00205,bc6e6d18b88e7293,CDSE_STAC,,,,,,,,,,,,,,,,NO_CALL,BLOCKED_NO_CONFIG
+REC_00227,7e4673aa5e1b50e0,CDSE_STAC,,,,,,,,,,,,,,,,NO_CALL,BLOCKED_NO_CONFIG
+PET_00016,19a5de5df7bd0cf8,CDSE_STAC,,,,,,,,,,,,,,,,NO_CALL,BLOCKED_NO_CONFIG
+PET_00104,6641fb7c86ae0cbc,CDSE_STAC,,,,,,,,,,,,,,,,NO_CALL,BLOCKED_NO_CONFIG
+PET_00119,b041e9a668bd0924,CDSE_STAC,,,,,,,,,,,,,,,,NO_CALL,BLOCKED_NO_CONFIG
+PET_00140,0e48288ff44594e1,CDSE_STAC,,,,,,,,,,,,,,,,NO_CALL,BLOCKED_NO_CONFIG
+PET_00240,97982ae9e9aa55b2,CDSE_STAC,,,,,,,,,,,,,,,,NO_CALL,BLOCKED_NO_CONFIG

@@ -1,0 +1,20 @@
+{
+  "allow_network": false,
+  "allow_metadata_calls": false,
+  "allow_raster_download": false,
+  "allow_canary_download": false,
+  "providers": {
+    "GEE": {
+      "enabled": false,
+      "project_id_env": "REV_P_GEE_PROJECT_ID"
+    },
+    "CDSE_STAC": {
+      "enabled": false,
+      "base_url": "https://stac.dataspace.copernicus.eu/v1"
+    },
+    "CDSE_ODATA": {
+      "enabled": false,
+      "base_url": "https://catalogue.dataspace.copernicus.eu/odata/v1"
+    }
+  }
+}

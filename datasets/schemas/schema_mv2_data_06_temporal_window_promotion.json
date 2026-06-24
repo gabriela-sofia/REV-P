@@ -1,0 +1,20 @@
+{
+  "schema_id": "schema_mv2_data_06_temporal_window_promotion",
+  "required_fields": [
+    "patch_id",
+    "asset_id",
+    "temporal_window_start",
+    "temporal_window_end",
+    "temporal_window_source",
+    "source_ref",
+    "review_status"
+  ],
+  "allowed_statuses": [
+    "NO_FILLED_TEMPLATE_FOUND",
+    "BLOCKED_NO_TEMPORAL_WINDOW",
+    "BLOCKED_NO_SOURCE",
+    "INVALID_TEMPORAL_WINDOW",
+    "BLOCKED_WEAK",
+    "PROMOTED_METADATA_READY"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "schema_id": "revp_mv2_pre_unification_gate_status_record",
+  "description": "Lightweight pre-unification contract; no supervised training or public raster output.",
+  "required_fields": [
+    "patch_id",
+    "asset_id",
+    "day10_status",
+    "claim_level"
+  ],
+  "fields": {
+    "patch_id": "str",
+    "asset_id": "str",
+    "gate_a_temporal_spectral": "BLOCKED|READY_METADATA_ONLY|METADATA_CONFIRMED|CROP_AUTHORIZED|SCL_QA_DONE",
+    "gate_b_observational": "BLOCKED|CONTEXTUAL|FOOTPRINT_READY|ADJUDICATION_READY|EVIDENCE_CONFIRMED",
+    "gate_c_negatives": "BLOCKED|POLICY_READY|CANDIDATE_ONLY|FORMAL_READY",
+    "gate_d_antileakage": "BLOCKED|POLICY_READY|SPLIT_READY",
+    "day10_status": "BLOCKED|PARTIAL_LOCAL_ONLY|READY_REVIEW_ONLY",
+    "day18_22_status": "BLOCKED|REVIEW_ONLY|READY_FOR_REVIEW",
+    "claim_level": "NONE|READINESS|METADATA_ONLY|LOCAL_SPECTRAL_BASELINE|OBSERVATIONAL_REVIEW"
+  },
+  "forbidden_states": [
+    "DAY10_UNLOCKED",
+    "NEGATIVE_READY",
+    "SANDBOX_READY",
+    "SILVER_READY",
+    "SUPERVISED_READY",
+    "TRAINING_READY"
+  ],
+  "allowed_execution_states": [
+    "BLOCKED_NO_CONFIG",
+    "BLOCKED_NO_NATIVE_RASTER",
+    "BLOCKED_NO_PRODUCT_ID",
+    "BLOCKED_NO_SENSOR_LINEAGE",
+    "BLOCKED_NO_TEMPORAL_WINDOW",
+    "CROP_AUTHORIZATION_READY",
+    "LOCAL_ONLY_RASTER_READY",
+    "METADATA_CONFIRMED",
+    "METADATA_ONLY_READY",
+    "SCL_QA_READY"
+  ]
+}

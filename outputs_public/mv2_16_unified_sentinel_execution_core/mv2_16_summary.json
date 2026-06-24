@@ -1,0 +1,14 @@
+{
+  "stage": "MV2-16",
+  "targets": 10,
+  "readiness": "READY_FOR_MV2_16_DRY_RUN",
+  "gate_a_blocked": 10,
+  "gate_b": "GEOMETRY_BACKLOG_READY",
+  "gate_c": "POLICY_READY",
+  "gate_d": "POLICY_READY",
+  "day10_status": "BLOCKED",
+  "calls": 0,
+  "downloads": 0,
+  "rasters": 0,
+  "crops": 0
+}

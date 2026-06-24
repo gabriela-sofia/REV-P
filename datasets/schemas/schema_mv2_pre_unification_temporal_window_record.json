@@ -1,0 +1,41 @@
+{
+  "schema_id": "revp_mv2_pre_unification_temporal_window_record",
+  "description": "Lightweight pre-unification contract; no supervised training or public raster output.",
+  "required_fields": [
+    "patch_id",
+    "asset_id",
+    "promotion_status",
+    "review_status"
+  ],
+  "fields": {
+    "patch_id": "str",
+    "asset_id": "str",
+    "temporal_window_start": "datetime|null",
+    "temporal_window_end": "datetime|null",
+    "temporal_window_source": "str|null",
+    "source_ref": "str|null",
+    "temporal_evidence_status": "EMPTY|WEAK|MEDIUM|STRONG|CONFLICT|INVALID",
+    "promotion_status": "BLOCKED_EMPTY|BLOCKED_WEAK|PROMOTED_PROBE_READY|CONFLICT",
+    "review_status": "PENDING|REVIEWED|BLOCKED"
+  },
+  "forbidden_states": [
+    "DAY10_UNLOCKED",
+    "NEGATIVE_READY",
+    "SANDBOX_READY",
+    "SILVER_READY",
+    "SUPERVISED_READY",
+    "TRAINING_READY"
+  ],
+  "allowed_execution_states": [
+    "BLOCKED_NO_CONFIG",
+    "BLOCKED_NO_NATIVE_RASTER",
+    "BLOCKED_NO_PRODUCT_ID",
+    "BLOCKED_NO_SENSOR_LINEAGE",
+    "BLOCKED_NO_TEMPORAL_WINDOW",
+    "CROP_AUTHORIZATION_READY",
+    "LOCAL_ONLY_RASTER_READY",
+    "METADATA_CONFIRMED",
+    "METADATA_ONLY_READY",
+    "SCL_QA_READY"
+  ]
+}

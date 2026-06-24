@@ -1,0 +1,17 @@
+{
+  "data05_closed_as_intake": true,
+  "data05_promoted_windows": 0,
+  "mv2_12_consolidated_for_review": true,
+  "seed_targets": 10,
+  "seed_temporal_valid": 0,
+  "sentinel_2_eligible": 0,
+  "metadata_calls_executed": 0,
+  "downloads_executed": 0,
+  "rasters_created": 0,
+  "crops_created": 0,
+  "gate_a_temporal_spectral": "BLOCKED",
+  "gate_b_observational": "GEOMETRY_BACKLOG_READY",
+  "gate_c_negatives": "POLICY_READY",
+  "gate_d_antileakage": "POLICY_READY",
+  "mv2_16_decision": "READY_FOR_MV2_16_DRY_RUN"
+}
