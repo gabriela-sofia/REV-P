@@ -1,0 +1,11 @@
+{
+  "stage": "DATA-06",
+  "filled_template_found": false,
+  "total_targets": 10,
+  "promoted_metadata_ready": 0,
+  "blocked_no_filled_template": 10,
+  "api_calls": 0,
+  "downloads": 0,
+  "rasters": 0,
+  "crops": 0
+}

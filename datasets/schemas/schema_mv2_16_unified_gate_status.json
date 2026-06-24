@@ -1,0 +1,18 @@
+{
+  "schema_id": "schema_mv2_16_unified_gate_status",
+  "required_fields": [
+    "patch_id",
+    "asset_id",
+    "gate_a",
+    "gate_b",
+    "gate_c",
+    "gate_d",
+    "day10_status"
+  ],
+  "allowed_readiness": [
+    "NOT_READY_FOR_MV2_16",
+    "READY_FOR_MV2_16_DRY_RUN",
+    "READY_FOR_MV2_16_METADATA_ONLY",
+    "READY_FOR_MV2_16_LOCAL_RASTER_CANARY"
+  ]
+}

@@ -65,6 +65,14 @@ model_cache/
 .cache_huggingface/
 huggingface/
 local_only/
+api_config.local.json
+*.secret
+credentials*
+token*
+quarantine/
+private_rasters/
+private_crops/
+*.geotiff
 
 # Materiais legados removidos do escopo atual
 *cbers*

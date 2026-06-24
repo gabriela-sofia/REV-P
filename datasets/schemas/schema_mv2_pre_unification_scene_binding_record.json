@@ -1,0 +1,53 @@
+{
+  "schema_id": "revp_mv2_pre_unification_scene_binding_record",
+  "description": "Lightweight pre-unification contract; no supervised training or public raster output.",
+  "required_fields": [
+    "patch_id",
+    "asset_id",
+    "provider",
+    "binding_status",
+    "consensus_status"
+  ],
+  "fields": {
+    "patch_id": "str",
+    "asset_id": "str",
+    "provider": "GEE|CDSE_STAC|CDSE_ODATA|MANUAL",
+    "collection": "str|null",
+    "scene_id": "str|null",
+    "product_id": "str|null",
+    "mgrs_tile": "str|null",
+    "datatake_identifier": "str|null",
+    "datetime_utc": "str|null",
+    "cloudy_pixel_percentage": "float|null",
+    "nodata_pixel_percentage": "float|null",
+    "thin_cirrus_percentage": "float|null",
+    "geometry": "GeoJSON|null",
+    "bbox": "list|null",
+    "odata_id": "str|null",
+    "odata_name": "str|null",
+    "odata_s3path": "str|null",
+    "odata_geofootprint": "GeoJSON|null",
+    "binding_status": "NONE|WEAK|MEDIUM|STRONG|CONFLICT|INVALID",
+    "consensus_status": "NO_CALL|NO_MATCH|SINGLE_PROVIDER|MULTI_PROVIDER_AGREE|CONFLICT"
+  },
+  "forbidden_states": [
+    "DAY10_UNLOCKED",
+    "NEGATIVE_READY",
+    "SANDBOX_READY",
+    "SILVER_READY",
+    "SUPERVISED_READY",
+    "TRAINING_READY"
+  ],
+  "allowed_execution_states": [
+    "BLOCKED_NO_CONFIG",
+    "BLOCKED_NO_NATIVE_RASTER",
+    "BLOCKED_NO_PRODUCT_ID",
+    "BLOCKED_NO_SENSOR_LINEAGE",
+    "BLOCKED_NO_TEMPORAL_WINDOW",
+    "CROP_AUTHORIZATION_READY",
+    "LOCAL_ONLY_RASTER_READY",
+    "METADATA_CONFIRMED",
+    "METADATA_ONLY_READY",
+    "SCL_QA_READY"
+  ]
+}

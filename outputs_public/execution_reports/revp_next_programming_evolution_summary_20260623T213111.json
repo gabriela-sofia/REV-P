@@ -1,0 +1,67 @@
+{
+  "data05_status": "CLOSED",
+  "data05_inputs": 15,
+  "data05_promoted_windows": 0,
+  "data06_status": "BLOCKED_NO_FILLED_TEMPLATE",
+  "data07_status": "UNKNOWN_BLOCKED",
+  "data08_status": "BLOCKED_NO_CONFIG",
+  "mv2_16_readiness": "READY_FOR_MV2_16_DRY_RUN",
+  "gate_a": "BLOCKED",
+  "gate_b": "GEOMETRY_BACKLOG_READY",
+  "gate_c": "POLICY_READY",
+  "gate_d": "POLICY_READY",
+  "calls": 0,
+  "downloads": 0,
+  "rasters": 0,
+  "crops": 0,
+  "steps": [
+    {
+      "command": "python scripts/mv2_data_05_run_temporal_window_intake.py",
+      "returncode": 0,
+      "stdout_tail": [
+        "--- MV2-DATA-05 step: build_summary ---",
+        "[mv2_data_05_summary] input_rows=15 filled=False promoted_strong=0 promoted_partial=0 probe_ready_gee=0 | saida: outputs_public/mv2_data_temporal_window_intake/mv2_data_05_summary.json",
+        "--- MV2-DATA-05 step: validate_temporal_window_intake ---",
+        "[mv2_data_05_validate] OK \u2014 11 arquivos p\u00fablicos leves; fail-closed preservado",
+        "[mv2_data_05_run] cadeia MV2-DATA-05 concluida com guardrails preservados"
+      ],
+      "stderr_tail": []
+    },
+    {
+      "command": "python scripts/mv2_data_06_temporal_window_promotion.py",
+      "returncode": 0,
+      "stdout_tail": [],
+      "stderr_tail": []
+    },
+    {
+      "command": "python scripts/mv2_data_07_source_sensor_lineage_promotion.py",
+      "returncode": 0,
+      "stdout_tail": [],
+      "stderr_tail": []
+    },
+    {
+      "command": "python scripts/mv2_data_08_metadata_only_probe_runner.py --config C:\\Users\\gabriela\\Documents\\REV-P\\configs\\api_config.local.json",
+      "returncode": 0,
+      "stdout_tail": [],
+      "stderr_tail": []
+    },
+    {
+      "command": "python scripts/mv2_crop_authorization_policy.py",
+      "returncode": 0,
+      "stdout_tail": [],
+      "stderr_tail": []
+    },
+    {
+      "command": "python scripts/mv2_scl_local_qa_readiness.py",
+      "returncode": 0,
+      "stdout_tail": [],
+      "stderr_tail": []
+    },
+    {
+      "command": "python scripts/mv2_16_unified_sentinel_execution_core.py",
+      "returncode": 0,
+      "stdout_tail": [],
+      "stderr_tail": []
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+promotion_id,patch_id,asset_id,temporal_window_start,temporal_window_end,temporal_window_source,source_ref,review_status,promotion_status,blocked_reason,can_probe_metadata

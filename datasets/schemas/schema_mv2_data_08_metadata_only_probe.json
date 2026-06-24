@@ -1,0 +1,18 @@
+{
+  "schema_id": "schema_mv2_data_08_metadata_only_probe",
+  "required_fields": [
+    "patch_id",
+    "asset_id",
+    "provider",
+    "consensus_status"
+  ],
+  "consensus_statuses": [
+    "STRONG",
+    "MEDIUM_REVIEW",
+    "WEAK_BLOCKED",
+    "CONFLICT",
+    "NO_CALL",
+    "NO_MATCH"
+  ],
+  "downloads_allowed": false
+}

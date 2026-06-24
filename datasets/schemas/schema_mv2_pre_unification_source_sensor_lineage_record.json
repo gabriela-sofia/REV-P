@@ -1,0 +1,43 @@
+{
+  "schema_id": "revp_mv2_pre_unification_source_sensor_lineage_record",
+  "description": "Lightweight pre-unification contract; no supervised training or public raster output.",
+  "required_fields": [
+    "patch_id",
+    "asset_id",
+    "sensor_family",
+    "spectral_eligible",
+    "support_only"
+  ],
+  "fields": {
+    "patch_id": "str",
+    "asset_id": "str",
+    "slot_id": "str|null",
+    "evidence_id": "str|null",
+    "asset_ref": "str|null",
+    "source_asset_ref": "str|null",
+    "sensor_family": "SENTINEL_2|SENTINEL_1|DINO_DERIVED|PNG_RENDER|NPZ_EMBEDDING|UNKNOWN|CONFLICT",
+    "spectral_eligible": "bool",
+    "support_only": "bool",
+    "blocked_reason": "str|null"
+  },
+  "forbidden_states": [
+    "DAY10_UNLOCKED",
+    "NEGATIVE_READY",
+    "SANDBOX_READY",
+    "SILVER_READY",
+    "SUPERVISED_READY",
+    "TRAINING_READY"
+  ],
+  "allowed_execution_states": [
+    "BLOCKED_NO_CONFIG",
+    "BLOCKED_NO_NATIVE_RASTER",
+    "BLOCKED_NO_PRODUCT_ID",
+    "BLOCKED_NO_SENSOR_LINEAGE",
+    "BLOCKED_NO_TEMPORAL_WINDOW",
+    "CROP_AUTHORIZATION_READY",
+    "LOCAL_ONLY_RASTER_READY",
+    "METADATA_CONFIRMED",
+    "METADATA_ONLY_READY",
+    "SCL_QA_READY"
+  ]
+}

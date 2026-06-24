@@ -1,0 +1,12 @@
+{
+  "stage": "DATA-07",
+  "total_targets": 10,
+  "sentinel_2_eligible": 0,
+  "sentinel_1_support_only": 0,
+  "unknown_blocked": 10,
+  "blocked_total": 10,
+  "api_calls": 0,
+  "downloads": 0,
+  "rasters": 0,
+  "crops": 0
+}

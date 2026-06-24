@@ -1,0 +1,18 @@
+{
+  "schema_id": "schema_mv2_data_07_source_sensor_lineage_promotion",
+  "required_fields": [
+    "patch_id",
+    "asset_id",
+    "sensor_family",
+    "lineage_classification"
+  ],
+  "allowed_classifications": [
+    "SENTINEL_2_ELIGIBLE",
+    "SENTINEL_1_SUPPORT_ONLY",
+    "DINO_DERIVED_BLOCKED",
+    "PNG_RENDER_BLOCKED",
+    "NPZ_EMBEDDING_BLOCKED",
+    "UNKNOWN_BLOCKED",
+    "CONFLICT_BLOCKED"
+  ]
+}
