@@ -55,6 +55,7 @@ local_runs/
 *.parquet
 
 # Diretórios locais não versionáveis
+inputs_local/
 archive_drive/
 patches/
 data/
@@ -65,6 +66,7 @@ model_cache/
 .cache_huggingface/
 huggingface/
 local_only/
+configs/api_config.local.json
 api_config.local.json
 *.secret
 credentials*

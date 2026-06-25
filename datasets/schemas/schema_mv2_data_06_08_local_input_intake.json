@@ -1,0 +1,38 @@
+{
+  "schema_id": "schema_mv2_data_06_08_local_input_intake",
+  "public_outputs_only": [
+    "status",
+    "counts",
+    "hashes",
+    "redacted_paths",
+    "non_sensitive_flags"
+  ],
+  "forbidden_public_outputs": [
+    "filled_local_rows",
+    "credentials",
+    "tokens",
+    "api_config_contents",
+    "private_paths"
+  ],
+  "data_06_statuses": [
+    "NO_LOCAL_INPUT_FOUND",
+    "BLOCKED_INVALID_TEMPLATE",
+    "PROMOTED_METADATA_READY"
+  ],
+  "data_07_statuses": [
+    "NO_LOCAL_INPUT_FOUND",
+    "BLOCKED_INVALID_SENSOR_LINEAGE",
+    "SENTINEL_2_ELIGIBLE_FOUND"
+  ],
+  "data_08_statuses": [
+    "BLOCKED_NO_CONFIG",
+    "BLOCKED_BY_FLAGS",
+    "READY_METADATA_ONLY_PREFLIGHT"
+  ],
+  "side_effects": {
+    "live_calls": 0,
+    "downloads": 0,
+    "rasters": 0,
+    "crops": 0
+  }
+}

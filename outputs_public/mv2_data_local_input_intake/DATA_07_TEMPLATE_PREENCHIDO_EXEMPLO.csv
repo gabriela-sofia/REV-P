@@ -1,0 +1,2 @@
+patch_id,asset_id,sensor_family,sensor_source_ref,review_status
+EXEMPLO_PATCH_001,EXEMPLO_ASSET_001,SENTINEL_2,EXEMPLO_PRODUTO_S2_FICTICIO,APPROVED
