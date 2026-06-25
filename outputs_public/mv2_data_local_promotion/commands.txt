@@ -1,0 +1,3 @@
+python scripts/mv2_data_06_08_local_promotion_orchestrator.py
+# somente apos autorizacao e flags seguras:
+python scripts/mv2_data_06_08_local_promotion_orchestrator.py --allow-live-metadata

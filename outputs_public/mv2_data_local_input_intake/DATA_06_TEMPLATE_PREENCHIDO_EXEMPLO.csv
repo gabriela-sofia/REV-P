@@ -1,0 +1,2 @@
+patch_id,asset_id,temporal_window_start,temporal_window_end,temporal_window_source,source_ref,review_status
+EXEMPLO_PATCH_001,EXEMPLO_ASSET_001,2022-01-01,2022-01-03,BOLETIM_OFICIAL_FICTICIO,EXEMPLO_REF_PUBLICA_FICTICIA,APPROVED
