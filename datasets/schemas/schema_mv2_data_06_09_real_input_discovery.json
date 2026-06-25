@@ -1,0 +1,43 @@
+{
+  "schema_id": "schema_mv2_data_06_09_real_input_discovery",
+  "public_outputs_only": [
+    "status",
+    "counts",
+    "sha256",
+    "redacted_paths",
+    "validation_errors"
+  ],
+  "forbidden_public_outputs": [
+    "filled_rows",
+    "credentials",
+    "tokens",
+    "secrets",
+    "env_content",
+    "api_config_contents",
+    "private_paths"
+  ],
+  "data_06_statuses": [
+    "DATA_06_REAL_INPUT_FOUND",
+    "DATA_06_NO_REAL_INPUT",
+    "DATA_06_INVALID",
+    "DATA_06_PROMOTABLE"
+  ],
+  "data_07_statuses": [
+    "DATA_07_REAL_INPUT_FOUND",
+    "DATA_07_NO_REAL_INPUT",
+    "DATA_07_INVALID",
+    "DATA_07_S2_ELIGIBLE"
+  ],
+  "data_08_statuses": [
+    "DATA_08_CONFIG_FOUND",
+    "DATA_08_NO_CONFIG",
+    "DATA_08_BLOCKED_BY_FLAGS",
+    "DATA_08_READY_METADATA_ONLY"
+  ],
+  "side_effects": {
+    "live_calls": 0,
+    "downloads": 0,
+    "rasters": 0,
+    "crops": 0
+  }
+}

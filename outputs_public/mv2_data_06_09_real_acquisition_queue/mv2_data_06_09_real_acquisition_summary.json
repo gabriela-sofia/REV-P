@@ -1,0 +1,29 @@
+{
+  "stage": "DATA-06/07/08/09 real acquisition queue",
+  "data_06_targets": 10,
+  "data_07_targets": 10,
+  "data_06_with_local_bbox": 0,
+  "accepted_temporal_sources": [
+    "CEMADEN",
+    "Defesa Civil",
+    "Copernicus EMS/CEMS",
+    "SGB/CPRM",
+    "ANA",
+    "boletim municipal oficial",
+    "artigo/publicacao cientifica",
+    "registro interno auditavel com referencia"
+  ],
+  "accepted_lineage_sources": [
+    "historico/export GEE",
+    "manifest de asset original",
+    "script de export",
+    "metadata oficial Sentinel",
+    "registro interno auditavel ligando asset_ref a source_asset_ref"
+  ],
+  "auto_resolution_by_bbox": false,
+  "auto_resolution_by_filename": false,
+  "live_calls": 0,
+  "downloads": 0,
+  "rasters": 0,
+  "crops": 0
+}

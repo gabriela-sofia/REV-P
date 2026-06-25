@@ -1,0 +1,60 @@
+{
+  "schema_id": "schema_mv2_data_06_09_real_acquisition_queue",
+  "data_06_fields": [
+    "target_rank",
+    "patch_id",
+    "asset_id",
+    "city",
+    "bbox",
+    "crs",
+    "needed_field",
+    "accepted_source_family",
+    "suggested_source",
+    "query_hint_ptbr",
+    "source_ref_required",
+    "reviewer_action",
+    "status"
+  ],
+  "data_07_fields": [
+    "target_rank",
+    "patch_id",
+    "asset_id",
+    "slot_id",
+    "evidence_id",
+    "needed_field",
+    "accepted_source_family",
+    "source_asset_ref_required",
+    "sensor_source_ref_required",
+    "reviewer_action",
+    "status"
+  ],
+  "accepted_temporal_sources": [
+    "CEMADEN",
+    "Defesa Civil",
+    "Copernicus EMS/CEMS",
+    "SGB/CPRM",
+    "ANA",
+    "boletim municipal oficial",
+    "artigo/publicacao cientifica",
+    "registro interno auditavel com referencia"
+  ],
+  "accepted_lineage_sources": [
+    "historico/export GEE",
+    "manifest de asset original",
+    "script de export",
+    "metadata oficial Sentinel",
+    "registro interno auditavel ligando asset_ref a source_asset_ref"
+  ],
+  "rules": {
+    "no_auto_resolution_by_bbox": true,
+    "no_auto_resolution_by_filename": true,
+    "no_sentinel_2_without_source": true,
+    "no_dino_png_npz_as_raster": true
+  },
+  "side_effects": {
+    "live_calls": 0,
+    "downloads": 0,
+    "rasters": 0,
+    "crops": 0
+  }
+}
