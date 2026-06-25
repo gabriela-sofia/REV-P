@@ -1,0 +1,44 @@
+{
+  "schema_id": "schema_mv2_data_07_sensor_lineage_human_pack",
+  "required_fields": [
+    "patch_id",
+    "asset_id",
+    "sensor_family",
+    "sensor_source_ref",
+    "review_status"
+  ],
+  "template_fields": [
+    "target_rank",
+    "patch_id",
+    "asset_id",
+    "slot_id",
+    "evidence_id",
+    "asset_ref",
+    "source_asset_ref",
+    "source_asset_type",
+    "sensor_family",
+    "sensor_source_ref",
+    "spectral_eligible",
+    "support_only",
+    "review_status",
+    "reviewer_notes",
+    "blocked_reason"
+  ],
+  "allowed_sensor_families": [
+    "SENTINEL_2",
+    "SENTINEL_1",
+    "DINO_DERIVED",
+    "PNG_RENDER",
+    "NPZ_EMBEDDING",
+    "UNKNOWN",
+    "CONFLICT"
+  ],
+  "rules": [
+    "so SENTINEL_2 pode ser spectral_eligible=true",
+    "SENTINEL_1 e support_only=true",
+    "DINO_DERIVED/PNG_RENDER/NPZ_EMBEDDING/UNKNOWN/CONFLICT bloqueiam baseline espectral",
+    "sensor nunca inferido por nome visual",
+    "sensor_source_ref obrigatorio para promover"
+  ],
+  "default_blocked_reason": "UNKNOWN_BLOCKED"
+}

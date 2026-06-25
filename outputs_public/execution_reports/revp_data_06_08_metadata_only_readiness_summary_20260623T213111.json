@@ -1,0 +1,43 @@
+{
+  "branch": "dados/desbloqueio-metadata-only-data-06-08",
+  "worktree": "REV-P-dados-metadata-only-data-06-08",
+  "stage": "DATA-06/07/08 metadata-only readiness",
+  "mode": "dry-run",
+  "fail_closed": true,
+  "data_06_status": "BLOCKED_NO_FILLED_TEMPLATE",
+  "data_07_status": "UNKNOWN_BLOCKED",
+  "data_08_status": "BLOCKED_NO_CONFIG",
+  "mv2_16_readiness": "READY_FOR_MV2_16_DRY_RUN",
+  "day10_status": "BLOCKED",
+  "api_calls": 0,
+  "downloads": 0,
+  "rasters": 0,
+  "crops": 0,
+  "details": {
+    "data_06": {
+      "stage": "DATA-06",
+      "filled_template_found": false,
+      "targets": 10,
+      "promoted_metadata_ready": 0,
+      "status": "BLOCKED_NO_FILLED_TEMPLATE"
+    },
+    "data_07": {
+      "stage": "DATA-07",
+      "targets": 10,
+      "sentinel_2_eligible": 0,
+      "status": "UNKNOWN_BLOCKED"
+    },
+    "data_08": {
+      "stage": "DATA-08",
+      "config_present": false,
+      "calls_allowed": false,
+      "status": "BLOCKED_NO_CONFIG"
+    },
+    "mv2_16": {
+      "stage": "MV2-16",
+      "targets": 10,
+      "readiness": "READY_FOR_MV2_16_DRY_RUN",
+      "day10_status": "BLOCKED"
+    }
+  }
+}
