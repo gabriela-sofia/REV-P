@@ -1,0 +1,19 @@
+{
+  "stage": "DATA-07 real sensor lineage research",
+  "targets": 10,
+  "sentinel_2_family_documented": 5,
+  "by_sensor_family": {
+    "SENTINEL_2": 5,
+    "UNKNOWN": 5
+  },
+  "by_review_status": {
+    "NEEDS_REVIEW": 5,
+    "UNKNOWN_BLOCKED": 5
+  },
+  "strong_complete_lineage": 0,
+  "local_candidate_created": false,
+  "live_calls": 0,
+  "downloads": 0,
+  "rasters": 0,
+  "crops": 0
+}

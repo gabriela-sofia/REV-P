@@ -1,0 +1,43 @@
+{
+  "stage": "Aquisicao real DATA-06/07",
+  "branch": "dados/aquisicao-real-data-06-07",
+  "worktree": "REV-P-aquisicao-real-data-06-07",
+  "targets_investigated": 10,
+  "data_06": {
+    "strong_temporal_windows": 10,
+    "local_candidate_created": true,
+    "events": {
+      "REC_2022_05_24_30": {"window": "2022-05-24/2022-05-30", "source_family": "registro interno auditavel (v2at + STW) + CEMADEN"},
+      "PET_2022_02_15": {"window": "2022-02-15/2022-02-15", "source_family": "registro interno auditavel (v2at + STW) + Copernicus EMS/CEMS"}
+    },
+    "status": "PROMOTED_METADATA_READY"
+  },
+  "data_07": {
+    "sentinel_2_family_documented": 5,
+    "strong_complete_lineage": 0,
+    "local_candidate_created": false,
+    "recife": "SENTINEL_2 (SENTINEL2_MSI) MEDIUM/NEEDS_REVIEW - product_id S2 explicito ausente",
+    "petropolis": "UNKNOWN_BLOCKED - sem declaracao Sentinel-2",
+    "status": "BLOCKED_NO_REAL_SENSOR_LINEAGE"
+  },
+  "data_08_status": "BLOCKED_NO_CONFIG",
+  "metadata_execution_status": "NO_CALL",
+  "lineage_consensus_status": "NO_CALL",
+  "mv2_16_readiness": "READY_FOR_MV2_16_DRY_RUN",
+  "day10_status": "BLOCKED",
+  "sources_used": [
+    "https://www.gov.br/cemaden/pt-br/assuntos/noticias-cemaden/pesquisadores-brasileiros-fazem-recomendacoes-analisando-as-repentinas-inundacoes-e-deslizamentos-de-terra-em-recife-pe-apos-fortes-chuvas-ocorridas-em-maio-de-2022",
+    "https://global-flood.emergency.copernicus.eu/news/99-floods-and-landslides-in-rio-de-janeiro-state-brazil-february-to-march-2022/",
+    "datasets/v2at_event_patch_package_registry.csv",
+    "datasets/event_sentinel_temporal_window_registry.csv",
+    "manifests/dino_inputs/revp_v1fu_dino_sentinel_input_manifest/dino_sentinel_input_manifest_v1fu.csv",
+    "datasets/v2bd_patch_asset_lineage_registry.csv"
+  ],
+  "local_inputs_created": [
+    "inputs_local/data_06_temporal_windows/data_06_temporal_windows_real_candidate.csv (git-ignored)"
+  ],
+  "live_calls": 0,
+  "downloads": 0,
+  "rasters": 0,
+  "crops": 0
+}

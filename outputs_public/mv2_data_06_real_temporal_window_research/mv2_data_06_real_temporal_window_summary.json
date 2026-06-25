@@ -1,0 +1,17 @@
+{
+  "stage": "DATA-06 real temporal window research",
+  "targets": 10,
+  "strong_candidates": 10,
+  "by_strength": {
+    "STRONG": 10
+  },
+  "local_candidate_created": true,
+  "external_sources_used": [
+    "https://global-flood.emergency.copernicus.eu/news/99-floods-and-landslides-in-rio-de-janeiro-state-brazil-february-to-march-2022/",
+    "https://www.gov.br/cemaden/pt-br/assuntos/noticias-cemaden/pesquisadores-brasileiros-fazem-recomendacoes-analisando-as-repentinas-inundacoes-e-deslizamentos-de-terra-em-recife-pe-apos-fortes-chuvas-ocorridas-em-maio-de-2022"
+  ],
+  "live_calls": 0,
+  "downloads": 0,
+  "rasters": 0,
+  "crops": 0
+}
