@@ -1,0 +1,3 @@
+python scripts/mv2_data_07_prepare_sensor_lineage_human_pack.py
+# depois de preencher localmente:
+python scripts/mv2_data_07_source_sensor_lineage_promotion.py --input <caminho_local>

@@ -1,0 +1,3 @@
+python scripts/mv2_data_06_prepare_temporal_window_human_pack.py
+# depois de preencher localmente:
+python scripts/mv2_data_06_temporal_window_promotion.py --filled-template <caminho_local>

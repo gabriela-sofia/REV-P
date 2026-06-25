@@ -1,0 +1,15 @@
+{
+  "stage": "DATA-06",
+  "artifact": "temporal_window_human_pack",
+  "targets_in_template": 10,
+  "filled_windows": 0,
+  "promotion_status": "BLOCKED_NO_FILLED_TEMPLATE",
+  "auto_filled_dates": 0,
+  "api_calls": 0,
+  "downloads": 0,
+  "rasters": 0,
+  "crops": 0,
+  "promotion_template_found": true,
+  "seed_found": false,
+  "intake_found": false
+}
