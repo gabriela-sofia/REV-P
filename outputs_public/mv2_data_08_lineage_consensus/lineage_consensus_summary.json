@@ -1,0 +1,18 @@
+{
+  "stage": "DATA-08 lineage consensus",
+  "targets": 0,
+  "counts": {
+    "STRONG": 0,
+    "MEDIUM_REVIEW": 0,
+    "WEAK_BLOCKED": 0,
+    "CONFLICT": 0,
+    "NO_MATCH": 0,
+    "NO_CALL": 0
+  },
+  "confirmed_lineage": 0,
+  "conflicts": 0,
+  "live_calls": 0,
+  "downloads": 0,
+  "rasters": 0,
+  "crops": 0
+}

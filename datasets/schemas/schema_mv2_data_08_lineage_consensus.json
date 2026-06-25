@@ -1,0 +1,38 @@
+{
+  "schema_id": "schema_mv2_data_08_lineage_consensus",
+  "required_fields": [
+    "patch_id",
+    "asset_id",
+    "consensus_status",
+    "product_id",
+    "datetime_utc",
+    "mgrs_tile",
+    "collection",
+    "providers_considered",
+    "providers_agreeing",
+    "conflict_reason",
+    "evidence_count"
+  ],
+  "allowed_consensus_status": [
+    "STRONG",
+    "MEDIUM_REVIEW",
+    "WEAK_BLOCKED",
+    "CONFLICT",
+    "NO_MATCH",
+    "NO_CALL"
+  ],
+  "rules": {
+    "STRONG": "product_id exato em 2+ fontes oficiais OU fonte oficial unica com product_id+datetime+geometry",
+    "MEDIUM_REVIEW": "datetime+intersects+collection+mgrs_tile compativeis",
+    "WEAK_BLOCKED": "tile/filename apenas, nome sem fonte oficial ou match sem geometria",
+    "CONFLICT": "product_id divergente, datetime incompativel, geometria incompativel ou produto fora da janela",
+    "NO_MATCH": "chamadas validas, nenhum item",
+    "NO_CALL": "nenhuma chamada executada"
+  },
+  "side_effects": {
+    "live_calls": 0,
+    "downloads": 0,
+    "rasters": 0,
+    "crops": 0
+  }
+}

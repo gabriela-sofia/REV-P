@@ -1,0 +1,50 @@
+{
+  "stage": "DATA-08/09 metadata-only execution",
+  "branch": "dados/motor-metadados-sentinel-data-08-09",
+  "worktree": "REV-P-motor-metadados-sentinel-data-08-09",
+  "mode": "replay-only",
+  "strict": true,
+  "fail_closed": true,
+  "providers_configured": [
+    "GEE",
+    "CDSE_STAC",
+    "CDSE_ODATA",
+    "TRACEABILITY"
+  ],
+  "providers_blocked": [
+    "GEE",
+    "CDSE_STAC",
+    "CDSE_ODATA",
+    "TRACEABILITY"
+  ],
+  "eligible_targets": 0,
+  "data_06_status": "BLOCKED_NO_FILLED_TEMPLATE",
+  "data_07_status": "UNKNOWN_BLOCKED",
+  "data_08_status": "BLOCKED_NO_CONFIG",
+  "metadata_execution_status": "NO_CALL",
+  "lineage_consensus_status": "NO_CALL",
+  "mv2_16_readiness": "READY_FOR_MV2_16_DRY_RUN",
+  "day10_status": "BLOCKED",
+  "live_calls": 0,
+  "downloads": 0,
+  "rasters": 0,
+  "crops": 0,
+  "consensus_summary": {
+    "stage": "DATA-08 lineage consensus",
+    "targets": 0,
+    "counts": {
+      "STRONG": 0,
+      "MEDIUM_REVIEW": 0,
+      "WEAK_BLOCKED": 0,
+      "CONFLICT": 0,
+      "NO_MATCH": 0,
+      "NO_CALL": 0
+    },
+    "confirmed_lineage": 0,
+    "conflicts": 0,
+    "live_calls": 0,
+    "downloads": 0,
+    "rasters": 0,
+    "crops": 0
+  }
+}
