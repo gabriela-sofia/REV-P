@@ -1,0 +1,9 @@
+metric,key,count
+case_strength_pre_review,insufficient,1
+case_strength_pre_review,moderate_candidate,3
+case_strength_pre_review,weak_contextual,9
+spatial_relation,bbox_overlap,5
+spatial_relation,insufficient_for_patch_link,1
+spatial_relation,near_patch_buffer_candidate,4
+spatial_relation,same_region_period,3
+total_cases,all,13
