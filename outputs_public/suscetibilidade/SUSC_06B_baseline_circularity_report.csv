@@ -1,0 +1,2 @@
+diagnostic,target,target_group,target_is_proxy,target_is_ground_truth,target_derived_from_model_features,n_model_features,global_r2_cv,r2_interpretation,predictive_power_claim,circularity_risk,explanation,review_only
+target_circularity,score_evento_enchente_potencial_v5_core,score,true,false,true,23,0.9221,heuristic_recoverability,false,high,"O target e um score heuristico composto v5 derivado dos proprios condicionantes fisicos usados como features. R2 alto mede RECUPERABILIDADE do heuristico (consistencia interna), NAO poder preditivo contra evento real.",true

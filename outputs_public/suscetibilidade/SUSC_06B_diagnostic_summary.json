@@ -1,0 +1,37 @@
+{
+  "diagnostic_name": "SUSC-06B baseline proxy diagnostics",
+  "input_baseline": "SUSC-06A",
+  "diagnostic_status": "review_only_proxy_diagnostic",
+  "result_tags": [
+    "review_only",
+    "proxy_based",
+    "not_event_validation"
+  ],
+  "target": "score_evento_enchente_potencial_v5_core",
+  "circularity_risk": "high",
+  "r2_interpretation": "heuristic_recoverability",
+  "predictive_power_claim": false,
+  "global_r2_cv": 0.9221,
+  "n_features_audited": 23,
+  "divergent_features": [
+    "curvature_laplacian_mean",
+    "water_occurrence_patch",
+    "flow_acc_log_p75",
+    "rain_3d_7d_ratio"
+  ],
+  "n_divergent": 4,
+  "regional_stability_status": "stable",
+  "regional_r2_spread": 0.0081,
+  "n_advance_to_score_v6_candidate": 19,
+  "n_manual_review_required": 4,
+  "overlay_gaps_for_susc07": [
+    "future_documentary_evidence",
+    "date_or_period"
+  ],
+  "allowed_for_training": false,
+  "can_be_used_as_ground_truth": false,
+  "review_only": true,
+  "model_persisted": false,
+  "scientific_status": "review_only_proxy_diagnostic_not_event_validation",
+  "disclaimer": "O SUSC-06B nao valida ocorrencia real de enchente. Diagnostica a consistencia interna de um baseline ajustado contra proxy heuristico."
+}
