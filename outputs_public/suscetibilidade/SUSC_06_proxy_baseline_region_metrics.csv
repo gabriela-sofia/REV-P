@@ -1,0 +1,4 @@
+scope,target,target_type,n,backend,metric_basis,r2_in_sample,mae,rmse,r2_cv_mean,r2_cv_std,status
+curitiba,score_evento_enchente_potencial_v5_core,continuous,100,sklearn_spline_fallback,proxy_not_event,0.9922,0.011,0.0134,0.9794,0.0109,FITTED_PROXY_BASELINE_REVIEW_ONLY
+petropolis,score_evento_enchente_potencial_v5_core,continuous,100,sklearn_spline_fallback,proxy_not_event,0.9881,0.0123,0.0166,0.9713,0.0052,FITTED_PROXY_BASELINE_REVIEW_ONLY
+recife,score_evento_enchente_potencial_v5_core,continuous,100,sklearn_spline_fallback,proxy_not_event,0.9886,0.0116,0.0153,0.9732,0.0064,FITTED_PROXY_BASELINE_REVIEW_ONLY
