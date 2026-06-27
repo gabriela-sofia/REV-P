@@ -1,0 +1,31 @@
+{
+  "overlay_name": "SUSC-07B refined patch x event overlay",
+  "patch_geometry_available": true,
+  "event_geometry_available": true,
+  "geometry_sources": "traceable local GeoJSON/CSV (Charter758, Defesa Civil, CPRM/official registries)",
+  "spatial_relation_counts": {
+    "bbox_overlap": 5,
+    "near_patch_buffer_candidate": 4,
+    "same_region_period": 19,
+    "same_region_only": 1,
+    "documentary_context_only": 20,
+    "insufficient_for_patch_link": 21
+  },
+  "n_overlay_rows": 70,
+  "n_unique_patches_with_spatial_relation": 6,
+  "exact_patch_overlap": 0,
+  "bbox_overlap": 5,
+  "near_patch_buffer_candidate": 4,
+  "can_be_used_as_ground_truth": false,
+  "allowed_for_training": false,
+  "review_only": true,
+  "scientific_status": "spatial_adherence_from_traceable_geometry_not_patch_ground_truth",
+  "key_limitations": [
+    "Geometria de evento e candidata/digitalizada ou pontos de risco rastreaveis, NAO footprint validado.",
+    "Pontos de localidade/risco da Defesa Civil != ocorrencia confirmada por patch.",
+    "Sobreposicao de bbox e aproximacao, nao geometria exata patch-evento.",
+    "Vinculo evidencia-coordenada e em nivel de regiao (requires_manual_review).",
+    "Nenhuma relacao aqui e ground truth ou rotulo de treino."
+  ],
+  "prepares": "SUSC-08: validacao humana da aderencia e criterio de referencia sob revisao."
+}

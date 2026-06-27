@@ -1,0 +1,16 @@
+{
+  "artifact": "datasets/suscetibilidade/susc_07b_event_evidence_geometry_enriched_v1.csv",
+  "catalog_source": "datasets/suscetibilidade/susc_07_event_evidence_catalog_v1.csv",
+  "coordinates_source": "datasets/suscetibilidade/susc_07b_real_event_coordinates_v1.csv",
+  "n_evidence": 61,
+  "n_enriched_with_region_geometry": 32,
+  "regions_with_real_geometry": [
+    "petropolis",
+    "recife"
+  ],
+  "can_be_used_as_ground_truth": false,
+  "allowed_for_training": false,
+  "review_only": true,
+  "scientific_status": "region_level_geometry_enrichment_not_patch_ground_truth",
+  "disclaimer": "Enriquecimento em nivel de regiao com geometria real rastreavel. NAO vincula evidencia documental a coordenada propria; nao e ground truth por patch."
+}

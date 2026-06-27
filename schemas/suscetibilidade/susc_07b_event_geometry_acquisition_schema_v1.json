@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "schema_id": "SUSC-07B-GEOMETRY-ACQUISITION",
+  "created": "2026-06-27",
+  "acquisition_name": "SUSC-07B real event coordinate acquisition",
+  "status": "review_only_real_coordinate_acquisition",
+  "purpose": "Contrato para aquisicao/extracao de coordenadas REAIS rastreaveis de eventos/evidencias documentais. Coordenada so e aceita de fonte rastreavel (GeoJSON/CSV lat-lon/KML/WKT/SHP/PDF tecnico/manifesto com URL+SHA256). NAO inventa coordenada, NAO usa centroide de municipio/bairro, NAO usa geocoding generico. NAO cria ground truth.",
+  "accepted_geometry_sources": [
+    "official_explicit_lat_lon",
+    "official_explicit_bbox",
+    "official_polygon",
+    "official_geojson",
+    "official_shapefile",
+    "official_kml",
+    "technical_report_coordinate_table",
+    "local_manifest_url_sha256",
+    "local_vector_dataset"
+  ],
+  "forbidden_geometry_sources": [
+    "city_centroid",
+    "neighborhood_centroid",
+    "generic_geocoding",
+    "manual_guess",
+    "visual_estimate",
+    "unreferenced_coordinate"
+  ],
+  "accepted_file_extensions": [
+    ".geojson", ".json", ".csv", ".tsv", ".wkt", ".kml", ".kmz",
+    ".shp", ".gpkg", ".geopackage", ".pdf", ".xlsx"
+  ],
+  "parser_support_offline": {
+    "geojson": "supported_pure_python",
+    "json": "supported_pure_python",
+    "csv_lat_lon": "supported_pure_python",
+    "wkt": "supported_pure_python",
+    "kml": "best_effort_regex",
+    "shp_gpkg_kmz_pdf_xlsx": "flagged_requires_manual_review_no_offline_parser"
+  },
+  "region_coordinate_bounds_wgs84": {
+    "recife": {"lon_min": -35.20, "lon_max": -34.80, "lat_min": -8.50, "lat_max": -7.85},
+    "petropolis": {"lon_min": -43.45, "lon_max": -43.00, "lat_min": -22.75, "lat_max": -22.20},
+    "curitiba": {"lon_min": -49.55, "lon_max": -49.00, "lat_min": -25.75, "lat_max": -25.20}
+  },
+  "link_to_patch_requirements": [
+    "explicit_geometry_present",
+    "region_compatible",
+    "crs_known_or_justified",
+    "evidence_or_region_link_traceable"
+  ],
+  "can_be_ground_truth": false,
+  "allowed_for_training": false,
+  "review_only": true,
+  "scientific_status": "real_coordinate_spatial_adherence_not_patch_ground_truth"
+}
