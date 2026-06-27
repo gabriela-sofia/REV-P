@@ -1,0 +1,34 @@
+feature_name,include_in_score_v6,include_in_spgam_baseline,include_in_dino_comparison,role,direction,weight_class,reason,blocker
+elevation_mean,true,true,true,physical_core,lower_increases,high,Cotas mais baixas tendem a acumular agua e receber escoamento de montante.,
+elevation_std,false,false,true,physical_core,ambiguous,low,"Isolada e ambigua: baixo desvio sobre cota baixa indica planicie de acumulacao, mas o sinal depende da cota absoluta.",AMBIGUOUS_DIRECTION
+slope_mean,true,true,true,physical_core,lower_increases,high,Terreno plano drena devagar e favorece alagamento; alta declividade escoa rapido (mas pode gerar fluxo torrencial).,
+slope_std,false,false,true,physical_core,ambiguous,low,Heterogeneidade de declividade nao tem direcao monotonica clara para alagamento.,AMBIGUOUS_DIRECTION
+hand_mean,true,true,true,physical_core,lower_increases,high,Areas mais baixas em relacao a drenagem tendem a maior propensao de inundacao.,
+twi_mean,true,true,true,physical_core,higher_increases,high,TWI alto indica maior potencial de saturacao e acumulo de agua.,
+tpi_250m_mean,true,true,true,physical_core,lower_increases,high,Valores negativos indicam vales/depressoes propensas ao acumulo de agua.,
+curvature_laplacian_mean,true,true,true,physical_core,lower_increases,high,Curvatura concava (negativa) indica convergencia de fluxo.,
+distance_to_water_mean,true,true,true,hydrological_core,lower_increases,high,Distancia menor a drenagem aumenta a suscetibilidade.,
+water_occurrence_patch,true,true,true,hydrological_core,higher_increases,high,Maior ocorrencia historica de agua indica presenca recorrente.,
+flow_acc_log_mean,true,true,true,hydrological_core,higher_increases,high,Maior acumulacao de fluxo indica convergencia do escoamento superficial.,
+flow_acc_log_p75,true,true,true,hydrological_core,higher_increases,high,Percentil alto de acumulacao reforca convergencia de fluxo no patch.,
+chirps_3d_mm,true,true,true,rainfall_trigger,higher_increases,medium,Chuva recente intensa aumenta o gatilho hidrologico.,
+chirps_7d_mm,true,true,true,rainfall_trigger,higher_increases,medium,Acumulado de 7 dias representa gatilho recente sustentado.,
+chirps_30d_mm,true,true,true,rainfall_trigger,higher_increases,medium,Umidade antecedente de 30 dias amplifica o risco.,
+rain_3d_7d_ratio,true,true,true,rainfall_trigger,higher_increases,medium,Razao alta indica chuva concentrada nos ultimos dias (gatilho agudo).,
+rain_7d_30d_ratio,true,true,true,rainfall_trigger,higher_increases,medium,Balanco recente vs antecedente; razao alta indica concentracao recente.,
+rain_persistence_index,true,true,true,rainfall_trigger,higher_increases,medium,Persistencia de chuva sustenta condicao umida e aumenta o gatilho.,
+runoff_context_7d,true,true,true,rainfall_trigger,higher_increases,medium,Maior contexto de escoamento de 7 dias aumenta potencial de inundacao.,
+runoff_context_30d,true,true,true,rainfall_trigger,higher_increases,medium,Contexto de escoamento sustentado amplifica risco.,
+s1_vv_mean_clean,false,false,true,sar_support,ambiguous,low,Retroespalhamento radar e evidencia complementar; VV baixo pode indicar superficie lisa/umida mas nao e monotonico nem verdade de evento.,AMBIGUOUS_DIRECTION
+s1_vh_mean_clean,false,false,true,sar_support,ambiguous,low,VH sensivel a estrutura/umidade; sem direcao monotonica para alagamento.,AMBIGUOUS_DIRECTION
+s1_vv_minus_vh_mean_clean,false,false,true,sar_support,ambiguous,low,Diferenca de polarizacao reflete rugosidade/umidade; nao monotonica para suscetibilidade.,AMBIGUOUS_DIRECTION
+ndvi_mean,true,true,true,spectral_support,higher_decreases,high,Mais vegetacao tende a maior permeabilidade e menor escoamento.,
+mndwi_mean,true,true,true,spectral_support,higher_increases,high,MNDWI alto indica agua/umidade na superficie.,
+ndbi_mean,true,true,true,spectral_support,higher_increases,high,"NDBI alto indica area construida/impermeavel, reduzindo infiltracao.",
+urban_prop,true,true,true,urbanization_core,higher_increases,high,Maior fracao urbana aumenta impermeabilizacao.,
+vegetation_prop,true,true,true,urbanization_core,higher_decreases,high,"Mais vegetacao indica maior permeabilidade, reduzindo escoamento.",
+urban_water_interaction,false,false,false,urbanization_core,higher_increases,medium,Area urbana proxima a agua combina impermeabilizacao e proximidade hidrica.,COMPOSITE_V5_INTERACTION_AUDIT_FORMULA_FIRST
+urban_drainage_interaction,false,false,false,urbanization_core,higher_increases,medium,Area impermeavel proxima a drenagem combina dois condicionantes.,COMPOSITE_V5_INTERACTION_AUDIT_FORMULA_FIRST
+chirps_3d_to_30d_ratio,false,false,false,exclude_until_audited,not_scored,blocked,Coluna solicitada inexistente na matriz migrada; exigiria recomputacao.,ABSENT_FROM_SUSC03
+chirps_7d_to_30d_ratio,false,false,false,exclude_until_audited,not_scored,blocked,Coluna solicitada inexistente na matriz migrada; exigiria recomputacao.,ABSENT_FROM_SUSC03
+runoff_score,false,false,false,exclude_until_audited,not_scored,blocked,Nome solicitado inexistente; as colunas reais sao runoff_context_7d e runoff_context_30d.,ABSENT_FROM_SUSC03

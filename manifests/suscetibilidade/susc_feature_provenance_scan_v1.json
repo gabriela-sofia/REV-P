@@ -1,0 +1,2007 @@
+{
+  "schema_id": "SUSC-04-SCAN",
+  "files_scanned": 5534,
+  "governance": {
+    "allowed_for_training": false,
+    "review_only": true,
+    "can_create_ground_truth": false
+  },
+  "features": {
+    "elevation_mean": {
+      "feature_name": "elevation_mean",
+      "script_search_tokens": [
+        "elevation_mean"
+      ],
+      "found_in_scripts": true,
+      "script_paths": [
+        "PROJETO/src/revp/ablation.py",
+        "PROJETO/src/revp/features_topo_hydro.py",
+        "PROJETO/scripts/analyze_revp_physical_feature_separation_v1.py",
+        "PROJETO/scripts/build_revp_contextual_control_set_v1.py",
+        "PROJETO/scripts/build_revp_multilabel_evidence_attributes_v1.py",
+        "PROJETO/scripts/build_revp_patch_visual_package_v1.py",
+        "PROJETO/scripts/build_revp_physical_geographic_feature_matrix_v1.py",
+        "PROJETO/scripts/petropolis_terrain_sidecar_v1.py",
+        "PROJETO/scripts/petropolis_terrain_smoke_test_v1.py",
+        "PROJETO/scripts/revp_feature_matrix_and_label_guardrails_scaffold_v1br.py",
+        "PROJETO/scripts/revp_protocol_b_infrastructure_scaffold_v1bo.py",
+        "PROJETO/scripts/scientific_feature_policy.py"
+      ],
+      "function_names_if_detected": [],
+      "source_dataset_paths": [
+        "PROJETO/data/dataset_final.csv"
+      ],
+      "doc_paths": [
+        "PROJETO/docs/fase2_score_heuristico.md",
+        "PROJETO/docs/plano_acao_operacional_tcc.md",
+        "PROJETO/docs/recife_external_patchset_after_static_features_decision.md",
+        "PROJETO/docs/recife_external_patchset_feature_equivalence_policy.md",
+        "PROJETO/docs/recife_external_patchset_feature_extraction_plan.md",
+        "PROJETO/docs/recife_external_patchset_score_v5_methodological_decision.md",
+        "PROJETO/docs/recife_external_patchset_static_features_extraction_report.md",
+        "PROJETO/docs/recife_external_patchset_topography_hydro_execution_notes.md"
+      ],
+      "public_source_in_script": [
+        "CHIRPS",
+        "GEE",
+        "JRC",
+        "MDE",
+        "MDT",
+        "MERIT",
+        "PE3D",
+        "SRTM"
+      ],
+      "public_source_colocated_unverified": [
+        "ANA",
+        "CHIRPS",
+        "Copernicus",
+        "GEE",
+        "GeoCuritiba",
+        "GlobalSurfaceWater",
+        "JRC",
+        "MDE",
+        "MDT",
+        "MapBiomas",
+        "PE3D",
+        "Sentinel",
+        "earthengine"
+      ],
+      "public_source_documented_only": [
+        "ANA",
+        "CHIRPS",
+        "Copernicus",
+        "GEE",
+        "GlobalSurfaceWater",
+        "JRC",
+        "MDE",
+        "MDT",
+        "MERIT",
+        "MapBiomas",
+        "PE3D",
+        "SRTM",
+        "Sentinel",
+        "earthengine"
+      ],
+      "source_paths": [
+        "PROJETO/scripts/build_revp_physical_geographic_feature_matrix_v1.py",
+        "PROJETO/scripts/petropolis_terrain_smoke_test_v1.py",
+        "PROJETO/scripts/external_validation/audit_recife_pe3d_mdt_v1.py",
+        "PROJETO/scripts/external_validation/build_recife_rev_p_evidence_matrix_v1.py",
+        "PROJETO/scripts/external_validation/build_recife_rev_p_evidence_matrix_v2.py",
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py"
+      ],
+      "unit_detected": [
+        "degrees",
+        "fraction",
+        "meters",
+        "mm"
+      ],
+      "crs_detected_if_any": [
+        "EPSG:31983",
+        "EPSG:31985",
+        "EPSG:4326"
+      ],
+      "resolution_detected_if_any": [
+        "20m"
+      ],
+      "temporal_reference_detected": true
+    },
+    "elevation_std": {
+      "feature_name": "elevation_std",
+      "script_search_tokens": [
+        "elevation_std"
+      ],
+      "found_in_scripts": true,
+      "script_paths": [
+        "PROJETO/scripts/revp_feature_matrix_and_label_guardrails_scaffold_v1br.py",
+        "PROJETO/scripts/revp_protocol_b_infrastructure_scaffold_v1bo.py",
+        "PROJETO/scripts/scientific_feature_policy.py",
+        "PROJETO/scripts/train_tabular_baseline.py",
+        "PROJETO/scripts/experiments/multimodal_baseline.py",
+        "PROJETO/scripts/experiments/tabular_only_ablation.py"
+      ],
+      "function_names_if_detected": [],
+      "source_dataset_paths": [
+        "PROJETO/data/dataset_final.csv"
+      ],
+      "doc_paths": [
+        "PROJETO/docs/tabular_only_data_audit.md"
+      ],
+      "public_source_in_script": [],
+      "public_source_colocated_unverified": [
+        "ANA",
+        "Copernicus",
+        "GeoCuritiba",
+        "MapBiomas",
+        "PE3D",
+        "Sentinel"
+      ],
+      "public_source_documented_only": [
+        "Sentinel"
+      ],
+      "source_paths": [],
+      "unit_detected": [
+        "mm"
+      ],
+      "crs_detected_if_any": [
+        "EPSG:31983",
+        "EPSG:31985"
+      ],
+      "resolution_detected_if_any": [],
+      "temporal_reference_detected": true
+    },
+    "slope_mean": {
+      "feature_name": "slope_mean",
+      "script_search_tokens": [
+        "slope_mean"
+      ],
+      "found_in_scripts": true,
+      "script_paths": [
+        "scripts/protocolo_c/revp_v1jk_review_only_prototype_one_class_sandbox.py",
+        "PROJETO/src/revp/ablation.py",
+        "PROJETO/src/revp/features_topo_hydro.py",
+        "PROJETO/scripts/analyze_revp_physical_feature_separation_v1.py",
+        "PROJETO/scripts/build_revp_patch_visual_package_v1.py",
+        "PROJETO/scripts/build_revp_physical_geographic_feature_matrix_v1.py",
+        "PROJETO/scripts/petropolis_terrain_sidecar_v1.py",
+        "PROJETO/scripts/revp_feature_matrix_and_label_guardrails_scaffold_v1br.py",
+        "PROJETO/scripts/revp_protocol_b_infrastructure_scaffold_v1bo.py",
+        "PROJETO/scripts/scientific_feature_policy.py",
+        "PROJETO/scripts/train_tabular_baseline.py",
+        "PROJETO/scripts/experiments/multimodal_baseline.py"
+      ],
+      "function_names_if_detected": [],
+      "source_dataset_paths": [
+        "PROJETO/data/dataset_final.csv"
+      ],
+      "doc_paths": [
+        "PROJETO/docs/fase2_score_heuristico.md",
+        "PROJETO/docs/fase2_separacao_conceitual.md",
+        "PROJETO/docs/recife_external_patchset_after_static_features_decision.md",
+        "PROJETO/docs/recife_external_patchset_feature_equivalence_policy.md",
+        "PROJETO/docs/recife_external_patchset_feature_extraction_plan.md",
+        "PROJETO/docs/recife_external_patchset_score_v5_methodological_decision.md",
+        "PROJETO/docs/recife_external_patchset_static_features_extraction_report.md",
+        "PROJETO/docs/recife_external_patchset_topography_hydro_execution_notes.md"
+      ],
+      "public_source_in_script": [
+        "CHIRPS",
+        "GEE",
+        "JRC",
+        "MDT",
+        "MERIT",
+        "PE3D",
+        "SRTM"
+      ],
+      "public_source_colocated_unverified": [
+        "ANA",
+        "CHIRPS",
+        "Copernicus",
+        "GEE",
+        "GeoCuritiba",
+        "GlobalSurfaceWater",
+        "JRC",
+        "MDE",
+        "MDT",
+        "MapBiomas",
+        "PE3D",
+        "Sentinel",
+        "earthengine"
+      ],
+      "public_source_documented_only": [
+        "ANA",
+        "CHIRPS",
+        "GEE",
+        "GlobalSurfaceWater",
+        "JRC",
+        "MDE",
+        "MDT",
+        "MERIT",
+        "MapBiomas",
+        "PE3D",
+        "SRTM",
+        "Sentinel",
+        "earthengine"
+      ],
+      "source_paths": [
+        "PROJETO/scripts/external_validation/audit_recife_pe3d_mdt_v1.py",
+        "PROJETO/scripts/external_validation/build_recife_rev_p_evidence_matrix_v1.py",
+        "PROJETO/scripts/external_validation/build_recife_rev_p_evidence_matrix_v2.py",
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py"
+      ],
+      "unit_detected": [
+        "degrees",
+        "fraction",
+        "meters",
+        "mm"
+      ],
+      "crs_detected_if_any": [
+        "EPSG:31983",
+        "EPSG:31985",
+        "EPSG:4326"
+      ],
+      "resolution_detected_if_any": [
+        "20m"
+      ],
+      "temporal_reference_detected": true
+    },
+    "slope_std": {
+      "feature_name": "slope_std",
+      "script_search_tokens": [
+        "slope_std"
+      ],
+      "found_in_scripts": true,
+      "script_paths": [
+        "PROJETO/scripts/revp_feature_matrix_and_label_guardrails_scaffold_v1br.py",
+        "PROJETO/scripts/revp_protocol_b_infrastructure_scaffold_v1bo.py",
+        "PROJETO/scripts/scientific_feature_policy.py",
+        "PROJETO/scripts/train_tabular_baseline.py",
+        "PROJETO/scripts/experiments/multimodal_baseline.py",
+        "PROJETO/scripts/experiments/tabular_only_ablation.py"
+      ],
+      "function_names_if_detected": [],
+      "source_dataset_paths": [
+        "PROJETO/data/dataset_final.csv"
+      ],
+      "doc_paths": [
+        "PROJETO/docs/tabular_only_data_audit.md"
+      ],
+      "public_source_in_script": [],
+      "public_source_colocated_unverified": [
+        "ANA",
+        "Copernicus",
+        "GeoCuritiba",
+        "MapBiomas",
+        "PE3D",
+        "Sentinel"
+      ],
+      "public_source_documented_only": [
+        "Sentinel"
+      ],
+      "source_paths": [],
+      "unit_detected": [
+        "mm"
+      ],
+      "crs_detected_if_any": [
+        "EPSG:31983",
+        "EPSG:31985"
+      ],
+      "resolution_detected_if_any": [],
+      "temporal_reference_detected": true
+    },
+    "hand_mean": {
+      "feature_name": "hand_mean",
+      "script_search_tokens": [
+        "hand_mean"
+      ],
+      "found_in_scripts": true,
+      "script_paths": [
+        "PROJETO/scripts/scientific_feature_policy.py",
+        "PROJETO/scripts/train_tabular_baseline.py",
+        "PROJETO/scripts/experiments/multimodal_baseline.py",
+        "PROJETO/scripts/experiments/tabular_only_ablation.py",
+        "PROJETO/scripts/external_validation/audit_recife_pe3d_mdt_v1.py",
+        "PROJETO/scripts/external_validation/build_recife_rev_p_evidence_matrix_v1.py",
+        "PROJETO/scripts/external_validation/build_recife_rev_p_evidence_matrix_v2.py",
+        "PROJETO/scripts/external_validation/build_recife_sgb_cprm_evidence_matrix.py",
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py",
+        "PROJETO/scripts/external_validation/prepare_recife_pe3d_mdt_download_and_audit_v1.py",
+        "PROJETO/scripts/external_validation/process_recife_pe3d_complete_post_download_v2.py",
+        "PROJETO/scripts/external_validation/process_recife_pe3d_post_download_v1.py"
+      ],
+      "function_names_if_detected": [],
+      "source_dataset_paths": [
+        "PROJETO/data/dataset_final.csv"
+      ],
+      "doc_paths": [
+        "PROJETO/docs/fase2_score_heuristico.md",
+        "PROJETO/docs/fase2_separacao_conceitual.md",
+        "PROJETO/docs/plano_acao_operacional_tcc.md",
+        "PROJETO/docs/recife_external_flow_acc_controlled_recalc.md",
+        "PROJETO/docs/recife_external_flow_acc_final_decision.md",
+        "PROJETO/docs/recife_external_hydro_features_audit.md",
+        "PROJETO/docs/recife_external_patchset_after_hydro_equivalence_decision.md",
+        "PROJETO/docs/recife_external_patchset_after_static_features_decision.md"
+      ],
+      "public_source_in_script": [
+        "CHIRPS",
+        "JRC",
+        "MDT",
+        "MERIT",
+        "PE3D",
+        "SRTM"
+      ],
+      "public_source_colocated_unverified": [
+        "CHIRPS",
+        "GEE",
+        "GlobalSurfaceWater",
+        "JRC",
+        "MDE",
+        "MDT",
+        "MapBiomas",
+        "PE3D",
+        "Sentinel",
+        "earthengine"
+      ],
+      "public_source_documented_only": [
+        "ANA",
+        "CHIRPS",
+        "Copernicus",
+        "GEE",
+        "GlobalSurfaceWater",
+        "JRC",
+        "MDE",
+        "MDT",
+        "MERIT",
+        "MapBiomas",
+        "PE3D",
+        "SRTM",
+        "Sentinel",
+        "earthengine"
+      ],
+      "source_paths": [
+        "PROJETO/scripts/external_validation/audit_recife_pe3d_mdt_v1.py",
+        "PROJETO/scripts/external_validation/build_recife_rev_p_evidence_matrix_v1.py",
+        "PROJETO/scripts/external_validation/build_recife_rev_p_evidence_matrix_v2.py",
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py"
+      ],
+      "unit_detected": [
+        "degrees",
+        "fraction",
+        "meters",
+        "metros",
+        "mm"
+      ],
+      "crs_detected_if_any": [
+        "EPSG:31985",
+        "EPSG:4326"
+      ],
+      "resolution_detected_if_any": [
+        "20m"
+      ],
+      "temporal_reference_detected": true
+    },
+    "twi_mean": {
+      "feature_name": "twi_mean",
+      "script_search_tokens": [
+        "twi_mean"
+      ],
+      "found_in_scripts": true,
+      "script_paths": [
+        "PROJETO/scripts/scientific_feature_policy.py",
+        "PROJETO/scripts/experiments/multimodal_baseline.py",
+        "PROJETO/scripts/experiments/tabular_only_ablation.py",
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py"
+      ],
+      "function_names_if_detected": [],
+      "source_dataset_paths": [
+        "PROJETO/data/dataset_final.csv"
+      ],
+      "doc_paths": [
+        "PROJETO/docs/fase2_score_heuristico.md",
+        "PROJETO/docs/fase2_separacao_conceitual.md",
+        "PROJETO/docs/plano_acao_operacional_tcc.md",
+        "PROJETO/docs/recife_external_patchset_after_hydro_equivalence_decision.md",
+        "PROJETO/docs/recife_external_patchset_after_static_features_decision.md",
+        "PROJETO/docs/recife_external_patchset_after_topography_hydro_decision.md",
+        "PROJETO/docs/recife_external_patchset_feature_equivalence_policy.md",
+        "PROJETO/docs/recife_external_patchset_feature_extraction_plan.md"
+      ],
+      "public_source_in_script": [
+        "CHIRPS",
+        "JRC",
+        "MERIT",
+        "SRTM"
+      ],
+      "public_source_colocated_unverified": [
+        "GEE",
+        "GlobalSurfaceWater",
+        "MapBiomas",
+        "Sentinel",
+        "earthengine"
+      ],
+      "public_source_documented_only": [
+        "ANA",
+        "CHIRPS",
+        "Copernicus",
+        "GEE",
+        "GlobalSurfaceWater",
+        "JRC",
+        "MDE",
+        "MDT",
+        "MERIT",
+        "MapBiomas",
+        "PE3D",
+        "SRTM",
+        "Sentinel",
+        "earthengine"
+      ],
+      "source_paths": [
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py"
+      ],
+      "unit_detected": [
+        "fraction",
+        "meters",
+        "mm"
+      ],
+      "crs_detected_if_any": [
+        "EPSG:4326"
+      ],
+      "resolution_detected_if_any": [],
+      "temporal_reference_detected": true
+    },
+    "tpi_250m_mean": {
+      "feature_name": "tpi_250m_mean",
+      "script_search_tokens": [
+        "tpi_250m_mean"
+      ],
+      "found_in_scripts": true,
+      "script_paths": [
+        "PROJETO/scripts/scientific_feature_policy.py",
+        "PROJETO/scripts/train_tabular_baseline.py",
+        "PROJETO/scripts/experiments/multimodal_baseline.py",
+        "PROJETO/scripts/experiments/tabular_only_ablation.py"
+      ],
+      "function_names_if_detected": [],
+      "source_dataset_paths": [
+        "PROJETO/data/dataset_final.csv"
+      ],
+      "doc_paths": [
+        "PROJETO/docs/tabular_only_data_audit.md"
+      ],
+      "public_source_in_script": [],
+      "public_source_colocated_unverified": [
+        "Sentinel"
+      ],
+      "public_source_documented_only": [
+        "Sentinel"
+      ],
+      "source_paths": [],
+      "unit_detected": [
+        "mm"
+      ],
+      "crs_detected_if_any": [],
+      "resolution_detected_if_any": [],
+      "temporal_reference_detected": true
+    },
+    "curvature_laplacian_mean": {
+      "feature_name": "curvature_laplacian_mean",
+      "script_search_tokens": [
+        "curvature_laplacian_mean"
+      ],
+      "found_in_scripts": true,
+      "script_paths": [
+        "PROJETO/scripts/scientific_feature_policy.py",
+        "PROJETO/scripts/train_tabular_baseline.py",
+        "PROJETO/scripts/experiments/multimodal_baseline.py",
+        "PROJETO/scripts/experiments/tabular_only_ablation.py"
+      ],
+      "function_names_if_detected": [],
+      "source_dataset_paths": [
+        "PROJETO/data/dataset_final.csv"
+      ],
+      "doc_paths": [
+        "PROJETO/docs/tabular_only_data_audit.md"
+      ],
+      "public_source_in_script": [],
+      "public_source_colocated_unverified": [
+        "Sentinel"
+      ],
+      "public_source_documented_only": [
+        "Sentinel"
+      ],
+      "source_paths": [],
+      "unit_detected": [
+        "mm"
+      ],
+      "crs_detected_if_any": [],
+      "resolution_detected_if_any": [],
+      "temporal_reference_detected": true
+    },
+    "distance_to_water_mean": {
+      "feature_name": "distance_to_water_mean",
+      "script_search_tokens": [
+        "distance_to_water_mean",
+        "drainage_distance"
+      ],
+      "found_in_scripts": true,
+      "script_paths": [
+        "PROJETO/src/revp/features_topo_hydro.py",
+        "PROJETO/scripts/revp_experiment_registry_and_modeling_scaffold_v1bs.py",
+        "PROJETO/scripts/revp_feature_matrix_and_label_guardrails_scaffold_v1br.py",
+        "PROJETO/scripts/revp_programming_architecture_and_unlock_package_v1bu.py",
+        "PROJETO/scripts/revp_protocol_b_infrastructure_scaffold_v1bo.py",
+        "PROJETO/scripts/scientific_feature_policy.py",
+        "PROJETO/scripts/train_tabular_baseline.py",
+        "PROJETO/scripts/experiments/multimodal_baseline.py",
+        "PROJETO/scripts/experiments/tabular_only_ablation.py",
+        "PROJETO/scripts/external_validation/audit_sentinel1_sar_pair_controls.py",
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py"
+      ],
+      "function_names_if_detected": [],
+      "source_dataset_paths": [
+        "PROJETO/data/dataset_final.csv"
+      ],
+      "doc_paths": [
+        "PROJETO/docs/fase2_score_heuristico.md",
+        "PROJETO/docs/fase2_separacao_conceitual.md",
+        "PROJETO/docs/recife_external_patchset_after_static_features_decision.md",
+        "PROJETO/docs/recife_external_patchset_feature_equivalence_policy.md",
+        "PROJETO/docs/recife_external_patchset_feature_extraction_plan.md",
+        "PROJETO/docs/recife_external_patchset_score_v5_methodological_decision.md",
+        "PROJETO/docs/recife_external_patchset_static_features_extraction_report.md",
+        "PROJETO/docs/recife_external_patchset_topography_hydro_execution_notes.md"
+      ],
+      "public_source_in_script": [
+        "GEE",
+        "GlobalSurfaceWater",
+        "JRC",
+        "MERIT",
+        "SRTM"
+      ],
+      "public_source_colocated_unverified": [
+        "ANA",
+        "CHIRPS",
+        "Copernicus",
+        "GeoCuritiba",
+        "MapBiomas",
+        "PE3D",
+        "Sentinel",
+        "earthengine"
+      ],
+      "public_source_documented_only": [
+        "ANA",
+        "CHIRPS",
+        "GEE",
+        "GlobalSurfaceWater",
+        "JRC",
+        "MERIT",
+        "MapBiomas",
+        "SRTM",
+        "Sentinel",
+        "earthengine"
+      ],
+      "source_paths": [
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py"
+      ],
+      "unit_detected": [
+        "fraction",
+        "meters",
+        "mm"
+      ],
+      "crs_detected_if_any": [
+        "EPSG:31982",
+        "EPSG:31983",
+        "EPSG:31985",
+        "EPSG:32722",
+        "EPSG:4326"
+      ],
+      "resolution_detected_if_any": [],
+      "temporal_reference_detected": true
+    },
+    "water_occurrence_patch": {
+      "feature_name": "water_occurrence_patch",
+      "script_search_tokens": [
+        "water_occurrence_patch"
+      ],
+      "found_in_scripts": true,
+      "script_paths": [
+        "PROJETO/scripts/build_revp_physical_geographic_feature_matrix_v1.py",
+        "PROJETO/scripts/scientific_feature_policy.py",
+        "PROJETO/scripts/train_tabular_baseline.py",
+        "PROJETO/scripts/experiments/multimodal_baseline.py",
+        "PROJETO/scripts/experiments/tabular_only_ablation.py",
+        "PROJETO/scripts/external_validation/audit_sentinel1_sar_pair_controls.py",
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py"
+      ],
+      "function_names_if_detected": [],
+      "source_dataset_paths": [
+        "PROJETO/data/dataset_final.csv"
+      ],
+      "doc_paths": [
+        "PROJETO/docs/fase2_busca_validacao_externa.md",
+        "PROJETO/docs/fase2_score_heuristico.md",
+        "PROJETO/docs/plano_acao_operacional_tcc.md",
+        "PROJETO/docs/recife_external_patchset_after_static_features_decision.md",
+        "PROJETO/docs/recife_external_patchset_feature_equivalence_policy.md",
+        "PROJETO/docs/recife_external_patchset_feature_extraction_plan.md",
+        "PROJETO/docs/recife_external_patchset_score_v5_methodological_decision.md",
+        "PROJETO/docs/recife_external_patchset_static_features_extraction_report.md"
+      ],
+      "public_source_in_script": [
+        "CHIRPS",
+        "GlobalSurfaceWater",
+        "JRC",
+        "MERIT",
+        "SRTM"
+      ],
+      "public_source_colocated_unverified": [
+        "GEE",
+        "GeoCuritiba",
+        "MDE",
+        "MDT",
+        "MapBiomas",
+        "PE3D",
+        "Sentinel",
+        "earthengine"
+      ],
+      "public_source_documented_only": [
+        "ANA",
+        "CHIRPS",
+        "Copernicus",
+        "GEE",
+        "GlobalSurfaceWater",
+        "JRC",
+        "MDE",
+        "MDT",
+        "MERIT",
+        "MapBiomas",
+        "PE3D",
+        "SRTM",
+        "Sentinel",
+        "earthengine"
+      ],
+      "source_paths": [
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py"
+      ],
+      "unit_detected": [
+        "degrees",
+        "fraction",
+        "meters",
+        "mm"
+      ],
+      "crs_detected_if_any": [
+        "EPSG:4326"
+      ],
+      "resolution_detected_if_any": [],
+      "temporal_reference_detected": true
+    },
+    "flow_acc_log_mean": {
+      "feature_name": "flow_acc_log_mean",
+      "script_search_tokens": [
+        "flow_acc_log_mean"
+      ],
+      "found_in_scripts": true,
+      "script_paths": [
+        "PROJETO/scripts/scientific_feature_policy.py",
+        "PROJETO/scripts/train_tabular_baseline.py",
+        "PROJETO/scripts/experiments/multimodal_baseline.py",
+        "PROJETO/scripts/experiments/tabular_only_ablation.py",
+        "PROJETO/scripts/external_validation/audit_recife_pe3d_mdt_v1.py",
+        "PROJETO/scripts/external_validation/audit_sentinel1_sar_pair_controls.py",
+        "PROJETO/scripts/external_validation/build_recife_rev_p_evidence_matrix_v2.py",
+        "PROJETO/scripts/external_validation/build_recife_sgb_cprm_evidence_matrix.py",
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py",
+        "PROJETO/scripts/external_validation/prepare_recife_pe3d_mdt_download_and_audit_v1.py",
+        "PROJETO/scripts/external_validation/process_recife_pe3d_complete_post_download_v2.py",
+        "PROJETO/scripts/external_validation/process_recife_pe3d_post_download_v1.py"
+      ],
+      "function_names_if_detected": [],
+      "source_dataset_paths": [
+        "PROJETO/data/dataset_final.csv"
+      ],
+      "doc_paths": [
+        "PROJETO/docs/fase2_score_heuristico.md",
+        "PROJETO/docs/plano_acao_operacional_tcc.md",
+        "PROJETO/docs/recife_external_flow_acc_controlled_recalc.md",
+        "PROJETO/docs/recife_external_flow_acc_final_decision.md",
+        "PROJETO/docs/recife_external_flow_acc_log_mean_audit.md",
+        "PROJETO/docs/recife_external_hydro_features_audit.md",
+        "PROJETO/docs/recife_external_patchset_after_hydro_equivalence_decision.md",
+        "PROJETO/docs/recife_external_patchset_after_static_features_decision.md"
+      ],
+      "public_source_in_script": [
+        "CHIRPS",
+        "JRC",
+        "MDT",
+        "MERIT",
+        "PE3D",
+        "SRTM"
+      ],
+      "public_source_colocated_unverified": [
+        "CHIRPS",
+        "GEE",
+        "GlobalSurfaceWater",
+        "JRC",
+        "MDE",
+        "MDT",
+        "MapBiomas",
+        "PE3D",
+        "Sentinel",
+        "earthengine"
+      ],
+      "public_source_documented_only": [
+        "ANA",
+        "CHIRPS",
+        "Copernicus",
+        "GEE",
+        "GlobalSurfaceWater",
+        "JRC",
+        "MDE",
+        "MDT",
+        "MERIT",
+        "MapBiomas",
+        "PE3D",
+        "SRTM",
+        "Sentinel",
+        "earthengine"
+      ],
+      "source_paths": [
+        "PROJETO/scripts/external_validation/audit_recife_pe3d_mdt_v1.py",
+        "PROJETO/scripts/external_validation/build_recife_rev_p_evidence_matrix_v2.py",
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py"
+      ],
+      "unit_detected": [
+        "degrees",
+        "fraction",
+        "meters",
+        "metros",
+        "mm"
+      ],
+      "crs_detected_if_any": [
+        "EPSG:31985",
+        "EPSG:4326"
+      ],
+      "resolution_detected_if_any": [
+        "20m"
+      ],
+      "temporal_reference_detected": true
+    },
+    "flow_acc_log_p75": {
+      "feature_name": "flow_acc_log_p75",
+      "script_search_tokens": [
+        "flow_acc_log_p75",
+        "flow_acc_log_p75"
+      ],
+      "found_in_scripts": true,
+      "script_paths": [
+        "PROJETO/scripts/scientific_feature_policy.py",
+        "PROJETO/scripts/train_tabular_baseline.py",
+        "PROJETO/scripts/experiments/multimodal_baseline.py",
+        "PROJETO/scripts/experiments/tabular_only_ablation.py",
+        "PROJETO/scripts/external_validation/audit_recife_pe3d_mdt_v1.py",
+        "PROJETO/scripts/external_validation/build_recife_rev_p_evidence_matrix_v2.py",
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py",
+        "PROJETO/scripts/external_validation/prepare_recife_pe3d_mdt_download_and_audit_v1.py",
+        "PROJETO/scripts/external_validation/process_recife_pe3d_complete_post_download_v2.py",
+        "PROJETO/scripts/external_validation/process_recife_pe3d_post_download_v1.py"
+      ],
+      "function_names_if_detected": [],
+      "source_dataset_paths": [
+        "PROJETO/data/dataset_final.csv"
+      ],
+      "doc_paths": [
+        "PROJETO/docs/fase2_score_heuristico.md",
+        "PROJETO/docs/plano_acao_operacional_tcc.md",
+        "PROJETO/docs/recife_external_flow_acc_controlled_recalc.md",
+        "PROJETO/docs/recife_external_flow_acc_final_decision.md",
+        "PROJETO/docs/recife_external_flow_acc_log_mean_audit.md",
+        "PROJETO/docs/recife_external_hydro_features_audit.md",
+        "PROJETO/docs/recife_external_patchset_after_hydro_equivalence_decision.md",
+        "PROJETO/docs/recife_external_patchset_after_static_features_decision.md"
+      ],
+      "public_source_in_script": [
+        "CHIRPS",
+        "JRC",
+        "MDT",
+        "MERIT",
+        "PE3D",
+        "SRTM"
+      ],
+      "public_source_colocated_unverified": [
+        "CHIRPS",
+        "GEE",
+        "GlobalSurfaceWater",
+        "JRC",
+        "MDE",
+        "MDT",
+        "MapBiomas",
+        "PE3D",
+        "Sentinel",
+        "earthengine"
+      ],
+      "public_source_documented_only": [
+        "ANA",
+        "CHIRPS",
+        "Copernicus",
+        "GEE",
+        "JRC",
+        "MDE",
+        "MDT",
+        "MERIT",
+        "MapBiomas",
+        "PE3D",
+        "SRTM",
+        "Sentinel"
+      ],
+      "source_paths": [
+        "PROJETO/scripts/external_validation/audit_recife_pe3d_mdt_v1.py",
+        "PROJETO/scripts/external_validation/build_recife_rev_p_evidence_matrix_v2.py",
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py"
+      ],
+      "unit_detected": [
+        "degrees",
+        "fraction",
+        "meters",
+        "mm"
+      ],
+      "crs_detected_if_any": [
+        "EPSG:31985",
+        "EPSG:4326"
+      ],
+      "resolution_detected_if_any": [
+        "20m"
+      ],
+      "temporal_reference_detected": true
+    },
+    "chirps_3d_mm": {
+      "feature_name": "chirps_3d_mm",
+      "script_search_tokens": [
+        "chirps_3d_mm"
+      ],
+      "found_in_scripts": true,
+      "script_paths": [
+        "PROJETO/scripts/scientific_feature_policy.py",
+        "PROJETO/scripts/experiments/multimodal_baseline.py",
+        "PROJETO/scripts/experiments/tabular_only_ablation.py",
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py"
+      ],
+      "function_names_if_detected": [],
+      "source_dataset_paths": [
+        "PROJETO/data/dataset_final.csv"
+      ],
+      "doc_paths": [
+        "PROJETO/docs/fase2_score_heuristico.md",
+        "PROJETO/docs/recife_external_patchset_after_static_features_decision.md",
+        "PROJETO/docs/recife_external_patchset_climate_runoff_decision.md",
+        "PROJETO/docs/recife_external_patchset_feature_equivalence_policy.md",
+        "PROJETO/docs/recife_external_patchset_feature_extraction_plan.md",
+        "PROJETO/docs/recife_external_patchset_score_v5_methodological_decision.md",
+        "PROJETO/docs/recife_external_patchset_static_features_extraction_report.md",
+        "PROJETO/docs/recife_external_patchset_topography_hydro_features_report.md"
+      ],
+      "public_source_in_script": [
+        "CHIRPS",
+        "JRC",
+        "MERIT",
+        "SRTM"
+      ],
+      "public_source_colocated_unverified": [
+        "GEE",
+        "GlobalSurfaceWater",
+        "MapBiomas",
+        "Sentinel",
+        "earthengine"
+      ],
+      "public_source_documented_only": [
+        "CHIRPS",
+        "GEE",
+        "GlobalSurfaceWater",
+        "JRC",
+        "MERIT",
+        "MapBiomas",
+        "SRTM",
+        "Sentinel",
+        "earthengine"
+      ],
+      "source_paths": [
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py"
+      ],
+      "unit_detected": [
+        "fraction",
+        "meters",
+        "mm"
+      ],
+      "crs_detected_if_any": [
+        "EPSG:4326"
+      ],
+      "resolution_detected_if_any": [],
+      "temporal_reference_detected": true
+    },
+    "chirps_7d_mm": {
+      "feature_name": "chirps_7d_mm",
+      "script_search_tokens": [
+        "chirps_7d_mm"
+      ],
+      "found_in_scripts": true,
+      "script_paths": [
+        "PROJETO/scripts/scientific_feature_policy.py",
+        "PROJETO/scripts/experiments/multimodal_baseline.py",
+        "PROJETO/scripts/experiments/tabular_only_ablation.py",
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py"
+      ],
+      "function_names_if_detected": [],
+      "source_dataset_paths": [
+        "PROJETO/data/dataset_final.csv"
+      ],
+      "doc_paths": [
+        "PROJETO/docs/fase2_score_heuristico.md",
+        "PROJETO/docs/recife_external_patchset_after_static_features_decision.md",
+        "PROJETO/docs/recife_external_patchset_climate_runoff_decision.md",
+        "PROJETO/docs/recife_external_patchset_feature_equivalence_policy.md",
+        "PROJETO/docs/recife_external_patchset_feature_extraction_plan.md",
+        "PROJETO/docs/recife_external_patchset_score_v5_methodological_decision.md",
+        "PROJETO/docs/recife_external_patchset_static_features_extraction_report.md",
+        "PROJETO/docs/recife_external_patchset_topography_hydro_features_report.md"
+      ],
+      "public_source_in_script": [
+        "CHIRPS",
+        "JRC",
+        "MERIT",
+        "SRTM"
+      ],
+      "public_source_colocated_unverified": [
+        "GEE",
+        "GlobalSurfaceWater",
+        "MapBiomas",
+        "Sentinel",
+        "earthengine"
+      ],
+      "public_source_documented_only": [
+        "CHIRPS",
+        "GEE",
+        "GlobalSurfaceWater",
+        "JRC",
+        "MERIT",
+        "MapBiomas",
+        "SRTM",
+        "Sentinel",
+        "earthengine"
+      ],
+      "source_paths": [
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py"
+      ],
+      "unit_detected": [
+        "fraction",
+        "meters",
+        "mm"
+      ],
+      "crs_detected_if_any": [
+        "EPSG:4326"
+      ],
+      "resolution_detected_if_any": [],
+      "temporal_reference_detected": true
+    },
+    "chirps_30d_mm": {
+      "feature_name": "chirps_30d_mm",
+      "script_search_tokens": [
+        "chirps_30d_mm"
+      ],
+      "found_in_scripts": true,
+      "script_paths": [
+        "PROJETO/scripts/scientific_feature_policy.py",
+        "PROJETO/scripts/experiments/multimodal_baseline.py",
+        "PROJETO/scripts/experiments/tabular_only_ablation.py",
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py"
+      ],
+      "function_names_if_detected": [],
+      "source_dataset_paths": [
+        "PROJETO/data/dataset_final.csv"
+      ],
+      "doc_paths": [
+        "PROJETO/docs/fase2_score_heuristico.md",
+        "PROJETO/docs/recife_external_patchset_after_static_features_decision.md",
+        "PROJETO/docs/recife_external_patchset_climate_runoff_decision.md",
+        "PROJETO/docs/recife_external_patchset_feature_equivalence_policy.md",
+        "PROJETO/docs/recife_external_patchset_feature_extraction_plan.md",
+        "PROJETO/docs/recife_external_patchset_score_v5_methodological_decision.md",
+        "PROJETO/docs/recife_external_patchset_static_features_extraction_report.md",
+        "PROJETO/docs/recife_external_patchset_topography_hydro_features_report.md"
+      ],
+      "public_source_in_script": [
+        "CHIRPS",
+        "JRC",
+        "SRTM"
+      ],
+      "public_source_colocated_unverified": [
+        "GEE",
+        "GlobalSurfaceWater",
+        "MERIT",
+        "MapBiomas",
+        "Sentinel",
+        "earthengine"
+      ],
+      "public_source_documented_only": [
+        "CHIRPS",
+        "GEE",
+        "GlobalSurfaceWater",
+        "JRC",
+        "MERIT",
+        "MapBiomas",
+        "SRTM",
+        "Sentinel",
+        "earthengine"
+      ],
+      "source_paths": [
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py"
+      ],
+      "unit_detected": [
+        "fraction",
+        "meters",
+        "mm"
+      ],
+      "crs_detected_if_any": [
+        "EPSG:4326"
+      ],
+      "resolution_detected_if_any": [],
+      "temporal_reference_detected": true
+    },
+    "rain_3d_7d_ratio": {
+      "feature_name": "rain_3d_7d_ratio",
+      "script_search_tokens": [
+        "rain_3d_7d_ratio"
+      ],
+      "found_in_scripts": true,
+      "script_paths": [
+        "PROJETO/scripts/scientific_feature_policy.py",
+        "PROJETO/scripts/experiments/multimodal_baseline.py",
+        "PROJETO/scripts/experiments/tabular_only_ablation.py",
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py"
+      ],
+      "function_names_if_detected": [],
+      "source_dataset_paths": [
+        "PROJETO/data/dataset_final.csv"
+      ],
+      "doc_paths": [
+        "PROJETO/docs/fase2_score_heuristico.md",
+        "PROJETO/docs/recife_external_patchset_after_static_features_decision.md",
+        "PROJETO/docs/recife_external_patchset_climate_runoff_decision.md",
+        "PROJETO/docs/recife_external_patchset_feature_equivalence_policy.md",
+        "PROJETO/docs/recife_external_patchset_feature_extraction_plan.md",
+        "PROJETO/docs/recife_external_patchset_score_v5_methodological_decision.md",
+        "PROJETO/docs/recife_external_patchset_static_features_extraction_report.md",
+        "PROJETO/docs/recife_external_patchset_topography_hydro_features_report.md"
+      ],
+      "public_source_in_script": [
+        "CHIRPS",
+        "MapBiomas"
+      ],
+      "public_source_colocated_unverified": [
+        "GEE",
+        "GlobalSurfaceWater",
+        "JRC",
+        "MERIT",
+        "SRTM",
+        "Sentinel",
+        "earthengine"
+      ],
+      "public_source_documented_only": [
+        "CHIRPS",
+        "GEE",
+        "GlobalSurfaceWater",
+        "JRC",
+        "MERIT",
+        "MapBiomas",
+        "SRTM",
+        "Sentinel",
+        "earthengine"
+      ],
+      "source_paths": [
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py"
+      ],
+      "unit_detected": [
+        "fraction",
+        "meters",
+        "mm"
+      ],
+      "crs_detected_if_any": [
+        "EPSG:4326"
+      ],
+      "resolution_detected_if_any": [],
+      "temporal_reference_detected": true
+    },
+    "rain_7d_30d_ratio": {
+      "feature_name": "rain_7d_30d_ratio",
+      "script_search_tokens": [
+        "rain_7d_30d_ratio"
+      ],
+      "found_in_scripts": true,
+      "script_paths": [
+        "PROJETO/scripts/scientific_feature_policy.py",
+        "PROJETO/scripts/experiments/multimodal_baseline.py",
+        "PROJETO/scripts/experiments/tabular_only_ablation.py",
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py"
+      ],
+      "function_names_if_detected": [],
+      "source_dataset_paths": [
+        "PROJETO/data/dataset_final.csv"
+      ],
+      "doc_paths": [
+        "PROJETO/docs/fase2_score_heuristico.md",
+        "PROJETO/docs/recife_external_patchset_after_static_features_decision.md",
+        "PROJETO/docs/recife_external_patchset_climate_runoff_decision.md",
+        "PROJETO/docs/recife_external_patchset_feature_equivalence_policy.md",
+        "PROJETO/docs/recife_external_patchset_feature_extraction_plan.md",
+        "PROJETO/docs/recife_external_patchset_score_v5_methodological_decision.md",
+        "PROJETO/docs/recife_external_patchset_static_features_extraction_report.md",
+        "PROJETO/docs/recife_external_patchset_topography_hydro_features_report.md"
+      ],
+      "public_source_in_script": [
+        "CHIRPS",
+        "MapBiomas"
+      ],
+      "public_source_colocated_unverified": [
+        "GEE",
+        "GlobalSurfaceWater",
+        "JRC",
+        "MERIT",
+        "SRTM",
+        "Sentinel",
+        "earthengine"
+      ],
+      "public_source_documented_only": [
+        "CHIRPS",
+        "GEE",
+        "GlobalSurfaceWater",
+        "JRC",
+        "MERIT",
+        "MapBiomas",
+        "SRTM",
+        "Sentinel",
+        "earthengine"
+      ],
+      "source_paths": [
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py"
+      ],
+      "unit_detected": [
+        "fraction",
+        "meters",
+        "mm"
+      ],
+      "crs_detected_if_any": [
+        "EPSG:4326"
+      ],
+      "resolution_detected_if_any": [],
+      "temporal_reference_detected": true
+    },
+    "rain_persistence_index": {
+      "feature_name": "rain_persistence_index",
+      "script_search_tokens": [
+        "rain_persistence_index"
+      ],
+      "found_in_scripts": true,
+      "script_paths": [
+        "PROJETO/scripts/scientific_feature_policy.py",
+        "PROJETO/scripts/experiments/multimodal_baseline.py",
+        "PROJETO/scripts/experiments/tabular_only_ablation.py",
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py"
+      ],
+      "function_names_if_detected": [],
+      "source_dataset_paths": [
+        "PROJETO/data/dataset_final.csv"
+      ],
+      "doc_paths": [
+        "PROJETO/docs/fase2_score_heuristico.md",
+        "PROJETO/docs/recife_external_patchset_after_static_features_decision.md",
+        "PROJETO/docs/recife_external_patchset_climate_runoff_decision.md",
+        "PROJETO/docs/recife_external_patchset_feature_equivalence_policy.md",
+        "PROJETO/docs/recife_external_patchset_feature_extraction_plan.md",
+        "PROJETO/docs/recife_external_patchset_score_v5_methodological_decision.md",
+        "PROJETO/docs/recife_external_patchset_static_features_extraction_report.md",
+        "PROJETO/docs/recife_external_patchset_topography_hydro_features_report.md"
+      ],
+      "public_source_in_script": [
+        "CHIRPS",
+        "MapBiomas"
+      ],
+      "public_source_colocated_unverified": [
+        "GEE",
+        "GlobalSurfaceWater",
+        "JRC",
+        "MERIT",
+        "SRTM",
+        "Sentinel",
+        "earthengine"
+      ],
+      "public_source_documented_only": [
+        "CHIRPS",
+        "GEE",
+        "GlobalSurfaceWater",
+        "JRC",
+        "MERIT",
+        "MapBiomas",
+        "SRTM",
+        "Sentinel",
+        "earthengine"
+      ],
+      "source_paths": [
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py"
+      ],
+      "unit_detected": [
+        "fraction",
+        "meters",
+        "mm"
+      ],
+      "crs_detected_if_any": [
+        "EPSG:4326"
+      ],
+      "resolution_detected_if_any": [],
+      "temporal_reference_detected": true
+    },
+    "runoff_context_7d": {
+      "feature_name": "runoff_context_7d",
+      "script_search_tokens": [
+        "runoff_context_7d"
+      ],
+      "found_in_scripts": true,
+      "script_paths": [
+        "PROJETO/scripts/scientific_feature_policy.py",
+        "PROJETO/scripts/experiments/multimodal_baseline.py",
+        "PROJETO/scripts/experiments/tabular_only_ablation.py",
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py"
+      ],
+      "function_names_if_detected": [],
+      "source_dataset_paths": [
+        "PROJETO/data/dataset_final.csv"
+      ],
+      "doc_paths": [
+        "PROJETO/docs/fase2_score_heuristico.md",
+        "PROJETO/docs/recife_external_patchset_after_static_features_decision.md",
+        "PROJETO/docs/recife_external_patchset_climate_runoff_decision.md",
+        "PROJETO/docs/recife_external_patchset_feature_equivalence_policy.md",
+        "PROJETO/docs/recife_external_patchset_feature_extraction_plan.md",
+        "PROJETO/docs/recife_external_patchset_score_v5_methodological_decision.md",
+        "PROJETO/docs/recife_external_patchset_static_features_extraction_report.md",
+        "PROJETO/docs/recife_external_patchset_topography_hydro_features_report.md"
+      ],
+      "public_source_in_script": [
+        "CHIRPS",
+        "JRC",
+        "MapBiomas",
+        "SRTM"
+      ],
+      "public_source_colocated_unverified": [
+        "GEE",
+        "GlobalSurfaceWater",
+        "MERIT",
+        "Sentinel",
+        "earthengine"
+      ],
+      "public_source_documented_only": [
+        "CHIRPS",
+        "GEE",
+        "GlobalSurfaceWater",
+        "JRC",
+        "MERIT",
+        "MapBiomas",
+        "SRTM",
+        "Sentinel",
+        "earthengine"
+      ],
+      "source_paths": [
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py"
+      ],
+      "unit_detected": [
+        "fraction",
+        "meters",
+        "mm"
+      ],
+      "crs_detected_if_any": [
+        "EPSG:4326"
+      ],
+      "resolution_detected_if_any": [],
+      "temporal_reference_detected": true
+    },
+    "runoff_context_30d": {
+      "feature_name": "runoff_context_30d",
+      "script_search_tokens": [
+        "runoff_context_30d"
+      ],
+      "found_in_scripts": true,
+      "script_paths": [
+        "PROJETO/scripts/scientific_feature_policy.py",
+        "PROJETO/scripts/experiments/multimodal_baseline.py",
+        "PROJETO/scripts/experiments/tabular_only_ablation.py",
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py"
+      ],
+      "function_names_if_detected": [],
+      "source_dataset_paths": [
+        "PROJETO/data/dataset_final.csv"
+      ],
+      "doc_paths": [
+        "PROJETO/docs/fase2_score_heuristico.md",
+        "PROJETO/docs/recife_external_patchset_after_static_features_decision.md",
+        "PROJETO/docs/recife_external_patchset_climate_runoff_decision.md",
+        "PROJETO/docs/recife_external_patchset_feature_equivalence_policy.md",
+        "PROJETO/docs/recife_external_patchset_feature_extraction_plan.md",
+        "PROJETO/docs/recife_external_patchset_score_v5_methodological_decision.md",
+        "PROJETO/docs/recife_external_patchset_static_features_extraction_report.md",
+        "PROJETO/docs/recife_external_patchset_topography_hydro_features_report.md"
+      ],
+      "public_source_in_script": [
+        "CHIRPS",
+        "JRC",
+        "MapBiomas"
+      ],
+      "public_source_colocated_unverified": [
+        "GEE",
+        "GlobalSurfaceWater",
+        "MERIT",
+        "SRTM",
+        "Sentinel",
+        "earthengine"
+      ],
+      "public_source_documented_only": [
+        "CHIRPS",
+        "GEE",
+        "GlobalSurfaceWater",
+        "JRC",
+        "MERIT",
+        "MapBiomas",
+        "SRTM",
+        "Sentinel",
+        "earthengine"
+      ],
+      "source_paths": [
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py"
+      ],
+      "unit_detected": [
+        "fraction",
+        "meters",
+        "mm"
+      ],
+      "crs_detected_if_any": [
+        "EPSG:4326"
+      ],
+      "resolution_detected_if_any": [],
+      "temporal_reference_detected": true
+    },
+    "s1_vv_mean_clean": {
+      "feature_name": "s1_vv_mean_clean",
+      "script_search_tokens": [
+        "s1_vv_mean_clean",
+        "features_sar",
+        "s1_vv"
+      ],
+      "found_in_scripts": true,
+      "script_paths": [
+        "PROJETO/src/revp/feature_matrix_builder.py",
+        "PROJETO/src/revp/qa.py",
+        "PROJETO/scripts/revp_complete_v1aw_outputs.py",
+        "PROJETO/scripts/revp_programming_foundation_full_pipeline_v1av.py",
+        "PROJETO/scripts/revp_unit_tests_import_validation_registry_audit_cli_hardening_v1aw.py",
+        "PROJETO/scripts/scientific_feature_policy.py",
+        "PROJETO/scripts/train_tabular_baseline.py",
+        "PROJETO/scripts/experiments/multimodal_baseline.py",
+        "PROJETO/scripts/experiments/tabular_only_ablation.py"
+      ],
+      "function_names_if_detected": [],
+      "source_dataset_paths": [
+        "PROJETO/data/dataset_final.csv"
+      ],
+      "doc_paths": [
+        "PROJETO/docs/fase1_estado_atual.md",
+        "PROJETO/docs/multimodal_baseline_result_interpretation.md",
+        "PROJETO/docs/multimodal_experiment_design.md",
+        "PROJETO/docs/tabular_only_data_audit.md"
+      ],
+      "public_source_in_script": [],
+      "public_source_colocated_unverified": [
+        "PE3D",
+        "Sentinel"
+      ],
+      "public_source_documented_only": [
+        "CHIRPS",
+        "Copernicus",
+        "Sentinel"
+      ],
+      "source_paths": [],
+      "unit_detected": [
+        "mm"
+      ],
+      "crs_detected_if_any": [],
+      "resolution_detected_if_any": [],
+      "temporal_reference_detected": true
+    },
+    "s1_vh_mean_clean": {
+      "feature_name": "s1_vh_mean_clean",
+      "script_search_tokens": [
+        "s1_vh_mean_clean",
+        "features_sar",
+        "s1_vh"
+      ],
+      "found_in_scripts": true,
+      "script_paths": [
+        "PROJETO/src/revp/feature_matrix_builder.py",
+        "PROJETO/src/revp/qa.py",
+        "PROJETO/scripts/revp_complete_v1aw_outputs.py",
+        "PROJETO/scripts/revp_programming_foundation_full_pipeline_v1av.py",
+        "PROJETO/scripts/revp_unit_tests_import_validation_registry_audit_cli_hardening_v1aw.py",
+        "PROJETO/scripts/scientific_feature_policy.py",
+        "PROJETO/scripts/train_tabular_baseline.py",
+        "PROJETO/scripts/experiments/multimodal_baseline.py",
+        "PROJETO/scripts/experiments/tabular_only_ablation.py"
+      ],
+      "function_names_if_detected": [],
+      "source_dataset_paths": [
+        "PROJETO/data/dataset_final.csv"
+      ],
+      "doc_paths": [
+        "PROJETO/docs/fase1_estado_atual.md",
+        "PROJETO/docs/multimodal_baseline_result_interpretation.md",
+        "PROJETO/docs/multimodal_experiment_design.md",
+        "PROJETO/docs/tabular_only_data_audit.md"
+      ],
+      "public_source_in_script": [],
+      "public_source_colocated_unverified": [
+        "PE3D",
+        "Sentinel"
+      ],
+      "public_source_documented_only": [
+        "CHIRPS",
+        "Copernicus",
+        "Sentinel"
+      ],
+      "source_paths": [],
+      "unit_detected": [
+        "mm"
+      ],
+      "crs_detected_if_any": [],
+      "resolution_detected_if_any": [],
+      "temporal_reference_detected": true
+    },
+    "s1_vv_minus_vh_mean_clean": {
+      "feature_name": "s1_vv_minus_vh_mean_clean",
+      "script_search_tokens": [
+        "s1_vv_minus_vh_mean_clean",
+        "s1_vv_minus_vh"
+      ],
+      "found_in_scripts": true,
+      "script_paths": [
+        "PROJETO/scripts/scientific_feature_policy.py",
+        "PROJETO/scripts/train_tabular_baseline.py",
+        "PROJETO/scripts/experiments/multimodal_baseline.py",
+        "PROJETO/scripts/experiments/tabular_only_ablation.py"
+      ],
+      "function_names_if_detected": [],
+      "source_dataset_paths": [
+        "PROJETO/data/dataset_final.csv"
+      ],
+      "doc_paths": [
+        "PROJETO/docs/fase1_estado_atual.md",
+        "PROJETO/docs/multimodal_baseline_result_interpretation.md",
+        "PROJETO/docs/multimodal_experiment_design.md",
+        "PROJETO/docs/tabular_only_data_audit.md"
+      ],
+      "public_source_in_script": [],
+      "public_source_colocated_unverified": [
+        "Sentinel"
+      ],
+      "public_source_documented_only": [
+        "CHIRPS",
+        "Copernicus",
+        "Sentinel"
+      ],
+      "source_paths": [],
+      "unit_detected": [
+        "mm"
+      ],
+      "crs_detected_if_any": [],
+      "resolution_detected_if_any": [],
+      "temporal_reference_detected": true
+    },
+    "ndvi_mean": {
+      "feature_name": "ndvi_mean",
+      "script_search_tokens": [
+        "ndvi_mean",
+        "ndvi_spec"
+      ],
+      "found_in_scripts": true,
+      "script_paths": [
+        "scripts/dino/revp_v1hd_visual_review_update.py",
+        "PROJETO/src/revp/features_optical.py",
+        "PROJETO/scripts/build_revp_physical_geographic_feature_matrix_v1.py",
+        "PROJETO/scripts/extract_revp_visual_spectral_features_v1.py",
+        "PROJETO/scripts/scientific_feature_policy.py",
+        "PROJETO/scripts/train_tabular_baseline.py",
+        "PROJETO/scripts/experiments/multimodal_baseline.py",
+        "PROJETO/scripts/experiments/tabular_only_ablation.py"
+      ],
+      "function_names_if_detected": [
+        "ndvi_spec @ PROJETO/src/revp/features_optical.py"
+      ],
+      "source_dataset_paths": [
+        "PROJETO/data/dataset_final.csv"
+      ],
+      "doc_paths": [
+        "PROJETO/docs/fase1_estado_atual.md",
+        "PROJETO/docs/fase2_score_heuristico.md",
+        "PROJETO/docs/matriz_decisao_experimentos_tcc.md",
+        "PROJETO/docs/score_v5_formula_e_features_auditoria_inicial.md",
+        "PROJETO/docs/tabular_only_data_audit.md"
+      ],
+      "public_source_in_script": [],
+      "public_source_colocated_unverified": [
+        "GeoCuritiba",
+        "MDE",
+        "MDT",
+        "PE3D",
+        "Sentinel"
+      ],
+      "public_source_documented_only": [
+        "CHIRPS",
+        "GEE",
+        "Sentinel"
+      ],
+      "source_paths": [],
+      "unit_detected": [
+        "degrees",
+        "fraction",
+        "meters",
+        "mm"
+      ],
+      "crs_detected_if_any": [],
+      "resolution_detected_if_any": [],
+      "temporal_reference_detected": true
+    },
+    "mndwi_mean": {
+      "feature_name": "mndwi_mean",
+      "script_search_tokens": [
+        "mndwi_mean",
+        "mndwi_spec"
+      ],
+      "found_in_scripts": true,
+      "script_paths": [
+        "PROJETO/src/revp/features_optical.py",
+        "PROJETO/scripts/scientific_feature_policy.py",
+        "PROJETO/scripts/train_tabular_baseline.py",
+        "PROJETO/scripts/experiments/multimodal_baseline.py",
+        "PROJETO/scripts/experiments/tabular_only_ablation.py"
+      ],
+      "function_names_if_detected": [
+        "mndwi_spec @ PROJETO/src/revp/features_optical.py"
+      ],
+      "source_dataset_paths": [
+        "PROJETO/data/dataset_final.csv"
+      ],
+      "doc_paths": [
+        "PROJETO/docs/fase1_estado_atual.md",
+        "PROJETO/docs/fase2_busca_validacao_externa.md",
+        "PROJETO/docs/fase2_score_heuristico.md",
+        "PROJETO/docs/matriz_decisao_experimentos_tcc.md",
+        "PROJETO/docs/score_v5_formula_e_features_auditoria_inicial.md",
+        "PROJETO/docs/tabular_only_data_audit.md"
+      ],
+      "public_source_in_script": [],
+      "public_source_colocated_unverified": [
+        "Sentinel"
+      ],
+      "public_source_documented_only": [
+        "ANA",
+        "CHIRPS",
+        "GEE",
+        "JRC",
+        "MapBiomas",
+        "Sentinel"
+      ],
+      "source_paths": [],
+      "unit_detected": [
+        "mm"
+      ],
+      "crs_detected_if_any": [],
+      "resolution_detected_if_any": [],
+      "temporal_reference_detected": true
+    },
+    "ndbi_mean": {
+      "feature_name": "ndbi_mean",
+      "script_search_tokens": [
+        "ndbi_mean",
+        "ndbi_spec"
+      ],
+      "found_in_scripts": true,
+      "script_paths": [
+        "scripts/protocolo_c/revp_v1iz_cloud_mask_alternative_scene_selection.py",
+        "PROJETO/src/revp/features_optical.py",
+        "PROJETO/scripts/build_revp_physical_geographic_feature_matrix_v1.py",
+        "PROJETO/scripts/extract_revp_visual_spectral_features_v1.py",
+        "PROJETO/scripts/scientific_feature_policy.py",
+        "PROJETO/scripts/train_tabular_baseline.py",
+        "PROJETO/scripts/experiments/multimodal_baseline.py",
+        "PROJETO/scripts/experiments/tabular_only_ablation.py"
+      ],
+      "function_names_if_detected": [
+        "ndbi_spec @ PROJETO/src/revp/features_optical.py"
+      ],
+      "source_dataset_paths": [
+        "PROJETO/data/dataset_final.csv"
+      ],
+      "doc_paths": [
+        "PROJETO/docs/fase1_estado_atual.md",
+        "PROJETO/docs/fase2_score_heuristico.md",
+        "PROJETO/docs/matriz_decisao_experimentos_tcc.md",
+        "PROJETO/docs/score_v5_formula_e_features_auditoria_inicial.md",
+        "PROJETO/docs/tabular_only_data_audit.md"
+      ],
+      "public_source_in_script": [],
+      "public_source_colocated_unverified": [
+        "GeoCuritiba",
+        "MDE",
+        "MDT",
+        "PE3D",
+        "Sentinel",
+        "earthengine"
+      ],
+      "public_source_documented_only": [
+        "CHIRPS",
+        "GEE",
+        "Sentinel"
+      ],
+      "source_paths": [],
+      "unit_detected": [
+        "degrees",
+        "fraction",
+        "meters",
+        "mm"
+      ],
+      "crs_detected_if_any": [
+        "EPSG:32723",
+        "EPSG:4326"
+      ],
+      "resolution_detected_if_any": [],
+      "temporal_reference_detected": true
+    },
+    "urban_prop": {
+      "feature_name": "urban_prop",
+      "script_search_tokens": [
+        "urban_prop"
+      ],
+      "found_in_scripts": true,
+      "script_paths": [
+        "PROJETO/scripts/build_revp_physical_geographic_feature_matrix_v1.py",
+        "PROJETO/scripts/scientific_feature_policy.py",
+        "PROJETO/scripts/experiments/multimodal_baseline.py",
+        "PROJETO/scripts/experiments/tabular_only_ablation.py",
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py"
+      ],
+      "function_names_if_detected": [],
+      "source_dataset_paths": [
+        "PROJETO/data/dataset_final.csv"
+      ],
+      "doc_paths": [
+        "PROJETO/docs/auditoria_metodologica_avancada_camada2.md",
+        "PROJETO/docs/conceitos_fundamentais_enchente_suscetibilidade_vulnerabilidade.md",
+        "PROJETO/docs/fase1_estado_atual.md",
+        "PROJETO/docs/fase2_literatura_metodos_validacao_externa.md",
+        "PROJETO/docs/fase2_score_heuristico.md",
+        "PROJETO/docs/fase2_separacao_conceitual.md",
+        "PROJETO/docs/plano_acao_operacional_tcc.md",
+        "PROJETO/docs/recife_external_patchset_after_static_features_decision.md"
+      ],
+      "public_source_in_script": [
+        "CHIRPS",
+        "GlobalSurfaceWater",
+        "JRC",
+        "MapBiomas"
+      ],
+      "public_source_colocated_unverified": [
+        "GEE",
+        "GeoCuritiba",
+        "MDE",
+        "MDT",
+        "MERIT",
+        "PE3D",
+        "SRTM",
+        "Sentinel",
+        "earthengine"
+      ],
+      "public_source_documented_only": [
+        "ANA",
+        "CHIRPS",
+        "Copernicus",
+        "GEE",
+        "GeoCuritiba",
+        "GlobalSurfaceWater",
+        "JRC",
+        "MDE",
+        "MDT",
+        "MERIT",
+        "MapBiomas",
+        "PE3D",
+        "SRTM",
+        "Sentinel",
+        "earthengine"
+      ],
+      "source_paths": [
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py"
+      ],
+      "unit_detected": [
+        "degrees",
+        "fraction",
+        "meters",
+        "mm"
+      ],
+      "crs_detected_if_any": [
+        "EPSG:4326"
+      ],
+      "resolution_detected_if_any": [],
+      "temporal_reference_detected": true
+    },
+    "vegetation_prop": {
+      "feature_name": "vegetation_prop",
+      "script_search_tokens": [
+        "vegetation_prop"
+      ],
+      "found_in_scripts": true,
+      "script_paths": [
+        "PROJETO/scripts/scientific_feature_policy.py",
+        "PROJETO/scripts/experiments/multimodal_baseline.py",
+        "PROJETO/scripts/experiments/tabular_only_ablation.py",
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py"
+      ],
+      "function_names_if_detected": [],
+      "source_dataset_paths": [
+        "PROJETO/data/dataset_final.csv"
+      ],
+      "doc_paths": [
+        "PROJETO/docs/auditoria_metodologica_avancada_camada2.md",
+        "PROJETO/docs/fase1_estado_atual.md",
+        "PROJETO/docs/fase2_score_heuristico.md",
+        "PROJETO/docs/fase2_separacao_conceitual.md",
+        "PROJETO/docs/recife_external_patchset_after_static_features_decision.md",
+        "PROJETO/docs/recife_external_patchset_feature_equivalence_policy.md",
+        "PROJETO/docs/recife_external_patchset_feature_extraction_plan.md",
+        "PROJETO/docs/recife_external_patchset_score_v5_methodological_decision.md"
+      ],
+      "public_source_in_script": [
+        "CHIRPS",
+        "GlobalSurfaceWater",
+        "JRC",
+        "MapBiomas"
+      ],
+      "public_source_colocated_unverified": [
+        "GEE",
+        "MERIT",
+        "SRTM",
+        "Sentinel",
+        "earthengine"
+      ],
+      "public_source_documented_only": [
+        "ANA",
+        "CHIRPS",
+        "Copernicus",
+        "GEE",
+        "GeoCuritiba",
+        "GlobalSurfaceWater",
+        "JRC",
+        "MDE",
+        "MDT",
+        "MERIT",
+        "MapBiomas",
+        "PE3D",
+        "SRTM",
+        "Sentinel",
+        "earthengine"
+      ],
+      "source_paths": [
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py"
+      ],
+      "unit_detected": [
+        "fraction",
+        "meters",
+        "mm"
+      ],
+      "crs_detected_if_any": [
+        "EPSG:4326"
+      ],
+      "resolution_detected_if_any": [],
+      "temporal_reference_detected": true
+    },
+    "urban_water_interaction": {
+      "feature_name": "urban_water_interaction",
+      "script_search_tokens": [
+        "urban_water_interaction"
+      ],
+      "found_in_scripts": true,
+      "script_paths": [
+        "PROJETO/scripts/scientific_feature_policy.py",
+        "PROJETO/scripts/experiments/multimodal_baseline.py",
+        "PROJETO/scripts/experiments/tabular_only_ablation.py",
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py"
+      ],
+      "function_names_if_detected": [],
+      "source_dataset_paths": [
+        "PROJETO/data/dataset_final.csv"
+      ],
+      "doc_paths": [
+        "PROJETO/docs/auditoria_metodologica_avancada_camada2.md",
+        "PROJETO/docs/conceitos_fundamentais_enchente_suscetibilidade_vulnerabilidade.md",
+        "PROJETO/docs/fase2_score_heuristico.md",
+        "PROJETO/docs/recife_external_patchset_after_static_features_decision.md",
+        "PROJETO/docs/recife_external_patchset_feature_equivalence_policy.md",
+        "PROJETO/docs/recife_external_patchset_feature_extraction_plan.md",
+        "PROJETO/docs/recife_external_patchset_interaction_features_decision.md",
+        "PROJETO/docs/recife_external_patchset_score_v5_methodological_decision.md"
+      ],
+      "public_source_in_script": [
+        "CHIRPS",
+        "MapBiomas"
+      ],
+      "public_source_colocated_unverified": [
+        "GEE",
+        "GlobalSurfaceWater",
+        "JRC",
+        "MERIT",
+        "SRTM",
+        "Sentinel",
+        "earthengine"
+      ],
+      "public_source_documented_only": [
+        "ANA",
+        "CHIRPS",
+        "Copernicus",
+        "GEE",
+        "GeoCuritiba",
+        "GlobalSurfaceWater",
+        "JRC",
+        "MDE",
+        "MDT",
+        "MERIT",
+        "MapBiomas",
+        "PE3D",
+        "SRTM",
+        "Sentinel",
+        "earthengine"
+      ],
+      "source_paths": [
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py"
+      ],
+      "unit_detected": [
+        "fraction",
+        "meters",
+        "mm"
+      ],
+      "crs_detected_if_any": [
+        "EPSG:4326"
+      ],
+      "resolution_detected_if_any": [],
+      "temporal_reference_detected": true
+    },
+    "urban_drainage_interaction": {
+      "feature_name": "urban_drainage_interaction",
+      "script_search_tokens": [
+        "urban_drainage_interaction"
+      ],
+      "found_in_scripts": true,
+      "script_paths": [
+        "PROJETO/scripts/scientific_feature_policy.py",
+        "PROJETO/scripts/experiments/multimodal_baseline.py",
+        "PROJETO/scripts/experiments/tabular_only_ablation.py",
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py"
+      ],
+      "function_names_if_detected": [],
+      "source_dataset_paths": [
+        "PROJETO/data/dataset_final.csv"
+      ],
+      "doc_paths": [
+        "PROJETO/docs/auditoria_metodologica_avancada_camada2.md",
+        "PROJETO/docs/conceitos_fundamentais_enchente_suscetibilidade_vulnerabilidade.md",
+        "PROJETO/docs/fase2_score_heuristico.md",
+        "PROJETO/docs/recife_external_patchset_after_static_features_decision.md",
+        "PROJETO/docs/recife_external_patchset_feature_equivalence_policy.md",
+        "PROJETO/docs/recife_external_patchset_feature_extraction_plan.md",
+        "PROJETO/docs/recife_external_patchset_interaction_features_decision.md",
+        "PROJETO/docs/recife_external_patchset_score_v5_methodological_decision.md"
+      ],
+      "public_source_in_script": [
+        "CHIRPS",
+        "MapBiomas"
+      ],
+      "public_source_colocated_unverified": [
+        "GEE",
+        "GlobalSurfaceWater",
+        "JRC",
+        "MERIT",
+        "SRTM",
+        "Sentinel",
+        "earthengine"
+      ],
+      "public_source_documented_only": [
+        "ANA",
+        "CHIRPS",
+        "Copernicus",
+        "GEE",
+        "GeoCuritiba",
+        "GlobalSurfaceWater",
+        "JRC",
+        "MDE",
+        "MDT",
+        "MERIT",
+        "MapBiomas",
+        "PE3D",
+        "SRTM",
+        "Sentinel",
+        "earthengine"
+      ],
+      "source_paths": [
+        "PROJETO/scripts/external_validation/extract_score_v5_features_for_external_patchset.py"
+      ],
+      "unit_detected": [
+        "fraction",
+        "meters",
+        "mm"
+      ],
+      "crs_detected_if_any": [
+        "EPSG:4326"
+      ],
+      "resolution_detected_if_any": [],
+      "temporal_reference_detected": true
+    },
+    "chirps_3d_to_30d_ratio": {
+      "feature_name": "chirps_3d_to_30d_ratio",
+      "script_search_tokens": [
+        "chirps_3d_to_30d_ratio"
+      ],
+      "found_in_scripts": false,
+      "script_paths": [],
+      "function_names_if_detected": [],
+      "source_dataset_paths": [],
+      "doc_paths": [],
+      "public_source_in_script": [],
+      "public_source_colocated_unverified": [],
+      "public_source_documented_only": [],
+      "source_paths": [],
+      "unit_detected": [],
+      "crs_detected_if_any": [],
+      "resolution_detected_if_any": [],
+      "temporal_reference_detected": false
+    },
+    "chirps_7d_to_30d_ratio": {
+      "feature_name": "chirps_7d_to_30d_ratio",
+      "script_search_tokens": [
+        "chirps_7d_to_30d_ratio"
+      ],
+      "found_in_scripts": false,
+      "script_paths": [],
+      "function_names_if_detected": [],
+      "source_dataset_paths": [],
+      "doc_paths": [],
+      "public_source_in_script": [],
+      "public_source_colocated_unverified": [],
+      "public_source_documented_only": [],
+      "source_paths": [],
+      "unit_detected": [],
+      "crs_detected_if_any": [],
+      "resolution_detected_if_any": [],
+      "temporal_reference_detected": false
+    },
+    "runoff_score": {
+      "feature_name": "runoff_score",
+      "script_search_tokens": [
+        "runoff_score"
+      ],
+      "found_in_scripts": false,
+      "script_paths": [],
+      "function_names_if_detected": [],
+      "source_dataset_paths": [],
+      "doc_paths": [],
+      "public_source_in_script": [],
+      "public_source_colocated_unverified": [],
+      "public_source_documented_only": [],
+      "source_paths": [],
+      "unit_detected": [],
+      "crs_detected_if_any": [],
+      "resolution_detected_if_any": [],
+      "temporal_reference_detected": false
+    }
+  }
+}
