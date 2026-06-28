@@ -1,0 +1,11 @@
+class_v6,class_v5_proxy,count
+low,low,89
+low,medium,11
+low,high,0
+medium,low,10
+medium,medium,69
+medium,high,20
+high,low,1
+high,medium,19
+high,high,81
+OVERALL_AGREEMENT,fraction,0.7967

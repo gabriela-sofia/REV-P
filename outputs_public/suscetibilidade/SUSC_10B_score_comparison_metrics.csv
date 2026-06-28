@@ -1,0 +1,7 @@
+metric,value,basis
+n_patches,300,review_only
+pearson_v6_v5,0.848923,review_only_not_validation
+spearman_v6_v5,0.879672,review_only_not_validation
+top15_overlap_v6_v5,0.6,review_only
+top30_overlap_v6_v5,0.5667,review_only
+mean_abs_diff_v6_v5,0.097829,review_only
