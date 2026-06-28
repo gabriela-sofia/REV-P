@@ -1,0 +1,10 @@
+metric,value,review_only
+total_events_preferred,9,true
+total_links,15,true
+links_by_spatial_relation,"{""insufficient_for_patch_link"": 6, ""near_patch_buffer_candidate"": 7, ""same_region_period_context"": 2}",true
+links_by_confidence,"{""very_weak"": 8, ""weak"": 7}",true
+strong_links,0,true
+moderate_links,0,true
+observational_evaluation_links,7,true
+training_allowed_count,0,true
+ground_truth_count,0,true

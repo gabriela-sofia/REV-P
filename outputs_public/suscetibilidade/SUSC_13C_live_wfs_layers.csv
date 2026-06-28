@@ -1,0 +1,4 @@
+wfs_endpoint,region,feature_type,matched_keywords,getcapabilities_status,getfeature_status,geojson_saved,is_download_candidate,review_only,notes
+https://geoportal.iat.pr.gov.br/geoserver/ows,curitiba,,,failed,,false,false,true,GetCapabilities falhou
+https://geocuritiba.ippuc.org.br/geoserver/ows,curitiba,,,failed,,false,false,true,GetCapabilities falhou
+https://geoserver.inea.rj.gov.br/geoserver/ows,petropolis,,,failed,,false,false,true,GetCapabilities falhou

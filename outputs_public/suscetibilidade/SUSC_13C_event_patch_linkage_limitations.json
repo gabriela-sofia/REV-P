@@ -1,0 +1,29 @@
+{
+  "artifact": "SUSC-13C consolidated event patch linkage",
+  "n_events_total": 15,
+  "n_events_preferred": 9,
+  "n_links": 15,
+  "spatial_relation_counts": {
+    "insufficient_for_patch_link": 6,
+    "same_region_period_context": 2,
+    "near_patch_buffer_candidate": 7
+  },
+  "linkage_confidence_counts": {
+    "very_weak": 8,
+    "weak": 7
+  },
+  "observational_evaluation_links": 7,
+  "can_be_ground_truth": false,
+  "allowed_for_training": false,
+  "review_only": true,
+  "score_v7_created": false,
+  "model_persisted": false,
+  "key_limitations": [
+    "Aquisicao online real foi executada; ainda assim tudo permanece review-only.",
+    "Eventos fortes/moderados nao sao footprint validado nem rotulo de treino.",
+    "Risco, alerta e registros administrativos nao sao evento observado.",
+    "Interseccao por bbox e ponto-dentro-bbox sao aproximacoes para revisao.",
+    "Sem ground truth, sem treino supervisionado e sem score v7."
+  ],
+  "mandatory_statement": "O SUSC-13C-LIVE executa aquisição online real de fontes oficiais/rastreáveis para tentar materializar eventos observados de alagamento/inundação com data e geometria. Mesmo quando eventos fortes ou moderados são encontrados, todos os vínculos permanecem review-only, sem ground truth, sem treino supervisionado, sem score v7 automático e sem uso operacional preditivo."
+}

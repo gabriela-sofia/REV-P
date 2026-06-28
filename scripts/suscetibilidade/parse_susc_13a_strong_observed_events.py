@@ -112,13 +112,29 @@ def _parse_geojson(p: Path):
     return geojson_points(obj)
 
 
+def _read_csv_sniffed(p: Path):
+    """Read a CSV/TSV trying common delimiters (',', ';', tab). Brazilian official
+    data is frequently ';'-delimited. Returns list[dict] with None keys dropped."""
+    import csv as _csv
+    text = p.read_text(encoding="utf-8", errors="ignore")
+    sample = text[:4096]
+    delim = ","
+    counts = {d: sample.count(d) for d in (",", ";", "\t")}
+    delim = max(counts, key=lambda d: counts[d]) if any(counts.values()) else ","
+    reader = _csv.DictReader(text.splitlines(), delimiter=delim)
+    out = []
+    for row in reader:
+        out.append({k: v for k, v in row.items() if k is not None})
+    return out
+
+
 def _parse_csv_latlon(p: Path):
-    rows = read_csv(p)
+    rows = _read_csv_sniffed(p)
     if not rows:
         return [], []
-    cols = {c.lower(): c for c in rows[0].keys()}
-    latc = next((cols[c] for c in cols if c in {"lat", "latitude", "y"}), None)
-    lonc = next((cols[c] for c in cols if c in {"lon", "long", "longitude", "x"}), None)
+    cols = {c.lower(): c for c in rows[0].keys() if c}
+    latc = next((cols[c] for c in cols if c in {"lat", "latitude", "y", "coord_y"}), None)
+    lonc = next((cols[c] for c in cols if c in {"lon", "long", "lng", "longitude", "x", "coord_x"}), None)
     if not latc or not lonc:
         return [], []
     pts = []
