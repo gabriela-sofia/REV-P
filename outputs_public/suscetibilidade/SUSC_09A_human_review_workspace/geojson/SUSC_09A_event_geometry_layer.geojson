@@ -1,0 +1,333 @@
+{
+  "type": "FeatureCollection",
+  "properties": {
+    "review_only": true,
+    "can_be_ground_truth": false
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -34.989584,
+              -8.227246
+            ],
+            [
+              -34.980193,
+              -8.227246
+            ],
+            [
+              -34.980193,
+              -8.21807
+            ],
+            [
+              -34.989584,
+              -8.21807
+            ],
+            [
+              -34.989584,
+              -8.227246
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "case_id": "CASE_001",
+        "source": "patch_boundary_REC_00019_from_lineage.geojson",
+        "geometry_kind": "review_only_traceable_extent",
+        "can_be_ground_truth": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -34.957271,
+              -8.138517
+            ],
+            [
+              -34.929074,
+              -8.138517
+            ],
+            [
+              -34.929074,
+              -8.10852
+            ],
+            [
+              -34.957271,
+              -8.10852
+            ],
+            [
+              -34.957271,
+              -8.138517
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "case_id": "CASE_002",
+        "source": "recife_defesa_civil_risk_locations.geojson",
+        "geometry_kind": "review_only_traceable_extent",
+        "can_be_ground_truth": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -34.957271,
+              -8.138517
+            ],
+            [
+              -34.929074,
+              -8.138517
+            ],
+            [
+              -34.929074,
+              -8.10852
+            ],
+            [
+              -34.957271,
+              -8.10852
+            ],
+            [
+              -34.957271,
+              -8.138517
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "case_id": "CASE_003",
+        "source": "recife_defesa_civil_risk_areas_geojson.geojson",
+        "geometry_kind": "review_only_traceable_extent",
+        "can_be_ground_truth": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -34.957271,
+              -8.138517
+            ],
+            [
+              -34.929074,
+              -8.138517
+            ],
+            [
+              -34.929074,
+              -8.10852
+            ],
+            [
+              -34.957271,
+              -8.10852
+            ],
+            [
+              -34.957271,
+              -8.138517
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "case_id": "CASE_004",
+        "source": "recife_digitization_aoi_context.geojson",
+        "geometry_kind": "review_only_traceable_extent",
+        "can_be_ground_truth": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -34.957271,
+              -8.138517
+            ],
+            [
+              -34.929074,
+              -8.138517
+            ],
+            [
+              -34.929074,
+              -8.10852
+            ],
+            [
+              -34.957271,
+              -8.10852
+            ],
+            [
+              -34.957271,
+              -8.138517
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "case_id": "CASE_005",
+        "source": "recife_digitization_aoi_context.geojson",
+        "geometry_kind": "review_only_traceable_extent",
+        "can_be_ground_truth": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -34.957271,
+              -8.138517
+            ],
+            [
+              -34.929074,
+              -8.138517
+            ],
+            [
+              -34.929074,
+              -8.10852
+            ],
+            [
+              -34.957271,
+              -8.10852
+            ],
+            [
+              -34.957271,
+              -8.138517
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "case_id": "CASE_006",
+        "source": "recife_digitization_aoi_context.geojson",
+        "geometry_kind": "review_only_traceable_extent",
+        "can_be_ground_truth": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -34.957271,
+              -8.138517
+            ],
+            [
+              -34.929074,
+              -8.138517
+            ],
+            [
+              -34.929074,
+              -8.10852
+            ],
+            [
+              -34.957271,
+              -8.10852
+            ],
+            [
+              -34.957271,
+              -8.138517
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "case_id": "CASE_007",
+        "source": "recife_digitization_aoi_context.geojson",
+        "geometry_kind": "review_only_traceable_extent",
+        "can_be_ground_truth": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -34.957271,
+              -8.138517
+            ],
+            [
+              -34.929074,
+              -8.138517
+            ],
+            [
+              -34.929074,
+              -8.10852
+            ],
+            [
+              -34.957271,
+              -8.10852
+            ],
+            [
+              -34.957271,
+              -8.138517
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "case_id": "CASE_008",
+        "source": "recife_risk_areas_context.geojson",
+        "geometry_kind": "review_only_traceable_extent",
+        "can_be_ground_truth": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -43.211257,
+              -22.539519
+            ],
+            [
+              -43.168575,
+              -22.539519
+            ],
+            [
+              -43.168575,
+              -22.484006
+            ],
+            [
+              -43.211257,
+              -22.484006
+            ],
+            [
+              -43.211257,
+              -22.539519
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "case_id": "CASE_009",
+        "source": "official_coordinate_recovery_hardened_registry.csv",
+        "geometry_kind": "review_only_traceable_extent",
+        "can_be_ground_truth": false
+      }
+    }
+  ]
+}
