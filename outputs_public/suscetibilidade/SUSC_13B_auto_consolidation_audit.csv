@@ -1,0 +1,14 @@
+event_id,source_lineage,region,evidence_level,duplicate_group_id,duplicate_candidate,deduplication_action,preferred_record,review_only,notes
+SUSC13BC_00000,susc_13a,recife,documentary_only,DUPG_0006,false,keep_preferred,true,true,consolidado review-only
+SUSC13BC_00001,susc_13a,recife,moderate_official_flood_bbox,DUPG_0002,false,keep_preferred,true,true,consolidado review-only
+SUSC13BC_00002,susc_13a,recife,weak_risk_area_context,DUPG_0003,false,keep_preferred,true,true,consolidado review-only
+SUSC13BC_00003,susc_13a,recife,weak_risk_area_context,DUPG_0005,true,keep_preferred,true,true,consolidado review-only
+SUSC13BC_00004,susc_13a,recife,documentary_only,DUPG_0004,false,keep_preferred,true,true,consolidado review-only
+SUSC13BC_00005,susc_13a,recife,weak_risk_area_context,DUPG_0005,true,drop_duplicate_review,false,true,consolidado review-only
+SUSC13BC_00006,susc_13a,petropolis,moderate_official_occurrence_point,DUPG_0000,true,keep_preferred,true,true,consolidado review-only
+SUSC13BC_00007,susc_13a,petropolis,moderate_official_occurrence_point,DUPG_0000,true,drop_duplicate_review,false,true,consolidado review-only
+SUSC13BC_00008,susc_13a,petropolis,moderate_official_occurrence_point,DUPG_0000,true,drop_duplicate_review,false,true,consolidado review-only
+SUSC13BC_00009,susc_13a,petropolis,moderate_official_occurrence_point,DUPG_0000,true,drop_duplicate_review,false,true,consolidado review-only
+SUSC13BC_00010,susc_13a,recife,weak_administrative_context,DUPG_0007,true,keep_preferred,true,true,consolidado review-only
+SUSC13BC_00011,susc_13a,recife,weak_administrative_context,DUPG_0007,true,drop_duplicate_review,false,true,consolidado review-only
+SUSC13BC_00012,susc_13a,petropolis,weak_administrative_context,DUPG_0001,false,keep_preferred,true,true,consolidado review-only

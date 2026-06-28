@@ -1,0 +1,26 @@
+{
+  "artifact": "SUSC-13B-AUTO consolidated observed event catalog",
+  "n_records": 13,
+  "n_groups": 8,
+  "n_duplicate_candidates": 8,
+  "n_preferred_records": 8,
+  "by_source_lineage": {
+    "susc_13a": 13
+  },
+  "by_evidence_level": {
+    "documentary_only": 2,
+    "moderate_official_flood_bbox": 1,
+    "weak_risk_area_context": 3,
+    "moderate_official_occurrence_point": 4,
+    "weak_administrative_context": 3
+  },
+  "n_evidence_upgrades_from_13a": 0,
+  "inputs": {
+    "susc_13a": "datasets/suscetibilidade/susc_13a_strong_observed_events_parsed_v1.csv",
+    "susc_13b_auto": "datasets/suscetibilidade/susc_13b_auto_observed_events_parsed_v1.csv"
+  },
+  "can_be_ground_truth": false,
+  "allowed_for_training": false,
+  "review_only": true,
+  "score_v7_created": false
+}
