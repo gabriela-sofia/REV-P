@@ -1,0 +1,52 @@
+{
+  "artifact": "SUSC-12A temporal pre-event evaluation dataset",
+  "dataset": "datasets/suscetibilidade/susc_12a_pre_event_evaluation_dataset_v1.csv",
+  "dataset_sha256": "4dbf89c60efd7811e2e7c9ed3fcbd4c5e9983b49459fcb2feee82f66e12c750d",
+  "schema": "schemas/suscetibilidade/susc_12a_temporal_evaluation_schema_v1.json",
+  "rows": 88,
+  "event_patch_rows": 44,
+  "control_patch_rows": 44,
+  "events": 9,
+  "event_patches": 14,
+  "controls": 44,
+  "features_used": [
+    "chirps_30d_mm",
+    "chirps_3d_mm",
+    "chirps_7d_mm",
+    "distance_to_water_mean",
+    "elevation_mean",
+    "flow_acc_log_mean",
+    "hand_mean",
+    "mndwi_mean",
+    "ndbi_mean",
+    "ndvi_mean",
+    "rain_7d_30d_ratio",
+    "rain_persistence_index",
+    "runoff_context_30d",
+    "runoff_context_7d",
+    "slope_mean",
+    "tpi_250m_mean",
+    "twi_mean",
+    "urban_prop",
+    "vegetation_prop"
+  ],
+  "feature_temporal_status_counts": {
+    "post_event_risk": 8,
+    "missing_temporal_metadata": 80
+  },
+  "temporal_leakage_risk_counts": {
+    "high": 8,
+    "temporal_uncertain": 80
+  },
+  "low_sample_size": false,
+  "can_be_ground_truth": false,
+  "allowed_for_training": false,
+  "review_only": true,
+  "scientific_status": "temporal_pre_event_evaluation_review_only",
+  "limitations": [
+    "Patches de evento sao derivados de ligacoes SUSC-11C review-only.",
+    "Controles sao no_documented_event_control e nao representam ausencia formal de evento.",
+    "Features temporais sem data comprovadamente pre-evento ficam incertas ou post_event_risk.",
+    "Nenhum modelo e treinado ou persistido."
+  ]
+}

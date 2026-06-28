@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "schema_id": "SUSC-12A-TEMPORAL-PRE-EVENT-EVALUATION",
+  "created": "2026-06-28",
+  "artifact_name": "SUSC-12A temporal pre-event susceptibility evaluation",
+  "status": "review_only_temporal_evaluation",
+  "purpose": "Avalia se patches com evidencia observada/contextual ja apresentavam maior suscetibilidade antes do evento, quando a temporalidade das features permite. Nao cria ground truth, nao libera treino supervisionado e nao constitui predicao operacional.",
+  "required_fields": {
+    "patch_id": "string",
+    "event_id": "string",
+    "region": "string",
+    "event_date": "YYYY-MM-DD_or_empty",
+    "feature_reference_date": "YYYY-MM-DD_or_empty",
+    "feature_temporal_status": "pre_event_confirmed|static_feature|same_period_uncertain|post_event_risk|missing_temporal_metadata|not_applicable",
+    "pre_event_valid": "boolean",
+    "temporal_leakage_risk": "none|low|temporal_uncertain|high",
+    "event_patch_status": "observed_event_patch_review_only|observed_context_link_review_only|contextual_patch_review_only|not_event_patch",
+    "control_patch_status": "not_control|no_documented_event_control",
+    "control_group_id": "string",
+    "control_selection_reason": "string",
+    "score_v6": "number_or_empty",
+    "score_v6_class": "low|medium|high|empty",
+    "can_be_ground_truth": false,
+    "allowed_for_training": false,
+    "review_only": true
+  },
+  "allowed_feature_temporal_status": [
+    "pre_event_confirmed",
+    "static_feature",
+    "same_period_uncertain",
+    "post_event_risk",
+    "missing_temporal_metadata",
+    "not_applicable"
+  ],
+  "rules": [
+    "Feature posterior ao evento nao pode ser usada como pre-evento.",
+    "Feature sem data comprovadamente anterior ao evento deve ser marcada como temporal_uncertain ou missing_temporal_metadata.",
+    "Features estaticas fisicas podem ser marcadas como static_feature, mas continuam review-only.",
+    "Controles sao no_documented_event_control e nao representam ausencia formal de evento.",
+    "Nenhum registro cria ground truth.",
+    "Nenhum registro libera treino supervisionado.",
+    "Nenhum modelo e treinado ou persistido."
+  ],
+  "can_be_ground_truth": false,
+  "allowed_for_training": false,
+  "review_only": true,
+  "scientific_status": "temporal_pre_event_evaluation_review_only_not_ground_truth"
+}
