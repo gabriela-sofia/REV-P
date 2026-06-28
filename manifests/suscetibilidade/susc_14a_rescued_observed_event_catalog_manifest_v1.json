@@ -1,0 +1,31 @@
+{
+  "artifact": "SUSC-14A rescued observed event catalog",
+  "n_records": 397,
+  "n_preferred": 31,
+  "n_groups": 31,
+  "by_source_lineage": {
+    "susc_13a": 7,
+    "susc_13c_live": 2,
+    "susc_14a_geocoded": 388
+  },
+  "by_evidence_level": {
+    "documentary_only": 2,
+    "moderate_official_flood_bbox": 1,
+    "weak_risk_area_context": 3,
+    "moderate_official_occurrence_point": 1,
+    "weak_administrative_context": 2,
+    "weak_official_neighborhood_context": 388
+  },
+  "n_strong_preferred": 0,
+  "n_moderate_preferred": 2,
+  "inputs": {
+    "susc_13c_catalog": "datasets/suscetibilidade/susc_13c_consolidated_observed_event_catalog_v1.csv",
+    "susc_14a_geocoded": "datasets/suscetibilidade/susc_14a_geocoded_official_occurrences_v1.csv",
+    "susc_14a_footprints": "manifests/suscetibilidade/susc_14a_flood_footprint_manifest_v1.csv"
+  },
+  "can_be_ground_truth": false,
+  "can_be_used_as_ground_truth": false,
+  "allowed_for_training": false,
+  "review_only": true,
+  "score_v7_created": false
+}

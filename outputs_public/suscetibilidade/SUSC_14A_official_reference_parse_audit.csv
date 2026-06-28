@@ -1,0 +1,2 @@
+source_file,source_id,parse_status,n_features,n_address_points,n_street,n_neighborhood,n_flood,n_risk,review_only,notes
+datasets/suscetibilidade/observed_event_sources_susc13c_live/ckan/coordenadas-geograficas-da-regiao-sul.geojson,S14AREF_0012,parsed,400,388,0,0,0,0,true,camada oficial parseada review-only
