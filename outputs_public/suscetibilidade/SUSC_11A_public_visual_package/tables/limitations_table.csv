@@ -1,0 +1,7 @@
+limitation,scope
+"Score v6 é determinístico candidato, não modelo treinado nem predição",10A
+Correlação v6×v5 não é validação supervisionada,10B
+"Evidência espacial é review-only, não ocorrência confirmada",07B/08
+DINO ausente (sem vetores carregáveis por patch),10D
+Aquisição externa oficial pendente (offline),09B
+Pesos/thresholds do score são escolha metodológica documentada,10A/10C
