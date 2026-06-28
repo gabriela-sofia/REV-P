@@ -1,0 +1,15 @@
+{
+  "artifact": "SUSC-12C proxy calibration recommendations",
+  "recommendation_counts": {
+    "needs_more_observed_events": 19
+  },
+  "score_v7_created": false,
+  "score_v7_ready": false,
+  "not_ready_reason": "low_sample_size_observed_event_patch_count_below_20",
+  "event_patch_count": 9,
+  "control_patch_count": 9,
+  "can_be_ground_truth": false,
+  "allowed_for_training": false,
+  "model_persisted": false,
+  "review_only": true
+}
