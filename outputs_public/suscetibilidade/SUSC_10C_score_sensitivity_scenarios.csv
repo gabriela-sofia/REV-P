@@ -1,0 +1,12 @@
+scenario,weights_TH_RT_US_VM_ES,threshold_mode,spearman_vs_baseline,class_agreement_vs_baseline,n_high,review_only
+baseline_v6,0.4;0.25;0.2;-0.1;0.05,tertile,1.0,1.0,101,true
+no_rainfall_trigger,0.4;0.0;0.2;-0.1;0.05,tertile,0.77713,0.643333,101,true
+no_urban_spectral,0.4;0.25;0.0;-0.1;0.05,tertile,0.695682,0.533333,101,true
+no_topography_hydrology,0.0;0.25;0.2;-0.1;0.05,tertile,0.415059,0.5,101,true
+no_evidence_support,0.4;0.25;0.2;-0.1;0.0,tertile,0.997419,0.986667,101,true
+equal_group_weights,0.2;0.2;0.2;-0.2;0.2,tertile,0.769657,0.64,101,true
+hydrology_heavy,0.6;0.15;0.1;-0.1;0.05,tertile,0.897053,0.733333,101,true
+urban_heavy,0.2;0.15;0.5;-0.1;0.05,tertile,0.612326,0.54,101,true
+rainfall_heavy,0.2;0.5;0.15;-0.1;0.05,tertile,0.645225,0.626667,101,true
+strict_high_threshold,0.4;0.25;0.2;-0.1;0.05,strict,1.0,0.79,59,true
+loose_high_threshold,0.4;0.25;0.2;-0.1;0.05,loose,1.0,0.76,149,true
