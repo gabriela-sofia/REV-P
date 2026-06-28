@@ -158,16 +158,18 @@ def main() -> int:
     else:
         print("  OK")
 
-    # [10] score v6 not computed
-    print("[10/10] score v6 NOT yet computed...")
+    # [10] no premature/final score v6 at the SUSC-04 stage.
+    # The SUSC-10A *candidate* score (review-only, deterministic) is an allowed
+    # downstream deliverable and is explicitly excluded from this guard.
+    print("[10/10] no premature score v6 (candidate allowed)...")
     v6_artifacts = []
     if SUSC_DATASETS.exists():
-        v6_artifacts = [p.name for p in SUSC_DATASETS.glob("*score*v6*")]
-    # decision matrix is allowed (it decides eligibility, does not compute the score)
+        v6_artifacts = [p.name for p in SUSC_DATASETS.glob("*score*v6*")
+                        if "candidate" not in p.name.lower()]
     if v6_artifacts:
-        errors.append(f"unexpected score v6 dataset artifact(s): {v6_artifacts}")
+        errors.append(f"unexpected non-candidate score v6 dataset artifact(s): {v6_artifacts}")
     else:
-        print("  OK: no score v6 dataset computed (eligibility only)")
+        print("  OK: no premature score v6 (SUSC-10A candidate excluded)")
 
     print("\n" + "=" * 60)
     if errors:

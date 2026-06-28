@@ -160,10 +160,13 @@ def main() -> int:
     if not bad and not heur_gt:
         print("  OK")
 
-    print("[12/13] score v6 NOT created; no model artifact...")
-    v6 = [p.name for p in SUSC_DATASETS.glob("*score*v6*")] if SUSC_DATASETS.exists() else []
+    print("[12/13] no premature score v6 (candidate allowed); no model artifact...")
+    # SUSC-10A introduces a review-only *candidate* score v6 downstream; it is an
+    # allowed deliverable and excluded from this stage guard.
+    v6 = [p.name for p in SUSC_DATASETS.glob("*score*v6*")
+          if "candidate" not in p.name.lower()] if SUSC_DATASETS.exists() else []
     if v6:
-        errors.append(f"unexpected score v6 dataset: {v6}")
+        errors.append(f"unexpected non-candidate score v6 dataset: {v6}")
     models = []
     for base in (SUSC_DATASETS, SUSC_SCRIPTS, FC_DIR):
         if base.exists():
