@@ -1,0 +1,31 @@
+{
+  "artifact": "SUSC-16B feature direction audit",
+  "features_agreeing": [
+    "urban_prop"
+  ],
+  "features_diverging": [
+    "hand_mean",
+    "slope_mean",
+    "distance_to_water_mean",
+    "twi_mean",
+    "flow_accumulation_mean",
+    "ndbi_mean",
+    "ndvi_mean",
+    "mndwi_mean",
+    "chirps_7d_mm",
+    "chirps_30d_mm",
+    "runoff_context_7d"
+  ],
+  "feature_mapping": {
+    "region": "regiao",
+    "flow_accumulation_mean": "flow_acc_log_mean",
+    "water_prop": "water_occurrence_patch",
+    "hand_min": "hand_mean"
+  },
+  "event_patch_count": 65,
+  "control_patch_count": 38,
+  "can_be_ground_truth": false,
+  "allowed_for_training": false,
+  "review_only": true,
+  "score_v7_created": false
+}

@@ -1,0 +1,18 @@
+{
+  "artifact": "SUSC-16B footprint evidence quality audit",
+  "footprint_count": 408,
+  "eligible_footprint_count": 12,
+  "quality_tier_distribution": {
+    "E_insufficient": 402,
+    "B_official_or_technical_flood_footprint": 6
+  },
+  "eligible_quality_tier_distribution": {
+    "B_official_or_technical_flood_footprint": 6,
+    "E_insufficient": 6
+  },
+  "exploratory_because_candidate_quality": false,
+  "can_be_ground_truth": false,
+  "allowed_for_training": false,
+  "review_only": true,
+  "score_v7_created": false
+}
