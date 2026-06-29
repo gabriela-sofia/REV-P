@@ -1,0 +1,7 @@
+metric,value,review_only
+score_v6_mean_event_links,null,true
+score_v6_median_event_links,null,true
+hit_rate_top_10,0.0,true
+hit_rate_top_20,0.0,true
+hit_rate_top_30,0.0,true
+n_observational_patches,0,true

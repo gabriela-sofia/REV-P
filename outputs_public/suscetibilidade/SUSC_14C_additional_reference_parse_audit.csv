@@ -1,0 +1,60 @@
+source_id,source_file,parse_status,n_features,by_feature_type,review_only,notes
+S14BREF_0346,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0346.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0347,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0347.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0348,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0348.csv,parsed,10000,{'street_segment': 10000},true,additional official reference parsing review-only
+S14BREF_0349,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0349.geojson,parsed,10000,{'street_segment': 10000},true,additional official reference parsing review-only
+S14BREF_0350,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0350.csv,parsed,10000,{'neighborhood_polygon': 10000},true,additional official reference parsing review-only
+S14BREF_0351,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0351.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0352,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0352.csv,parsed,94,{'river_line': 94},true,additional official reference parsing review-only
+S14BREF_0353,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0353.geojson,parsed,94,{'neighborhood_polygon': 94},true,additional official reference parsing review-only
+S14BREF_0356,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0356.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0357,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0357.csv,parsed,572,{'neighborhood_polygon': 572},true,additional official reference parsing review-only
+S14BREF_0358,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0358.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0359,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0359.csv,parsed,572,{'neighborhood_polygon': 572},true,additional official reference parsing review-only
+S14BREF_0360,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0360.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0361,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0361.csv,parsed,1383,{'neighborhood_polygon': 1383},true,additional official reference parsing review-only
+S14BREF_0362,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0362.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0363,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0363.csv,parsed,1518,{'neighborhood_polygon': 1518},true,additional official reference parsing review-only
+S14BREF_0364,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0364.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0365,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0365.csv,parsed,1518,{'neighborhood_polygon': 1518},true,additional official reference parsing review-only
+S14BREF_0366,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0366.geojson,parsed,94,{'neighborhood_polygon': 94},true,additional official reference parsing review-only
+S14BREF_0368,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0368.csv,parsed,94,"{'neighborhood_polygon': 92, 'river_line': 2}",true,additional official reference parsing review-only
+S14BREF_0370,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0370.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0164,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0164.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0165,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0165.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0166,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0166.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0167,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0167.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0214,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0214.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0215,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0215.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0240,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0240.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0265,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0265.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0290,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0290.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0307,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0307.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0308,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0308.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0371,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0371.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0373,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0373.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0374,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0374.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0376,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0376.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0377,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0377.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0379,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0379.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0380,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0380.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0381,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0381.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0382,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0382.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0383,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0383.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0384,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0384.csv,parsed,5301,{'river_line': 5301},true,additional official reference parsing review-only
+S14BREF_0385,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0385.csv,parsed,124,{'river_line': 124},true,additional official reference parsing review-only
+S14BREF_0387,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0387.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0388,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0388.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0389,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0389.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0390,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0390.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0391,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0391.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0392,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0392.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0393,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0393.csv,parsed,5301,{'river_line': 5301},true,additional official reference parsing review-only
+S14BREF_0394,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0394.csv,parsed,124,{'river_line': 124},true,additional official reference parsing review-only
+S14BREF_0396,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0396.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0397,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0397.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0398,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0398.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0399,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0399.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0400,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0400.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0401,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0401.json,no_supported_features,0,{},true,additional official reference parsing review-only
+S14BREF_0402,datasets/suscetibilidade/official_spatial_references_susc14c/S14BREF_0402.csv,parsed,5666,{'river_line': 5666},true,additional official reference parsing review-only

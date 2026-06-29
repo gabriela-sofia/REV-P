@@ -1,0 +1,19 @@
+{
+  "artifact": "SUSC-14C reference feature union",
+  "input_14b_rows": 100000,
+  "input_14c_additional_rows": 50000,
+  "union_rows": 12158,
+  "deduplicated_rows": 137842,
+  "feature_type_counts": {
+    "address_point": 1244,
+    "river_line": 249,
+    "street_segment": 10369,
+    "drainage_line": 7,
+    "neighborhood_polygon": 289
+  },
+  "sha256": "2cd1b4984a87270a5a33e7e40c3875b61965cee39bd74ad12383a003553d6d62",
+  "allowed_for_training": false,
+  "can_be_ground_truth": false,
+  "can_be_used_as_ground_truth": false,
+  "review_only": true
+}

@@ -1,0 +1,103 @@
+failure_type,rank,key,count,example_occurrence_id,review_only,notes
+top_missing_streets,1,SEM_LOGRADOURO,71,S14AOCC_000477,true,ranking de gargalo 14B para priorizacao 14C
+top_missing_streets,2,rua rio moxoto,14,S14AOCC_000134,true,ranking de gargalo 14B para priorizacao 14C
+top_missing_streets,3,avenida sul,11,S14AOCC_004231,true,ranking de gargalo 14B para priorizacao 14C
+top_missing_streets,4,rua imperial,8,S14AOCC_004240,true,ranking de gargalo 14B para priorizacao 14C
+top_missing_streets,5,rua ministro oliveira salazar,4,S14AOCC_000130,true,ranking de gargalo 14B para priorizacao 14C
+top_missing_streets,6,rua direita,4,S14AOCC_001352,true,ranking de gargalo 14B para priorizacao 14C
+top_missing_streets,7,avenida dois rios,3,S14AOCC_000003,true,ranking de gargalo 14B para priorizacao 14C
+top_missing_streets,8,rua vale do cazriri,3,S14AOCC_000135,true,ranking de gargalo 14B para priorizacao 14C
+top_missing_streets,9,rua rio do prata,1,S14AOCC_000000,true,ranking de gargalo 14B para priorizacao 14C
+top_missing_streets,10,rua flores da cunha,1,S14AOCC_000001,true,ranking de gargalo 14B para priorizacao 14C
+top_missing_streets,11,rua santa leopoldina,1,S14AOCC_000002,true,ranking de gargalo 14B para priorizacao 14C
+top_missing_streets,12,avenida dom helder,1,S14AOCC_000005,true,ranking de gargalo 14B para priorizacao 14C
+top_missing_streets,13,rua presidente kennedy rio beberibe,1,S14AOCC_000413,true,ranking de gargalo 14B para priorizacao 14C
+top_missing_streets,14,rua rio negro,1,S14AOCC_000447,true,ranking de gargalo 14B para priorizacao 14C
+top_missing_streets,15,rua rio jiquia,1,S14AOCC_000448,true,ranking de gargalo 14B para priorizacao 14C
+top_missing_streets,16,rua rio madeira,1,S14AOCC_000449,true,ranking de gargalo 14B para priorizacao 14C
+top_missing_streets,17,travessa da rua e brigadeiro,1,S14AOCC_000450,true,ranking de gargalo 14B para priorizacao 14C
+top_missing_streets,18,rua alvorada sul,1,S14AOCC_000451,true,ranking de gargalo 14B para priorizacao 14C
+top_missing_streets,19,avenida vicente rabelo,1,S14AOCC_000452,true,ranking de gargalo 14B para priorizacao 14C
+top_missing_streets,20,travessa da rua brigadeiro,1,S14AOCC_000453,true,ranking de gargalo 14B para priorizacao 14C
+top_missing_streets,21,rua rio oeste,1,S14AOCC_000454,true,ranking de gargalo 14B para priorizacao 14C
+top_missing_streets,22,rua rio pajeu,1,S14AOCC_000455,true,ranking de gargalo 14B para priorizacao 14C
+top_missing_streets,23,rua chuy,1,S14AOCC_000456,true,ranking de gargalo 14B para priorizacao 14C
+top_missing_streets,24,rua rio claro,1,S14AOCC_000457,true,ranking de gargalo 14B para priorizacao 14C
+top_missing_streets,25,rua rio espera,1,S14AOCC_000458,true,ranking de gargalo 14B para priorizacao 14C
+top_ambiguous_streets,1,rua alice tibirica,21,S14AOCC_000114,true,ranking de gargalo 14B para priorizacao 14C
+top_ambiguous_streets,2,rua dos craveiros,11,S14AOCC_000056,true,ranking de gargalo 14B para priorizacao 14C
+top_ambiguous_streets,3,avenida abdias de carvalho,11,S14AOCC_004214,true,ranking de gargalo 14B para priorizacao 14C
+top_ambiguous_streets,4,avenida marechal mascarenhas de moraes,5,S14AOCC_004298,true,ranking de gargalo 14B para priorizacao 14C
+top_ambiguous_streets,5,beira rio,3,S14AOCC_000257,true,ranking de gargalo 14B para priorizacao 14C
+top_ambiguous_streets,6,avenida antonio de goes,3,S14AOCC_004258,true,ranking de gargalo 14B para priorizacao 14C
+top_ambiguous_streets,7,rua melanio de barros correia,2,S14AOCC_000217,true,ranking de gargalo 14B para priorizacao 14C
+top_ambiguous_streets,8,avenida gov agamenon magalhaes,2,S14AOCC_004275,true,ranking de gargalo 14B para priorizacao 14C
+top_ambiguous_streets,9,avenida general san martin,2,S14AOCC_004351,true,ranking de gargalo 14B para priorizacao 14C
+top_ambiguous_streets,10,rua cantora clara nunes,1,S14AOCC_000472,true,ranking de gargalo 14B para priorizacao 14C
+top_ambiguous_streets,11,rua antonio curado,1,S14AOCC_002295,true,ranking de gargalo 14B para priorizacao 14C
+top_ambiguous_streets,12,cais do apolo,1,S14AOCC_002296,true,ranking de gargalo 14B para priorizacao 14C
+top_ambiguous_streets,13,rua doutor devaldo borges,1,S14AOCC_002300,true,ranking de gargalo 14B para priorizacao 14C
+top_ambiguous_streets,14,largo do cabanga,1,S14AOCC_004304,true,ranking de gargalo 14B para priorizacao 14C
+top_ambiguous_streets,15,avenida eng abdias de carvalho,1,S14AOCC_004330,true,ranking de gargalo 14B para priorizacao 14C
+top_ambiguous_streets,16,avenida nrte miguel arraes de alencar,1,S14AOCC_004410,true,ranking de gargalo 14B para priorizacao 14C
+top_neighborhoods_with_many_failures,1,linha do tiro,642,S14AOCC_000097,true,ranking de gargalo 14B para priorizacao 14C
+top_neighborhoods_with_many_failures,2,caxanga,503,S14AOCC_000300,true,ranking de gargalo 14B para priorizacao 14C
+top_neighborhoods_with_many_failures,3,varzea,491,S14AOCC_000299,true,ranking de gargalo 14B para priorizacao 14C
+top_neighborhoods_with_many_failures,4,ilha do retiro,420,S14AOCC_002345,true,ranking de gargalo 14B para priorizacao 14C
+top_neighborhoods_with_many_failures,5,ibura,385,S14AOCC_000281,true,ranking de gargalo 14B para priorizacao 14C
+top_neighborhoods_with_many_failures,6,macaxeira,320,S14AOCC_000569,true,ranking de gargalo 14B para priorizacao 14C
+top_neighborhoods_with_many_failures,7,campina do barreto,279,S14AOCC_000050,true,ranking de gargalo 14B para priorizacao 14C
+top_neighborhoods_with_many_failures,8,areias,190,S14AOCC_000010,true,ranking de gargalo 14B para priorizacao 14C
+top_neighborhoods_with_many_failures,9,estancia,147,S14AOCC_000007,true,ranking de gargalo 14B para priorizacao 14C
+top_neighborhoods_with_many_failures,10,jardim sao paulo,110,S14AOCC_000014,true,ranking de gargalo 14B para priorizacao 14C
+top_neighborhoods_with_many_failures,11,bomba do hemeterio,97,S14AOCC_003498,true,ranking de gargalo 14B para priorizacao 14C
+top_neighborhoods_with_many_failures,12,imbiribeira,77,S14AOCC_000124,true,ranking de gargalo 14B para priorizacao 14C
+top_neighborhoods_with_many_failures,13,sao jose,71,S14AOCC_002298,true,ranking de gargalo 14B para priorizacao 14C
+top_neighborhoods_with_many_failures,14,ibura de baixo,62,S14AOCC_000000,true,ranking de gargalo 14B para priorizacao 14C
+top_neighborhoods_with_many_failures,15,guabiraba,57,S14AOCC_000012,true,ranking de gargalo 14B para priorizacao 14C
+top_neighborhoods_with_many_failures,16,coqueiral,43,S14AOCC_000149,true,ranking de gargalo 14B para priorizacao 14C
+top_neighborhoods_with_many_failures,17,dois irmaos,40,S14AOCC_002082,true,ranking de gargalo 14B para priorizacao 14C
+top_neighborhoods_with_many_failures,18,torroes,33,S14AOCC_002337,true,ranking de gargalo 14B para priorizacao 14C
+top_neighborhoods_with_many_failures,19,ipsep,29,S14AOCC_000276,true,ranking de gargalo 14B para priorizacao 14C
+top_neighborhoods_with_many_failures,20,afogados,28,S14AOCC_002294,true,ranking de gargalo 14B para priorizacao 14C
+top_neighborhoods_with_many_failures,21,brejo da guabiraba,26,S14AOCC_000180,true,ranking de gargalo 14B para priorizacao 14C
+top_neighborhoods_with_many_failures,22,san martin,25,S14AOCC_000038,true,ranking de gargalo 14B para priorizacao 14C
+top_neighborhoods_with_many_failures,23,dois unidos,25,S14AOCC_000577,true,ranking de gargalo 14B para priorizacao 14C
+top_neighborhoods_with_many_failures,24,beberibe,21,S14AOCC_000414,true,ranking de gargalo 14B para priorizacao 14C
+top_neighborhoods_with_many_failures,25,brejo de beberibe,21,S14AOCC_000516,true,ranking de gargalo 14B para priorizacao 14C
+sources_not_attempted_but_high_priority,1,recife|p1|Velocidade das Vias - Quantitativo por Velocidade Média - 2020 - Lombadas 2020 - Junho - Q,4,S14BREF_0200,true,ranking de gargalo 14B para priorizacao 14C
+sources_not_attempted_but_high_priority,2,recife|p3|Censo Escolar 2020 - Dicionário de Dados - Censo 2020,4,S14BREF_0468,true,ranking de gargalo 14B para priorizacao 14C
+sources_not_attempted_but_high_priority,3,recife|p3|Serviço de Atendimento Móvel de Urgência - SAMU - 2011 - Dicionário de dados do SAMU - Lis,4,S14BREF_0510,true,ranking de gargalo 14B para priorizacao 14C
+sources_not_attempted_but_high_priority,4,recife|p3|Serviço de Atendimento Móvel de Urgência - SAMU - 2012 - Dicionário de dados do SAMU - Lis,4,S14BREF_0518,true,ranking de gargalo 14B para priorizacao 14C
+sources_not_attempted_but_high_priority,5,recife|p3|Serviço de Atendimento Móvel de Urgência - SAMU - 2013 - Dicionário de dados do SAMU - Lis,4,S14BREF_0526,true,ranking de gargalo 14B para priorizacao 14C
+sources_not_attempted_but_high_priority,6,recife|p3|Serviço de Atendimento Móvel de Urgência - SAMU - 2014 - Dicionário de dados do SAMU - Lis,4,S14BREF_0534,true,ranking de gargalo 14B para priorizacao 14C
+sources_not_attempted_but_high_priority,7,recife|p3|Serviço de Atendimento Móvel de Urgência - SAMU - 2015 - Dicionário de dados do SAMU - Lis,4,S14BREF_0542,true,ranking de gargalo 14B para priorizacao 14C
+sources_not_attempted_but_high_priority,8,recife|p1|Velocidade das Vias - Quantitativo por Velocidade Média - 2020 - 2020 - Equipamento de med,2,S14BREF_0162,true,ranking de gargalo 14B para priorizacao 14C
+sources_not_attempted_but_high_priority,9,recife|p1|Velocidade das Vias - Quantitativo por Velocidade Média - 2020 - Dicionário de Dados - Equ,2,S14BREF_0164,true,ranking de gargalo 14B para priorizacao 14C
+sources_not_attempted_but_high_priority,10,recife|p1|Velocidade das Vias - Quantitativo por Velocidade Média - 2020 - Dicionário de Dados - Vel,2,S14BREF_0166,true,ranking de gargalo 14B para priorizacao 14C
+sources_not_attempted_but_high_priority,11,recife|p1|Velocidade das Vias - Quantitativo por Velocidade Média - 2020 - Fotossensores 2020 - Abri,2,S14BREF_0168,true,ranking de gargalo 14B para priorizacao 14C
+sources_not_attempted_but_high_priority,12,recife|p1|Velocidade das Vias - Quantitativo por Velocidade Média - 2020 - Fotossensores 2020 - Agos,2,S14BREF_0170,true,ranking de gargalo 14B para priorizacao 14C
+sources_not_attempted_but_high_priority,13,recife|p1|Velocidade das Vias - Quantitativo por Velocidade Média - 2020 - Fotossensores 2020 - Feve,2,S14BREF_0173,true,ranking de gargalo 14B para priorizacao 14C
+sources_not_attempted_but_high_priority,14,recife|p1|Velocidade das Vias - Quantitativo por Velocidade Média - 2020 - Fotossensores 2020 - Jane,2,S14BREF_0175,true,ranking de gargalo 14B para priorizacao 14C
+sources_not_attempted_but_high_priority,15,recife|p1|Velocidade das Vias - Quantitativo por Velocidade Média - 2020 - Fotossensores 2020 - Julh,2,S14BREF_0177,true,ranking de gargalo 14B para priorizacao 14C
+sources_not_attempted_but_high_priority,16,recife|p1|Velocidade das Vias - Quantitativo por Velocidade Média - 2020 - Fotossensores 2020 - Junh,2,S14BREF_0179,true,ranking de gargalo 14B para priorizacao 14C
+sources_not_attempted_but_high_priority,17,recife|p1|Velocidade das Vias - Quantitativo por Velocidade Média - 2020 - Fotossensores 2020 - Maio,2,S14BREF_0181,true,ranking de gargalo 14B para priorizacao 14C
+sources_not_attempted_but_high_priority,18,recife|p1|Velocidade das Vias - Quantitativo por Velocidade Média - 2020 - Fotossensores 2020 - Març,2,S14BREF_0183,true,ranking de gargalo 14B para priorizacao 14C
+sources_not_attempted_but_high_priority,19,recife|p1|Velocidade das Vias - Quantitativo por Velocidade Média - 2020 - Fotossensores 2020 - Nove,2,S14BREF_0185,true,ranking de gargalo 14B para priorizacao 14C
+sources_not_attempted_but_high_priority,20,recife|p1|Velocidade das Vias - Quantitativo por Velocidade Média - 2020 - Fotossensores 2020 - Outu,2,S14BREF_0187,true,ranking de gargalo 14B para priorizacao 14C
+sources_not_attempted_but_high_priority,21,recife|p1|Velocidade das Vias - Quantitativo por Velocidade Média - 2020 - Fotossensores 2020 - Sete,2,S14BREF_0189,true,ranking de gargalo 14B para priorizacao 14C
+sources_not_attempted_but_high_priority,22,recife|p1|Velocidade das Vias - Quantitativo por Velocidade Média - 2020 - Lombadas 2020 - Abril- Qu,2,S14BREF_0191,true,ranking de gargalo 14B para priorizacao 14C
+sources_not_attempted_but_high_priority,23,recife|p1|Velocidade das Vias - Quantitativo por Velocidade Média - 2020 - Lombadas 2020 - Agosto - ,2,S14BREF_0193,true,ranking de gargalo 14B para priorizacao 14C
+sources_not_attempted_but_high_priority,24,recife|p1|Velocidade das Vias - Quantitativo por Velocidade Média - 2020 - Lombadas 2020 - Fevereiro,2,S14BREF_0196,true,ranking de gargalo 14B para priorizacao 14C
+sources_not_attempted_but_high_priority,25,recife|p1|Velocidade das Vias - Quantitativo por Velocidade Média - 2020 - Lombadas 2020 - Janeiro -,2,S14BREF_0198,true,ranking de gargalo 14B para priorizacao 14C
+failure_class_counts,1,weak_neighborhood_only,4194,,true,ranking de gargalo 14B para priorizacao 14C
+failure_class_counts,2,missing_street_name,1598,,true,ranking de gargalo 14B para priorizacao 14C
+failure_class_counts,3,street_type_mismatch,250,,true,ranking de gargalo 14B para priorizacao 14C
+failure_class_counts,4,blocked_no_official_reference,146,,true,ranking de gargalo 14B para priorizacao 14C
+failure_class_counts,5,reference_not_processed_due_batch_cap,146,,true,ranking de gargalo 14B para priorizacao 14C
+failure_class_counts,6,blocked_ambiguous_address,67,,true,ranking de gargalo 14B para priorizacao 14C
+failure_class_counts,7,low_similarity,54,,true,ranking de gargalo 14B para priorizacao 14C
+failure_class_counts,8,number/complement_noise,37,,true,ranking de gargalo 14B para priorizacao 14C
+failure_class_counts,9,abbreviation_mismatch,15,,true,ranking de gargalo 14B para priorizacao 14C
+failure_class_counts,10,candidate_tie,13,,true,ranking de gargalo 14B para priorizacao 14C
+failure_class_counts,11,other_review_required,4,,true,ranking de gargalo 14B para priorizacao 14C

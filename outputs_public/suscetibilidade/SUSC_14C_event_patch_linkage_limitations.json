@@ -1,0 +1,24 @@
+{
+  "artifact": "SUSC-14C official reference expansion event-patch linkage",
+  "n_links": 4412,
+  "moderate_links": 0,
+  "observational_evaluation_links": 0,
+  "spatial_relation_counts": {
+    "insufficient_for_patch_link": 85,
+    "weak_neighborhood_context": 4326,
+    "same_region_period_context": 1
+  },
+  "linkage_confidence_counts": {
+    "very_weak": 4412
+  },
+  "score_v7_created": false,
+  "can_be_ground_truth": false,
+  "can_be_used_as_ground_truth": false,
+  "allowed_for_training": false,
+  "review_only": true,
+  "key_limitations": [
+    "Street/address official matches are at most moderate and review-only.",
+    "Neighborhood-only references remain weak/contextual and never patch-level.",
+    "No score v7, no ground truth, no supervised training."
+  ]
+}
