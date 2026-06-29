@@ -1,0 +1,10 @@
+metric,value,review_only
+ready_for_12a,false,true
+ready_for_12b,false,true
+ready_for_12c,false,true
+ready_for_score_v7,false,true
+score_v7_status,blocked_review_only_no_automatic_score_v7,true
+precision_events_total,4412,true
+calibration_eligible_events,0,true
+precision_patch_links,0,true
+unique_patches_observational,0,true

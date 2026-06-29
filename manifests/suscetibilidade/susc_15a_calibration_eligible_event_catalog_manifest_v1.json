@@ -1,0 +1,11 @@
+{
+  "artifact": "SUSC-15A calibration-eligible event catalog",
+  "source_rows": 4412,
+  "eligible_rows": 0,
+  "precision_tier_counts": {},
+  "sha256": "66cb7cd07b6d79c7bdf464e02c73a49e7de6cd4f6c8ef163390edfcf054cbe47",
+  "allowed_for_training": false,
+  "can_be_ground_truth": false,
+  "can_be_used_as_ground_truth": false,
+  "review_only": true
+}

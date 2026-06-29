@@ -1,0 +1,1 @@
+event_id,region,event_date,event_type,precision_tier,lat,lon,wkt,uncertainty_m,calibration_eligible,eligibility_reason,review_only
