@@ -1,0 +1,4 @@
+patch_grid_id,region,source_dataset,patch_id_prefix,patch_count,crs,xmin,ymin,xmax,ymax,mean_patch_width_deg,mean_patch_height_deg,has_patch_bbox,has_patch_geometry,grid_status,review_only,trainable,ground_truth
+SUSC_GRID_CURITIBA_V1,Curitiba,datasets/suscetibilidade/susc_features_by_patch_v1.csv,curitiba,100,EPSG:4326,-49.398357,-25.594953,-49.09293,-25.294818,0.008983153,0.008112636,true,false,existing_patch_grid,true,false,false
+SUSC_GRID_PETROPOLIS_V1,Petropolis,datasets/suscetibilidade/susc_features_by_patch_v1.csv,petropolis,100,EPSG:4326,-43.30778,-22.602351,-42.993369,-22.245283,0.008983153,0.00830382,true,false,existing_patch_grid,true,false,false
+SUSC_GRID_RECIFE_V1,Recife,datasets/suscetibilidade/susc_features_by_patch_v1.csv,recife,100,EPSG:4326,-35.142094,-8.2271,-34.944465,-8.013666,0.008983153,0.008893586,true,false,existing_patch_grid,true,false,false

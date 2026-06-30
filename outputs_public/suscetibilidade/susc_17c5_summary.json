@@ -1,0 +1,29 @@
+{
+  "patch_grids_inventoried": 3,
+  "recife_patch_count": 100,
+  "charter758_intersecting_patch_count": 0,
+  "charter758_nearest_patch_distance_m": 1398.4,
+  "charter758_coverage_status": "outside_patch_grid_adjacent",
+  "protocolc_patch_id": "REC_00019",
+  "protocolc_to_susc_match_status": "namespace_incompatible",
+  "candidate_expansion_aoi_created": true,
+  "official_patch_created": false,
+  "official_patch_link_created": false,
+  "allowed_now_options_count": 2,
+  "blocked_options_count": 3,
+  "eligible_for_17b_now": false,
+  "blocks_17b": [
+    "no_qa_accepted_yet",
+    "no_valid_susc_patch_link",
+    "candidate_geometry_outside_current_susc_patch_grid",
+    "REC_00019_namespace_incompatible_with_SUSC_recife_patch_grid",
+    "P0_official_packages_still_missing",
+    "sar_runtime_unavailable"
+  ],
+  "recommended_next_milestone": "SUSC-17C6 Patch Grid Candidate Generation",
+  "review_only": true,
+  "trainable": false,
+  "ground_truth": false,
+  "score_v6_changed": false,
+  "score_v7_created": false
+}
