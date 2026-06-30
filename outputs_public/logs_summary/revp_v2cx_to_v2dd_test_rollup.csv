@@ -1,0 +1,8 @@
+stage,command,status,output,detail
+v2cx,run_v2cx,PASS,generated,offline deterministic stage completed
+v2cy,run_v2cy,PASS,generated,offline deterministic stage completed
+v2cz,run_v2cz,PASS,generated,offline deterministic stage completed
+v2da,run_v2da,PASS,generated,offline deterministic stage completed
+v2db,run_v2db,PASS,generated,offline deterministic stage completed
+v2dc,run_v2dc,PASS,generated,offline deterministic stage completed
+v2dd,run_v2dd,PASS,generated,offline deterministic stage completed
