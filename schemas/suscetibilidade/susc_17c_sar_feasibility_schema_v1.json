@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C SAR feasibility schema",
+  "type": "object",
+  "description": "Review-only fail-closed schema for SUSC-17C Sentinel-1/SAR feasibility checks. It plans a technical footprint acquisition without executing heavy raster, without requiring GEE credentials, and without producing ground truth. expected_output_class can only be technical_remote_sensing_flood_footprint (as a planned output) or blocked; it never becomes ground truth. Events without a usable date are blocked.",
+  "required": [
+    "candidate_event_id",
+    "city",
+    "event_date",
+    "pre_event_window",
+    "post_event_window",
+    "requires_sentinel1_pre",
+    "requires_sentinel1_post",
+    "requires_patch_intersection",
+    "requires_permanent_water_mask",
+    "requires_hand_slope_masks",
+    "requires_urban_ambiguity_guard",
+    "sar_feasibility_status",
+    "sar_blocking_reason",
+    "recommended_polarizations",
+    "recommended_method",
+    "expected_output_class",
+    "review_only",
+    "trainable",
+    "ground_truth"
+  ],
+  "properties": {
+    "candidate_event_id": { "type": "string", "minLength": 1 },
+    "city": { "type": "string", "minLength": 1 },
+    "event_date": { "type": "string", "minLength": 1 },
+    "pre_event_window": { "type": "string", "minLength": 1 },
+    "post_event_window": { "type": "string", "minLength": 1 },
+    "requires_sentinel1_pre": { "enum": ["true", "false"] },
+    "requires_sentinel1_post": { "enum": ["true", "false"] },
+    "requires_patch_intersection": { "enum": ["true", "false"] },
+    "requires_permanent_water_mask": { "enum": ["true", "false"] },
+    "requires_hand_slope_masks": { "enum": ["true", "false"] },
+    "requires_urban_ambiguity_guard": { "enum": ["true", "false"] },
+    "sar_feasibility_status": {
+      "enum": ["feasible", "blocked", "not_available"]
+    },
+    "sar_blocking_reason": { "type": "string", "minLength": 1 },
+    "recommended_polarizations": { "type": "string", "minLength": 1 },
+    "recommended_method": { "type": "string", "minLength": 1 },
+    "expected_output_class": {
+      "enum": ["technical_remote_sensing_flood_footprint", "blocked"]
+    },
+    "review_only": { "const": "true" },
+    "trainable": { "const": "false" },
+    "ground_truth": { "const": "false" }
+  },
+  "additionalProperties": true
+}

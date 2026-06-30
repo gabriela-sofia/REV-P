@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C candidate event target schema",
+  "type": "object",
+  "description": "Review-only fail-closed schema for SUSC-17C candidate events feeding the strong-reference acquisition canary. It never creates score v7, training data, models, ground truth or true negatives. Alerts are never occurrences, risk areas are never occurred events, and no event without a date can become a SAR candidate or a strong reference. Missing values use controlled absence tokens.",
+  "required": [
+    "candidate_event_id",
+    "source_id",
+    "city",
+    "region",
+    "phenomenon_type",
+    "event_date_candidate",
+    "event_date_precision",
+    "date_resolution_status",
+    "geometry_status",
+    "geometry_type",
+    "has_official_geometry",
+    "has_patch_link",
+    "has_pre_event_window",
+    "has_post_event_window",
+    "occurrence_status",
+    "sar_candidate",
+    "strong_reference_candidate",
+    "expected_strong_class",
+    "blocking_reason",
+    "priority_score",
+    "review_only",
+    "trainable",
+    "ground_truth"
+  ],
+  "properties": {
+    "candidate_event_id": { "type": "string", "minLength": 1 },
+    "source_id": { "type": "string", "minLength": 1 },
+    "city": { "type": "string", "minLength": 1 },
+    "region": { "type": "string", "minLength": 1 },
+    "phenomenon_type": { "type": "string", "minLength": 1 },
+    "event_date_candidate": { "type": "string", "minLength": 1 },
+    "event_date_precision": {
+      "enum": ["exact_day", "date_range", "month_only", "unknown", "not_available"]
+    },
+    "date_resolution_status": {
+      "enum": ["resolved", "partially_resolved", "blocked", "not_available"]
+    },
+    "geometry_status": {
+      "enum": [
+        "official_fine_geometry",
+        "official_coarse_polygon",
+        "point_set",
+        "aoi_bbox_only",
+        "address_only",
+        "not_available"
+      ]
+    },
+    "geometry_type": { "type": "string", "minLength": 1 },
+    "has_official_geometry": { "enum": ["true", "false"] },
+    "has_patch_link": { "enum": ["true", "false"] },
+    "has_pre_event_window": { "enum": ["true", "false"] },
+    "has_post_event_window": { "enum": ["true", "false"] },
+    "occurrence_status": {
+      "enum": [
+        "observed_occurrence",
+        "risk_area",
+        "alert",
+        "administrative",
+        "unknown"
+      ]
+    },
+    "sar_candidate": { "enum": ["true", "false"] },
+    "strong_reference_candidate": { "enum": ["true", "false"] },
+    "expected_strong_class": {
+      "enum": [
+        "official_observed_event_polygon",
+        "official_observed_event_point",
+        "technical_remote_sensing_flood_footprint",
+        "blocked"
+      ]
+    },
+    "blocking_reason": { "type": "string", "minLength": 1 },
+    "priority_score": { "type": "string", "minLength": 1 },
+    "review_only": { "const": "true" },
+    "trainable": { "const": "false" },
+    "ground_truth": { "const": "false" }
+  },
+  "additionalProperties": true
+}
