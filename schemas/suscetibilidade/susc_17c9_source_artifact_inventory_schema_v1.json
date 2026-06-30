@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C9 source artifact inventory schema v1",
+  "type": "object",
+  "required": [
+    "source_artifact_id",
+    "feature_layer",
+    "feature_name",
+    "artifact_kind",
+    "artifact_path_or_reference",
+    "artifact_exists_local",
+    "artifact_is_committed",
+    "artifact_is_gitignored",
+    "artifact_is_raw_heavy",
+    "artifact_format",
+    "artifact_scope",
+    "covers_candidate_patch_area",
+    "covers_official_patch_area",
+    "can_be_used_for_candidate_patches",
+    "requires_external_download",
+    "requires_runtime_credentials",
+    "requires_manual_preparation",
+    "blocking_reason",
+    "review_only",
+    "trainable",
+    "ground_truth"
+  ],
+  "properties": {
+    "artifact_kind": {
+      "enum": [
+        "local_committed_output",
+        "local_gitignored_raw",
+        "manifest_reference",
+        "pipeline_expected_input",
+        "remote_asset_reference",
+        "missing_required_artifact",
+        "runtime_required_artifact",
+        "not_found"
+      ]
+    },
+    "review_only": {
+      "const": "true"
+    },
+    "trainable": {
+      "const": "false"
+    },
+    "ground_truth": {
+      "const": "false"
+    }
+  }
+}
