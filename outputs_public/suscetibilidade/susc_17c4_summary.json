@@ -1,0 +1,28 @@
+{
+  "total_artifacts_inventory": 9,
+  "local_available_count": 1,
+  "missing_source_artifact_count": 5,
+  "pdf_only_count": 1,
+  "zip_only_count": 1,
+  "context_layer_only_count": 1,
+  "ingestion_attempt_count": 9,
+  "reference_candidate_count": 1,
+  "candidate_geometry_count": 1,
+  "candidate_patch_link_count": 0,
+  "candidate_geometry_outside_grid_count": 1,
+  "formal_request_count": 7,
+  "p0_request_count": 2,
+  "eligible_for_17b_now": false,
+  "blocks_17b": [
+    "no_qa_accepted_yet",
+    "p0_official_packages_missing_drm_rj_and_compdec",
+    "candidate_geometry_falls_outside_susc_patch_grid",
+    "sar_runtime_unavailable"
+  ],
+  "recommended_next_milestone": "SUSC-17C5 Patch Grid Expansion Review (geometria oficial extraida do Charter 758 cai fora da grade SUSC); em paralelo SUSC-17C5 Formal Request Package para os pacotes P0 DRM-RJ PKG_FR_PET_001 e COMPDEC PKG_FR_REC_002 ainda ausentes",
+  "review_only": true,
+  "trainable": false,
+  "ground_truth": false,
+  "score_v6_changed": false,
+  "score_v7_created": false
+}
