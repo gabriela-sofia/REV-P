@@ -1,0 +1,39 @@
+{
+  "total_reference_records": 75,
+  "total_unique_events": 12,
+  "total_unique_footprints": 12,
+  "total_patch_links": 65,
+  "count_by_evidence_class": {
+    "insufficient_reference": 6,
+    "official_observed_event_point": 3,
+    "official_observed_event_polygon": 66
+  },
+  "count_by_quality_tier": {
+    "TIER_B_MODERATE_GEOMETRY_PATCH_LINKED": 65,
+    "TIER_C_COARSE_GEOMETRY_UNLINKED": 4,
+    "TIER_E_INSUFFICIENT": 6
+  },
+  "count_by_reference_level": {
+    "score_evaluation_reference": 65,
+    "source_footprint": 10
+  },
+  "eligible_for_evaluation_count": 69,
+  "eligible_for_strong_evaluation_count": 65,
+  "eligible_for_calibration_count": 65,
+  "eligible_for_score_v7_future_count": 0,
+  "distinct_strong_sources": 2,
+  "dated_strong_references": 0,
+  "sufficient_strong_for_benchmark": false,
+  "blocks_17b": [
+    "no_event_dates_for_temporal_pre_post_windows",
+    "too_few_distinct_strong_footprint_sources",
+    "strong_references_concentrated_in_one_region"
+  ],
+  "review_only": true,
+  "trainable": false,
+  "ground_truth": false,
+  "score_v6_changed": false,
+  "score_v7_created": false,
+  "readiness_status": "REFERENCE_PROTOCOL_READY_REVIEW_ONLY",
+  "next_recommended_milestone": "SUSC-17C Sentinel-1/SAR Canary (review-only) para produzir footprints tecnicos datados; SUSC-17B permanece bloqueado ate haver janelas temporais e diversidade de footprints fortes"
+}
