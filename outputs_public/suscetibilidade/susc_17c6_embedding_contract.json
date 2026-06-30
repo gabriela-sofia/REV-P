@@ -1,0 +1,31 @@
+{
+  "contract_id": "SUSC_17C6_EMBEDDING_CONTRACT_V1",
+  "milestone_category": "canario_de_aplicabilidade_multimodal_review_only",
+  "supported_models": [
+    "DINOv2",
+    "SatMAE",
+    "Scale-MAE"
+  ],
+  "expected_input": "patch_tile_sentinel2_or_rgb_multiband",
+  "expected_shape": {
+    "tile_pixels": "model_specific_square_tile",
+    "bands": "RGB_or_multiband_with_documented_band_order"
+  },
+  "expected_crs_policy": "candidate_patch_tile_must_preserve_source_crs_and_document_reprojection_if_any",
+  "expected_resolution_policy": "resolution_must_be_recorded_per_tile_and_not_inferred_from_filename_only",
+  "expected_embedding_dim": {
+    "DINOv2": 768,
+    "SatMAE": 768,
+    "Scale-MAE": 1024
+  },
+  "normalization_policy": "model_specific_normalization_must_be_recorded_before_scientific_use",
+  "cloud_policy": "sentinel2_tile_requires explicit cloud mask or documented cloud risk before scientific use",
+  "missing_tile_policy": "do_not_run_real_embedding_without_real_local_tile",
+  "synthetic_smoke_test_policy": "deterministic_hash_only_for_schema_join_and_interface_validation",
+  "not_scientific_until_real_tile": true,
+  "real_embedding_created": false,
+  "synthetic_embedding_smoke_test_created": true,
+  "review_only": true,
+  "trainable": false,
+  "ground_truth": false
+}
