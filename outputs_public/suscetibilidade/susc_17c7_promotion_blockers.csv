@@ -1,0 +1,11 @@
+blocker_id,blocker_code,description,blocks_17b,blocks_training,blocks_score_v7,required_resolution,review_only,trainable,ground_truth
+S17C7_BLOCKER_001,candidate_patches_not_official,Patches candidatos nao pertencem a grade oficial SUSC.,true,true,true,official_patch_or_candidate_grid_policy,true,false,false
+S17C7_BLOCKER_002,features_not_extracted_for_candidate_patches,"Features fisicas, urbanas, espectrais e chuva ainda nao foram extraidas para candidatos.",true,true,true,controlled_feature_extraction_for_candidate_patches,true,false,false
+S17C7_BLOCKER_003,patch_policy_missing,Nao existe politica formal para uso cientifico de grade candidata.,true,true,true,candidate_patch_policy,true,false,false
+S17C7_BLOCKER_004,no_real_embedding_tile,Nao ha tile real para DINOv2 ou SatMAE.,true,true,true,real_tile_materialization,true,false,false
+S17C7_BLOCKER_005,no_real_embedding_vector,Nao ha embedding real para patches candidatos.,true,true,true,real_model_execution_after_tile_readiness,true,false,false
+S17C7_BLOCKER_006,no_sar_runtime,Runtime SAR segue indisponivel.,true,true,true,SAR_runtime_and_credentials,true,false,false
+S17C7_BLOCKER_007,no_qa_accepted,Vinculos candidatos ainda dependem de QA humana.,true,true,true,human_QA_accepted,true,false,false
+S17C7_BLOCKER_008,score_policy_missing_for_candidate_grid,Nao existe politica de score para grade candidata.,true,true,true,separate_score_policy,true,false,false
+S17C7_BLOCKER_009,p0_official_packages_missing,Pacotes formais P0 seguem ausentes.,true,true,true,formal_packages_or_blocker_update,true,false,false
+S17C7_BLOCKER_010,17b_blocked_until_real_features_and_patch_policy,"17B exige politica, QA aceito e features reais.",true,true,true,patch_policy_QA_and_real_features,true,false,false

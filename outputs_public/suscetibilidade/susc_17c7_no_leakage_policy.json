@@ -1,0 +1,25 @@
+{
+  "policy_id": "SUSC_17C7_NO_LEAKAGE_POLICY_V1",
+  "milestone_name": "SUSC-17C7 — Plano de Extração de Features para Patches Candidatos",
+  "review_only": true,
+  "trainable": false,
+  "ground_truth": false,
+  "blocked_uses": {
+    "post_event_footprint_as_feature": true,
+    "post_event_sar_as_pre_event_feature": true,
+    "documentary_evidence_as_physical_susceptibility_proxy": true,
+    "synthetic_placeholder_as_real_feature": true,
+    "candidate_patch_as_official_patch": true,
+    "REC_00019_as_SUSC_patch": true,
+    "promotion_to_17b_without_qa_accepted": true,
+    "score_v7_without_readiness": true,
+    "training_without_future_ground_truth_policy": true
+  },
+  "allowed_now": [
+    "review_only_feature_inventory",
+    "review_only_extraction_plan",
+    "missingness_matrix",
+    "embedding_input_readiness_without_model_execution"
+  ],
+  "raw_raster_policy": "raw_rasters_must_stay_local_only_and_must_not_be_committed"
+}
