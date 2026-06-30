@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17A reference evidence protocol stub schema",
+  "type": "object",
+  "description": "Minimal fail-closed foundation for the SUSC-17A Reference Evidence Protocol. Defines the contract for future observed reference evidence. This is a stub: it does not populate any record, does not create ground truth, and does not authorize training. Only the first three reference classes may ever support strong evaluation; none of them becomes ground truth or a true negative.",
+  "required": [
+    "source_id",
+    "geometry_type",
+    "source_authority",
+    "source_confidence",
+    "annotation_method",
+    "eligible_for_evaluation",
+    "eligible_for_calibration",
+    "not_ground_truth_reason"
+  ],
+  "properties": {
+    "source_id": { "type": "string" },
+    "event_id": { "type": "string" },
+    "geometry_id": { "type": "string" },
+    "patch_link_id": { "type": "string" },
+    "event_date": { "type": "string" },
+    "pre_event_window": { "type": "string" },
+    "post_event_window": { "type": "string" },
+    "geometry_type": {
+      "enum": [
+        "official_observed_event_polygon",
+        "official_observed_event_point",
+        "technical_remote_sensing_flood_footprint",
+        "official_address_resolved",
+        "street_neighborhood_context_only",
+        "risk_area_not_event",
+        "alert_only",
+        "rejected_non_event"
+      ]
+    },
+    "source_authority": { "type": "string" },
+    "source_confidence": { "type": "string" },
+    "annotation_method": { "type": "string" },
+    "uncertainty_m": { "type": ["number", "string"] },
+    "eligible_for_evaluation": { "enum": ["true", "false"] },
+    "eligible_for_calibration": { "enum": ["true", "false"] },
+    "not_ground_truth_reason": { "type": "string", "minLength": 1 }
+  },
+  "additionalProperties": true
+}

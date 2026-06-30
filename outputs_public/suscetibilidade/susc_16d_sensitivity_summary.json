@@ -1,0 +1,27 @@
+{
+  "calibration_candidate_created": true,
+  "official_score_changed": false,
+  "score_v7_created": false,
+  "trainable": false,
+  "ground_truth": false,
+  "eligible_for_score_v7_future": 0,
+  "readiness_status": "BLOCKED_REVIEW_ONLY",
+  "candidate_rows": 65,
+  "footprint_patch_links": 65,
+  "unique_event_patches": 62,
+  "low_or_medium_event_links": 57,
+  "documentary_lowest_component_count": 65,
+  "urban_flash_flood_underrepresented": 60,
+  "rainfall_trigger_underweighted": 5,
+  "best_sensitivity_scenario_16c": "increase_spectral_water_weight",
+  "best_hit_rate_top_30_simulated_16c": "0.366667",
+  "candidate_adjustment_family_distribution": {
+    "increase_urban_flash_flood_weight": 60,
+    "increase_rainfall_trigger_weight": 5
+  },
+  "hypotheses_count": 5,
+  "footprint_treated_as_ground_truth": false,
+  "control_treated_as_negative": false,
+  "documentary_absence_treated_as_negative": false,
+  "review_only": true
+}

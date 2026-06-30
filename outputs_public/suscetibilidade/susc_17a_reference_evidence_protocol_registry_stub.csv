@@ -1,0 +1,1 @@
+source_id,event_id,geometry_id,patch_link_id,event_date,pre_event_window,post_event_window,geometry_type,source_authority,source_confidence,annotation_method,uncertainty_m,eligible_for_evaluation,eligible_for_calibration,not_ground_truth_reason
