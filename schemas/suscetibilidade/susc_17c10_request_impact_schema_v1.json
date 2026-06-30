@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C10 request impact schema v1",
+  "type": "object",
+  "required": [
+    "impact_id",
+    "formal_request_id",
+    "impacts_observational_evidence",
+    "impacts_physical_static",
+    "impacts_urban_territorial",
+    "impacts_sentinel2_spectral",
+    "impacts_rainfall_trigger",
+    "impacts_sar_observational",
+    "impacts_embedding_representation",
+    "impact_on_candidate_patches",
+    "impact_on_official_patch_policy",
+    "impact_on_17b_future",
+    "impact_level",
+    "why",
+    "review_only"
+  ],
+  "properties": {
+    "impact_level": {
+      "enum": [
+        "critical",
+        "high",
+        "medium",
+        "low",
+        "context_only"
+      ]
+    },
+    "review_only": {
+      "const": "true"
+    }
+  }
+}
