@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C11 request channel match schema v1",
+  "type": "object",
+  "required": [
+    "match_id",
+    "formal_request_id",
+    "channel_id",
+    "provider_name_from_request",
+    "matched_channel_status",
+    "request_priority",
+    "submission_readiness",
+    "can_submit_now",
+    "should_submit_automatically",
+    "manual_verification_required",
+    "no_external_submission_performed",
+    "request_marked_sent",
+    "response_marked_received",
+    "blocker_after_17c11",
+    "next_manual_step",
+    "review_only",
+    "trainable",
+    "ground_truth"
+  ],
+  "properties": {
+    "match_id": {
+      "type": "string",
+      "pattern": "^S17C11_MATCH_"
+    },
+    "submission_readiness": {
+      "enum": [
+        "ready_after_manual_verification",
+        "needs_provider_confirmation",
+        "blocked_no_channel_found"
+      ]
+    },
+    "can_submit_now": {
+      "const": "false"
+    },
+    "should_submit_automatically": {
+      "const": "false"
+    },
+    "manual_verification_required": {
+      "const": "true"
+    },
+    "no_external_submission_performed": {
+      "const": "true"
+    },
+    "request_marked_sent": {
+      "const": "false"
+    },
+    "response_marked_received": {
+      "const": "false"
+    },
+    "review_only": {
+      "const": "true"
+    },
+    "trainable": {
+      "const": "false"
+    },
+    "ground_truth": {
+      "const": "false"
+    }
+  }
+}

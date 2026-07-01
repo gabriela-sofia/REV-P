@@ -1,0 +1,26 @@
+{
+  "milestone": "SUSC-17C11",
+  "policy_status": "review_only_fail_closed",
+  "official_sources_only": true,
+  "nonofficial_sources_can_confirm_channel": false,
+  "automatic_submission_allowed": false,
+  "external_protocol_opening_allowed": false,
+  "external_form_filling_allowed": false,
+  "external_download_allowed": false,
+  "contact_invention_allowed": false,
+  "mark_request_sent_allowed": false,
+  "mark_response_received_allowed": false,
+  "feature_extraction_allowed": false,
+  "official_patch_creation_allowed": false,
+  "official_patch_link_creation_allowed": false,
+  "score_v6_change_allowed": false,
+  "score_v7_creation_allowed": false,
+  "training_or_label_allowed": false,
+  "blocked_statuses": [
+    "candidate_needs_manual_verification",
+    "not_found",
+    "blocked_no_web_or_runtime",
+    "blocked_ambiguous_provider"
+  ],
+  "checked_at": "2026-06-30"
+}

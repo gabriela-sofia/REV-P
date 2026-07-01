@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C11 channel registry schema v1",
+  "type": "object",
+  "required": [
+    "channel_id",
+    "formal_request_id",
+    "provider_name_from_17c10",
+    "provider_name_normalized",
+    "channel_name",
+    "channel_type",
+    "channel_status",
+    "channel_entrypoint_url",
+    "official_domain",
+    "official_source_title",
+    "official_source_url",
+    "official_source_supports_channel",
+    "official_source_checked_at",
+    "evidence_summary",
+    "source_is_official",
+    "source_is_nonofficial",
+    "source_access_requires_account",
+    "manual_verification_required",
+    "can_submit_automatically",
+    "do_not_submit_automatically",
+    "contact_value_recorded",
+    "contact_value_type",
+    "contact_was_invented",
+    "confidence",
+    "blocked_reason",
+    "review_only",
+    "trainable",
+    "ground_truth"
+  ],
+  "properties": {
+    "channel_id": {
+      "type": "string",
+      "pattern": "^S17C11_CH_"
+    },
+    "formal_request_id": {
+      "type": "string"
+    },
+    "channel_type": {
+      "enum": [
+        "official_contact_page",
+        "ombudsman_or_institutional_contact",
+        "official_data_portal",
+        "candidate_contact_page",
+        "sic_or_ombudsman",
+        "none"
+      ]
+    },
+    "channel_status": {
+      "enum": [
+        "confirmed_official_source",
+        "candidate_needs_manual_verification",
+        "not_found",
+        "blocked_no_web_or_runtime",
+        "blocked_ambiguous_provider"
+      ]
+    },
+    "source_is_official": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "source_is_nonofficial": {
+      "const": "false"
+    },
+    "manual_verification_required": {
+      "const": "true"
+    },
+    "can_submit_automatically": {
+      "const": "false"
+    },
+    "do_not_submit_automatically": {
+      "const": "true"
+    },
+    "contact_was_invented": {
+      "const": "false"
+    },
+    "review_only": {
+      "const": "true"
+    },
+    "trainable": {
+      "const": "false"
+    },
+    "ground_truth": {
+      "const": "false"
+    }
+  }
+}
