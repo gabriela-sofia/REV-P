@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C22 feature acceptance schema v1",
+  "type": "object",
+  "required": [
+    "feature_acceptance_id",
+    "candidate_patch_id",
+    "event_id",
+    "scene_or_item_id",
+    "feature_name",
+    "feature_value",
+    "feature_unit",
+    "source_artifact_manifest_id",
+    "source_role",
+    "feature_value_real",
+    "artifact_hash_verified",
+    "replay_verified",
+    "pre_event_only",
+    "fallback_declared",
+    "passes_sensor_qa",
+    "acceptance_status",
+    "usable_as_review_only_sensor_feature",
+    "usable_for_science_now",
+    "usable_for_training",
+    "ground_truth",
+    "eligible_for_score_v7",
+    "blocking_reason",
+    "review_only"
+  ],
+  "properties": {
+    "feature_acceptance_id": {
+      "type": "string",
+      "pattern": "^S17C22_FEATACC_"
+    },
+    "usable_for_training": {
+      "const": "false"
+    },
+    "ground_truth": {
+      "const": "false"
+    },
+    "eligible_for_score_v7": {
+      "const": "false"
+    },
+    "usable_for_science_now": {
+      "const": "false"
+    },
+    "review_only": {
+      "const": "true"
+    }
+  }
+}
