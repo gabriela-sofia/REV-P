@@ -1,0 +1,82 @@
+{
+  "candidate_patch_id": "S17C6_CANARY_REC_00003",
+  "canonical_scene_id": "S2B_MSIL1C_20220512T124319_N0510_R009_T25MBM_20240619T112653.SAFE",
+  "event_id": "REC_2022_05_24_30",
+  "scene_date": "2022-05-12",
+  "scene_datetime": "2022-05-12T12:44:07.755000+00:00",
+  "is_pre_event": true,
+  "primary_source": "CDSE/OData",
+  "primary_source_status": "cdse_product_level_only",
+  "fallback_source": "earth_search_stac:sentinel-2-l2a",
+  "fallback_item_id": "S2B_25MBM_20220512_0_L2A",
+  "fallback_item_href": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/25/M/BM/2022/5/S2B_25MBM_20220512_0_L2A/B03.tif",
+  "source_role": "materialization_fallback",
+  "cloud_cover": "79.7725",
+  "aoi_bbox_4326": [
+    -34.926498328,
+    -7.995866764,
+    -34.917515175,
+    -7.986973178
+  ],
+  "window_shape": [
+    99,
+    100
+  ],
+  "bands_read": [
+    "B03",
+    "B04",
+    "B08",
+    "B11"
+  ],
+  "band_stats": {
+    "B03": {
+      "mean": "5613.7218",
+      "min": "299.0000",
+      "max": "13728.0000",
+      "valid_pixel_count": "9900"
+    },
+    "B04": {
+      "mean": "5401.7767",
+      "min": "196.0000",
+      "max": "13464.0000",
+      "valid_pixel_count": "9900"
+    },
+    "B08": {
+      "mean": "6149.8449",
+      "min": "552.0000",
+      "max": "12912.0000",
+      "valid_pixel_count": "9900"
+    },
+    "B11": {
+      "mean": "5252.6136",
+      "min": "584.0000",
+      "max": "10098.0000",
+      "valid_pixel_count": "9900"
+    }
+  },
+  "index_stats": {
+    "NDVI": {
+      "mean": "0.149909",
+      "min": "-0.109244",
+      "max": "0.820539"
+    },
+    "NDWI": {
+      "mean": "-0.121921",
+      "min": "-0.724628",
+      "max": "0.081229"
+    },
+    "MNDWI": {
+      "mean": "-0.060093",
+      "min": "-0.636699",
+      "max": "0.258312"
+    },
+    "NDBI": {
+      "mean": "-0.065002",
+      "min": "-0.474194",
+      "max": "0.393842"
+    }
+  },
+  "npz_local_path": "local_runs/suscetibilidade/17c24_multiscene_sentinel/raw/s17c6_canary_rec_00003_20220512_bandstack.npz",
+  "npz_size_bytes": 56372,
+  "captured_at": "2026-07-01T14:15:44+00:00"
+}

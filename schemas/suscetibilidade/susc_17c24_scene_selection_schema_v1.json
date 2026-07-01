@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C24 scene selection schema v1",
+  "type": "object",
+  "required": [
+    "scene_selection_id",
+    "candidate_patch_id",
+    "event_id",
+    "scene_or_item_id",
+    "earth_search_item_id",
+    "datetime",
+    "days_before_event_start",
+    "platform",
+    "mgrs_tile",
+    "product_type",
+    "cloud_cover",
+    "selection_rank",
+    "selection_reason",
+    "selected_for_multiscene_stack",
+    "is_pre_event",
+    "is_during_event",
+    "is_post_event",
+    "downloaded_full_product",
+    "tile_created",
+    "review_only",
+    "trainable",
+    "ground_truth"
+  ],
+  "properties": {
+    "scene_selection_id": {
+      "type": "string",
+      "pattern": "^S17C24_SCENESEL_"
+    },
+    "is_pre_event": {
+      "const": "true"
+    },
+    "is_during_event": {
+      "const": "false"
+    },
+    "is_post_event": {
+      "const": "false"
+    },
+    "downloaded_full_product": {
+      "const": "false"
+    },
+    "tile_created": {
+      "const": "false"
+    },
+    "review_only": {
+      "const": "true"
+    },
+    "trainable": {
+      "const": "false"
+    },
+    "ground_truth": {
+      "const": "false"
+    }
+  }
+}
