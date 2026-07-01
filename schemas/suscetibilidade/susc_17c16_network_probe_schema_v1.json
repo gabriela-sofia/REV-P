@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C16 network probe schema v1",
+  "type": "object",
+  "required": [
+    "probe_log_id",
+    "formal_request_id",
+    "provider_name",
+    "channel_reference",
+    "driver_name",
+    "network_enabled",
+    "attempted",
+    "http_status",
+    "content_type",
+    "content_length",
+    "final_reference",
+    "source_is_official",
+    "probe_success",
+    "probe_result_class",
+    "blocking_reason",
+    "review_only",
+    "trainable",
+    "ground_truth"
+  ],
+  "properties": {
+    "probe_log_id": {
+      "type": "string",
+      "pattern": "^S17C16_PROBE_"
+    },
+    "probe_result_class": {
+      "enum": [
+        "official_public_metadata_available",
+        "official_public_artifact_available",
+        "official_page_only_context",
+        "blocked_network_not_enabled",
+        "blocked_authenticated",
+        "blocked_heavy_raster",
+        "blocked_not_official",
+        "failed_safe"
+      ]
+    },
+    "review_only": {
+      "const": "true"
+    },
+    "trainable": {
+      "const": "false"
+    },
+    "ground_truth": {
+      "const": "false"
+    }
+  }
+}

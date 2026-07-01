@@ -1,0 +1,10 @@
+anti_leakage_audit_id,formal_request_id,artifact_manifest_id,uses_post_event_data_as_pre_event_feature,uses_risk_area_as_event,uses_document_as_susceptibility_feature,uses_synthetic_as_real,uses_official_patch_neighbor_proxy,catalog_metadata_misused_as_event,passes_anti_leakage,blocking_reason,review_only
+S17C16_LEAK_0001,P0_COMPDEC_RECIFE_PKG_FR_REC_002,not_available,false,false,false,false,false,false,true,metadado de catalogo nao foi usado como evento observado nem como feature de suscetibilidade,true
+S17C16_LEAK_0002,P0_DRM_RJ_PKG_FR_PET_001,not_available,false,false,false,false,false,false,true,metadado de catalogo nao foi usado como evento observado nem como feature de suscetibilidade,true
+S17C16_LEAK_0003,P1_CHIRPS_PRE_EVENT_WINDOW_REC_2022_05_24_30,not_available,false,false,false,false,false,false,true,metadado de catalogo nao foi usado como evento observado nem como feature de suscetibilidade,true
+S17C16_LEAK_0004,P1_DEM_HAND_DRAINAGE_COVERAGE_CANDIDATE_GRID,not_available,false,false,false,false,false,false,true,metadado de catalogo nao foi usado como evento observado nem como feature de suscetibilidade,true
+S17C16_LEAK_0005,P1_PET_2024_VALPARAISO_FLORESTA_GEOMETRY,not_available,false,false,false,false,false,false,true,metadado de catalogo nao foi usado como evento observado nem como feature de suscetibilidade,true
+S17C16_LEAK_0006,P1_SENTINEL2_TILE_CANDIDATE_GRID,not_available,false,false,false,false,false,false,true,metadado de catalogo nao foi usado como evento observado nem como feature de suscetibilidade,true
+S17C16_LEAK_0007,P1_SGB_CPRM_VECTOR_OR_COORDINATES,not_available,false,false,false,false,false,false,true,metadado de catalogo nao foi usado como evento observado nem como feature de suscetibilidade,true
+S17C16_LEAK_0008,P2_DINO_SATMAE_INPUT_TILE,not_available,false,false,false,false,false,false,true,metadado de catalogo nao foi usado como evento observado nem como feature de suscetibilidade,true
+S17C16_LEAK_0009,P2_SAR_RUNTIME_OR_EXPORT_PATH,not_available,false,false,false,false,false,false,true,metadado de catalogo nao foi usado como evento observado nem como feature de suscetibilidade,true
