@@ -1,0 +1,6 @@
+candidate_patch_id,event_id,delta_B03_mean,delta_B04_mean,delta_B08_mean,delta_B11_mean,delta_NDVI_mean,delta_NDWI_mean,delta_MNDWI_mean,delta_NDBI_mean,usable_as_observational_change_review_only,usable_as_pre_event_feature,usable_for_training,ground_truth,eligible_for_score_v7,eligible_for_17b,review_only
+S17C6_CANARY_REC_00001,REC_2022_05_24_30,-5762.1060,-5547.8968,-3831.3800,-1150.3849,0.244684,-0.237222,-0.398178,0.160194,true,false,false,false,false,false,true
+S17C6_CANARY_REC_00002,REC_2022_05_24_30,-7026.8161,-6872.5687,-4537.6788,-2202.3672,0.360182,-0.334283,-0.426555,0.082989,true,false,false,false,false,false,true
+S17C6_CANARY_REC_00003,REC_2022_05_24_30,-381.3694,-342.2490,-164.4423,111.8400,0.079696,-0.103430,-0.156964,0.043657,true,false,false,false,false,false,true
+S17C6_CANARY_REC_00004,REC_2022_05_24_30,-3226.4804,-3075.8492,-1596.2370,-867.4701,0.375404,-0.384450,-0.494738,0.074716,true,false,false,false,false,false,true
+S17C6_CANARY_REC_00005,REC_2022_05_24_30,1010.2878,909.5179,553.3646,770.7007,-0.079588,0.085823,0.063220,0.024165,true,false,false,false,false,false,true
