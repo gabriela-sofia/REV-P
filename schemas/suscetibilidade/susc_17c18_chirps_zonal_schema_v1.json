@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C18 CHIRPS zonal schema v1",
+  "type": "object",
+  "required": [
+    "chirps_zonal_stat_id",
+    "candidate_patch_id",
+    "event_id",
+    "temporal_window",
+    "window_start",
+    "window_end",
+    "stat_name",
+    "stat_unit",
+    "source_artifact_manifest_id",
+    "aggregation_method",
+    "feature_value_real",
+    "usable_for_science_now",
+    "blocking_reason",
+    "review_only",
+    "trainable",
+    "ground_truth"
+  ],
+  "properties": {
+    "chirps_zonal_stat_id": {
+      "type": "string",
+      "pattern": "^S17C18_CHIRPSZONAL_"
+    },
+    "feature_value_real": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "review_only": {
+      "const": "true"
+    },
+    "trainable": {
+      "const": "false"
+    },
+    "ground_truth": {
+      "const": "false"
+    }
+  }
+}

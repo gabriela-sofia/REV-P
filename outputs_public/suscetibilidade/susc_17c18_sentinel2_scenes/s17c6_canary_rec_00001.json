@@ -1,0 +1,176 @@
+{
+  "candidate_patch_id": "S17C6_CANARY_REC_00001",
+  "event_id": "REC_2022_05_24_30",
+  "query_endpoint": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products",
+  "aoi_point": "POINT(-34.939973 -8.000314)",
+  "bbox": "-34.944464634,-8.00476035,-34.935481481,-7.995866764",
+  "datetime_window": "2022-04-24T00:00:00.000Z/2022-06-14T23:59:59.999Z",
+  "collection_or_product": "SENTINEL-2",
+  "http_status": "200",
+  "query_success": true,
+  "captured_at": "2026-07-01T09:24:56+00:00",
+  "raw_local_path": "local_runs/suscetibilidade/17c18_chirps_stac_aoi/raw/s17c6_canary_rec_00001.json",
+  "raw_sha256": "f8eddd7fa8d6394e5c4edb815aa1023d80985f951697d32d123cce6f550b61da",
+  "scenes": [
+    {
+      "scene_or_item_id": "S2A_MSIL1C_20220427T124321_N0510_R009_T25MBM_20240604T235122.SAFE",
+      "collection": "SENTINEL-2",
+      "datetime": "2022-04-27T12:43:21.024000Z",
+      "platform": "SENTINEL-2",
+      "product_type": "S2MSI1C",
+      "cloud_cover": "42.3181"
+    },
+    {
+      "scene_or_item_id": "S2A_MSIL1C_20220507T124321_N0510_R009_T25MBM_20240616T215545.SAFE",
+      "collection": "SENTINEL-2",
+      "datetime": "2022-05-07T12:43:21.024000Z",
+      "platform": "SENTINEL-2",
+      "product_type": "S2MSI1C",
+      "cloud_cover": "61.4922"
+    },
+    {
+      "scene_or_item_id": "S2A_MSIL1C_20220517T124321_N0510_R009_T25MBM_20240613T103306.SAFE",
+      "collection": "SENTINEL-2",
+      "datetime": "2022-05-17T12:43:21.024000Z",
+      "platform": "SENTINEL-2",
+      "product_type": "S2MSI1C",
+      "cloud_cover": "91.3678"
+    },
+    {
+      "scene_or_item_id": "S2A_MSIL1C_20220527T124331_N0510_R009_T25MBM_20240613T225818.SAFE",
+      "collection": "SENTINEL-2",
+      "datetime": "2022-05-27T12:43:31.024000Z",
+      "platform": "SENTINEL-2",
+      "product_type": "S2MSI1C",
+      "cloud_cover": "49.5702"
+    },
+    {
+      "scene_or_item_id": "S2A_MSIL1C_20220606T124331_N0510_R009_T25MBM_20240614T050221.SAFE",
+      "collection": "SENTINEL-2",
+      "datetime": "2022-06-06T12:43:31.024000Z",
+      "platform": "SENTINEL-2",
+      "product_type": "S2MSI1C",
+      "cloud_cover": "65.6800"
+    },
+    {
+      "scene_or_item_id": "S2A_MSIL2A_20220427T124321_N0510_R009_T25MBM_20240605T010459.SAFE",
+      "collection": "SENTINEL-2",
+      "datetime": "2022-04-27T12:43:21.024000Z",
+      "platform": "SENTINEL-2",
+      "product_type": "S2MSI2A",
+      "cloud_cover": "60.4743"
+    },
+    {
+      "scene_or_item_id": "S2A_MSIL2A_20220507T124321_N0510_R009_T25MBM_20240616T225907.SAFE",
+      "collection": "SENTINEL-2",
+      "datetime": "2022-05-07T12:43:21.024000Z",
+      "platform": "SENTINEL-2",
+      "product_type": "S2MSI2A",
+      "cloud_cover": "66.1101"
+    },
+    {
+      "scene_or_item_id": "S2A_MSIL2A_20220517T124321_N0510_R009_T25MBM_20240613T113559.SAFE",
+      "collection": "SENTINEL-2",
+      "datetime": "2022-05-17T12:43:21.024000Z",
+      "platform": "SENTINEL-2",
+      "product_type": "S2MSI2A",
+      "cloud_cover": "79.4175"
+    },
+    {
+      "scene_or_item_id": "S2A_MSIL2A_20220527T124331_N0510_R009_T25MBM_20240614T000508.SAFE",
+      "collection": "SENTINEL-2",
+      "datetime": "2022-05-27T12:43:31.024000Z",
+      "platform": "SENTINEL-2",
+      "product_type": "S2MSI2A",
+      "cloud_cover": "56.5760"
+    },
+    {
+      "scene_or_item_id": "S2A_MSIL2A_20220606T124331_N0510_R009_T25MBM_20240614T061534.SAFE",
+      "collection": "SENTINEL-2",
+      "datetime": "2022-06-06T12:43:31.024000Z",
+      "platform": "SENTINEL-2",
+      "product_type": "S2MSI2A",
+      "cloud_cover": "79.8563"
+    },
+    {
+      "scene_or_item_id": "S2B_MSIL1C_20220502T124309_N0510_R009_T25MBM_20240601T160307.SAFE",
+      "collection": "SENTINEL-2",
+      "datetime": "2022-05-02T12:43:09.024000Z",
+      "platform": "SENTINEL-2",
+      "product_type": "S2MSI1C",
+      "cloud_cover": "77.6860"
+    },
+    {
+      "scene_or_item_id": "S2B_MSIL1C_20220512T124319_N0510_R009_T25MBM_20240619T112653.SAFE",
+      "collection": "SENTINEL-2",
+      "datetime": "2022-05-12T12:43:19.024000Z",
+      "platform": "SENTINEL-2",
+      "product_type": "S2MSI1C",
+      "cloud_cover": "69.6197"
+    },
+    {
+      "scene_or_item_id": "S2B_MSIL1C_20220522T124319_N0510_R009_T25MBM_20240622T104501.SAFE",
+      "collection": "SENTINEL-2",
+      "datetime": "2022-05-22T12:43:19.024000Z",
+      "platform": "SENTINEL-2",
+      "product_type": "S2MSI1C",
+      "cloud_cover": "99.6019"
+    },
+    {
+      "scene_or_item_id": "S2B_MSIL1C_20220601T124319_N0510_R009_T25MBM_20240612T164504.SAFE",
+      "collection": "SENTINEL-2",
+      "datetime": "2022-06-01T12:43:19.024000Z",
+      "platform": "SENTINEL-2",
+      "product_type": "S2MSI1C",
+      "cloud_cover": "62.0046"
+    },
+    {
+      "scene_or_item_id": "S2B_MSIL1C_20220611T124249_N0510_R009_T25MBM_20240613T060257.SAFE",
+      "collection": "SENTINEL-2",
+      "datetime": "2022-06-11T12:42:49.024000Z",
+      "platform": "SENTINEL-2",
+      "product_type": "S2MSI1C",
+      "cloud_cover": "99.1174"
+    },
+    {
+      "scene_or_item_id": "S2B_MSIL2A_20220502T124309_N0510_R009_T25MBM_20240601T172602.SAFE",
+      "collection": "SENTINEL-2",
+      "datetime": "2022-05-02T12:43:09.024000Z",
+      "platform": "SENTINEL-2",
+      "product_type": "S2MSI2A",
+      "cloud_cover": "83.9135"
+    },
+    {
+      "scene_or_item_id": "S2B_MSIL2A_20220512T124319_N0510_R009_T25MBM_20240619T124619.SAFE",
+      "collection": "SENTINEL-2",
+      "datetime": "2022-05-12T12:43:19.024000Z",
+      "platform": "SENTINEL-2",
+      "product_type": "S2MSI2A",
+      "cloud_cover": "75.6606"
+    },
+    {
+      "scene_or_item_id": "S2B_MSIL2A_20220522T124319_N0510_R009_T25MBM_20240622T114736.SAFE",
+      "collection": "SENTINEL-2",
+      "datetime": "2022-05-22T12:43:19.024000Z",
+      "platform": "SENTINEL-2",
+      "product_type": "S2MSI2A",
+      "cloud_cover": "86.8617"
+    },
+    {
+      "scene_or_item_id": "S2B_MSIL2A_20220601T124319_N0510_R009_T25MBM_20240612T175030.SAFE",
+      "collection": "SENTINEL-2",
+      "datetime": "2022-06-01T12:43:19.024000Z",
+      "platform": "SENTINEL-2",
+      "product_type": "S2MSI2A",
+      "cloud_cover": "73.9323"
+    },
+    {
+      "scene_or_item_id": "S2B_MSIL2A_20220611T124249_N0510_R009_T25MBM_20240613T071744.SAFE",
+      "collection": "SENTINEL-2",
+      "datetime": "2022-06-11T12:42:49.024000Z",
+      "platform": "SENTINEL-2",
+      "product_type": "S2MSI2A",
+      "cloud_cover": "99.7663"
+    }
+  ]
+}
