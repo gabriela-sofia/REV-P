@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C15 collected artifact manifest schema v1",
+  "type": "object",
+  "required": [
+    "artifact_manifest_id",
+    "formal_request_id",
+    "provider_name",
+    "source_reference",
+    "artifact_name",
+    "artifact_local_path",
+    "artifact_public_manifest_only",
+    "sha256",
+    "size_bytes",
+    "format",
+    "is_raw_heavy",
+    "stored_in_outputs_public",
+    "stored_in_local_runs",
+    "source_is_official",
+    "collected_at",
+    "review_only",
+    "trainable",
+    "ground_truth"
+  ],
+  "properties": {
+    "artifact_manifest_id": {
+      "type": "string",
+      "pattern": "^S17C15_MANIFEST_"
+    },
+    "stored_in_outputs_public": {
+      "const": "false"
+    },
+    "review_only": {
+      "const": "true"
+    },
+    "trainable": {
+      "const": "false"
+    },
+    "ground_truth": {
+      "const": "false"
+    }
+  }
+}
