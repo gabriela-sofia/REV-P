@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C12 response intake schema v1",
+  "type": "object",
+  "required": [
+    "response_intake_id",
+    "formal_request_id",
+    "provider_name",
+    "response_received",
+    "response_received_at",
+    "raw_response_storage_path",
+    "raw_response_sha256",
+    "response_format",
+    "contains_geometry",
+    "contains_coordinates",
+    "contains_event_date",
+    "contains_crs",
+    "contains_license_or_use_terms",
+    "contains_sensitive_data",
+    "manual_review_required",
+    "eligible_for_future_ingestion",
+    "blocking_reason",
+    "review_only",
+    "trainable",
+    "ground_truth"
+  ],
+  "properties": {
+    "response_intake_id": {
+      "type": "string",
+      "pattern": "^S17C12_INTAKE_"
+    },
+    "response_received": {
+      "const": "false"
+    },
+    "raw_response_storage_path": {
+      "const": "not_available"
+    },
+    "raw_response_sha256": {
+      "const": "not_available"
+    },
+    "eligible_for_future_ingestion": {
+      "const": "false"
+    },
+    "review_only": {
+      "const": "true"
+    },
+    "trainable": {
+      "const": "false"
+    },
+    "ground_truth": {
+      "const": "false"
+    }
+  }
+}
