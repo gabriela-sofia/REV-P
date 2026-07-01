@@ -1,0 +1,2 @@
+phenomenon_classification_id,observed_event_candidate_id,candidate_patch_id,phenomenon_text,phenomenon_class,hydrological_confirmed,mass_movement_excluded,mixed_or_ambiguous,classification_confidence,G5_candidate_status,blocking_reason,review_only
+S17C27_PHEN_0001,S17C27_OEC_0001,S17C6_CANARY_REC_00001,inunda;enchente;deslizamento,MIXED_AMBIGUOUS,true,false,true,medium,false,fenomeno misto (inundacao + deslizamento): nao separa hidrologico de movimento de massa,true

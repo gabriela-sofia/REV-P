@@ -1,0 +1,19 @@
+source_acquisition_attempt_id,candidate_patch_id,event_id,source_family,attempted_url_or_query,network_enabled,attempted,http_status,artifact_acquired,artifact_manifest_id,failure_reason,review_only
+S17C27_ATT_0001,S17C6_CANARY_REC_00001,REC_2022_05_24_30,defesa_civil_recife,https://www2.recife.pe.gov.br/pagina/secretaria-executiva-de-defesa-civil,true,true,failed_safe,false,not_available,ssl_certificate_verify_failed,true
+S17C27_ATT_0002,S17C6_CANARY_REC_00001,REC_2022_05_24_30,apac_pernambuco,http://www.apac.pe.gov.br/,true,true,200,true,S17C27_ART_0003,not_applicable,true
+S17C27_ATT_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,cemaden,http://www.cemaden.gov.br/,true,true,200,true,S17C27_ART_0004,not_applicable,true
+S17C27_ATT_0004,S17C6_CANARY_REC_00002,REC_2022_05_24_30,defesa_civil_recife,https://www2.recife.pe.gov.br/pagina/secretaria-executiva-de-defesa-civil,true,true,failed_safe,false,not_available,ssl_certificate_verify_failed,true
+S17C27_ATT_0005,S17C6_CANARY_REC_00002,REC_2022_05_24_30,apac_pernambuco,http://www.apac.pe.gov.br/,true,true,200,true,S17C27_ART_0003,not_applicable,true
+S17C27_ATT_0006,S17C6_CANARY_REC_00002,REC_2022_05_24_30,cemaden,http://www.cemaden.gov.br/,true,true,200,true,S17C27_ART_0004,not_applicable,true
+S17C27_ATT_0007,S17C6_CANARY_REC_00003,REC_2022_05_24_30,defesa_civil_recife,https://www2.recife.pe.gov.br/pagina/secretaria-executiva-de-defesa-civil,true,true,failed_safe,false,not_available,ssl_certificate_verify_failed,true
+S17C27_ATT_0008,S17C6_CANARY_REC_00003,REC_2022_05_24_30,apac_pernambuco,http://www.apac.pe.gov.br/,true,true,200,true,S17C27_ART_0003,not_applicable,true
+S17C27_ATT_0009,S17C6_CANARY_REC_00003,REC_2022_05_24_30,cemaden,http://www.cemaden.gov.br/,true,true,200,true,S17C27_ART_0004,not_applicable,true
+S17C27_ATT_0010,S17C6_CANARY_REC_00004,REC_2022_05_24_30,defesa_civil_recife,https://www2.recife.pe.gov.br/pagina/secretaria-executiva-de-defesa-civil,true,true,failed_safe,false,not_available,ssl_certificate_verify_failed,true
+S17C27_ATT_0011,S17C6_CANARY_REC_00004,REC_2022_05_24_30,apac_pernambuco,http://www.apac.pe.gov.br/,true,true,200,true,S17C27_ART_0003,not_applicable,true
+S17C27_ATT_0012,S17C6_CANARY_REC_00004,REC_2022_05_24_30,cemaden,http://www.cemaden.gov.br/,true,true,200,true,S17C27_ART_0004,not_applicable,true
+S17C27_ATT_0013,S17C6_CANARY_REC_00005,REC_2022_05_24_30,defesa_civil_recife,https://www2.recife.pe.gov.br/pagina/secretaria-executiva-de-defesa-civil,true,true,failed_safe,false,not_available,ssl_certificate_verify_failed,true
+S17C27_ATT_0014,S17C6_CANARY_REC_00005,REC_2022_05_24_30,apac_pernambuco,http://www.apac.pe.gov.br/,true,true,200,true,S17C27_ART_0003,not_applicable,true
+S17C27_ATT_0015,S17C6_CANARY_REC_00005,REC_2022_05_24_30,cemaden,http://www.cemaden.gov.br/,true,true,200,true,S17C27_ART_0004,not_applicable,true
+S17C27_ATT_0016,all_candidate_patches,REC_2022_05_24_30,sgb_cprm,https://www.sgb.gov.br/,true,true,200,true,S17C27_ART_0005,not_applicable,true
+S17C27_ATT_0017,all_candidate_patches,REC_2022_05_24_30,prefeitura_recife,https://www2.recife.pe.gov.br/,true,true,failed_safe,false,not_available,ssl_certificate_verify_failed,true
+S17C27_ATT_0018,all_candidate_patches,REC_2022_05_24_30,noticias_locais_apenas_triagem,Enchentes e deslizamentos no Nordeste do Brasil em 2022,true,true,200,true,S17C27_ART_0006,not_applicable,true

@@ -1,0 +1,83 @@
+{
+  "acquired_at": "2026-07-01T16:08:40+00:00",
+  "sources": {
+    "defesa_civil_recife": {
+      "source_name": "Defesa Civil / Prefeitura do Recife",
+      "source_url": "https://www2.recife.pe.gov.br/pagina/secretaria-executiva-de-defesa-civil",
+      "officiality_level": "official",
+      "artifact_type": "html",
+      "source_family": "defesa_civil_recife",
+      "acquired": false,
+      "http_status": "failed_safe",
+      "artifact_file": "not_available",
+      "sha256": "not_available",
+      "size_bytes": 0,
+      "failure_reason": "ssl_certificate_verify_failed"
+    },
+    "prefeitura_recife": {
+      "source_name": "Portal da Prefeitura do Recife",
+      "source_url": "https://www2.recife.pe.gov.br/",
+      "officiality_level": "official",
+      "artifact_type": "html",
+      "source_family": "prefeitura_recife",
+      "acquired": false,
+      "http_status": "failed_safe",
+      "artifact_file": "not_available",
+      "sha256": "not_available",
+      "size_bytes": 0,
+      "failure_reason": "ssl_certificate_verify_failed"
+    },
+    "apac_pernambuco": {
+      "source_name": "APAC - Agencia Pernambucana de Aguas e Clima",
+      "source_url": "http://www.apac.pe.gov.br/",
+      "officiality_level": "official",
+      "artifact_type": "html",
+      "source_family": "apac_pernambuco",
+      "acquired": true,
+      "http_status": "200",
+      "artifact_file": "apac_pernambuco.html",
+      "sha256": "e6351c2cbd5adb6cac4970263a8461350f7013d7d69dc604277fab9536047e60",
+      "size_bytes": 183233,
+      "failure_reason": "not_applicable"
+    },
+    "cemaden": {
+      "source_name": "CEMADEN - Centro Nacional de Monitoramento e Alertas de Desastres Naturais",
+      "source_url": "http://www.cemaden.gov.br/",
+      "officiality_level": "official",
+      "artifact_type": "html",
+      "source_family": "cemaden",
+      "acquired": true,
+      "http_status": "200",
+      "artifact_file": "cemaden.html",
+      "sha256": "8f2631cc5bc41eb3186896257e9af04a1c33769176a0142bda50463c9a92f4e3",
+      "size_bytes": 220319,
+      "failure_reason": "not_applicable"
+    },
+    "sgb_cprm": {
+      "source_name": "SGB/CPRM - Servico Geologico do Brasil",
+      "source_url": "https://www.sgb.gov.br/",
+      "officiality_level": "official",
+      "artifact_type": "html",
+      "source_family": "sgb_cprm",
+      "acquired": true,
+      "http_status": "200",
+      "artifact_file": "sgb_cprm.html",
+      "sha256": "c10102daef31c9bf6dd9d90ae2d398bd7c0ab653c641a5ea0917dc6a41216c0f",
+      "size_bytes": 425906,
+      "failure_reason": "not_applicable"
+    },
+    "noticias_locais_apenas_triagem": {
+      "source_name": "Wikipedia PT (referencia/triagem)",
+      "source_url": "Enchentes e deslizamentos no Nordeste do Brasil em 2022",
+      "officiality_level": "reference_non_official",
+      "artifact_type": "txt",
+      "source_family": "noticias_locais_apenas_triagem",
+      "acquired": true,
+      "http_status": "200",
+      "artifact_file": "noticias_locais_apenas_triagem.txt",
+      "sha256": "5863b91aacea553334491b49d638bbeb98c662864c78e948a6d349574d5da4f0",
+      "size_bytes": 3558,
+      "failure_reason": "not_applicable"
+    }
+  }
+}
