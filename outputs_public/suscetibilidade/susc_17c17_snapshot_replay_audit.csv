@@ -1,0 +1,4 @@
+replay_audit_id,snapshot_manifest_id,replay_attempted,replay_without_network,sha256_matches,derived_outputs_recreated,byte_identical_replay,blocking_reason,review_only
+S17C17_REPLAY_0001,S17C17_MANIFEST_0001,true,true,true,true,true,not_applicable,true
+S17C17_REPLAY_0002,S17C17_MANIFEST_0003,true,true,true,true,true,not_applicable,true
+S17C17_REPLAY_0003,S17C17_MANIFEST_0004,true,true,true,true,true,not_applicable,true

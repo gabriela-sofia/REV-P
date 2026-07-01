@@ -1,0 +1,23 @@
+{
+  "source_id": "S17C17_SRC_0001",
+  "source_name": "CHIRPS_OFFICIAL_DATA_PORTAL",
+  "source_reference": "https://www.chc.ucsb.edu/data/chirps",
+  "final_reference": "https://www.chc.ucsb.edu/data/chirps",
+  "http_status": "200",
+  "content_type": "text/html; charset=utf-8",
+  "content_length": "21104",
+  "captured_at": "2026-07-01T09:03:23+00:00",
+  "network_enabled_at_capture": true,
+  "raw_body_sha256": "253eba7480859c60f6cb0dfcceb160d1732e9d6c9efa14ea8a1a892a1d0eba60",
+  "raw_body_captured_bytes": 21104,
+  "raw_body_truncated": false,
+  "raw_body_local_path": "local_runs/suscetibilidade/17c17_sensor_snapshot_collection/raw/s17c17_src_0001.bin",
+  "flags": {
+    "dataset_identified": true,
+    "temporal_coverage": "daily_dekad_monthly_referenced_on_source_page",
+    "spatial_resolution": "0.05_degree_referenced_on_source_page",
+    "data_type": "precipitation_estimate",
+    "mission_confirmed": false,
+    "product_or_collection": "not_available"
+  }
+}
