@@ -1,0 +1,11 @@
+selection_criteria_id,criterion_name,criterion_order,criterion_description,required,used_for_selection,blocks_if_failed,review_only
+S17C19_CRIT_0001,pre_event_only,1,cena deve ter is_pre_event=true e is_post_event=false,true,true,true,true
+S17C19_CRIT_0002,bbox_intersects_patch,2,cena deve interseccionar o AOI do patch candidato,true,true,true,true
+S17C19_CRIT_0003,has_datetime,3,cena deve ter datetime real,true,true,true,true
+S17C19_CRIT_0004,has_scene_id,4,cena deve ter scene_or_item_id valido,true,true,true,true
+S17C19_CRIT_0005,cloud_cover_available,5,cobertura de nuvem disponivel e usada como preferencia primaria,false,true,false,true
+S17C19_CRIT_0006,prefer_low_cloud,6,preferir menor cobertura de nuvem disponivel,false,true,false,true
+S17C19_CRIT_0007,prefer_closest_before_event,7,desempate por menor distancia temporal antes do inicio do evento,false,true,false,true
+S17C19_CRIT_0008,prefer_L2A,8,desempate final preferindo produto L2A sobre L1C,false,true,false,true
+S17C19_CRIT_0009,block_post_event_for_pre_event_feature,9,cena pos-evento nunca pode virar feature pre-evento,true,true,true,true
+S17C19_CRIT_0010,block_during_event_for_pre_event_feature,10,cena durante o evento nunca pode virar feature pre-evento,true,true,true,true

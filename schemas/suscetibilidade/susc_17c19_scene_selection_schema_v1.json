@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C19 scene selection schema v1",
+  "type": "object",
+  "required": [
+    "canonical_scene_selection_id",
+    "candidate_patch_id",
+    "event_id",
+    "scene_or_item_id",
+    "collection",
+    "datetime",
+    "days_before_event_start",
+    "platform",
+    "product_type",
+    "cloud_cover",
+    "bbox_intersects_patch",
+    "selection_rank",
+    "selection_reason",
+    "downloaded",
+    "tile_created",
+    "usable_for_future_tile",
+    "usable_for_pre_event_feature",
+    "review_only",
+    "trainable",
+    "ground_truth"
+  ],
+  "properties": {
+    "canonical_scene_selection_id": {
+      "type": "string",
+      "pattern": "^S17C19_CANON_"
+    },
+    "downloaded": {
+      "const": "false"
+    },
+    "tile_created": {
+      "const": "false"
+    },
+    "usable_for_pre_event_feature": {
+      "const": "true"
+    },
+    "review_only": {
+      "const": "true"
+    },
+    "trainable": {
+      "const": "false"
+    },
+    "ground_truth": {
+      "const": "false"
+    }
+  }
+}
