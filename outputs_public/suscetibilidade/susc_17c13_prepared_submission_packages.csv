@@ -1,0 +1,10 @@
+prepared_package_id,formal_request_id,provider_name,priority,channel_id,channel_status,message_prepared,attachments_listed,copy_paste_ready,manual_review_required,ready_for_manual_submission_after_review,blocked_reason,review_only,trainable,ground_truth
+S17C13_PKG_0001,P0_COMPDEC_RECIFE_PKG_FR_REC_002,COMPDEC/Defesa Civil PE,P0,S17C11_CH_0001,confirmed_official_source,true,true,true,true,true,not_blocked_after_manual_review,true,false,false
+S17C13_PKG_0002,P0_DRM_RJ_PKG_FR_PET_001,DRM-RJ/NADE,P0,S17C11_CH_0002,confirmed_official_source,true,true,true,true,true,not_blocked_after_manual_review,true,false,false
+S17C13_PKG_0003,P1_CHIRPS_PRE_EVENT_WINDOW_REC_2022_05_24_30,CHIRPS/GEE - fonte a confirmar,P1,S17C11_CH_0003,confirmed_official_source,true,true,true,true,true,not_blocked_after_manual_review,true,false,false
+S17C13_PKG_0004,P1_DEM_HAND_DRAINAGE_COVERAGE_CANDIDATE_GRID,GEE/DEM/HAND/drenagem - fonte a confirmar,P1,S17C11_CH_0004,candidate_needs_manual_verification,false,false,false,true,false,channel_candidate_requires_verification,true,false,false
+S17C13_PKG_0005,P1_PET_2024_VALPARAISO_FLORESTA_GEOMETRY,Defesa Civil Petropolis / DRM-RJ (a confirmar),P1,S17C11_CH_0005,candidate_needs_manual_verification,false,false,false,true,false,channel_candidate_requires_verification,true,false,false
+S17C13_PKG_0006,P1_SENTINEL2_TILE_CANDIDATE_GRID,STAC/CDSE/GEE - fonte a confirmar,P1,S17C11_CH_0006,confirmed_official_source,true,true,true,true,true,not_blocked_after_manual_review,true,false,false
+S17C13_PKG_0007,P1_SGB_CPRM_VECTOR_OR_COORDINATES,SGB/CPRM,P1,S17C11_CH_0007,confirmed_official_source,true,true,true,true,true,not_blocked_after_manual_review,true,false,false
+S17C13_PKG_0008,P2_DINO_SATMAE_INPUT_TILE,Pipeline interno DINO/SatMAE - sem execucao nesta sprint,P2,S17C11_CH_0008,not_found,false,false,false,true,false,blocked_no_official_channel,true,false,false
+S17C13_PKG_0009,P2_SAR_RUNTIME_OR_EXPORT_PATH,Runtime tecnico SAR - fonte a confirmar,P2,S17C11_CH_0009,not_found,false,false,false,true,false,blocked_no_official_channel,true,false,false

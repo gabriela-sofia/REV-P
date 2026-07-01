@@ -1,0 +1,13 @@
+blocker_id,blocker_type,description,blocks_17b,blocks_score_v7,review_only
+S17C13_BLOCKER_0001,manual_submission_not_performed,"Bloqueio preservado apos preparacao assistida; requer submissao humana real, resposta real, intake, politica, adapter ou QA antes de promocao.",true,true,true
+S17C13_BLOCKER_0002,responses_not_received,"Bloqueio preservado apos preparacao assistida; requer submissao humana real, resposta real, intake, politica, adapter ou QA antes de promocao.",true,true,true
+S17C13_BLOCKER_0003,response_intake_not_executed,"Bloqueio preservado apos preparacao assistida; requer submissao humana real, resposta real, intake, politica, adapter ou QA antes de promocao.",true,true,true
+S17C13_BLOCKER_0004,candidate_specific_artifacts_missing,"Bloqueio preservado apos preparacao assistida; requer submissao humana real, resposta real, intake, politica, adapter ou QA antes de promocao.",true,true,true
+S17C13_BLOCKER_0005,candidate_patch_policy_missing,"Bloqueio preservado apos preparacao assistida; requer submissao humana real, resposta real, intake, politica, adapter ou QA antes de promocao.",true,true,true
+S17C13_BLOCKER_0006,pipeline_adapters_missing,"Bloqueio preservado apos preparacao assistida; requer submissao humana real, resposta real, intake, politica, adapter ou QA antes de promocao.",true,true,true
+S17C13_BLOCKER_0007,official_patch_id_dependency,"Bloqueio preservado apos preparacao assistida; requer submissao humana real, resposta real, intake, politica, adapter ou QA antes de promocao.",true,true,true
+S17C13_BLOCKER_0008,sentinel2_tile_missing,"Bloqueio preservado apos preparacao assistida; requer submissao humana real, resposta real, intake, politica, adapter ou QA antes de promocao.",true,true,true
+S17C13_BLOCKER_0009,embedding_tile_missing,"Bloqueio preservado apos preparacao assistida; requer submissao humana real, resposta real, intake, politica, adapter ou QA antes de promocao.",true,true,true
+S17C13_BLOCKER_0010,sar_runtime_missing,"Bloqueio preservado apos preparacao assistida; requer submissao humana real, resposta real, intake, politica, adapter ou QA antes de promocao.",true,true,true
+S17C13_BLOCKER_0011,qa_not_accepted,"Bloqueio preservado apos preparacao assistida; requer submissao humana real, resposta real, intake, politica, adapter ou QA antes de promocao.",true,true,true
+S17C13_BLOCKER_0012,17b_blocked_until_real_features_and_policy,"Bloqueio preservado apos preparacao assistida; requer submissao humana real, resposta real, intake, politica, adapter ou QA antes de promocao.",true,true,true
