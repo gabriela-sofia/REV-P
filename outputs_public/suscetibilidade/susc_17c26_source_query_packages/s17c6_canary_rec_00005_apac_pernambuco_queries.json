@@ -1,0 +1,38 @@
+{
+  "candidate_patch_id": "S17C6_CANARY_REC_00005",
+  "event_id": "REC_2022_05_24_30",
+  "bbox": "-34.926498328,-7.986973178,-34.917515175,-7.978079592",
+  "date_range": "2022-05-24/2022-05-30",
+  "source_family": "apac_pernambuco",
+  "queries_ptbr": [
+    "mancha de inundacao Recife 2022 poligono",
+    "extensao alagamento Recife maio 2022 shapefile",
+    "APAC Recife area inundada 2022"
+  ],
+  "queries_en": [
+    "Recife 2022 flood extent polygon",
+    "inundation mapping Recife May 2022 shapefile",
+    "APAC flooded area Recife 2022"
+  ],
+  "acceptance_criteria": [
+    "fonte oficial ou tecnica identificavel",
+    "data/periodo compativel com o evento",
+    "local georreferenciavel ou endereco",
+    "fenomeno explicito (alagamento/inundacao vs deslizamento)"
+  ],
+  "reject_criteria": [
+    "sem data",
+    "sem local",
+    "sem fonte identificavel",
+    "apenas noticia sem confirmacao oficial"
+  ],
+  "required_fields_if_found": [
+    "event_date_or_period",
+    "observed_location",
+    "geometry_or_geocodable_address",
+    "phenomenon_class",
+    "source_name",
+    "source_url_or_local_path"
+  ],
+  "not_ground_truth_by_default": true
+}

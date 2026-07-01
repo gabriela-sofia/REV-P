@@ -1,0 +1,64 @@
+{
+  "candidate_patch_id": "S17C6_CANARY_REC_00001",
+  "event_id": "REC_2022_05_24_30",
+  "bbox": "-34.944464634,-8.00476035,-34.935481481,-7.995866764",
+  "event_period": "2022-05-24/2022-05-30",
+  "sentinel2_features": {
+    "B03_mean_temporal_median": "3959.1602",
+    "B04_mean_temporal_median": "3711.4604",
+    "B08_mean_temporal_median": "4579.8758",
+    "B11_mean_temporal_median": "3366.3278",
+    "NDVI_mean_temporal_median": "0.083642",
+    "NDWI_mean_temporal_median": "-0.051978",
+    "MNDWI_mean_temporal_median": "0.096565",
+    "NDBI_mean_temporal_median": "-0.190232"
+  },
+  "chirps_features": {
+    "CHIRPS_3d_sum_mm": "18.2800",
+    "CHIRPS_7d_sum_mm": "39.4522",
+    "CHIRPS_30d_sum_mm": "121.8943"
+  },
+  "observational_deltas": {
+    "delta_B03_mean": "-5762.1060",
+    "delta_B04_mean": "-5547.8968",
+    "delta_B08_mean": "-3831.3800",
+    "delta_B11_mean": "-1150.3849",
+    "delta_NDVI_mean": "0.244684",
+    "delta_NDWI_mean": "-0.237222",
+    "delta_MNDWI_mean": "-0.398178",
+    "delta_NDBI_mean": "0.160194"
+  },
+  "artifact_manifest_refs": [
+    "S17C25_CHIRPSMAN_0001_A",
+    "S17C25_CHIRPSMAN_0001_B"
+  ],
+  "hash_refs": [
+    "02fc2a2dcb8be21cf36788835ce20f0b396602f6c263fc5f398b7f84006b3422",
+    "e3adcbd9b760f543c27a836ad9b25de1c9d139782d9d2e7b4fa922cb0f1a8d0f"
+  ],
+  "replay_refs": [
+    "S17C25_REPLAY_0001",
+    "S17C25_REPLAY_0002",
+    "S17C25_REPLAY_0003",
+    "S17C25_REPLAY_0004",
+    "S17C25_REPLAY_0005",
+    "S17C25_REPLAY_0006",
+    "S17C25_REPLAY_0007",
+    "S17C25_REPLAY_0008",
+    "S17C25_REPLAY_0009",
+    "S17C25_REPLAY_0010"
+  ],
+  "no_leakage_refs": [
+    "S17C25_LEAK_0001",
+    "S17C25_LEAK_0002",
+    "S17C25_LEAK_0003",
+    "S17C25_LEAK_0016"
+  ],
+  "g4_status": false,
+  "g5_status": false,
+  "can_be_ground_reference_now": false,
+  "can_be_training_label": false,
+  "can_be_score_v7": false,
+  "can_unlock_17b": false,
+  "review_only": true
+}

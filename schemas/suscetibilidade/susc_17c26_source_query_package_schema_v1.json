@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C26 source query package schema v1",
+  "type": "object",
+  "required": [
+    "source_query_package_id",
+    "candidate_patch_id",
+    "event_id",
+    "source_family",
+    "package_json_path",
+    "queries_count",
+    "target_gate",
+    "expected_artifact_type",
+    "manual_review_required",
+    "review_only"
+  ],
+  "properties": {
+    "source_query_package_id": {
+      "type": "string",
+      "pattern": "^S17C26_QPKG_"
+    },
+    "review_only": {
+      "const": "true"
+    }
+  }
+}

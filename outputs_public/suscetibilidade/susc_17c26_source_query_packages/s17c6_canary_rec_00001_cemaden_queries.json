@@ -1,0 +1,38 @@
+{
+  "candidate_patch_id": "S17C6_CANARY_REC_00001",
+  "event_id": "REC_2022_05_24_30",
+  "bbox": "-34.944464634,-8.00476035,-34.935481481,-7.995866764",
+  "date_range": "2022-05-24/2022-05-30",
+  "source_family": "cemaden",
+  "queries_ptbr": [
+    "CEMADEN Recife maio 2022 deslizamento alagamento",
+    "classificacao fenomeno Recife 2022 inundacao movimento de massa",
+    "boletim CEMADEN Recife 2022"
+  ],
+  "queries_en": [
+    "CEMADEN Recife May 2022 landslide flood",
+    "phenomenon classification Recife 2022 flood mass movement",
+    "CEMADEN bulletin Recife 2022"
+  ],
+  "acceptance_criteria": [
+    "fonte oficial ou tecnica identificavel",
+    "data/periodo compativel com o evento",
+    "local georreferenciavel ou endereco",
+    "fenomeno explicito (alagamento/inundacao vs deslizamento)"
+  ],
+  "reject_criteria": [
+    "sem data",
+    "sem local",
+    "sem fonte identificavel",
+    "apenas noticia sem confirmacao oficial"
+  ],
+  "required_fields_if_found": [
+    "event_date_or_period",
+    "observed_location",
+    "geometry_or_geocodable_address",
+    "phenomenon_class",
+    "source_name",
+    "source_url_or_local_path"
+  ],
+  "not_ground_truth_by_default": true
+}

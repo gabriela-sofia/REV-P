@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C26 ground reference target schema v1",
+  "type": "object",
+  "required": [
+    "ground_reference_target_id",
+    "candidate_patch_id",
+    "event_id",
+    "bbox",
+    "event_period_start",
+    "event_period_end",
+    "phenomenon_expected",
+    "target_objective",
+    "required_evidence_type",
+    "required_geometry_type",
+    "required_temporal_precision",
+    "required_phenomenon_classification",
+    "suggested_source_family",
+    "query_terms_ptbr",
+    "query_terms_en",
+    "why_this_patch",
+    "current_g4_status",
+    "current_g5_status",
+    "can_be_ground_reference_now",
+    "review_only"
+  ],
+  "properties": {
+    "ground_reference_target_id": {
+      "type": "string",
+      "pattern": "^S17C26_GRTGT_"
+    },
+    "current_g4_status": {
+      "const": "false"
+    },
+    "current_g5_status": {
+      "const": "false"
+    },
+    "can_be_ground_reference_now": {
+      "const": "false"
+    },
+    "review_only": {
+      "const": "true"
+    }
+  }
+}
