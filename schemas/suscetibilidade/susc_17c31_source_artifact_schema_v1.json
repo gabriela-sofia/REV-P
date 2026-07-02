@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C31 source artifact schema v1",
+  "type": "object",
+  "required": [
+    "source_artifact_manifest_id",
+    "candidate_patch_id",
+    "event_id",
+    "source_family",
+    "source_name",
+    "source_url",
+    "artifact_local_path",
+    "artifact_type",
+    "sha256",
+    "size_bytes",
+    "officiality_level",
+    "artifact_specificity",
+    "has_geometry_signal",
+    "has_patch_level_signal",
+    "has_hydrological_separation_signal",
+    "stored_in_outputs_public",
+    "raw_heavy",
+    "review_only",
+    "trainable",
+    "ground_truth"
+  ],
+  "properties": {
+    "source_artifact_manifest_id": {"type": "string", "pattern": "^S17C31_ART_"},
+    "artifact_type": {"enum": ["html", "pdf", "txt", "csv", "json", "geojson", "kml"]},
+    "raw_heavy": {"const": "false"},
+    "review_only": {"const": "true"},
+    "trainable": {"const": "false"},
+    "ground_truth": {"const": "false"}
+  }
+}

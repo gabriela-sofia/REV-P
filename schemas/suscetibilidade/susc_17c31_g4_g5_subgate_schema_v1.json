@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C31 g4 g5 subgate schema v1",
+  "type": "object",
+  "required": [
+    "ground_reference_readiness_id",
+    "candidate_patch_id",
+    "event_id",
+    "geometry_candidate_id",
+    "phenomenon_separation_candidate_id",
+    "G1",
+    "G2",
+    "G3",
+    "G4c",
+    "G4d",
+    "G4_full",
+    "G5d",
+    "G5_full",
+    "G6",
+    "G7",
+    "can_be_ground_reference_candidate_review_only",
+    "can_be_ground_truth",
+    "can_be_training_label",
+    "can_unlock_17b",
+    "blocking_reason",
+    "review_only"
+  ],
+  "properties": {
+    "ground_reference_readiness_id": {"type": "string", "pattern": "^S17C31_GRR_"},
+    "can_be_ground_truth": {"const": "false"},
+    "can_be_training_label": {"const": "false"},
+    "review_only": {"const": "true"}
+  }
+}

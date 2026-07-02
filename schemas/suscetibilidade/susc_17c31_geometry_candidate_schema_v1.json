@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C31 geometry candidate schema v1",
+  "type": "object",
+  "required": [
+    "geometry_candidate_id",
+    "source_artifact_manifest_id",
+    "candidate_patch_id",
+    "event_id",
+    "geometry_candidate_type",
+    "location_text",
+    "bairro",
+    "logradouro",
+    "coordinate_text",
+    "geometry_wkt_or_geojson_ref",
+    "geometry_source_type",
+    "uncertainty_m",
+    "can_evaluate_g4c",
+    "can_evaluate_g4d",
+    "not_ground_truth",
+    "review_only"
+  ],
+  "properties": {
+    "geometry_candidate_id": {"type": "string", "pattern": "^S17C31_GEOM_"},
+    "geometry_candidate_type": {
+      "enum": [
+        "official_point",
+        "official_polygon",
+        "official_bbox",
+        "official_address",
+        "official_street_or_intersection",
+        "official_neighborhood",
+        "technical_sar_metadata_candidate",
+        "risk_sector_not_event",
+        "insufficient"
+      ]
+    },
+    "not_ground_truth": {"const": "true"},
+    "review_only": {"const": "true"}
+  }
+}
