@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C34 canary pre-event feature schema v1",
+  "type": "object",
+  "required": [
+    "canary_patch_id",
+    "source_occurrence_id",
+    "event_id",
+    "bairro",
+    "logradouro",
+    "occurrence_date",
+    "geometry",
+    "uncertainty_m",
+    "pre_event_window_start",
+    "pre_event_window_end",
+    "sentinel2_available",
+    "chirps_available",
+    "drainage_available",
+    "terrain_available",
+    "hand_available",
+    "landcover_available",
+    "feature_completeness_ratio",
+    "review_only",
+    "ground_truth",
+    "training_label"
+  ],
+  "properties": {
+    "canary_patch_id": {"type": "string", "pattern": "^S17C33_EAC_"},
+    "pre_event_window_start": {"const": "2022-04-24"},
+    "pre_event_window_end": {"const": "2022-05-23"},
+    "review_only": {"const": "true"},
+    "ground_truth": {"const": "false"},
+    "training_label": {"const": "false"}
+  }
+}

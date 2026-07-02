@@ -1,0 +1,12 @@
+canary_patch_id,bairro,sentinel2_available,spectral_available,chirps_available,drainage_available,terrain_available,landcover_available,families_available_count,feature_completeness_ratio,review_only
+S17C33_EAC_0001,Pina,true,true,true,true,true,true,6,1.0000,true
+S17C33_EAC_0002,Imbiribeira,true,true,true,true,true,true,6,1.0000,true
+S17C33_EAC_0003,Afogados,true,true,true,false,true,true,5,0.8333,true
+S17C33_EAC_0004,Areias,true,true,true,false,true,true,5,0.8333,true
+S17C33_EAC_0005,Areias,true,true,true,true,true,true,6,1.0000,true
+S17C33_EAC_0006,Ipsep,true,true,true,true,true,true,6,1.0000,true
+S17C33_EAC_0007,Iputinga,true,true,true,false,true,true,5,0.8333,true
+S17C33_EAC_0008,Iputinga,true,true,true,true,true,true,6,1.0000,true
+S17C33_EAC_0009,Varzea,true,true,true,true,true,true,6,1.0000,true
+S17C33_EAC_0010,Varzea,true,true,true,false,true,true,5,0.8333,true
+S17C33_EAC_0011,Varzea,true,true,true,true,true,true,6,1.0000,true

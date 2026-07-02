@@ -1,0 +1,42 @@
+{
+  "official_score_v6_path": "datasets/suscetibilidade/susc_score_v6_candidate_by_patch_v1.csv",
+  "official_score_v6_git_hash_before": "a41d0983db97ca4b71e932313200a2d6f3c3a6f7",
+  "official_score_v6_git_hash_after": "a41d0983db97ca4b71e932313200a2d6f3c3a6f7",
+  "official_score_v6_unchanged": true,
+  "formula_source_script": "scripts/suscetibilidade/build_susc_10a_score_v6_candidate.py",
+  "weights": {
+    "topography_hydrology_index": 0.4,
+    "rainfall_trigger_index": 0.25,
+    "urban_spectral_index": 0.2,
+    "vegetation_mitigation_index": -0.1,
+    "evidence_support_index": 0.05
+  },
+  "normalization": "robust_minmax_winsorize_population_relative_over_official_patches",
+  "required_features_for_full_replay": [
+    "topography_hydrology(HAND/slope/elevation/distance_to_water official)",
+    "rainfall_trigger(CHIRPS)",
+    "urban_spectral(NDBI/urban_prop)",
+    "vegetation_mitigation(NDVI)",
+    "evidence_support",
+    "official_patch_population_distribution_and_winsorize_bounds"
+  ],
+  "available_features": [
+    "rainfall_trigger(CHIRPS region-level)",
+    "spectral(NDVI/NDWI/MNDWI/NDBI)",
+    "terrain(elevation/slope)",
+    "drainage_proxy(OSM)"
+  ],
+  "missing_features": [
+    "HAND",
+    "official_hydrography_distance",
+    "official_landcover_urban_prop",
+    "official_patch_population_distribution_for_comparable_normalization"
+  ],
+  "imputation_rule": "forbidden_no_imputation_unless_existing_official_policy",
+  "can_compute_full_replay": false,
+  "can_compute_partial_replay": false,
+  "full_replay_blocked_reason": "score v6 usa normalizacao robust_minmax RELATIVA A POPULACAO dos patches oficiais; sem a distribuicao bruta/winsorize dos oficiais e sem HAND/hidrografia oficial, um score comparavel a escala oficial NAO e reproduzivel. Emitir score numerico seria enganoso.",
+  "not_official_score": true,
+  "does_not_replace_score_v6": true,
+  "review_only": true
+}

@@ -1,0 +1,12 @@
+canary_patch_id,distance_to_drainage_m,distance_to_water_m,nearest_drainage_source,nearest_drainage_kind,drainage_feature_available,drainage_feature_authority,drainage_proxy,not_official_hydrography,cannot_be_ground_reference,status,review_only
+S17C33_EAC_0001,314.2,314.2,osm_overpass,river,true,osm_proxy_not_official_hydrography,true,true,true,ok,true
+S17C33_EAC_0002,532.5,532.5,osm_overpass,river,true,osm_proxy_not_official_hydrography,true,true,true,ok,true
+S17C33_EAC_0003,not_available,not_available,osm_overpass,,false,osm_proxy_not_official_hydrography,true,true,true,overpass_unavailable,true
+S17C33_EAC_0004,not_available,not_available,osm_overpass,,false,osm_proxy_not_official_hydrography,true,true,true,overpass_unavailable,true
+S17C33_EAC_0005,16.9,16.9,osm_overpass,river,true,osm_proxy_not_official_hydrography,true,true,true,ok,true
+S17C33_EAC_0006,122.2,122.2,osm_overpass,canal,true,osm_proxy_not_official_hydrography,true,true,true,ok,true
+S17C33_EAC_0007,not_available,not_available,osm_overpass,,false,osm_proxy_not_official_hydrography,true,true,true,overpass_unavailable,true
+S17C33_EAC_0008,132.6,132.6,osm_overpass,river,true,osm_proxy_not_official_hydrography,true,true,true,ok,true
+S17C33_EAC_0009,170.4,170.4,osm_overpass,river,true,osm_proxy_not_official_hydrography,true,true,true,ok,true
+S17C33_EAC_0010,not_available,not_available,osm_overpass,,false,osm_proxy_not_official_hydrography,true,true,true,overpass_unavailable,true
+S17C33_EAC_0011,553.0,553.0,osm_overpass,river,true,osm_proxy_not_official_hydrography,true,true,true,ok,true
