@@ -165,9 +165,9 @@ def method_trace_rows():
     term_re = {t: re.compile(re.escape(t), re.I) for t in TRACE_TERMS}
     seen = set()
     for fpath in sorted(set(files)):
-        # nao varrer os proprios scripts 17c36-39 (ruido) exceto 10a
+        # nao varrer os proprios scripts 17c36-39 (ruido) nem marcos futuros 17c4x/17c5x (determinismo a prova de marcos futuros)
         base = Path(fpath).name
-        if re.match(r"susc_17c3[6-9]", base):
+        if re.match(r"susc_17c3[6-9]", base) or re.search(r"17c[45]\d", base):
             continue
         try:
             text = Path(fpath).read_text(encoding="utf-8", errors="ignore")
