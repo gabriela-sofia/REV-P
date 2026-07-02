@@ -1,0 +1,6 @@
+blocker_id,blocker_type,description,blocks_full_score_replay,blocks_17b,blocks_score_v7,review_only
+S17C36_BLOCKER_0001,method_equivalence_not_recovered,metodo/DEM/unidade originais do score v6 nao documentados no repo -> equivalencia nao comprovada,true,true,true,true
+S17C36_BLOCKER_0002,topography_component_still_blocked_for_final_score,componente topografia reconstruido mas nao comprovadamente equivalente,true,true,true,true
+S17C36_BLOCKER_0003,score_v6_full_replay_blocked,score final v6 bloqueado ate equivalencia metodologica,true,true,true,true
+S17C36_BLOCKER_0004,score_v7_blocked,score v7 bloqueado,true,true,true,true
+S17C36_BLOCKER_0005,17b_blocked,17B bloqueado ate G4_full + ground reference aceito,true,true,true,true

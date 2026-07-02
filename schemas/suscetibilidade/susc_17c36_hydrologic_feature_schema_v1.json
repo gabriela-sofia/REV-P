@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C36 hydrologic feature schema v1",
+  "type": "object",
+  "required": [
+    "topography_hydrology_feature_id", "canary_patch_id", "elevation_mean", "slope_mean",
+    "hand_mean", "hand_status", "twi_mean", "twi_status", "tpi_250m_mean", "tpi_status",
+    "flow_acc_log_mean", "flow_acc_status", "topography_hydrology_feature_complete",
+    "method_equivalence_status", "review_only", "ground_truth", "training_label"
+  ],
+  "properties": {
+    "topography_hydrology_feature_id": {"type": "string", "pattern": "^S17C36_TH_"},
+    "review_only": {"const": "true"},
+    "ground_truth": {"const": "false"},
+    "training_label": {"const": "false"}
+  }
+}
