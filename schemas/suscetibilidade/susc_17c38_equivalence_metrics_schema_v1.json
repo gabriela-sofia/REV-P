@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C38 basin-aware equivalence metrics schema v1",
+  "type": "object",
+  "required": [
+    "feature_name", "pearson_corr", "spearman_corr", "mae", "median_absolute_error",
+    "relative_error_median", "official_min", "official_max", "recomputed_min", "recomputed_max",
+    "scale_ratio_median", "rank_preservation_score", "equivalence_status_17c37",
+    "equivalence_status_17c38", "improved_vs_17c37", "equivalence_status", "review_only"
+  ],
+  "properties": {
+    "equivalence_status": {"enum": ["equivalent", "calibratable", "incompatible", "insufficient_data"]},
+    "review_only": {"const": "true"}
+  }
+}

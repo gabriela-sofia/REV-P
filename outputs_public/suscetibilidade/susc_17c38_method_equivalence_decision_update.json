@@ -1,0 +1,37 @@
+{
+  "method_equivalence_decision_updated": true,
+  "previous_method_equivalence_accepted_17c37": false,
+  "method_equivalence_accepted": false,
+  "method_calibration_possible": false,
+  "flow_acc_equivalence_retested": true,
+  "flow_acc_status_17c37": "incompatible",
+  "flow_acc_status_17c38": "incompatible",
+  "accepted_features": [
+    "hand_mean"
+  ],
+  "calibratable_features": [
+    "twi_mean",
+    "tpi_250m_mean"
+  ],
+  "incompatible_features": [
+    "flow_acc_log_mean"
+  ],
+  "insufficient_features": [],
+  "blocking_features": [
+    "flow_acc_log_mean"
+  ],
+  "reason": "features ainda incompativeis apos basin-aware: flow_acc_log_mean",
+  "can_compute_score_v6_final_replay": false,
+  "can_compute_calibrated_component_replay": false,
+  "requires_future_calibration": true,
+  "acceptance_thresholds": {
+    "spearman_equivalent": 0.85,
+    "spearman_calibratable": 0.7,
+    "scale_ratio": [
+      0.8,
+      1.25
+    ],
+    "rel_err_max": 0.25
+  },
+  "review_only": true
+}

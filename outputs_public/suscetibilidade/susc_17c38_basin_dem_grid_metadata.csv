@@ -1,0 +1,2 @@
+basin_dem_grid_id,domain_id,dem_manifest_id,crs,resolution_m,width,height,bbox,valid_cell_count,usable_for_basin_flow,review_only
+S17C38_GRID_0001,S17C38_DOMAIN_RECIFE_BASIN_V1,S17C38_DEM_0001,EPSG:4326,91.833,346,365,"-35.18746,-8.27233,-34.89909,-7.96843",126290,true,true
