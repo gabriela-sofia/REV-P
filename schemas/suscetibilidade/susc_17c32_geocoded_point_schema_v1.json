@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C32 geocoded point schema v1",
+  "type": "object",
+  "required": [
+    "geocoded_point_id",
+    "hydrological_occurrence_target_id",
+    "candidate_patch_id",
+    "event_id",
+    "bairro",
+    "logradouro",
+    "house_number_status",
+    "geocoder",
+    "geocoder_is_official",
+    "resolved_lat",
+    "resolved_lon",
+    "osm_type",
+    "osm_class",
+    "precision_level",
+    "uncertainty_m",
+    "not_ground_truth",
+    "review_only"
+  ],
+  "properties": {
+    "geocoded_point_id": {"type": "string", "pattern": "^S17C32_GEO_"},
+    "geocoder_is_official": {"const": "false"},
+    "house_number_status": {"enum": ["anonymized_lgpd", "present", "absent"]},
+    "precision_level": {"enum": ["street_level", "point_level", "bairro_level", "unresolved"]},
+    "not_ground_truth": {"const": "true"},
+    "review_only": {"const": "true"}
+  }
+}
