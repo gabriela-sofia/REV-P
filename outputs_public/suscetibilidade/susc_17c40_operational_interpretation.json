@@ -1,0 +1,33 @@
+{
+  "operational_interpretation_created": true,
+  "transparent_index_operational": true,
+  "score_v6_replay_abandoned_for_canaries": true,
+  "reason_score_v6_replay_abandoned": "flow_acc oficial irrecuperavel (17C36-17C39); replay literal comparavel inviavel com dados publicos",
+  "transparent_index_main_result": "mediana do indice review-only V1: canarios=0.705 vs controles=0.25587; 3/3 variantes concordam que canarios tem sinal relativo maior",
+  "variant_agreement": "3/3",
+  "canary_vs_control_direction": "canary_higher_all_variants",
+  "limitations": [
+    "controles tem menos componentes (topografia/drenagem/landcover indisponiveis) -> disponibilidade assimetrica",
+    "CHIRPS e region-level (nao discrimina local)",
+    "indice review-only, escala nao-oficial, sem validacao supervisionada",
+    "ancora observacional nao e feature causal nem ground truth",
+    "flow_acc oficial ausente (contrato de substituicao)"
+  ],
+  "recommended_use": [
+    "discussao cientifica exploratoria review-only",
+    "priorizacao de AOI para investigacao futura",
+    "transparencia sobre incompletude do flow_acc"
+  ],
+  "forbidden_use": [
+    "usar como score v6/v7",
+    "usar como ground truth",
+    "usar como label de treino",
+    "usar para desbloquear 17B",
+    "apresentar como benchmark final"
+  ],
+  "can_support_scientific_discussion": true,
+  "can_support_training": false,
+  "can_support_ground_truth": false,
+  "can_unlock_17b": false,
+  "review_only": true
+}

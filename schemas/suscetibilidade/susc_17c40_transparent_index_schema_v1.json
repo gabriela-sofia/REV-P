@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C40 transparent index schema v1",
+  "type": "object",
+  "required": [
+    "transparent_index_id", "patch_id", "patch_family", "index_variant",
+    "topography_component_norm", "hydrology_proximity_component_norm",
+    "urban_exposure_component_norm", "spectral_surface_component_norm",
+    "rainfall_trigger_component_norm", "flow_acc_uncertainty_penalty",
+    "transparent_index_value", "transparent_index_rank", "component_availability_ratio",
+    "interpretation_class_review_only", "not_score_v6", "not_score_v7",
+    "does_not_replace_score_v6", "review_only", "ground_truth", "training_label"
+  ],
+  "properties": {
+    "transparent_index_id": {"type": "string", "pattern": "^S17C40_IDX_"},
+    "interpretation_class_review_only": {"enum": [
+      "higher_relative_susceptibility_signal", "moderate_relative_susceptibility_signal",
+      "lower_relative_susceptibility_signal", "insufficient_components"]},
+    "not_score_v6": {"const": "true"},
+    "not_score_v7": {"const": "true"},
+    "does_not_replace_score_v6": {"const": "true"},
+    "review_only": {"const": "true"},
+    "ground_truth": {"const": "false"},
+    "training_label": {"const": "false"}
+  }
+}
