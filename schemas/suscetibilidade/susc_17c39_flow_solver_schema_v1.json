@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C39 flow solver schema v1",
+  "type": "object",
+  "required": [
+    "flow_acc_variant_metric_id", "flow_acc_variant_id", "variant_name", "pearson_corr",
+    "spearman_corr", "mae", "median_absolute_error", "relative_error_median", "official_min",
+    "official_max", "recomputed_min", "recomputed_max", "scale_ratio_median",
+    "rank_preservation_score", "improved_vs_17c38", "equivalence_status", "review_only"
+  ],
+  "properties": {
+    "equivalence_status": {"enum": ["equivalent", "calibratable", "incompatible", "insufficient_data"]},
+    "review_only": {"const": "true"}
+  }
+}

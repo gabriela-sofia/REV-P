@@ -1,0 +1,5 @@
+calibration_metric_id,calibration_model_id,model_name,mean_spearman_corr,mean_pearson_corr,mean_mae,mean_rank_preservation_score,scale_compatible_after_calibration,passes_calibration_threshold,review_only
+S17C39_CALM_0001,C01,C01_quantile_mapping_best_variant,0.4887,0.3889,0.871,0.4887,true,false,true
+S17C39_CALM_0002,C02,C02_isotonic_monotonic_best_variant,0.4335,0.5059,0.912,0.4335,false,false,true
+S17C39_CALM_0003,C03,C03_robust_linear_multi_variant,0.5194,0.4918,0.8192,0.5194,false,false,true
+S17C39_CALM_0004,C04,C04_rank_based_piecewise_mapping,0.3923,0.4142,0.8353,0.3923,false,false,true

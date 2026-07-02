@@ -1,0 +1,15 @@
+flow_acc_variant_id,variant_name,dem_source,domain_buffer_km,resolution_m,flow_direction_method,sink_fill_method,uses_drainage_burning,uses_inverse_transform,uses_distance_to_water,uses_rank_quantile,accumulation_unit,transform,aggregation_method,expected_effect,review_only
+V01,V01_d8_log1p_cell_count_basin_5km,copernicus_dem_glo30,5,92.8,d8,priority_flood,false,false,false,false,cell_count,log1p,bbox_mean,log1p acumulacao basin 5km,true
+V02,V02_d8_log10_cell_count_basin_5km,copernicus_dem_glo30,5,92.8,d8,priority_flood,false,false,false,false,cell_count,log10,bbox_mean,log10 acumulacao,true
+V03,V03_d8_raw_cell_count_basin_5km,copernicus_dem_glo30,5,92.8,d8,priority_flood,false,false,false,false,cell_count,raw,bbox_mean,acumulacao bruta,true
+V04,V04_d8_specific_area_log1p_basin_5km,copernicus_dem_glo30,5,92.8,d8,priority_flood,false,false,false,false,specific_area,log1p,bbox_mean,area especifica log1p,true
+V05,V05_d8_log1p_cell_count_basin_10km,copernicus_dem_glo30,10,92.8,d8,priority_flood,false,false,false,false,cell_count,log1p,bbox_mean,log1p acumulacao basin 10km,true
+V06,V06_d8_log1p_with_drainage_burning,copernicus_dem_glo30,5,92.8,d8,priority_flood,true,false,false,false,cell_count,log1p,bbox_mean,drainage burning,true
+V07,V07_d8_log1p_no_sink_fill,copernicus_dem_glo30,5,92.8,d8,none,false,false,false,false,cell_count,log1p,bbox_mean,sem fill de sinks,true
+V08,V08_d8_log1p_patch_buffer_2km,copernicus_dem_glo30,2,92.8,d8,priority_flood,false,false,false,false,cell_count,log1p,bbox_mean,janela por patch 2km (proxy truncado 17C37-like),true
+V09,V09_inverse_flow_acc_log1p,copernicus_dem_glo30,5,92.8,d8,priority_flood,false,true,false,false,cell_count,inverse_log1p,bbox_mean,inverso da acumulacao,true
+V10,V10_downstream_distance_proxy,copernicus_dem_glo30,5,92.8,d8,priority_flood,false,false,false,false,downstream_distance,distance,bbox_mean,distancia a drenagem (proxy),true
+V11,V11_distance_to_water_inverse_log,copernicus_dem_glo30,5,92.8,none,none,false,false,true,false,distance_to_water,inverse_log,bbox_mean,inverso log dist a agua,true
+V12,V12_rank_quantile_of_d8_basin,copernicus_dem_glo30,5,92.8,d8,priority_flood,false,false,false,true,cell_count,rank_quantile,bbox_mean,quantil de rank da acumulacao,true
+V17,V17_log1p_accumulation_plus_slope_weight,copernicus_dem_glo30,5,92.8,d8,priority_flood,false,false,false,false,cell_count,log1p_plus_slope,bbox_mean,log1p acc + peso de declividade,true
+V18,V18_flow_acc_times_low_slope_mask,copernicus_dem_glo30,5,92.8,d8,priority_flood,false,false,false,false,cell_count,times_low_slope,bbox_mean,acc x mascara de baixa declividade,true
