@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C29 local source artifact schema v1",
+  "type": "object",
+  "required": [
+    "local_source_artifact_manifest_id",
+    "candidate_patch_id",
+    "event_id",
+    "source_family",
+    "source_name",
+    "source_url",
+    "artifact_local_path",
+    "artifact_type",
+    "sha256",
+    "size_bytes",
+    "officiality_level",
+    "event_specific",
+    "local_specific",
+    "location_specific",
+    "phenomenon_specific",
+    "geometry_specific",
+    "hydrological_documented",
+    "stored_in_outputs_public",
+    "raw_heavy",
+    "tls_verification_bypassed",
+    "review_only",
+    "trainable",
+    "ground_truth"
+  ],
+  "properties": {
+    "local_source_artifact_manifest_id": {
+      "type": "string",
+      "pattern": "^S17C29_ART_"
+    },
+    "local_specific": {
+      "const": "true"
+    },
+    "raw_heavy": {
+      "const": "false"
+    },
+    "review_only": {
+      "const": "true"
+    },
+    "trainable": {
+      "const": "false"
+    },
+    "ground_truth": {
+      "const": "false"
+    }
+  }
+}
