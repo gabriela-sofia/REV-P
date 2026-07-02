@@ -1,0 +1,199 @@
+{
+  "generated_at_utc": "2026-07-02T14:17:14Z",
+  "attempts": [
+    {
+      "point_id": "S17C33_EAC_0001",
+      "approach": "dem_minus_nearest_drainage_elevation",
+      "dem_source": "opentopodata_srtm30m_17c34",
+      "drainage_source": "faixas_marginais_official",
+      "status": "attempted"
+    },
+    {
+      "point_id": "S17C33_EAC_0002",
+      "approach": "dem_minus_nearest_drainage_elevation",
+      "dem_source": "opentopodata_srtm30m_17c34",
+      "drainage_source": "faixas_marginais_official",
+      "status": "attempted"
+    },
+    {
+      "point_id": "S17C33_EAC_0003",
+      "approach": "dem_minus_nearest_drainage_elevation",
+      "dem_source": "opentopodata_srtm30m_17c34",
+      "drainage_source": "faixas_marginais_official",
+      "status": "attempted"
+    },
+    {
+      "point_id": "S17C33_EAC_0004",
+      "approach": "dem_minus_nearest_drainage_elevation",
+      "dem_source": "opentopodata_srtm30m_17c34",
+      "drainage_source": "faixas_marginais_official",
+      "status": "attempted"
+    },
+    {
+      "point_id": "S17C33_EAC_0005",
+      "approach": "dem_minus_nearest_drainage_elevation",
+      "dem_source": "opentopodata_srtm30m_17c34",
+      "drainage_source": "faixas_marginais_official",
+      "status": "attempted"
+    },
+    {
+      "point_id": "S17C33_EAC_0006",
+      "approach": "dem_minus_nearest_drainage_elevation",
+      "dem_source": "opentopodata_srtm30m_17c34",
+      "drainage_source": "faixas_marginais_official",
+      "status": "attempted"
+    },
+    {
+      "point_id": "S17C33_EAC_0007",
+      "approach": "dem_minus_nearest_drainage_elevation",
+      "dem_source": "opentopodata_srtm30m_17c34",
+      "drainage_source": "faixas_marginais_official",
+      "status": "attempted"
+    },
+    {
+      "point_id": "S17C33_EAC_0008",
+      "approach": "dem_minus_nearest_drainage_elevation",
+      "dem_source": "opentopodata_srtm30m_17c34",
+      "drainage_source": "faixas_marginais_official",
+      "status": "attempted"
+    },
+    {
+      "point_id": "S17C33_EAC_0009",
+      "approach": "dem_minus_nearest_drainage_elevation",
+      "dem_source": "opentopodata_srtm30m_17c34",
+      "drainage_source": "faixas_marginais_official",
+      "status": "attempted"
+    },
+    {
+      "point_id": "S17C33_EAC_0010",
+      "approach": "dem_minus_nearest_drainage_elevation",
+      "dem_source": "opentopodata_srtm30m_17c34",
+      "drainage_source": "faixas_marginais_official",
+      "status": "attempted"
+    },
+    {
+      "point_id": "S17C33_EAC_0011",
+      "approach": "dem_minus_nearest_drainage_elevation",
+      "dem_source": "opentopodata_srtm30m_17c34",
+      "drainage_source": "faixas_marginais_official",
+      "status": "attempted"
+    },
+    {
+      "point_id": "S17C6_CANARY_REC_00001",
+      "approach": "dem_minus_nearest_drainage_elevation",
+      "dem_source": "opentopodata_srtm30m_17c34",
+      "drainage_source": "faixas_marginais_official",
+      "status": "attempted"
+    }
+  ],
+  "hand": [
+    {
+      "point_id": "S17C33_EAC_0001",
+      "role": "canary",
+      "elevation_at_patch_m": 8.2,
+      "elevation_at_nearest_drainage_m": "not_available_no_dem_at_drainage_vertex",
+      "HAND_proxy_local": "true",
+      "HAND_mean": 8.2,
+      "status": "hand_proxy_local_only_not_full_hydrologic"
+    },
+    {
+      "point_id": "S17C33_EAC_0002",
+      "role": "canary",
+      "elevation_at_patch_m": 8.8,
+      "elevation_at_nearest_drainage_m": "not_available_no_dem_at_drainage_vertex",
+      "HAND_proxy_local": "true",
+      "HAND_mean": 8.8,
+      "status": "hand_proxy_local_only_not_full_hydrologic"
+    },
+    {
+      "point_id": "S17C33_EAC_0003",
+      "role": "canary",
+      "elevation_at_patch_m": 7.0,
+      "elevation_at_nearest_drainage_m": "not_available_no_dem_at_drainage_vertex",
+      "HAND_proxy_local": "true",
+      "HAND_mean": 7.0,
+      "status": "hand_proxy_local_only_not_full_hydrologic"
+    },
+    {
+      "point_id": "S17C33_EAC_0004",
+      "role": "canary",
+      "elevation_at_patch_m": 6.2,
+      "elevation_at_nearest_drainage_m": "not_available_no_dem_at_drainage_vertex",
+      "HAND_proxy_local": "true",
+      "HAND_mean": 6.2,
+      "status": "hand_proxy_local_only_not_full_hydrologic"
+    },
+    {
+      "point_id": "S17C33_EAC_0005",
+      "role": "canary",
+      "elevation_at_patch_m": 5.8,
+      "elevation_at_nearest_drainage_m": "not_available_no_dem_at_drainage_vertex",
+      "HAND_proxy_local": "true",
+      "HAND_mean": 5.8,
+      "status": "hand_proxy_local_only_not_full_hydrologic"
+    },
+    {
+      "point_id": "S17C33_EAC_0006",
+      "role": "canary",
+      "elevation_at_patch_m": 8.6,
+      "elevation_at_nearest_drainage_m": "not_available_no_dem_at_drainage_vertex",
+      "HAND_proxy_local": "true",
+      "HAND_mean": 8.6,
+      "status": "hand_proxy_local_only_not_full_hydrologic"
+    },
+    {
+      "point_id": "S17C33_EAC_0007",
+      "role": "canary",
+      "elevation_at_patch_m": 14.0,
+      "elevation_at_nearest_drainage_m": "not_available_no_dem_at_drainage_vertex",
+      "HAND_proxy_local": "true",
+      "HAND_mean": 14.0,
+      "status": "hand_proxy_local_only_not_full_hydrologic"
+    },
+    {
+      "point_id": "S17C33_EAC_0008",
+      "role": "canary",
+      "elevation_at_patch_m": 9.2,
+      "elevation_at_nearest_drainage_m": "not_available_no_dem_at_drainage_vertex",
+      "HAND_proxy_local": "true",
+      "HAND_mean": 9.2,
+      "status": "hand_proxy_local_only_not_full_hydrologic"
+    },
+    {
+      "point_id": "S17C33_EAC_0009",
+      "role": "canary",
+      "elevation_at_patch_m": 11.2,
+      "elevation_at_nearest_drainage_m": "not_available_no_dem_at_drainage_vertex",
+      "HAND_proxy_local": "true",
+      "HAND_mean": 11.2,
+      "status": "hand_proxy_local_only_not_full_hydrologic"
+    },
+    {
+      "point_id": "S17C33_EAC_0010",
+      "role": "canary",
+      "elevation_at_patch_m": 15.4,
+      "elevation_at_nearest_drainage_m": "not_available_no_dem_at_drainage_vertex",
+      "HAND_proxy_local": "true",
+      "HAND_mean": 15.4,
+      "status": "hand_proxy_local_only_not_full_hydrologic"
+    },
+    {
+      "point_id": "S17C33_EAC_0011",
+      "role": "canary",
+      "elevation_at_patch_m": 13.2,
+      "elevation_at_nearest_drainage_m": "not_available_no_dem_at_drainage_vertex",
+      "HAND_proxy_local": "true",
+      "HAND_mean": 13.2,
+      "status": "hand_proxy_local_only_not_full_hydrologic"
+    },
+    {
+      "point_id": "S17C6_CANARY_REC_00001",
+      "role": "original",
+      "elevation_at_patch_m": "not_available",
+      "elevation_at_nearest_drainage_m": "not_available_no_dem_at_drainage_vertex",
+      "HAND_proxy_local": "false",
+      "HAND_mean": "not_available",
+      "status": "not_computable"
+    }
+  ]
+}

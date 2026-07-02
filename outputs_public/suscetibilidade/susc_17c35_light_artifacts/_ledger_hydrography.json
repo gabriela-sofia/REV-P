@@ -1,0 +1,161 @@
+{
+  "generated_at_utc": "2026-07-02T14:17:03Z",
+  "attempts": [
+    {
+      "source": "dados_recife_ckan",
+      "query": "hidrografia",
+      "authority": "official_municipal",
+      "status": "searched",
+      "result_count": "0",
+      "failure_reason": ""
+    },
+    {
+      "source": "dados_recife_ckan",
+      "query": "drenagem",
+      "authority": "official_municipal",
+      "status": "searched",
+      "result_count": "3",
+      "failure_reason": ""
+    },
+    {
+      "source": "dados_recife_ckan",
+      "query": "corpos d agua",
+      "authority": "official_municipal",
+      "status": "searched",
+      "result_count": "2",
+      "failure_reason": ""
+    },
+    {
+      "source": "dados_recife_ckan",
+      "query": "rios",
+      "authority": "official_municipal",
+      "status": "searched",
+      "result_count": "2",
+      "failure_reason": ""
+    },
+    {
+      "source": "dados_recife_ckan",
+      "query": "canais",
+      "authority": "official_municipal",
+      "status": "searched",
+      "result_count": "2",
+      "failure_reason": ""
+    },
+    {
+      "source": "dados_recife_ckan",
+      "query": "faixas marginais recursos hidricos",
+      "authority": "official_municipal",
+      "status": "searched",
+      "result_count": "1",
+      "failure_reason": ""
+    },
+    {
+      "source": "dados_recife_ckan",
+      "query": "faixas-marginais download",
+      "authority": "official_municipal",
+      "status": "acquired",
+      "result_count": "81",
+      "failure_reason": ""
+    }
+  ],
+  "manifest": [
+    {
+      "source": "dados_recife_ckan",
+      "dataset": "faixas-marginais-dos-recursos-hidricos",
+      "authority": "official_municipal",
+      "url": "https://dados.recife.pe.gov.br:443/dataset/1bf02d9c-2754-41cc-aede-1ac8e237f166/resource/81310c02-4bb8-4fea-b676-0c42977b4aef/download/faixas-marginais-dos-recursos-hidricos.geojson",
+      "light_artifact": "faixas_marginais_aoi_light.geojson",
+      "sha256": "98003930a3f168d75b4ed3e4f7750044ccd6454cd954045a9e8bfb046aa0ef47",
+      "size_bytes": "2939819",
+      "raw_size_bytes": "3411982",
+      "feature_count_total": "81",
+      "feature_count_aoi": "34"
+    }
+  ],
+  "features": [
+    {
+      "point_id": "S17C33_EAC_0001",
+      "role": "canary",
+      "official_available": "true",
+      "distance_to_official_water_m": 104.1,
+      "source": "faixas_marginais_recursos_hidricos"
+    },
+    {
+      "point_id": "S17C33_EAC_0002",
+      "role": "canary",
+      "official_available": "true",
+      "distance_to_official_water_m": 109.8,
+      "source": "faixas_marginais_recursos_hidricos"
+    },
+    {
+      "point_id": "S17C33_EAC_0003",
+      "role": "canary",
+      "official_available": "true",
+      "distance_to_official_water_m": 99.1,
+      "source": "faixas_marginais_recursos_hidricos"
+    },
+    {
+      "point_id": "S17C33_EAC_0004",
+      "role": "canary",
+      "official_available": "true",
+      "distance_to_official_water_m": 0.0,
+      "source": "faixas_marginais_recursos_hidricos"
+    },
+    {
+      "point_id": "S17C33_EAC_0005",
+      "role": "canary",
+      "official_available": "true",
+      "distance_to_official_water_m": 0.0,
+      "source": "faixas_marginais_recursos_hidricos"
+    },
+    {
+      "point_id": "S17C33_EAC_0006",
+      "role": "canary",
+      "official_available": "true",
+      "distance_to_official_water_m": 75.9,
+      "source": "faixas_marginais_recursos_hidricos"
+    },
+    {
+      "point_id": "S17C33_EAC_0007",
+      "role": "canary",
+      "official_available": "true",
+      "distance_to_official_water_m": 219.4,
+      "source": "faixas_marginais_recursos_hidricos"
+    },
+    {
+      "point_id": "S17C33_EAC_0008",
+      "role": "canary",
+      "official_available": "true",
+      "distance_to_official_water_m": 0.0,
+      "source": "faixas_marginais_recursos_hidricos"
+    },
+    {
+      "point_id": "S17C33_EAC_0009",
+      "role": "canary",
+      "official_available": "true",
+      "distance_to_official_water_m": 0.0,
+      "source": "faixas_marginais_recursos_hidricos"
+    },
+    {
+      "point_id": "S17C33_EAC_0010",
+      "role": "canary",
+      "official_available": "true",
+      "distance_to_official_water_m": 0.0,
+      "source": "faixas_marginais_recursos_hidricos"
+    },
+    {
+      "point_id": "S17C33_EAC_0011",
+      "role": "canary",
+      "official_available": "true",
+      "distance_to_official_water_m": 414.6,
+      "source": "faixas_marginais_recursos_hidricos"
+    },
+    {
+      "point_id": "S17C6_CANARY_REC_00001",
+      "role": "original",
+      "official_available": "true",
+      "distance_to_official_water_m": 210.8,
+      "source": "faixas_marginais_recursos_hidricos"
+    }
+  ]
+}

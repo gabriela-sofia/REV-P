@@ -1,0 +1,81 @@
+{
+  "score_v6_official_path": "datasets/suscetibilidade/susc_score_v6_candidate_by_patch_v1.csv",
+  "score_v6_hash_before": "a41d0983db97ca4b71e932313200a2d6f3c3a6f7",
+  "score_v6_hash_after": "a41d0983db97ca4b71e932313200a2d6f3c3a6f7",
+  "score_v6_original_file_changed": false,
+  "formula_source_script": "scripts/suscetibilidade/build_susc_10a_score_v6_candidate.py",
+  "weights": {
+    "topography_hydrology_index": 0.4,
+    "rainfall_trigger_index": 0.25,
+    "urban_spectral_index": 0.2,
+    "vegetation_mitigation_index": -0.1,
+    "evidence_support_index": 0.05
+  },
+  "component_names": [
+    "topography_hydrology_index",
+    "rainfall_trigger_index",
+    "urban_spectral_index",
+    "vegetation_mitigation_index",
+    "evidence_support_index"
+  ],
+  "required_features": [
+    "elevation_mean",
+    "slope_mean",
+    "hand_mean",
+    "twi_mean",
+    "tpi_250m_mean",
+    "distance_to_water_mean",
+    "flow_acc_log_mean",
+    "chirps_3d_mm",
+    "chirps_7d_mm",
+    "chirps_30d_mm",
+    "rain_7d_30d_ratio",
+    "rain_persistence_index",
+    "runoff_context_7d",
+    "runoff_context_30d",
+    "ndvi_mean",
+    "mndwi_mean",
+    "ndbi_mean",
+    "urban_prop",
+    "vegetation_prop"
+  ],
+  "subindex_features": {
+    "topography_hydrology_index": [
+      "elevation_mean",
+      "slope_mean",
+      "hand_mean",
+      "twi_mean",
+      "tpi_250m_mean",
+      "distance_to_water_mean",
+      "flow_acc_log_mean"
+    ],
+    "rainfall_trigger_index": [
+      "chirps_3d_mm",
+      "chirps_7d_mm",
+      "chirps_30d_mm",
+      "rain_7d_30d_ratio",
+      "rain_persistence_index",
+      "runoff_context_7d",
+      "runoff_context_30d"
+    ],
+    "urban_spectral_index": [
+      "mndwi_mean",
+      "ndbi_mean",
+      "urban_prop"
+    ],
+    "vegetation_mitigation_index": [
+      "ndvi_mean",
+      "vegetation_prop"
+    ]
+  },
+  "normalization_method": "winsorize(0.01,0.99)+robust_minmax_direction_aware",
+  "normalization_population": "datasets/suscetibilidade/susc_features_by_patch_v1.csv (populacao oficial completa)",
+  "winsorization_policy": {
+    "lo": 0.01,
+    "hi": 0.99
+  },
+  "imputation_policy": "none_forbidden_unless_official_policy",
+  "can_replay_without_population": false,
+  "canary_only_normalization_allowed": false,
+  "review_only": true
+}

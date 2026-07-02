@@ -1,0 +1,12 @@
+landcover_urban_feature_id,canary_patch_id,landcover_source,landcover_authority,landcover_resolution_m,landcover_available,urban_prop,vegetation_prop,water_prop,built_up_proxy_ndbi,proxy_only,blocking_reason,review_only
+S17C33_LC_0001,S17C33_EAC_0001,dados_recife_cobertura_da_terra,official_municipal_dados_recife,vector_polygon,true,0.5513,0.0441,0.3098,-0.002,false,not_applicable,true
+S17C33_LC_0002,S17C33_EAC_0002,dados_recife_cobertura_da_terra,official_municipal_dados_recife,vector_polygon,true,0.6321,0.0464,0.0468,-0.0483,false,not_applicable,true
+S17C33_LC_0003,S17C33_EAC_0003,dados_recife_cobertura_da_terra,official_municipal_dados_recife,vector_polygon,true,0.7555,0.119,0.0537,0.1431,false,not_applicable,true
+S17C33_LC_0004,S17C33_EAC_0004,dados_recife_cobertura_da_terra,official_municipal_dados_recife,vector_polygon,true,0.4877,0.4111,0.0061,-0.0582,false,not_applicable,true
+S17C33_LC_0005,S17C33_EAC_0005,dados_recife_cobertura_da_terra,official_municipal_dados_recife,vector_polygon,true,0.4461,0.4632,0.0055,-0.0667,false,not_applicable,true
+S17C33_LC_0006,S17C33_EAC_0006,dados_recife_cobertura_da_terra,official_municipal_dados_recife,vector_polygon,true,0.7153,0.0736,0.0048,0.1093,false,not_applicable,true
+S17C33_LC_0007,S17C33_EAC_0007,dados_recife_cobertura_da_terra,official_municipal_dados_recife,vector_polygon,true,0.8299,0.1609,0.0034,-0.0684,false,not_applicable,true
+S17C33_LC_0008,S17C33_EAC_0008,dados_recife_cobertura_da_terra,official_municipal_dados_recife,vector_polygon,true,0.4286,0.447,0.0735,-0.1554,false,not_applicable,true
+S17C33_LC_0009,S17C33_EAC_0009,dados_recife_cobertura_da_terra,official_municipal_dados_recife,vector_polygon,true,0.6055,0.3313,0.0482,-0.221,false,not_applicable,true
+S17C33_LC_0010,S17C33_EAC_0010,dados_recife_cobertura_da_terra,official_municipal_dados_recife,vector_polygon,true,0.4124,0.5463,0.0327,-0.1884,false,not_applicable,true
+S17C33_LC_0011,S17C33_EAC_0011,dados_recife_cobertura_da_terra,official_municipal_dados_recife,vector_polygon,true,0.7499,0.2052,0.0348,-0.188,false,not_applicable,true
