@@ -1,0 +1,95 @@
+{
+  "pipeline_id": "S17C30_BLUEPRINT_V1",
+  "steps": [
+    {
+      "step": 1,
+      "name": "buscar_fontes_candidatas",
+      "description": "listar candidatos por familia (Defesa Civil, APAC, CEMADEN, SGB/CPRM, Copernicus EMS, S2iD, Sentinel-1/2)"
+    },
+    {
+      "step": 2,
+      "name": "classificar_autoridade",
+      "description": "atribuir authority_tier (official, official_institutional, official_institutional_public_agency, technical, news)"
+    },
+    {
+      "step": 3,
+      "name": "capturar_artefato_leve",
+      "description": "download opt-in, HTML/PDF/CSV/JSON, <=500KB, sem raw geoTIFF/NC/ZIP"
+    },
+    {
+      "step": 4,
+      "name": "gerar_hash_manifesto",
+      "description": "sha256 + manifesto reproduzivel"
+    },
+    {
+      "step": 5,
+      "name": "extrair_metadados_textuais",
+      "description": "parse deterministico HTML/PDF/CSV"
+    },
+    {
+      "step": 6,
+      "name": "detectar_sinal_temporal",
+      "description": "publication_date + event_date_or_period"
+    },
+    {
+      "step": 7,
+      "name": "detectar_sinal_espacial",
+      "description": "cidade, bairro, logradouro, coordenada, poligono"
+    },
+    {
+      "step": 8,
+      "name": "detectar_fenomeno",
+      "description": "flood terms vs landslide terms vs misto"
+    },
+    {
+      "step": 9,
+      "name": "classificar_qualidade_documental",
+      "description": "aplicar scoring policy A..F"
+    },
+    {
+      "step": 10,
+      "name": "abrir_gates_documentais",
+      "description": "G1/G2/G3/G6/G7 quando cabivel"
+    },
+    {
+      "step": 11,
+      "name": "abrir_subgates_g4_g5",
+      "description": "G4a/G4b/G5a/G5b/G5c quando cabivel"
+    },
+    {
+      "step": 12,
+      "name": "manter_full_gates_bloqueados",
+      "description": "G4_full/G5_full fail-closed sem geometria/fenomeno separado"
+    },
+    {
+      "step": 13,
+      "name": "criar_event_record_candidate",
+      "description": "review-only, nao vira GT/label/reference alone"
+    },
+    {
+      "step": 14,
+      "name": "criar_blockers_explicitos",
+      "description": "documentar bloqueadores por subgate"
+    },
+    {
+      "step": 15,
+      "name": "decidir_proximo_passo",
+      "description": "CHIRPS/Sentinel-2/Sentinel-1 SAR/embedding/QA/ground_reference_search/rejection"
+    }
+  ],
+  "guardrails": [
+    "documentary_source_never_ground_truth",
+    "news_never_ground_reference_alone",
+    "sensor_never_event_observation",
+    "chirps_never_event_reference",
+    "embedding_never_label",
+    "mixed_phenomenon_never_G5_full",
+    "bairro_only_never_G4_full",
+    "score_v6_never_changed",
+    "score_v7_never_created",
+    "17b_never_unlocked_via_documentary_source_alone"
+  ],
+  "review_only": true,
+  "trainable": false,
+  "ground_truth": false
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C30 multimodal followup schema v1",
+  "type": "object",
+  "required": [
+    "multimodal_followup_decision_id",
+    "source_id",
+    "source_name",
+    "candidate_patch_id",
+    "event_id",
+    "source_quality_class",
+    "followup_chirps",
+    "followup_sentinel2",
+    "followup_sentinel1_sar",
+    "followup_embedding",
+    "followup_human_qa",
+    "followup_ground_reference_search",
+    "reason",
+    "required_inputs_before_followup",
+    "blocked_from_ground_truth",
+    "blocked_from_training",
+    "blocked_from_score_v7",
+    "review_only"
+  ],
+  "properties": {
+    "multimodal_followup_decision_id": {"type": "string", "pattern": "^S17C30_MMFD_"},
+    "blocked_from_ground_truth": {"const": "true"},
+    "blocked_from_training": {"const": "true"},
+    "blocked_from_score_v7": {"const": "true"},
+    "review_only": {"const": "true"}
+  }
+}

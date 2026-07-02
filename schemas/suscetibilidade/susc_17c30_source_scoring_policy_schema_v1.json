@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C30 source scoring policy schema v1",
+  "type": "object",
+  "required": [
+    "policy_id",
+    "policy_version",
+    "signals",
+    "classes",
+    "review_only",
+    "trainable",
+    "ground_truth"
+  ],
+  "properties": {
+    "policy_id": {"type": "string"},
+    "policy_version": {"type": "string"},
+    "signals": {
+      "type": "array",
+      "minItems": 10,
+      "items": {
+        "type": "object",
+        "required": ["signal_id", "signal_name", "scale_min", "scale_max", "description"],
+        "properties": {
+          "signal_id": {"type": "string"},
+          "signal_name": {"type": "string"},
+          "scale_min": {"type": "integer", "const": 0},
+          "scale_max": {"type": "integer", "const": 3}
+        }
+      }
+    },
+    "classes": {
+      "type": "array",
+      "minItems": 6,
+      "items": {
+        "type": "object",
+        "required": ["class_code", "class_name", "rule", "allowed_uses", "blocked_uses"]
+      }
+    },
+    "review_only": {"const": true},
+    "trainable": {"const": false},
+    "ground_truth": {"const": false}
+  }
+}

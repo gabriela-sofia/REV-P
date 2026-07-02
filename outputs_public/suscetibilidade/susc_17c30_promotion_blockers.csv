@@ -1,0 +1,13 @@
+blocker_id,blocker_type,description,blocks_documentary_evidence,blocks_ground_reference_candidate,blocks_17b,blocks_score_v7,review_only
+S17C30_BLOCKER_0001,documentary_source_not_ground_truth,fonte documental nunca vira ground truth,false,false,true,true,true
+S17C30_BLOCKER_0002,G4_full_blocked_no_patch_level_geometry,G4_full exige geometria/coordenada patch-level,false,true,true,true,true
+S17C30_BLOCKER_0003,G4_full_blocked_no_patch_buffer_link,G4_full exige distancia/intersecao compativel com patch/buffer,false,true,true,true,true
+S17C30_BLOCKER_0004,G5_full_blocked_mixed_phenomenon,fenomeno misto (inundacao + deslizamento) nao vira G5_full,false,true,true,true,true
+S17C30_BLOCKER_0005,G5_full_blocked_no_hydrological_separation,G5_full exige hidrologico separado por local,false,true,true,true,true
+S17C30_BLOCKER_0006,bairro_only_not_patch_link,bairro/cidade sem geometria nao vira patch_link,false,true,true,true,true
+S17C30_BLOCKER_0007,news_context_not_ground_reference,noticia comercial nao vira Ground Reference,false,true,true,true,true
+S17C30_BLOCKER_0008,embedding_not_label,embedding nunca serve de label,false,false,true,true,true
+S17C30_BLOCKER_0009,chirps_not_event_reference,CHIRPS nunca vira evento observado,false,false,true,true,true
+S17C30_BLOCKER_0010,sentinel_not_event_reference,Sentinel nunca vira evento observado,false,false,true,true,true
+S17C30_BLOCKER_0011,score_v7_blocked,score v7 bloqueado ate ground reference oficial aceito,false,false,true,true,true
+S17C30_BLOCKER_0012,17b_blocked,17B bloqueado ate G4_full + G5_full satisfeitos com ground reference aceito,false,false,true,true,true
