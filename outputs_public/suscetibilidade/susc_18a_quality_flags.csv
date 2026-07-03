@@ -1,0 +1,643 @@
+quality_flag_id,unified_patch_id,feature_family,flag_name,flag_value,severity,explanation,review_only
+S18A_QF_00001,S18A_PATCH_0001,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00002,S18A_PATCH_0001,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00003,S18A_PATCH_0002,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00004,S18A_PATCH_0002,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00005,S18A_PATCH_0003,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00006,S18A_PATCH_0003,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00007,S18A_PATCH_0004,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00008,S18A_PATCH_0004,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00009,S18A_PATCH_0005,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00010,S18A_PATCH_0005,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00011,S18A_PATCH_0006,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00012,S18A_PATCH_0006,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00013,S18A_PATCH_0007,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00014,S18A_PATCH_0007,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00015,S18A_PATCH_0008,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00016,S18A_PATCH_0008,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00017,S18A_PATCH_0009,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00018,S18A_PATCH_0009,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00019,S18A_PATCH_0010,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00020,S18A_PATCH_0010,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00021,S18A_PATCH_0011,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00022,S18A_PATCH_0011,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00023,S18A_PATCH_0012,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00024,S18A_PATCH_0012,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00025,S18A_PATCH_0013,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00026,S18A_PATCH_0013,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00027,S18A_PATCH_0014,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00028,S18A_PATCH_0014,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00029,S18A_PATCH_0015,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00030,S18A_PATCH_0015,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00031,S18A_PATCH_0016,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00032,S18A_PATCH_0016,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00033,S18A_PATCH_0017,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00034,S18A_PATCH_0017,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00035,S18A_PATCH_0018,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00036,S18A_PATCH_0018,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00037,S18A_PATCH_0019,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00038,S18A_PATCH_0019,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00039,S18A_PATCH_0020,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00040,S18A_PATCH_0020,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00041,S18A_PATCH_0021,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00042,S18A_PATCH_0021,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00043,S18A_PATCH_0022,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00044,S18A_PATCH_0022,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00045,S18A_PATCH_0023,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00046,S18A_PATCH_0023,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00047,S18A_PATCH_0024,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00048,S18A_PATCH_0024,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00049,S18A_PATCH_0025,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00050,S18A_PATCH_0025,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00051,S18A_PATCH_0026,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00052,S18A_PATCH_0026,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00053,S18A_PATCH_0027,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00054,S18A_PATCH_0027,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00055,S18A_PATCH_0028,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00056,S18A_PATCH_0028,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00057,S18A_PATCH_0029,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00058,S18A_PATCH_0029,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00059,S18A_PATCH_0030,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00060,S18A_PATCH_0030,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00061,S18A_PATCH_0031,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00062,S18A_PATCH_0031,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00063,S18A_PATCH_0032,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00064,S18A_PATCH_0032,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00065,S18A_PATCH_0033,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00066,S18A_PATCH_0033,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00067,S18A_PATCH_0034,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00068,S18A_PATCH_0034,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00069,S18A_PATCH_0035,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00070,S18A_PATCH_0035,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00071,S18A_PATCH_0036,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00072,S18A_PATCH_0036,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00073,S18A_PATCH_0037,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00074,S18A_PATCH_0037,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00075,S18A_PATCH_0038,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00076,S18A_PATCH_0038,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00077,S18A_PATCH_0039,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00078,S18A_PATCH_0039,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00079,S18A_PATCH_0040,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00080,S18A_PATCH_0040,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00081,S18A_PATCH_0041,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00082,S18A_PATCH_0041,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00083,S18A_PATCH_0042,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00084,S18A_PATCH_0042,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00085,S18A_PATCH_0043,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00086,S18A_PATCH_0043,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00087,S18A_PATCH_0044,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00088,S18A_PATCH_0044,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00089,S18A_PATCH_0045,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00090,S18A_PATCH_0045,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00091,S18A_PATCH_0046,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00092,S18A_PATCH_0046,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00093,S18A_PATCH_0047,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00094,S18A_PATCH_0047,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00095,S18A_PATCH_0048,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00096,S18A_PATCH_0048,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00097,S18A_PATCH_0049,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00098,S18A_PATCH_0049,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00099,S18A_PATCH_0050,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00100,S18A_PATCH_0050,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00101,S18A_PATCH_0051,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00102,S18A_PATCH_0051,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00103,S18A_PATCH_0052,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00104,S18A_PATCH_0052,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00105,S18A_PATCH_0053,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00106,S18A_PATCH_0053,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00107,S18A_PATCH_0054,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00108,S18A_PATCH_0054,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00109,S18A_PATCH_0055,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00110,S18A_PATCH_0055,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00111,S18A_PATCH_0056,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00112,S18A_PATCH_0056,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00113,S18A_PATCH_0057,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00114,S18A_PATCH_0057,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00115,S18A_PATCH_0058,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00116,S18A_PATCH_0058,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00117,S18A_PATCH_0059,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00118,S18A_PATCH_0059,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00119,S18A_PATCH_0060,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00120,S18A_PATCH_0060,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00121,S18A_PATCH_0061,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00122,S18A_PATCH_0061,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00123,S18A_PATCH_0062,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00124,S18A_PATCH_0062,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00125,S18A_PATCH_0063,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00126,S18A_PATCH_0063,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00127,S18A_PATCH_0064,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00128,S18A_PATCH_0064,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00129,S18A_PATCH_0065,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00130,S18A_PATCH_0065,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00131,S18A_PATCH_0066,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00132,S18A_PATCH_0066,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00133,S18A_PATCH_0067,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00134,S18A_PATCH_0067,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00135,S18A_PATCH_0068,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00136,S18A_PATCH_0068,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00137,S18A_PATCH_0069,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00138,S18A_PATCH_0069,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00139,S18A_PATCH_0070,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00140,S18A_PATCH_0070,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00141,S18A_PATCH_0071,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00142,S18A_PATCH_0071,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00143,S18A_PATCH_0072,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00144,S18A_PATCH_0072,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00145,S18A_PATCH_0073,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00146,S18A_PATCH_0073,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00147,S18A_PATCH_0074,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00148,S18A_PATCH_0074,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00149,S18A_PATCH_0075,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00150,S18A_PATCH_0075,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00151,S18A_PATCH_0076,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00152,S18A_PATCH_0076,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00153,S18A_PATCH_0077,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00154,S18A_PATCH_0077,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00155,S18A_PATCH_0078,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00156,S18A_PATCH_0078,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00157,S18A_PATCH_0079,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00158,S18A_PATCH_0079,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00159,S18A_PATCH_0080,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00160,S18A_PATCH_0080,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00161,S18A_PATCH_0081,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00162,S18A_PATCH_0081,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00163,S18A_PATCH_0082,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00164,S18A_PATCH_0082,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00165,S18A_PATCH_0083,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00166,S18A_PATCH_0083,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00167,S18A_PATCH_0084,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00168,S18A_PATCH_0084,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00169,S18A_PATCH_0085,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00170,S18A_PATCH_0085,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00171,S18A_PATCH_0086,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00172,S18A_PATCH_0086,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00173,S18A_PATCH_0087,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00174,S18A_PATCH_0087,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00175,S18A_PATCH_0088,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00176,S18A_PATCH_0088,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00177,S18A_PATCH_0089,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00178,S18A_PATCH_0089,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00179,S18A_PATCH_0090,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00180,S18A_PATCH_0090,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00181,S18A_PATCH_0091,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00182,S18A_PATCH_0091,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00183,S18A_PATCH_0092,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00184,S18A_PATCH_0092,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00185,S18A_PATCH_0093,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00186,S18A_PATCH_0093,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00187,S18A_PATCH_0094,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00188,S18A_PATCH_0094,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00189,S18A_PATCH_0095,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00190,S18A_PATCH_0095,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00191,S18A_PATCH_0096,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00192,S18A_PATCH_0096,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00193,S18A_PATCH_0097,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00194,S18A_PATCH_0097,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00195,S18A_PATCH_0098,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00196,S18A_PATCH_0098,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00197,S18A_PATCH_0099,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00198,S18A_PATCH_0099,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00199,S18A_PATCH_0100,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00200,S18A_PATCH_0100,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00201,S18A_PATCH_0101,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00202,S18A_PATCH_0101,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00203,S18A_PATCH_0102,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00204,S18A_PATCH_0102,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00205,S18A_PATCH_0103,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00206,S18A_PATCH_0103,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00207,S18A_PATCH_0104,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00208,S18A_PATCH_0104,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00209,S18A_PATCH_0105,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00210,S18A_PATCH_0105,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00211,S18A_PATCH_0106,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00212,S18A_PATCH_0106,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00213,S18A_PATCH_0107,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00214,S18A_PATCH_0107,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00215,S18A_PATCH_0108,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00216,S18A_PATCH_0108,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00217,S18A_PATCH_0109,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00218,S18A_PATCH_0109,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00219,S18A_PATCH_0110,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00220,S18A_PATCH_0110,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00221,S18A_PATCH_0111,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00222,S18A_PATCH_0111,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00223,S18A_PATCH_0112,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00224,S18A_PATCH_0112,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00225,S18A_PATCH_0113,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00226,S18A_PATCH_0113,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00227,S18A_PATCH_0114,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00228,S18A_PATCH_0114,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00229,S18A_PATCH_0115,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00230,S18A_PATCH_0115,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00231,S18A_PATCH_0116,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00232,S18A_PATCH_0116,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00233,S18A_PATCH_0117,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00234,S18A_PATCH_0117,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00235,S18A_PATCH_0118,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00236,S18A_PATCH_0118,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00237,S18A_PATCH_0119,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00238,S18A_PATCH_0119,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00239,S18A_PATCH_0120,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00240,S18A_PATCH_0120,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00241,S18A_PATCH_0121,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00242,S18A_PATCH_0121,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00243,S18A_PATCH_0122,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00244,S18A_PATCH_0122,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00245,S18A_PATCH_0123,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00246,S18A_PATCH_0123,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00247,S18A_PATCH_0124,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00248,S18A_PATCH_0124,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00249,S18A_PATCH_0125,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00250,S18A_PATCH_0125,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00251,S18A_PATCH_0126,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00252,S18A_PATCH_0126,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00253,S18A_PATCH_0127,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00254,S18A_PATCH_0127,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00255,S18A_PATCH_0128,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00256,S18A_PATCH_0128,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00257,S18A_PATCH_0129,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00258,S18A_PATCH_0129,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00259,S18A_PATCH_0130,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00260,S18A_PATCH_0130,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00261,S18A_PATCH_0131,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00262,S18A_PATCH_0131,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00263,S18A_PATCH_0132,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00264,S18A_PATCH_0132,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00265,S18A_PATCH_0133,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00266,S18A_PATCH_0133,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00267,S18A_PATCH_0134,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00268,S18A_PATCH_0134,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00269,S18A_PATCH_0135,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00270,S18A_PATCH_0135,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00271,S18A_PATCH_0136,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00272,S18A_PATCH_0136,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00273,S18A_PATCH_0137,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00274,S18A_PATCH_0137,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00275,S18A_PATCH_0138,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00276,S18A_PATCH_0138,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00277,S18A_PATCH_0139,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00278,S18A_PATCH_0139,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00279,S18A_PATCH_0140,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00280,S18A_PATCH_0140,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00281,S18A_PATCH_0141,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00282,S18A_PATCH_0141,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00283,S18A_PATCH_0142,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00284,S18A_PATCH_0142,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00285,S18A_PATCH_0143,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00286,S18A_PATCH_0143,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00287,S18A_PATCH_0144,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00288,S18A_PATCH_0144,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00289,S18A_PATCH_0145,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00290,S18A_PATCH_0145,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00291,S18A_PATCH_0146,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00292,S18A_PATCH_0146,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00293,S18A_PATCH_0147,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00294,S18A_PATCH_0147,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00295,S18A_PATCH_0148,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00296,S18A_PATCH_0148,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00297,S18A_PATCH_0149,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00298,S18A_PATCH_0149,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00299,S18A_PATCH_0150,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00300,S18A_PATCH_0150,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00301,S18A_PATCH_0151,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00302,S18A_PATCH_0151,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00303,S18A_PATCH_0152,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00304,S18A_PATCH_0152,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00305,S18A_PATCH_0153,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00306,S18A_PATCH_0153,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00307,S18A_PATCH_0154,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00308,S18A_PATCH_0154,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00309,S18A_PATCH_0155,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00310,S18A_PATCH_0155,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00311,S18A_PATCH_0156,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00312,S18A_PATCH_0156,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00313,S18A_PATCH_0157,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00314,S18A_PATCH_0157,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00315,S18A_PATCH_0158,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00316,S18A_PATCH_0158,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00317,S18A_PATCH_0159,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00318,S18A_PATCH_0159,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00319,S18A_PATCH_0160,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00320,S18A_PATCH_0160,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00321,S18A_PATCH_0161,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00322,S18A_PATCH_0161,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00323,S18A_PATCH_0162,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00324,S18A_PATCH_0162,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00325,S18A_PATCH_0163,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00326,S18A_PATCH_0163,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00327,S18A_PATCH_0164,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00328,S18A_PATCH_0164,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00329,S18A_PATCH_0165,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00330,S18A_PATCH_0165,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00331,S18A_PATCH_0166,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00332,S18A_PATCH_0166,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00333,S18A_PATCH_0167,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00334,S18A_PATCH_0167,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00335,S18A_PATCH_0168,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00336,S18A_PATCH_0168,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00337,S18A_PATCH_0169,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00338,S18A_PATCH_0169,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00339,S18A_PATCH_0170,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00340,S18A_PATCH_0170,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00341,S18A_PATCH_0171,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00342,S18A_PATCH_0171,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00343,S18A_PATCH_0172,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00344,S18A_PATCH_0172,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00345,S18A_PATCH_0173,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00346,S18A_PATCH_0173,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00347,S18A_PATCH_0174,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00348,S18A_PATCH_0174,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00349,S18A_PATCH_0175,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00350,S18A_PATCH_0175,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00351,S18A_PATCH_0176,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00352,S18A_PATCH_0176,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00353,S18A_PATCH_0177,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00354,S18A_PATCH_0177,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00355,S18A_PATCH_0178,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00356,S18A_PATCH_0178,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00357,S18A_PATCH_0179,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00358,S18A_PATCH_0179,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00359,S18A_PATCH_0180,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00360,S18A_PATCH_0180,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00361,S18A_PATCH_0181,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00362,S18A_PATCH_0181,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00363,S18A_PATCH_0182,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00364,S18A_PATCH_0182,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00365,S18A_PATCH_0183,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00366,S18A_PATCH_0183,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00367,S18A_PATCH_0184,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00368,S18A_PATCH_0184,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00369,S18A_PATCH_0185,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00370,S18A_PATCH_0185,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00371,S18A_PATCH_0186,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00372,S18A_PATCH_0186,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00373,S18A_PATCH_0187,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00374,S18A_PATCH_0187,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00375,S18A_PATCH_0188,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00376,S18A_PATCH_0188,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00377,S18A_PATCH_0189,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00378,S18A_PATCH_0189,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00379,S18A_PATCH_0190,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00380,S18A_PATCH_0190,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00381,S18A_PATCH_0191,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00382,S18A_PATCH_0191,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00383,S18A_PATCH_0192,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00384,S18A_PATCH_0192,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00385,S18A_PATCH_0193,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00386,S18A_PATCH_0193,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00387,S18A_PATCH_0194,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00388,S18A_PATCH_0194,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00389,S18A_PATCH_0195,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00390,S18A_PATCH_0195,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00391,S18A_PATCH_0196,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00392,S18A_PATCH_0196,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00393,S18A_PATCH_0197,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00394,S18A_PATCH_0197,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00395,S18A_PATCH_0198,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00396,S18A_PATCH_0198,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00397,S18A_PATCH_0199,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00398,S18A_PATCH_0199,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00399,S18A_PATCH_0200,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00400,S18A_PATCH_0200,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00401,S18A_PATCH_0201,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00402,S18A_PATCH_0201,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00403,S18A_PATCH_0202,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00404,S18A_PATCH_0202,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00405,S18A_PATCH_0203,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00406,S18A_PATCH_0203,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00407,S18A_PATCH_0204,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00408,S18A_PATCH_0204,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00409,S18A_PATCH_0205,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00410,S18A_PATCH_0205,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00411,S18A_PATCH_0206,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00412,S18A_PATCH_0206,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00413,S18A_PATCH_0207,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00414,S18A_PATCH_0207,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00415,S18A_PATCH_0208,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00416,S18A_PATCH_0208,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00417,S18A_PATCH_0209,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00418,S18A_PATCH_0209,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00419,S18A_PATCH_0210,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00420,S18A_PATCH_0210,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00421,S18A_PATCH_0211,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00422,S18A_PATCH_0211,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00423,S18A_PATCH_0212,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00424,S18A_PATCH_0212,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00425,S18A_PATCH_0213,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00426,S18A_PATCH_0213,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00427,S18A_PATCH_0214,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00428,S18A_PATCH_0214,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00429,S18A_PATCH_0215,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00430,S18A_PATCH_0215,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00431,S18A_PATCH_0216,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00432,S18A_PATCH_0216,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00433,S18A_PATCH_0217,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00434,S18A_PATCH_0217,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00435,S18A_PATCH_0218,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00436,S18A_PATCH_0218,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00437,S18A_PATCH_0219,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00438,S18A_PATCH_0219,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00439,S18A_PATCH_0220,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00440,S18A_PATCH_0220,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00441,S18A_PATCH_0221,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00442,S18A_PATCH_0221,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00443,S18A_PATCH_0222,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00444,S18A_PATCH_0222,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00445,S18A_PATCH_0223,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00446,S18A_PATCH_0223,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00447,S18A_PATCH_0224,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00448,S18A_PATCH_0224,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00449,S18A_PATCH_0225,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00450,S18A_PATCH_0225,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00451,S18A_PATCH_0226,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00452,S18A_PATCH_0226,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00453,S18A_PATCH_0227,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00454,S18A_PATCH_0227,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00455,S18A_PATCH_0228,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00456,S18A_PATCH_0228,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00457,S18A_PATCH_0229,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00458,S18A_PATCH_0229,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00459,S18A_PATCH_0230,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00460,S18A_PATCH_0230,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00461,S18A_PATCH_0231,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00462,S18A_PATCH_0231,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00463,S18A_PATCH_0232,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00464,S18A_PATCH_0232,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00465,S18A_PATCH_0233,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00466,S18A_PATCH_0233,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00467,S18A_PATCH_0234,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00468,S18A_PATCH_0234,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00469,S18A_PATCH_0235,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00470,S18A_PATCH_0235,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00471,S18A_PATCH_0236,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00472,S18A_PATCH_0236,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00473,S18A_PATCH_0237,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00474,S18A_PATCH_0237,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00475,S18A_PATCH_0238,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00476,S18A_PATCH_0238,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00477,S18A_PATCH_0239,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00478,S18A_PATCH_0239,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00479,S18A_PATCH_0240,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00480,S18A_PATCH_0240,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00481,S18A_PATCH_0241,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00482,S18A_PATCH_0241,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00483,S18A_PATCH_0242,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00484,S18A_PATCH_0242,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00485,S18A_PATCH_0243,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00486,S18A_PATCH_0243,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00487,S18A_PATCH_0244,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00488,S18A_PATCH_0244,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00489,S18A_PATCH_0245,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00490,S18A_PATCH_0245,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00491,S18A_PATCH_0246,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00492,S18A_PATCH_0246,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00493,S18A_PATCH_0247,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00494,S18A_PATCH_0247,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00495,S18A_PATCH_0248,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00496,S18A_PATCH_0248,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00497,S18A_PATCH_0249,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00498,S18A_PATCH_0249,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00499,S18A_PATCH_0250,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00500,S18A_PATCH_0250,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00501,S18A_PATCH_0251,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00502,S18A_PATCH_0251,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00503,S18A_PATCH_0252,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00504,S18A_PATCH_0252,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00505,S18A_PATCH_0253,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00506,S18A_PATCH_0253,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00507,S18A_PATCH_0254,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00508,S18A_PATCH_0254,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00509,S18A_PATCH_0255,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00510,S18A_PATCH_0255,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00511,S18A_PATCH_0256,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00512,S18A_PATCH_0256,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00513,S18A_PATCH_0257,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00514,S18A_PATCH_0257,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00515,S18A_PATCH_0258,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00516,S18A_PATCH_0258,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00517,S18A_PATCH_0259,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00518,S18A_PATCH_0259,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00519,S18A_PATCH_0260,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00520,S18A_PATCH_0260,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00521,S18A_PATCH_0261,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00522,S18A_PATCH_0261,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00523,S18A_PATCH_0262,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00524,S18A_PATCH_0262,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00525,S18A_PATCH_0263,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00526,S18A_PATCH_0263,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00527,S18A_PATCH_0264,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00528,S18A_PATCH_0264,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00529,S18A_PATCH_0265,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00530,S18A_PATCH_0265,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00531,S18A_PATCH_0266,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00532,S18A_PATCH_0266,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00533,S18A_PATCH_0267,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00534,S18A_PATCH_0267,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00535,S18A_PATCH_0268,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00536,S18A_PATCH_0268,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00537,S18A_PATCH_0269,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00538,S18A_PATCH_0269,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00539,S18A_PATCH_0270,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00540,S18A_PATCH_0270,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00541,S18A_PATCH_0271,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00542,S18A_PATCH_0271,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00543,S18A_PATCH_0272,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00544,S18A_PATCH_0272,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00545,S18A_PATCH_0273,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00546,S18A_PATCH_0273,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00547,S18A_PATCH_0274,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00548,S18A_PATCH_0274,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00549,S18A_PATCH_0275,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00550,S18A_PATCH_0275,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00551,S18A_PATCH_0276,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00552,S18A_PATCH_0276,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00553,S18A_PATCH_0277,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00554,S18A_PATCH_0277,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00555,S18A_PATCH_0278,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00556,S18A_PATCH_0278,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00557,S18A_PATCH_0279,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00558,S18A_PATCH_0279,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00559,S18A_PATCH_0280,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00560,S18A_PATCH_0280,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00561,S18A_PATCH_0281,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00562,S18A_PATCH_0281,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00563,S18A_PATCH_0282,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00564,S18A_PATCH_0282,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00565,S18A_PATCH_0283,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00566,S18A_PATCH_0283,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00567,S18A_PATCH_0284,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00568,S18A_PATCH_0284,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00569,S18A_PATCH_0285,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00570,S18A_PATCH_0285,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00571,S18A_PATCH_0286,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00572,S18A_PATCH_0286,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00573,S18A_PATCH_0287,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00574,S18A_PATCH_0287,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00575,S18A_PATCH_0288,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00576,S18A_PATCH_0288,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00577,S18A_PATCH_0289,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00578,S18A_PATCH_0289,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00579,S18A_PATCH_0290,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00580,S18A_PATCH_0290,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00581,S18A_PATCH_0291,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00582,S18A_PATCH_0291,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00583,S18A_PATCH_0292,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00584,S18A_PATCH_0292,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00585,S18A_PATCH_0293,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00586,S18A_PATCH_0293,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00587,S18A_PATCH_0294,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00588,S18A_PATCH_0294,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00589,S18A_PATCH_0295,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00590,S18A_PATCH_0295,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00591,S18A_PATCH_0296,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00592,S18A_PATCH_0296,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00593,S18A_PATCH_0297,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00594,S18A_PATCH_0297,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00595,S18A_PATCH_0298,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00596,S18A_PATCH_0298,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00597,S18A_PATCH_0299,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00598,S18A_PATCH_0299,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00599,S18A_PATCH_0300,all,feature_completeness_ratio,0.8333,info,5/6 familias de dados disponiveis para o patch,true
+S18A_QF_00600,S18A_PATCH_0300,transparent_review_components,family_missing,true,warning,"familia transparent_review_components indisponivel para official_population_patch (missingness explicita, sem imputacao)",true
+S18A_QF_00601,S18A_PATCH_0301,all,feature_completeness_ratio,1.0,info,6/6 familias de dados disponiveis para o patch,true
+S18A_QF_00602,S18A_PATCH_0301,terrain_topography,flow_acc_not_official_equivalent,true,high,flow_acc recomputado (DEM publico) NAO equivalente ao oficial (17C39); contrato de substituicao review-only,true
+S18A_QF_00603,S18A_PATCH_0302,all,feature_completeness_ratio,1.0,info,6/6 familias de dados disponiveis para o patch,true
+S18A_QF_00604,S18A_PATCH_0302,terrain_topography,flow_acc_not_official_equivalent,true,high,flow_acc recomputado (DEM publico) NAO equivalente ao oficial (17C39); contrato de substituicao review-only,true
+S18A_QF_00605,S18A_PATCH_0303,all,feature_completeness_ratio,1.0,info,6/6 familias de dados disponiveis para o patch,true
+S18A_QF_00606,S18A_PATCH_0303,terrain_topography,flow_acc_not_official_equivalent,true,high,flow_acc recomputado (DEM publico) NAO equivalente ao oficial (17C39); contrato de substituicao review-only,true
+S18A_QF_00607,S18A_PATCH_0304,all,feature_completeness_ratio,1.0,info,6/6 familias de dados disponiveis para o patch,true
+S18A_QF_00608,S18A_PATCH_0304,terrain_topography,flow_acc_not_official_equivalent,true,high,flow_acc recomputado (DEM publico) NAO equivalente ao oficial (17C39); contrato de substituicao review-only,true
+S18A_QF_00609,S18A_PATCH_0305,all,feature_completeness_ratio,1.0,info,6/6 familias de dados disponiveis para o patch,true
+S18A_QF_00610,S18A_PATCH_0305,terrain_topography,flow_acc_not_official_equivalent,true,high,flow_acc recomputado (DEM publico) NAO equivalente ao oficial (17C39); contrato de substituicao review-only,true
+S18A_QF_00611,S18A_PATCH_0306,all,feature_completeness_ratio,1.0,info,6/6 familias de dados disponiveis para o patch,true
+S18A_QF_00612,S18A_PATCH_0306,terrain_topography,flow_acc_not_official_equivalent,true,high,flow_acc recomputado (DEM publico) NAO equivalente ao oficial (17C39); contrato de substituicao review-only,true
+S18A_QF_00613,S18A_PATCH_0307,all,feature_completeness_ratio,1.0,info,6/6 familias de dados disponiveis para o patch,true
+S18A_QF_00614,S18A_PATCH_0307,terrain_topography,flow_acc_not_official_equivalent,true,high,flow_acc recomputado (DEM publico) NAO equivalente ao oficial (17C39); contrato de substituicao review-only,true
+S18A_QF_00615,S18A_PATCH_0308,all,feature_completeness_ratio,1.0,info,6/6 familias de dados disponiveis para o patch,true
+S18A_QF_00616,S18A_PATCH_0308,terrain_topography,flow_acc_not_official_equivalent,true,high,flow_acc recomputado (DEM publico) NAO equivalente ao oficial (17C39); contrato de substituicao review-only,true
+S18A_QF_00617,S18A_PATCH_0309,all,feature_completeness_ratio,1.0,info,6/6 familias de dados disponiveis para o patch,true
+S18A_QF_00618,S18A_PATCH_0309,terrain_topography,flow_acc_not_official_equivalent,true,high,flow_acc recomputado (DEM publico) NAO equivalente ao oficial (17C39); contrato de substituicao review-only,true
+S18A_QF_00619,S18A_PATCH_0310,all,feature_completeness_ratio,1.0,info,6/6 familias de dados disponiveis para o patch,true
+S18A_QF_00620,S18A_PATCH_0310,terrain_topography,flow_acc_not_official_equivalent,true,high,flow_acc recomputado (DEM publico) NAO equivalente ao oficial (17C39); contrato de substituicao review-only,true
+S18A_QF_00621,S18A_PATCH_0311,all,feature_completeness_ratio,1.0,info,6/6 familias de dados disponiveis para o patch,true
+S18A_QF_00622,S18A_PATCH_0311,terrain_topography,flow_acc_not_official_equivalent,true,high,flow_acc recomputado (DEM publico) NAO equivalente ao oficial (17C39); contrato de substituicao review-only,true
+S18A_QF_00623,S18A_PATCH_0312,all,feature_completeness_ratio,0.5,warning,3/6 familias de dados disponiveis para o patch,true
+S18A_QF_00624,S18A_PATCH_0312,terrain_topography,family_missing,true,warning,"familia terrain_topography indisponivel para spatial_mismatch_control_candidate (missingness explicita, sem imputacao)",true
+S18A_QF_00625,S18A_PATCH_0312,hydrology_proximity,family_missing,true,warning,"familia hydrology_proximity indisponivel para spatial_mismatch_control_candidate (missingness explicita, sem imputacao)",true
+S18A_QF_00626,S18A_PATCH_0312,landcover_urban,family_missing,true,warning,"familia landcover_urban indisponivel para spatial_mismatch_control_candidate (missingness explicita, sem imputacao)",true
+S18A_QF_00627,S18A_PATCH_0313,all,feature_completeness_ratio,0.5,warning,3/6 familias de dados disponiveis para o patch,true
+S18A_QF_00628,S18A_PATCH_0313,terrain_topography,family_missing,true,warning,"familia terrain_topography indisponivel para spatial_mismatch_control_candidate (missingness explicita, sem imputacao)",true
+S18A_QF_00629,S18A_PATCH_0313,hydrology_proximity,family_missing,true,warning,"familia hydrology_proximity indisponivel para spatial_mismatch_control_candidate (missingness explicita, sem imputacao)",true
+S18A_QF_00630,S18A_PATCH_0313,landcover_urban,family_missing,true,warning,"familia landcover_urban indisponivel para spatial_mismatch_control_candidate (missingness explicita, sem imputacao)",true
+S18A_QF_00631,S18A_PATCH_0314,all,feature_completeness_ratio,0.5,warning,3/6 familias de dados disponiveis para o patch,true
+S18A_QF_00632,S18A_PATCH_0314,terrain_topography,family_missing,true,warning,"familia terrain_topography indisponivel para spatial_mismatch_control_candidate (missingness explicita, sem imputacao)",true
+S18A_QF_00633,S18A_PATCH_0314,hydrology_proximity,family_missing,true,warning,"familia hydrology_proximity indisponivel para spatial_mismatch_control_candidate (missingness explicita, sem imputacao)",true
+S18A_QF_00634,S18A_PATCH_0314,landcover_urban,family_missing,true,warning,"familia landcover_urban indisponivel para spatial_mismatch_control_candidate (missingness explicita, sem imputacao)",true
+S18A_QF_00635,S18A_PATCH_0315,all,feature_completeness_ratio,0.5,warning,3/6 familias de dados disponiveis para o patch,true
+S18A_QF_00636,S18A_PATCH_0315,terrain_topography,family_missing,true,warning,"familia terrain_topography indisponivel para spatial_mismatch_control_candidate (missingness explicita, sem imputacao)",true
+S18A_QF_00637,S18A_PATCH_0315,hydrology_proximity,family_missing,true,warning,"familia hydrology_proximity indisponivel para spatial_mismatch_control_candidate (missingness explicita, sem imputacao)",true
+S18A_QF_00638,S18A_PATCH_0315,landcover_urban,family_missing,true,warning,"familia landcover_urban indisponivel para spatial_mismatch_control_candidate (missingness explicita, sem imputacao)",true
+S18A_QF_00639,S18A_PATCH_0316,all,feature_completeness_ratio,0.5,warning,3/6 familias de dados disponiveis para o patch,true
+S18A_QF_00640,S18A_PATCH_0316,terrain_topography,family_missing,true,warning,"familia terrain_topography indisponivel para spatial_mismatch_control_candidate (missingness explicita, sem imputacao)",true
+S18A_QF_00641,S18A_PATCH_0316,hydrology_proximity,family_missing,true,warning,"familia hydrology_proximity indisponivel para spatial_mismatch_control_candidate (missingness explicita, sem imputacao)",true
+S18A_QF_00642,S18A_PATCH_0316,landcover_urban,family_missing,true,warning,"familia landcover_urban indisponivel para spatial_mismatch_control_candidate (missingness explicita, sem imputacao)",true

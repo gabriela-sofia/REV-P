@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-18A feature availability matrix schema v1",
+  "type": "object",
+  "required": [
+    "availability_id", "unified_patch_id", "patch_family", "sentinel2_status", "chirps_status",
+    "terrain_status", "hydrology_status", "landcover_status", "transparent_component_status",
+    "lineage_status", "complete_family_count", "missing_family_count", "blocking_reason", "review_only"
+  ],
+  "properties": {
+    "availability_id": {"type": "string", "pattern": "^S18A_AVAIL_"},
+    "review_only": {"const": "true"}
+  }
+}
