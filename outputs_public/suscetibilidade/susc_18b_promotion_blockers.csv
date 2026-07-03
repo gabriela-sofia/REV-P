@@ -1,0 +1,11 @@
+blocker_id,blocker_type,description,blocks_supervised_training,blocks_17b,review_only
+S18B_BLOCKER_0001,supervised_training_blocked_no_ground_reference_labels,treino supervisionado bloqueado: 0 labels de ground reference aceitos,true,true,true
+S18B_BLOCKER_0002,no_training_labels,"nenhum label de treino existe (nem sintetico, nem pseudo-label)",true,true,true
+S18B_BLOCKER_0003,not_ground_truth,nenhum artefato e ground truth,true,true,true
+S18B_BLOCKER_0004,not_score_v7,nao cria score v7,true,true,true
+S18B_BLOCKER_0005,flow_acc_not_equivalent,flow_acc nao tratado como equivalente ao oficial,true,true,true
+S18B_BLOCKER_0006,canary_not_positive_label,canario NAO e label positivo,true,true,true
+S18B_BLOCKER_0007,control_not_negative_label,controle NAO e label negativo,true,true,true
+S18B_BLOCKER_0008,score_v6_not_training_target,"score v6 usado so como referencia, nunca target",true,true,true
+S18B_BLOCKER_0009,17b_blocked,17B exige G4_full + ground reference aceito; nao atingido,true,true,true
+S18B_BLOCKER_0010,ml_readiness_created,infra de ML readiness entregue (review-only),true,true,true
