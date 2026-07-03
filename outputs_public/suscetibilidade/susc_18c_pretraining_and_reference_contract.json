@@ -1,0 +1,22 @@
+{
+  "milestone": "SUSC-18C",
+  "self_supervised_training_allowed": true,
+  "supervised_training_allowed": false,
+  "supervised_training_can_be_enabled_by_label_contract": true,
+  "canary_is_positive_label": false,
+  "control_is_negative_label": false,
+  "score_v6_is_target": false,
+  "transparent_index_is_target": false,
+  "occurrence_anchor_is_feature": false,
+  "ground_reference_candidate_is_label": false,
+  "accepted_ground_reference_can_enable_training": true,
+  "self_supervised_methods": [
+    "masked_feature_modeling",
+    "denoising_autoencoder_tabular",
+    "contrastive_similarity_representation",
+    "family_ablation_embeddings",
+    "region_holdout_reconstruction"
+  ],
+  "post_event_footprint_never_pre_event_feature": true,
+  "review_only": true
+}

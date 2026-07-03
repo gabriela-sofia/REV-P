@@ -1,0 +1,10 @@
+blocker_id,blocker_type,description,blocks_supervised_training,blocks_17b,review_only
+S18C_BLOCKER_0001,supervised_training_blocked_no_accepted_ground_reference,0 ground references aceitos por QA,true,true,true
+S18C_BLOCKER_0002,label_contract_not_satisfied,"criterios do label contract nao cumpridos (accepted<50, eventos<5, regioes<3)",true,true,true
+S18C_BLOCKER_0003,negative_policy_not_approved,politica de amostragem negativa nao aprovada,true,true,true
+S18C_BLOCKER_0004,temporal_split_not_possible,1 evento so nao permite split temporal (>=2),true,true,true
+S18C_BLOCKER_0005,qa_not_accepted,candidatos de ground reference pendentes de QA (nenhum aceito),true,true,true
+S18C_BLOCKER_0006,ground_truth_blocked,sem ground truth,true,true,true
+S18C_BLOCKER_0007,score_v7_blocked,sem score v7,true,true,true
+S18C_BLOCKER_0008,17b_blocked,17B exige G4_full + ground reference aceito suficiente; nao atingido,true,true,true
+S18C_BLOCKER_0009,self_supervised_completed,pretraining self-supervised entregue (review-only),true,true,true

@@ -1,0 +1,8 @@
+quality_metric_id,metric_name,metric_value,interpretation,limitation,review_only
+S18C_RQ_0001,reconstruction_mae,0.190937,erro medio absoluto de reconstrucao denoising,escala normalizada review-only,true
+S18C_RQ_0002,reconstruction_rmse,0.327919,raiz do erro quadratico medio,sensivel a outliers,true
+S18C_RQ_0003,neighbor_stability,0.591139,sobreposicao media top5 tensor vs embedding,alta=representacao preserva vizinhanca,true
+S18C_RQ_0004,family_mixing_ratio,0.023418,fracao media de vizinhos de familia diferente,baixa=embedding separa por familia (disponibilidade),true
+S18C_RQ_0005,region_mixing_ratio,0.094304,fracao media de vizinhos de regiao diferente,review-only,true
+S18C_RQ_0006,canary_neighbor_density,0.563636,densidade media de canarios na vizinhanca de canarios,canarios proximos entre si; NAO e positividade,true
+S18C_RQ_0007,missingness_sensitivity,0.15042,correlacao erro de reconstrucao x n de familias faltantes,alta=missingness domina representacao,true

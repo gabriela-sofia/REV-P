@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-18C ground reference candidate registry schema v1",
+  "type": "object",
+  "required": [
+    "ground_reference_candidate_id", "event_id", "unified_patch_id", "source_patch_id", "city",
+    "region", "phenomenon_type", "event_date", "event_date_precision", "geometry_type",
+    "geometry_source", "geometry_precision_m", "source_authority", "source_confidence",
+    "patch_link_status", "qa_status", "eligible_for_training", "eligible_for_17b",
+    "not_ground_truth_reason", "review_only"
+  ],
+  "properties": {
+    "ground_reference_candidate_id": {"type": "string", "pattern": "^S18C_GRC_"},
+    "eligible_for_training": {"const": "false"},
+    "eligible_for_17b": {"const": "false"},
+    "review_only": {"const": "true"}
+  }
+}

@@ -1,0 +1,12 @@
+patch_reference_link_id,ground_reference_candidate_id,unified_patch_id,patch_intersects_geometry,distance_to_geometry_m,temporal_compatibility,phenomenon_compatibility,spatial_uncertainty_m,link_confidence,qa_required,accepted_for_label_contract,review_only
+S18C_PRL_0001,S18C_GRC_0001,S18A_PATCH_0301,true,0.0,pre_event_window_ok,hydrological_match,800,medium,true,false,true
+S18C_PRL_0002,S18C_GRC_0002,S18A_PATCH_0302,true,0.0,pre_event_window_ok,hydrological_match,800,medium,true,false,true
+S18C_PRL_0003,S18C_GRC_0003,S18A_PATCH_0303,true,0.0,pre_event_window_ok,hydrological_match,800,medium,true,false,true
+S18C_PRL_0004,S18C_GRC_0004,S18A_PATCH_0304,true,0.0,pre_event_window_ok,hydrological_match,800,medium,true,false,true
+S18C_PRL_0005,S18C_GRC_0005,S18A_PATCH_0305,true,0.0,pre_event_window_ok,hydrological_match,800,medium,true,false,true
+S18C_PRL_0006,S18C_GRC_0006,S18A_PATCH_0306,true,0.0,pre_event_window_ok,hydrological_match,800,medium,true,false,true
+S18C_PRL_0007,S18C_GRC_0007,S18A_PATCH_0307,true,0.0,pre_event_window_ok,hydrological_match,800,medium,true,false,true
+S18C_PRL_0008,S18C_GRC_0008,S18A_PATCH_0308,true,0.0,pre_event_window_ok,hydrological_match,800,medium,true,false,true
+S18C_PRL_0009,S18C_GRC_0009,S18A_PATCH_0309,true,0.0,pre_event_window_ok,hydrological_match,800,medium,true,false,true
+S18C_PRL_0010,S18C_GRC_0010,S18A_PATCH_0310,true,0.0,pre_event_window_ok,hydrological_match,800,medium,true,false,true
+S18C_PRL_0011,S18C_GRC_0011,S18A_PATCH_0311,true,0.0,pre_event_window_ok,hydrological_match,800,medium,true,false,true
