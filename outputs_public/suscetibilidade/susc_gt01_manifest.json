@@ -1,0 +1,77 @@
+{
+  "marco": "SUSC-GT01",
+  "titulo_publico": "Ground Reference Policy & Evidence State Taxonomy",
+  "branch": "marco/avaliacao-observacional-review-only-matriz-multimodal",
+  "head": "2fbf261",
+  "states": [
+    "positive_strong",
+    "positive_provisional",
+    "unlabeled",
+    "hard_negative_audited",
+    "no_data",
+    "rejected"
+  ],
+  "default_state": "unlabeled",
+  "global_guardrails": {
+    "eligible_for_training": "false",
+    "eligible_for_ground_truth": "false",
+    "score_v7_candidate": "false",
+    "trainable": "false",
+    "review_only": "true",
+    "supervised_training_allowed": "false",
+    "score_v6_altered": "false",
+    "score_v7_created": "false",
+    "network_access": "false",
+    "raster_download": "false"
+  },
+  "score_v6_changed": false,
+  "score_v7_created": false,
+  "artifacts": [
+    {
+      "path": "outputs_public/suscetibilidade/SUSC_GT01_GROUND_REFERENCE_POLICY.md",
+      "sha256": "ec2eab28ebf8d0b529e4cc32e0225255d3e4dbb9305dd419959e16c7b78318b9",
+      "bytes": 7239
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt01_evidence_state_taxonomy.csv",
+      "sha256": "fa8640905c10b8d764fcdb2b9038fdb4a58248a82e7382727c8bd7422d8b8184",
+      "bytes": 2232
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt01_ground_reference_policy.json",
+      "sha256": "16f9a174e9bcb165ce1a97c1e5686db008a310bd08a03055eb173cc5f9321407",
+      "bytes": 7478
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt01_transition_rules.csv",
+      "sha256": "26c3f0eef37b37cf123c9f973b37c7608f071e6d462bf131aa1288a5bfde7573",
+      "bytes": 1903
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt01_not_ground_truth_reasons.csv",
+      "sha256": "a9b27949be9f4d3a53021fe984cc96537ae2662b2a3225fcb9ab96729067c447",
+      "bytes": 1139
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt01_review_only_decision_table.csv",
+      "sha256": "723528ae69666be7ddb2464372e97897aa94d95f59e6162a156d155549fd2b7e",
+      "bytes": 2124
+    },
+    {
+      "path": "schemas/suscetibilidade/susc_gt01_ground_reference_policy.schema.json",
+      "sha256": "05810b4f29a373f7a3c121c8fa83fe2f5bd8e4aa2e4a932f4f58fb0adc2322c3",
+      "bytes": 1475
+    },
+    {
+      "path": "schemas/suscetibilidade/susc_gt01_evidence_state.schema.json",
+      "sha256": "23c5dc14de4b6211a89fb9a5487ad28eff03d163c715c641ec2286faf202aeff",
+      "bytes": 3648
+    },
+    {
+      "path": "schemas/suscetibilidade/susc_gt01_patch_reference_decision.schema.json",
+      "sha256": "620a013afcc091fa34d50130c39a01cde766c01a43228083a5ff4c967d0c25bc",
+      "bytes": 1791
+    }
+  ],
+  "proximo_marco": "calibracao candidata review-only + canarios observacionais SAR + QA humano"
+}

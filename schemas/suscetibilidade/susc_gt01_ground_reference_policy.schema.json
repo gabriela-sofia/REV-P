@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "susc_gt01_ground_reference_policy.schema.json",
+  "title": "SUSC-GT01 Ground Reference Policy",
+  "type": "object",
+  "required": [
+    "marco",
+    "default_state",
+    "global_guardrails",
+    "states",
+    "petropolis_phenomenon_separation",
+    "operational_forecast_claim"
+  ],
+  "properties": {
+    "marco": {
+      "const": "SUSC-GT01"
+    },
+    "default_state": {
+      "const": "unlabeled"
+    },
+    "global_guardrails": {
+      "type": "object",
+      "required": [
+        "eligible_for_training",
+        "eligible_for_ground_truth",
+        "score_v7_candidate",
+        "trainable",
+        "review_only"
+      ],
+      "properties": {
+        "eligible_for_training": {
+          "const": "false"
+        },
+        "eligible_for_ground_truth": {
+          "const": "false"
+        },
+        "score_v7_candidate": {
+          "const": "false"
+        },
+        "trainable": {
+          "const": "false"
+        },
+        "review_only": {
+          "const": "true"
+        }
+      }
+    },
+    "states": {
+      "type": "array",
+      "minItems": 6,
+      "items": {
+        "$ref": "susc_gt01_evidence_state.schema.json"
+      }
+    },
+    "operational_forecast_claim": {
+      "type": "object",
+      "properties": {
+        "revp_operational_flood_forecast": {
+          "const": false
+        }
+      }
+    }
+  }
+}

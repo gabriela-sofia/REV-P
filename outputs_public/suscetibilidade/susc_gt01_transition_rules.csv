@@ -1,0 +1,14 @@
+from_state,trigger,to_state,guard,allowed,review_only
+any,criacao_do_patch,unlabeled,todo patch nasce unlabeled; nunca negative,true,true
+unlabeled,evento_documentado_forte + geometria_forte + patch_link_forte + qa_aceito,positive_strong,"exige event_date, geometry_type, source_authority, patch_link_quality, uncertainty_m, qa_status",true,true
+unlabeled,evento_bem_documentado_sem_geometria_forte,positive_provisional,documentacao forte mas geometria insuficiente para patch-level forte,true,true
+positive_provisional,geometria_oficial_adquirida + patch_link_forte + qa_aceito,positive_strong,promocao apenas com geometria forte e QA,true,true
+unlabeled,mesmo_evento + fora_de_footprint + sem_exclusoes + seco + qa_aceito,hard_negative_audited,"negativo auditado raro; exige observability, exclusion_check, qa_status",true,true
+unlabeled,cloud|sar_shadow|layover|speckle|vegetation|urban_ambiguity|no_image|bad_source|insufficient_geometry,no_data,exige blocking_reason,true,true
+any,incompatibilidade_fenomeno|temporal|localizacao|fonte|duplicidade,rejected,exige rejection_reason auditavel,true,true
+alert_only,alerta_vira_evento_observado,positive_strong,alerta nao pode virar evento observado nem patch_link forte,false,true
+risk_area_not_event,area_de_risco_vira_evento,positive_strong,area de risco nao e evento ocorrido,false,true
+news_report,noticia_vira_patch_link_forte,positive_strong,noticia nao vira patch_link forte,false,true
+municipality_or_neighborhood_affected,municipio_bairro_vira_patch_atingido,positive_strong,municipio/bairro atingido nao vira patch atingido,false,true
+post_event_footprint,footprint_pos_evento_vira_feature_pre_evento,positive_strong,footprint pos-evento nao vira feature pre-evento,false,true
+unlabeled,ausencia_de_registro_vira_negativo,hard_negative_audited,ausencia de registro nao e negativo; hard_negative exige patch observado no evento + QA,false,true
