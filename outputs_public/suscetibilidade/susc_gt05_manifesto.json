@@ -1,0 +1,103 @@
+{
+  "marco": "SUSC-GT05",
+  "titulo_publico": "Pacote de Aquisição de Geometria Oficial",
+  "branch": "marco/avaliacao-observacional-review-only-matriz-multimodal",
+  "head": "5cbe1b1",
+  "gt04_source_commit": "5cbe1b1",
+  "alvos_total": 557,
+  "distribuicao_geometrica": {
+    "geometria_parcial_resolvivel": 263,
+    "requer_footprint_tecnico_futuro": 277,
+    "geometria_ausente": 9,
+    "geometria_rejeitada": 8
+  },
+  "geometria_forte_existente": 0,
+  "geometria_parcial_resolvivel": 263,
+  "requer_footprint_tecnico_futuro": 277,
+  "geometria_contextual_insuficiente": 0,
+  "geometria_ausente": 9,
+  "geometria_rejeitada": 8,
+  "alvos_liberados": 540,
+  "positive_strong_promovidos": 0,
+  "geometria_criada": 0,
+  "global_guardrails": {
+    "eligible_for_training": "false",
+    "eligible_for_ground_truth": "false",
+    "trainable": "false",
+    "score_v7_candidate": "false",
+    "review_only": "true"
+  },
+  "training_true_count": 0,
+  "ground_truth_true_count": 0,
+  "score_v7_candidate_true_count": 0,
+  "score_v6_changed": false,
+  "score_v7_created": false,
+  "proximo_marco": "GT06 - Preparacao de Canarios SAR sem Execucao",
+  "artifacts": [
+    {
+      "path": "outputs_public/suscetibilidade/SUSC_GT05_PACOTE_AQUISICAO_GEOMETRIA_OFICIAL.md",
+      "sha256": "c0e839f853014fcd814e8557b5eb2d37adb6bdc7fb4d4e62c87ed47b8a827d31",
+      "bytes": 7130
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt05_pacote_aquisicao_geometria_oficial.csv",
+      "sha256": "15b269c939120ea4e8154261a8fa1fdaa0ca607b4df18c433c0688668e205b69",
+      "bytes": 358583
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt05_diagnostico_geometrico_por_alvo.csv",
+      "sha256": "7b1a8ffe153ea98ed50d6e9c52e01e40ecde0b8e09d267334eebd20bee3ba0f2",
+      "bytes": 96874
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt05_trilhas_aquisicao_geometrica.csv",
+      "sha256": "442b469ab0455fb2ed5d8be8c33a8561230351e216c88de56927b0911ea284a0",
+      "bytes": 359185
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt05_priorizacao_geometrica.csv",
+      "sha256": "bc6687999ffc1f5e158bb41fb8a0174aa19fd320c59194a365d752a486df0424",
+      "bytes": 5833
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt05_plano_aquisicao_geometria_por_alvo.csv",
+      "sha256": "fca708cb041a585f25dc24d08297a9d5818f7572c4e5386832ee1da5abc13e1a",
+      "bytes": 192608
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt05_bloqueios_geometricos.csv",
+      "sha256": "d8dad1ba4c55c01e37afcca781cec900c9be58ed9aa8c04cd173dae6f3c266b2",
+      "bytes": 65548
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt05_resumo_geometrico.csv",
+      "sha256": "3b31697489fd03999bd3be82f95a18023502fbd1bd7b5a8c9768ed7630d3a395",
+      "bytes": 445
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt05_alvos_liberados_para_qa_ou_sar_futuro.csv",
+      "sha256": "7e76201d0a8b7ec81504bbe0ac97175ae1383bef95b83bb03ba458421e07e4e3",
+      "bytes": 200186
+    },
+    {
+      "path": "schemas/suscetibilidade/susc_gt05_geometry_acquisition_target.schema.json",
+      "sha256": "8079e13a845d9801d271cd75c7fd39398280ed2f49ff538a1e804175eb039fcc",
+      "bytes": 2327
+    },
+    {
+      "path": "schemas/suscetibilidade/susc_gt05_geometry_diagnostic.schema.json",
+      "sha256": "e9c2e98568032c2e50be61d07c39e07caa59a83ff895102bcc5c5b4c4abe1ddd",
+      "bytes": 1955
+    },
+    {
+      "path": "schemas/suscetibilidade/susc_gt05_geometry_track.schema.json",
+      "sha256": "13601c58c6a46276913bc4474d99a3b05e9fec68aba6f90c8006cac653904db5",
+      "bytes": 1533
+    },
+    {
+      "path": "schemas/suscetibilidade/susc_gt05_geometry_summary.schema.json",
+      "sha256": "974a1e5ceb685c42f8f3c7cd86d7c801b21303de2191e8568534f5a1642af49e",
+      "bytes": 1387
+    }
+  ]
+}

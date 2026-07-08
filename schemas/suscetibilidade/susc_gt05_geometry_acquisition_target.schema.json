@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "susc_gt05_geometry_acquisition_target.schema.json",
+  "title": "SUSC-GT05 Alvo de Aquisicao Geometrica",
+  "type": "object",
+  "required": [
+    "geometry_target_id",
+    "target_id",
+    "geometry_acquisition_status",
+    "geometry_priority_score",
+    "geometry_priority_class",
+    "can_become_positive_strong_after_geometry_and_qa",
+    "remains_review_only",
+    "trainable",
+    "eligible_for_training",
+    "eligible_for_ground_truth",
+    "score_v7_candidate",
+    "rationale_pt"
+  ],
+  "properties": {
+    "geometry_target_id": {
+      "type": "string",
+      "pattern": "^GEO_\\d+$"
+    },
+    "target_id": {
+      "type": "string",
+      "pattern": "^TGT_\\d+$"
+    },
+    "geometry_acquisition_status": {
+      "enum": [
+        "geometria_forte_existente",
+        "geometria_parcial_resolvivel",
+        "geometria_contextual_insuficiente",
+        "geometria_ausente",
+        "requer_footprint_tecnico_futuro",
+        "geometria_rejeitada"
+      ]
+    },
+    "geometry_priority_score": {
+      "type": "string",
+      "pattern": "^(100|[1-9]?[0-9])$"
+    },
+    "geometry_priority_class": {
+      "enum": [
+        "prioridade_geometrica_alta",
+        "prioridade_geometrica_media",
+        "prioridade_geometrica_baixa",
+        "bloqueado_por_geometria_insuficiente",
+        "manter_apenas_contexto"
+      ]
+    },
+    "geometry_acquisition_tracks": {
+      "type": "string"
+    },
+    "missing_geometry_requirements": {
+      "type": "string"
+    },
+    "can_advance_to_qa_future": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "can_advance_to_sar_future": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "can_become_positive_strong_after_geometry_and_qa": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "remains_review_only": {
+      "const": "true"
+    },
+    "trainable": {
+      "const": "false"
+    },
+    "eligible_for_training": {
+      "const": "false"
+    },
+    "eligible_for_ground_truth": {
+      "const": "false"
+    },
+    "score_v7_candidate": {
+      "const": "false"
+    },
+    "rationale_pt": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

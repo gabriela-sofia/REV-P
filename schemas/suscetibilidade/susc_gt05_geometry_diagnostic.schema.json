@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "susc_gt05_geometry_diagnostic.schema.json",
+  "title": "SUSC-GT05 Diagnostico Geometrico",
+  "type": "object",
+  "required": [
+    "geometry_diagnostic_id",
+    "geometry_target_id",
+    "target_id",
+    "has_strong_geometry_type",
+    "next_required_geometry_action_pt"
+  ],
+  "properties": {
+    "geometry_diagnostic_id": {
+      "type": "string",
+      "pattern": "^GDG_\\d+$"
+    },
+    "geometry_target_id": {
+      "type": "string",
+      "pattern": "^GEO_\\d+$"
+    },
+    "target_id": {
+      "type": "string",
+      "pattern": "^TGT_\\d+$"
+    },
+    "has_geometry_id": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "has_footprint_id": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "has_patch_id": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "has_geometry_type": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "has_strong_geometry_type": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "has_patch_link_quality": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "has_uncertainty_m": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "has_qa_status": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "geometry_is_contextual_only": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "geometry_is_official_candidate": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "geometry_is_technical_candidate": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "next_required_geometry_action_pt": {
+      "type": "string",
+      "minLength": 1
+    },
+    "prevents_positive_strong": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    }
+  }
+}
