@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "susc_gt02_evidence_replay_record.schema.json",
+  "title": "SUSC-GT02 Registro de Replay de Evidencia",
+  "type": "object",
+  "required": [
+    "replay_id",
+    "source_input_id",
+    "assigned_state",
+    "review_only",
+    "trainable",
+    "eligible_for_training",
+    "eligible_for_ground_truth",
+    "eligible_for_evaluation",
+    "eligible_for_calibration"
+  ],
+  "properties": {
+    "replay_id": {
+      "type": "string",
+      "pattern": "^RP_\\d+$"
+    },
+    "source_input_id": {
+      "type": "string",
+      "pattern": "^IN_\\d+$"
+    },
+    "assigned_state": {
+      "enum": [
+        "positive_strong",
+        "positive_provisional",
+        "unlabeled",
+        "hard_negative_audited",
+        "no_data",
+        "rejected"
+      ]
+    },
+    "review_only": {
+      "const": "true"
+    },
+    "trainable": {
+      "const": "false"
+    },
+    "eligible_for_training": {
+      "const": "false"
+    },
+    "eligible_for_ground_truth": {
+      "const": "false"
+    },
+    "eligible_for_evaluation": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "eligible_for_calibration": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    }
+  }
+}

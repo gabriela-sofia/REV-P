@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "susc_gt02_input_inventory.schema.json",
+  "title": "SUSC-GT02 Inventario de Entradas",
+  "type": "object",
+  "required": [
+    "input_id",
+    "path",
+    "exists",
+    "parseable",
+    "row_count",
+    "usable_for_replay"
+  ],
+  "properties": {
+    "input_id": {
+      "type": "string",
+      "pattern": "^IN_\\d+$"
+    },
+    "path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "artifact_type_guess": {
+      "type": "string"
+    },
+    "exists": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "parseable": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "row_count": {
+      "type": "string",
+      "pattern": "^\\d+$"
+    },
+    "detected_columns": {
+      "type": "string"
+    },
+    "usable_for_replay": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "blocking_reason": {
+      "type": "string"
+    }
+  }
+}

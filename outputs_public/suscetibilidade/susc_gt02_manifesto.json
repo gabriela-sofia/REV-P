@@ -1,0 +1,89 @@
+{
+  "marco": "SUSC-GT02",
+  "titulo_publico": "Motor de Decisão de Referência Observacional e Replay de Evidências",
+  "branch": "marco/avaliacao-observacional-review-only-matriz-multimodal",
+  "head": "4384904",
+  "gt01_head_commit": "4384904",
+  "inputs_descobertos": 29,
+  "inputs_usaveis": 23,
+  "inputs_bloqueados": 6,
+  "registros_replay": 557,
+  "decisoes": 557,
+  "bloqueios": 4286,
+  "distribuicao_estados": {
+    "positive_provisional": 86,
+    "no_data": 471
+  },
+  "positive_strong_count": 0,
+  "global_guardrails": {
+    "eligible_for_training": "false",
+    "eligible_for_ground_truth": "false",
+    "trainable": "false",
+    "score_v7_candidate": "false",
+    "review_only": "true"
+  },
+  "training_true_count": 0,
+  "ground_truth_true_count": 0,
+  "score_v7_candidate_true_count": 0,
+  "score_v6_changed": false,
+  "score_v7_created": false,
+  "gt01_valida": true,
+  "proximo_marco": "GT03 - Pacote de Alvos para Aquisicao de Evidencia Forte",
+  "artifacts": [
+    {
+      "path": "outputs_public/suscetibilidade/SUSC_GT02_MOTOR_DECISAO_REFERENCIA_OBSERVACIONAL_REPLAY.md",
+      "sha256": "9e70859d00971f19b18c9efeaeea28b6fd02423df5f1126b7b6e4ce024d1078d",
+      "bytes": 8320
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt02_inventario_entradas.csv",
+      "sha256": "7c2a760a30e05455f0ee92707d29c318c1d03920cfec06a114420c913ec1a837",
+      "bytes": 13040
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt02_mapeamento_colunas_entrada.csv",
+      "sha256": "7a6fa4fc0c72a9eb6dc9034a29214fcbd4567741d58d8015f71efad51656a53e",
+      "bytes": 12965
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt02_registro_replay_evidencias.csv",
+      "sha256": "f72211bed055ba0fc2ae7b9e63f70014d1f4f0a7c3bca5d09af75484f5511aae",
+      "bytes": 172705
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt02_decisoes_referencia_por_patch.csv",
+      "sha256": "88c7233bb636a630f8b99a4a99fc09a61c5747b009787ebd706bbbb2c6a83255",
+      "bytes": 230423
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt02_bloqueios.csv",
+      "sha256": "e06a3be5d37ccd6d33b1ca51ba874a404c7f0c3a72ebe2870009024d1eb9fbca",
+      "bytes": 703722
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt02_resumo_estados.csv",
+      "sha256": "970772d6fa016d03d2828b11917eda8b4d7a626e4c8d0851360b3b6eb96a31f1",
+      "bytes": 214
+    },
+    {
+      "path": "schemas/suscetibilidade/susc_gt02_input_inventory.schema.json",
+      "sha256": "9645290f3219e27da61e4de85fad263ac3b2b09b4cc2833c40795eb3c8a24bb4",
+      "bytes": 1020
+    },
+    {
+      "path": "schemas/suscetibilidade/susc_gt02_evidence_replay_record.schema.json",
+      "sha256": "f1d7f11a994b5df87514daed215babff4f60979d4c4fa0306e6ada62a4caaefa",
+      "bytes": 1311
+    },
+    {
+      "path": "schemas/suscetibilidade/susc_gt02_patch_reference_decision.schema.json",
+      "sha256": "32db08233d48454f52b1282efc26ad8edd5e5d7574587f7d6dae463a7d6afbef",
+      "bytes": 1644
+    },
+    {
+      "path": "schemas/suscetibilidade/susc_gt02_state_summary.schema.json",
+      "sha256": "5d779fdcfba75fa5aea3c82175be71198817795d7420872a9577dff43b224c85",
+      "bytes": 1121
+    }
+  ]
+}
