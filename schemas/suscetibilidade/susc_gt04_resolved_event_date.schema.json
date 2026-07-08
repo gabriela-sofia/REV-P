@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "susc_gt04_resolved_event_date.schema.json",
+  "title": "SUSC-GT04 Data de Evento Resolvida",
+  "type": "object",
+  "required": [
+    "target_id",
+    "temporal_precision",
+    "temporal_confidence_score",
+    "resolved_event_date",
+    "date_is_inferred",
+    "remains_review_only",
+    "trainable",
+    "eligible_for_training",
+    "eligible_for_ground_truth",
+    "score_v7_candidate"
+  ],
+  "properties": {
+    "target_id": {
+      "type": "string",
+      "pattern": "^TGT_\\d+$"
+    },
+    "temporal_precision": {
+      "enum": [
+        "exact_day",
+        "inferred_from_event_id",
+        "publication_date_only",
+        "date_range",
+        "month_only",
+        "year_only",
+        "unknown",
+        "invalid_or_conflicting"
+      ]
+    },
+    "temporal_confidence_score": {
+      "type": "string",
+      "pattern": "^(100|[1-9]?[0-9])$"
+    },
+    "resolved_event_date": {
+      "type": "string",
+      "pattern": "^(\\d{4}-\\d{2}-\\d{2}|not_available)$"
+    },
+    "date_range_start": {
+      "type": "string",
+      "pattern": "^(\\d{4}-\\d{2}-\\d{2}|not_available)$"
+    },
+    "date_range_end": {
+      "type": "string",
+      "pattern": "^(\\d{4}-\\d{2}-\\d{2}|not_available)$"
+    },
+    "date_is_inferred": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "date_is_publication_only": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "date_conflict_detected": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "remains_review_only": {
+      "const": "true"
+    },
+    "trainable": {
+      "const": "false"
+    },
+    "eligible_for_training": {
+      "const": "false"
+    },
+    "eligible_for_ground_truth": {
+      "const": "false"
+    },
+    "score_v7_candidate": {
+      "const": "false"
+    }
+  }
+}

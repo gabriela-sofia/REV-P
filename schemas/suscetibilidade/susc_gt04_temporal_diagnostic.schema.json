@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "susc_gt04_temporal_diagnostic.schema.json",
+  "title": "SUSC-GT04 Diagnostico Temporal",
+  "type": "object",
+  "required": [
+    "diagnostic_id",
+    "target_id",
+    "event_date_resolved_now",
+    "resolution_level",
+    "next_required_track",
+    "reason_pt"
+  ],
+  "properties": {
+    "diagnostic_id": {
+      "type": "string",
+      "pattern": "^DIA_\\d+$"
+    },
+    "target_id": {
+      "type": "string",
+      "pattern": "^TGT_\\d+$"
+    },
+    "had_missing_event_date_in_gt03": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "event_date_resolved_now": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "resolution_level": {
+      "type": "string",
+      "minLength": 1
+    },
+    "can_advance_to_geometry_acquisition": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "can_advance_to_sar_feasibility_future": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "can_advance_to_qa_future": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "prevents_positive_strong": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "reason_pt": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}
