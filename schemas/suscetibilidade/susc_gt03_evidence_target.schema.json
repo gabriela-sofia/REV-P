@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "susc_gt03_evidence_target.schema.json",
+  "title": "SUSC-GT03 Alvo de Evidencia",
+  "type": "object",
+  "required": [
+    "target_id",
+    "source_replay_id",
+    "assigned_state_gt02",
+    "target_kind",
+    "priority_score",
+    "priority_class",
+    "can_become_positive_strong_after_acquisition",
+    "remains_review_only",
+    "trainable",
+    "eligible_for_training",
+    "eligible_for_ground_truth",
+    "score_v7_candidate",
+    "rationale_pt"
+  ],
+  "properties": {
+    "target_id": {
+      "type": "string",
+      "pattern": "^TGT_\\d+$"
+    },
+    "source_replay_id": {
+      "type": "string",
+      "pattern": "^RP_\\d+$"
+    },
+    "assigned_state_gt02": {
+      "enum": [
+        "positive_strong",
+        "positive_provisional",
+        "unlabeled",
+        "hard_negative_audited",
+        "no_data",
+        "rejected"
+      ]
+    },
+    "target_kind": {
+      "type": "string",
+      "minLength": 1
+    },
+    "priority_score": {
+      "type": "string",
+      "pattern": "^(100|[1-9]?[0-9])$"
+    },
+    "priority_class": {
+      "enum": [
+        "prioridade_alta",
+        "prioridade_media",
+        "prioridade_baixa",
+        "bloqueado_sem_acao_imediata",
+        "descartar_como_contexto"
+      ]
+    },
+    "acquisition_tracks": {
+      "type": "string"
+    },
+    "missing_requirements": {
+      "type": "string"
+    },
+    "can_become_positive_strong_after_acquisition": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "remains_review_only": {
+      "const": "true"
+    },
+    "trainable": {
+      "const": "false"
+    },
+    "eligible_for_training": {
+      "const": "false"
+    },
+    "eligible_for_ground_truth": {
+      "const": "false"
+    },
+    "score_v7_candidate": {
+      "const": "false"
+    },
+    "rationale_pt": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

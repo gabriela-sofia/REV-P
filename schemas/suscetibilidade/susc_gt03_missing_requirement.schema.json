@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "susc_gt03_missing_requirement.schema.json",
+  "title": "SUSC-GT03 Requisito Faltante",
+  "type": "object",
+  "required": [
+    "missing_requirement_id",
+    "target_id",
+    "requirement",
+    "required_for_positive_strong",
+    "severity",
+    "how_to_resolve_pt",
+    "prevents_positive_strong"
+  ],
+  "properties": {
+    "missing_requirement_id": {
+      "type": "string",
+      "pattern": "^MRQ_\\d+$"
+    },
+    "target_id": {
+      "type": "string",
+      "pattern": "^TGT_\\d+$"
+    },
+    "requirement": {
+      "enum": [
+        "event_date",
+        "source_authority",
+        "geometry_type",
+        "patch_id",
+        "patch_link_quality",
+        "uncertainty_m",
+        "qa_status",
+        "phenomenon_type",
+        "pre_event_window",
+        "post_event_window",
+        "observability",
+        "exclusion_check"
+      ]
+    },
+    "required_for_positive_strong": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "current_value": {
+      "type": "string"
+    },
+    "severity": {
+      "enum": [
+        "alta",
+        "media",
+        "baixa"
+      ]
+    },
+    "how_to_resolve_pt": {
+      "type": "string",
+      "minLength": 1
+    },
+    "prevents_positive_strong": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "prevents_calibration": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "prevents_benchmark": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    }
+  }
+}

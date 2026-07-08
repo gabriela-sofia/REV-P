@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "susc_gt03_priority_summary.schema.json",
+  "title": "SUSC-GT03 Resumo de Prioridades",
+  "type": "object",
+  "required": [
+    "priority_class",
+    "count",
+    "average_priority_score",
+    "can_become_positive_strong_after_acquisition_count",
+    "training_allowed_count",
+    "ground_truth_allowed_count",
+    "score_v7_candidate_count"
+  ],
+  "properties": {
+    "priority_class": {
+      "enum": [
+        "prioridade_alta",
+        "prioridade_media",
+        "prioridade_baixa",
+        "bloqueado_sem_acao_imediata",
+        "descartar_como_contexto"
+      ]
+    },
+    "count": {
+      "type": "string",
+      "pattern": "^\\d+$"
+    },
+    "average_priority_score": {
+      "type": "string"
+    },
+    "can_become_positive_strong_after_acquisition_count": {
+      "type": "string",
+      "pattern": "^\\d+$"
+    },
+    "training_allowed_count": {
+      "const": "0"
+    },
+    "ground_truth_allowed_count": {
+      "const": "0"
+    },
+    "score_v7_candidate_count": {
+      "const": "0"
+    }
+  }
+}

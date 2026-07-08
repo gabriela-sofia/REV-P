@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "susc_gt03_acquisition_track.schema.json",
+  "title": "SUSC-GT03 Trilha de Aquisicao",
+  "type": "object",
+  "required": [
+    "track_id",
+    "target_id",
+    "acquisition_track",
+    "objective_pt",
+    "no_network_in_this_milestone",
+    "no_sar_execution_in_this_milestone",
+    "review_only"
+  ],
+  "properties": {
+    "track_id": {
+      "type": "string",
+      "pattern": "^TRK_\\d+$"
+    },
+    "target_id": {
+      "type": "string",
+      "pattern": "^TGT_\\d+$"
+    },
+    "acquisition_track": {
+      "enum": [
+        "resolver_data_evento",
+        "obter_geometria_oficial",
+        "produzir_footprint_tecnico_sar",
+        "estimar_incerteza_espacial",
+        "executar_qa_humano",
+        "separar_fenomeno",
+        "resolver_patch_link",
+        "descartar_ou_rebaixar"
+      ]
+    },
+    "objective_pt": {
+      "type": "string",
+      "minLength": 1
+    },
+    "required_input_pt": {
+      "type": "string"
+    },
+    "expected_output_pt": {
+      "type": "string"
+    },
+    "no_network_in_this_milestone": {
+      "const": "true"
+    },
+    "no_sar_execution_in_this_milestone": {
+      "const": "true"
+    },
+    "review_only": {
+      "const": "true"
+    },
+    "blocker_if_not_done": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,4 @@
+priority_class,count,average_priority_score,can_become_positive_strong_after_acquisition_count,training_allowed_count,ground_truth_allowed_count,score_v7_candidate_count
+prioridade_media,80,62.4,80,0,0,0
+prioridade_baixa,1,32.0,1,0,0,0
+bloqueado_sem_acao_imediata,476,1.95,355,0,0,0
