@@ -1,0 +1,122 @@
+{
+  "marco": "SUSC-GT08",
+  "titulo_publico": "Preparação Integrada de AOI e Busca Sentinel-1 para Canários",
+  "branch": "marco/avaliacao-observacional-review-only-matriz-multimodal",
+  "head": "ffc38ed",
+  "gt07_source_commit": "ffc38ed",
+  "canarios": 5,
+  "distribuicao_aoi": {
+    "aoi_forte_por_bbox_ou_geometria_patch": 5
+  },
+  "catalogos_locais": 1,
+  "cenas_locais_avaliadas": 35,
+  "pre_candidatas": 10,
+  "post_candidatas": 5,
+  "canarios_prontos_busca": 5,
+  "canarios_com_par_completo": 5,
+  "download_executado": 0,
+  "sar_executado": 0,
+  "footprint_criado": 0,
+  "geometria_criada": 0,
+  "positive_strong_promovidos": 0,
+  "qa_executado": 0,
+  "internet_usada": 0,
+  "stac_api_usada": 0,
+  "global_guardrails": {
+    "eligible_for_training": "false",
+    "eligible_for_ground_truth": "false",
+    "trainable": "false",
+    "score_v7_candidate": "false",
+    "review_only": "true"
+  },
+  "training_true_count": 0,
+  "ground_truth_true_count": 0,
+  "score_v7_candidate_true_count": 0,
+  "can_execute_search_now_true_count": 0,
+  "can_download_now_true_count": 0,
+  "score_v6_changed": false,
+  "score_v7_created": false,
+  "proximo_marco": "GT09 - Pacote Visual Manual",
+  "artifacts": [
+    {
+      "path": "outputs_public/suscetibilidade/SUSC_GT08_PREPARACAO_AOI_BUSCA_SENTINEL1_CANARIOS.md",
+      "sha256": "e64a687ec9a027303a2bcdc541eebd3ead2ecda5a670f8867409fec98c83578a",
+      "bytes": 5947
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt08_alvos_sentinel1_canarios.csv",
+      "sha256": "f9175659f793f11b2dfb3602ea56d3d9349ab2988bcd14741cb55365d7290f05",
+      "bytes": 3065
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt08_aoi_resolvido_canarios.csv",
+      "sha256": "74aa6a892f06d7b16c0d64681acc1ff654ea267803c4f59af2f3bf5b16391e3b",
+      "bytes": 1512
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt08_especificacoes_consulta_sentinel1.csv",
+      "sha256": "74cdcbed6d93350bd1ff2bd5f56a8b9dfdd35a8418e6e5efc6521dd41077e896",
+      "bytes": 1702
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt08_catalogos_locais_sentinel1.csv",
+      "sha256": "a1fc590b27e1192b45ccbe6ec6b97d72a2c2c67347671684313399a5ffcabae2",
+      "bytes": 278
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt08_cenas_candidatas_locais_sentinel1.csv",
+      "sha256": "92809a4c1b306de494a149cfc038938b1abb0912665a0ca4e17b0ea92c8f9427",
+      "bytes": 10417
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt08_contrato_pareamento_pre_pos.csv",
+      "sha256": "6eeb6833d98dce44a55c552cedbddf9c75735204244f530e2ad7bf65c8c42333",
+      "bytes": 1499
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt08_plano_execucao_sar_futura.csv",
+      "sha256": "3aebf1785e2ccfa7b4755418bfbbb33ee0a7028d25ca0c5ffc4bbe29ca89fab9",
+      "bytes": 13949
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt08_bloqueios_sentinel1.csv",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt08_resumo_sentinel1_readiness.csv",
+      "sha256": "68e1bfa67ee455809e73a4b8feac21b87095537b47d2aa369c5c0a056a206575",
+      "bytes": 288
+    },
+    {
+      "path": "schemas/suscetibilidade/susc_gt08_sentinel1_target.schema.json",
+      "sha256": "ef5583406272d33c4e3f29ab78087123cf0105a7758d9a5a13b06a568a89a070",
+      "bytes": 1804
+    },
+    {
+      "path": "schemas/suscetibilidade/susc_gt08_aoi_resolution.schema.json",
+      "sha256": "2b79317bef044885c3725d8877b9a56de4537c5a1373a93125440bee5501b670",
+      "bytes": 1052
+    },
+    {
+      "path": "schemas/suscetibilidade/susc_gt08_query_spec.schema.json",
+      "sha256": "f92b642382a647000a98497ed1507802c6a1c5b8f0410f7720f7080d2e7b0d97",
+      "bytes": 1216
+    },
+    {
+      "path": "schemas/suscetibilidade/susc_gt08_scene_candidate.schema.json",
+      "sha256": "20b72dac3a5228e25d42ce1fda63e437426085b406306f6670cf3c860a0348e3",
+      "bytes": 1353
+    },
+    {
+      "path": "schemas/suscetibilidade/susc_gt08_pairing_contract.schema.json",
+      "sha256": "e49c4ba76903bc21699e12aed71b794b5f1c15042fd7d215c25d404c7f47549e",
+      "bytes": 1146
+    },
+    {
+      "path": "schemas/suscetibilidade/susc_gt08_summary.schema.json",
+      "sha256": "8bb3800d0e89ed08d679b3ed9448dce75622cf546cac7f0bd18f7b56af9cf14b",
+      "bytes": 1363
+    }
+  ]
+}

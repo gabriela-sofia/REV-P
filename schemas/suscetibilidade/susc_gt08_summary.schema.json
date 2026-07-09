@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "susc_gt08_summary.schema.json",
+  "title": "SUSC-GT08 Resumo de Prontidao Sentinel-1",
+  "type": "object",
+  "required": [
+    "aoi_status",
+    "count",
+    "can_execute_search_now_count",
+    "can_download_now_count",
+    "training_allowed_count",
+    "ground_truth_allowed_count",
+    "score_v7_candidate_count"
+  ],
+  "properties": {
+    "aoi_status": {
+      "enum": [
+        "aoi_forte_por_bbox_ou_geometria_patch",
+        "aoi_parcial_por_centroide_ou_ponto",
+        "aoi_contextual_insuficiente",
+        "aoi_ausente",
+        "aoi_invalida"
+      ]
+    },
+    "count": {
+      "type": "string",
+      "pattern": "^\\d+$"
+    },
+    "ready_for_metadata_search_count": {
+      "type": "string",
+      "pattern": "^\\d+$"
+    },
+    "par_completo_pre_pos_count": {
+      "type": "string",
+      "pattern": "^\\d+$"
+    },
+    "local_scene_candidate_count": {
+      "type": "string",
+      "pattern": "^\\d+$"
+    },
+    "can_execute_search_now_count": {
+      "const": "0"
+    },
+    "can_download_now_count": {
+      "const": "0"
+    },
+    "training_allowed_count": {
+      "const": "0"
+    },
+    "ground_truth_allowed_count": {
+      "const": "0"
+    },
+    "score_v7_candidate_count": {
+      "const": "0"
+    }
+  }
+}
