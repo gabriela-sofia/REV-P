@@ -1,0 +1,551 @@
+sar_target_id,blocker_type,severity,field,reason_pt,prevents_canary_selection,prevents_sar_future,prevents_positive_strong,prevents_calibration,how_to_resolve_pt,sar_blocker_id
+SAR_0001,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00001
+SAR_0002,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00002
+SAR_0003,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00003
+SAR_0004,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00004
+SAR_0005,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00005
+SAR_0006,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00006
+SAR_0007,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00007
+SAR_0008,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00008
+SAR_0009,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00009
+SAR_0010,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00010
+SAR_0011,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00011
+SAR_0012,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00012
+SAR_0013,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00013
+SAR_0014,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00014
+SAR_0015,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00015
+SAR_0016,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00016
+SAR_0017,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00017
+SAR_0018,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00018
+SAR_0019,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00019
+SAR_0020,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00020
+SAR_0021,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00021
+SAR_0022,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00022
+SAR_0023,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00023
+SAR_0024,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00024
+SAR_0025,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00025
+SAR_0026,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00026
+SAR_0027,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00027
+SAR_0028,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00028
+SAR_0029,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00029
+SAR_0030,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00030
+SAR_0031,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00031
+SAR_0032,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00032
+SAR_0033,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00033
+SAR_0034,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00034
+SAR_0035,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00035
+SAR_0036,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00036
+SAR_0037,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00037
+SAR_0038,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00038
+SAR_0039,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00039
+SAR_0040,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00040
+SAR_0041,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00041
+SAR_0042,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00042
+SAR_0043,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00043
+SAR_0044,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00044
+SAR_0045,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00045
+SAR_0046,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00046
+SAR_0047,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00047
+SAR_0048,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00048
+SAR_0049,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00049
+SAR_0050,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00050
+SAR_0051,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00051
+SAR_0052,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00052
+SAR_0053,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00053
+SAR_0054,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00054
+SAR_0055,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00055
+SAR_0056,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00056
+SAR_0057,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00057
+SAR_0058,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00058
+SAR_0059,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00059
+SAR_0060,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00060
+SAR_0061,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00061
+SAR_0062,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00062
+SAR_0063,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00063
+SAR_0064,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00064
+SAR_0065,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00065
+SAR_0066,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00066
+SAR_0067,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00067
+SAR_0068,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00068
+SAR_0069,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00069
+SAR_0070,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00070
+SAR_0071,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00071
+SAR_0072,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00072
+SAR_0073,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00073
+SAR_0074,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00074
+SAR_0075,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00075
+SAR_0076,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00076
+SAR_0077,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00077
+SAR_0078,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00078
+SAR_0079,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00079
+SAR_0080,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00080
+SAR_0081,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00081
+SAR_0082,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00082
+SAR_0083,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00083
+SAR_0084,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00084
+SAR_0085,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00085
+SAR_0086,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00086
+SAR_0087,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00087
+SAR_0088,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00088
+SAR_0089,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00089
+SAR_0090,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00090
+SAR_0091,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00091
+SAR_0092,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00092
+SAR_0094,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00093
+SAR_0095,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00094
+SAR_0096,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00095
+SAR_0097,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00096
+SAR_0098,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00097
+SAR_0099,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00098
+SAR_0100,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00099
+SAR_0101,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00100
+SAR_0102,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00101
+SAR_0103,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00102
+SAR_0104,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00103
+SAR_0105,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00104
+SAR_0106,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00105
+SAR_0107,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00106
+SAR_0108,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00107
+SAR_0109,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00108
+SAR_0110,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00109
+SAR_0111,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00110
+SAR_0112,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00111
+SAR_0113,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00112
+SAR_0114,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00113
+SAR_0115,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00114
+SAR_0116,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00115
+SAR_0117,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00116
+SAR_0118,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00117
+SAR_0119,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00118
+SAR_0120,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00119
+SAR_0121,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00120
+SAR_0122,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00121
+SAR_0123,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00122
+SAR_0124,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00123
+SAR_0125,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00124
+SAR_0126,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00125
+SAR_0127,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00126
+SAR_0128,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00127
+SAR_0129,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00128
+SAR_0130,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00129
+SAR_0131,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00130
+SAR_0132,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00131
+SAR_0133,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00132
+SAR_0134,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00133
+SAR_0135,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00134
+SAR_0136,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00135
+SAR_0137,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00136
+SAR_0138,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00137
+SAR_0139,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00138
+SAR_0140,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00139
+SAR_0141,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00140
+SAR_0142,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00141
+SAR_0143,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00142
+SAR_0144,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00143
+SAR_0145,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00144
+SAR_0146,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00145
+SAR_0147,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00146
+SAR_0148,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00147
+SAR_0149,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00148
+SAR_0150,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00149
+SAR_0151,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00150
+SAR_0152,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00151
+SAR_0153,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00152
+SAR_0154,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00153
+SAR_0155,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00154
+SAR_0156,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00155
+SAR_0157,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00156
+SAR_0158,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00157
+SAR_0159,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00158
+SAR_0160,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00159
+SAR_0161,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00160
+SAR_0162,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00161
+SAR_0163,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00162
+SAR_0164,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00163
+SAR_0165,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00164
+SAR_0166,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00165
+SAR_0167,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00166
+SAR_0168,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00167
+SAR_0169,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00168
+SAR_0170,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00169
+SAR_0171,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00170
+SAR_0172,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00171
+SAR_0173,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00172
+SAR_0174,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00173
+SAR_0175,fenomeno_misto_ou_deslizamento,alta,phenomenon_type,fenomeno misto/deslizamento sem separacao,true,true,true,true,separar inundacao de deslizamento,SBL_00174
+SAR_0175,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00175
+SAR_0176,fenomeno_misto_ou_deslizamento,alta,phenomenon_type,fenomeno misto/deslizamento sem separacao,true,true,true,true,separar inundacao de deslizamento,SBL_00176
+SAR_0176,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00177
+SAR_0177,fenomeno_misto_ou_deslizamento,alta,phenomenon_type,fenomeno misto/deslizamento sem separacao,true,true,true,true,separar inundacao de deslizamento,SBL_00178
+SAR_0177,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00179
+SAR_0178,fenomeno_misto_ou_deslizamento,alta,phenomenon_type,fenomeno misto/deslizamento sem separacao,true,true,true,true,separar inundacao de deslizamento,SBL_00180
+SAR_0178,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00181
+SAR_0179,fenomeno_misto_ou_deslizamento,alta,phenomenon_type,fenomeno misto/deslizamento sem separacao,true,true,true,true,separar inundacao de deslizamento,SBL_00182
+SAR_0179,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00183
+SAR_0180,fenomeno_misto_ou_deslizamento,alta,phenomenon_type,fenomeno misto/deslizamento sem separacao,true,true,true,true,separar inundacao de deslizamento,SBL_00184
+SAR_0180,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00185
+SAR_0181,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00186
+SAR_0182,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00187
+SAR_0183,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00188
+SAR_0184,fenomeno_misto_ou_deslizamento,alta,phenomenon_type,fenomeno misto/deslizamento sem separacao,true,true,true,true,separar inundacao de deslizamento,SBL_00189
+SAR_0184,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00190
+SAR_0185,fenomeno_misto_ou_deslizamento,alta,phenomenon_type,fenomeno misto/deslizamento sem separacao,true,true,true,true,separar inundacao de deslizamento,SBL_00191
+SAR_0185,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00192
+SAR_0189,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00193
+SAR_0190,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00194
+SAR_0191,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00195
+SAR_0192,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00196
+SAR_0193,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00197
+SAR_0194,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00198
+SAR_0195,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00199
+SAR_0196,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00200
+SAR_0197,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00201
+SAR_0198,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00202
+SAR_0199,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00203
+SAR_0200,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00204
+SAR_0201,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00205
+SAR_0202,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00206
+SAR_0203,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00207
+SAR_0204,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00208
+SAR_0205,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00209
+SAR_0206,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00210
+SAR_0207,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00211
+SAR_0208,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00212
+SAR_0209,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00213
+SAR_0210,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00214
+SAR_0211,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00215
+SAR_0212,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00216
+SAR_0213,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00217
+SAR_0214,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00218
+SAR_0215,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00219
+SAR_0216,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00220
+SAR_0217,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00221
+SAR_0218,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00222
+SAR_0219,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00223
+SAR_0220,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00224
+SAR_0221,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00225
+SAR_0222,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00226
+SAR_0223,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00227
+SAR_0224,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00228
+SAR_0225,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00229
+SAR_0226,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00230
+SAR_0227,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00231
+SAR_0228,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00232
+SAR_0229,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00233
+SAR_0230,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00234
+SAR_0231,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00235
+SAR_0232,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00236
+SAR_0233,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00237
+SAR_0234,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00238
+SAR_0235,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00239
+SAR_0236,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00240
+SAR_0237,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00241
+SAR_0238,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00242
+SAR_0239,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00243
+SAR_0240,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00244
+SAR_0241,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00245
+SAR_0242,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00246
+SAR_0243,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00247
+SAR_0244,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00248
+SAR_0245,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00249
+SAR_0246,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00250
+SAR_0247,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00251
+SAR_0248,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00252
+SAR_0249,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00253
+SAR_0250,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00254
+SAR_0251,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00255
+SAR_0252,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00256
+SAR_0253,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00257
+SAR_0254,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00258
+SAR_0255,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00259
+SAR_0256,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00260
+SAR_0257,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00261
+SAR_0258,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00262
+SAR_0259,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00263
+SAR_0260,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00264
+SAR_0261,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00265
+SAR_0262,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00266
+SAR_0263,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00267
+SAR_0264,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00268
+SAR_0265,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00269
+SAR_0266,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00270
+SAR_0267,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00271
+SAR_0268,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00272
+SAR_0269,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00273
+SAR_0270,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00274
+SAR_0271,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00275
+SAR_0272,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00276
+SAR_0273,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00277
+SAR_0274,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00278
+SAR_0275,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00279
+SAR_0276,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00280
+SAR_0277,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00281
+SAR_0278,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00282
+SAR_0279,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00283
+SAR_0280,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00284
+SAR_0281,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00285
+SAR_0282,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00286
+SAR_0283,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00287
+SAR_0284,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00288
+SAR_0285,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00289
+SAR_0286,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00290
+SAR_0287,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00291
+SAR_0288,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00292
+SAR_0289,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00293
+SAR_0290,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00294
+SAR_0291,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00295
+SAR_0292,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00296
+SAR_0293,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00297
+SAR_0294,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00298
+SAR_0295,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00299
+SAR_0296,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00300
+SAR_0297,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00301
+SAR_0298,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00302
+SAR_0299,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00303
+SAR_0300,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00304
+SAR_0301,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00305
+SAR_0302,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00306
+SAR_0303,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00307
+SAR_0304,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00308
+SAR_0305,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00309
+SAR_0306,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00310
+SAR_0307,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00311
+SAR_0308,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00312
+SAR_0309,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00313
+SAR_0310,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00314
+SAR_0311,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00315
+SAR_0312,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00316
+SAR_0313,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00317
+SAR_0314,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00318
+SAR_0315,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00319
+SAR_0316,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00320
+SAR_0317,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00321
+SAR_0318,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00322
+SAR_0319,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00323
+SAR_0320,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00324
+SAR_0321,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00325
+SAR_0322,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00326
+SAR_0323,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00327
+SAR_0324,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00328
+SAR_0325,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00329
+SAR_0326,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00330
+SAR_0327,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00331
+SAR_0328,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00332
+SAR_0329,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00333
+SAR_0330,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00334
+SAR_0331,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00335
+SAR_0332,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00336
+SAR_0333,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00337
+SAR_0334,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00338
+SAR_0335,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00339
+SAR_0336,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00340
+SAR_0337,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00341
+SAR_0338,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00342
+SAR_0339,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00343
+SAR_0340,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00344
+SAR_0341,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00345
+SAR_0342,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00346
+SAR_0343,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00347
+SAR_0344,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00348
+SAR_0345,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00349
+SAR_0346,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00350
+SAR_0347,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00351
+SAR_0348,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00352
+SAR_0349,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00353
+SAR_0350,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00354
+SAR_0351,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00355
+SAR_0352,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00356
+SAR_0353,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00357
+SAR_0354,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00358
+SAR_0355,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00359
+SAR_0356,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00360
+SAR_0357,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00361
+SAR_0358,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00362
+SAR_0359,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00363
+SAR_0360,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00364
+SAR_0361,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00365
+SAR_0362,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00366
+SAR_0363,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00367
+SAR_0364,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00368
+SAR_0365,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00369
+SAR_0366,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00370
+SAR_0367,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00371
+SAR_0368,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00372
+SAR_0369,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00373
+SAR_0370,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00374
+SAR_0371,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00375
+SAR_0372,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00376
+SAR_0373,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00377
+SAR_0374,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00378
+SAR_0375,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00379
+SAR_0376,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00380
+SAR_0377,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00381
+SAR_0378,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00382
+SAR_0379,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00383
+SAR_0380,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00384
+SAR_0381,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00385
+SAR_0382,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00386
+SAR_0383,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00387
+SAR_0384,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00388
+SAR_0385,sem_data_ou_janela,alta,temporal_precision,sem data util ou janela pre/pos-evento,true,true,true,true,resolver data e janela (marco de datas) antes de preparar SAR,SBL_00389
+SAR_0386,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00390
+SAR_0387,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00391
+SAR_0388,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00392
+SAR_0389,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00393
+SAR_0390,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00394
+SAR_0391,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00395
+SAR_0392,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00396
+SAR_0393,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00397
+SAR_0394,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00398
+SAR_0395,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00399
+SAR_0396,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00400
+SAR_0397,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00401
+SAR_0398,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00402
+SAR_0399,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00403
+SAR_0400,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00404
+SAR_0401,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00405
+SAR_0402,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00406
+SAR_0403,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00407
+SAR_0404,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00408
+SAR_0405,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00409
+SAR_0406,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00410
+SAR_0407,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00411
+SAR_0408,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00412
+SAR_0409,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00413
+SAR_0410,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00414
+SAR_0411,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00415
+SAR_0412,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00416
+SAR_0413,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00417
+SAR_0414,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00418
+SAR_0415,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00419
+SAR_0416,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00420
+SAR_0417,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00421
+SAR_0418,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00422
+SAR_0419,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00423
+SAR_0420,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00424
+SAR_0421,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00425
+SAR_0422,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00426
+SAR_0423,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00427
+SAR_0424,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00428
+SAR_0425,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00429
+SAR_0426,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00430
+SAR_0427,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00431
+SAR_0428,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00432
+SAR_0429,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00433
+SAR_0430,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00434
+SAR_0431,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00435
+SAR_0432,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00436
+SAR_0433,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00437
+SAR_0434,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00438
+SAR_0435,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00439
+SAR_0436,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00440
+SAR_0437,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00441
+SAR_0438,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00442
+SAR_0439,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00443
+SAR_0440,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00444
+SAR_0441,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00445
+SAR_0442,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00446
+SAR_0443,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00447
+SAR_0444,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00448
+SAR_0445,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00449
+SAR_0446,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00450
+SAR_0447,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00451
+SAR_0448,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00452
+SAR_0449,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00453
+SAR_0450,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00454
+SAR_0451,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00455
+SAR_0452,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00456
+SAR_0453,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00457
+SAR_0454,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00458
+SAR_0455,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00459
+SAR_0456,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00460
+SAR_0457,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00461
+SAR_0458,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00462
+SAR_0459,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00463
+SAR_0460,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00464
+SAR_0461,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00465
+SAR_0462,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00466
+SAR_0463,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00467
+SAR_0464,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00468
+SAR_0465,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00469
+SAR_0466,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00470
+SAR_0467,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00471
+SAR_0468,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00472
+SAR_0469,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00473
+SAR_0470,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00474
+SAR_0471,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00475
+SAR_0472,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00476
+SAR_0473,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00477
+SAR_0474,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00478
+SAR_0475,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00479
+SAR_0476,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00480
+SAR_0477,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00481
+SAR_0478,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00482
+SAR_0479,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00483
+SAR_0480,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00484
+SAR_0481,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00485
+SAR_0482,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00486
+SAR_0483,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00487
+SAR_0484,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00488
+SAR_0485,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00489
+SAR_0486,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00490
+SAR_0487,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00491
+SAR_0488,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00492
+SAR_0489,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00493
+SAR_0490,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00494
+SAR_0491,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00495
+SAR_0492,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00496
+SAR_0493,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00497
+SAR_0494,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00498
+SAR_0495,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00499
+SAR_0496,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00500
+SAR_0497,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00501
+SAR_0498,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00502
+SAR_0499,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00503
+SAR_0500,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00504
+SAR_0501,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00505
+SAR_0502,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00506
+SAR_0503,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00507
+SAR_0504,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00508
+SAR_0505,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00509
+SAR_0506,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00510
+SAR_0507,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00511
+SAR_0508,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00512
+SAR_0509,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00513
+SAR_0510,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00514
+SAR_0511,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00515
+SAR_0512,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00516
+SAR_0513,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00517
+SAR_0514,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00518
+SAR_0515,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00519
+SAR_0516,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00520
+SAR_0517,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00521
+SAR_0518,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00522
+SAR_0519,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00523
+SAR_0520,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00524
+SAR_0521,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00525
+SAR_0522,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00526
+SAR_0523,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00527
+SAR_0524,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00528
+SAR_0525,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00529
+SAR_0526,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00530
+SAR_0527,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00531
+SAR_0528,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00532
+SAR_0529,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00533
+SAR_0530,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00534
+SAR_0531,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00535
+SAR_0532,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00536
+SAR_0533,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00537
+SAR_0534,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00538
+SAR_0535,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00539
+SAR_0536,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00540
+SAR_0537,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00541
+SAR_0538,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00542
+SAR_0539,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00543
+SAR_0540,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00544
+SAR_0541,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00545
+SAR_0542,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00546
+SAR_0543,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00547
+SAR_0544,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00548
+SAR_0545,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00549
+SAR_0546,sem_patch_ou_aoi,media,patch_id,sem patch nem AOI minima para canario,true,false,true,false,resolver patch REV-P ou definir AOI minima,SBL_00550

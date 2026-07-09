@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "susc_gt06_sar_summary.schema.json",
+  "title": "SUSC-GT06 Resumo de Canarios SAR",
+  "type": "object",
+  "required": [
+    "sar_canary_eligibility",
+    "count",
+    "average_sar_canary_priority_score",
+    "selected_for_canary_pack_count",
+    "can_execute_sar_now_count",
+    "training_allowed_count",
+    "ground_truth_allowed_count",
+    "score_v7_candidate_count"
+  ],
+  "properties": {
+    "sar_canary_eligibility": {
+      "enum": [
+        "elegivel_canario_sar_prioritario",
+        "elegivel_canario_sar_secundario",
+        "requer_geometria_antes_do_sar",
+        "requer_separacao_fenomenologica",
+        "bloqueado_temporalmente",
+        "bloqueado_por_contexto_fraco",
+        "nao_elegivel_para_sar"
+      ]
+    },
+    "count": {
+      "type": "string",
+      "pattern": "^\\d+$"
+    },
+    "average_sar_canary_priority_score": {
+      "type": "string"
+    },
+    "selected_for_canary_pack_count": {
+      "type": "string",
+      "pattern": "^\\d+$"
+    },
+    "can_prepare_sar_future_count": {
+      "type": "string",
+      "pattern": "^\\d+$"
+    },
+    "can_execute_sar_now_count": {
+      "const": "0"
+    },
+    "training_allowed_count": {
+      "const": "0"
+    },
+    "ground_truth_allowed_count": {
+      "const": "0"
+    },
+    "score_v7_candidate_count": {
+      "const": "0"
+    }
+  }
+}
