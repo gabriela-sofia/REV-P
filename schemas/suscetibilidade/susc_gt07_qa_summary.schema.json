@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "susc_gt07_qa_summary.schema.json",
+  "title": "SUSC-GT07 Resumo de QA",
+  "type": "object",
+  "required": [
+    "qa_preparation_status",
+    "count",
+    "accepted_now_count",
+    "rejected_now_count",
+    "training_allowed_count",
+    "ground_truth_allowed_count",
+    "score_v7_candidate_count"
+  ],
+  "properties": {
+    "qa_preparation_status": {
+      "enum": [
+        "pronto_para_qa_futuro",
+        "aguardando_footprint_futuro",
+        "aguardando_geometria_ou_aoi",
+        "aguardando_separacao_fenomenologica",
+        "bloqueado_para_qa",
+        "fora_da_fila_qa"
+      ]
+    },
+    "count": {
+      "type": "string",
+      "pattern": "^\\d+$"
+    },
+    "qa_can_be_completed_now_count": {
+      "type": "string",
+      "pattern": "^\\d+$"
+    },
+    "future_qa_required_count": {
+      "type": "string",
+      "pattern": "^\\d+$"
+    },
+    "accepted_now_count": {
+      "const": "0"
+    },
+    "rejected_now_count": {
+      "const": "0"
+    },
+    "pending_review_count": {
+      "type": "string",
+      "pattern": "^\\d+$"
+    },
+    "training_allowed_count": {
+      "const": "0"
+    },
+    "ground_truth_allowed_count": {
+      "const": "0"
+    },
+    "score_v7_candidate_count": {
+      "const": "0"
+    }
+  }
+}

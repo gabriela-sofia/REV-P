@@ -1,0 +1,97 @@
+{
+  "marco": "SUSC-GT07",
+  "titulo_publico": "Protocolo de QA Humano para Canários Observacionais",
+  "branch": "marco/avaliacao-observacional-review-only-matriz-multimodal",
+  "head": "d94dbbc",
+  "gt06_source_commit": "d94dbbc",
+  "canarios_na_fila": 5,
+  "distribuicao_qa_prep": {
+    "pronto_para_qa_futuro": 5
+  },
+  "qa_executado": 0,
+  "accepted_now": 0,
+  "rejected_now": 0,
+  "positive_strong_promovidos": 0,
+  "footprint_criado": 0,
+  "sar_executado": 0,
+  "sentinel_baixado": 0,
+  "internet_usada": 0,
+  "global_guardrails": {
+    "eligible_for_training": "false",
+    "eligible_for_ground_truth": "false",
+    "trainable": "false",
+    "score_v7_candidate": "false",
+    "review_only": "true"
+  },
+  "training_true_count": 0,
+  "ground_truth_true_count": 0,
+  "score_v7_candidate_true_count": 0,
+  "current_qa_accepted_count": 0,
+  "current_qa_rejected_count": 0,
+  "qa_can_be_completed_now_count": 0,
+  "score_v6_changed": false,
+  "score_v7_created": false,
+  "proximo_marco": "GT08 - Busca Controlada de Cenas Sentinel-1 sem Download",
+  "artifacts": [
+    {
+      "path": "outputs_public/suscetibilidade/SUSC_GT07_PROTOCOLO_QA_HUMANO_CANARIOS_OBSERVACIONAIS.md",
+      "sha256": "cb4a7a9fdddfe019068e970eab21ad872d4aff3f68859a29ccea3e30040ed433",
+      "bytes": 7204
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt07_fila_qa_canarios.csv",
+      "sha256": "53e89f0834992a1a8bb874d3ddb4031129cb50ce451fd08d88af904633cfd96f",
+      "bytes": 3767
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt07_formulario_qa_canarios.csv",
+      "sha256": "1fb54f1187629dd733db7232306b1dc9d98ef777e34f3e04364b56ea3dfea053",
+      "bytes": 2072
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt07_checklist_qa_por_canario.csv",
+      "sha256": "a6f811435c904e728d1e17d48e77f27eab3c77ff690f2c129f0ee338fa610591",
+      "bytes": 17887
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt07_matriz_decisao_qa.csv",
+      "sha256": "f6707b0e47c54c64dea145dd2db42a711cb83ac4e1dc7957943c8ede40ac796f",
+      "bytes": 3208
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt07_criterios_aceitacao_rejeicao.csv",
+      "sha256": "1443f1849de738d5e9985d6056a862f41edc0c40973a4a6d16b8d1e977c1fb13",
+      "bytes": 1790
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt07_bloqueios_qa.csv",
+      "sha256": "6815408b18e9d9fa2b034a276d4628d12f39f5ae61afa415436d97f696a39b49",
+      "bytes": 1467
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt07_resumo_qa_canarios.csv",
+      "sha256": "68a13f53fb91b62cc1b8b854cf49fb335a726bd281970818953c5a6f7940d0ac",
+      "bytes": 257
+    },
+    {
+      "path": "schemas/suscetibilidade/susc_gt07_qa_queue.schema.json",
+      "sha256": "6766875cd78cbceb8c834b01d34f1888e7f70772663c01506fae73d035a424b1",
+      "bytes": 1701
+    },
+    {
+      "path": "schemas/suscetibilidade/susc_gt07_qa_form.schema.json",
+      "sha256": "ad649705dea1e234d52f204b3f69c3df47df2cbc87150c99994dbc7a03937fb6",
+      "bytes": 816
+    },
+    {
+      "path": "schemas/suscetibilidade/susc_gt07_qa_decision_matrix.schema.json",
+      "sha256": "9366beb4f2a14b8c3542340d181018f85f7c09334f43b5721819832c0bbe7cba",
+      "bytes": 1613
+    },
+    {
+      "path": "schemas/suscetibilidade/susc_gt07_qa_summary.schema.json",
+      "sha256": "7abcf8ec9bd8972bf01cd41da2304fc56b8fee18400c5ac5214f281f655cce90",
+      "bytes": 1365
+    }
+  ]
+}

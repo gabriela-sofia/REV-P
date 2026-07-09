@@ -1,0 +1,10 @@
+criterion_id,criterion_type,criterion_pt,required_for,severity,accepted_value_pt,rejected_value_pt,ambiguous_value_pt,blocks_positive_strong_future,blocks_calibration_future,blocks_benchmark_future
+CR_001,fenomeno,O evento e alagamento/inundacao/enxurrada?,aceitacao,alta,inundacao/alagamento confirmado,deslizamento/risco/alerta,fenomeno indefinido,true,true,true
+CR_002,temporal,A data e compativel com a janela pre/pos-evento?,aceitacao,alta,data dentro da janela,data fora da janela,data imprecisa,true,false,true
+CR_003,espacial,O patch/AOI tem relacao espacial plausivel com a ocorrencia?,aceitacao,alta,relacao espacial plausivel,sem relacao espacial,relacao espacial incerta,true,false,true
+CR_004,fonte,A fonte e oficial/institucional/tecnica?,aceitacao,media,fonte oficial/institucional/tecnica,fonte documental fraca,fonte parcial,true,false,true
+CR_005,footprint,O footprint futuro e plausivel e nao confundido com agua permanente?,aceitacao,alta,footprint plausivel e delimitado,footprint implausivel/confundido,footprint incerto,true,true,true
+CR_006,exclusoes,"As exclusoes (agua permanente, sombra, vegetacao, urbano, HAND) foram checadas?",aceitacao,alta,exclusoes verificadas e ok,exclusao critica presente,exclusao nao verificada,true,false,true
+CR_007,leakage,O footprint pos-evento NAO e usado como feature pre-evento?,aceitacao,alta,sem leakage temporal,leakage temporal detectado,risco de leakage a revisar,true,true,true
+CR_008,incerteza,A incerteza espacial (uncertainty_m) foi revisada?,aceitacao,media,incerteza aceitavel,incerteza excessiva,incerteza desconhecida,true,false,true
+CR_009,decisao,"A decisao final e review-only, sem criar ground truth?",aceitacao,alta,decisao review-only registrada,tentativa de criar ground truth,decisao pendente,true,true,true
