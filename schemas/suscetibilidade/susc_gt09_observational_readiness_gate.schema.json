@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "susc_gt09_observational_readiness_gate.schema.json",
+  "title": "SUSC-GT09 Readiness Gate",
+  "type": "object",
+  "required": [
+    "gate_id",
+    "sentinel1_target_id",
+    "gate_state",
+    "remains_review_only",
+    "trainable",
+    "eligible_for_training",
+    "eligible_for_ground_truth",
+    "score_v7_candidate"
+  ],
+  "properties": {
+    "gate_id": {
+      "type": "string",
+      "pattern": "^GT_\\d+$"
+    },
+    "sentinel1_target_id": {
+      "type": "string",
+      "pattern": "^S1_\\d+$"
+    },
+    "gate_state": {
+      "enum": [
+        "pronto_para_renderizacao_visual_futura",
+        "pronto_para_download_controlado_futuro",
+        "pronto_para_qa_visual_futuro",
+        "bloqueado_por_par_pre_pos",
+        "bloqueado_por_aoi",
+        "bloqueado_por_ativo_visual",
+        "bloqueado_por_politica_review_only"
+      ]
+    },
+    "remains_review_only": {
+      "const": "true"
+    },
+    "trainable": {
+      "const": "false"
+    },
+    "eligible_for_training": {
+      "const": "false"
+    },
+    "eligible_for_ground_truth": {
+      "const": "false"
+    },
+    "score_v7_candidate": {
+      "const": "false"
+    }
+  }
+}

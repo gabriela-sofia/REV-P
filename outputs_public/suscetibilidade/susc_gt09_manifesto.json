@@ -1,0 +1,140 @@
+{
+  "marco": "SUSC-GT09",
+  "titulo_publico": "Esteira Canária de Revisão Visual, Pareamento Pré/Pós e Pré-Execução SAR",
+  "branch": "marco/avaliacao-observacional-review-only-matriz-multimodal",
+  "head": "963f0b0",
+  "gt08_source_commit": "963f0b0",
+  "canarios": 5,
+  "distribuicao_gate": {
+    "pronto_para_renderizacao_visual_futura": 5
+  },
+  "pares_selecionados": 5,
+  "pares_mesma_orbita": 5,
+  "pares_alternativos": 5,
+  "ativos_locais_total": 42,
+  "ativos_visuais": 30,
+  "ativos_geometricos": 12,
+  "render_executada": 0,
+  "raster_baixado": 0,
+  "footprint_criado": 0,
+  "geometria_criada": 0,
+  "sar_executado": 0,
+  "qa_executado": 0,
+  "imagem_gerada": 0,
+  "download_executado": 0,
+  "internet_usada": 0,
+  "positive_strong_promovidos": 0,
+  "accepted_atual": 0,
+  "rejected_atual": 0,
+  "global_guardrails": {
+    "eligible_for_training": "false",
+    "eligible_for_ground_truth": "false",
+    "trainable": "false",
+    "score_v7_candidate": "false",
+    "review_only": "true"
+  },
+  "training_true_count": 0,
+  "ground_truth_true_count": 0,
+  "score_v7_candidate_true_count": 0,
+  "dry_run_executado_agora_count": 0,
+  "score_v6_changed": false,
+  "score_v7_created": false,
+  "proximo_marco": "GT10 - Renderizacao Visual Local Controlada",
+  "artifacts": [
+    {
+      "path": "outputs_public/suscetibilidade/SUSC_GT09_ESTEIRA_CANARIA_REVISAO_VISUAL_PRE_EXECUCAO_SAR.md",
+      "sha256": "b2eab134c57565d79481798fccd8d0e57ce3d96f5b9399f862401a08fcbb0619",
+      "bytes": 5946
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt09_pares_pre_pos_canarios.csv",
+      "sha256": "e53094e5519dff0821669cfaa2ad8b2c7fe8e59ba170f680b8480b9c0a42c481",
+      "bytes": 3449
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt09_pares_alternativos_canarios.csv",
+      "sha256": "0313453c523105477437e855e51e75267471a38a6ba6b9ab2590e03ff74aa977",
+      "bytes": 1297
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt09_dossie_canarios.csv",
+      "sha256": "262d1110997545ad6ca8231b28a6e3fcb052fc3a961d4406a1a2c78de2c3dce4",
+      "bytes": 3458
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt09_inventario_ativos_locais.csv",
+      "sha256": "779329d669fb4ba67c641364caf8c6c666afb6d56ffe102276bfb07e99c1d337",
+      "bytes": 8238
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt09_contrato_renderizacao_futura.csv",
+      "sha256": "bb57f406f98ab71c726cd25a64f02be5e899a04453fea270d9559a4e5a452281",
+      "bytes": 5773
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt09_dry_run_pipeline_sar_futuro.csv",
+      "sha256": "9fc34f8b6bbf0a29b222d9239b1a7b3548111ada24d2158c9f4b14ce7abca63b",
+      "bytes": 8454
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt09_handoff_qa_canarios.csv",
+      "sha256": "dbdbc4a287e9bc01a0afd6a3e179835dee4e1cbb3d82b820fdefac7279de981d",
+      "bytes": 8679
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt09_readiness_gate_observacional.csv",
+      "sha256": "c7ccd9b2cab275f5f51a80b1b21b979e26f292515e06853f76d61bdcdc189664",
+      "bytes": 1710
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt09_guardrails_leakage_evidencia.csv",
+      "sha256": "32ef397cbcae06f2a1b0bf6801a9700526461ef3e120244055387f8ab73770ae",
+      "bytes": 1367
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt09_bloqueios_esteira_canaria.csv",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "outputs_public/suscetibilidade/susc_gt09_resumo_esteira_canaria.csv",
+      "sha256": "810f5e4c79bb390e90e81895ef7c6a7c47ace737b41fd2b2b209f1501966494b",
+      "bytes": 323
+    },
+    {
+      "path": "schemas/suscetibilidade/susc_gt09_pre_post_pair.schema.json",
+      "sha256": "96ad92ff24d5b665796fe021caf310251350f7800db26960ab28c4923ef9c151",
+      "bytes": 1014
+    },
+    {
+      "path": "schemas/suscetibilidade/susc_gt09_canary_dossier.schema.json",
+      "sha256": "e3e52f0de8ab0f09182763197a129458b27953a6d45d3b7a87cdfbc1be597cb1",
+      "bytes": 991
+    },
+    {
+      "path": "schemas/suscetibilidade/susc_gt09_visual_asset_inventory.schema.json",
+      "sha256": "0733b8c137132e78338e0d61a7cdf8d4fa7a1c36023a8e12deb14d4ebc2eb731",
+      "bytes": 929
+    },
+    {
+      "path": "schemas/suscetibilidade/susc_gt09_future_render_contract.schema.json",
+      "sha256": "922e2b92a99e7165fcfb584898b3b5485b2d1f44ca406c5200b688257783ff49",
+      "bytes": 900
+    },
+    {
+      "path": "schemas/suscetibilidade/susc_gt09_sar_dry_run_step.schema.json",
+      "sha256": "1a9bb192699099223a94e6156e0d88c7b96f1b01f26262676037a652c2157967",
+      "bytes": 691
+    },
+    {
+      "path": "schemas/suscetibilidade/susc_gt09_observational_readiness_gate.schema.json",
+      "sha256": "b8340b92c05f5b0cc76e46b4892d285584fc2f4336f9ebcf2b7bfc7c61654b56",
+      "bytes": 1269
+    },
+    {
+      "path": "schemas/suscetibilidade/susc_gt09_summary.schema.json",
+      "sha256": "04c5dd61bb2e1b92563f6ced25154738cefaed5002fd9a25d87cd59a1aac15fe",
+      "bytes": 1313
+    }
+  ]
+}
