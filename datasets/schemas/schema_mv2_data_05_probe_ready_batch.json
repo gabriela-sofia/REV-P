@@ -1,0 +1,28 @@
+{
+  "schema_id": "mv2_data_05_probe_ready_batch",
+  "title": "MV2-DATA-05 Probe-Ready Batch",
+  "validates": "outputs_public/mv2_data_temporal_window_intake/mv2_data_05_probe_ready_batch.csv",
+  "primary_key": "target_id",
+  "required_fields": [
+    "batch_id",
+    "target_id",
+    "asset_id",
+    "patch_id",
+    "region",
+    "bbox",
+    "crs",
+    "temporal_window_start",
+    "temporal_window_end",
+    "temporal_window_status",
+    "can_probe_gee_metadata",
+    "can_probe_stac_metadata",
+    "can_probe_odata_metadata",
+    "blocking_reason",
+    "next_action"
+  ],
+  "fail_closed_rules": [
+    "can_probe_gee/stac_metadata=true só com janela promovida (strong/partial)",
+    "can_probe_odata_metadata=false sempre (exige product_id/scene_id)",
+    "fornece a ponte target+patch+asset+bbox+CRS+janela para DATA-06"
+  ]
+}

@@ -1,0 +1,32 @@
+# MV2-DATA-05 — Temporal Window Intake & Validation (Vertente B)
+# Reproduzir (sem template preenchido => 0 promovidas, DATA-06 bloqueado, gates+correction prontos):
+
+python scripts/mv2_data_05_run_temporal_window_intake.py
+python scripts/mv2_data_05_validate_temporal_window_intake.py
+python -m pytest tests/test_mv2_data_05_temporal_window_intake.py -q -p no:cacheprovider
+python -m pytest tests/test_mv2_data_04_corpus_metadata_probe.py -q -p no:cacheprovider     # regressão DATA-04
+python -m pytest tests/test_mv2_data_03_live_api_canary.py -q -p no:cacheprovider            # regressão DATA-03
+python -m pytest tests/test_mv2_data_02_api_raster_harness.py -q -p no:cacheprovider         # regressão DATA-02
+python -m pytest tests/test_mv2_data_01_gee_lineage_targets.py -q -p no:cacheprovider         # regressão DATA-01
+
+# Passos individuais (ordem do orquestrador):
+python scripts/mv2_data_05_discover_temporal_inputs.py
+python scripts/mv2_data_05_normalize_temporal_windows.py
+python scripts/mv2_data_05_validate_temporal_evidence.py
+python scripts/mv2_data_05_build_temporal_promotion_gate.py
+python scripts/mv2_data_05_build_probe_ready_batch.py
+python scripts/mv2_data_05_create_temporal_window_correction_template.py
+python scripts/mv2_data_05_build_risk_matrix.py
+python scripts/mv2_data_05_build_summary.py
+
+# DESBLOQUEAR (DATA-06): depositar um template preenchido PRIVADO (git-ignored) em:
+#   local_only/mv2_data_temporal_window/mv2_data_05_temporal_window_filled.csv
+#   (mesmas colunas do template DATA-04: target_id,asset_id,patch_id,region,
+#    temporal_window_start,temporal_window_end,temporal_window_source,event_id,event_date,
+#    export_task_hint,source_ref,filled_by,reviewed_by,review_status,notes)
+# Preencher janela SO com evidencia (data de evento/export), nunca inventar; janela <=45d
+# (ou justificar com "janela_ampla"/"multi_scene"); review_status=APPROVED para STRONG.
+# Re-rodar: janelas STRONG/PARTIAL promovem e habilitam GEE/STAC metadata probe em DATA-06.
+# OData segue exigindo product_id/scene_id. Dia 10 e sandbox continuam bloqueados.
+
+# Entradas: DATA-04 template/batch/summary, DATA-01 lineage_targets.
