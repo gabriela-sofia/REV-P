@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-19C avaliacao observacional review-only",
+  "type": "object",
+  "description": "Avaliacao exploratoria review-only; sem treino, sem benchmark, sem negativos.",
+  "guardrails": {
+    "ground_truth": {
+      "const": "false"
+    },
+    "eligible_for_training": {
+      "const": "false"
+    },
+    "score_v7_allowed": {
+      "const": "false"
+    },
+    "review_only": {
+      "const": "true"
+    }
+  },
+  "status_19c_allowed": [
+    "19C_AVALIACAO_PARCIAL_COM_AMOSTRA_MINIMA",
+    "19C_AVALIACAO_REVIEW_ONLY_CONCLUIDA",
+    "19C_BLOQUEADO_FAIL_CLOSED",
+    "19C_INSUFICIENTE_PARA_CONCLUSAO"
+  ],
+  "status_17b_allowed": [
+    "17B_APROXIMACAO_COM_SEGUNDA_REGIAO_TECNICA",
+    "17B_BLOQUEADO_POR_AMOSTRA",
+    "17B_BLOQUEADO_POR_GEOMETRIA_OFICIAL",
+    "17B_NAO_CRIADO"
+  ],
+  "status_score_v7_allowed": [
+    "SCORE_V7_BLOQUEADO_POR_AMOSTRA",
+    "SCORE_V7_BLOQUEADO_POR_AUSENCIA_BENCHMARK",
+    "SCORE_V7_BLOQUEADO_POR_MISSINGNESS_TERRITORIAL",
+    "SCORE_V7_NAO_AUTORIZADO"
+  ],
+  "evaluation_status_allowed": [
+    "aderencia_observacional_exploratoria",
+    "aderencia_parcial_com_divergencias",
+    "amostra_insuficiente_para_conclusao",
+    "bloqueado_por_fenomeno_misto",
+    "divergencia_observacional_relevante"
+  ],
+  "background_label": "unlabeled_background",
+  "small_sample_limit": 30
+}
