@@ -1,0 +1,15 @@
+item,verificacao,status,bloqueia_reproducao_publica,acao_necessaria,observacao
+artefatos_publicos_ptbr,Relatorio e tabelas do pacote estao em PT-BR tecnico.,ok,false,Revisar texto antes de stage.,Sem prometer decisao operacional.
+csvs_parseaveis,CSVs do hardening foram escritos com cabecalho e lineterminator estavel.,ok,false,Executar teste dedicado.,Schemas obrigatorios preservados.
+jsons_validos,JSONs existentes no manifesto sao parseaveis.,ok,false,Corrigir JSON invalido.,Metricas do pacote usam valores fixos conservadores.
+scripts_principais_executaveis,Scripts publicos principais existem.,ok,false,Restaurar script ausente se necessario.,Execucao deve ser feita por comando explicito.
+testes_principais_verdes,Testes principais devem ser rodados antes de stage.,pendente_execucao,true,Executar bateria pytest indicada.,Este checklist registra o requisito; o resultado final vem da validacao.
+hashes_reais_downloads,Arquivos baixados tem sha256 no indice publico.,ok,false,Completar hash ausente se houver.,"Hash verifica integridade, nao redistribui bruto."
+sem_bruto_pesado_outputs_public,Nenhum bruto pesado foi identificado em outputs_public.,ok,false,Remover do escopo publico antes de stage.,Brutos pesados publicos detectados: 0.
+local_only_apenas_dependencia,"local_only/local_runs aparecem como dependencia, nao como publico Git.",ok,false,Manter fora de git add seletivo.,Dependencias locais foram marcadas com pode_ser_publicado_no_git=false.
+stage_seletivo_necessario,Stage deve ser seletivo e manual.,ok,false,Usar lista explicita de arquivos.,"Evita incluir cache, bruto ou artefato fora de escopo."
+git_add_A_proibido,git add -A nao e aceitavel para este marco.,ok,true,Nao executar git add -A.,A arvore contem muitos nao rastreados de escopo amplo.
+sem_reivindicacao_operacional,O pacote nao afirma decisao operacional.,ok,false,Manter linguagem review-only.,"A reproducao publica e de metadados, hashes e scripts."
+pode_virar_label_agora_0,Nenhum item pode virar label agora.,ok,true,Manter fila como revisao futura.,Valor fixo do JSON: 0.
+treino_bloqueado,Treino supervisionado permanece bloqueado.,ok,true,Manter G8 bloqueado.,Nao ha amostra liberada para treino.
+ground_truth_ausente,Ground truth operacional permanece ausente.,ok,true,"Exigir revisao humana, overlay e anti-leakage antes de qualquer promocao.",Estado fixo do JSON: ausente.

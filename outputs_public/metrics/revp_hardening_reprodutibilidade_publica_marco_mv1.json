@@ -1,0 +1,29 @@
+{
+  "status_reprodutibilidade": "PUBLICO_REPRODUTIVEL_PARCIAL_COM_DEPENDENCIAS_LOCAL_ONLY_E_EXTERNAS",
+  "branch": "marco/validacao-label-free-evidencia-estrutural-mv1",
+  "total_artefatos_manifestados": 75,
+  "artefatos_reprodutiveis_no_git": 54,
+  "artefatos_verificaveis_por_hash": 0,
+  "artefatos_dependem_local_only": 21,
+  "artefatos_dependem_download_externo": 0,
+  "artefatos_dependem_solicitacao_formal": 0,
+  "brutos_pesados_em_outputs_public": 0,
+  "pode_reproduzir_marco_integral_so_com_git": false,
+  "pode_verificar_marco_por_hashes_e_indices": true,
+  "pode_fazer_stage_seletivo": "true_com_revisao_manual",
+  "pode_usar_git_add_A": false,
+  "ground_truth_operacional_status": "ausente",
+  "treino_supervisionado_status": "bloqueado",
+  "itens_podem_virar_label_agora": 0,
+  "guardrails_preservados": [
+    "review-only",
+    "label-free",
+    "sem positivos formais",
+    "sem negativos formais",
+    "sem treino supervisionado",
+    "local_only fora do Git",
+    "stage seletivo obrigatorio"
+  ],
+  "proximo_passo_recomendado": "Revisar manualmente o manifesto mestre e executar stage seletivo apenas dos arquivos publicos aprovados.",
+  "gerado_em_utc": "2026-06-19T11:15:53.061211+00:00"
+}
