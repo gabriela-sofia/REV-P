@@ -1,0 +1,184 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C source target pack",
+  "type": "object",
+  "description": "SUSC-17C review-only fail-closed schema. No ground truth, no training, no score v7.",
+  "required": [
+    "candidate_event_id",
+    "event_id",
+    "city",
+    "region",
+    "source_id",
+    "source_name",
+    "source_authority",
+    "source_type",
+    "artifact_ref",
+    "event_date_candidate",
+    "event_date_precision",
+    "phenomenon_type",
+    "location_text",
+    "has_official_geometry",
+    "has_point",
+    "has_bbox",
+    "has_address",
+    "has_patch_overlap_possible",
+    "has_sentinel_window_candidate",
+    "authority_tier",
+    "documentary_strength",
+    "priority",
+    "strong_candidate",
+    "geometry_status",
+    "blocking_reason",
+    "review_only",
+    "trainable",
+    "ground_truth",
+    "score_v7_allowed",
+    "not_ground_truth_reason"
+  ],
+  "properties": {
+    "candidate_event_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "event_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "city": {
+      "type": "string",
+      "minLength": 1
+    },
+    "region": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_authority": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_type": {
+      "enum": [
+        "administrative_disaster_record",
+        "alert_only",
+        "documentary_context",
+        "insufficient",
+        "official_address_resolved",
+        "official_observed_event_point",
+        "official_observed_event_polygon",
+        "risk_area_not_event",
+        "technical_remote_sensing_flood_footprint"
+      ]
+    },
+    "artifact_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "event_date_candidate": {
+      "type": "string",
+      "minLength": 1
+    },
+    "event_date_precision": {
+      "enum": [
+        "exact_day",
+        "range",
+        "month_only",
+        "unknown"
+      ]
+    },
+    "phenomenon_type": {
+      "type": "string",
+      "minLength": 1
+    },
+    "location_text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "has_official_geometry": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "has_point": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "has_bbox": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "has_address": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "has_patch_overlap_possible": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "has_sentinel_window_candidate": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "authority_tier": {
+      "type": "string",
+      "minLength": 1
+    },
+    "documentary_strength": {
+      "type": "string",
+      "minLength": 1
+    },
+    "priority": {
+      "type": "string",
+      "minLength": 1
+    },
+    "strong_candidate": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "geometry_status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "blocking_reason": {
+      "type": "string",
+      "minLength": 1
+    },
+    "review_only": {
+      "const": "true"
+    },
+    "trainable": {
+      "const": "false"
+    },
+    "ground_truth": {
+      "const": "false"
+    },
+    "score_v7_allowed": {
+      "const": "false"
+    },
+    "not_ground_truth_reason": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "additionalProperties": true
+}

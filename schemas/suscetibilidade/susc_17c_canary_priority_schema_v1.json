@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C canary priority events",
+  "type": "object",
+  "description": "SUSC-17C review-only fail-closed schema. No ground truth, no training, no score v7.",
+  "required": [
+    "priority_rank",
+    "candidate_event_id",
+    "event_id",
+    "city",
+    "region",
+    "source_id",
+    "source_type",
+    "event_date",
+    "phenomenon_type",
+    "geometry_status",
+    "sar_feasible",
+    "patch_link_potential",
+    "priority_score",
+    "selection_reason",
+    "qa_status",
+    "review_only",
+    "ground_truth",
+    "eligible_for_training",
+    "score_v7_allowed"
+  ],
+  "properties": {
+    "priority_rank": {
+      "type": "string",
+      "minLength": 1
+    },
+    "candidate_event_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "event_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "city": {
+      "type": "string",
+      "minLength": 1
+    },
+    "region": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_type": {
+      "type": "string",
+      "minLength": 1
+    },
+    "event_date": {
+      "type": "string",
+      "minLength": 1
+    },
+    "phenomenon_type": {
+      "type": "string",
+      "minLength": 1
+    },
+    "geometry_status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sar_feasible": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "patch_link_potential": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "priority_score": {
+      "type": "string",
+      "minLength": 1
+    },
+    "selection_reason": {
+      "type": "string",
+      "minLength": 1
+    },
+    "qa_status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "review_only": {
+      "const": "true"
+    },
+    "ground_truth": {
+      "const": "false"
+    },
+    "eligible_for_training": {
+      "const": "false"
+    },
+    "score_v7_allowed": {
+      "const": "false"
+    }
+  },
+  "additionalProperties": true
+}

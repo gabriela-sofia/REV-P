@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C reference registry",
+  "type": "object",
+  "description": "SUSC-17C review-only fail-closed schema. No ground truth, no training, no score v7.",
+  "required": [
+    "candidate_event_id",
+    "event_id",
+    "source_id",
+    "geometry_status",
+    "event_date",
+    "pre_event_window",
+    "post_event_window",
+    "phenomenon_type",
+    "uncertainty_m",
+    "eligible_for_evaluation",
+    "eligible_for_calibration",
+    "eligible_for_training",
+    "ground_truth",
+    "review_only",
+    "qa_status",
+    "not_ground_truth_reason",
+    "score_v7_allowed"
+  ],
+  "properties": {
+    "candidate_event_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "event_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "geometry_status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "event_date": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pre_event_window": {
+      "type": "string",
+      "minLength": 1
+    },
+    "post_event_window": {
+      "type": "string",
+      "minLength": 1
+    },
+    "phenomenon_type": {
+      "type": "string",
+      "minLength": 1
+    },
+    "uncertainty_m": {
+      "type": "string",
+      "minLength": 1
+    },
+    "eligible_for_evaluation": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "eligible_for_calibration": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "eligible_for_training": {
+      "const": "false"
+    },
+    "ground_truth": {
+      "const": "false"
+    },
+    "review_only": {
+      "const": "true"
+    },
+    "qa_status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "not_ground_truth_reason": {
+      "type": "string",
+      "minLength": 1
+    },
+    "score_v7_allowed": {
+      "const": "false"
+    }
+  },
+  "additionalProperties": true
+}
