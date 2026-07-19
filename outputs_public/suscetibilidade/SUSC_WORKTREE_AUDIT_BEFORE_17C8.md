@@ -1,6 +1,6 @@
 # SUSC-17C8 - Auditoria de worktree antes da implementacao
 
-- HEAD auditado: `161486e71547e7f80a5e22895340feaf97e7f41e`
+- HEAD auditado: `f665b137141a76e550a86638b4ddc96ea2d00bfb`
 - Branch esperada: `marco/pre-unificacao-gates-mv1`
 - Area staged vazia no inicio: `true`
 - Implementacao permitida: somente SUSC-17C8, review-only.
