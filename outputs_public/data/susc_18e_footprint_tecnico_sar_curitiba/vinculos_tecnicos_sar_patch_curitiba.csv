@@ -1,0 +1,2 @@
+technical_link_id,candidate_event_id,footprint_id,patch_id,classe_vinculo,metrica,vinculo_forte,ground_truth,eligible_for_training,score_v7_allowed,review_only,justificativa_tecnica
+not_available,S17C_REF_0060,not_available,not_available,aguardando_footprint_sar,not_available,false,false,false,false,true,"nenhum footprint SAR produzido; nao ha vinculo tecnico nem vinculo forte. Patches candidatos preparados sao alvos de avaliacao futura, nao confirmacao de ocorrencia"

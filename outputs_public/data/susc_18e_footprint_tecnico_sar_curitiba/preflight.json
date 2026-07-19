@@ -1,0 +1,50 @@
+{
+  "branch": "marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial",
+  "head": "dc17b0f",
+  "staged_count": 0,
+  "required_inputs": [
+    {
+      "path": "outputs_public/data/susc_18a_execucao_referencia_observacional_regional/summary.json",
+      "exists": true
+    },
+    {
+      "path": "outputs_public/data/susc_18b_execucao_geometrias_regionais_separacao_fenomeno/summary.json",
+      "exists": true
+    },
+    {
+      "path": "outputs_public/data/susc_18c_aquisicao_geometria_oficial_curitiba/summary.json",
+      "exists": true
+    },
+    {
+      "path": "outputs_public/data/susc_18d_protocolo_externo_curitiba/summary.json",
+      "exists": true
+    },
+    {
+      "path": "outputs_public/data/susc_18b_execucao_geometrias_regionais_separacao_fenomeno/curitiba_execucao_geometria.csv",
+      "exists": true
+    },
+    {
+      "path": "outputs_public/data/susc_18a_execucao_referencia_observacional_regional/fila_execucao_footprint_sar.csv",
+      "exists": true
+    },
+    {
+      "path": "outputs_public/data/susc_18b_execucao_geometrias_regionais_separacao_fenomeno/fila_sar_18b.csv",
+      "exists": true
+    },
+    {
+      "path": "datasets/protocolo_c/v1uw_curitiba_event_patch_prelink_update.csv",
+      "exists": true
+    },
+    {
+      "path": "datasets/suscetibilidade/susc_score_v6_candidate_by_patch_v1.csv",
+      "exists": true
+    }
+  ],
+  "patch_polys_disponiveis": 43,
+  "prelinks_cur_2022_01_15": 54,
+  "prelink_patch_count": 54,
+  "audit_rows": 2,
+  "local_sar_raster_sufficient": false,
+  "score_v6_changed": false,
+  "score_v7_created": false
+}

@@ -1,0 +1,2 @@
+feature_id,technical_link_id,patch_id,feature_family,feature_name,valor,periodo_evento,usavel_pre_evento,status_feature,ground_truth,eligible_for_training,score_v7_allowed,review_only,justificativa_tecnica
+not_available,not_available,not_available,sar,not_available,not_available,not_available,false,aguardando_footprint_sar,false,false,false,true,sem footprint SAR; nenhuma feature tecnica foi calculada ou preenchida
