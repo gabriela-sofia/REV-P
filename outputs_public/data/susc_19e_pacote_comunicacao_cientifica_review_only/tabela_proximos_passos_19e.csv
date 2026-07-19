@@ -1,0 +1,6 @@
+passo,descricao,pre_requisito,prioridade,nao_faz_agora
+ampliar_amostra_observacional,mais eventos com geometria oficial nas 3 regioes,geometria oficial (fila 17B/GT),alta,nao cria score_v7 agora
+preencher_territorial,executar pacote MapBiomas/GEE preparado no 19B,acesso GEE/MapBiomas,alta,nao calibra sobre missingness
+separar_fenomeno_petropolis,separar deslizamento de inundacao e buscar evento 2024,geometria de ocorrencia,media,nao promove Petropolis misto
+consolidar_geometria_curitiba,ingerir resposta oficial 18D e consolidar referencia tecnica SAR,resposta oficial 18D,media,SAR nao vira geometria oficial
+comunicacao_cientifica,redigir artigo/slides review-only com ressalvas,este pacote 19E,alta,"sem overclaim, sem previsao"

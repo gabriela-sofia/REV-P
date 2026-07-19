@@ -1,0 +1,5 @@
+criterio,valor_observado,limiar,status_artigo_slides,observacao
+blocos_artigo_prontos,true,true,ARTIGO_SLIDES_PRONTOS_COM_RESSALVAS,metodologia e resultados redigiveis
+roteiro_slides_pronto,true,true,ARTIGO_SLIDES_PRONTOS_COM_RESSALVAS,15 slides com limitacoes e proximos passos
+figuras_criticas_pendentes,true,false,ARTIGO_SLIDES_PRONTOS_COM_RESSALVAS,algumas figuras precisam ser criadas (plano definido)
+tabelas_finais_prontas,true,true,ARTIGO_SLIDES_PRONTOS_COM_RESSALVAS,5 tabelas finais geradas

@@ -1,0 +1,12 @@
+metrica,valor,escopo,interpretacao_review_only
+patches_observacionais,7,global,Recife 5 + Curitiba 2; review-only
+patches_recife,5,recife,canarios observacionais review-only
+patches_curitiba,2,curitiba,overlays tecnicos SAR review-only
+background_nao_rotulado,293,global,unlabeled_background; nunca negativo
+score_medio_observado,0.596,global,leitura exploratoria review-only
+score_medio_background,0.521,global,unlabeled_background; nunca negativo
+observados_top30_global,0/7,global,nenhum no extremo do ranking
+observados_top30_regional,3/7,regional,"hit-rate exploratorio review-only, nao e benchmark"
+familias_que_sustentam_aderencia,fisica_topografica;urbana_territorial;espectral_umidade,global,coerencia review-only
+familias_que_derrubam_observados,hidrologica;chuva_hidrometeorologica,global,divergencia review-only
+divergencia_forte,curitiba_01101,curitiba,score_v6 baixo apesar de evidencia review-only
