@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C5 patch link QA queue",
+  "type": "object",
+  "description": "SUSC-17C5 review-only schema. No ground truth, no training, no score v7.",
+  "required": [
+    "qa_item_id",
+    "candidate_event_id",
+    "patch_id",
+    "geometry_id",
+    "link_class",
+    "qa_priority",
+    "qa_status",
+    "qa_question",
+    "map_artifact_ref",
+    "evidence_summary",
+    "blocking_reason",
+    "review_only",
+    "ground_truth",
+    "eligible_for_training",
+    "score_v7_allowed"
+  ],
+  "properties": {
+    "qa_item_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "candidate_event_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "patch_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "geometry_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "link_class": {
+      "type": "string",
+      "minLength": 1
+    },
+    "qa_priority": {
+      "type": "string",
+      "minLength": 1
+    },
+    "qa_status": {
+      "enum": [
+        "pending",
+        "blocked",
+        "accepted",
+        "rejected"
+      ]
+    },
+    "qa_question": {
+      "type": "string",
+      "minLength": 1
+    },
+    "map_artifact_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "blocking_reason": {
+      "type": "string",
+      "minLength": 1
+    },
+    "review_only": {
+      "const": "true"
+    },
+    "ground_truth": {
+      "const": "false"
+    },
+    "eligible_for_training": {
+      "const": "false"
+    },
+    "score_v7_allowed": {
+      "const": "false"
+    }
+  },
+  "additionalProperties": true
+}

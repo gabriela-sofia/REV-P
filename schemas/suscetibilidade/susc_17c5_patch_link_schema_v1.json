@@ -1,0 +1,159 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C5 patch links",
+  "type": "object",
+  "description": "SUSC-17C5 review-only schema. No ground truth, no training, no score v7.",
+  "required": [
+    "patch_link_id",
+    "candidate_event_id",
+    "event_id",
+    "source_id",
+    "source_type",
+    "geometry_id",
+    "patch_id",
+    "patch_namespace",
+    "official_patch",
+    "region",
+    "city",
+    "link_class",
+    "link_strength",
+    "strong_link_candidate",
+    "overlap_area_m2",
+    "overlap_ratio",
+    "distance_m",
+    "uncertainty_m",
+    "spatial_eligible",
+    "eligible_for_evaluation",
+    "eligible_for_calibration",
+    "eligible_for_training",
+    "ground_truth",
+    "review_only",
+    "score_v7_allowed",
+    "not_ground_truth_reason",
+    "spatial_blocking_reason"
+  ],
+  "properties": {
+    "patch_link_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "candidate_event_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "event_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_type": {
+      "type": "string",
+      "minLength": 1
+    },
+    "geometry_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "patch_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "patch_namespace": {
+      "type": "string",
+      "minLength": 1
+    },
+    "official_patch": {
+      "type": "string",
+      "minLength": 1
+    },
+    "region": {
+      "type": "string",
+      "minLength": 1
+    },
+    "city": {
+      "type": "string",
+      "minLength": 1
+    },
+    "link_class": {
+      "enum": [
+        "exact_polygon_overlap",
+        "point_within_patch",
+        "bbox_overlap",
+        "near_patch_buffer_10m",
+        "near_patch_buffer_30m",
+        "near_patch_buffer_50m",
+        "same_region_only",
+        "unresolved_geometry",
+        "insufficient_for_patch_link"
+      ]
+    },
+    "link_strength": {
+      "type": "string",
+      "minLength": 1
+    },
+    "strong_link_candidate": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "overlap_area_m2": {
+      "type": "string",
+      "minLength": 1
+    },
+    "overlap_ratio": {
+      "type": "string",
+      "minLength": 1
+    },
+    "distance_m": {
+      "type": "string",
+      "minLength": 1
+    },
+    "uncertainty_m": {
+      "type": "string",
+      "minLength": 1
+    },
+    "spatial_eligible": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "eligible_for_evaluation": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "eligible_for_calibration": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "eligible_for_training": {
+      "const": "false"
+    },
+    "ground_truth": {
+      "const": "false"
+    },
+    "review_only": {
+      "const": "true"
+    },
+    "score_v7_allowed": {
+      "const": "false"
+    },
+    "not_ground_truth_reason": {
+      "type": "string",
+      "minLength": 1
+    },
+    "spatial_blocking_reason": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "additionalProperties": true
+}
