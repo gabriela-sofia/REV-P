@@ -1,0 +1,177 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17D validacao tecnica de evidencia observacional",
+  "type": "object",
+  "required": [
+    "item_validacao_id",
+    "candidate_event_id",
+    "source_id",
+    "source_type",
+    "geometry_id",
+    "patch_id",
+    "cidade",
+    "regiao",
+    "tipo_fenomeno",
+    "data_evento",
+    "classe_vinculo",
+    "pontuacao_confiabilidade_fonte",
+    "pontuacao_qualidade_temporal",
+    "pontuacao_qualidade_geometrica",
+    "pontuacao_qualidade_vinculo_patch",
+    "pontuacao_compatibilidade_fenomeno",
+    "pontuacao_incerteza_espacial",
+    "pontuacao_consistencia_features",
+    "pontuacao_risco_vazamento_temporal",
+    "pontuacao_severidade_bloqueios",
+    "confianca_tecnica_final",
+    "status_validacao_tecnica",
+    "accepted_for_evaluation",
+    "accepted_for_calibration_candidate",
+    "eligible_for_training",
+    "ground_truth",
+    "review_only",
+    "score_v7_allowed",
+    "not_ground_truth_reason",
+    "justificativa_tecnica",
+    "bloqueios_criticos"
+  ],
+  "properties": {
+    "item_validacao_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "candidate_event_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_type": {
+      "type": "string",
+      "minLength": 1
+    },
+    "geometry_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "patch_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "cidade": {
+      "type": "string",
+      "minLength": 1
+    },
+    "regiao": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tipo_fenomeno": {
+      "type": "string",
+      "minLength": 1
+    },
+    "data_evento": {
+      "type": "string",
+      "minLength": 1
+    },
+    "classe_vinculo": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pontuacao_confiabilidade_fonte": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pontuacao_qualidade_temporal": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pontuacao_qualidade_geometrica": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pontuacao_qualidade_vinculo_patch": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pontuacao_compatibilidade_fenomeno": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pontuacao_incerteza_espacial": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pontuacao_consistencia_features": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pontuacao_risco_vazamento_temporal": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pontuacao_severidade_bloqueios": {
+      "type": "string",
+      "minLength": 1
+    },
+    "confianca_tecnica_final": {
+      "enum": [
+        "alta",
+        "media",
+        "baixa",
+        "insuficiente"
+      ]
+    },
+    "status_validacao_tecnica": {
+      "enum": [
+        "aceito_para_avaliacao_review_only",
+        "rejeitado",
+        "ambiguo",
+        "precisa_mais_fonte",
+        "incompatibilidade_espacial",
+        "incompatibilidade_temporal",
+        "incompatibilidade_de_fenomeno",
+        "geometria_insuficiente"
+      ]
+    },
+    "accepted_for_evaluation": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "accepted_for_calibration_candidate": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "eligible_for_training": {
+      "const": "false"
+    },
+    "ground_truth": {
+      "const": "false"
+    },
+    "review_only": {
+      "const": "true"
+    },
+    "score_v7_allowed": {
+      "const": "false"
+    },
+    "not_ground_truth_reason": {
+      "type": "string",
+      "minLength": 1
+    },
+    "justificativa_tecnica": {
+      "type": "string",
+      "minLength": 1
+    },
+    "bloqueios_criticos": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "additionalProperties": true
+}
