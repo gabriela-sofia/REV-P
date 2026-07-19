@@ -1,0 +1,6 @@
+rota,comando_testado,status,arquivo_encontrado,caminho_local,tamanho_bytes,sha256,bloqueio,acao_corretiva
+busca_local_downloads_drive,varredura por nome esperado em Downloads/Documents/Google Drive/local_runs,nao_encontrado,not_available,not_available,0,not_available,export_drive_concluido_nao_localizado_em_pastas_locais,baixar o GeoJSON exportado do Drive para local_runs
+cli_gcloud,gcloud --version,indisponivel,not_available,not_available,0,not_available,cliente_drive_indisponivel,instalar/configurar gcloud se Drive nao estiver montado
+cli_drive,drive --version,indisponivel,not_available,not_available,0,not_available,cliente_drive_indisponivel,instalar/configurar drive se Drive nao estiver montado
+cli_rclone,rclone --version,indisponivel,not_available,not_available,0,not_available,cliente_drive_indisponivel,instalar/configurar rclone se Drive nao estiver montado
+google_drive_api,import googleapiclient,biblioteca_disponivel,not_available,not_available,0,not_available,not_available,configurar credencial Drive sem expor segredo

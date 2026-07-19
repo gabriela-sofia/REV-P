@@ -1,0 +1,67 @@
+{
+  "branch": "marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial",
+  "head": "196fce2",
+  "staged_count": 0,
+  "required_inputs": [
+    {
+      "path": "outputs_public/data/susc_18f_ingestao_validacao_footprint_sar_curitiba/summary.json",
+      "exists": true
+    },
+    {
+      "path": "outputs_public/data/susc_18f_ingestao_validacao_footprint_sar_curitiba/estatisticas_sar_por_patch_curitiba_18f.csv",
+      "exists": true
+    },
+    {
+      "path": "outputs_public/data/susc_18e2_execucao_controlada_sentinel1_curitiba/summary.json",
+      "exists": true
+    },
+    {
+      "path": "outputs_public/data/susc_18e_footprint_tecnico_sar_curitiba/summary.json",
+      "exists": true
+    },
+    {
+      "path": "outputs_public/data/susc_18c_aquisicao_geometria_oficial_curitiba/summary.json",
+      "exists": true
+    },
+    {
+      "path": "local_runs/suscetibilidade/18e_sar_curitiba/resultados_gee/patch_stats_curitiba_2022_01_15.csv",
+      "exists": true
+    },
+    {
+      "path": "local_runs/suscetibilidade/18e_sar_curitiba/resultados_gee/gee_tasks_curitiba_2022_01_15.csv",
+      "exists": true
+    },
+    {
+      "path": "local_runs/suscetibilidade/18e_sar_curitiba/resultados_gee/execution_metadata.json",
+      "exists": true
+    },
+    {
+      "path": "local_runs/suscetibilidade/18e_sar_curitiba/resultados_gee/gee_scene_inventory_curitiba_2022_01_15.csv",
+      "exists": true
+    },
+    {
+      "path": "outputs_public/data/susc_18e_footprint_tecnico_sar_curitiba/curitiba_aoi_tecnica_43_patches.csv",
+      "exists": true
+    },
+    {
+      "path": "outputs_public/data/susc_18e_footprint_tecnico_sar_curitiba/curitiba_aoi_tecnica_43_patches.geojson",
+      "exists": true
+    },
+    {
+      "path": "outputs_public/data/susc_18e_footprint_tecnico_sar_curitiba/janelas_sar_curitiba.csv",
+      "exists": true
+    },
+    {
+      "path": "outputs_public/data/susc_18e_footprint_tecnico_sar_curitiba/pacote_gee/gee_sentinel1_curitiba_2022_01_15.js",
+      "exists": true
+    },
+    {
+      "path": "datasets/suscetibilidade/susc_score_v6_candidate_by_patch_v1.csv",
+      "exists": true
+    }
+  ],
+  "local_results": "local_runs/suscetibilidade/18e_sar_curitiba/resultados_gee",
+  "patch_count": 43,
+  "score_v6_changed": false,
+  "score_v7_created": false
+}
