@@ -1,0 +1,41 @@
+{
+  "total_embeddings_encontrados": 12,
+  "total_embeddings_validos": 12,
+  "dimensao_embedding": "768",
+  "contagem_por_cidade": {
+    "Curitiba": 4,
+    "Petrópolis": 4,
+    "Recife": 4
+  },
+  "contagem_por_regiao": {
+    "Curitiba": 4,
+    "Petrópolis": 4,
+    "Recife": 4
+  },
+  "consistencia_vizinho_mesma_cidade": "0.416667",
+  "consistencia_vizinho_mesma_regiao": "0.416667",
+  "distancia_media_intra_cidade": "0.287495",
+  "distancia_media_inter_cidades": "0.309723",
+  "status_suficiencia_amostral": "PILOTO_EXPLORATORIO_N_12",
+  "evidencia_contextual_disponivel": 12,
+  "trilha_a_status": "METADADOS_TEMPORAIS_INSUFICIENTES_TRILHA_B_RECOMENDADA",
+  "trilha_b_status": "ASSUMIDA_COMO_EIXO_CIENTIFICO_IMEDIATO",
+  "decisao_metodologica": "PILOTO_LABEL_FREE_COM_LIMITACAO_AMOSTRAL",
+  "bloqueios_principais": {
+    "LIMITACAO_AMOSTRAL_N_12": 12,
+    "TRILHA_A_BLOQUEADA_METADADOS_TEMPORAIS": 1
+  },
+  "guardrails_preservados": [
+    "sem treino supervisionado",
+    "sem label binário",
+    "sem positivo formal",
+    "sem negativo formal",
+    "sem ground truth operacional",
+    "unknown não vira negativo",
+    "Curitiba não vira negativo formal",
+    "DINOv2 não prova inundação",
+    "evidência administrativa não vira label",
+    "restauração v2dz-v2ef não vira validação operacional"
+  ],
+  "gerado_em_utc": "2026-06-19T00:17:13.115458+00:00"
+}

@@ -1,0 +1,13 @@
+id_amostra,id_patch_canonico,cidade,regiao,id_vizinho_mais_proximo,patch_vizinho_mais_proximo,cidade_vizinho,regiao_vizinho,distancia_coseno,mesma_cidade,mesma_regiao
+MV1_LABEL_FREE_0001,CUR_00038,Curitiba,Curitiba,MV1_LABEL_FREE_0012,REC_00205,Recife,Recife,0.145549,false,false
+MV1_LABEL_FREE_0002,CUR_00249,Curitiba,Curitiba,MV1_LABEL_FREE_0010,REC_00183,Recife,Recife,0.125863,false,false
+MV1_LABEL_FREE_0003,CUR_00350,Curitiba,Curitiba,MV1_LABEL_FREE_0001,CUR_00038,Curitiba,Curitiba,0.174408,true,true
+MV1_LABEL_FREE_0004,CUR_00357,Curitiba,Curitiba,MV1_LABEL_FREE_0001,CUR_00038,Curitiba,Curitiba,0.153013,true,true
+MV1_LABEL_FREE_0005,PET_00016,Petrópolis,Petrópolis,MV1_LABEL_FREE_0007,PET_00119,Petrópolis,Petrópolis,0.471925,true,true
+MV1_LABEL_FREE_0006,PET_00104,Petrópolis,Petrópolis,MV1_LABEL_FREE_0011,REC_00204,Recife,Recife,0.121748,false,false
+MV1_LABEL_FREE_0007,PET_00119,Petrópolis,Petrópolis,MV1_LABEL_FREE_0006,PET_00104,Petrópolis,Petrópolis,0.158606,true,true
+MV1_LABEL_FREE_0008,PET_00140,Petrópolis,Petrópolis,MV1_LABEL_FREE_0010,REC_00183,Recife,Recife,0.083265,false,false
+MV1_LABEL_FREE_0009,REC_00019,Recife,Recife,MV1_LABEL_FREE_0004,CUR_00357,Curitiba,Curitiba,0.52111,false,false
+MV1_LABEL_FREE_0010,REC_00183,Recife,Recife,MV1_LABEL_FREE_0008,PET_00140,Petrópolis,Petrópolis,0.083265,false,false
+MV1_LABEL_FREE_0011,REC_00204,Recife,Recife,MV1_LABEL_FREE_0006,PET_00104,Petrópolis,Petrópolis,0.121748,false,false
+MV1_LABEL_FREE_0012,REC_00205,Recife,Recife,MV1_LABEL_FREE_0010,REC_00183,Recife,Recife,0.091835,true,true

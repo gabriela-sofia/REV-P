@@ -1,0 +1,11 @@
+guardrail,status,evidencia,risco,acao_recomendada
+sem treino supervisionado,PRESERVADO,Inventário DINOv2 público usa review-only e sem alvo supervisionado.,Promover análise estrutural a treino.,Manter bloqueio até ground truth formal.
+sem label binário,PRESERVADO,score_evidencia_eh_label é sempre false.,Converter probe contextual em classe.,Manter evidência contextual como probe externo.
+sem positivo formal,PRESERVADO,Nenhuma coluna cria positivo formal.,Confundir similaridade com confirmação.,Exigir revisão humana e fonte observacional.
+sem negativo formal,PRESERVADO,Nenhuma linha transforma ausência ou Curitiba em negativo.,Usar contraste regional como negativo.,Separar contraste metodológico de negativo formal.
+sem ground truth operacional,PRESERVADO,Relatório e CSV mantêm sem promoção operacional.,Tratar restauração ou DINOv2 como validação operacional.,Manter estado bloqueado para treino.
+unknown não vira negativo,PRESERVADO,Valores desconhecidos permanecem desconhecidos.,Inferir ausência a partir de metadado faltante.,Registrar lacuna explicitamente.
+Curitiba não vira negativo formal,PRESERVADO,Cidade é usada apenas para topologia label-free.,Converter cidade em classe binária negativa.,Manter Curitiba como contraste estrutural.
+DINOv2 não prova inundação,PRESERVADO,A saída fala em organização estrutural e vizinhança.,Usar embedding como detecção.,Exigir evidência observacional independente.
+evidência administrativa não vira label,PRESERVADO,Campo score_evidencia_eh_label permanece false.,Usar score contextual como alvo.,Usar apenas para priorização de revisão.
+restauração v2dz-v2ef não vira validação operacional,PRESERVADO,Restauração é tratada como trilha forense herdada.,Confundir recuperabilidade com validação.,Declarar base como insumo metodológico não operacional.

@@ -1,0 +1,7 @@
+cidade_origem,cidade_destino,distancia_media_coseno,distancia_mediana_coseno,total_pares,tipo_comparacao,interpretacao_label_free
+Curitiba,Curitiba,0.177131,0.177278,6,intra_cidade,"Comparação estrutural exploratória; não define classe, label, positivo, negativo ou ground truth."
+Curitiba,Petrópolis,0.29701,0.229364,16,inter_cidades,"Comparação estrutural exploratória; não define classe, label, positivo, negativo ou ground truth."
+Curitiba,Recife,0.296938,0.227842,16,inter_cidades,"Comparação estrutural exploratória; não define classe, label, positivo, negativo ou ground truth."
+Petrópolis,Petrópolis,0.333699,0.333622,6,intra_cidade,"Comparação estrutural exploratória; não define classe, label, positivo, negativo ou ground truth."
+Petrópolis,Recife,0.335222,0.206682,16,inter_cidades,"Comparação estrutural exploratória; não define classe, label, positivo, negativo ou ground truth."
+Recife,Recife,0.351656,0.360198,6,intra_cidade,"Comparação estrutural exploratória; não define classe, label, positivo, negativo ou ground truth."
