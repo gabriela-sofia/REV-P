@@ -1,0 +1,55 @@
+{
+  "counts_by_acquisition_gap_status": {
+    "BLOCKED_BY_METADATA_REPAIR": 110,
+    "BLOCKED_BY_MISSING_PATCH_LINKAGE": 2,
+    "BLOCKED_BY_UNKNOWN_REGION": 8,
+    "MANUAL_REVIEW_REQUIRED": 208,
+    "NEEDS_2_MORE_DATES": 128
+  },
+  "counts_by_acquisition_priority": {
+    "P1_NEEDS_2_DATES": 128,
+    "P3_REPAIR_METADATA_FIRST": 120,
+    "P4_MANUAL_REVIEW": 208
+  },
+  "guardrails_preserved": [
+    "sem download de assets",
+    "sem consulta STAC API ou GEE",
+    "sem gerar URLs de download",
+    "sem calcular embedding drift",
+    "sem gerar embeddings novos",
+    "sem treino",
+    "sem rotulo",
+    "sem positivos ou negativos formais",
+    "sem classe-zero",
+    "sem GT operacional",
+    "sem tabela multimodal de atributos",
+    "sem alterar manifestos originais"
+  ],
+  "input_files": [
+    "outputs_public/tables/revp_normalized_temporal_asset_manifest_mv1.csv",
+    "outputs_public/tables/revp_normalized_temporal_patch_coverage_mv1.csv",
+    "outputs_public/metrics/revp_normalized_temporal_asset_manifest_mv1.json",
+    "outputs_public/execution_reports/revp_normalized_temporal_asset_manifest_mv1.md"
+  ],
+  "minimum_new_acquisitions_for_1_eligible_patch": 2,
+  "minimum_new_acquisitions_for_20_eligible_patches": 40,
+  "minimum_new_acquisitions_for_30_eligible_patches": 60,
+  "missing_slots_by_region": {
+    "Curitiba": 437,
+    "Example": 3,
+    "Olinda/PE": 3,
+    "Petropolis": 489,
+    "Recife": 281,
+    "multiple_or_none": 3,
+    "unknown": 24
+  },
+  "patches_actionable_for_temporal_backfill": 128,
+  "patches_requiring_repair_before_acquisition": 328,
+  "patches_with_0_dates": 328,
+  "patches_with_1_date": 128,
+  "patches_with_2_dates": 0,
+  "patches_with_3plus_dates": 0,
+  "step_a_acquisition_plan_status": "STEP_A_ACQUISITION_PLAN_REQUIRES_MULTI_DATE_BACKFILL",
+  "total_missing_acquisition_slots": 1240,
+  "total_patches_evaluated": 456
+}
