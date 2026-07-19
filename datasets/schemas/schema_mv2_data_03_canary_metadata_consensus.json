@@ -1,0 +1,42 @@
+{
+  "schema_id": "mv2_data_03_canary_metadata_consensus",
+  "title": "MV2-DATA-03 Canary Metadata Consensus",
+  "validates": "outputs_public/mv2_data_live_api_canary/mv2_data_03_canary_metadata_consensus.csv",
+  "primary_key": "consensus_id",
+  "required_fields": [
+    "consensus_id",
+    "canary_candidate_id",
+    "scene_id",
+    "product_id",
+    "datetime",
+    "mgrs_tile",
+    "cloud_cover",
+    "registry_status",
+    "gee_status",
+    "stac_status",
+    "odata_status",
+    "provider_agreement",
+    "consensus_status",
+    "canary_download_data_ready",
+    "canary_download_config_ready",
+    "canary_download_allowed",
+    "can_use_for_corpus_day10",
+    "blocking_reason",
+    "next_action"
+  ],
+  "enums": {
+    "consensus_status": [
+      "API_CONFIRMED_STRONG",
+      "REGISTRY_ONLY_STRONG",
+      "PARTIAL_CONFIRMATION",
+      "CONFLICT",
+      "NOT_EXECUTED",
+      "INVALID"
+    ]
+  },
+  "fail_closed_rules": [
+    "can_use_for_corpus_day10=false sempre",
+    "canary_download_allowed=true só com data_ready (consenso forte) + config/env explícitos",
+    "registry-only é suficiente para data_ready (não exige todos os providers)"
+  ]
+}

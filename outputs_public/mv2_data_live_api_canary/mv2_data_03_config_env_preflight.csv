@@ -1,0 +1,24 @@
+check_id,check_name,status,configured,enabled,secret_present,secret_value_logged,blocking_reason,notes
+MV2_DATA_03_CHK_01,config_local_file,CONFIG_MISSING,false,,,false,config_local_ausente_nenhuma_rede_permitida,procure em: local_only/mv2_data_api_raster_harness/api_config.local.json | data_local/mv2_data_api_raster_harness/api_config.local.json | private_outputs/mv2_data_api_raster_harness/api_config.local.json
+MV2_DATA_03_CHK_02,allow_network,DISABLED,false,false,,false,rede_desabilitada_fail_closed,
+MV2_DATA_03_CHK_03,allow_metadata_calls,DISABLED,,false,,false,metadata_calls_desabilitado,
+MV2_DATA_03_CHK_04,allow_raster_download,DISABLED,,false,,false,raster_download_desabilitado,
+MV2_DATA_03_CHK_05,allow_canary,DISABLED,,false,,false,REV_P_ALLOW_RASTER_CANARY!=YES,
+MV2_DATA_03_CHK_06,gee_enabled,DISABLED,false,false,,false,,
+MV2_DATA_03_CHK_07,cdse_stac_enabled,DISABLED,false,false,,false,,
+MV2_DATA_03_CHK_08,cdse_odata_enabled,DISABLED,false,false,,false,,
+MV2_DATA_03_CHK_09,env_CDSE_TOKEN,ABSENT,,,false,false,,presenca detectada sem ler valor
+MV2_DATA_03_CHK_10,env_CDSE_USERNAME,ABSENT,,,false,false,,presenca detectada sem ler valor
+MV2_DATA_03_CHK_11,env_CDSE_PASSWORD,ABSENT,,,false,false,,presenca detectada sem ler valor
+MV2_DATA_03_CHK_12,env_GEE_PROJECT,ABSENT,,,false,false,,presenca detectada sem ler valor
+MV2_DATA_03_CHK_13,env_GOOGLE_APPLICATION_CREDENTIALS,ABSENT,,,false,false,,presenca detectada sem ler valor
+MV2_DATA_03_CHK_14,env_REV_P_ALLOW_NETWORK,ABSENT,,,,false,,flag de permissao; so vale com config local presente
+MV2_DATA_03_CHK_15,env_REV_P_ALLOW_METADATA_CALLS,ABSENT,,,,false,,flag de permissao; so vale com config local presente
+MV2_DATA_03_CHK_16,env_REV_P_ALLOW_RASTER_DOWNLOAD,ABSENT,,,,false,,flag de permissao; so vale com config local presente
+MV2_DATA_03_CHK_17,env_REV_P_ALLOW_RASTER_CANARY,ABSENT,,,,false,,flag de permissao; so vale com config local presente
+MV2_DATA_03_CHK_18,lib_requests,AVAILABLE,true,,,false,,
+MV2_DATA_03_CHK_19,lib_rasterio,AVAILABLE,true,,,false,,
+MV2_DATA_03_CHK_20,lib_pystac_client,AVAILABLE,true,,,false,,
+MV2_DATA_03_CHK_21,lib_ee,AVAILABLE,true,,,false,,
+MV2_DATA_03_CHK_22,private_output_dir,VALID,true,,,false,,local_only/mv2_data_live_api_canary
+MV2_DATA_03_CHK_23,mode_decision,CONFIG_MISSING,,,,false,sem_config_local_nenhuma_rede,canary so com allow_canary + consenso forte

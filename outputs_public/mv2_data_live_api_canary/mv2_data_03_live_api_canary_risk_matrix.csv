@@ -1,0 +1,13 @@
+risk_id,target_id,severity,risk_type,evidence,mitigation,status,blocks_next_step
+MV2_DATA_03_RISK_01,GLOBAL,ALTA,RISK_SECRET_LEAK,token/credencial gravado em arquivo ou log,credencial so por env var; nenhum valor impresso/gravado; validador busca segredo,MITIGADO_FAIL_CLOSED,true
+MV2_DATA_03_RISK_02,GLOBAL,MEDIA,RISK_PRIVATE_PATH_LEAK,caminho absoluto privado exposto em outputs_public,private_output_ref sanitizado relativo; validador rejeita home de usuario,MITIGADO_FAIL_CLOSED,true
+MV2_DATA_03_RISK_03,GLOBAL,ALTA,RISK_RASTER_PUBLIC_LEAK,raster gravado/copiado para outputs_public,raster so em diretorio privado git-ignored; validador detecta vazamento,MITIGADO_FAIL_CLOSED,true
+MV2_DATA_03_RISK_04,GLOBAL,ALTA,RISK_CANARY_AS_CORPUS_UNLOCK,tratar canary oficial como desbloqueio do corpus,can_use_for_corpus_day10=false; matriz de impacto formaliza separacao,MITIGADO_FAIL_CLOSED,true
+MV2_DATA_03_RISK_05,GLOBAL,ALTA,RISK_BULK_DOWNLOAD_ACCIDENT,download acidental dos 128 targets do corpus,executor so aceita canary oficial; nunca itera o corpus; max 1 execucao,MITIGADO_FAIL_CLOSED,true
+MV2_DATA_03_RISK_06,GLOBAL,MEDIA,RISK_STAC_ASSET_DOWNLOAD_TOO_EARLY,baixar assets STAC antes de lineage/consenso forte,STAC probe e metadata-only; assets nunca baixados no probe,MITIGADO_FAIL_CLOSED,true
+MV2_DATA_03_RISK_07,GLOBAL,MEDIA,RISK_GEE_EXPORT_TOO_EARLY,exportar imagem GEE prematuramente,GEE probe metadata-only; nenhum Export.image,MITIGADO_FAIL_CLOSED,true
+MV2_DATA_03_RISK_08,GLOBAL,ALTA,RISK_TILE_AUTO_JOIN,auto-vincular T23KPR a PET_* do corpus,tile vem do scene_id oficial documentado; canary nao e patch do corpus,MITIGADO_FAIL_CLOSED,true
+MV2_DATA_03_RISK_09,GLOBAL,ALTA,RISK_CREDENTIAL_LOGGING,imprimir/logar valores de env vars de credencial,secret_value_logged=false sempre; so presenca booleana e registrada,MITIGADO_FAIL_CLOSED,true
+MV2_DATA_03_RISK_10,GLOBAL,MEDIA,RISK_COST_QUOTA_RATE_LIMIT,custo/quota/rate-limit em chamadas de API,"probes limitados a <=2 candidates, timeout curto, opt-in",MITIGADO_FAIL_CLOSED,true
+MV2_DATA_03_RISK_11,GLOBAL,ALTA,RISK_DAY10_FALSE_UNLOCK,desbloquear Dia 10 com base no canary,corpus_day10_unlocked=false; so lineage+raster do corpus validado desbloqueia,MITIGADO_FAIL_CLOSED,true
+MV2_DATA_03_RISK_12,GLOBAL,ALTA,RISK_SANDBOX_FALSE_UNLOCK,abrir sandbox/treino com base no canary,sandbox_unlocked=false; can_train=false,MITIGADO_FAIL_CLOSED,true

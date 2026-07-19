@@ -1,0 +1,34 @@
+{
+  "schema_id": "mv2_data_03_official_canary_candidates",
+  "title": "MV2-DATA-03 Official Canary Candidates",
+  "validates": "outputs_public/mv2_data_live_api_canary/mv2_data_03_official_canary_candidates.csv",
+  "primary_key": "canary_candidate_id",
+  "max_rows": 2,
+  "required_fields": [
+    "canary_candidate_id",
+    "source_registry",
+    "official_anchor_id",
+    "official_refpatch_id",
+    "corpus_patch_id",
+    "corpus_asset_id",
+    "region",
+    "scene_id",
+    "product_id",
+    "scene_date",
+    "gee_collection",
+    "mgrs_tile",
+    "crs",
+    "bands",
+    "cloud_cover",
+    "canary_role",
+    "can_use_for_corpus_day10",
+    "blocking_reason",
+    "notes"
+  ],
+  "fail_closed_rules": [
+    "canary_role=TECHNICAL_CANARY_ONLY",
+    "can_use_for_corpus_day10=false",
+    "corpus_patch_id vazio: canary oficial nunca é patch do corpus",
+    "mgrs_tile extraído do scene_id documentado, nunca auto-join por zona"
+  ]
+}

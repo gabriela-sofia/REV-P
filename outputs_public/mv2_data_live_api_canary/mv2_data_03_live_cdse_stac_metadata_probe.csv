@@ -1,0 +1,3 @@
+probe_id,canary_candidate_id,executed,http_status,collection,query_payload_hash,matched_items,selected_item_id,selected_datetime,selected_mgrs_tile,selected_cloud_cover,assets_listed,metadata_match_status,blocking_reason,notes
+MV2_DATA_03_STACPROBE_01,MV2_DATA_03_CC_01,false,,SENTINEL-2,05a48c9e6621267b,,,,,,false,NOT_EXECUTED,config_local_ausente_ou_flags_stac_metadata_desabilitadas,"payload Item Search pronto (metadata-only, sem assets)"
+MV2_DATA_03_STACPROBE_02,MV2_DATA_03_CC_02,false,,SENTINEL-2,3fb6949c062a60cc,,,,,,false,NOT_EXECUTED,config_local_ausente_ou_flags_stac_metadata_desabilitadas,"payload Item Search pronto (metadata-only, sem assets)"
