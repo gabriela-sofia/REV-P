@@ -1,0 +1,37 @@
+{
+  "schema_id": "mv2_14_manual_lineage_template",
+  "title": "MV2-14 Manual Lineage Template",
+  "validates": "outputs_public/mv2_gee_lineage_recovery/mv2_14_manual_lineage_template.csv",
+  "primary_key": "patch_id",
+  "required_fields": [
+    "asset_id",
+    "patch_id",
+    "scene_id",
+    "acquisition_datetime",
+    "tile",
+    "cloud_cover",
+    "sensor",
+    "platform",
+    "gee_collection",
+    "gee_export_task",
+    "gee_script_path_or_name",
+    "evidence_url_or_local_ref",
+    "filled_by",
+    "reviewed_by",
+    "review_status",
+    "notes"
+  ],
+  "must_be_empty_until_human_fill": [
+    "scene_id",
+    "acquisition_datetime",
+    "tile",
+    "cloud_cover",
+    "gee_collection",
+    "gee_export_task",
+    "gee_script_path_or_name",
+    "evidence_url_or_local_ref"
+  ],
+  "fail_closed_rules": [
+    "nenhum campo de lineage é pré-preenchido; valores só por checagem humana no GEE"
+  ]
+}

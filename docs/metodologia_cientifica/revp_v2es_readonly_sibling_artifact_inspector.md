@@ -1,6 +1,6 @@
 # REV-P v2es readonly sibling artifact inspection
 
-Rows generated: 69
+Rows generated: 5295
 
 Read-only inspection of sibling worktrees; no copy or restore is performed.
 
