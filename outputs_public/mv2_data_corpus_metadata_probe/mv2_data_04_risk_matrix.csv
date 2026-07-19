@@ -1,0 +1,11 @@
+risk_id,target_id,severity,risk_type,evidence,mitigation,status,blocks_next_step
+MV2_DATA_04_RISK_01,GLOBAL,ALTA,RISK_METADATA_PROBE_WITHOUT_TEMPORAL_WINDOW,executar probe GEE/STAC sem janela temporal por target,sem janela -> BLOCKED_NO_TEMPORAL_WINDOW; probe nunca executa sem filterDate,MITIGADO_FAIL_CLOSED,true
+MV2_DATA_04_RISK_02,GLOBAL,ALTA,RISK_OPEN_ENDED_STAC_QUERY,STAC Item Search com datetime aberto/amplo,datetime fechado obrigatorio; query aberta ampla nunca emitida,MITIGADO_FAIL_CLOSED,true
+MV2_DATA_04_RISK_03,GLOBAL,ALTA,RISK_CITY_TILE_MATCH,casar cena por cidade/tile/regiao em vez de lineage real,cidade/tile/regiao nunca e vinculo forte; so scene_id/datetime documentado,MITIGADO_FAIL_CLOSED,true
+MV2_DATA_04_RISK_04,GLOBAL,ALTA,RISK_CANARY_AS_CORPUS,usar candidate canary Protocolo-C como target do corpus,batch exclui official canary; validador rejeita refpatch/anchor no batch,MITIGADO_FAIL_CLOSED,true
+MV2_DATA_04_RISK_05,GLOBAL,ALTA,RISK_ODATA_WITHOUT_PRODUCT_ID,tentar resolver OData sem product_id/scene_id,sem product_id -> BLOCKED_NO_PRODUCT_ID; OData nunca itera o corpus,MITIGADO_FAIL_CLOSED,true
+MV2_DATA_04_RISK_06,GLOBAL,ALTA,RISK_SECRET_LEAK,token/credencial gravado em outputs_public,credencial so por env var; secret_value_logged=false; validador busca segredo,MITIGADO_FAIL_CLOSED,true
+MV2_DATA_04_RISK_07,GLOBAL,MEDIA,RISK_PRIVATE_PATH_LEAK,caminho absoluto privado em outputs_public,validador rejeita prefixo de home de usuario em arquivo publico,MITIGADO_FAIL_CLOSED,true
+MV2_DATA_04_RISK_08,GLOBAL,ALTA,RISK_RASTER_DOWNLOAD_TOO_EARLY,baixar raster/crop antes de lineage forte do corpus,marco metadata-only; downloads/crops/raster sempre 0; raster bloqueado,MITIGADO_FAIL_CLOSED,true
+MV2_DATA_04_RISK_09,GLOBAL,ALTA,RISK_DAY10_FALSE_UNLOCK,tratar probe metadata como desbloqueio do Dia 10,corpus_day10_unlocked=false; so lineage forte + raster validado desbloqueia,MITIGADO_FAIL_CLOSED,true
+MV2_DATA_04_RISK_10,GLOBAL,ALTA,RISK_SANDBOX_FALSE_UNLOCK,abrir sandbox/treino com base no probe,sandbox_unlocked=false; can_train=false,MITIGADO_FAIL_CLOSED,true

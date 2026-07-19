@@ -1,0 +1,16 @@
+probe_id,target_id,executed,http_status,product_id,scene_id,odata_id,metadata_status,blocking_reason,notes
+MV2_DATA_04_ODATAC_01,MV2_DATA_01_TGT_00092,false,,,,,BLOCKED_NO_PRODUCT_ID,OData_requer_product_id_ou_scene_id_corpus_tem_zero,resolver product_id via GEE/STAC com janela temporal antes do OData
+MV2_DATA_04_ODATAC_02,MV2_DATA_01_TGT_00093,false,,,,,BLOCKED_NO_PRODUCT_ID,OData_requer_product_id_ou_scene_id_corpus_tem_zero,resolver product_id via GEE/STAC com janela temporal antes do OData
+MV2_DATA_04_ODATAC_03,MV2_DATA_01_TGT_00094,false,,,,,BLOCKED_NO_PRODUCT_ID,OData_requer_product_id_ou_scene_id_corpus_tem_zero,resolver product_id via GEE/STAC com janela temporal antes do OData
+MV2_DATA_04_ODATAC_04,MV2_DATA_01_TGT_00095,false,,,,,BLOCKED_NO_PRODUCT_ID,OData_requer_product_id_ou_scene_id_corpus_tem_zero,resolver product_id via GEE/STAC com janela temporal antes do OData
+MV2_DATA_04_ODATAC_05,MV2_DATA_01_TGT_00096,false,,,,,BLOCKED_NO_PRODUCT_ID,OData_requer_product_id_ou_scene_id_corpus_tem_zero,resolver product_id via GEE/STAC com janela temporal antes do OData
+MV2_DATA_04_ODATAC_06,MV2_DATA_01_TGT_00044,false,,,,,BLOCKED_NO_PRODUCT_ID,OData_requer_product_id_ou_scene_id_corpus_tem_zero,resolver product_id via GEE/STAC com janela temporal antes do OData
+MV2_DATA_04_ODATAC_07,MV2_DATA_01_TGT_00045,false,,,,,BLOCKED_NO_PRODUCT_ID,OData_requer_product_id_ou_scene_id_corpus_tem_zero,resolver product_id via GEE/STAC com janela temporal antes do OData
+MV2_DATA_04_ODATAC_08,MV2_DATA_01_TGT_00046,false,,,,,BLOCKED_NO_PRODUCT_ID,OData_requer_product_id_ou_scene_id_corpus_tem_zero,resolver product_id via GEE/STAC com janela temporal antes do OData
+MV2_DATA_04_ODATAC_09,MV2_DATA_01_TGT_00047,false,,,,,BLOCKED_NO_PRODUCT_ID,OData_requer_product_id_ou_scene_id_corpus_tem_zero,resolver product_id via GEE/STAC com janela temporal antes do OData
+MV2_DATA_04_ODATAC_10,MV2_DATA_01_TGT_00048,false,,,,,BLOCKED_NO_PRODUCT_ID,OData_requer_product_id_ou_scene_id_corpus_tem_zero,resolver product_id via GEE/STAC com janela temporal antes do OData
+MV2_DATA_04_ODATAC_11,MV2_DATA_01_TGT_00001,false,,,,,BLOCKED_NO_PRODUCT_ID,OData_requer_product_id_ou_scene_id_corpus_tem_zero,resolver product_id via GEE/STAC com janela temporal antes do OData
+MV2_DATA_04_ODATAC_12,MV2_DATA_01_TGT_00002,false,,,,,BLOCKED_NO_PRODUCT_ID,OData_requer_product_id_ou_scene_id_corpus_tem_zero,resolver product_id via GEE/STAC com janela temporal antes do OData
+MV2_DATA_04_ODATAC_13,MV2_DATA_01_TGT_00003,false,,,,,BLOCKED_NO_PRODUCT_ID,OData_requer_product_id_ou_scene_id_corpus_tem_zero,resolver product_id via GEE/STAC com janela temporal antes do OData
+MV2_DATA_04_ODATAC_14,MV2_DATA_01_TGT_00004,false,,,,,BLOCKED_NO_PRODUCT_ID,OData_requer_product_id_ou_scene_id_corpus_tem_zero,resolver product_id via GEE/STAC com janela temporal antes do OData
+MV2_DATA_04_ODATAC_15,MV2_DATA_01_TGT_00005,false,,,,,BLOCKED_NO_PRODUCT_ID,OData_requer_product_id_ou_scene_id_corpus_tem_zero,resolver product_id via GEE/STAC com janela temporal antes do OData
