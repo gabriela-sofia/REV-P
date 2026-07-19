@@ -1,0 +1,5 @@
+patch_link_id,candidate_event_id,geometry_id,geometry_type,patch_id,classe_vinculo,metrica,vinculo_forte,review_only,justificativa_tecnica
+S18C_LINK_0001,S17C_REF_0012,not_available,none,not_available,insufficient_for_patch_link,sem_geometria_de_ocorrencia,false,true,patch-link bloqueado: sem geometry_id oficial de ocorrencia; same_region_only nao e vinculo forte
+S18C_LINK_0002,S17C_REF_0060,not_available,none,not_available,insufficient_for_patch_link,sem_geometria_de_ocorrencia,false,true,patch-link bloqueado: sem geometry_id oficial de ocorrencia; same_region_only nao e vinculo forte
+S18C_LINK_0003,S17C_REF_0061,not_available,none,not_available,insufficient_for_patch_link,sem_geometria_de_ocorrencia,false,true,patch-link bloqueado: sem geometry_id oficial de ocorrencia; same_region_only nao e vinculo forte
+S18C_LINK_0004,S17C_REF_0062,not_available,none,not_available,insufficient_for_patch_link,sem_geometria_de_ocorrencia,false,true,patch-link bloqueado: sem geometry_id oficial de ocorrencia; same_region_only nao e vinculo forte

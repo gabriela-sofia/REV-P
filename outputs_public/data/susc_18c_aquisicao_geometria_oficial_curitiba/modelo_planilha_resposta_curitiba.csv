@@ -1,0 +1,2 @@
+candidate_event_id,data_evento,tipo_fenomeno,geometry_source,geometry_source_type,geometry_type,geom_kind,lon,lat,bbox,crs,fonte,autoridade_fonte,is_event_specific,is_risk_area_general,is_neighborhood_centroid,precisao_m
+S17C_REF_0060,2022-01-15..2022-01-16,flood_inundation_alagamento,PREENCHER_fonte_responsavel,PREENCHER_origem_do_registro,point|polygon|bbox,alias_opcional,PREENCHER,PREENCHER,"minlon,minlat,maxlon,maxlat",EPSG:4326,PREENCHER,official,true,false,false,PREENCHER
