@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-18F ingestao SAR Curitiba",
+  "type": "object",
+  "required": [
+    "candidate_event_id",
+    "patch_id",
+    "status_referencia_tecnica"
+  ],
+  "properties": {
+    "candidate_event_id": {
+      "const": "S17C_REF_0060"
+    },
+    "patch_id": {
+      "type": "string"
+    },
+    "geometry_id": {
+      "type": "string"
+    },
+    "status_referencia_tecnica": {
+      "enum": [
+        "aguardando_recuperacao_footprint_vetorial",
+        "aguardando_resultado_externo",
+        "aguardando_vetorizacao",
+        "bloqueado_footprint_invalido",
+        "bloqueado_sem_patch_link",
+        "referencia_tecnica_sar_forte_somente_revisao",
+        "referencia_tecnica_sar_parcial_por_patch_stats"
+      ]
+    },
+    "ground_truth": {
+      "const": "false"
+    },
+    "eligible_for_training": {
+      "const": "false"
+    },
+    "score_v7_allowed": {
+      "const": "false"
+    },
+    "review_only": {
+      "const": "true"
+    }
+  },
+  "status_18f_allowed": [
+    "18F_AGUARDANDO_CONCLUSAO_FLOOD_MASK",
+    "18F_AGUARDANDO_RECUPERACAO_FOOTPRINT_VETORIAL",
+    "18F_AGUARDANDO_RESULTADO_EXTERNO_GEE",
+    "18F_BLOQUEADO_FAIL_CLOSED",
+    "18F_FOOTPRINT_INVALIDO",
+    "18F_REFERENCIA_TECNICA_SAR_CURITIBA_FORTE",
+    "18F_REFERENCIA_TECNICA_SAR_CURITIBA_PARCIAL_POR_PATCH_STATS"
+  ],
+  "status_17b_allowed": [
+    "17B_APROXIMACAO_COM_EVIDENCIA_TECNICA_CURITIBA",
+    "17B_BLOQUEADO_FAIL_CLOSED",
+    "17B_BLOQUEADO_POR_AMOSTRA",
+    "17B_BLOQUEADO_POR_GEOMETRIA_OFICIAL"
+  ]
+}

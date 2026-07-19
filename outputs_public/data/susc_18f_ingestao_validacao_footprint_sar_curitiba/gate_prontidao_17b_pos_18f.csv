@@ -1,0 +1,6 @@
+criterio,valor_observado,limiar,passou,status,observacao
+evidencia_tecnica_curitiba,true,true,true,17B_APROXIMACAO_COM_EVIDENCIA_TECNICA_CURITIBA,evidencia tecnica SAR sem benchmark 17B
+geometria_oficial_curitiba,false,true,false,17B_APROXIMACAO_COM_EVIDENCIA_TECNICA_CURITIBA,18D segue aguardando resposta oficial
+benchmark_17b_criado,false,false,true,17B_APROXIMACAO_COM_EVIDENCIA_TECNICA_CURITIBA,nenhum benchmark criado
+ground_truth_zero,0,0,true,17B_APROXIMACAO_COM_EVIDENCIA_TECNICA_CURITIBA,sem ground truth
+trainable_zero,0,0,true,17B_APROXIMACAO_COM_EVIDENCIA_TECNICA_CURITIBA,sem treino

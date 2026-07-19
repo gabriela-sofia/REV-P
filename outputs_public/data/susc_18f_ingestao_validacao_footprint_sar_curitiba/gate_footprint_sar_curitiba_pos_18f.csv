@@ -1,0 +1,6 @@
+criterio,valor_observado,limiar,passou,status,observacao
+patch_stats_real_ingestado,43,>=1,true,18F_REFERENCIA_TECNICA_SAR_CURITIBA_PARCIAL_POR_PATCH_STATS,patch_stats local real vindo do GEE
+footprint_vetorial_recuperado,false,true,false,18F_REFERENCIA_TECNICA_SAR_CURITIBA_PARCIAL_POR_PATCH_STATS,vetor tecnico leve recuperado ou pendente
+flood_mask_local,false,true,false,18F_REFERENCIA_TECNICA_SAR_CURITIBA_PARCIAL_POR_PATCH_STATS,raster pesado nao baixado sem autorizacao explicita
+ground_truth_zero,0,0,true,18F_REFERENCIA_TECNICA_SAR_CURITIBA_PARCIAL_POR_PATCH_STATS,sem ground truth
+score_v7_zero,0,0,true,18F_REFERENCIA_TECNICA_SAR_CURITIBA_PARCIAL_POR_PATCH_STATS,sem score_v7
