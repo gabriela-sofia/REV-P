@@ -1,0 +1,12 @@
+failure_type,ocorrencias,severidade,bloqueia_score_v7
+SAR_only_evidence,2,media,true
+amostra_minima,1,alta,true
+chuva_subponderada_ou_nao_representativa,1,alta,true
+evento_tecnico_nao_oficial,2,media,true
+evidencia_documental_rara,1,media,true
+hidrologia_divergente,1,alta,true
+missingness_territorial,1,alta,true
+observed_patch_low_score,1,alta,true
+observed_patch_medium_not_topk,2,media,true
+topografia_coerente_mas_score_nao_extremo,1,media,true
+urbano_espectral_coerente,1,baixa,true
