@@ -1,0 +1,7 @@
+recomendacao_id,categoria,recomendacao,motivo,prioridade,habilita_calibracao_forte,habilita_calibracao_exploratoria,review_only
+S17E_REC_0001,features_fisicas,"Extrair HAND, declividade, elevacao, TWI e acumulacao de fluxo reais para os patches canario.",topografia/hidrologia domina o score_v6 (peso 0.40) e e o unico grupo dominante ausente.,alta,true,true,true
+S17E_REC_0002,features_urbanas,Obter urban_prop e cobertura da terra oficiais por patch canario.,o grupo urbano/territorial hoje so tem proxy espectral (NDBI); dado oficial reforca o componente urbano.,media,true,true,true
+S17E_REC_0003,features_hidrologicas,Consolidar runoff_context_7d alem das somas CHIRPS ja disponiveis.,completa o grupo de chuva/gatilho com contexto de escoamento.,media,false,true,true
+S17E_REC_0004,amostra,"Adicionar eventos datados em outras regioes (Curitiba, Petropolis) com vinculo forte.","a amostra atual esta concentrada em um unico evento e regiao, o que limita estabilidade regional.",alta,true,true,true
+S17E_REC_0005,geometria,Substituir a incerteza qualitativa do footprint por metrica quantitativa revisada.,a incerteza espacial ainda requer revisao e limita a qualidade do vinculo.,media,true,true,true
+S17E_REC_0006,candidato_futuro,"Registrar os itens como candidatos futuros de calibracao review-only, sem promocao oficial.",manter rastreabilidade dos itens ate que features fisicas e amostra permitam calibracao forte.,baixa,false,true,true

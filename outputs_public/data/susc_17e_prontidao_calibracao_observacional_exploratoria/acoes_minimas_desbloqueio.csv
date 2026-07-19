@@ -1,0 +1,26 @@
+item_validacao_id,patch_id,acao_minima,categoria_acao,prioridade,descricao,destrava_forte,destrava_exploratoria
+S17D_VAL_0001,S17C6_CANARY_REC_00002,obter_feature_fisica,fisico,alta,"Extrair HAND, declividade, elevacao e TWI reais para os patches canario (grupo dominante do score_v6).",true,false
+S17D_VAL_0001,S17C6_CANARY_REC_00002,obter_feature_hidrologica,chuva_gatilho,media,Consolidar runoff_context_7d alem das somas CHIRPS ja disponiveis.,false,true
+S17D_VAL_0001,S17C6_CANARY_REC_00002,obter_feature_urbana,urbano_territorial,media,Obter urban_prop/cobertura da terra oficial por patch para reforcar o componente urbano.,true,true
+S17D_VAL_0001,S17C6_CANARY_REC_00002,reduzir_incerteza_geometrica,geometria,media,Substituir a incerteza qualitativa por metrica quantitativa revisada da geometria do footprint.,true,true
+S17D_VAL_0001,S17C6_CANARY_REC_00002,ampliar_amostra_regional,amostra,alta,Adicionar eventos datados em outras regioes para superar a concentracao em evento unico.,true,true
+S17D_VAL_0002,S17C6_CANARY_REC_00001,obter_feature_fisica,fisico,alta,"Extrair HAND, declividade, elevacao e TWI reais para os patches canario (grupo dominante do score_v6).",true,false
+S17D_VAL_0002,S17C6_CANARY_REC_00001,obter_feature_hidrologica,chuva_gatilho,media,Consolidar runoff_context_7d alem das somas CHIRPS ja disponiveis.,false,true
+S17D_VAL_0002,S17C6_CANARY_REC_00001,obter_feature_urbana,urbano_territorial,media,Obter urban_prop/cobertura da terra oficial por patch para reforcar o componente urbano.,true,true
+S17D_VAL_0002,S17C6_CANARY_REC_00001,reduzir_incerteza_geometrica,geometria,media,Substituir a incerteza qualitativa por metrica quantitativa revisada da geometria do footprint.,true,true
+S17D_VAL_0002,S17C6_CANARY_REC_00001,ampliar_amostra_regional,amostra,alta,Adicionar eventos datados em outras regioes para superar a concentracao em evento unico.,true,true
+S17D_VAL_0003,S17C6_CANARY_REC_00003,obter_feature_fisica,fisico,alta,"Extrair HAND, declividade, elevacao e TWI reais para os patches canario (grupo dominante do score_v6).",true,false
+S17D_VAL_0003,S17C6_CANARY_REC_00003,obter_feature_hidrologica,chuva_gatilho,media,Consolidar runoff_context_7d alem das somas CHIRPS ja disponiveis.,false,true
+S17D_VAL_0003,S17C6_CANARY_REC_00003,obter_feature_urbana,urbano_territorial,media,Obter urban_prop/cobertura da terra oficial por patch para reforcar o componente urbano.,true,true
+S17D_VAL_0003,S17C6_CANARY_REC_00003,reduzir_incerteza_geometrica,geometria,media,Substituir a incerteza qualitativa por metrica quantitativa revisada da geometria do footprint.,true,true
+S17D_VAL_0003,S17C6_CANARY_REC_00003,ampliar_amostra_regional,amostra,alta,Adicionar eventos datados em outras regioes para superar a concentracao em evento unico.,true,true
+S17D_VAL_0004,S17C6_CANARY_REC_00004,obter_feature_fisica,fisico,alta,"Extrair HAND, declividade, elevacao e TWI reais para os patches canario (grupo dominante do score_v6).",true,false
+S17D_VAL_0004,S17C6_CANARY_REC_00004,obter_feature_hidrologica,chuva_gatilho,media,Consolidar runoff_context_7d alem das somas CHIRPS ja disponiveis.,false,true
+S17D_VAL_0004,S17C6_CANARY_REC_00004,obter_feature_urbana,urbano_territorial,media,Obter urban_prop/cobertura da terra oficial por patch para reforcar o componente urbano.,true,true
+S17D_VAL_0004,S17C6_CANARY_REC_00004,reduzir_incerteza_geometrica,geometria,media,Substituir a incerteza qualitativa por metrica quantitativa revisada da geometria do footprint.,true,true
+S17D_VAL_0004,S17C6_CANARY_REC_00004,ampliar_amostra_regional,amostra,alta,Adicionar eventos datados em outras regioes para superar a concentracao em evento unico.,true,true
+S17D_VAL_0005,S17C6_CANARY_REC_00005,obter_feature_fisica,fisico,alta,"Extrair HAND, declividade, elevacao e TWI reais para os patches canario (grupo dominante do score_v6).",true,false
+S17D_VAL_0005,S17C6_CANARY_REC_00005,obter_feature_hidrologica,chuva_gatilho,media,Consolidar runoff_context_7d alem das somas CHIRPS ja disponiveis.,false,true
+S17D_VAL_0005,S17C6_CANARY_REC_00005,obter_feature_urbana,urbano_territorial,media,Obter urban_prop/cobertura da terra oficial por patch para reforcar o componente urbano.,true,true
+S17D_VAL_0005,S17C6_CANARY_REC_00005,reduzir_incerteza_geometrica,geometria,media,Substituir a incerteza qualitativa por metrica quantitativa revisada da geometria do footprint.,true,true
+S17D_VAL_0005,S17C6_CANARY_REC_00005,ampliar_amostra_regional,amostra,alta,Adicionar eventos datados em outras regioes para superar a concentracao em evento unico.,true,true
