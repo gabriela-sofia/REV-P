@@ -1,0 +1,71 @@
+{
+  "batches_potentially_recoverable": {
+    "recoverable_1_patch": {
+      "affected_requirement_count": 0,
+      "recoverable": false,
+      "selected_patch_count": 0,
+      "target_patch_count": 1
+    },
+    "recoverable_20_patches": {
+      "affected_requirement_count": 0,
+      "recoverable": false,
+      "selected_patch_count": 0,
+      "target_patch_count": 20
+    },
+    "recoverable_30_patches": {
+      "affected_requirement_count": 0,
+      "recoverable": false,
+      "selected_patch_count": 0,
+      "target_patch_count": 30
+    }
+  },
+  "blockers_by_category": {
+    "AMBIGUOUS_SOURCE_SENSOR": 91,
+    "DINO_WITHOUT_EXPLICIT_SOURCE": 4231,
+    "MISSING_SOURCE_LINK": 37,
+    "NON_TEMPORAL_DERIVED_ASSET": 383,
+    "UNKNOWN_ASSET_TYPE": 698
+  },
+  "counts_by_source_link_status": {
+    "BLOCKED_AMBIGUOUS_SOURCE_SENSOR": 91,
+    "BLOCKED_DINO_WITHOUT_EXPLICIT_SOURCE": 4231,
+    "BLOCKED_MISSING_SOURCE_LINK": 37,
+    "BLOCKED_UNKNOWN_ASSET_TYPE": 698,
+    "SOURCE_CONFIRMED_NON_TEMPORAL_DERIVED": 383
+  },
+  "dinov2_with_explicit_source": 91,
+  "dinov2_without_explicit_source": 4231,
+  "guardrails_preserved": [
+    "sem download de assets",
+    "sem consulta STAC API ou GEE",
+    "sem gerar URLs de download",
+    "sem criar data real ou sintetica",
+    "sem calcular embedding drift",
+    "sem gerar embeddings novos",
+    "sem treino",
+    "sem rotulo",
+    "sem criar evidencia de ausencia supervisionada",
+    "sem classe-zero",
+    "sem GT operacional",
+    "sem tabela multimodal de atributos",
+    "sem alterar manifestos originais",
+    "sem alterar outputs anteriores"
+  ],
+  "input_files": [
+    "outputs_public/tables/revp_temporal_sensor_family_resolution_mv1.csv",
+    "outputs_public/tables/revp_temporal_resolved_acquisition_requirements_mv1.csv",
+    "outputs_public/tables/revp_temporal_backfill_request_manifest_mv1.csv",
+    "outputs_public/tables/revp_normalized_temporal_asset_manifest_mv1.csv",
+    "outputs_public/tables/revp_normalized_temporal_patch_coverage_mv1.csv",
+    "outputs_public/tables/revp_temporal_metadata_repair_candidates_mv1.csv"
+  ],
+  "patches_that_could_become_actionable": 0,
+  "slots_that_could_be_unblocked": 0,
+  "step_a_source_sensor_provenance_status": "STEP_A_SOURCE_PROVENANCE_PARTIAL_ONLY",
+  "total_assets_evaluated": 5440,
+  "total_source_sentinel_1_resolved": 0,
+  "total_source_sentinel_2_resolved": 0,
+  "total_with_source_sensor_resolved": 0,
+  "unknowns_blocked": 735,
+  "unknowns_resolved": 0
+}
