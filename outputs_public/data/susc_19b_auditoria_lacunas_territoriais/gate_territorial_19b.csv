@@ -1,0 +1,7 @@
+criterio,valor_observado,limiar,passou,status,observacao
+fonte_local_utilizavel,false,documentado,true,19B_PACOTE_MAPBIOMAS_GEE_PRONTO,auditoria real das fontes territoriais locais
+pacote_gee_pronto,true,true,true,19B_PACOTE_MAPBIOMAS_GEE_PRONTO,"script, manifesto e schema do MapBiomas/GEE"
+fila_executavel,5,>=1,true,19B_PACOTE_MAPBIOMAS_GEE_PRONTO,tarefas de extracao territorial
+territorial_nao_inventado,true,true,true,19B_PACOTE_MAPBIOMAS_GEE_PRONTO,features territoriais faltantes permanecem NA
+score_v6_intacto,true,true,true,19B_PACOTE_MAPBIOMAS_GEE_PRONTO,score_v6 nao alterado
+ground_truth_zero,0,0,true,19B_PACOTE_MAPBIOMAS_GEE_PRONTO,sem ground truth

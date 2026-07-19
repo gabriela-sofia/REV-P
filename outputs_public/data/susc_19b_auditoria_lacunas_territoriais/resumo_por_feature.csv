@@ -1,0 +1,8 @@
+feature,n_patches,presentes_19a,presentes_19b,fonte,status
+urban_prop,300,300,300,datasets/suscetibilidade/susc_features_by_patch_v1.csv,presente
+vegetation_prop,300,300,300,datasets/suscetibilidade/susc_features_by_patch_v1.csv,presente
+water_prop,300,0,0,not_available,pendente_pacote_gee
+exposed_soil_prop,300,0,0,not_available,pendente_pacote_gee
+impervious_proxy,300,0,0,not_available,pendente_pacote_gee
+MapBiomas_class_majority,300,0,0,not_available,pendente_pacote_gee
+MapBiomas_class_distribution,300,0,0,not_available,pendente_pacote_gee
