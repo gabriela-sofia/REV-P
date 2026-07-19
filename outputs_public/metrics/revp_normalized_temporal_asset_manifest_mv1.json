@@ -1,0 +1,67 @@
+{
+  "counts_by_asset_type": {
+    "dinov2_embedding": 4322,
+    "external_evidence": 7,
+    "patch_manifest": 376,
+    "unknown": 735
+  },
+  "counts_by_region": {
+    "Curitiba": 160,
+    "Example": 1,
+    "Olinda/PE": 1,
+    "Petropolis": 179,
+    "Recife": 106,
+    "multiple_or_none": 1,
+    "unknown": 8
+  },
+  "counts_by_temporal_coverage_status": {
+    "HAS_ASSETS_BUT_NO_CLEAN_DATE": 328,
+    "PARTIAL_NEEDS_2_DATES": 128
+  },
+  "counts_by_temporal_usability_status": {
+    "BLOCKED_AMBIGUOUS_REPAIR": 245,
+    "BLOCKED_MISSING_ACQUISITION_DATE": 3547,
+    "BLOCKED_MISSING_ASSET_TYPE": 371,
+    "BLOCKED_MISSING_PATCH_ID": 2,
+    "BLOCKED_MISSING_REGION": 130,
+    "CLEAN_TEMPORAL_ASSET": 768,
+    "NOT_TEMPORAL_ASSET": 377
+  },
+  "guardrails_preserved": [
+    "manifesto derivado em modo shadow",
+    "sem alterar manifestos originais",
+    "sem download automatico",
+    "sem STAC ou API",
+    "sem calculo de drift",
+    "sem treino",
+    "sem rotulo",
+    "sem positivos ou negativos formais",
+    "sem classe-zero",
+    "sem GT operacional",
+    "sem tabela multimodal de atributos"
+  ],
+  "input_files": [
+    "outputs_public/tables/revp_temporal_asset_readiness_mv1.csv",
+    "outputs_public/metrics/revp_temporal_asset_readiness_mv1.json",
+    "outputs_public/tables/revp_temporal_asset_backfill_queue_mv1.csv",
+    "outputs_public/metrics/revp_temporal_asset_backfill_queue_mv1.json",
+    "outputs_public/tables/revp_temporal_metadata_repair_candidates_mv1.csv",
+    "outputs_public/metrics/revp_temporal_metadata_repair_candidates_mv1.json"
+  ],
+  "patches_eligible_for_drift": 0,
+  "patches_with_1_date": 128,
+  "patches_with_2_dates": 0,
+  "patches_with_3plus_dates": 0,
+  "remaining_blockers": {
+    "BLOCKED_AMBIGUOUS_REPAIR": 173,
+    "BLOCKED_MISSING_ACQUISITION_DATE": 128,
+    "BLOCKED_MISSING_ASSET_TYPE": 238,
+    "BLOCKED_MISSING_PATCH_ID": 2,
+    "BLOCKED_MISSING_REGION": 128,
+    "NOT_TEMPORAL_ASSET": 248
+  },
+  "step_a_normalized_manifest_status": "STEP_A_NORMALIZED_MANIFEST_REQUIRES_ADDITIONAL_ACQUISITIONS",
+  "total_clean_temporal_assets": 768,
+  "total_normalized_assets": 5440,
+  "total_patches_in_coverage": 456
+}
