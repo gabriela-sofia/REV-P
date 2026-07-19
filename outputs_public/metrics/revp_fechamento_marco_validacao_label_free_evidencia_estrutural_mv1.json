@@ -1,0 +1,49 @@
+{
+  "branch": "marco/validacao-label-free-evidencia-estrutural-mv1",
+  "status_marco": "FECHADO_COM_GUARDRAILS_PRESERVADOS",
+  "restauracao_v2dz_v2ef_status": "RESTAURACAO_FORENSE_FECHADA_SEM_GROUND_TRUTH_OPERACIONAL",
+  "auditoria_temporal_status": "METADADOS_TEMPORAIS_INSUFICIENTES_TRILHA_B_RECOMENDADA",
+  "validacao_label_free_status": "PILOTO_LABEL_FREE_EXPLORATORIO_EXECUTADO",
+  "trilha_a_status": "BLOQUEADA_METADADOS_TEMPORAIS_E_NUVEM_INSUFICIENTES",
+  "trilha_b_status": "EXECUTADA_COMO_PILOTO_LABEL_FREE_EXPLORATORIO",
+  "total_patches_auditados_temporalmente": 164,
+  "total_assets_auditados": 508,
+  "total_embeddings_validos": 12,
+  "dimensao_embeddings": 768,
+  "decisao_metodologica": "PILOTO_LABEL_FREE_COM_LIMITACAO_AMOSTRAL",
+  "status_suficiencia_amostral": "INSUFICIENTE_PARA_EVIDENCIA_ESTATISTICA_FINAL_N_12",
+  "guardrails_preservados": [
+    "unknown nunca vira negativo",
+    "ausencia de evento nunca vira classe 0",
+    "Curitiba nunca vira negativo formal",
+    "evidencia contextual nunca vira label",
+    "DINOv2 nao prova inundacao",
+    "restauracao v2dz-v2ef nao vira ground truth operacional",
+    "auditoria temporal nao libera Trilha A",
+    "piloto label-free com n=12 nao vira evidencia estatistica final",
+    "nenhum treino supervisionado e liberado"
+  ],
+  "proximo_passo_recomendado": "Expandir embeddings DINOv2 rastreaveis para pelo menos 30 patches e idealmente 59 patches, registrar multiplas datas Sentinel e cobertura de nuvem por patch, executar checagem de sanidade de dominio, formalizar ontologia de labels e politica de evidencia negativa, fechar revisao humana/adjudicacao e manter treino supervisionado bloqueado ate evidencia formal suficiente.",
+  "claims_permitidos": [
+    "infraestrutura auditavel",
+    "validacao label-free",
+    "piloto exploratorio",
+    "topologia dos embeddings",
+    "representacao visual congelada",
+    "evidencia contextual como probe externo",
+    "priorizacao de revisao humana",
+    "ground truth operacional ausente",
+    "treino supervisionado bloqueado"
+  ],
+  "claims_proibidos": [
+    "modelo detecta inundacao",
+    "modelo prediz suscetibilidade",
+    "Curitiba e negativo",
+    "classe 0",
+    "positivo confirmado",
+    "ground truth operacional",
+    "treino liberado",
+    "validacao operacional",
+    "acuracia de deteccao"
+  ]
+}

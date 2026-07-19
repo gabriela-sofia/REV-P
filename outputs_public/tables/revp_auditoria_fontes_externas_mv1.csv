@@ -1,0 +1,212 @@
+id_fonte,criterio,status,evidencia,risco,severidade,acao_recomendada
+FONTE_REC_001,origem_institucional_rastreavel,ok,instituicao=Defesa Civil do Recife / Prefeitura do Recife; url=https://www.recife.pe.gov.br,nenhum,baixa,manter
+FONTE_REC_001,data_de_acesso_registrada,parcial,data_acesso=nao_registrada_em_log,proveniencia_temporal_incompleta,media,recuperar_data_de_acesso_da_proveniencia_local
+FONTE_REC_001,periodo_de_referencia_claro,parcial,inicio=-; fim=-,janela_temporal_ambigua,media,definir_janela_temporal
+FONTE_REC_001,categoria_de_evento_clara,ok,categoria_evento=suscetibilidade_territorial,nenhum,baixa,manter
+FONTE_REC_001,geometria_disponivel_ou_ausente,ok,tem_geometria=true; tipo=Point,nenhum,baixa,manter_como_geometria_candidata
+FONTE_REC_001,crs_declarado_quando_ha_geometria,ok,crs=EPSG:4326,nenhum,baixa,manter
+FONTE_REC_001,licenca_ou_uso_claro,parcial,licenca=indefinida_a_confirmar,uso_publico_direto_bloqueado,media,bloquear_para_uso_publico_ate_confirmar_licenca
+FONTE_REC_001,risco_de_circularidade,ok,nivel=baixa,nenhum,baixa,manter
+FONTE_REC_001,risco_landslide_vs_flood,ok,avaliacao=nao_aplicavel,nenhum,baixa,manter
+FONTE_REC_001,risco_evidencia_contextual_como_label,atencao,fonte marcada como contexto/suscetibilidade,promover_contexto_a_label_patch_level,alta,manter_como_contexto_bloqueado_para_label
+FONTE_REC_001,compatibilidade_com_protocolo_c,ok,review-only; sem label/negativo/treino nesta passada,nenhum,baixa,manter
+FONTE_REC_001,compatibilidade_com_ground_truth_futuro,limitada,sem geometria de evento auditavel,nenhum,baixa,tratar_como_suporte_documental
+FONTE_REC_002,origem_institucional_rastreavel,ok,instituicao=International Charter Space and Major Disasters (Ativacao 758); url=https://disasterscharter.org/web/guest/activations/-/article/flood-in-brazil-activation-758-,nenhum,baixa,manter
+FONTE_REC_002,data_de_acesso_registrada,parcial,data_acesso=nao_registrada_em_log,proveniencia_temporal_incompleta,media,recuperar_data_de_acesso_da_proveniencia_local
+FONTE_REC_002,periodo_de_referencia_claro,ok,inicio=2022-05-24; fim=2022-05-30,nenhum,baixa,manter
+FONTE_REC_002,categoria_de_evento_clara,ok,categoria_evento=desastre_hidrometeorologico_composto,nenhum,baixa,manter
+FONTE_REC_002,geometria_disponivel_ou_ausente,ok,tem_geometria=true; tipo=MultiPolygon,nenhum,baixa,manter_como_geometria_candidata
+FONTE_REC_002,crs_declarado_quando_ha_geometria,ok,crs=EPSG:4326 (origem EPSG:32725),nenhum,baixa,manter
+FONTE_REC_002,licenca_ou_uso_claro,parcial,licenca=produto_charter_uso_restrito_a_confirmar,uso_publico_direto_bloqueado,media,bloquear_para_uso_publico_ate_confirmar_licenca
+FONTE_REC_002,risco_de_circularidade,atencao,nivel=media,evidencia_pode_derivar_do_proprio_pipeline,media,isolar_fonte_independente
+FONTE_REC_002,risco_landslide_vs_flood,atencao,avaliacao=risco_alto,scar_de_deslizamento_tratado_como_flood_extent,alta,nunca_misturar_deslizamento_com_inundacao
+FONTE_REC_002,risco_evidencia_contextual_como_label,atencao,fonte marcada como contexto/suscetibilidade,promover_contexto_a_label_patch_level,alta,manter_como_contexto_bloqueado_para_label
+FONTE_REC_002,compatibilidade_com_protocolo_c,ok,review-only; sem label/negativo/treino nesta passada,nenhum,baixa,manter
+FONTE_REC_002,compatibilidade_com_ground_truth_futuro,limitada,sem geometria de evento auditavel,nenhum,baixa,tratar_como_suporte_documental
+FONTE_REC_003,origem_institucional_rastreavel,ok,instituicao=SEDEC - Secretaria Executiva de Defesa Civil do Recife; url=http://dados.recife.pe.gov.br,nenhum,baixa,manter
+FONTE_REC_003,data_de_acesso_registrada,parcial,data_acesso=nao_registrada_em_log,proveniencia_temporal_incompleta,media,recuperar_data_de_acesso_da_proveniencia_local
+FONTE_REC_003,periodo_de_referencia_claro,parcial,inicio=-; fim=-,janela_temporal_ambigua,media,definir_janela_temporal
+FONTE_REC_003,categoria_de_evento_clara,ok,categoria_evento=alagamento,nenhum,baixa,manter
+FONTE_REC_003,geometria_disponivel_ou_ausente,ausente,tem_geometria=false; tipo=-,fonte_documental_sem_geometria,baixa,classificar_como_documental_contextual
+FONTE_REC_003,licenca_ou_uso_claro,parcial,licenca=dados_abertos_municipais_a_confirmar,uso_publico_direto_bloqueado,media,bloquear_para_uso_publico_ate_confirmar_licenca
+FONTE_REC_003,risco_de_circularidade,ok,nivel=baixa,nenhum,baixa,manter
+FONTE_REC_003,risco_landslide_vs_flood,ok,avaliacao=nao_aplicavel,nenhum,baixa,manter
+FONTE_REC_003,risco_evidencia_contextual_como_label,atencao,fonte marcada como contexto/suscetibilidade,promover_contexto_a_label_patch_level,alta,manter_como_contexto_bloqueado_para_label
+FONTE_REC_003,compatibilidade_com_protocolo_c,ok,review-only; sem label/negativo/treino nesta passada,nenhum,baixa,manter
+FONTE_REC_003,compatibilidade_com_ground_truth_futuro,limitada,sem geometria de evento auditavel,nenhum,baixa,tratar_como_suporte_documental
+FONTE_REC_004,origem_institucional_rastreavel,ok,instituicao=EMLURB / Servico 156 - Prefeitura do Recife; url=http://dados.recife.pe.gov.br,nenhum,baixa,manter
+FONTE_REC_004,data_de_acesso_registrada,parcial,data_acesso=nao_registrada_em_log,proveniencia_temporal_incompleta,media,recuperar_data_de_acesso_da_proveniencia_local
+FONTE_REC_004,periodo_de_referencia_claro,parcial,inicio=-; fim=-,janela_temporal_ambigua,media,definir_janela_temporal
+FONTE_REC_004,categoria_de_evento_clara,ok,categoria_evento=alagamento,nenhum,baixa,manter
+FONTE_REC_004,geometria_disponivel_ou_ausente,ausente,tem_geometria=false; tipo=-,fonte_documental_sem_geometria,baixa,classificar_como_documental_contextual
+FONTE_REC_004,licenca_ou_uso_claro,parcial,licenca=dados_abertos_municipais_a_confirmar,uso_publico_direto_bloqueado,media,bloquear_para_uso_publico_ate_confirmar_licenca
+FONTE_REC_004,risco_de_circularidade,atencao,nivel=media,evidencia_pode_derivar_do_proprio_pipeline,media,isolar_fonte_independente
+FONTE_REC_004,risco_landslide_vs_flood,ok,avaliacao=nao_aplicavel,nenhum,baixa,manter
+FONTE_REC_004,risco_evidencia_contextual_como_label,atencao,fonte marcada como contexto/suscetibilidade,promover_contexto_a_label_patch_level,alta,manter_como_contexto_bloqueado_para_label
+FONTE_REC_004,compatibilidade_com_protocolo_c,ok,review-only; sem label/negativo/treino nesta passada,nenhum,baixa,manter
+FONTE_REC_004,compatibilidade_com_ground_truth_futuro,limitada,sem geometria de evento auditavel,nenhum,baixa,tratar_como_suporte_documental
+FONTE_PET_001,origem_institucional_rastreavel,ok,instituicao=SGB/CPRM (Servico Geologico do Brasil); url=https://rigeo.sgb.gov.br/handle/doc/22668,nenhum,baixa,manter
+FONTE_PET_001,data_de_acesso_registrada,ok,data_acesso=2026-05-22,nenhum,baixa,manter
+FONTE_PET_001,periodo_de_referencia_claro,ok,inicio=2022-02-15; fim=2022-03-02,nenhum,baixa,manter
+FONTE_PET_001,categoria_de_evento_clara,ok,categoria_evento=deslizamento,nenhum,baixa,manter
+FONTE_PET_001,geometria_disponivel_ou_ausente,ausente,tem_geometria=false; tipo=-,fonte_documental_sem_geometria,baixa,classificar_como_documental_contextual
+FONTE_PET_001,licenca_ou_uso_claro,ok,licenca=publicacao_oficial_rigeo_sgb,nenhum,baixa,manter
+FONTE_PET_001,risco_de_circularidade,ok,nivel=baixa,nenhum,baixa,manter
+FONTE_PET_001,risco_landslide_vs_flood,atencao,avaliacao=risco_alto,scar_de_deslizamento_tratado_como_flood_extent,alta,nunca_misturar_deslizamento_com_inundacao
+FONTE_PET_001,risco_evidencia_contextual_como_label,atencao,fonte marcada como contexto/suscetibilidade,promover_contexto_a_label_patch_level,alta,manter_como_contexto_bloqueado_para_label
+FONTE_PET_001,compatibilidade_com_protocolo_c,ok,review-only; sem label/negativo/treino nesta passada,nenhum,baixa,manter
+FONTE_PET_001,compatibilidade_com_ground_truth_futuro,limitada,sem geometria de evento auditavel,nenhum,baixa,tratar_como_suporte_documental
+FONTE_PET_002,origem_institucional_rastreavel,ok,instituicao=SGB/CPRM (Servico Geologico do Brasil); url=https://rigeo.sgb.gov.br/handle/doc/22668,nenhum,baixa,manter
+FONTE_PET_002,data_de_acesso_registrada,ok,data_acesso=2026-05-22,nenhum,baixa,manter
+FONTE_PET_002,periodo_de_referencia_claro,ok,inicio=2022-02-15; fim=2022-03-02,nenhum,baixa,manter
+FONTE_PET_002,categoria_de_evento_clara,ok,categoria_evento=deslizamento,nenhum,baixa,manter
+FONTE_PET_002,geometria_disponivel_ou_ausente,ausente,tem_geometria=false; tipo=-,fonte_documental_sem_geometria,baixa,classificar_como_documental_contextual
+FONTE_PET_002,licenca_ou_uso_claro,ok,licenca=publicacao_oficial_rigeo_sgb,nenhum,baixa,manter
+FONTE_PET_002,risco_de_circularidade,ok,nivel=baixa,nenhum,baixa,manter
+FONTE_PET_002,risco_landslide_vs_flood,atencao,avaliacao=risco_alto,scar_de_deslizamento_tratado_como_flood_extent,alta,nunca_misturar_deslizamento_com_inundacao
+FONTE_PET_002,risco_evidencia_contextual_como_label,atencao,fonte marcada como contexto/suscetibilidade,promover_contexto_a_label_patch_level,alta,manter_como_contexto_bloqueado_para_label
+FONTE_PET_002,compatibilidade_com_protocolo_c,ok,review-only; sem label/negativo/treino nesta passada,nenhum,baixa,manter
+FONTE_PET_002,compatibilidade_com_ground_truth_futuro,limitada,sem geometria de evento auditavel,nenhum,baixa,tratar_como_suporte_documental
+FONTE_PET_003,origem_institucional_rastreavel,ok,instituicao=SGB/CPRM (Servico Geologico do Brasil); url=https://rigeo.sgb.gov.br/handle/doc/22668,nenhum,baixa,manter
+FONTE_PET_003,data_de_acesso_registrada,ok,data_acesso=2026-05-22,nenhum,baixa,manter
+FONTE_PET_003,periodo_de_referencia_claro,ok,inicio=2022-02-19; fim=2022-02-19,nenhum,baixa,manter
+FONTE_PET_003,categoria_de_evento_clara,ok,categoria_evento=deslizamento,nenhum,baixa,manter
+FONTE_PET_003,geometria_disponivel_ou_ausente,ausente,tem_geometria=false; tipo=-,fonte_documental_sem_geometria,baixa,classificar_como_documental_contextual
+FONTE_PET_003,licenca_ou_uso_claro,ok,licenca=publicacao_oficial_rigeo_sgb,nenhum,baixa,manter
+FONTE_PET_003,risco_de_circularidade,ok,nivel=baixa,nenhum,baixa,manter
+FONTE_PET_003,risco_landslide_vs_flood,atencao,avaliacao=risco_alto,scar_de_deslizamento_tratado_como_flood_extent,alta,nunca_misturar_deslizamento_com_inundacao
+FONTE_PET_003,risco_evidencia_contextual_como_label,atencao,fonte marcada como contexto/suscetibilidade,promover_contexto_a_label_patch_level,alta,manter_como_contexto_bloqueado_para_label
+FONTE_PET_003,compatibilidade_com_protocolo_c,ok,review-only; sem label/negativo/treino nesta passada,nenhum,baixa,manter
+FONTE_PET_003,compatibilidade_com_ground_truth_futuro,limitada,sem geometria de evento auditavel,nenhum,baixa,tratar_como_suporte_documental
+FONTE_PET_004,origem_institucional_rastreavel,ok,instituicao=Prefeitura Municipal de Petropolis; url=https://www.petropolis.rj.gov.br,nenhum,baixa,manter
+FONTE_PET_004,data_de_acesso_registrada,parcial,data_acesso=nao_registrada_em_log,proveniencia_temporal_incompleta,media,recuperar_data_de_acesso_da_proveniencia_local
+FONTE_PET_004,periodo_de_referencia_claro,ok,inicio=2022-02-14; fim=2022-02-15,nenhum,baixa,manter
+FONTE_PET_004,categoria_de_evento_clara,ok,categoria_evento=desastre_hidrometeorologico_composto,nenhum,baixa,manter
+FONTE_PET_004,geometria_disponivel_ou_ausente,ausente,tem_geometria=false; tipo=-,fonte_documental_sem_geometria,baixa,classificar_como_documental_contextual
+FONTE_PET_004,licenca_ou_uso_claro,ok,licenca=ato_oficial_publico,nenhum,baixa,manter
+FONTE_PET_004,risco_de_circularidade,ok,nivel=baixa,nenhum,baixa,manter
+FONTE_PET_004,risco_landslide_vs_flood,ok,avaliacao=nao_aplicavel,nenhum,baixa,manter
+FONTE_PET_004,risco_evidencia_contextual_como_label,atencao,fonte marcada como contexto/suscetibilidade,promover_contexto_a_label_patch_level,alta,manter_como_contexto_bloqueado_para_label
+FONTE_PET_004,compatibilidade_com_protocolo_c,ok,review-only; sem label/negativo/treino nesta passada,nenhum,baixa,manter
+FONTE_PET_004,compatibilidade_com_ground_truth_futuro,limitada,sem geometria de evento auditavel,nenhum,baixa,tratar_como_suporte_documental
+FONTE_CUR_001,origem_institucional_rastreavel,ok,instituicao=Coordenadoria Estadual da Defesa Civil do Parana; url=https://www.defesacivil.pr.gov.br,nenhum,baixa,manter
+FONTE_CUR_001,data_de_acesso_registrada,ok,data_acesso=2026-06-14,nenhum,baixa,manter
+FONTE_CUR_001,periodo_de_referencia_claro,ok,inicio=2022-01-05; fim=2022-01-15,nenhum,baixa,manter
+FONTE_CUR_001,categoria_de_evento_clara,ok,categoria_evento=alagamento,nenhum,baixa,manter
+FONTE_CUR_001,geometria_disponivel_ou_ausente,ausente,tem_geometria=false; tipo=-,fonte_documental_sem_geometria,baixa,classificar_como_documental_contextual
+FONTE_CUR_001,licenca_ou_uso_claro,ok,licenca=conteudo_institucional_publico,nenhum,baixa,manter
+FONTE_CUR_001,risco_de_circularidade,ok,nivel=baixa,nenhum,baixa,manter
+FONTE_CUR_001,risco_landslide_vs_flood,ok,avaliacao=nao_aplicavel,nenhum,baixa,manter
+FONTE_CUR_001,risco_evidencia_contextual_como_label,atencao,fonte marcada como contexto/suscetibilidade,promover_contexto_a_label_patch_level,alta,manter_como_contexto_bloqueado_para_label
+FONTE_CUR_001,compatibilidade_com_protocolo_c,ok,review-only; sem label/negativo/treino nesta passada,nenhum,baixa,manter
+FONTE_CUR_001,compatibilidade_com_ground_truth_futuro,limitada,sem geometria de evento auditavel,nenhum,baixa,tratar_como_suporte_documental
+FONTE_CUR_002,origem_institucional_rastreavel,ok,instituicao=Fonte oficial (one-hop a partir da Defesa Civil PR); url=https://www.defesacivil.pr.gov.br,nenhum,baixa,manter
+FONTE_CUR_002,data_de_acesso_registrada,ok,data_acesso=2026-06-14,nenhum,baixa,manter
+FONTE_CUR_002,periodo_de_referencia_claro,ok,inicio=2022-01-05; fim=2022-01-15,nenhum,baixa,manter
+FONTE_CUR_002,categoria_de_evento_clara,ok,categoria_evento=alagamento,nenhum,baixa,manter
+FONTE_CUR_002,geometria_disponivel_ou_ausente,ausente,tem_geometria=false; tipo=-,fonte_documental_sem_geometria,baixa,classificar_como_documental_contextual
+FONTE_CUR_002,licenca_ou_uso_claro,parcial,licenca=indefinida_a_confirmar,uso_publico_direto_bloqueado,media,bloquear_para_uso_publico_ate_confirmar_licenca
+FONTE_CUR_002,risco_de_circularidade,ok,nivel=baixa,nenhum,baixa,manter
+FONTE_CUR_002,risco_landslide_vs_flood,ok,avaliacao=nao_aplicavel,nenhum,baixa,manter
+FONTE_CUR_002,risco_evidencia_contextual_como_label,atencao,fonte marcada como contexto/suscetibilidade,promover_contexto_a_label_patch_level,alta,manter_como_contexto_bloqueado_para_label
+FONTE_CUR_002,compatibilidade_com_protocolo_c,ok,review-only; sem label/negativo/treino nesta passada,nenhum,baixa,manter
+FONTE_CUR_002,compatibilidade_com_ground_truth_futuro,limitada,sem geometria de evento auditavel,nenhum,baixa,tratar_como_suporte_documental
+FONTE_CUR_003,origem_institucional_rastreavel,ok,instituicao=IPPUC / GeoCuritiba - Prefeitura de Curitiba; url=https://www.ippuc.org.br,nenhum,baixa,manter
+FONTE_CUR_003,data_de_acesso_registrada,ok,data_acesso=2026-05-22,nenhum,baixa,manter
+FONTE_CUR_003,periodo_de_referencia_claro,parcial,inicio=-; fim=-,janela_temporal_ambigua,media,definir_janela_temporal
+FONTE_CUR_003,categoria_de_evento_clara,ok,categoria_evento=suscetibilidade_territorial,nenhum,baixa,manter
+FONTE_CUR_003,geometria_disponivel_ou_ausente,ausente,tem_geometria=false; tipo=-,fonte_documental_sem_geometria,baixa,classificar_como_documental_contextual
+FONTE_CUR_003,licenca_ou_uso_claro,parcial,licenca=indefinida_a_confirmar,uso_publico_direto_bloqueado,media,bloquear_para_uso_publico_ate_confirmar_licenca
+FONTE_CUR_003,risco_de_circularidade,ok,nivel=baixa,nenhum,baixa,manter
+FONTE_CUR_003,risco_landslide_vs_flood,ok,avaliacao=nao_aplicavel,nenhum,baixa,manter
+FONTE_CUR_003,risco_evidencia_contextual_como_label,atencao,fonte marcada como contexto/suscetibilidade,promover_contexto_a_label_patch_level,alta,manter_como_contexto_bloqueado_para_label
+FONTE_CUR_003,compatibilidade_com_protocolo_c,ok,review-only; sem label/negativo/treino nesta passada,nenhum,baixa,manter
+FONTE_CUR_003,compatibilidade_com_ground_truth_futuro,limitada,sem geometria de evento auditavel,nenhum,baixa,tratar_como_suporte_documental
+FONTE_NAC_001,origem_institucional_rastreavel,ok,instituicao=CEMADEN/MCTI - Centro Nacional de Monitoramento e Alertas de Desastres Naturais; url=https://mapainterativo.cemaden.gov.br/,nenhum,baixa,manter
+FONTE_NAC_001,data_de_acesso_registrada,ok,data_acesso=2026-06-18,nenhum,baixa,manter
+FONTE_NAC_001,periodo_de_referencia_claro,parcial,inicio=-; fim=-,janela_temporal_ambigua,media,definir_janela_temporal
+FONTE_NAC_001,categoria_de_evento_clara,ok,categoria_evento=suscetibilidade_territorial,nenhum,baixa,manter
+FONTE_NAC_001,geometria_disponivel_ou_ausente,ausente,tem_geometria=false; tipo=-,fonte_documental_sem_geometria,baixa,classificar_como_documental_contextual
+FONTE_NAC_001,licenca_ou_uso_claro,parcial,licenca=uso_publico_termos_a_confirmar,uso_publico_direto_bloqueado,media,bloquear_para_uso_publico_ate_confirmar_licenca
+FONTE_NAC_001,risco_de_circularidade,ok,nivel=baixa,nenhum,baixa,manter
+FONTE_NAC_001,risco_landslide_vs_flood,ok,avaliacao=nao_aplicavel,nenhum,baixa,manter
+FONTE_NAC_001,risco_evidencia_contextual_como_label,atencao,fonte marcada como contexto/suscetibilidade,promover_contexto_a_label_patch_level,alta,manter_como_contexto_bloqueado_para_label
+FONTE_NAC_001,compatibilidade_com_protocolo_c,ok,review-only; sem label/negativo/treino nesta passada,nenhum,baixa,manter
+FONTE_NAC_001,compatibilidade_com_ground_truth_futuro,limitada,sem geometria de evento auditavel,nenhum,baixa,tratar_como_suporte_documental
+FONTE_NAC_002,origem_institucional_rastreavel,ok,instituicao=ANA - Agencia Nacional de Aguas e Saneamento Basico (SNIRH/HidroWeb); url=https://www.snirh.gov.br/hidroweb/,nenhum,baixa,manter
+FONTE_NAC_002,data_de_acesso_registrada,ok,data_acesso=2026-06-18,nenhum,baixa,manter
+FONTE_NAC_002,periodo_de_referencia_claro,parcial,inicio=-; fim=-,janela_temporal_ambigua,media,definir_janela_temporal
+FONTE_NAC_002,categoria_de_evento_clara,ok,categoria_evento=chuva_extrema,nenhum,baixa,manter
+FONTE_NAC_002,geometria_disponivel_ou_ausente,ausente,tem_geometria=false; tipo=-,fonte_documental_sem_geometria,baixa,classificar_como_documental_contextual
+FONTE_NAC_002,licenca_ou_uso_claro,ok,licenca=dados_abertos_ana,nenhum,baixa,manter
+FONTE_NAC_002,risco_de_circularidade,ok,nivel=baixa,nenhum,baixa,manter
+FONTE_NAC_002,risco_landslide_vs_flood,ok,avaliacao=nao_aplicavel,nenhum,baixa,manter
+FONTE_NAC_002,risco_evidencia_contextual_como_label,atencao,fonte marcada como contexto/suscetibilidade,promover_contexto_a_label_patch_level,alta,manter_como_contexto_bloqueado_para_label
+FONTE_NAC_002,compatibilidade_com_protocolo_c,ok,review-only; sem label/negativo/treino nesta passada,nenhum,baixa,manter
+FONTE_NAC_002,compatibilidade_com_ground_truth_futuro,limitada,sem geometria de evento auditavel,nenhum,baixa,tratar_como_suporte_documental
+FONTE_NAC_003,origem_institucional_rastreavel,ok,instituicao=MapBiomas; url=https://brasil.mapbiomas.org/,nenhum,baixa,manter
+FONTE_NAC_003,data_de_acesso_registrada,ok,data_acesso=2026-06-18,nenhum,baixa,manter
+FONTE_NAC_003,periodo_de_referencia_claro,ok,inicio=1985; fim=2024,nenhum,baixa,manter
+FONTE_NAC_003,categoria_de_evento_clara,ok,categoria_evento=suscetibilidade_territorial,nenhum,baixa,manter
+FONTE_NAC_003,geometria_disponivel_ou_ausente,ausente,tem_geometria=false; tipo=-,fonte_documental_sem_geometria,baixa,classificar_como_documental_contextual
+FONTE_NAC_003,licenca_ou_uso_claro,parcial,licenca=CC_BY_SA_mapbiomas_a_confirmar_versao,uso_publico_direto_bloqueado,media,bloquear_para_uso_publico_ate_confirmar_licenca
+FONTE_NAC_003,risco_de_circularidade,ok,nivel=baixa,nenhum,baixa,manter
+FONTE_NAC_003,risco_landslide_vs_flood,ok,avaliacao=nao_aplicavel,nenhum,baixa,manter
+FONTE_NAC_003,risco_evidencia_contextual_como_label,atencao,fonte marcada como contexto/suscetibilidade,promover_contexto_a_label_patch_level,alta,manter_como_contexto_bloqueado_para_label
+FONTE_NAC_003,compatibilidade_com_protocolo_c,ok,review-only; sem label/negativo/treino nesta passada,nenhum,baixa,manter
+FONTE_NAC_003,compatibilidade_com_ground_truth_futuro,limitada,sem geometria de evento auditavel,nenhum,baixa,tratar_como_suporte_documental
+FONTE_NAC_004,origem_institucional_rastreavel,ok,instituicao=IBGE - Instituto Brasileiro de Geografia e Estatistica; url=https://www.ibge.gov.br/geociencias/downloads-geociencias.html,nenhum,baixa,manter
+FONTE_NAC_004,data_de_acesso_registrada,ok,data_acesso=2026-06-18,nenhum,baixa,manter
+FONTE_NAC_004,periodo_de_referencia_claro,parcial,inicio=-; fim=-,janela_temporal_ambigua,media,definir_janela_temporal
+FONTE_NAC_004,categoria_de_evento_clara,ok,categoria_evento=vulnerabilidade_socioambiental,nenhum,baixa,manter
+FONTE_NAC_004,geometria_disponivel_ou_ausente,ausente,tem_geometria=false; tipo=-,fonte_documental_sem_geometria,baixa,classificar_como_documental_contextual
+FONTE_NAC_004,licenca_ou_uso_claro,ok,licenca=dados_publicos_ibge,nenhum,baixa,manter
+FONTE_NAC_004,risco_de_circularidade,ok,nivel=baixa,nenhum,baixa,manter
+FONTE_NAC_004,risco_landslide_vs_flood,ok,avaliacao=nao_aplicavel,nenhum,baixa,manter
+FONTE_NAC_004,risco_evidencia_contextual_como_label,atencao,fonte marcada como contexto/suscetibilidade,promover_contexto_a_label_patch_level,alta,manter_como_contexto_bloqueado_para_label
+FONTE_NAC_004,compatibilidade_com_protocolo_c,ok,review-only; sem label/negativo/treino nesta passada,nenhum,baixa,manter
+FONTE_NAC_004,compatibilidade_com_ground_truth_futuro,limitada,sem geometria de evento auditavel,nenhum,baixa,tratar_como_suporte_documental
+FONTE_NAC_005,origem_institucional_rastreavel,ok,instituicao=APAC - Agencia Pernambucana de Aguas e Clima; url=https://www.apac.pe.gov.br,nenhum,baixa,manter
+FONTE_NAC_005,data_de_acesso_registrada,ok,data_acesso=2026-06-18,nenhum,baixa,manter
+FONTE_NAC_005,periodo_de_referencia_claro,parcial,inicio=-; fim=-,janela_temporal_ambigua,media,definir_janela_temporal
+FONTE_NAC_005,categoria_de_evento_clara,ok,categoria_evento=chuva_extrema,nenhum,baixa,manter
+FONTE_NAC_005,geometria_disponivel_ou_ausente,ausente,tem_geometria=false; tipo=-,fonte_documental_sem_geometria,baixa,classificar_como_documental_contextual
+FONTE_NAC_005,licenca_ou_uso_claro,parcial,licenca=uso_publico_termos_a_confirmar,uso_publico_direto_bloqueado,media,bloquear_para_uso_publico_ate_confirmar_licenca
+FONTE_NAC_005,risco_de_circularidade,ok,nivel=baixa,nenhum,baixa,manter
+FONTE_NAC_005,risco_landslide_vs_flood,ok,avaliacao=nao_aplicavel,nenhum,baixa,manter
+FONTE_NAC_005,risco_evidencia_contextual_como_label,atencao,fonte marcada como contexto/suscetibilidade,promover_contexto_a_label_patch_level,alta,manter_como_contexto_bloqueado_para_label
+FONTE_NAC_005,compatibilidade_com_protocolo_c,ok,review-only; sem label/negativo/treino nesta passada,nenhum,baixa,manter
+FONTE_NAC_005,compatibilidade_com_ground_truth_futuro,limitada,sem geometria de evento auditavel,nenhum,baixa,tratar_como_suporte_documental
+FONTE_NAC_006,origem_institucional_rastreavel,ok,instituicao=DRM-RJ / NADE - Servico Geologico do Estado do Rio de Janeiro; url=https://www.drm.rj.gov.br,nenhum,baixa,manter
+FONTE_NAC_006,data_de_acesso_registrada,ok,data_acesso=2026-05-22,nenhum,baixa,manter
+FONTE_NAC_006,periodo_de_referencia_claro,ok,inicio=2022-02-15; fim=-,nenhum,baixa,manter
+FONTE_NAC_006,categoria_de_evento_clara,ok,categoria_evento=deslizamento,nenhum,baixa,manter
+FONTE_NAC_006,geometria_disponivel_ou_ausente,ausente,tem_geometria=false; tipo=-,fonte_documental_sem_geometria,baixa,classificar_como_documental_contextual
+FONTE_NAC_006,licenca_ou_uso_claro,parcial,licenca=indefinida_a_confirmar,uso_publico_direto_bloqueado,media,bloquear_para_uso_publico_ate_confirmar_licenca
+FONTE_NAC_006,risco_de_circularidade,ok,nivel=baixa,nenhum,baixa,manter
+FONTE_NAC_006,risco_landslide_vs_flood,atencao,avaliacao=risco_alto,scar_de_deslizamento_tratado_como_flood_extent,alta,nunca_misturar_deslizamento_com_inundacao
+FONTE_NAC_006,risco_evidencia_contextual_como_label,atencao,fonte marcada como contexto/suscetibilidade,promover_contexto_a_label_patch_level,alta,manter_como_contexto_bloqueado_para_label
+FONTE_NAC_006,compatibilidade_com_protocolo_c,ok,review-only; sem label/negativo/treino nesta passada,nenhum,baixa,manter
+FONTE_NAC_006,compatibilidade_com_ground_truth_futuro,limitada,sem geometria de evento auditavel,nenhum,baixa,tratar_como_suporte_documental
+FONTE_INT_001,origem_institucional_rastreavel,ok,instituicao=Copernicus Emergency Management Service (EMS) Rapid Mapping; url=https://rapidmapping.emergency.copernicus.eu/,nenhum,baixa,manter
+FONTE_INT_001,data_de_acesso_registrada,ok,data_acesso=2026-06-18,nenhum,baixa,manter
+FONTE_INT_001,periodo_de_referencia_claro,ok,inicio=2022-02-15; fim=-,nenhum,baixa,manter
+FONTE_INT_001,categoria_de_evento_clara,ok,categoria_evento=deslizamento,nenhum,baixa,manter
+FONTE_INT_001,geometria_disponivel_ou_ausente,ausente,tem_geometria=false; tipo=-,fonte_documental_sem_geometria,baixa,classificar_como_documental_contextual
+FONTE_INT_001,licenca_ou_uso_claro,parcial,licenca=copernicus_ems_full_open_a_confirmar,uso_publico_direto_bloqueado,media,bloquear_para_uso_publico_ate_confirmar_licenca
+FONTE_INT_001,risco_de_circularidade,ok,nivel=baixa,nenhum,baixa,manter
+FONTE_INT_001,risco_landslide_vs_flood,atencao,avaliacao=risco_alto,scar_de_deslizamento_tratado_como_flood_extent,alta,nunca_misturar_deslizamento_com_inundacao
+FONTE_INT_001,risco_evidencia_contextual_como_label,atencao,fonte marcada como contexto/suscetibilidade,promover_contexto_a_label_patch_level,alta,manter_como_contexto_bloqueado_para_label
+FONTE_INT_001,compatibilidade_com_protocolo_c,ok,review-only; sem label/negativo/treino nesta passada,nenhum,baixa,manter
+FONTE_INT_001,compatibilidade_com_ground_truth_futuro,limitada,sem geometria de evento auditavel,nenhum,baixa,tratar_como_suporte_documental
+FONTE_INT_002,origem_institucional_rastreavel,ok,instituicao=NHESS (Copernicus Publications) - artigo academico; url=https://nhess.copernicus.org/articles/23/1157/2023/,nenhum,baixa,manter
+FONTE_INT_002,data_de_acesso_registrada,ok,data_acesso=2026-06-18,nenhum,baixa,manter
+FONTE_INT_002,periodo_de_referencia_claro,ok,inicio=2022-02-15; fim=2022-02-15,nenhum,baixa,manter
+FONTE_INT_002,categoria_de_evento_clara,ok,categoria_evento=desastre_hidrometeorologico_composto,nenhum,baixa,manter
+FONTE_INT_002,geometria_disponivel_ou_ausente,ausente,tem_geometria=false; tipo=-,fonte_documental_sem_geometria,baixa,classificar_como_documental_contextual
+FONTE_INT_002,licenca_ou_uso_claro,ok,licenca=CC_BY_4.0,nenhum,baixa,manter
+FONTE_INT_002,risco_de_circularidade,ok,nivel=baixa,nenhum,baixa,manter
+FONTE_INT_002,risco_landslide_vs_flood,atencao,avaliacao=risco_alto,scar_de_deslizamento_tratado_como_flood_extent,alta,nunca_misturar_deslizamento_com_inundacao
+FONTE_INT_002,risco_evidencia_contextual_como_label,atencao,fonte marcada como contexto/suscetibilidade,promover_contexto_a_label_patch_level,alta,manter_como_contexto_bloqueado_para_label
+FONTE_INT_002,compatibilidade_com_protocolo_c,ok,review-only; sem label/negativo/treino nesta passada,nenhum,baixa,manter
+FONTE_INT_002,compatibilidade_com_ground_truth_futuro,limitada,sem geometria de evento auditavel,nenhum,baixa,tratar_como_suporte_documental

@@ -1,0 +1,53 @@
+{
+  "total_fontes_pendentes_iniciais": 8,
+  "total_fontes_resolvidas_com_download": 3,
+  "total_fontes_baixadas_parcialmente": 1,
+  "total_fontes_alternativas_oficiais_baixadas": 1,
+  "total_fontes_bloqueadas_apos_navegacao_real": 2,
+  "total_fontes_requerem_solicitacao_formal": 1,
+  "total_arquivos_baixados": 8,
+  "total_arquivos_com_sha256": 8,
+  "total_geometrias_candidatas": 6,
+  "total_eventos_candidatos": 8,
+  "contagem_por_instituicao": {
+    "IBGE": 3,
+    "IPPUC / GeoCuritiba": 1,
+    "ANA - Agencia Nacional de Aguas e Saneamento Basico": 1,
+    "MapBiomas": 1,
+    "SGB/CPRM (Servico Geologico do Brasil)": 1,
+    "NHESS (Copernicus Publications)": 1
+  },
+  "contagem_por_cidade": {
+    "Petropolis": 3,
+    "Recife": 1,
+    "Curitiba": 2,
+    "nacional_ou_internacional": 2
+  },
+  "contagem_por_formato": {
+    "GeoJSON": 4,
+    "PDF": 3,
+    "XLSX": 1
+  },
+  "distribuicao_status_manifesto": {
+    "ja_existia_localmente": 10,
+    "baixado": 4,
+    "requer_solicitacao_formal": 1,
+    "baixado_parcialmente": 1,
+    "bloqueado_apos_navegacao_real": 2,
+    "fonte_alternativa_oficial_baixada": 1,
+    "nao_baixado": 1
+  },
+  "guardrails_preservados": [
+    "Sem treino supervisionado; sem label binario; sem positivo formal; sem negativo formal.",
+    "Sem ground truth operacional patch-level nesta passada.",
+    "unknown nao vira negativo; ausencia de evidencia nao vira classe 0.",
+    "Curitiba nao vira negativo formal.",
+    "Evidencia externa nao vira label automaticamente.",
+    "DINOv2 nao prova inundacao.",
+    "Fonte textual sem geometria nao fecha patch-level.",
+    "Landslide scar nao prova flood extent.",
+    "Geometria de suscetibilidade nao e geometria de evento observado.",
+    "Download de fonte nao significa validacao operacional."
+  ],
+  "proximo_passo_recomendado": "Solicitar formalmente os dados sob formulario/e-mail (CEMADEN) e os portais sem arquivo estatico (APAC, Copernicus EMS rapid mapping); complementar a serie hidrologica da ANA via HidroWeb por estacao do Capibaribe; e submeter as geometrias candidatas (bacias GeoCuritiba, malhas IBGE, carta de suscetibilidade SGB) a revisao humana. Nenhuma fonte e promovida a label nesta passada."
+}

@@ -1,0 +1,51 @@
+{
+  "total_fontes_pesquisadas": 19,
+  "total_fontes_baixadas": 10,
+  "total_fontes_aprovadas_para_contexto": 11,
+  "total_fontes_bloqueadas": 2,
+  "total_eventos_candidatos": 8,
+  "total_geometrias_candidatas": 2,
+  "contagem_por_cidade": {
+    "Recife": 5,
+    "Petropolis": 7,
+    "Curitiba": 3,
+    "nacional_ou_internacional": 4
+  },
+  "contagem_por_familia_fonte": {
+    "base_gis": 2,
+    "agencia_internacional": 2,
+    "defesa_civil": 2,
+    "prefeitura": 2,
+    "orgao_federal": 5,
+    "governo_estadual": 3,
+    "instituto_pesquisa": 2,
+    "artigo_academico": 1
+  },
+  "contagem_por_categoria_evento": {
+    "suscetibilidade_territorial": 4,
+    "desastre_hidrometeorologico_composto": 3,
+    "alagamento": 4,
+    "deslizamento": 5,
+    "chuva_extrema": 2,
+    "vulnerabilidade_socioambiental": 1
+  },
+  "fontes_com_geometria": 2,
+  "fontes_sem_geometria": 17,
+  "fontes_com_crs_declarado": 2,
+  "fontes_sem_crs_declarado": 0,
+  "eventos_potencialmente_revisaveis": 0,
+  "eventos_que_nao_podem_virar_label": 8,
+  "guardrails_preservados": [
+    "REV-P permanece review-only; nenhuma fonte externa vira ground truth operacional nesta passada.",
+    "Evidencia externa NAO vira label automaticamente.",
+    "unknown nunca vira negativo; ausencia de evento nunca vira classe 0.",
+    "Curitiba nunca vira negativo formal.",
+    "Desastre documentado nao significa label patch-level fechado.",
+    "Landslide scar nao prova flood extent; deslizamento e flood nunca sao misturados automaticamente.",
+    "Geometria de suscetibilidade nao e geometria de evento observado.",
+    "Fonte textual nao substitui geometria auditavel.",
+    "Fonte sem licenca clara fica bloqueada para uso publico direto.",
+    "Nenhum SHA256, URL ou data foi inventado; valores derivam de arquivo real ou de log/busca registrada."
+  ],
+  "proximo_passo_recomendado": "Submeter geometrias candidatas (Charter 758 / areas de risco Recife) a revisao humana e solicitar formalmente fontes bloqueadas (DRM-RJ, IPPUC, Defesa Civil PE), sem promover nada a ground truth nesta passada."
+}

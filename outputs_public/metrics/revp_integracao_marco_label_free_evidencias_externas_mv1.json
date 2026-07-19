@@ -1,0 +1,49 @@
+{
+  "status_integracao": "integrado_review_only",
+  "artefatos_marco_encontrados": [
+    "revp_fechamento_marco_validacao_label_free_evidencia_estrutural_mv1.md",
+    "revp_manifesto_marco_validacao_label_free_evidencia_estrutural_mv1.csv",
+    "revp_fechamento_marco_validacao_label_free_evidencia_estrutural_mv1.json",
+    "revp_proximos_passos_pos_marco_label_free_mv1.csv"
+  ],
+  "artefatos_curadoria_externa_originais_encontrados": [
+    "revp_manifesto_evidencias_externas_mv1.csv",
+    "revp_auditoria_fontes_externas_mv1.csv",
+    "revp_indice_eventos_externos_candidatos_mv1.csv",
+    "revp_indice_geometrias_externas_candidatas_mv1.csv",
+    "revp_curadoria_evidencias_externas_mv1.md",
+    "revp_curadoria_evidencias_externas_mv1.json"
+  ],
+  "artefatos_curadoria_externa_revisados_encontrados": [
+    "revp_manifesto_evidencias_externas_downloads_mv1.csv",
+    "revp_auditoria_fontes_externas_downloads_mv1.csv",
+    "revp_indice_eventos_externos_candidatos_downloads_mv1.csv",
+    "revp_indice_geometrias_externas_candidatas_downloads_mv1.csv",
+    "revp_fechamento_downloads_evidencias_externas_mv1.md",
+    "revp_fechamento_downloads_evidencias_externas_mv1.json",
+    "revp_log_downloads_evidencias_externas_mv1.csv"
+  ],
+  "total_fontes_manifesto_original": 19,
+  "total_fontes_baixadas_revisao": 1,
+  "total_fontes_ja_existiam_localmente": 10,
+  "total_fontes_sem_download_direto": 7,
+  "total_fontes_requerem_download_manual": 7,
+  "total_fontes_com_sha256_real": 11,
+  "total_eventos_candidatos": 8,
+  "total_geometrias_candidatas": 2,
+  "itens_potenciais_para_revisao_humana": 2,
+  "itens_bloqueados": 8,
+  "proximo_passo_recomendado": "Executar manualmente os downloads marcados como requer_download_manual (CEMADEN, ANA/HidroWeb, MapBiomas, IBGE, APAC, Copernicus EMS, IPPUC), salvar o bruto na quarentena e re-rodar este script; e solicitar formalmente as fontes em falha/bloqueio (DRM-RJ). Nenhuma fonte e promovida a label nesta passada.",
+  "guardrails_preservados": [
+    "Sem treino supervisionado; sem label binario; sem positivo formal; sem negativo formal.",
+    "Sem ground truth operacional patch-level nesta passada.",
+    "unknown nao vira negativo; ausencia de evidencia nao vira classe 0.",
+    "Curitiba nao vira negativo formal.",
+    "Evidencia externa nao vira label automaticamente.",
+    "DINOv2 nao prova inundacao.",
+    "Fonte textual sem geometria nao fecha patch-level.",
+    "Landslide scar nao prova flood extent.",
+    "Geometria de suscetibilidade nao e geometria de evento observado.",
+    "Download de fonte nao significa validacao operacional."
+  ]
+}
