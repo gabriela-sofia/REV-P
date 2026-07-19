@@ -1,0 +1,13 @@
+criterio,valor_observado,limiar,passou,observacao
+canarios_avaliados,5,5,true,todos os canarios recebem status
+feature_fisica_direta,0,>=0,true,sem feature store fisico keyed ao canario S17C6
+referencia_comparativa,5,>=0,true,patch oficial mais proximo com features fisicas reais
+fila_extracao,5,5,true,tarefas de extracao concretas por canario
+calibracao_exploratoria_aprimorada,5,>=1,true,componente fisico comparativo penalizado
+pode_calibracao_forte_agora,0,>=0,true,referencia comparativa distante nao habilita forte
+ground_truth_zero,0,0,true,sem ground truth
+trainable_zero,0,0,true,sem treino
+score_v7_allowed_zero,0,0,true,sem score_v7
+score_v6_intacto,true,true,true,score_v6 nunca alterado
+caminho_funcional_entregue,true,true,true,sprint entrega caminho funcional
+status_final_17f,17F_EXPLORATORIA_APRIMORADA_COM_COMPONENTE_FISICO,enum,true,status final da extracao fisica
