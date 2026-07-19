@@ -1,0 +1,15 @@
+risk_id,related_binding_id,related_anchor_id,severity,risk_type,description,evidence,mitigation,blocks_next_step
+MV2_13_RISK_01,ALL,ALL,MEDIA,RISK_WEAK_FILENAME_INFERENCE,Vínculo por filename/texto fraco poderia inflar binding.,promover binding fraco a forte por nome,binding fraco nunca vira STAC real; regra explícita no reconcile,true
+MV2_13_RISK_02,ALL,ALL,ALTA,RISK_CITY_PROXY_BINDING,Usar cidade como proxy de binding asset/patch.,cidade/região como vínculo,cidade/região nunca basta para binding medio/forte,true
+MV2_13_RISK_03,ALL,ALL,ALTA,RISK_REGION_PROXY_LABEL,Usar região como proxy de label/classe.,região como label,nenhum label é criado; região é só contexto,true
+MV2_13_RISK_04,ALL,ALL,ALTA,RISK_PNG_AS_RASTER,Tratar PNG/render como raster Sentinel nativo.,is_native_sentinel_raster a partir de PNG,is_native só de raster_readable; PNG/NPZ marcados false,true
+MV2_13_RISK_05,ALL,ALL,ALTA,RISK_NPZ_AS_SPECTRAL,Tratar NPZ/DINOv2 como feature espectral.,NPZ como espectral,NPZ/DINOv2 nunca é raster nativo; feature espectral=0,true
+MV2_13_RISK_06,ALL,ALL,MEDIA,RISK_MISSING_CRS,CRS ausente impede AOI/STAC.,crs_status=ABSENT,STAC real bloqueado sem CRS,true
+MV2_13_RISK_07,ALL,ALL,ALTA,RISK_MISSING_GEOMETRY,Geometria ausente impede AOI.,geometry_status=ABSENT,STAC real bloqueado sem geometria,true
+MV2_13_RISK_08,ALL,ALL,ALTA,RISK_MISSING_SCENE_ID,scene_id ausente impede STAC real.,128 MEDIUM sem scene_id,dry-run só rascunho; real bloqueado,true
+MV2_13_RISK_09,ALL,ALL,ALTA,RISK_MISSING_DATETIME,datetime ausente/inválido impede Trilha A e STAC real.,2 datetime invalido futuro,datas futuras descartadas; real bloqueado,true
+MV2_13_RISK_10,ALL,ALL,ALTA,RISK_STAC_WITHOUT_PATCH,STAC sem patch_id (cenas soltas).,10 cenas sem patch,STAC bloqueado NO_PATCH,true
+MV2_13_RISK_11,ALL,ALL,ALTA,RISK_STAC_WITHOUT_ASSET,STAC sem asset_id oficial.,anchors sem asset,STAC bloqueado NO_ASSET,true
+MV2_13_RISK_12,ALL,ALL,CRITICA,RISK_DAY10_FALSE_UNLOCK,Marcar Dia 10 desbloqueado sem raster nativo.,0 raster nativo no corpus,can_unlock_day10_now=false enquanto raster ausente,true
+MV2_13_RISK_13,ALL,ALL,CRITICA,RISK_TRAINING_BEFORE_SILVER,Treinar antes de silver/positivos/negativos formais.,"silver=0, negativos=0",can_train=false; sandbox bloqueado,true
+MV2_13_RISK_14,ALL,ALL,CRITICA,RISK_UNKNOWN_AS_NEGATIVE,Tratar ausência de evidência como negativo/classe 0.,"141 BINDING_NONE (ausencia, nunca negativo)",ausência nunca vira negativo; negatives_created=0,true

@@ -1,0 +1,22 @@
+{
+  "schema_id": "mv2_13_manual_recovery_queue",
+  "title": "MV2-13 Manual Recovery Queue",
+  "validates": "outputs_public/mv2_sentinel_binding/mv2_13_manual_recovery_queue.csv",
+  "primary_key": "recovery_id",
+  "required_fields": [
+    "recovery_id",
+    "priority",
+    "target_type",
+    "related_anchor_id",
+    "related_asset_id",
+    "related_patch_id",
+    "missing_field",
+    "recovery_action",
+    "expected_source",
+    "local_or_external",
+    "can_be_done_without_download",
+    "blocks_stac_real",
+    "blocks_day10",
+    "notes"
+  ]
+}
