@@ -1,0 +1,62 @@
+{
+  "branch": "marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial",
+  "head": "b408e6c",
+  "staged_count": 0,
+  "dirty_lines": 294,
+  "inputs": [
+    {
+      "role": "matriz_fisica_17f",
+      "path": "outputs_public/data/susc_17f_extracao_fisica_topografica_canarios_observacionais/matriz_fisica_topografica_canarios.csv",
+      "exists": true
+    },
+    {
+      "role": "calibracao_17e",
+      "path": "outputs_public/data/susc_17e_prontidao_calibracao_observacional_exploratoria/matriz_calibracao_exploratoria.csv",
+      "exists": true
+    },
+    {
+      "role": "decisoes_17d",
+      "path": "outputs_public/data/susc_17d_validacao_tecnica_evidencia_observacional/decisoes_validacao_tecnica.csv",
+      "exists": true
+    },
+    {
+      "role": "grade_canario_17c6",
+      "path": "outputs_public/suscetibilidade/susc_17c6_candidate_patch_grid.csv",
+      "exists": true
+    },
+    {
+      "role": "basin_dem_npy",
+      "path": "local_runs/suscetibilidade/17c38_basin/basin_dem.npy",
+      "exists": true
+    },
+    {
+      "role": "hidrografia_geojson",
+      "path": "outputs_public/suscetibilidade/susc_17c35_light_artifacts/faixas_marginais_aoi_light.geojson",
+      "exists": true
+    },
+    {
+      "role": "score_v6",
+      "path": "datasets/suscetibilidade/susc_score_v6_candidate_by_patch_v1.csv",
+      "exists": true
+    },
+    {
+      "role": "score_v7_proibido",
+      "path": "datasets/suscetibilidade/susc_score_v7_candidate_by_patch_v1.csv",
+      "exists": false
+    }
+  ],
+  "aoi_bounds": [
+    -34.944464634,
+    -8.00476035,
+    -34.917515175,
+    -7.978079592
+  ],
+  "dem_bbox": [
+    -35.18746,
+    -8.27233,
+    -34.89909,
+    -7.96843
+  ],
+  "dem_cobre_aoi": true,
+  "hidrografia_cobre_aoi": true
+}
