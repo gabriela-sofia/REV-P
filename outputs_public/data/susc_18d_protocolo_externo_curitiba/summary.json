@@ -1,0 +1,23 @@
+{
+  "branch": "marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial",
+  "head": "cde41a6",
+  "staged_count": 0,
+  "input_dir": "local_runs/suscetibilidade/18d_resposta_oficial_curitiba",
+  "input_files_count": 0,
+  "respostas_lidas": 0,
+  "geometrias_resolvidas": 0,
+  "patch_polys_disponiveis": 43,
+  "patch_links": 0,
+  "strong_patch_links": 0,
+  "ground_truth_true_count": 0,
+  "eligible_for_training_true_count": 0,
+  "score_v7_allowed_true_count": 0,
+  "benchmark_17b_criado": false,
+  "score_v6_changed": false,
+  "score_v7_created": false,
+  "status_18d": "18D_AGUARDANDO_RESPOSTA_OFICIAL",
+  "status_17b": "17B_BLOQUEADO_POR_GEOMETRIA",
+  "review_only": true,
+  "ground_truth": false,
+  "trainable": false
+}
