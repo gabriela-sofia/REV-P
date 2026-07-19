@@ -1,0 +1,42 @@
+categoria,nome,detalhe,status_observado
+branch_atual,curadoria/repositorio-publico-ptbr,git branch --show-current,ATIVA
+local_branch,backup/before-clean-delivery-20260609_205708,git branch --all,EXISTE
+local_branch,backup/before-final-push-resolution-20260612_134211,git branch --all,EXISTE
+local_branch,backup/before-final-rebase-push-20260612_095925,git branch --all,EXISTE
+local_branch,backup/before-large-file-push-87012be,git branch --all,EXISTE
+local_branch,backup/before-portuguese-messages-20260612_134803,git branch --all,EXISTE
+local_branch,backup/before-rebase-push-20260612_095659,git branch --all,EXISTE
+local_branch,backup/before-reset-main,git branch --all,EXISTE
+local_branch,backup/delivery-6d2a9ce,git branch --all,EXISTE
+local_branch,backup/delivery-before-rebase-20260609_205023,git branch --all,EXISTE
+local_branch,backup/delivery-source-20260609_205708,git branch --all,EXISTE
+local_branch,curadoria/repositorio-publico-ptbr,git branch --all,ATIVA
+local_branch,dino-embedding-extraction-scaffold,git branch --all,EXISTE
+local_branch,dino-local-asset-preflight,git branch --all,EXISTE
+local_branch,feat/dino-input-manifest,git branch --all,EXISTE
+local_branch,feat/recife-geometric-tp1-tp2-candidates,git branch --all,EXISTE
+local_branch,feat/v1gu-v1gv-multimodal-gt-scaffold,git branch --all,EXISTE
+local_branch,feat/v2cx-v2dd-external-evidence-readiness,git branch --all,EXISTE
+local_branch,feat/v2cx-v2dd-external-evidence-readiness-clean-20260617_154005,git branch --all,EXISTE
+local_branch,feat/v2de-v2dk-trainability-mv1,git branch --all,EXISTE_EM_OUTRO_WORKTREE
+local_branch,main,git branch --all,EXISTE
+local_branch,public-clean-main,git branch --all,EXISTE
+local_branch,public-docs-consolidation,git branch --all,EXISTE_EM_OUTRO_WORKTREE
+local_branch,rescue/local-protocolo-c-before-clean-push-20260612_134423,git branch --all,EXISTE
+remote_branch,origin/HEAD,aponta para origin/main,EXISTE
+remote_branch,origin/chore/public-repository-curation,git branch --all,EXISTE
+remote_branch,origin/curadoria/repositorio-publico-ptbr,git branch --all,EXISTE
+remote_branch,origin/dino-embedding-extraction-scaffold,git branch --all,EXISTE
+remote_branch,origin/dino-local-asset-preflight,git branch --all,EXISTE
+remote_branch,origin/feat/dino-input-manifest,git branch --all,EXISTE
+remote_branch,origin/feat/recife-geometric-tp1-tp2-candidates,git branch --all,EXISTE
+remote_branch,origin/feat/v1gu-v1gv-multimodal-gt-scaffold,git branch --all,EXISTE
+remote_branch,origin/feat/v2cx-v2dd-external-evidence-readiness-clean-20260617_154005,git branch --all,EXISTE
+remote_branch,origin/main,git branch --all,EXISTE
+remote_branch,origin/public-docs-consolidation,git branch --all,EXISTE
+worktree,C:/Users/gabriela/Documents/REV-P,"commit 67d8cfd; branch curadoria/repositorio-publico-ptbr",ATIVO
+worktree,C:/Users/gabriela/.codex/worktrees/0475/REV-P,"commit 4c7bad4; branch public-docs-consolidation",ATIVO
+worktree,C:/Users/gabriela/Documents/REV-P-v2cx-v2dd-clean-20260617_154005,"commit 8b8c278; branch feat/v2de-v2dk-trainability-mv1",ATIVO
+staged_area,inicial,git diff --cached --name-only,VAZIA
+tracked_modified,inicial,git status --short,NENHUM
+untracked,inicial,git status --short,NENHUM
