@@ -1,0 +1,21 @@
+gate_id,gate_name,expected_value,observed_value,pass_fail,source_stage,source_file,affected_days,severity,action_if_failed,notes
+MV2_15_GATE_001,GATE_NO_LABELS_CREATED,0,0,PASS,MV2-14_GEE_LINEAGE_RECOVERY,mv2_14_lineage_summary.json,19;21;22,P0,manter bloqueio,labels_created preservado em estado fail-closed
+MV2_15_GATE_002,GATE_NO_SILVER_FORMAL,0,0,PASS,MV2-14_GEE_LINEAGE_RECOVERY,mv2_14_lineage_summary.json,19;21;22,P0,nao promover silver,silver_created preservado em estado fail-closed
+MV2_15_GATE_003,GATE_NO_GOLD,0,0,PASS,MV2-14_GEE_LINEAGE_RECOVERY,mv2_14_lineage_summary.json,19;21;22,P0,nao promover gold,gold_created preservado em estado fail-closed
+MV2_15_GATE_004,GATE_NO_NEGATIVES_FORMAL,0,0,PASS,MV2-14_GEE_LINEAGE_RECOVERY,mv2_14_lineage_summary.json,15;16;19;21,P0,ausencia nao vira negativo,negatives_created preservado em estado fail-closed
+MV2_15_GATE_005,GATE_NO_TRAINING,false,false,PASS,MV2-14_GEE_LINEAGE_RECOVERY,mv2_14_lineage_summary.json,21;22,P0,bloquear treino,can_train preservado em estado fail-closed
+MV2_15_GATE_006,GATE_NO_SANDBOX,0,0,PASS,MV2-15_CRONOGRAMA_ENGINE,mv2_15_schedule_state.csv,22,P0,bloquear sandbox,sandbox_created preservado em estado fail-closed
+MV2_15_GATE_007,GATE_NO_STAC_REAL,0,0,PASS,MV2-14_GEE_LINEAGE_RECOVERY,mv2_14_lineage_summary.json,10,P0,nao executar STAC real,stac_real_executed preservado em estado fail-closed
+MV2_15_GATE_008,GATE_NO_DOWNLOAD,0,0,PASS,MV2-14_GEE_LINEAGE_RECOVERY,mv2_14_lineage_summary.json,10;20,P0,nao baixar raster,downloads_executed preservado em estado fail-closed
+MV2_15_GATE_009,GATE_NO_CROP,0,0,PASS,MV2-14_GEE_LINEAGE_RECOVERY,mv2_14_lineage_summary.json,10,P0,nao criar crop,crops_created preservado em estado fail-closed
+MV2_15_GATE_010,GATE_NO_NATIVE_RASTER,0,0,PASS,MV2-14_GEE_LINEAGE_RECOVERY,mv2_14_lineage_summary.json,10,P0,manter Dia 10 bloqueado,native_rasters_created preservado em estado fail-closed
+MV2_15_GATE_011,GATE_NO_SPECTRAL_FEATURES,0,0,PASS,MV2-14_GEE_LINEAGE_RECOVERY,mv2_14_lineage_summary.json,10,P0,nao calcular feature,spectral_features_created preservado em estado fail-closed
+MV2_15_GATE_012,GATE_UNKNOWN_NOT_NEGATIVE,false,false,PASS,MV2-15_CRONOGRAMA_ENGINE,mv2_15_scientific_risk_summary.csv,16;17,P0,falhar fechado,unknown_as_negative preservado em estado fail-closed
+MV2_15_GATE_013,GATE_CITY_NOT_LABEL,false,false,PASS,MV2-11_REGIONAL_REBALANCING,rebalanced_confounder_audit.csv,12;16;19,P0,nao usar cidade como label,city_as_label preservado em estado fail-closed
+MV2_15_GATE_014,GATE_PNG_NOT_RASTER,false,false,PASS,MV2-13_SENTINEL_BINDING,mv2_13_binding_risk_matrix.csv,10,P0,bloquear raster falso,png_as_raster preservado em estado fail-closed
+MV2_15_GATE_015,GATE_DINOV2_REVIEW_ONLY,false,false,PASS,MV1_LABEL_FREE,revp_validacao_label_free_evidencia_estrutural_mv1.csv,8;9;11;14,P1,manter review-only,dinov2_operational_label preservado em estado fail-closed
+MV2_15_GATE_016,GATE_DAY10_BLOCKED,false,false,PASS,MV2-14_GEE_LINEAGE_RECOVERY,mv2_14_lineage_summary.json,10,P0,exigir raster e lineage completo,can_unlock_day10_now preservado em estado fail-closed
+MV2_15_GATE_017,GATE_DAY18_BLOCKED,false,false,PASS,MV2-15_CRONOGRAMA_ENGINE,mv2_15_schedule_state.csv,18,P0,exigir evidencia manual,day18_unlocked preservado em estado fail-closed
+MV2_15_GATE_018,GATE_DAY19_BLOCKED,0,0,PASS,MV2-15_CRONOGRAMA_ENGINE,mv2_15_schedule_state.csv,19,P0,exigir silver formal,silver_formal preservado em estado fail-closed
+MV2_15_GATE_019,GATE_DAY21_BLOCKED,0,0,PASS,MV2-15_CRONOGRAMA_ENGINE,mv2_15_schedule_state.csv,21,P0,exigir labels/silver,trainable_splits preservado em estado fail-closed
+MV2_15_GATE_020,GATE_DAY22_BLOCKED,0,0,PASS,MV2-15_CRONOGRAMA_ENGINE,mv2_15_schedule_state.csv,22,P0,NO_GO sandbox,supervised_sandbox preservado em estado fail-closed
