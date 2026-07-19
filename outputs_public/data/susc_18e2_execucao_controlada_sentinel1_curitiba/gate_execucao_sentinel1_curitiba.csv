@@ -1,0 +1,2 @@
+gate_id,status_18e2,rota_python_earth_engine,rota_cli_earth_engine,rota_js_gee,earth_engine_autenticado,gee_consultado,cenas_pre,cenas_pos,export_iniciado,task_ids,pronto_para_18f,ground_truth,eligible_for_training,score_v7_allowed,benchmark_17b_criado,observacao
+S18E2_GATE_0001,18E2_TAREFAS_GEE_INICIADAS_AGUARDANDO_CONCLUSAO,tentada,tentada,validada,true,true,3,3,true,YNY6EV5ZXU25NT737DDJ7VCJ;KF4J7MQQDB64TDEM7S5CNLPZ;PCSCLVHXO2BGXK6P63XCFF4K,true,false,false,false,false,resultado real local disponivel para revisao 18F
