@@ -1,0 +1,32 @@
+{
+  "status_marco_final": "MARCO_MV1_CONSOLIDADO_REVIEW_ONLY_COM_FILA_DE_REVISAO_HUMANA_SEM_LIBERAR_TREINO",
+  "branch": "marco/validacao-label-free-evidencia-estrutural-mv1",
+  "total_camadas_maturidade": 15,
+  "camadas_consolidadas_para_contexto": 8,
+  "camadas_prontas_para_revisao_humana": 2,
+  "camadas_bloqueadas_para_treino": 15,
+  "total_itens_fila_revisao_humana": 22,
+  "itens_com_geometria_contextual": 6,
+  "itens_com_evento_candidato": 8,
+  "itens_podem_virar_label_agora": 0,
+  "itens_podem_apoiar_ground_truth_futuro": 22,
+  "total_bloqueadores_finais": 18,
+  "ground_truth_operacional_status": "ausente",
+  "treino_supervisionado_status": "bloqueado",
+  "decisao_final_mv1": "MARCO_MV1_CONSOLIDADO_REVIEW_ONLY_COM_FILA_DE_REVISAO_HUMANA_SEM_LIBERAR_TREINO",
+  "proximo_passo_prioritario": "Criar uma rodada de revisão humana/adjudicação sobre a fila de candidatos, começando pelos itens com geometria contextual mais útil e menor risco de circularidade, sem liberar label automaticamente.",
+  "guardrails_preservados": [
+    "nenhum modelo treinado",
+    "nenhum label criado",
+    "nenhum positivo formal criado",
+    "nenhum negativo formal criado",
+    "ground truth operacional ausente",
+    "DINOv2 usado apenas em leitura label-free",
+    "evidência contextual não vira label",
+    "geometria contextual não vira evento observado",
+    "landslide e flood permanecem separados",
+    "Curitiba não vira negativo formal por default",
+    "unknown não vira negativo",
+    "fila de revisão humana não libera treino"
+  ]
+}
