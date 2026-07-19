@@ -1,0 +1,4 @@
+regiao,patches,patches_preenchidos,impervious_proxy_medio,water_prop_medio,territorial_status,observacao
+curitiba,100,100,0.7327,0.0053,preenchido,uso do solo review-only; nao e ground truth
+petropolis,100,100,0.1397,0.0028,preenchido,uso do solo review-only; nao e ground truth
+recife,100,100,0.3044,0.0165,preenchido,uso do solo review-only; nao e ground truth

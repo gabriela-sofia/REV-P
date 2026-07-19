@@ -1,0 +1,5 @@
+metrica,valor_19a,valor_19b,valor_19f,observacao
+cobertura_territorial,0.3333,0.3333,1.0000,territorial passa de 2/6 para 6/6 nos patches preenchidos
+cobertura_total,0.5633,0.5633,0.6744,cobertura total recalculada apenas como completude; nao e suscetibilidade
+patches_preenchidos,0,0,300,patches com features territoriais reais do MapBiomas
+features_destravadas,0,0,4,features territoriais destravadas quando ha CSV real

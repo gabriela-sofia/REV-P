@@ -1,0 +1,6 @@
+rota,utilizada_ou_disponivel,referencia,instrucao_ou_observacao
+A_arquivo_local,true,local_runs/suscetibilidade/19f_mapbiomas_territorial/resultados_gee/mapbiomas_patch_landcover_2022.csv,CSV leve recuperado localmente pela API
+B_download_ee_api,true,ee.getInfo() paginado,"download via API do Earth Engine (getInfo), sem Drive"
+C_task_export_concluida,false,NA,nao utilizada; recuperacao por API dispensa export assincrono
+D_drive_api_local,false,NA,nao utilizada
+E_bloqueio_com_instrucao,false,NA,recuperado

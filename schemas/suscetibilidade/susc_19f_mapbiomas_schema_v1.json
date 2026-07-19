@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-19F execucao MapBiomas/GEE e ingestao territorial",
+  "type": "object",
+  "description": "Execucao controlada MapBiomas/GEE; feature territorial review-only; sem GT/treino/score_v7/benchmark; score_v6 intacto; nunca inventa valores.",
+  "guardrails": {
+    "ground_truth": {
+      "const": "false"
+    },
+    "eligible_for_training": {
+      "const": "false"
+    },
+    "score_v7_allowed": {
+      "const": "false"
+    },
+    "score_oficial": {
+      "const": "false"
+    },
+    "substituir_score_v6": {
+      "const": "false"
+    },
+    "usar_em_treino": {
+      "const": "false"
+    },
+    "score_v6_changed": {
+      "const": "false"
+    },
+    "review_only": {
+      "const": "true"
+    }
+  },
+  "status_19f_allowed": [
+    "19F_BLOQUEADO_FAIL_CLOSED",
+    "19F_BLOQUEADO_POR_AUTENTICACAO",
+    "19F_BLOQUEADO_POR_PERMISSAO",
+    "19F_EXPORT_CONCLUIDO_NAO_RECUPERADO",
+    "19F_TAREFAS_GEE_INICIADAS_AGUARDANDO_CONCLUSAO",
+    "19F_TERRITORIAL_PREENCHIDO_MAPBIOMAS_GEE"
+  ],
+  "status_score_v7_allowed": [
+    "SCORE_V7_BLOQUEADO_POR_AMOSTRA",
+    "SCORE_V7_BLOQUEADO_POR_AUSENCIA_BENCHMARK",
+    "SCORE_V7_BLOQUEADO_POR_VALIDACAO_INSUFICIENTE",
+    "SCORE_V7_NAO_AUTORIZADO"
+  ],
+  "status_17b_allowed": [
+    "17B_APROXIMACAO_COM_SEGUNDA_REGIAO_TECNICA",
+    "17B_BLOQUEADO_POR_AMOSTRA",
+    "17B_BLOQUEADO_POR_GEOMETRIA_OFICIAL",
+    "17B_NAO_CRIADO"
+  ],
+  "status_19g_allowed": [
+    "19G_BLOQUEADO_POR_TERRITORIAL_INCOMPLETO",
+    "19G_PRONTO_APOS_TERRITORIAL",
+    "19G_PRONTO_COM_RESSALVAS"
+  ],
+  "env_status_allowed": [
+    "ambiente_indeterminado",
+    "biblioteca_ausente",
+    "gee_autenticado_pronto",
+    "gee_nao_autenticado",
+    "permissao_insuficiente"
+  ],
+  "mapbiomas_collection": "projects/mapbiomas-public/assets/brazil/lulc/collection9/mapbiomas_collection90_integration_v1",
+  "mapbiomas_year": 2022,
+  "landcover_source": "mapbiomas_collection9_gee",
+  "coverage_is_susceptibility": false,
+  "territorial_target_features": [
+    "mapbiomas_class_majority",
+    "mapbiomas_class_distribution",
+    "water_prop",
+    "exposed_soil_prop",
+    "impervious_proxy",
+    "landcover_source",
+    "landcover_reference_year"
+  ]
+}

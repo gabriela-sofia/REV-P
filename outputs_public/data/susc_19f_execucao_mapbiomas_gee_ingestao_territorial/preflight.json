@@ -1,0 +1,23 @@
+{
+  "branch": "marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial",
+  "head": "a06b3aa",
+  "staged_count": 0,
+  "status_short_count": 175,
+  "entradas_lidas": {
+    "outputs_public/data/susc_19b_auditoria_lacunas_territoriais/pacote_gee/gee_export_manifest_19b.csv": true,
+    "outputs_public/data/susc_19a_matriz_multimodal_escalavel_por_patch/matriz_multimodal_escalavel_por_patch.csv": true,
+    "outputs_public/data/susc_19a_matriz_multimodal_escalavel_por_patch/summary.json": true,
+    "outputs_public/data/susc_19b_auditoria_lacunas_territoriais/summary.json": true
+  },
+  "score_v6_baseline_path": "datasets/suscetibilidade/susc_score_v6_candidate_by_patch_v1.csv",
+  "score_v6_changed": false,
+  "score_v7_created": false,
+  "pacote_gee_19b": "outputs_public/data/susc_19b_auditoria_lacunas_territoriais/pacote_gee",
+  "manifest_patches": 300,
+  "local_run_dir": "local_runs/suscetibilidade/19f_mapbiomas_territorial/resultados_gee",
+  "local_csv_existe": true,
+  "env_status": "gee_autenticado_pronto",
+  "cobertura_territorial_19b": 0.3333,
+  "outputs_ignorados_pelo_git": [],
+  "summary_versionavel": true
+}

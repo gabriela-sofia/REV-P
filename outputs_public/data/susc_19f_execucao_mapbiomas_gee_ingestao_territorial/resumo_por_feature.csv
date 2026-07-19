@@ -1,0 +1,6 @@
+feature,fonte,patches_preenchidos,media,minimo,maximo,fonte_real
+water_prop,mapbiomas_collection9_gee,300,0.0082,0.0000,0.3170,true
+exposed_soil_prop,mapbiomas_collection9_gee,300,0.0036,0.0000,0.1713,true
+impervious_proxy,mapbiomas_collection9_gee,300,0.3923,0.0000,1.0000,true
+vegetation_prop_mapbiomas,mapbiomas_collection9_gee,300,0.2269,0.0000,0.9357,true
+mapbiomas_class_majority,mapbiomas_collection9_gee,300,NA,NA,NA,true

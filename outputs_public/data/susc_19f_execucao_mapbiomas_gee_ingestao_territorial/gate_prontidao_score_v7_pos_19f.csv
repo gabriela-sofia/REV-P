@@ -1,0 +1,5 @@
+criterio,bloqueio,status_score_v7,observacao
+autorizacao_geral,true,SCORE_V7_NAO_AUTORIZADO,score_v7 nao autorizado nesta etapa
+amostra_observacional,true,SCORE_V7_BLOQUEADO_POR_AMOSTRA,apenas 7 patches observacionais
+ausencia_benchmark,true,SCORE_V7_BLOQUEADO_POR_AUSENCIA_BENCHMARK,sem benchmark 17B
+validacao_insuficiente,true,SCORE_V7_BLOQUEADO_POR_VALIDACAO_INSUFICIENTE,territorial preenchido nao valida score
