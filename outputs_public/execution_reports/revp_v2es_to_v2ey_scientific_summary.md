@@ -2,7 +2,7 @@
 
 Rows generated: 1
 
-Final recovery status: RECOVERY_BLOCKED_NO_VALID_SOURCE. Ground truth remains absent and no labels, negatives, or training artifacts were created.
+Final recovery status: RECOVERY_COMPLETE_53_RESTORED_REVIEW_ONLY. Ground truth remains absent and no labels, negatives, or training artifacts were created.
 
 Allowed claim: review-only controlled recovery workflow; restores traceability when valid artifacts exist but does not close operational ground truth, labels, negatives, training, detection, or prediction
 
