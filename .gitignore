@@ -106,6 +106,12 @@ outputs_public/data/*
 !outputs_public/data/susc_19e_pacote_comunicacao_cientifica_review_only/**
 !outputs_public/data/susc_19f_execucao_mapbiomas_gee_ingestao_territorial/
 !outputs_public/data/susc_19f_execucao_mapbiomas_gee_ingestao_territorial/**
+!outputs_public/data/susc_20a_aquisicao_eventos_reais_recife/
+!outputs_public/data/susc_20a_aquisicao_eventos_reais_recife/**
+!outputs_public/data/susc_20b_engenharia_features_fisico_hidrologicas_recife/
+!outputs_public/data/susc_20b_engenharia_features_fisico_hidrologicas_recife/**
+!outputs_public/data/susc_20c_modelagem_validacao_estatistica_rigorosa_recife/
+!outputs_public/data/susc_20c_modelagem_validacao_estatistica_rigorosa_recife/**
 outputs/
 models/
 model_cache/
