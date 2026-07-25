@@ -1,0 +1,21 @@
+stat_key,stat_value
+n_points,109
+n_clusters_patches,23
+model_b_features,"rain_decay_index_api_chirps,twi_dinf,slope_deg,dino_pca1,dino_pca2"
+small_sample_correction_c,1.0962
+coef__intercept,beta=0.2280 se_naive=0.2225 se_cluster=0.2855 p_naive=0.3056 p_cluster=0.4245
+coef__rain_decay_index_api_chirps,beta=1.0317 se_naive=0.3073 se_cluster=0.1897 p_naive=0.0008 p_cluster=0.0000
+coef__twi_dinf,beta=0.3285 se_naive=0.2391 se_cluster=0.1867 p_naive=0.1694 p_cluster=0.0784
+coef__slope_deg,beta=0.1574 se_naive=0.2163 se_cluster=0.3049 p_naive=0.4667 p_cluster=0.6056
+coef__dino_pca1,beta=0.3292 se_naive=0.2151 se_cluster=0.2941 p_naive=0.1259 p_cluster=0.2629
+coef__dino_pca2,beta=-0.3329 se_naive=0.2484 se_cluster=0.2398 p_naive=0.1803 p_cluster=0.1650
+dino_joint_wald_cluster_robust_statistic,3.4835
+dino_joint_wald_cluster_robust_df,2
+dino_joint_wald_cluster_robust_p_value,0.1752
+v1r5_naive_lrt_p_value_for_comparison,0.0048
+patch_level_spearman_dino_pca1_vs_frac_positive,rho=0.0654 p=0.7669 n=23
+patch_level_spearman_dino_pca2_vs_frac_positive,rho=-0.0260 p=0.9064 n=23
+labels_created,0
+used_as_training_feature,false
+verdict,DINO_DOES_NOT_SURVIVE_CLUSTER_ROBUST_CHECK_CONSISTENT_WITH_PSEUDOREPLICATION_CONFOUND
+status,CLUSTER_ROBUST_SENSITIVITY_READY_REVIEW_ONLY
