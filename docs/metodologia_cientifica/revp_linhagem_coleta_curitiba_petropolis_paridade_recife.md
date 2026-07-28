@@ -79,33 +79,54 @@ critério usado em Recife (ver `recife_modelo_v9_bairro_matched_new_negatives`) 
 amostragem de pontos dentro do município, fora de qualquer registro de evento, idealmente
 pareados por bairro/uso do solo com os positivos.
 
-## 5. Lacuna de infraestrutura: HAND/TWI nunca foi salvo como script reutilizável
+## 5. Infraestrutura HAND/TWI — resolvida (SUSC-20G)
 
-Achado real (auditoria desta rodada): o cálculo real de HAND/TWI D-infinity usado no v12 de
-Recife (WhiteboxTools: `fill_depressions_wang_and_liu`, `d_inf_flow_accumulation`, `slope`,
-`wetness_index`, `elevation_above_stream`) só existe documentado em prosa
-(`improvement2_hand_twi_dinf_report.md`) — o script em si nunca foi salvo, só um
-amostrador de pontos que lê rasters já prontos. Existe uma implementação alternativa (D8,
-numpy puro, sem WhiteboxTools) já feita especificamente pra Petrópolis em
-`PROJETO/local_runs/treino_exploratorio_diagnostico_v3/step1_lithology_hand_petropolis/`,
-mas é D8, não D-infinity — não é o mesmo método do v12, mudaria a comparabilidade.
+Status anterior (resolvido nesta rodada): o cálculo real de HAND/TWI D-infinity usado no v12
+de Recife só existia documentado em prosa (`improvement2_hand_twi_dinf_report.md`) — o script
+em si nunca tinha sido salvo, só um amostrador de pontos que lê rasters já prontos.
 
-**DTMs reais já confirmados localmente, prontos pra uso**:
+**Reconstruído e validado**: `outputs_public/data/susc_20g_hand_twi_dinfinity_generico/scripts/`
+(`compute_hand_twi_dinfinity.py`, `prepare_region_dtm.py`, `compare_rasters.py`) — MDT de
+entrada e diretório de saída como parâmetros, não hardcoded pra região nenhuma. WhiteboxTools
+`fill_depressions_wang_and_liu` → `d_inf_flow_accumulation` → `slope` → `wetness_index` →
+`elevation_above_stream`, mesma sequência do v12.
+
+**Validação contra Recife: reprodução bit a bit idêntica** (Pearson r=1,0000000, diferença
+máxima 0,0 m em `hand_dinf.tif` e `twi_dinf.tif`, 3,48M/3,58M células comparadas; limiar P98 =
+1122,7383 bate com o documentado 1122,74). Teste pytest real em
+`tests/test_susc_20g_hand_twi_dinfinity.py` (12 passaram, inclui a regressão contra Recife —
+pula com motivo explícito se os rasters de referência não estiverem montados, não passa por
+omissão).
+
+**Aplicado às duas regiões** (rasters em `local_runs/susc_20g_hand_twi_dinfinity_generico/`,
+git-ignored, não comitados por regra):
+- Curitiba: MDT nativo 2,5 m agregado a 10 m (paridade com Recife), EPSG:31982, 4.357.585
+  células, cobertura HAND 96,79%.
+- Petrópolis: **ressalva real, não contornada** — o ZIP do SGB/CPRM não tem pasta de MDT
+  (só Declividade/Fusão/Hipsometria/MDE/Relevo_sombreado); o caminho usado é modelo de
+  **superfície**, resolução nativa 30,13 m, não reamostrado pra 10 m (interpolar não cria
+  informação). Com célula de 30 m o HAND de Petrópolis (mediana 103,8 m) **não é
+  numericamente comparável** ao de Recife (7,1 m) — funciona como raster de prontidão, não
+  como feature pronta pra comparação direta entre regiões ainda.
+
+**DTMs reais usados**:
 - Curitiba: `PROJETO/data/raw/curitiba/sgb_cprm/produtos_mde_curitiba_pr.zip` (722MB, Esri
   ArcInfo Binary Grid, pasta `01.MDS_Hipsometria/mdt/`)
 - Petrópolis: `PROJETO/data/raw/petropolis/sgb_cprm/produtos_mde_petropolis_rj.zip` (230MB,
-  mesmo formato, pasta `MDE/pt_sirgas_utm/`)
+  mesmo formato, pasta `MDE/pt_sirgas_utm/` — é MDS, não MDT, ver ressalva acima)
 
-**Próximo passo de infraestrutura**: reescrever o script D-infinity (WhiteboxTools) como
-unidade testável e genérica (aceita caminho de DTM como parâmetro), validar rodando sobre o
-DTM de Recife e comparando contra `hand_dinf.tif`/`twi_dinf.tif` já existentes (teste de
-regressão real, não confiança cega), só depois aplicar aos DTMs de Curitiba/Petrópolis.
+**Pendente real**: Petrópolis precisa de um MDT verdadeiro (não MDS) de outra fonte pra ficar
+comparável a Recife/Curitiba — isso não foi resolvido, só documentado como limite conhecido.
 
 ## 6. Ordem real de próximos passos
 
-1. Reescrever/testar script D-infinity genérico, validado contra Recife (infraestrutura,
-   não depende de N crescer).
-2. Definir critério de ponto negativo (metodologia, replicando Recife).
+1. ~~Reescrever/testar script D-infinity genérico, validado contra Recife~~ — **feito**
+   (SUSC-20G, seção 5). Pendência real que sobrou: MDT verdadeiro de Petrópolis (o disponível
+   é MDS, não comparável).
+2. ~~Definir critério de ponto negativo (metodologia, replicando Recife)~~ — **feito**
+   (`docs/metodologia_cientifica/revp_criterio_ponto_negativo_recife_e_replicacao_curitiba_petropolis.md`).
+   Amostragem em si continua não executada pra Curitiba/Petrópolis (N=1 positivo não sustenta
+   pareamento por bairro ainda — decisão deliberada, não pendência esquecida).
 3. Continuar aquisição de positivos com o protocolo A/B desta seção, região por região,
    documentando N real a cada rodada — sem pular pra treino antes do piso EPV.
 4. Só quando N ≥ piso técnico (~20-30) por região: rodar Firth reduzido (2-3 features),
