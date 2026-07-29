@@ -17,8 +17,16 @@ v1r5/v1r6): com N=1, zero features cabem. Três patamares reais, não estimativa
 | Confortável | ~50-80 | 3-4 features com folga real de bootstrap |
 | Paridade com Recife | ~150-270 | Conjunto completo (6-8 features), mesmo rigor de v12 |
 
-Hoje: Curitiba N=1, Petrópolis N=1. Faltam, no mínimo, ~19-29 pontos positivos adjudicados
-por região só pro piso técnico — e pontos negativos correspondentes (ver seção 4).
+Hoje: **Curitiba N=1, Petrópolis N=0**. Petrópolis voltou a zero em 2026-07-28: o candidato de
+Valparaíso foi rebaixado a candidato fraco na reavaliação topográfica — ver
+`revp_reavaliacao_candidato_petropolis_valparaiso_v1.md`. Faltam, no mínimo, ~19 pontos
+positivos adjudicados em Curitiba e ~20 em Petrópolis só pro piso técnico — e pontos negativos
+correspondentes (ver seção 4).
+
+**Correção do piso, pela revisão de literatura** (`revp_revisao_literatura_alinhamento_metodos_v1.md`,
+seção 5): a regra de EPV~10 tem base empírica fraca; **EPV ≥ 20** é o número que a evidência
+recente sustenta. O piso técnico de ~20-30 já documentado nesta tabela não é conservadorismo —
+é o mínimo recomendado.
 
 ## 2. Protocolo de aquisição de positivos — agora reutilizável, não mais tentativa às cegas
 
@@ -28,7 +36,11 @@ Esta sessão descobriu e validou, com resultado real, um protocolo de 2 vias que
 1. Calcular tile pela grade geográfica real do produto (`h=floor((lon+180)/10)`,
    `v=floor((90-lat)/10)`) — **não** pela fórmula sinusoidal padrão do MODIS (erro cometido e
    corrigido nesta sessão; este produto usa `GCTP_GEO`, grade lat/lon simples).
-2. Baixar `.hdf` via LAADS DAAC (token EOSDIS + autorização OAuth uma vez no navegador).
+2. Baixar `.hdf` via LAADS DAAC. **Bloqueio confirmado em 2026-07-28 (SUSC-20H)**: a listagem
+   (`.../MCDWD_L3/2022/<doy>.csv`) é pública e funciona sem credencial, mas o download do `.hdf`
+   sem token cai no OAuth da Earthdata (HTTP 200 com 10.783 bytes de HTML, não HDF). Não há token
+   EOSDIS neste ambiente, então nem foi possível testar se o aceite de licença já registrado
+   destrava o download programático. Enquanto isso, esta via só roda com arquivo baixado à mão.
 3. Ler camada `Flood_1Day_250m` com `pyhdf`: classe `3`=enchente real (não bate com água de
    referência), `2`=enchente recorrente, `255`=sem classificação (não é "sem enchente").
 4. Testar 3+ dias ao redor da data suspeita (nuvem pode esconder o sinal em 1-2 dias e abrir
@@ -40,12 +52,17 @@ Esta sessão descobriu e validou, com resultado real, um protocolo de 2 vias que
 
 **Via B — Sentinel-2 bandas cruas (quando MODIS está mascarado, ex. terreno íngreme)**
 1. **Nunca** usar a camada "NDWI" pré-colorida do Copernicus Browser (é visualização
-   renderizada, contamina qualquer comparação quantitativa). Baixar sempre B03, B08, B11 como
-   **Raw**, formato TIFF 32-bit float, aba "Analytical".
+   renderizada, contamina qualquer comparação quantitativa). Baixar sempre **B03, B08, B11 e
+   B12** como **Raw**, formato TIFF 32-bit float, aba "Analytical". (B12 entrou em SUSC-20H:
+   AWEI_nsh precisa de SWIR2, e sem ele o consenso do passo 3 degenera no par NDWI+MNDWI que a
+   literatura considera insuficiente sozinho.)
 2. Escolher a data de referência ("antes") usando `cloudCover` real da API OData
    (`catalogue.dataspace.copernicus.eu/odata/v1/Products?...$expand=Attributes`), não
    suposição — um dia "3 dias antes" pode ainda estar dentro da mesma tempestade.
-3. Calcular NDWI `(B3-B8)/(B3+B8)` e MNDWI `(B3-B11)/(B3+B11)`.
+3. Calcular NDWI `(B3-B8)/(B3+B8)`, MNDWI `(B3-B11)/(B3+B11)` e AWEI_nsh
+   `4*(B3-B11) - (0,25*B8 + 2,75*B12)` (Feyisa et al. 2014), e exigir **concordância de 2 dos
+   3** cruzando o limiar de mudança pré→pós. Implementado e testado em
+   `outputs_public/data/susc_20h_sentinel2_water_candidates/scripts/detect_water_candidates.py`.
 4. **Critério físico obrigatório**: só aceitar pixel como candidato se a reflectância
    **absoluta** (não só o índice relativo) for baixa em B08 E B11 no dia do evento (ex.
    `<0,15`) e não era assim antes. Índice relativo sozinho pega nuvem (nuvem sobe em todas as
