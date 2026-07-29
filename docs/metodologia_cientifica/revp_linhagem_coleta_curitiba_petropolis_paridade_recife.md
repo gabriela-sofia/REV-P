@@ -69,7 +69,41 @@ Esta sessão descobriu e validou, com resultado real, um protocolo de 2 vias que
    bandas; água desce em NIR/SWIR) — erro cometido e corrigido nesta sessão.
 5. Adjudicar: dentro do município + rio/córrego real mapeado próximo (Overpass:
    `way["waterway"](around:500,lat,lon)`) + corroboração de fonte externa (notícia real sobre
-   a área ser propensa a alagar).
+   a área ser propensa a alagar). **Só depois de passar pelo filtro topográfico da seção 2.1.**
+
+### 2.1 Filtro topográfico obrigatório — antes da adjudicação SUSC-20A
+
+Passo novo, criado em SUSC-20H depois do caso Valparaíso. **Todo candidato bruto, venha da Via A
+ou da Via B, passa primeiro por leitura de HAND, TWI e declividade** nos rasters já existentes
+de `outputs_public/data/susc_20g_hand_twi_dinfinity_generico/` (script
+`scripts/read_hand_twi_slope_at_point.py`, rasters em `local_runs/susc_20g_hand_twi_dinfinity_generico/<região>/`).
+Só é adjudicado formalmente o candidato que **não** diverge nos três critérios ao mesmo tempo:
+
+| Critério | O que se espera de ponto de enchente | Divergência |
+|---|---|---|
+| HAND | baixo — perto do nível de drenagem | alto em termos absolutos **e** sem ser explicado por resolução |
+| TWI | acima da mediana regional — convergência de fluxo | abaixo da mediana regional |
+| Declividade | suave — fundo de vale/piemonte | encosta, próxima da mediana de terreno de serra |
+
+Divergência **simultânea nos três** → o candidato não é adjudicado; vira candidato fraco, com o
+motivo registrado por escrito. Divergência em um ou dois critérios não reprova sozinha: vira
+ressalva anotada na adjudicação, porque relevo de serra e pixel de 30 m degradam a leitura.
+
+Duas verificações auxiliares que o caso Valparaíso mostrou serem necessárias, e que custam pouco:
+
+- **Altura sobre o mínimo local** (raios de 150/300/500 m), que não depende do limiar de extração
+  de drenagem — é ela que separa "HAND alto de verdade" de "artefato de resolução".
+- **Distância e desnível reais até o curso d'água mapeado** (Overpass + o próprio MDT), em vez de
+  aceitar a distância estimada no laudo.
+
+**Precedente real**: o candidato Petrópolis/Valparaíso (Sentinel-2, 24/03/2022) foi adjudicado
+em v14 pelo critério SUSC-20A sem nenhuma checagem topográfica e, quando a leitura foi aplicada
+retroativamente, deu HAND 50,88 m, declividade 23,34° (mediana regional 23,57°) e TWI 5,11
+(mediana 5,58) — os três divergindo juntos. As duas verificações auxiliares confirmaram: +30 a
++50 m sobre o mínimo local em dois DEMs independentes, e o Rio Quitandinha a 688 m (não os ~500 m
+do laudo) e 30-47 m abaixo do ponto. Resultado: rebaixado a candidato fraco, Petrópolis de volta
+a N=0. Ver `revp_reavaliacao_candidato_petropolis_valparaiso_v1.md`. Este passo existe para que o
+custo dessa descoberta seja pago **antes** da adjudicação, não depois.
 
 ## 3. Onde buscar mais datas de evento (além das já esgotadas)
 
