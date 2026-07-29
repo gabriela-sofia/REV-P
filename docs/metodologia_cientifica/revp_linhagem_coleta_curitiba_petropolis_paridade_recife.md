@@ -115,14 +115,36 @@ git-ignored, não comitados por regra):
 - Petrópolis: `PROJETO/data/raw/petropolis/sgb_cprm/produtos_mde_petropolis_rj.zip` (230MB,
   mesmo formato, pasta `MDE/pt_sirgas_utm/` — é MDS, não MDT, ver ressalva acima)
 
-**Pendente real**: Petrópolis precisa de um MDT verdadeiro (não MDS) de outra fonte pra ficar
-comparável a Recife/Curitiba — isso não foi resolvido, só documentado como limite conhecido.
+### 5.1 MDT verdadeiro de Petrópolis — resolvido (SUSC-20G/2)
+
+A pendência acima foi fechada. Relatório completo:
+`outputs_public/data/susc_20g_hand_twi_dinfinity_generico/reports/susc_20g2_petropolis_mdt_terreno_nu_report.md`.
+
+- **Local, antes de baixar nada**: as 3 cópias do ZIP do SGB/CPRM são o mesmo arquivo (sha256
+  idêntico). Achado novo dentro dele: `Hipsometria/hip_pt_utm23/` é grade de **10 m** — mas é a
+  **mesma superfície** do `MDE/` (diferença média 0,35 m quando agregada a 30 m), não terreno nu.
+  `bc_petropolis_rj.zip` não tem curva de nível nem ponto cotado; `ibge_ana_auxiliary/` está
+  vazio. Nada local resolvia.
+- **Copernicus DEM GLO-30 — testado e rejeitado**: é DSM por definição, e contra o MDE do SGB não
+  há deslocamento de escala de dossel (média −2,17 m, desvio 10,32 m). Trocaria superfície por
+  superfície.
+- **FABDEM V1-2 — aceito**: Copernicus DEM com floresta e edificação removidas, tile S23W044,
+  `data.bris.ac.uk`, aberto e **sem login/token**; lido por range request dentro do zip de 10°
+  (~2,6 MB em vez de 1,05 GB). Terreno nu **comprovado**, não assumido: estratificando FABDEM −
+  GLO-30 por MapBiomas 2022, a queda é −7,64 m em formação florestal e −9,77 m em silvicultura,
+  contra −0,79 m em pastagem e +0,31 m em água. Licença CC BY-NC-SA 4.0 (citar em publicação).
+- **Erro corrigido no caminho**: Petrópolis é **EPSG:31983** (UTM 23S, meridiano central −45°),
+  não 31984 como rotulado na rodada anterior. Rasters regerados. Curitiba (31982) conferida.
+- **Ressalva que continua**: FABDEM é 30 m; Recife e Curitiba são 10 m. Paridade de **tipo de
+  superfície** resolvida, paridade de **resolução** não — e o grid local de 10 m disponível é
+  superfície, então a escolha é excludente. Nenhuma combinação dos dois foi feita (subtrair um do
+  outro para "fabricar" um MDT de 10 m seria dado inventado).
 
 ## 6. Ordem real de próximos passos
 
 1. ~~Reescrever/testar script D-infinity genérico, validado contra Recife~~ — **feito**
-   (SUSC-20G, seção 5). Pendência real que sobrou: MDT verdadeiro de Petrópolis (o disponível
-   é MDS, não comparável).
+   (SUSC-20G, seção 5). ~~Pendência: MDT verdadeiro de Petrópolis~~ — **feito** (SUSC-20G/2,
+   seção 5.1, FABDEM V1-2). Resta a diferença de resolução (30 m contra 10 m), documentada.
 2. ~~Definir critério de ponto negativo (metodologia, replicando Recife)~~ — **feito**
    (`docs/metodologia_cientifica/revp_criterio_ponto_negativo_recife_e_replicacao_curitiba_petropolis.md`).
    Amostragem em si continua não executada pra Curitiba/Petrópolis (N=1 positivo não sustenta
