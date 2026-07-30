@@ -42,6 +42,7 @@ from pathlib import Path
 import numpy as np
 import rasterio
 from pyproj import Transformer
+from scipy import ndimage
 from scipy.ndimage import label as cc_label
 
 BAND_PATTERNS = {
@@ -182,31 +183,49 @@ def detect_water_candidates(
     )
 
     to_wgs84 = Transformer.from_crs(crs, "EPSG:4326", always_xy=True) if crs is not None else None
-    for lab in range(1, n_found + 1):
-        rows, cols = np.where(labels == lab)
-        if len(rows) < cfg.min_cluster_px:
-            continue
-        r, c = float(rows.mean()), float(cols.mean())
-        entry = {
-            "cluster_id": f"S2WC_{lab:05d}",
-            "n_pixels": int(len(rows)),
-            "row_centroid": round(r, 2),
-            "col_centroid": round(c, 2),
-            "consensus_basis": result.consensus_basis,
-            "index_votes_mean": round(float(votes[rows, cols].mean()), 3),
-            "b08_after_mean": round(float(np.nanmean(bands_after["B08"][rows, cols])), 4),
-            "b11_after_mean": round(float(np.nanmean(bands_after["B11"][rows, cols])), 4),
-            "b08_before_mean": round(float(np.nanmean(bands_before["B08"][rows, cols])), 4),
-            "b11_before_mean": round(float(np.nanmean(bands_before["B11"][rows, cols])), 4),
-            "adjudicated": "false",
-        }
-        if transform is not None:
-            x, y = transform * (c + 0.5, r + 0.5)
-            entry["easting"], entry["northing"] = round(x, 2), round(y, 2)
-            if to_wgs84 is not None:
-                lon, lat = to_wgs84.transform(x, y)
-                entry["lon"], entry["lat"] = round(lon, 6), round(lat, 6)
-        result.clusters.append(entry)
+
+    # Agregação vetorizada (scipy.ndimage), não um np.where por cluster: com dado real e
+    # ruidoso (milhares de componentes) o loop ingênuo é O(n_clusters x tamanho_da_imagem) e
+    # trava. ndimage.sum/mean/center_of_mass fazem a mesma conta em poucas passadas O(imagem).
+    if n_found:
+        all_idx = np.arange(1, n_found + 1)
+        sizes = ndimage.sum(candidate, labels, index=all_idx)
+        keep = sizes >= cfg.min_cluster_px
+        kept_idx = all_idx[keep]
+    else:
+        kept_idx = np.array([], dtype=int)
+
+    if len(kept_idx):
+        sizes_kept = ndimage.sum(candidate, labels, index=kept_idx)
+        centroids = ndimage.center_of_mass(candidate, labels, index=kept_idx)
+        votes_mean = ndimage.mean(votes.astype("float64"), labels, index=kept_idx)
+        b08_after_mean = ndimage.mean(bands_after["B08"], labels, index=kept_idx)
+        b11_after_mean = ndimage.mean(bands_after["B11"], labels, index=kept_idx)
+        b08_before_mean = ndimage.mean(bands_before["B08"], labels, index=kept_idx)
+        b11_before_mean = ndimage.mean(bands_before["B11"], labels, index=kept_idx)
+
+        for i, lab in enumerate(kept_idx):
+            r, c = float(centroids[i][0]), float(centroids[i][1])
+            entry = {
+                "cluster_id": f"S2WC_{int(lab):05d}",
+                "n_pixels": int(sizes_kept[i]),
+                "row_centroid": round(r, 2),
+                "col_centroid": round(c, 2),
+                "consensus_basis": result.consensus_basis,
+                "index_votes_mean": round(float(votes_mean[i]), 3),
+                "b08_after_mean": round(float(b08_after_mean[i]), 4),
+                "b11_after_mean": round(float(b11_after_mean[i]), 4),
+                "b08_before_mean": round(float(b08_before_mean[i]), 4),
+                "b11_before_mean": round(float(b11_before_mean[i]), 4),
+                "adjudicated": "false",
+            }
+            if transform is not None:
+                x, y = transform * (c + 0.5, r + 0.5)
+                entry["easting"], entry["northing"] = round(x, 2), round(y, 2)
+                if to_wgs84 is not None:
+                    lon, lat = to_wgs84.transform(x, y)
+                    entry["lon"], entry["lat"] = round(lon, 6), round(lat, 6)
+            result.clusters.append(entry)
 
     result.clusters.sort(key=lambda e: -e["n_pixels"])
     return result
