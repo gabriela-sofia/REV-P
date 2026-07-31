@@ -126,6 +126,8 @@ outputs_public/data/*
 !outputs_public/data/susc_20i_janelas_evento_2023_2026/**
 !outputs_public/data/susc_20j_sentinel1_sar_water_candidates/
 !outputs_public/data/susc_20j_sentinel1_sar_water_candidates/**
+!outputs_public/data/susc_20k_siac156_curitiba_flood_candidates/
+!outputs_public/data/susc_20k_siac156_curitiba_flood_candidates/**
 !outputs_public/data/susc_curitiba_leada_diario_oficial_tentativa/
 !outputs_public/data/susc_curitiba_leada_diario_oficial_tentativa/**
 !outputs_public/data/susc_curitiba_leadb_ana_estacoes_reais/
