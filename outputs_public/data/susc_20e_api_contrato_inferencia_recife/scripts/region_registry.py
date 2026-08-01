@@ -53,7 +53,8 @@ REGIONS: dict[str, RegionInfo] = {
     "curitiba": RegionInfo(
         name="curitiba",
         bbox_wgs84=(-49.45, -25.65, -49.10, -25.30),
-        model_version=None,
+        model_version="SUSC-20M v1 (Firth, n=1138 unidades [1035 pos/103 neg], LOO-AUC=0.6048) "
+        "-- modelo estatístico validado, sem motor de inferência/API (não é 'available')",
         region_maturity="limited_evidence",
         status_note=(
             "Evidência em processamento: footprint SAR + corpus Sentinel + "
@@ -155,7 +156,44 @@ REGIONS: dict[str, RegionInfo] = {
             "outputs_public/data/susc_20k_siac156_curitiba_flood_candidates/registries/"
             "v20k3_dataset_negativos_curitiba_siac156_v1.csv. "
             "Faltam agora (2) e (3) -- nenhuma feature física foi extraída, nenhum modelo foi "
-            "treinado ou validado nesta rodada, uma coisa por vez."
+            "treinado ou validado nesta rodada, uma coisa por vez. "
+            "ATUALIZAÇÃO 2026-07-31 (SUSC-20L+20M, executado por sessão Claude Code externa "
+            "via prompt dedicado, verificado nesta sessão antes do commit -- arquivos conferidos "
+            "em disco, 29 testes rodados localmente, resultados numéricos batidos linha a linha "
+            "contra o relatório): item (2) e (3) concluídos. Features: HAND/TWI/declividade/"
+            "elevação lidos dos rasters já prontos do SUSC-20G (nenhum raster recalculado), "
+            "chuva via Open-Meteo (fórmula literal do SUSC-20B de Recife), MapBiomas Coleção 9, "
+            "ortogonalização de chuva refeita pra Curitiba (β=0,3582). Dataset: "
+            "outputs_public/data/susc_20k_siac156_curitiba_flood_candidates/registries/"
+            "v20l_dataset_curitiba_features_v1.csv (1357 linhas × 42 colunas); HAND/TWI "
+            "NODATA em 14 linhas (10 unidades, franja noroeste, fluxo sai da máscara antes de "
+            "achar canal -- documentado, não contornado). Modelagem: pipeline_v12_primary.py de "
+            "Recife reproduzido bit-a-bit como gate de QA (max_abs_diff=0,0) antes de rodar em "
+            "Curitiba. Achado não previsto: 1357 linhas colapsam em 1148 unidades (lat,lon,"
+            "event_date) -- mesmo registro SIAC vira 2 linhas quando categorizado em duas "
+            "subdivisões ao mesmo tempo; contar linha como observação seria pseudo-replicação. "
+            "Gate EPV (classe minoritária=negativo) checado antes do multivariado: com "
+            "elevation_m (6 features) EPV=17,17, abaixo do piso 20 -- reportado só como "
+            "sensibilidade S1, não usado. Sem elevation_m (5 features) EPV=20,6, passa o piso -- "
+            "rota primária. Resultado primário (n=1138, 1035 pos/103 neg): LOO-AUC=0,6048, "
+            "5-fold repetido 50x mean=0,6007 (std=0,01). Nenhum dos 3 features de terreno "
+            "(slope_deg, hand_m_dinf, twi_dinf) teve CI que não cruza zero -- sem significância "
+            "estatística local, resultado real documentado, não motivo pra trocar de método. "
+            "rain_decay_index_api_chirps foi o único feature com sinal e significância "
+            "consistentes (p=0,0004). rain_peak_residual_orthogonalized teve sinal OPOSTO ao "
+            "esperado e ao observado em Recife (p=0,006) -- hipótese aberta (saturação de "
+            "drenagem vs. runoff rápido), sem evidência local pra decidir. Resultados completos: "
+            "outputs_public/data/susc_20k_siac156_curitiba_flood_candidates/results/ e "
+            "reports/susc_20l_engenharia_features_curitiba_report.md + "
+            "susc_20m_modelagem_validacao_curitiba_report.md. region_maturity mantido em "
+            "'limited_evidence', não 'available': há modelo estatístico validado mas nenhum "
+            "motor de inferência/API equivalente ao SUSC-20D/20E de Recife. Limitações em "
+            "aberto: N de negativo (103 unidades) abaixo do alvo prudente de ~150 pra "
+            "reabilitar elevation_m dentro do piso EPV (alavanca já existe -- "
+            "mine_negative_candidates_siac156.py --max-por-ano maior); confundimento temporal "
+            "estrutural (positivo=dia de queixa de enchente, negativo=data arbitrária de queixa "
+            "não-hidrológica) herdado do próprio desenho de Recife, sem solução dentro do "
+            "desenho atual; sem validação externa/temporal holdout, só LOO/k-fold interno."
         ),
     ),
     "petropolis": RegionInfo(
