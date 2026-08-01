@@ -49,6 +49,22 @@ cada doc/pasta linkado):
   ERA5-Land (match exato). API agora responde `ok` com score real pra qualquer
   coordenada dentro da cobertura real (~21km x 28km em Recife), não só os 269 pontos
   de treino. Ver `susc_20f_pipeline_geoprocessamento_sob_demanda_recife/`.
+- **Fase 1b (SUSC-21/21b, 2026-08-01) -- FECHADA, DECISÃO: voltar o foco pro causal.**
+  Depois da Fase 1 fechar "DINO não é feature", testou-se um segundo papel: DINO como
+  refinador de evidência (fila de revisão priorizada por similaridade, adaptado do
+  H2O-Net/arXiv:2010.05309 -- nunca cria label, nunca treina). Pré-registrado antes de
+  rodar (φ_H=0,75/φ_L=0,25/suporte≥2/critério de utilidade fixo). Resultado nas 23 patches
+  Recife com embedding: **nulo** -- separação semente-a-semente foi a pior das 70
+  partições possíveis (enumeração exata p=1,0000), confundidores todos nulos. Ampliado
+  pra 52 patches (100% cobertura Recife, 0 downloads novos) pra descartar falta de poder
+  estatístico: **nulo idêntico confirmado** (mesmo -0,118337, mesma posição 70/70) --
+  gargalo real é quantos patches têm ponto SEDEC suficiente pra virar semente, não
+  cobertura de embedding. Decisão (2026-08-01, humana): não seguir pra triagem cross-city
+  com esse sinal (seria misturar validação científica com continuidade de plano) nem
+  pra troca de modelo geoespacial agora -- **linha DINO fechada por ora, foco volta pro
+  SUSC-20 causal** (Curitiba/Petrópolis). Ver
+  `docs/metodologia_cientifica/revp_v1r7_dino_evidence_refinement_recife.md` e
+  `revp_v1r8b_dino_expanded_evidence_refinement_recife.md`.
 
 ---
 
