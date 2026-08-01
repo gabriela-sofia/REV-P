@@ -24,10 +24,24 @@ Duas divergencias em relacao a Recife, ambas decididas e documentadas antes de r
    classe minoritaria = negativo, n=103 -> EPV = 103/6 = 17,17 (REPROVA) e 103/5 = 20,60
    (PASSA). O gate foi checado ANTES do modelo multivariado.
 
+   ATUALIZACAO SUSC-20N (N de negativo ampliado, n=423): a EPV com 6 features passa
+   folgada (70,5). Isso NAO reabre a decisao acima -- o corte de `elevation_m` continua
+   sendo primario porque o argumento e causal (confundimento com identidade de
+   sub-bacia/bairro), nao estatistico, e a EPV nunca foi a razao de fundo, so a
+   confirmacao formal. Reintroduzir `elevation_m` com N maior (sensibilidade S1, secao
+   abaixo) da coeficiente com sinal "correto" (-0.1686, p=0.036, IC fora de zero) mas
+   contribuicao preditiva NULA (LOO-AUC 0.6453 vs 0.6459 sem ela, delta -0.0006) -- ou
+   seja, nao ha ganho que justifique reabrir uma decisao causal por causa de um numero
+   estatistico. Sinal "correto" tambem nao refuta confundimento: bairro mais alto pode
+   so registrar menos queixa por composicao socioeconomica, nao por exposicao fisica
+   real. Fica como sensibilidade, nao vira primario, ate haver argumento causal novo
+   (decisao humana, nao automatica -- ver CLAUDE.md).
+
 Alem do modelo primario, roda duas sensibilidades explicitamente rotuladas como
-NAO-PRIMARIAS: (S1) as 6 features originais, abaixo do piso EPV, so para medir o custo da
-decisao; (S2) as 1357 linhas com pseudo-replicacao, so para medir o efeito da unidade de
-analise.
+NAO-PRIMARIAS: (S1) as 6 features originais -- reprovava a EPV em n=103 (SUSC-20M),
+passa folgada em n=423 (SUSC-20N) mas segue fora do primario pelo motivo causal acima;
+(S2) as linhas com pseudo-replicacao (1357 no SUSC-20M, 1680 no SUSC-20N), so para medir
+o efeito da unidade de analise.
 
 Uso:
     python pipeline_v20m_curitiba_primary.py
@@ -230,7 +244,8 @@ def gate_epv(df, feature_cols) -> dict:
             "passa": bool(epv >= EPV_FLOOR)}
 
 
-def run_block(nome: str, df: pd.DataFrame, feats: list[str], primario: bool, out: Path) -> dict:
+def run_block(nome: str, df: pd.DataFrame, feats: list[str], primario: bool, out: Path,
+              tag: str = "v20m") -> dict:
     print(f"\n=== {nome} | n={len(df)} | {len(feats)} features ===")
     epv = gate_epv(df, feats)
     print(f"  gate EPV: {epv['epv']} (piso {EPV_FLOOR}) -> {'PASSA' if epv['passa'] else 'REPROVA'}")
@@ -239,18 +254,18 @@ def run_block(nome: str, df: pd.DataFrame, feats: list[str], primario: bool, out
 
     print("  [1] univariado Mann-Whitney")
     univ = univariate_screen(df, feats)
-    univ.to_csv(out / f"v20m_{nome}_univariate_mannwhitney.csv", index=False)
+    univ.to_csv(out / f"{tag}_{nome}_univariate_mannwhitney.csv", index=False)
     print(univ.to_string(index=False))
 
     print("  [2] Firth multivariado")
     coefs, rep = firth_multivariate(df, feats)
-    coefs.to_csv(out / f"v20m_{nome}_firth_multivariate_coefs.csv", index=False)
+    coefs.to_csv(out / f"{tag}_{nome}_firth_multivariate_coefs.csv", index=False)
     print(json.dumps(rep, indent=2))
     print(coefs.to_string(index=False))
 
     print("  [3] bootstrap estratificado 1000")
     boot, boot_rep = bootstrap_firth_coefs(df, feats)
-    boot.to_csv(out / f"v20m_{nome}_bootstrap_coefs.csv", index=False)
+    boot.to_csv(out / f"{tag}_{nome}_bootstrap_coefs.csv", index=False)
     print(boot.to_string(index=False))
 
     print("  [4] AUC preditivo (LOO + 5-fold repetido 50x)")
@@ -266,6 +281,10 @@ def main(argv=None) -> int:
     p.add_argument("--dataset", default=str(DATASET))
     p.add_argument("--results-dir", default=str(RESULTS))
     p.add_argument("--skip-sensibilidades", action="store_true")
+    # o conjunto primario e argumento, nao edicao de codigo: '5feat' preserva a reproducao
+    # exata do SUSC-20M; '6feat' so e legitimo se o gate EPV passar com 6 (SUSC-20N).
+    p.add_argument("--primario", choices=["5feat", "6feat"], default="5feat")
+    p.add_argument("--tag", default="v20m", help="prefixo dos arquivos de resultado")
     args = p.parse_args(argv)
 
     out = Path(args.results_dir)
@@ -287,15 +306,23 @@ def main(argv=None) -> int:
                "n_linhas_registry": int(len(linhas)), "n_unidades": int(len(unidades)),
                "seed": SEED}
 
-    reports["primario_5_features"] = run_block("primario_5feat", unidades, FEATURE_COLS_PRIMARY, True, out)
+    seis = args.primario == "6feat"
+    feats_primario = FEATURE_COLS_RECIFE_6 if seis else FEATURE_COLS_PRIMARY
+    feats_sens = FEATURE_COLS_PRIMARY if seis else FEATURE_COLS_RECIFE_6
+    nome_primario = f"primario_{'6' if seis else '5'}feat"
+    nome_sens = f"sens_s1_{'5' if seis else '6'}feat"
+
+    reports[f"primario_{len(feats_primario)}_features"] = run_block(
+        nome_primario, unidades, feats_primario, True, out, args.tag)
 
     if not args.skip_sensibilidades:
-        reports["sensibilidade_s1_6_features_abaixo_do_piso_epv"] = run_block(
-            "sens_s1_6feat", unidades, FEATURE_COLS_RECIFE_6, False, out)
+        reports[f"sensibilidade_s1_{len(feats_sens)}_features"] = run_block(
+            nome_sens, unidades, feats_sens, False, out, args.tag)
         reports["sensibilidade_s2_linhas_com_pseudo_replicacao"] = run_block(
-            "sens_s2_linhas", linhas, FEATURE_COLS_PRIMARY, False, out)
+            "sens_s2_linhas", linhas, feats_primario, False, out, args.tag)
 
-    (out / "v20m_all_reports.json").write_text(json.dumps(reports, indent=2, default=str), encoding="utf-8")
+    (out / f"{args.tag}_all_reports.json").write_text(
+        json.dumps(reports, indent=2, default=str), encoding="utf-8")
     print(f"\nresultados -> {out}")
     return 0
 

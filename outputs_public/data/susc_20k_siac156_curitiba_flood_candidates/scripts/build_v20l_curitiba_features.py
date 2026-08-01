@@ -96,11 +96,11 @@ MAPBIOMAS_SCALE = 30
 # ---------------------------------------------------------------------------
 # entrada
 # ---------------------------------------------------------------------------
-def load_points() -> pd.DataFrame:
-    pos = pd.read_csv(POS_CSV, encoding="utf-8")
-    neg = pd.read_csv(NEG_CSV, encoding="utf-8")
-    pos["source_registry"] = POS_CSV.name
-    neg["source_registry"] = NEG_CSV.name
+def load_points(pos_csv: Path = POS_CSV, neg_csv: Path = NEG_CSV) -> pd.DataFrame:
+    pos = pd.read_csv(pos_csv, encoding="utf-8")
+    neg = pd.read_csv(neg_csv, encoding="utf-8")
+    pos["source_registry"] = pos_csv.name
+    neg["source_registry"] = neg_csv.name
     df = pd.concat([pos, neg], ignore_index=True, sort=False)
     df["event_date"] = pd.to_datetime(df["event_date"], format="%d/%m/%Y")
     # unidade de observacao fisico-hidrologica: um local + uma data. Linhas que repetem
@@ -257,8 +257,15 @@ def extract_rain(df: pd.DataFrame, cache_dir: Path, batch: int = 100, sleep_s: f
     # --- passada B: serie completa por celula ---
     for glat, glon in cells:
         ck = f"{glat},{glon}"
-        if ck in series_cache:
-            continue
+        cached = series_cache.get(ck)
+        if cached:
+            # o cache guarda a serie, nao o span pedido: uma rodada posterior com pontos mais
+            # antigos (ou mais recentes) exige refetch, senao a janela sai truncada em silencio.
+            dias = sorted(cached)
+            if dias and dias[0] <= span_start.isoformat() and dias[-1] >= span_end.isoformat():
+                continue
+            print(f"    [B] cache da celula ({glat},{glon}) cobre {dias[0]}..{dias[-1]}, "
+                  f"span exigido {span_start}..{span_end} -- refetch")
         b = fetch_daily_series(glat, glon, span_start, span_end)
         assert (b["grid_lat"], b["grid_lon"]) == (glat, glon), (
             f"centro de celula nao resolveu para si mesmo: pedido ({glat},{glon}), "
@@ -388,6 +395,8 @@ def main(argv=None) -> int:
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("--raster-dir", default=str(DEFAULT_RASTER_DIR))
     p.add_argument("--cache-dir", default=str(DEFAULT_CACHE_DIR))
+    p.add_argument("--pos-csv", default=str(POS_CSV))
+    p.add_argument("--neg-csv", default=str(NEG_CSV))
     p.add_argument("--out", default=str(OUT_CSV))
     p.add_argument("--skip-rain", action="store_true")
     p.add_argument("--skip-mapbiomas", action="store_true")
@@ -397,7 +406,7 @@ def main(argv=None) -> int:
     cache_dir = Path(args.cache_dir)
     cache_dir.mkdir(parents=True, exist_ok=True)
 
-    df = load_points()
+    df = load_points(Path(args.pos_csv), Path(args.neg_csv))
     print(f"[0] pontos carregados: {len(df)} linhas "
           f"({int((df.label == 1).sum())} pos / {int((df.label == 0).sum())} neg); "
           f"unidades de observacao unicas (lat,lon,data): {df['observation_unit_key'].nunique()}")
