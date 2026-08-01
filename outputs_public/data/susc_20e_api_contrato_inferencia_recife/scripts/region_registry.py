@@ -54,8 +54,9 @@ REGIONS: dict[str, RegionInfo] = {
         name="curitiba",
         bbox_wgs84=(-49.45, -25.65, -49.10, -25.30),
         model_version="SUSC-20N v1 (Firth, 5 features, n=1458 unidades [1035 pos/423 neg], "
-        "LOO-AUC=0.6459) -- modelo estatístico validado, sem motor de inferência/API (não é "
-        "'available')",
+        "LOO-AUC=0.6459 embaralhado / 0.5246 holdout temporal 2026 -- SUSC-20O) -- modelo "
+        "estatístico validado mas com generalização temporal fraca; sem motor de inferência/API "
+        "(não é 'available')",
         region_maturity="limited_evidence",
         status_note=(
             "Evidência em processamento: footprint SAR + corpus Sentinel + "
@@ -220,7 +221,20 @@ REGIONS: dict[str, RegionInfo] = {
             "seguem: confundimento temporal estrutural intacto (negativos pareados por bairro, "
             "não por data); sem validação externa/holdout temporal; a não-reprodutibilidade da "
             "amostragem de negativo (acima) é um débito técnico documentado, não corrigido "
-            "nesta rodada por estar fora de escopo."
+            "nesta rodada por estar fora de escopo (corrigido na atualização seguinte). "
+            "ATUALIZAÇÃO 2026-08-01 (SUSC-20O, holdout temporal + correção de reprodutibilidade, "
+            "executado e verificado nesta sessão): `stable_rank()` corrigida -- não depende mais "
+            "do path do CSV, amostragem de negativo agora reproduz entre sessões. Separadamente, "
+            "modelo primário (5 features) treinado só em 2023-2025 (1179 unidades, EPV=63,0) e "
+            "testado em 2026-parcial nunca visto (279 unidades) -- **AUC caiu de 0,6459 (LOO-CV "
+            "embaralhada) para 0,5246 (holdout temporal)**, quase indistinguível de aleatório "
+            "fora da janela de treino. Achado mais importante pra interpretar qualquer AUC já "
+            "reportado pra Curitiba: ~0,64 mede separabilidade dentro da distribuição observada "
+            "(anos embaralhados), não capacidade preditiva prospectiva. Duas hipóteses não "
+            "testadas: composição do SIAC 156 muda de ano pra ano de forma não-física (2025 tem "
+            "desproporcionalmente mais positivos que os outros anos), e 2026 é ano parcial "
+            "(jan-jul) com sazonalidade de chuva não comparável ao treino anual completo. Ver "
+            "reports/susc_20o_validacao_temporal_holdout_curitiba_report.md."
         ),
     ),
     "petropolis": RegionInfo(
