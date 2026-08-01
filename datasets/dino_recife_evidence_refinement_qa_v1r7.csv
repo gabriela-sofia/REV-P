@@ -28,8 +28,8 @@ qa_design_min_achievable_p,0.0143
 qa_confound_geographic_adjacency_spearman,rho=-0.0283 p=0.6543 n_pairs=253
 qa_confound_patch_provenance_spearman,rho=0.0000 p=1.0000
 qa_confound_n_points_per_patch_spearman,rho=0.2996 p=0.2780
-qa_score_vs_frac_positive_targets_spearman,rho=0.3084 p=0.2634 n=15
-qa_score_vs_frac_positive_all_patches_spearman,rho=-0.1671 p=0.4459 n=23
+qa_score_vs_frac_positive_targets_spearman,rho=0.3084 p=0.2634 n_used=15 of 15 targets
+qa_score_vs_frac_positive_all_patches_spearman,rho=-0.1671 p=0.4459 n_used=23 of 23 patches
 qa_leave_one_seed_out_rank_stability,mean_rho=0.5750 min_rho=-0.1893
 qa_pseudoreplication_cluster_n,23
 qa_pseudoreplication_points_behind_targets,59
@@ -45,9 +45,9 @@ new_embeddings_extracted,0
 new_imagery_downloaded,0
 preregistered_utility_criterion,perm_p<0.05 AND geographic/provenance/n_points confounds all p>=0.05
 verdict,REFINEMENT_SIGNAL_NOT_ESTABLISHED_QUEUE_IS_UNORDERED_NULL_RESULT
-qa_redundancy_with_causal_feature__elevation_m,rho=0.3903 p=0.0656
-qa_redundancy_with_causal_feature__slope_deg,rho=0.2540 p=0.2423
-qa_redundancy_with_causal_feature__hand_m_dinf,rho=0.3864 p=0.0686
-qa_redundancy_with_causal_feature__twi_dinf,rho=0.2885 p=0.1818
-qa_redundancy_with_causal_feature__rain_decay_index_api_chirps,rho=-0.3636 p=0.0881
-qa_redundancy_with_causal_feature__rain_peak_residual_orthogonalized,rho=0.5109 p=0.0127
+qa_redundancy_with_causal_feature__elevation_m,rho=0.3903 p=0.0656 n_used=23
+qa_redundancy_with_causal_feature__slope_deg,rho=0.2540 p=0.2423 n_used=23
+qa_redundancy_with_causal_feature__hand_m_dinf,rho=0.3864 p=0.0686 n_used=23
+qa_redundancy_with_causal_feature__twi_dinf,rho=0.2885 p=0.1818 n_used=23
+qa_redundancy_with_causal_feature__rain_decay_index_api_chirps,rho=-0.3636 p=0.0881 n_used=23
+qa_redundancy_with_causal_feature__rain_peak_residual_orthogonalized,rho=0.5109 p=0.0127 n_used=23

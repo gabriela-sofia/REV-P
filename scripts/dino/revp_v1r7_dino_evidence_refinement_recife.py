@@ -196,12 +196,20 @@ def _join_points_to_patches(in_v12: Path, bboxes: dict[str, tuple[float, float, 
 # ---------------------------------------------------------------------------
 
 def _spearman(a: np.ndarray, b: np.ndarray) -> tuple[float, float]:
+    rho, p, _ = _spearman_n(a, b)
+    return (rho, p)
+
+
+def _spearman_n(a: np.ndarray, b: np.ndarray) -> tuple[float, float, int]:
+    """Spearman plus the number of pairs actually used. Patches without any
+    v12 point carry NaN, so the effective n is smaller than len(a) -- report
+    the used n, never the nominal one."""
     from scipy import stats
     mask = np.isfinite(a) & np.isfinite(b)
     if mask.sum() < 4:
-        return (float("nan"), float("nan"))
+        return (float("nan"), float("nan"), int(mask.sum()))
     rho, p = stats.spearmanr(a[mask], b[mask])
-    return (float(rho), float(p))
+    return (float(rho), float(p), int(mask.sum()))
 
 
 def _haversine_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
@@ -406,21 +414,22 @@ def run() -> None:
     # recover the very quantity the seeds were built from?).
     tgt_frac = np.asarray([agg[p]["n_pos"] / agg[p]["n"] if agg[p]["n"] else np.nan
                            for p in targets], dtype=float)
-    rho_frac, p_frac = _spearman(tgt_scores, tgt_frac)
+    rho_frac, p_frac, n_frac = _spearman_n(tgt_scores, tgt_frac)
 
     # Same test over ALL patches (seeds included) -- the strongest single
     # descriptive check of whether the embedding tracks documented evidence.
     all_scores = np.asarray([by_pid[p]["refinement_score"] for p in patch_ids], dtype=float)
     all_frac = np.asarray([agg[p]["n_pos"] / agg[p]["n"] if agg[p]["n"] else np.nan
                            for p in patch_ids], dtype=float)
-    rho_all, p_all = _spearman(all_scores, all_frac)
+    rho_all, p_all, n_all = _spearman_n(all_scores, all_frac)
 
     # Redundancy with the causal base: is the DINO score just re-encoding terrain/rain?
-    phys_rho: dict[str, tuple[float, float]] = {}
+    phys_rho: dict[str, tuple[float, float, int]] = {}
     for c in PHYS_COLS:
         vals = np.asarray([np.mean(agg[p]["phys"][c]) if agg[p]["phys"][c] else np.nan
                            for p in patch_ids], dtype=float)
-        phys_rho[c] = _spearman(all_scores, vals)
+        r_, p_, n_ = _spearman_n(all_scores, vals)
+        phys_rho[c] = (r_, p_, n_)
 
     # Leave-one-seed-out stability of the target ranking.
     loo_rhos = []
@@ -479,9 +488,9 @@ def run() -> None:
         ("qa_confound_patch_provenance_spearman", f"rho={rho_prov:.4f} p={p_prov:.4f}"),
         ("qa_confound_n_points_per_patch_spearman", f"rho={rho_npts:.4f} p={p_npts:.4f}"),
         ("qa_score_vs_frac_positive_targets_spearman",
-         f"rho={rho_frac:.4f} p={p_frac:.4f} n={len(targets)}"),
+         f"rho={rho_frac:.4f} p={p_frac:.4f} n_used={n_frac} of {len(targets)} targets"),
         ("qa_score_vs_frac_positive_all_patches_spearman",
-         f"rho={rho_all:.4f} p={p_all:.4f} n={len(patch_ids)}"),
+         f"rho={rho_all:.4f} p={p_all:.4f} n_used={n_all} of {len(patch_ids)} patches"),
         ("qa_leave_one_seed_out_rank_stability", f"mean_rho={loo_mean:.4f} min_rho={loo_min:.4f}"),
         ("qa_pseudoreplication_cluster_n", str(len(patch_ids))),
         ("qa_pseudoreplication_points_behind_targets", str(n_points_in_targets)),
@@ -506,8 +515,9 @@ def run() -> None:
          "perm_p<0.05 AND geographic/provenance/n_points confounds all p>=0.05"),
         ("verdict", verdict),
     ]
-    for c, (r, p) in phys_rho.items():
-        qa.append((f"qa_redundancy_with_causal_feature__{c}", f"rho={r:.4f} p={p:.4f}"))
+    for c, (r, p, nn) in phys_rho.items():
+        qa.append((f"qa_redundancy_with_causal_feature__{c}",
+                   f"rho={r:.4f} p={p:.4f} n_used={nn}"))
 
     # ---- Review queue -----------------------------------------------------
     ordered = ranked if useful else sorted(targets)
