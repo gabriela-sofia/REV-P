@@ -90,3 +90,40 @@ def test_mine_year_file_respects_max_por_ano(tmp_path):
 
     rows = mine_mod.mine_year_file(csv_path, positive_bairros={"XAXIM"}, max_por_ano=3)
     assert len(rows) == 3
+
+
+def test_rank_key_is_independent_of_csv_path(tmp_path):
+    # Regressao SUSC-20N: rank_key usava str(csv_path) no hash, entao o mesmo conteudo em
+    # diretorios diferentes produzia amostragem --max-por-ano diferente. rank_key tem que
+    # depender so do conteudo do registro (source_year, logradouro, bairro, data_criacao).
+    fieldnames = ["Tipo", "Orgao", "DataCriacao", "Assunto", "Subdivisao", "Situacao", "Logradouro", "Bairro", "Regional", "DataResposta", "Origem"]
+    import csv as csv_mod
+
+    def write_same_content(base_dir: Path) -> Path:
+        p = base_dir / "siac.csv"
+        with open(p, "w", encoding="utf-8-sig", newline="") as f:
+            w = csv_mod.DictWriter(f, fieldnames=fieldnames, delimiter=";")
+            w.writeheader()
+            for i in range(20):
+                w.writerow({"Tipo": "Solicitação", "Orgao": "X", "DataCriacao": "01/01/2025",
+                            "Assunto": "Iluminação Pública", "Subdivisao": "Manutenção de Luminárias",
+                            "Situacao": "Aberto", "Logradouro": f"Rua {i}", "Bairro": "XAXIM",
+                            "Regional": "", "DataResposta": "", "Origem": "Mobile"})
+        return p
+
+    dir_a = tmp_path / "sessao_a" / "nested"
+    dir_b = tmp_path / "outra_sessao_totalmente_diferente"
+    dir_a.mkdir(parents=True)
+    dir_b.mkdir(parents=True)
+    path_a = write_same_content(dir_a)
+    path_b = write_same_content(dir_b)
+
+    rows_a = mine_mod.mine_year_file(path_a, positive_bairros={"XAXIM"}, max_por_ano=5)
+    rows_b = mine_mod.mine_year_file(path_b, positive_bairros={"XAXIM"}, max_por_ano=5)
+
+    logradouros_a = [r["logradouro"] for r in rows_a]
+    logradouros_b = [r["logradouro"] for r in rows_b]
+    assert logradouros_a == logradouros_b, (
+        "amostragem top-N divergiu entre dois diretorios com o mesmo conteudo de arquivo -- "
+        "rank_key ainda depende do path"
+    )

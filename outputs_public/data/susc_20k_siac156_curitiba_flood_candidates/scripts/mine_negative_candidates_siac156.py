@@ -19,6 +19,14 @@ Amostragem determinística por ano (mesmo espírito do v8/v9 de Recife: hash est
 depende de semente aleatória) -- evita reprocessar um arquivo de 700k+ linhas inteiro sem
 limite quando o pool de candidatos válidos é muito maior que o necessário.
 
+Correção SUSC-20N: `rank_key` usava `str(csv_path)` no hash, então a amostra dependia do
+caminho de execução (mesmo arquivo, diretório diferente = amostra diferente) -- descoberto
+quando a rodada de reforço de negativo (--max-por-ano 120) não reproduziu como superconjunto
+da rodada anterior (--max-por-ano 40). Corrigido para usar `source_year` (derivado do próprio
+registro) em vez do path; a amostra agora é estável entre máquinas e diretórios de execução.
+Ver `test_rank_key_is_independent_of_csv_path` e
+`susc_20n_reforco_negativos_retest_epv_report.md` seção 2.
+
 Uso:
     python mine_negative_candidates_siac156.py --csv ano1.csv ano2.csv ... \
         --positivos dataset_positivos_curitiba_v1.csv --out negativos_brutos.csv \
@@ -88,7 +96,12 @@ def mine_year_file(csv_path: Path | str, positive_bairros: set[str], max_por_ano
                     "bairro": bairro,
                     "regional": row.get("Regional"),
                     "origem": row.get("Origem"),
-                    "rank_key": stable_rank(str(csv_path), logradouro, bairro, data_criacao),
+                    # SUSC-20N corrigiu um bug de reprodutibilidade: a versao anterior usava
+                    # str(csv_path) aqui, entao a amostra dependia do caminho passado na linha
+                    # de comando (mesmo arquivo, diretorio diferente = amostra diferente). Chave
+                    # agora e so o conteudo do registro (source_year, nao o path), estavel entre
+                    # maquinas e sessoes.
+                    "rank_key": stable_rank(source_year, logradouro, bairro, data_criacao),
                 }
             )
     candidates.sort(key=lambda r: r["rank_key"])
