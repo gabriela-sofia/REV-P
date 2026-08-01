@@ -53,8 +53,9 @@ REGIONS: dict[str, RegionInfo] = {
     "curitiba": RegionInfo(
         name="curitiba",
         bbox_wgs84=(-49.45, -25.65, -49.10, -25.30),
-        model_version="SUSC-20M v1 (Firth, n=1138 unidades [1035 pos/103 neg], LOO-AUC=0.6048) "
-        "-- modelo estatístico validado, sem motor de inferência/API (não é 'available')",
+        model_version="SUSC-20N v1 (Firth, 5 features, n=1458 unidades [1035 pos/423 neg], "
+        "LOO-AUC=0.6459) -- modelo estatístico validado, sem motor de inferência/API (não é "
+        "'available')",
         region_maturity="limited_evidence",
         status_note=(
             "Evidência em processamento: footprint SAR + corpus Sentinel + "
@@ -193,7 +194,33 @@ REGIONS: dict[str, RegionInfo] = {
             "mine_negative_candidates_siac156.py --max-por-ano maior); confundimento temporal "
             "estrutural (positivo=dia de queixa de enchente, negativo=data arbitrária de queixa "
             "não-hidrológica) herdado do próprio desenho de Recife, sem solução dentro do "
-            "desenho atual; sem validação externa/temporal holdout, só LOO/k-fold interno."
+            "desenho atual; sem validação externa/temporal holdout, só LOO/k-fold interno. "
+            "ATUALIZAÇÃO 2026-08-01 (SUSC-20N, executado por sessão Claude Code externa, "
+            "verificado nesta sessão antes do commit): N de negativo ampliado de 103 para 423 "
+            "unidades (--max-por-ano 40→120 no minerador já existente, mesmo pareamento por "
+            "bairro), reabrindo a EPV com 6 features (17,17→70,5). REVISÃO HUMANA: apesar da "
+            "EPV passar, `elevation_m` NÃO foi promovida a rota primária -- o corte era causal "
+            "(confundimento com identidade de sub-bacia/bairro no planalto de Curitiba), não "
+            "estatístico, e reintroduzi-la deu contribuição preditiva nula (ΔAUC −0,0006) apesar "
+            "do sinal 'correto'. Rota primária permanece 5 features. Achado novo dessa rota: "
+            "`hand_m_dinf` passa a ser estatisticamente significativo com sinal físico esperado "
+            "(coef −0,1401, p=0,032, IC fora de zero) -- era nulo no SUSC-20M (p=0,70, n_neg=103). "
+            "Primeira feature de terreno com sinal robusto no modelo de Curitiba. LOO-AUC "
+            "0,6048→0,6459; 5-fold repetido 50x 0,6440. `rain_peak_residual_orthogonalized` "
+            "mantém sinal invertido pela 3ª replicação (Recife v12, Curitiba 20M, Curitiba 20N), "
+            "ganhando força -- hipótese aberta. Achado de reprodutibilidade: a amostragem "
+            "determinística do minerador de negativos depende do path do CSV na linha de "
+            "comando (`stable_rank(str(csv_path), ...)`), então esta rodada é união de dois "
+            "sorteios do mesmo pool, não superconjunto do sorteio anterior -- as 119 linhas "
+            "antigas foram preservadas verbatim por point_id. Bug real corrigido em "
+            "`build_v20l_curitiba_features.py`: cache de chuva por célula não guardava o span "
+            "coberto, truncando 3 janelas em silêncio (corrigido com checagem de cobertura). "
+            "Resultados: outputs_public/data/susc_20k_siac156_curitiba_flood_candidates/results/"
+            "v20n_* e reports/susc_20n_reforco_negativos_retest_epv_report.md. Limitações "
+            "seguem: confundimento temporal estrutural intacto (negativos pareados por bairro, "
+            "não por data); sem validação externa/holdout temporal; a não-reprodutibilidade da "
+            "amostragem de negativo (acima) é um débito técnico documentado, não corrigido "
+            "nesta rodada por estar fora de escopo."
         ),
     ),
     "petropolis": RegionInfo(
