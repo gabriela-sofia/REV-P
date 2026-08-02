@@ -118,6 +118,50 @@ cada doc/pasta linkado):
   (susc_20o_validacao_temporal_holdout_curitiba_report.md,
   susc_20p_validacao_blocos_espaciais_curitiba_report.md,
   susc_20q_bateria_exaustiva_diagnosticos_temporais_curitiba_report.md).
+- **Revisão de literatura ampliada (2026-08-02) -- referências novas pra atacar a lacuna do
+  SUSC-20Q, nenhuma execução ainda, aguardando decisão sobre qual vertente seguir.** Pedido
+  explícito de esgotar bases acadêmicas a partir das palavras-chave/cenário do projeto. Quatro
+  referências novas, diretamente acionáveis:
+  1. **Agostini, Pierson & Garg, "A Bayesian Spatial Model to Correct Under-Reporting in Urban
+     Crowdsourcing" (AAAI-24, arXiv:2312.11754)** -- ataca exatamente o mesmo problema
+     estrutural do SIAC 156 (dado de queixa cidadã: impossível distinguir evento que não
+     ocorreu de evento que ocorreu mas não foi reportado), aplicado no mesmo domínio (queixas
+     de alagamento em NYC). Usa correlação espacial pra inferir probabilidade real de
+     ocorrência. Referência mais forte e mais no-alvo encontrada até agora pro "confundimento
+     temporal estrutural" (positivo=dia de queixa, negativo=data arbitrária) já documentado
+     desde o SUSC-20K/20N como limitação não resolvida.
+  2. **PBLC -- "A Positive-Unlabeled Learning Algorithm for Urban Flood Susceptibility
+     Modeling" (Land, 2022, DOI 10.3390/land11111971)** -- mesmo problema ("case-control
+     sampling with contaminated controls", quase a mesma frase que já usamos pra descrever
+     nosso próprio limite), método específico pra suscetibilidade a enchente (não genérico),
+     testado em Guangzhou.
+  3. **"Contrast or Diversity: Non-Flood sampling in urban flood susceptibility modelling"
+     (J. Hydrology 656, 2025, ScienceDirect S0022169425003919)** -- framework de amostragem
+     negativa por distância (DBS) balanceando contraste e diversidade; não resolve o
+     confundimento temporal sozinho, mas informa como desenhar qualquer minerador de negativo
+     futuro pra Curitiba/Recife melhor que o atual (cap fixo por ano, sem controle de
+     contraste/diversidade espacial).
+  4. **Hipótese ENOS/El Niño pro colapso específico de 2026** -- Nota Técnica SIMEPAR (fonte
+     primária, 2026-06-11): El Niño confirmado pela NOAA/CPC em jun/2026, favorece "sistemas
+     convectivos de mesoescala" e "episódios prolongados de chuva" no Paraná a partir do
+     inverno 2026. Literatura de clima (consecutive wet days/CWD como indicador mais robusto
+     de impacto de ENOS em precipitação que intensidade/frequência) sustentaria um novo
+     feature físico-causal (dias consecutivos de chuva, agregado do mesmo CHIRPS já usado,
+     sem dado novo) que os 2 features de chuva atuais (peak/decay) podem não capturar.
+     **Ressalva de honestidade**: a linha do tempo real do ONI (La Niña 2020-início 2023 →
+     El Niño forte 2023-mai/2024 → neutro com dip fraco de La Niña fim 2024/início 2025 →
+     neutro até set/2025 → El Niño formando jun/2026) NÃO dá um corte limpo "2023-25 estável
+     vs. 2026 anômalo" -- 2023 foi ele mesmo ano de El Niño forte e generalizou bem (SUSC-20Q,
+     walk-forward). A hipótese ENOS não pode ser afirmada como explicação sem puxar o índice
+     ONI real por período e correlacionar com o comportamento do coeficiente -- não feito
+     aqui, é o próximo passo mais barato e mais concreto (série pública pequena, mesma
+     categoria de dado que Open-Meteo/CHIRPS já em uso).
+  **Nenhuma decisão de execução tomada nesta rodada** -- é levantamento, próximo passo exige
+  escolha humana entre: (a) testar ONI real vs. comportamento do coeficiente (barato, dado
+  novo mas pequeno e público, aprovação simples); (b) redesenhar amostragem negativa via
+  correção de sub-reporte bayesiana ou PU-learning (mudança de metodologia maior, aprovação
+  explícita, mexe no desenho já usado em Curitiba E Recife); (c) nenhuma das duas agora,
+  manter como registrado pra decisão futura.
 
 ---
 
