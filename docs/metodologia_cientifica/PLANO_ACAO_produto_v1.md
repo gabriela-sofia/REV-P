@@ -86,25 +86,38 @@ cada doc/pasta linkado):
   não desta rodada). **Decisão (2026-08-01, humana): fechar de vez a linha de
   embedding/patch estático como candidata a evidência ou feature -- não é mais revisitada.**
   Foco 100% no causal SUSC-20. Ver `datasets/clay_feasibility_audit_v1r9.csv`.
-- **Frente causal SUSC-20 (SUSC-20O/20P, 2026-08-01/02) -- EM ABERTO, diagnóstico do colapso
-  de AUC prospectivo em Curitiba.** SUSC-20O (2026-08-01) testou holdout temporal genuíno
-  (treino 2023-2025, teste 2026-parcial nunca visto) na rota primária de 5 features: AUC caiu
-  de 0,6459 (LOO-CV embaralhado) para 0,5246 -- quase indistinguível de aleatório fora da
-  janela de treino. Duas hipóteses não-excludentes ficaram em aberto: (a) vazamento espacial
-  (unidade do mesmo bairro em treino e teste do CV embaralhado infla o AUC) e (b) deriva
-  temporal/administrativa (composição do SIAC 156 muda de ano pra ano; 2026 parcial tem
-  sazonalidade não comparável). Pesquisa de literatura (2026-08-02) confirmou que ambos os
-  mecanismos sao documentados na area de suscetibilidade a enchente -- random split sem
-  spatial block CV infla AUC em 5-15%, e ha relato de modelos com CV quase perfeito falhando
-  fora da amostra temporal. SUSC-20P (2026-08-02) isolou a hipotese (a): GroupKFold por bairro
-  (73 bairros, nenhum aparece em treino e teste do mesmo fold) deu AUC medio 0,6442 (desvio
-  0,032) -- estatisticamente igual ao CV embaralhado, muito acima do holdout temporal.
-  Conclusao: vazamento espacial nao e a causa -- o modelo generaliza bem pra bairros nunca
-  vistos. A explicacao do colapso fica concentrada na hipotese (b), ainda nao testada
-  isoladamente -- proximo passo natural, nao iniciado nesta rodada (uma tarefa por vez). Ver
+- **Frente causal SUSC-20 (SUSC-20O/20P/20Q, 2026-08-01/02) -- diagnóstico do colapso de AUC
+  prospectivo em Curitiba, causa isolada até onde o dado atual permite.** SUSC-20O
+  (2026-08-01) testou holdout temporal genuíno (treino 2023-2025, teste 2026-parcial nunca
+  visto): AUC caiu de 0,6459 (LOO-CV embaralhado) para 0,5246. SUSC-20P (2026-08-02) descartou
+  vazamento espacial (GroupKFold por 73 bairros deu AUC=0,6442, igual ao embaralhado). Por
+  pedido explícito de esgotar toda vertente de literatura, SUSC-20Q (2026-08-02) rodou mais 6
+  diagnósticos sobre o dado já existente (nenhuma aquisição nova): (1) bootstrap CI do AUC
+  holdout inclui 0,5/acaso mas exclui 0,6459 -- a queda é real, não ruído de amostra; (2)
+  ablação terreno-só (AUC=0,5213) vs. chuva-só (AUC=0,4984) -- os dois colapsam juntos; (3)
+  **walk-forward multi-corte mostrou que 2024 e 2025 generalizam bem prospectivamente
+  (AUC 0,63 e 0,67) -- o colapso é específico de 2026, não falha geral de generalização
+  temporal**; (4) holdout casado por estação (jan-jul→jan-jul) deu AUC=0,5219, quase idêntico
+  ao original -- descarta sazonalidade não-comparável; (5) coeficiente Firth por ano mostrou
+  as duas features de chuva como sinal forte e consistente em 2023-2025 (p<0,01) **ficando
+  completamente nulas em 2026** -- mecanismo direto do colapso; (6) composição/metadado
+  (confiança, categoria, cobertura de chuva) estável ano a ano, inclusive 2026 -- descarta
+  deriva administrativa visível. **SÍNTESE**: depois de 7 diagnósticos no total, descartadas
+  vazamento espacial, sazonalidade, ruído de amostra, deriva administrativa visível e falha
+  geral de generalização temporal. O que resta: 2026 especificamente tem relação chuva↔queixa
+  diferente dos 3 anos anteriores, por razão física (regime de chuva atípico) ou completude do
+  ano parcial ainda em processamento -- nenhuma testável com o dado atual sem nova aquisição
+  externa (ex.: índice ENSO/ONI, série de chuva total anual independente de queixa), não
+  executada aqui. Redesenho de amostragem negativa (pareamento temporal positivo-negativo,
+  positive-unlabeled learning -- literatura: "Contrast or Diversity" ScienceDirect
+  S0022169425003919, PU-learning MDPI land11111971) é uma vertente real e distinta, documentada
+  como opção de metodologia maior que ataca a limitação estrutural já conhecida
+  (positivo=dia de queixa, negativo=data arbitrária não-hidrológica) -- **não é diagnóstico,
+  é redesenho, exige aprovação explícita antes de rodar, não decidido aqui**. Ver
   outputs_public/data/susc_20k_siac156_curitiba_flood_candidates/reports/
   (susc_20o_validacao_temporal_holdout_curitiba_report.md,
-  susc_20p_validacao_blocos_espaciais_curitiba_report.md).
+  susc_20p_validacao_blocos_espaciais_curitiba_report.md,
+  susc_20q_bateria_exaustiva_diagnosticos_temporais_curitiba_report.md).
 
 ---
 
