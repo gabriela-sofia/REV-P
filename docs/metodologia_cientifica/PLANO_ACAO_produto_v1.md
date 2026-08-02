@@ -254,6 +254,18 @@ cada doc/pasta linkado):
   estabelece que resolver a tensao interpretabilidade x performance nao e trivial com os
   recursos tentados. Rota primaria continua linear/Firth. Ver
   reports/susc_20x_tentativa_traducao_interpretavel_curitiba_report.md.
+- **SUSC-20Y (2026-08-02) -- GAM aditivo (spline por feature) pra traduzir a nao-linearidade:
+  MISTA.** Modelo aditivo por construcao (sem termo cruzado entre features, cada feature com
+  seu proprio bloco de B-spline). Config default: AUC holdout 2026 = 0,5445; melhor da grade
+  de 30 combos (nos x grau x C) = 0,575. Baseline linear = 0,5246; GBM (SUSC-20U) = 0,5888.
+  Gap pro GBM caiu de 0,0593 (melhor tentativa SUSC-20X) pra 0,0138 -- reducao de ~77%, mas
+  nenhuma configuracao iguala ou supera o GBM. Leitura: boa parte da nao-linearidade e
+  por-feature (curva isolada, capturavel sem interacao), mas resta um residuo que so
+  interacao real entre features explicaria -- consistente com a leitura do SUSC-20X. 3 de 5
+  curvas de efeito batem com o sinal causal esperado (twi_dinf e rain_peak_residual nao
+  batem; twi_dinf ja era anomalo no SUSC-20V/GBM). NAO invalida SUSC-20U/20V/20W/20X. Rota
+  primaria continua linear/Firth. Ver
+  reports/susc_20y_gam_splines_curitiba_report.md.
 
 ---
 
