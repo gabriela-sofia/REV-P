@@ -86,6 +86,25 @@ cada doc/pasta linkado):
   não desta rodada). **Decisão (2026-08-01, humana): fechar de vez a linha de
   embedding/patch estático como candidata a evidência ou feature -- não é mais revisitada.**
   Foco 100% no causal SUSC-20. Ver `datasets/clay_feasibility_audit_v1r9.csv`.
+- **Frente causal SUSC-20 (SUSC-20O/20P, 2026-08-01/02) -- EM ABERTO, diagnóstico do colapso
+  de AUC prospectivo em Curitiba.** SUSC-20O (2026-08-01) testou holdout temporal genuíno
+  (treino 2023-2025, teste 2026-parcial nunca visto) na rota primária de 5 features: AUC caiu
+  de 0,6459 (LOO-CV embaralhado) para 0,5246 -- quase indistinguível de aleatório fora da
+  janela de treino. Duas hipóteses não-excludentes ficaram em aberto: (a) vazamento espacial
+  (unidade do mesmo bairro em treino e teste do CV embaralhado infla o AUC) e (b) deriva
+  temporal/administrativa (composição do SIAC 156 muda de ano pra ano; 2026 parcial tem
+  sazonalidade não comparável). Pesquisa de literatura (2026-08-02) confirmou que ambos os
+  mecanismos sao documentados na area de suscetibilidade a enchente -- random split sem
+  spatial block CV infla AUC em 5-15%, e ha relato de modelos com CV quase perfeito falhando
+  fora da amostra temporal. SUSC-20P (2026-08-02) isolou a hipotese (a): GroupKFold por bairro
+  (73 bairros, nenhum aparece em treino e teste do mesmo fold) deu AUC medio 0,6442 (desvio
+  0,032) -- estatisticamente igual ao CV embaralhado, muito acima do holdout temporal.
+  Conclusao: vazamento espacial nao e a causa -- o modelo generaliza bem pra bairros nunca
+  vistos. A explicacao do colapso fica concentrada na hipotese (b), ainda nao testada
+  isoladamente -- proximo passo natural, nao iniciado nesta rodada (uma tarefa por vez). Ver
+  outputs_public/data/susc_20k_siac156_curitiba_flood_candidates/reports/
+  (susc_20o_validacao_temporal_holdout_curitiba_report.md,
+  susc_20p_validacao_blocos_espaciais_curitiba_report.md).
 
 ---
 
