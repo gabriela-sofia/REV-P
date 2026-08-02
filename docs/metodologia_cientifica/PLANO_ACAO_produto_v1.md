@@ -278,6 +278,22 @@ cada doc/pasta linkado):
   considerada exaurida com as ferramentas testadas. NAO invalida achados anteriores. Rota
   primaria continua linear/Firth. Ver
   reports/susc_20z_gam_tensor_interaction_curitiba_report.md.
+- **SUSC-21A (2026-08-02) -- GBM com restricao monotonica causal: POSITIVA-PARCIAL, nova
+  vertente (fora da familia GAM).** HistGradientBoostingClassifier com monotonic_cst forcando
+  o sinal causal ja estabelecido (EXPECTED_SIGN, mesmo usado no Firth) em cada uma das 5
+  features -- nao pode inverter direcao, so a forma (limiar/plato/taxa) e livre. Resultado:
+  melhor config = 0,5561 (vs linear 0,5246, GAM 0,575, GBM irrestrito 0,5888) -- nao supera
+  GAM nem GBM, mas fica acima do linear em 100% dos 27 combos testados. Custo de impor
+  monotonicidade (mesma config): 0,0224 de AUC. Achado central: e o UNICO modelo nao-linear
+  desta serie com 100% de conformidade causal garantida por construcao (5/5 features na
+  direcao esperada, verificado via decision_function bruta, nao so PD agregada) -- GBM
+  irrestrito (SUSC-20V) tinha twi_dinf anomalo (4/5), GAM aditivo (SUSC-20Y) tinha 2 features
+  anomalas (3/5). Reformula a pergunta: em vez de "recuperar 100% do sinal do GBM" (dificil,
+  SUSC-20X/Y/Z), "qual o melhor modelo nao-linear que nunca viola fisica conhecida" -- resposta
+  = GBM monotonico. Nao resolve a lacuna original (colapso 2026); estabelece candidato mais
+  defensavel cientificamente que GBM irrestrito, se decisao futura for usar nao-linear em
+  producao. Rota primaria continua linear/Firth. Ver
+  reports/susc_21a_gbm_monotonico_causal_curitiba_report.md.
 
 ---
 
