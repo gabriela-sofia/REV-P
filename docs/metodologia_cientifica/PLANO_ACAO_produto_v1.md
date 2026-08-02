@@ -266,6 +266,18 @@ cada doc/pasta linkado):
   batem; twi_dinf ja era anomalo no SUSC-20V/GBM). NAO invalida SUSC-20U/20V/20W/20X. Rota
   primaria continua linear/Firth. Ver
   reports/susc_20y_gam_splines_curitiba_report.md.
+- **SUSC-20Z (2026-08-02) -- GAM + interacao tensor-spline (2D): NEGATIVA, encerra a vertente
+  GAM.** Testou termo de interacao tensor-product (te()-like) nos mesmos 3 pares do SUSC-20X,
+  somado ao GAM aditivo do SUSC-20Y. Melhor resultado (3 tensores + grade de hiperparametro) =
+  0,5631 -- MENOR que o melhor GAM puramente aditivo do SUSC-20Y (0,575). Interacao explicita
+  nao trouxe ganho liquido sobre so dar mais liberdade a parte aditiva; provavel overfitting
+  (16-25 colunas extra por par, N treino=1179). Leitura consolidada da vertente GAM: maior
+  parte da nao-linearidade do GBM e por-feature (capturavel sem interacao); residuo restante
+  (~0,01-0,03 AUC) provavelmente estrutura de ordem >2 ou splits regionais, nao capturavel por
+  GAM aditivo nem por tensor-spline 2D com os dados disponiveis. Vertente GAM/spline
+  considerada exaurida com as ferramentas testadas. NAO invalida achados anteriores. Rota
+  primaria continua linear/Firth. Ver
+  reports/susc_20z_gam_tensor_interaction_curitiba_report.md.
 
 ---
 
