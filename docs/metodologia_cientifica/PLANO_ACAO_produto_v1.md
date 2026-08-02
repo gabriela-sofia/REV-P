@@ -166,6 +166,23 @@ cada doc/pasta linkado):
   **Conclusão: hipótese ENOS não sustentada pelos dados reais disponíveis** -- não é mais
   tratada como explicação provável do colapso de 2026. Ver
   reports/susc_20r_correlacao_oni_enso_curitiba_report.md.
+- **SUSC-20S (2026-08-02) -- piloto PU bagging testado, resultado NEGATIVO pro redesenho de
+  amostragem.** Segunda vertente: PU bagging (Mordelet & Vert, arXiv:1010.0772) -- positivos
+  fixos, pool "negativo" tratado como não-rotulado e reamostrado por bag, 300 bags, escolhido
+  sobre o modelo bayesiano espacial de sub-reporte (Agostini et al.) por risco desse último
+  criar uma superfície de risco derivada da densidade de queixa -- próximo demais de um
+  score/proxy proibido pelas regras fixas. Resultado: holdout temporal PU bagging=0,5245
+  (baseline supervisionado=0,5246); spatial block CV PU bagging=0,6443
+  (baseline=0,6442) -- **diferença nula nas duas validações**. PU bagging corrige viés de
+  rótulo contaminado; não corrige mudança de distribuição/relação feature-rótulo ao longo do
+  tempo -- e o nosso problema (SUSC-20Q diagnóstico 5: coeficiente de chuva cai a zero em
+  2026) é do segundo tipo, não do primeiro. Rota primária de Curitiba não muda (continua
+  Firth supervisionada, 5 features, SUSC-20N). Recife não tocado. Ver
+  reports/susc_20s_piloto_pu_bagging_curitiba_report.md. **SÍNTESE FINAL das duas vertentes
+  da revisão de literatura**: ambas testadas honestamente, ambas negativas -- isso não é
+  beco sem saída, é eliminação rigorosa que fortalece a conclusão do SUSC-20Q: o colapso de
+  2026 é uma propriedade real e ainda não explicada desse período específico, não um
+  artefato de desenho metodológico corrigível com as ferramentas testadas até agora.
 
 ---
 
