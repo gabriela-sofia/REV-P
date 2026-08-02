@@ -156,12 +156,16 @@ cada doc/pasta linkado):
      ONI real por período e correlacionar com o comportamento do coeficiente -- não feito
      aqui, é o próximo passo mais barato e mais concreto (série pública pequena, mesma
      categoria de dado que Open-Meteo/CHIRPS já em uso).
-  **Nenhuma decisão de execução tomada nesta rodada** -- é levantamento, próximo passo exige
-  escolha humana entre: (a) testar ONI real vs. comportamento do coeficiente (barato, dado
-  novo mas pequeno e público, aprovação simples); (b) redesenhar amostragem negativa via
-  correção de sub-reporte bayesiana ou PU-learning (mudança de metodologia maior, aprovação
-  explícita, mexe no desenho já usado em Curitiba E Recife); (c) nenhuma das duas agora,
-  manter como registrado pra decisão futura.
+  **Decisão (2026-08-02, humana): seguir as duas vertentes em sequência.**
+- **SUSC-20R (2026-08-02) -- ONI real testado, resultado NEGATIVO pra hipótese ENOS.** Índice
+  ONI real (fonte: ggweather.com/enso/oni.htm, ONI v5 NOAA/CPC), média Jan-Jul por ano
+  comparada com AUC de teste do walk-forward (SUSC-20Q): 2024 (El Niño forte, ONI médio
+  +0,88) generalizou bem (AUC=0,6282); 2025 (neutro, ONI médio −0,07) generalizou ainda melhor
+  (AUC=0,6652) -- **padrão oposto ao esperado se anomalia ENOS explicasse o colapso**. 2026
+  sem valor de ONI publicado na fonte consultada (não estimado, documentado como limitação).
+  **Conclusão: hipótese ENOS não sustentada pelos dados reais disponíveis** -- não é mais
+  tratada como explicação provável do colapso de 2026. Ver
+  reports/susc_20r_correlacao_oni_enso_curitiba_report.md.
 
 ---
 
