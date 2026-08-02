@@ -353,8 +353,19 @@ REGIONS: dict[str, RegionInfo] = {
             "diagnosticada (SUSC-20Q), não a resolve. Duas conclusões independentes: (1) "
             "não-linearidade genuína e generalizável nas 5 features causais; (2) deriva "
             "específica de 2026 continua sem explicação causal identificada. Ver "
-            "reports/susc_20w_walk_forward_nao_linear_curitiba_report.md. region_maturity "
-            "mantido em 'limited_evidence'."
+            "reports/susc_20w_walk_forward_nao_linear_curitiba_report.md. "
+            "ATUALIZAÇÃO 2026-08-02 (SUSC-20X, tentativa de tradução interpretável: "
+            "NEGATIVA -- executado e verificado nesta sessão): testou se interação-produto "
+            "ou indicador de limiar (lidos direto da partial dependence do GBM, não "
+            "escolhidos por busca: hand_m_dinf<4, rain_decay>20, rain_peak<-4) adicionados "
+            "ao modelo linear recuperam o sinal do GBM (0,5888). Nenhuma das 9 configurações "
+            "passa de 0,53 (melhor: interação rain_decay×rain_peak, 0,5295) -- não recupera "
+            "nem de longe o patamar do GBM. Sugere estrutura mais complexa que um GLM com "
+            "poucos termos não replica facilmente. Não invalida o achado SUSC-20U/20V/20W -- "
+            "só estabelece que resolver a tensão interpretabilidade×performance não é "
+            "trivial. Rota primária continua linear/Firth. Ver "
+            "reports/susc_20x_tentativa_traducao_interpretavel_curitiba_report.md. "
+            "region_maturity mantido em 'limited_evidence'."
         ),
     ),
     "petropolis": RegionInfo(

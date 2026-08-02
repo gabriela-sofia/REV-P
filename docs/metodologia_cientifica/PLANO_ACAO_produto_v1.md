@@ -242,6 +242,18 @@ cada doc/pasta linkado):
   genuina e generalizavel nas 5 features causais; (2) a deriva especifica de 2026 continua
   sem explicacao causal identificada. Ver
   reports/susc_20w_walk_forward_nao_linear_curitiba_report.md.
+- **SUSC-20X (2026-08-02) -- tentativa de traduzir a nao-linearidade pra termo interpretavel:
+  NEGATIVA.** Testou se interacao-produto ou indicador de limiar (lidos direto da partial
+  dependence do GBM, nao escolhidos por busca: hand_m_dinf<4, rain_decay>20,
+  rain_peak<-4) adicionados ao modelo linear recuperam o sinal do GBM (0,5888). Resultado:
+  nenhuma das 9 configuracoes passa de 0,53 (melhor: interacao rain_decay x rain_peak,
+  0,5295) -- nao recupera nem de longe o patamar do GBM. Sugere que a nao-linearidade
+  capturada nao e uma interacao produto suave nem um limiar aditivo simples, provavelmente
+  estrutura mais complexa (interacao de ordem mais alta ou splits por subregiao) que um GLM
+  com poucos termos nao replica facilmente. NAO invalida o achado SUSC-20U/20V/20W -- so
+  estabelece que resolver a tensao interpretabilidade x performance nao e trivial com os
+  recursos tentados. Rota primaria continua linear/Firth. Ver
+  reports/susc_20x_tentativa_traducao_interpretavel_curitiba_report.md.
 
 ---
 
