@@ -341,7 +341,20 @@ REGIONS: dict[str, RegionInfo] = {
             "não rota de produção** -- mesmas ressalvas de interpretabilidade/EPV do SUSC-20U "
             "seguem valendo. Ver "
             "reports/susc_20v_decomposicao_gbm_e_varredura_modelo_curitiba_report.md. "
-            "region_maturity mantido em 'limited_evidence'."
+            "ATUALIZAÇÃO 2026-08-02 (SUSC-20W, checagem de robustez decisiva -- executado e "
+            "verificado nesta sessão): walk-forward multi-corte (2023->2024, 2023-24->2025, "
+            "2023-25->2026) pras 4 classes de modelo (linear, GBM, AdaBoost, RandomForest) -- "
+            "**a vantagem não-linear NÃO é específica de 2026**: 8 de 9 comparações "
+            "modelo×ano ficam acima do linear (única exceção: GBM em 2025, por 0,0065). "
+            "Descarta overfitting ao ruído do teste de 2026 -- não-linearidade real, "
+            "presente em qualquer corte. AO MESMO TEMPO, 2026 segue sendo o ano mais difícil "
+            "de prever pra qualquer classe de modelo (AUC 0,56-0,59 vs. 0,63-0,68 em 2024 e "
+            "0,66-0,69 em 2025) -- não-linearidade compensa parcialmente a deriva já "
+            "diagnosticada (SUSC-20Q), não a resolve. Duas conclusões independentes: (1) "
+            "não-linearidade genuína e generalizável nas 5 features causais; (2) deriva "
+            "específica de 2026 continua sem explicação causal identificada. Ver "
+            "reports/susc_20w_walk_forward_nao_linear_curitiba_report.md. region_maturity "
+            "mantido em 'limited_evidence'."
         ),
     ),
     "petropolis": RegionInfo(

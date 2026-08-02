@@ -229,6 +229,19 @@ cada doc/pasta linkado):
   nenhuma rodada linear anterior. **Ainda diagnostico, nao rota de producao** -- mesmas
   ressalvas de interpretabilidade/EPV do SUSC-20U seguem valendo. Ver
   reports/susc_20v_decomposicao_gbm_e_varredura_modelo_curitiba_report.md.
+- **SUSC-20W (2026-08-02) -- checagem de robustez decisiva: a vantagem nao-linear NAO e
+  especifica de 2026.** Rodou walk-forward multi-corte (2023->2024, 2023-24->2025,
+  2023-25->2026) pras 4 classes de modelo (linear, GBM, AdaBoost, RandomForest). Resultado:
+  8 de 9 comparacoes modelo x ano ficam acima do linear (unica excecao: GBM em 2025, por
+  0,0065). Isso descarta que o ganho de 2026 seja overfitting ao ruido do teste --
+  nao-linearidade real, presente em qualquer corte. AO MESMO TEMPO, 2026 continua sendo o
+  ano mais dificil de prever pra QUALQUER classe de modelo (AUC absoluto mais baixo em todas
+  as 4 linhas: 0,56-0,59 em 2026 vs. 0,63-0,68 em 2024 e 0,66-0,69 em 2025) -- a
+  nao-linearidade compensa parcialmente a deriva ja diagnosticada no SUSC-20Q, mas nao a
+  resolve. **Duas conclusoes independentes e complementares**: (1) existe nao-linearidade
+  genuina e generalizavel nas 5 features causais; (2) a deriva especifica de 2026 continua
+  sem explicacao causal identificada. Ver
+  reports/susc_20w_walk_forward_nao_linear_curitiba_report.md.
 
 ---
 
