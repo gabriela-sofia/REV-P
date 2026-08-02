@@ -212,6 +212,23 @@ cada doc/pasta linkado):
   Pilarzinho) poderiam ser causa fisica real e valida -- mas cruzar datas/locais de obra
   especificos com os bairros do dataset exige esforco de matching nao trivial, nao executado
   por ora. Registrado como possivel linha futura, nao forcado nesta rodada.
+- **SUSC-20V (2026-08-02) -- decomposicao do GBM + varredura de 8 classes de modelo, pedido
+  explicito de testar tudo mesmo fora do filtro de interpretabilidade.** Ressalva mantida
+  deliberadamente mesmo com o pedido ampliado: nenhuma feature nova derivada do label foi
+  adicionada -- isso invalidaria a validacao por vazamento, e piso de validade cientifica, nao
+  preferencia de estilo. Varredura (SVM-RBF, MLP, ExtraTrees, AdaBoost, RandomForest, GBM) nas
+  MESMAS 5 features causais: **as 8 classes de modelo nao-linear ficam acima do baseline
+  linear (0,5246)** -- de 0,5292 (MLP raso) a 0,5888 (GBM, SUSC-20U). Nao e acidente de um
+  algoritmo especifico. Decomposicao via partial dependence (shap/xgboost nao instalaram no
+  sandbox por timeout de rede, documentado, nao contornado por workaround arriscado): nenhuma
+  das 5 features tem relacao monotonica simples (todas com multiplas mudancas de inclinacao),
+  confirmando nao-linearidade real. 4 de 5 features mantem direcao geral consistente com o
+  sinal causal ja estabelecido (chuva, HAND, declividade) -- o modelo nao-linear nao inventa
+  fisica nova, capta limiares/interacoes dentro da mesma direcao causal conhecida. `twi_dinf`
+  e excecao (direcao oposta ao esperado), consistente com nunca ter tido sinal robusto em
+  nenhuma rodada linear anterior. **Ainda diagnostico, nao rota de producao** -- mesmas
+  ressalvas de interpretabilidade/EPV do SUSC-20U seguem valendo. Ver
+  reports/susc_20v_decomposicao_gbm_e_varredura_modelo_curitiba_report.md.
 
 ---
 
