@@ -65,6 +65,27 @@ cada doc/pasta linkado):
   SUSC-20 causal** (Curitiba/Petrópolis). Ver
   `docs/metodologia_cientifica/revp_v1r7_dino_evidence_refinement_recife.md` e
   `revp_v1r8b_dino_expanded_evidence_refinement_recife.md`.
+- **Fase 1c (SUSC-22/v1r9, 2026-08-01) -- FECHAMENTO DEFINITIVO da linha de embedding/patch
+  estático.** Testou-se trocar DINOv2 genérico por Clay (modelo geoespacial de propósito,
+  pré-treinado em multiespectral real) sobre os mesmos 52 patches de Recife. Auditoria de
+  viabilidade (`datasets/clay_feasibility_audit_v1r9.csv`) achou o bloqueio real ANTES de
+  gastar esforço: os `.tif` locais são **composição mediana de 12 meses**
+  (`export_sentinel.py`, `.filterDate(2024-01-01,2024-12-31).median()`), não uma cena de um
+  instante real -- não existe `time` de aquisição pra declarar ao Clay, que é condicionado
+  em semana/hora. **Diagnóstico de fundo (não é sobre qual modelo escolher)**: as três
+  tentativas nesta linha (DINO A/B com pseudorreplicação, refinamento nulo em 23 e depois 52
+  patches, Clay bloqueado por falta de instante de aquisição) são a mesma falha estrutural
+  aparecendo de formas diferentes -- **patch estático (composição de vários meses) não carrega
+  assinatura de evento pontual**, independente de qual encoder processa a imagem. A literatura
+  confirma: mapeamento de enchente por change detection funciona comparando uma referência
+  pré-evento contra uma imagem do evento (Prithvi-EO-2.0 e Clay são construídos multi-temporais
+  exatamente pra isso), nunca por embedding de um único composto estático. O próprio projeto já
+  validou essa abordagem certa em outro lugar -- SAR/NDWI/MNDWI ancorados em evento real
+  (Curitiba Juvevê, Petrópolis Via B/C) -- só nunca foi aplicada aos 278 pontos SEDEC de Recife
+  (aplicar exigiria ~278 aquisições individuais, escopo e custo que ficam para decisão futura,
+  não desta rodada). **Decisão (2026-08-01, humana): fechar de vez a linha de
+  embedding/patch estático como candidata a evidência ou feature -- não é mais revisitada.**
+  Foco 100% no causal SUSC-20. Ver `datasets/clay_feasibility_audit_v1r9.csv`.
 
 ---
 
