@@ -183,6 +183,35 @@ cada doc/pasta linkado):
   beco sem saída, é eliminação rigorosa que fortalece a conclusão do SUSC-20Q: o colapso de
   2026 é uma propriedade real e ainda não explicada desse período específico, não um
   artefato de desenho metodológico corrigível com as ferramentas testadas até agora.
+- **SUSC-20T (2026-08-02) -- mais 3 vertentes testadas (achado de noticia real + 2 tecnicas),
+  as 3 negativas.** (1) Lancamento real do CuritibaApp (25/03/2026, app municipal unificado
+  com IA absorvendo o 156) cai dentro da janela de teste -- testado se o colapso se concentra
+  pos-lancamento: NAO (AUC pre-app=0,4341, pos-app=0,4656 -- pre e pior). (2)
+  rain_max_24h_chirps (coluna ja no dataset, nunca usada) tem correlacao fraca com o rotulo
+  em TODOS os anos, nao so 2026 -- nao e alternativa viavel (AUC=0,523 no holdout, igual ao
+  baseline). (3) Peso de recencia (decaimento exponencial, meia-vida 1 e 2 anos) nao muda
+  nada (AUC=0,5241 e 0,5223, quase identicos ao baseline 0,5246).
+- **SUSC-20U (2026-08-02) -- diagnostico de nao-linearidade: PRIMEIRO RESULTADO POSITIVO da
+  bateria inteira (20P-20U).** Pergunta ortogonal a tudo testado ate aqui: a relacao
+  features-rotulo e nao-linear (limiares/interacoes), nao capturavel por modelo linear,
+  independente da causa da mudanca ano a ano? Gradient boosting raso sobre as MESMAS 5
+  features causais (sem feature nova): holdout temporal AUC=0,5888 (IC 95% [0,5188; 0,6589],
+  exclui 0,5/acaso -- diferente do baseline linear, cujo IC incluia 0,5); spatial block CV
+  AUC=0,6664 (vs. 0,6442 linear). Robusto: 92,6% de 27 combinacoes de hiperparametro tem
+  AUC>0,55, mediana 0,586. Importancia de feature fisicamente coerente (chuva domina 67%,
+  HAND segunda, twi_dinf ultima). Ressalvas importantes, nao escondidas: GBM nao respeita o
+  piso de EPV que rege a rota Firth (mais parametros efetivos que 5 coeficientes);
+  feature_importances_ nao sao coeficientes causais (sem sinal, sem IC, sem interpretacao
+  "aumentar X muda risco em Y") -- conflita direto com a prioridade do projeto por
+  interpretabilidade. NAO e proposta de rota primaria, e diagnostico -- decisao de
+  aprofundar fica com orientacao humana. Ver
+  reports/susc_20t_mais_3_diagnosticos_curitiba_report.md e
+  susc_20u_diagnostico_nao_linearidade_curitiba_report.md.
+- **Hipotese nao executada (documentada, nao perseguida)**: obras de drenagem reais em
+  Curitiba (R$118 milhoes investidos em 2025 -- canal Vila Oficinas, bacia de detencao
+  Pilarzinho) poderiam ser causa fisica real e valida -- mas cruzar datas/locais de obra
+  especificos com os bairros do dataset exige esforco de matching nao trivial, nao executado
+  por ora. Registrado como possivel linha futura, nao forcado nesta rodada.
 
 ---
 
