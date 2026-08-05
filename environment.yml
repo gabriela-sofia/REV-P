@@ -1,0 +1,50 @@
+# Ambiente conda dedicado a linha causal SUSC (Firth penalizado + candidatos
+# interpretaveis como EBM/ExplainableBoostingClassifier). NAO usar o ambiente
+# (base) do conda pra isso -- mantenha isolado.
+#
+# Python 3.10 aqui e um requisito real, verificado, nao uma preferencia de estilo:
+# em 05/08/2026, confirmou-se que nem `firthlogist` nem `interpret` publicam
+# wheel/sdist compativel com Python >=3.11 no PyPI (o pip recusa a instalacao com
+# "Requires-Python <3.11" em todas as versoes disponiveis). Reproduzido de forma
+# independente em dois ambientes: um sandbox Linux (Python 3.10.12) onde instalou
+# sem problema, e o ambiente (base) real da autora (Python 3.13.13, conda), onde
+# falhou exatamente como descrito acima. Ver docs/ambiente_treino_susc.md pro
+# relato completo.
+#
+# Esta linha (causal/SUSC) e separada da linha DINOv2/embeddings, historica e
+# encerrada como candidata a feature (ver PLANO_ACAO_produto_v1.md, decisao
+# 2026-08-01/02). requirements.txt na raiz do repo continua servindo a linha DINO;
+# nao misture as duas instalacoes.
+#
+# Criar o ambiente:
+#   conda env create -f environment.yml
+# Ativar:
+#   conda activate revp-susc
+# Verificar que funciona de verdade (nao so que instalou):
+#   python -m pytest tests/test_susc_ambiente_treino_setup.py -q
+#   python scripts/suscetibilidade/susc_ambiente_compat_common.py
+
+name: revp-susc
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - pytest
+  - pyyaml
+  - tqdm
+  - pip:
+      - firthlogist
+      - interpret
+      # Candidatos futuros -- NAO instalar sem uma tarefa concreta que precise
+      # deles (regra do projeto: uma tarefa por vez). `shap` em particular ja
+      # falhou por timeout de rede num sandbox anterior (SUSC-20V) -- interpret
+      # ja traz uma copia dele como dependencia transitiva, entao ele pode
+      # aparecer sozinho na lista de pacotes instalados; isso e esperado.
+      # - xgboost

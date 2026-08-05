@@ -153,6 +153,14 @@ source .venv/bin/activate   # Linux/Mac
 pip install -r requirements.txt
 ```
 
+**Duas linhas de dependência, não misturar**: o `requirements.txt` acima
+serve a linha DINOv2/embeddings (histórica, encerrada como candidata a
+feature — ver `PLANO_ACAO_produto_v1.md`). A linha causal ativa (SUSC — Firth
+penalizado + candidatos interpretáveis como EBM) tem ambiente próprio, com um
+requisito real de versão de Python (<3.11): veja
+`docs/ambiente_treino_susc.md`, `environment.yml` (conda, recomendado) ou
+`requirements-susc.txt` (pip/venv).
+
 Execução dos testes:
 
 ```bash
