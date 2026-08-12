@@ -432,8 +432,21 @@ def main() -> int:
         nome = args[args.index("--regiao") + 1]
         bb = tuple(float(x) for x in args[args.index("--bbox") + 1].split(","))
         alvos.append((nome, bb))
-    elif "--lote" in args and args[args.index("--lote") + 1] == "ingremes":
-        for a in aois_ingremes():
+    elif "--lote" in args and args[args.index("--lote") + 1] in ("ingremes", "todas"):
+        import pandas as pd
+
+        qual = args[args.index("--lote") + 1]
+        if qual == "ingremes":
+            nomes = aois_ingremes()
+        else:
+            # todas as AOIs do dataset, ingremes ou nao. Necessario para que
+            # planicie e serra entrem no mesmo modelo: enquanto so as ingremes
+            # estiverem harmonizadas, os dois lados usam instrumentos diferentes.
+            if not RELEVO.exists():
+                print(f"ABORTADO: {RELEVO} ausente. Rode cems03 --verificar antes.")
+                return 1
+            nomes = sorted(pd.read_csv(RELEVO)["aoi"].astype(str).tolist())
+        for a in nomes:
             try:
                 alvos.append((a, bbox_da_aoi(a)))
             except Exception as exc:  # noqa: BLE001
