@@ -10,4 +10,4 @@ Pixels só são lidos se REVP_DINO_PIXEL_READ_ALLOWED=true. Nenhuma imagem ou ar
 
 ## Status
 
-**ASSET_MISSING_FAIL_CLOSED**. Resolvidos: 0. Prontos: 0.
+**ASSET_READY_FOR_DINO_PREPROCESSING**. Resolvidos: 13. Prontos: 13.
