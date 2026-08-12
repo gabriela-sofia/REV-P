@@ -187,7 +187,9 @@ def preparar_dem(bbox_ll, label: str, destino: Path) -> dict:
         try:
             with rasterio.open(destino) as r:
                 a = r.read(1)
-                if np.isfinite(a).any():
+                # DEM gravado antes da mascara de mar tem celulas <= 0 e faria o
+                # WBT travar de novo. Nesse caso ignora o cache e regenera.
+                if np.isfinite(a).any() and not (np.isfinite(a) & (a <= 0)).any():
                     return {"crs": str(r.crs), "shape": [int(r.height), int(r.width)],
                             "pixel_size": [RESOLUCAO_M, RESOLUCAO_M],
                             "bbox_ll": list(bbox_ll),
@@ -236,6 +238,28 @@ def preparar_dem(bbox_ll, label: str, destino: Path) -> dict:
               dst_transform=tr2, dst_crs=dst_crs,
               src_nodata=perfil.get("nodata"), dst_nodata=np.nan,
               resampling=Resampling.bilinear)
+
+    # MASCARA DE MAR -- corrigido em 12/08/2026 depois de a EMSR734_AOI03 travar.
+    # Aquela AOI e caribenha: 98% do raster e oceano a exatamente 0 m. O
+    # `fill_depressions` do WhiteboxTools entra em resolucao de flats sobre uma
+    # planicie plana de dezenas de milhares de celulas e nao termina. Nao e lento:
+    # e degenerado.
+    # Rotear fluxo sobre o mar nao tem significado hidrologico, e HAND acima do
+    # nivel do mar e zero por definicao. Celulas <= 0 m viram nodata.
+    # LIMITACAO DECLARADA: terra abaixo do nivel do mar (poldere holandes, vale
+    # do Jordao) seria mascarada indevidamente. Nao ha nenhuma no conjunto atual.
+    mar = np.isfinite(saida) & (saida <= 0)
+    frac_mar = float(mar.mean())
+    saida[mar] = np.nan
+    if frac_mar > 0.5:
+        print(f"    [{label}] {frac_mar*100:.0f}% do recorte e mar/nivel zero -- mascarado")
+
+    valido = np.isfinite(saida)
+    if valido.sum() < 500:
+        raise RuntimeError(
+            f"{label}: so {int(valido.sum())} celulas de terra apos mascarar o mar. "
+            f"Recorte pequeno demais para derivar drenagem com limiar de "
+            f"{AREA_CANAL_KM2} km2 (exige {AREA_CANAL_KM2/((RESOLUCAO_M**2)/1e6):.0f} celulas).")
 
     destino.parent.mkdir(parents=True, exist_ok=True)
     with rasterio.open(destino, "w", driver="GTiff", height=h, width=w, count=1,
@@ -303,6 +327,21 @@ def derivar(dem: Path, outdir: Path, label: str, meta_dem: dict) -> dict:
     with rasterio.open(p["twi_dinf"], "w", **perfil) as d:
         d.write(twi.astype("float32"), 1)
 
+    # Diagnostico de rede de drenagem. Uma AOI pequena ou muito plana pode
+    # produzir pouquissimas celulas de canal -- a EMSR734_AOI03, ilha de 2 km,
+    # gera 12. Nesse caso o HAND fica definido em pouca area e os pontos que
+    # cairem fora viram nodata (e sao descartados pelo ter02, corretamente).
+    # Nao e erro, mas nao pode ficar invisivel.
+    with rasterio.open(p["streams_dinf"]) as s:
+        st = s.read(1).astype("float64")
+        nd_st = s.nodata
+    if nd_st is not None:
+        st[np.isclose(st, nd_st)] = np.nan
+    n_canal = int(np.nansum(st > 0))
+    if n_canal < 50:
+        print(f"    [{label}] REDE DEGENERADA: {n_canal} celulas de canal. "
+              f"HAND definido em pouca area; pontos fora viram nodata.")
+
     # verificacao antes de declarar sucesso: camada vazia e erro, nao aviso
     vazias = []
     for k in ("hand_dinf", "twi_dinf", "slope_deg_wbt"):
@@ -319,6 +358,7 @@ def derivar(dem: Path, outdir: Path, label: str, meta_dem: dict) -> dict:
         "stream_area_km2": AREA_CANAL_KM2,
         "stream_threshold_cells": limiar,
         "stream_percentile_equivalente": round(percentil_equiv, 3),
+        "n_celulas_canal": n_canal,
         "piso_slope_graus": PISO_SLOPE_GRAUS,
         "twi_formula": "ln(SCA / tan(slope))",
         "resampling_dem": "bilinear",
@@ -457,6 +497,56 @@ def main() -> int:
 
     print(f"===TER01=== alvos={len(alvos)} resolucao={RESOLUCAO_M}m "
           f"area_canal={AREA_CANAL_KM2}km2")
+
+    # LOTE ISOLADO POR SUBPROCESSO -- adotado em 12/08/2026.
+    # Duas AOIs travaram o lote inteiro: uma ilha caribenha com 98% de mar
+    # (corrigido pela mascara) e outra que ainda nao foi diagnosticada. Uma AOI
+    # patologica nao pode custar o lote. Cada uma roda em processo proprio com
+    # teto de tempo; quem estourar fica registrado e o lote segue.
+    # `--aoi` sozinho continua rodando no processo atual, para depurar.
+    if "--lote" in args:
+        import subprocess
+
+        # Teto por AOI. 120 s e o suficiente para a grande maioria (a mediana
+        # fica em 2 a 30 s), mas AOIs grandes como as de Honduras e do Caribe
+        # precisam de mais. Ajustavel: --teto 600.
+        teto_s = int(args[args.index("--teto") + 1]) if "--teto" in args else 120
+        ok, estourou, falhou = 0, [], []
+        for i, (nome, _bb) in enumerate(alvos, 1):
+            if (OUT / nome / "run_manifest.json").exists():
+                ok += 1
+                continue
+            try:
+                r = subprocess.run(
+                    [sys.executable, "-u", str(Path(__file__).resolve()),
+                     "--aoi", nome],
+                    capture_output=True, text=True, timeout=teto_s)
+                saida = (r.stdout or "").strip().splitlines()
+                for ln in saida:
+                    if "OK shape" in ln or "REDE DEGENERADA" in ln or "mascarado" in ln:
+                        print(f"  {ln.strip()}", flush=True)
+                if (OUT / nome / "run_manifest.json").exists():
+                    ok += 1
+                else:
+                    falhou.append(nome)
+                    print(f"  [{nome}] FALHOU: "
+                          f"{(saida[-1] if saida else (r.stderr or '')[:120])}", flush=True)
+            except subprocess.TimeoutExpired:
+                estourou.append(nome)
+                print(f"  [{nome}] ESTOUROU {teto_s}s -- pulado", flush=True)
+            if i % 20 == 0:
+                print(f"  ... {i}/{len(alvos)} (ok={ok} estourou={len(estourou)} "
+                      f"falhou={len(falhou)})", flush=True)
+
+        print(f"\nDERIVADOS={ok}/{len(alvos)}  ->  {OUT}")
+        if estourou:
+            print(f"ESTOURARAM_O_TETO ({len(estourou)}): {estourou}")
+            print("  Rode com --aoi <nome> para diagnosticar sem teto.")
+        if falhou:
+            print(f"FALHARAM ({len(falhou)}): {falhou}")
+        print("===END===")
+        return 0 if ok == len(alvos) else 1
+
     ok = sum(1 for nome, bb in alvos if rodar_um(nome, bb))
     print(f"\nDERIVADOS={ok}/{len(alvos)}  ->  {OUT}")
     print("===END===")
