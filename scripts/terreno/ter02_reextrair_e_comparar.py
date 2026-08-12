@@ -65,6 +65,18 @@ MAPA = {"hand_m": "hand_dinf", "twi_dinf": "twi_dinf",
 
 
 def amostrar(raster: Path, lons, lats):
+    """Amostra respeitando o nodata DECLARADO, com rede de seguranca.
+
+    Bug corrigido em 12/08/2026: a primeira versao so filtrava valores nao
+    finitos. O WhiteboxTools grava nodata como -32768 e a cadeia antiga usa
+    -9999 -- ambos sao numeros finitos e passariam direto para a coluna de
+    feature. Um ponto que caisse fora do dominio viraria um HAND de -32768,
+    que nao e detectavel por inspecao de media e destruiria o ajuste.
+
+    No dataset atual a contaminacao foi ZERO (todos os pontos caem dentro da
+    AOI, e o ter01 usa margem de 0,02 grau). A correcao e para que continue
+    zero quando a AOI mudar.
+    """
     import rasterio
     from rasterio.warp import transform as wtr
 
@@ -72,7 +84,11 @@ def amostrar(raster: Path, lons, lats):
     with rasterio.open(raster) as r:
         xs, ys = wtr("EPSG:4326", r.crs, list(lons), list(lats))
         v = np.array([x[0] for x in r.sample(zip(xs, ys))], dtype="float64")
+        nd = r.nodata
+    if nd is not None:
+        v[np.isclose(v, nd)] = np.nan
     v[~np.isfinite(v)] = np.nan
+    v[v < -1000] = np.nan      # rede de seguranca: nodata nao declarado
     return v
 
 
