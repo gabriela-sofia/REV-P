@@ -38,8 +38,29 @@ propria esta correta e pode agora ser aplicada onde o produto global nao serve
 NAO faz: nao treina, nao altera o dataset original, nao escolhe qual cadeia e
 "melhor" por AUC -- a escolha e por comparabilidade com Petropolis.
 
+POR QUE EXISTE `--todas`, adotado em 13/08/2026:
+
+ate aqui este script so olhava as 22 AOIs INGREMES, porque a pergunta era a
+analogia com Petropolis. A consequencia passou despercebida: as 97 AOIs de
+planicie ficavam derivadas pelo ter01 e invisiveis aqui, entao o modelo
+fluvial multirregiao rodou com 5.834 pontos -- CEMS ingreme mais Curitiba -- e
+o resto do CEMS continuou em cadeia global, isto e, FORA do pool.
+
+Isso importa para uma pergunta que esta em aberto: o leave-one-source-out
+mostrou que o modelo treinado so nas 21 AOIs tropicais aplicado a Curitiba fica
+em 0,4880, nivel de acaso. Nao da para decidir entre amostra pequena e
+incompatibilidade real enquanto o lado planicie do conjunto nao estiver na
+mesma cadeia. Harmonizar as 97 e o que separa as duas hipoteses.
+
+O comportamento padrao NAO muda: sem `--todas`, este script produz exatamente
+os mesmos tres arquivos de antes, com os mesmos numeros. `--todas` escreve num
+conjunto proprio de arquivos, com sufixo `_todas`, e acrescenta a coluna
+`classe_relevo` para que serra e planicie continuem distinguiveis depois de
+juntas.
+
 Uso:
     python scripts/terreno/ter02_reextrair_e_comparar.py
+    python scripts/terreno/ter02_reextrair_e_comparar.py --todas
 """
 
 from __future__ import annotations
@@ -93,8 +114,10 @@ def amostrar(raster: Path, lons, lats):
 
 
 def main() -> int:
+    todas = "--todas" in sys.argv[1:]
+    sufixo = "_todas" if todas else ""
     OUT.mkdir(parents=True, exist_ok=True)
-    print("===TER02_REEXTRAIR===")
+    print(f"===TER02_REEXTRAIR=== escopo={'TODAS_AS_AOIS' if todas else 'INGREMES'}")
 
     for p in (DATASET, RELEVO, DERIV):
         if not p.exists():
@@ -104,17 +127,18 @@ def main() -> int:
     df = pd.read_csv(DATASET, low_memory=False)
     rel = pd.read_csv(RELEVO)
     ingremes = set(rel.loc[rel.analogo_de_petropolis, "aoi"].astype(str))
+    relevo_de = dict(zip(rel["aoi"].astype(str), rel["classe_relevo"].astype(str)))
+    alvo = set(relevo_de) if todas else ingremes
 
     derivadas = {d.name for d in DERIV.iterdir()
                  if d.is_dir() and (d / "run_manifest.json").exists()}
-    usaveis = sorted(ingremes & derivadas)
-    faltando = sorted(ingremes - derivadas)
-    print(f"AOIS_INGREMES={len(ingremes)} DERIVADAS={len(usaveis)} "
-          f"FALTANDO={len(faltando)}")
+    usaveis = sorted(alvo & derivadas)
+    faltando = sorted(alvo - derivadas)
+    print(f"AOIS_ALVO={len(alvo)} DERIVADAS={len(usaveis)} FALTANDO={len(faltando)}")
     for f in faltando:
         print(f"   SEM_DERIVACAO {f}")
     if not usaveis:
-        print("ABORTADO: nenhuma AOI ingreme com derivacao. Rode ter01 --lote ingremes.")
+        print("ABORTADO: nenhuma AOI alvo com derivacao. Rode o ter01 antes.")
         return 1
 
     base = df[df.grupo_cv.isin(usaveis) & df.classe.isin([0, 1])].copy()
@@ -155,7 +179,9 @@ def main() -> int:
             })
 
     cmp = pd.DataFrame(linhas_cmp)
-    cmp.to_csv(OUT / "comparacao_por_aoi.csv", index=False)
+    if not cmp.empty:
+        cmp["classe_relevo"] = cmp["aoi"].map(relevo_de).fillna("NAO_CLASSIFICADO")
+    cmp.to_csv(OUT / f"comparacao_por_aoi{sufixo}.csv", index=False)
 
     print("\n--- AGREGADO POR FEATURE (mediana das AOIs) ---")
     print(f"{'feature':12s} {'pearson':>8s} {'med_global':>11s} {'med_wbt':>9s} "
@@ -180,17 +206,27 @@ def main() -> int:
     harm = base.copy()
     for col in MAPA:
         harm[col] = harm[f"{col}_wbt"]
+    harm["classe_relevo"] = harm.grupo_cv.map(relevo_de).fillna("NAO_CLASSIFICADO")
     antes = len(harm)
     harm = harm.dropna(subset=list(MAPA))
     print(f"\nDATASET_HARMONIZADO n={len(harm):,} "
           f"(descartados {antes-len(harm):,} sem valor WBT) "
           f"grupos={harm.grupo_cv.nunique()}")
-    harm.to_csv(OUT / "dataset_serra_harmonizado.csv", index=False)
+    if todas:
+        print("  por classe de relevo: "
+              f"{harm.classe_relevo.value_counts().to_dict()}")
+    nome = ("dataset_harmonizado_todas.csv" if todas
+            else "dataset_serra_harmonizado.csv")
+    harm.to_csv(OUT / nome, index=False)
 
-    (OUT / "resumo.json").write_text(json.dumps({
-        "aois_ingremes": len(ingremes), "aois_derivadas": len(usaveis),
+    (OUT / f"resumo{sufixo}.json").write_text(json.dumps({
+        "escopo": "todas_as_aois" if todas else "somente_ingremes",
+        "aois_alvo": len(alvo), "aois_ingremes": len(ingremes),
+        "aois_derivadas": len(usaveis),
         "aois_sem_derivacao": faltando, "pontos": int(len(harm)),
         "grupos": int(harm.grupo_cv.nunique()),
+        "pontos_por_classe_relevo": {k: int(v) for k, v in
+                                     harm.classe_relevo.value_counts().items()},
         "por_feature": resumo,
         "nota": ("comparacao no NIVEL DO PONTO amostrado, nao do raster inteiro: "
                  "o modelo so ve os pontos"),
