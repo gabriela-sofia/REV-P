@@ -1,5 +1,5 @@
 step_order,step_name,status,output,output_hash,notes
-1,discover_internal_sentinel_lineage_sources,OK,datasets/protocolo_c/v2bf_internal_sentinel_lineage_sources.csv,f710bdb7a22420b8,Internal lineage recovery completed without truth promotion.
+1,discover_internal_sentinel_lineage_sources,OK,datasets/protocolo_c/v2bf_internal_sentinel_lineage_sources.csv,f69f10b07cee5cd6,Internal lineage recovery completed without truth promotion.
 2,recover_asset_dates,OK,datasets/protocolo_c/v2bf_asset_date_recovery.csv,16a8aaff2aa4b3a0,Internal lineage recovery completed without truth promotion.
 3,recover_asset_patch_links,OK,datasets/protocolo_c/v2bf_asset_patch_link_recovery.csv,f461f6116d31387b,Internal lineage recovery completed without truth promotion.
 4,resolve_asset_file_references,OK,datasets/protocolo_c/v2bf_asset_file_reference_resolution.csv,33e65e2a33b6b5e2,Internal lineage recovery completed without truth promotion.
