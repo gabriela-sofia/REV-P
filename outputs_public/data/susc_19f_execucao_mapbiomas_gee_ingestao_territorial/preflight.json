@@ -1,8 +1,8 @@
 {
   "branch": "marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial",
-  "head": "a06b3aa",
+  "head": "72dec09",
   "staged_count": 0,
-  "status_short_count": 175,
+  "status_short_count": 201,
   "entradas_lidas": {
     "outputs_public/data/susc_19b_auditoria_lacunas_territoriais/pacote_gee/gee_export_manifest_19b.csv": true,
     "outputs_public/data/susc_19a_matriz_multimodal_escalavel_por_patch/matriz_multimodal_escalavel_por_patch.csv": true,

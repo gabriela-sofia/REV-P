@@ -3,7 +3,7 @@
 ## Estado herdado do 17G
 
 - Branch: `marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial`
-- HEAD: `9753258`
+- HEAD: `72dec09`
 - Status final 17G herdado: 17G_CALIBRACAO_FORTE_REVIEW_ONLY_POSSIVEL
 - Canarios com calibracao forte review-only possivel: 5
 - `score_v6` alterado: False

@@ -1,8 +1,8 @@
 {
   "marco": "SUSC-GT07",
   "titulo_publico": "Protocolo de QA Humano para Canários Observacionais",
-  "branch": "marco/avaliacao-observacional-review-only-matriz-multimodal",
-  "head": "d94dbbc",
+  "branch": "marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial",
+  "head": "72dec09",
   "gt06_source_commit": "d94dbbc",
   "canarios_na_fila": 5,
   "distribuicao_qa_prep": {

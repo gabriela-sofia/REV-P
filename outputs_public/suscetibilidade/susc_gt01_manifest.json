@@ -1,8 +1,8 @@
 {
   "marco": "SUSC-GT01",
   "titulo_publico": "Ground Reference Policy & Evidence State Taxonomy",
-  "branch": "marco/avaliacao-observacional-review-only-matriz-multimodal",
-  "head": "2fbf261",
+  "branch": "marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial",
+  "head": "72dec09",
   "states": [
     "positive_strong",
     "positive_provisional",

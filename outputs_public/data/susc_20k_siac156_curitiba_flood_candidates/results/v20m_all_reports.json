@@ -52,7 +52,7 @@
       "skf_auc_max": 0.6193
     }
   },
-  "sensibilidade_s1_6_features_abaixo_do_piso_epv": {
+  "sensibilidade_s1_6_features": {
     "features": [
       "elevation_m",
       "slope_deg",

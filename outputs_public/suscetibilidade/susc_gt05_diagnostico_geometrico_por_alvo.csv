@@ -1,14 +1,14 @@
 geometry_diagnostic_id,geometry_target_id,target_id,has_geometry_id,has_footprint_id,has_patch_id,has_geometry_type,has_strong_geometry_type,has_patch_link_quality,has_uncertainty_m,has_qa_status,geometry_is_contextual_only,geometry_is_official_candidate,geometry_is_technical_candidate,geometry_rejection_reason,next_required_geometry_action_pt,prevents_positive_strong,prevents_evaluation,prevents_calibration,prevents_benchmark
-GDG_0001,GEO_0001,TGT_0001,true,true,false,true,false,false,false,false,false,true,false,none,buscar confirmacao de geometria oficial e estimar incerteza,true,true,true,true
-GDG_0002,GEO_0002,TGT_0002,true,true,false,true,false,false,false,false,false,true,false,none,buscar confirmacao de geometria oficial e estimar incerteza,true,true,true,true
-GDG_0003,GEO_0003,TGT_0003,true,true,false,true,false,false,false,false,false,true,false,none,buscar confirmacao de geometria oficial e estimar incerteza,true,true,true,true
-GDG_0004,GEO_0004,TGT_0004,true,true,false,true,false,false,false,false,false,true,false,none,buscar confirmacao de geometria oficial e estimar incerteza,true,true,true,true
+GDG_0001,GEO_0001,TGT_0001,true,true,false,false,false,false,false,false,false,false,false,none,buscar confirmacao de geometria oficial e estimar incerteza,true,true,true,true
+GDG_0002,GEO_0002,TGT_0002,true,true,false,false,false,false,false,false,false,false,false,none,buscar confirmacao de geometria oficial e estimar incerteza,true,true,true,true
+GDG_0003,GEO_0003,TGT_0003,true,true,false,false,false,false,false,false,false,false,false,none,buscar confirmacao de geometria oficial e estimar incerteza,true,true,true,true
+GDG_0004,GEO_0004,TGT_0004,true,true,false,false,false,false,false,false,false,false,false,none,buscar confirmacao de geometria oficial e estimar incerteza,true,true,true,true
 GDG_0005,GEO_0005,TGT_0005,true,true,false,false,false,false,false,false,false,false,false,none,buscar confirmacao de geometria oficial e estimar incerteza,true,true,true,true
 GDG_0006,GEO_0006,TGT_0006,true,true,false,false,false,false,false,false,false,false,false,none,buscar confirmacao de geometria oficial e estimar incerteza,true,true,true,true
-GDG_0007,GEO_0007,TGT_0007,true,true,false,false,false,false,false,false,false,false,false,none,buscar confirmacao de geometria oficial e estimar incerteza,true,true,true,true
-GDG_0008,GEO_0008,TGT_0008,true,true,false,false,false,false,false,false,false,false,false,none,buscar confirmacao de geometria oficial e estimar incerteza,true,true,true,true
-GDG_0009,GEO_0009,TGT_0009,true,true,false,false,false,false,false,false,false,false,false,none,buscar confirmacao de geometria oficial e estimar incerteza,true,true,true,true
-GDG_0010,GEO_0010,TGT_0010,true,true,false,false,false,false,false,false,false,false,false,none,buscar confirmacao de geometria oficial e estimar incerteza,true,true,true,true
+GDG_0007,GEO_0007,TGT_0007,true,true,false,true,false,false,false,false,false,true,false,none,buscar confirmacao de geometria oficial e estimar incerteza,true,true,true,true
+GDG_0008,GEO_0008,TGT_0008,true,true,false,true,false,false,false,false,false,true,false,none,buscar confirmacao de geometria oficial e estimar incerteza,true,true,true,true
+GDG_0009,GEO_0009,TGT_0009,true,true,false,true,false,false,false,false,false,true,false,none,buscar confirmacao de geometria oficial e estimar incerteza,true,true,true,true
+GDG_0010,GEO_0010,TGT_0010,true,true,false,true,false,false,false,false,false,true,false,none,buscar confirmacao de geometria oficial e estimar incerteza,true,true,true,true
 GDG_0011,GEO_0011,TGT_0011,true,true,true,true,false,true,false,false,false,true,false,none,buscar confirmacao de geometria oficial e estimar incerteza,true,true,true,true
 GDG_0012,GEO_0012,TGT_0012,true,true,true,true,false,true,false,false,false,true,false,none,buscar confirmacao de geometria oficial e estimar incerteza,true,true,true,true
 GDG_0013,GEO_0013,TGT_0013,true,true,true,true,false,true,false,false,false,true,false,none,buscar confirmacao de geometria oficial e estimar incerteza,true,true,true,true

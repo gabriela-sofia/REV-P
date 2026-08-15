@@ -1,8 +1,8 @@
 {
   "marco": "SUSC-GT02",
   "titulo_publico": "Motor de Decisão de Referência Observacional e Replay de Evidências",
-  "branch": "marco/avaliacao-observacional-review-only-matriz-multimodal",
-  "head": "4384904",
+  "branch": "marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial",
+  "head": "72dec09",
   "gt01_head_commit": "4384904",
   "inputs_descobertos": 29,
   "inputs_usaveis": 23,
@@ -32,8 +32,8 @@
   "artifacts": [
     {
       "path": "outputs_public/suscetibilidade/SUSC_GT02_MOTOR_DECISAO_REFERENCIA_OBSERVACIONAL_REPLAY.md",
-      "sha256": "9e70859d00971f19b18c9efeaeea28b6fd02423df5f1126b7b6e4ce024d1078d",
-      "bytes": 8320
+      "sha256": "c2de964157d15dfa79763a3182f88cb230d4d010120de11cfdf3d850b3f1283f",
+      "bytes": 8334
     },
     {
       "path": "outputs_public/suscetibilidade/susc_gt02_inventario_entradas.csv",
@@ -47,17 +47,17 @@
     },
     {
       "path": "outputs_public/suscetibilidade/susc_gt02_registro_replay_evidencias.csv",
-      "sha256": "f72211bed055ba0fc2ae7b9e63f70014d1f4f0a7c3bca5d09af75484f5511aae",
+      "sha256": "48c64dba6390f4753fd3cf64902a9021b8ea5f9fc5c5849818415b8775f0361d",
       "bytes": 172705
     },
     {
       "path": "outputs_public/suscetibilidade/susc_gt02_decisoes_referencia_por_patch.csv",
-      "sha256": "88c7233bb636a630f8b99a4a99fc09a61c5747b009787ebd706bbbb2c6a83255",
+      "sha256": "8130b762e4e45868b1eb2321693a587525102ca73f86b1b4a194ed62d03b2acf",
       "bytes": 230423
     },
     {
       "path": "outputs_public/suscetibilidade/susc_gt02_bloqueios.csv",
-      "sha256": "e06a3be5d37ccd6d33b1ca51ba874a404c7f0c3a72ebe2870009024d1eb9fbca",
+      "sha256": "087f41c67ec7f12a5f5f8171233430bf90efc74eae24b08640c1d97187e717fd",
       "bytes": 703722
     },
     {

@@ -3,7 +3,7 @@
 ## Estado herdado do 17C5
 
 - Branch: `marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial`
-- HEAD: `ad95ce6`
+- HEAD: `72dec09`
 - Area staged: 0 arquivo(s)
 - Geometrias resolvidas no 17C5: 1
 - Geometrias nao resolvidas no 17C5: 62

@@ -110,7 +110,7 @@
       "exists": "true",
       "row_count": "not_applicable",
       "columns_found": "branch;head;staged_count;dirty_status_lines",
-      "notes": "branch=marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial; head=f9000b9; staged=0; dirty=301"
+      "notes": "branch=marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial; head=72dec09; staged=0; dirty=158"
     }
   ]
 }

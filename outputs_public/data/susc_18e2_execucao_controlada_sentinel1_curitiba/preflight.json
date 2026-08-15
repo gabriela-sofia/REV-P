@@ -1,8 +1,8 @@
 {
   "branch": "marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial",
-  "head": "c116579",
+  "head": "72dec09",
   "staged_count": 0,
-  "git_status_short_count": 239,
+  "git_status_short_count": 179,
   "required_inputs": [
     {
       "path": "outputs_public/data/susc_18e_footprint_tecnico_sar_curitiba/summary.json",

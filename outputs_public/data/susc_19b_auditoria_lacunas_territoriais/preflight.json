@@ -1,8 +1,8 @@
 {
   "branch": "marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial",
-  "head": "f3a470f",
+  "head": "72dec09",
   "staged_count": 0,
-  "status_short_count": 203,
+  "status_short_count": 195,
   "entradas_lidas": {
     "outputs_public/data/susc_19a_matriz_multimodal_escalavel_por_patch/matriz_multimodal_escalavel_por_patch.csv": true,
     "outputs_public/data/susc_19a_matriz_multimodal_escalavel_por_patch/indice_cobertura_multimodal_review_only.csv": true,

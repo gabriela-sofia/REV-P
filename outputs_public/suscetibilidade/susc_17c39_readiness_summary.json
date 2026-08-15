@@ -1,7 +1,7 @@
 {
   "minimum_success_achieved": true,
   "official_patch_population_rows_count": 100,
-  "method_trace_rows_count": 155,
+  "method_trace_rows_count": 192,
   "flow_acc_variant_count": 14,
   "official_patch_variant_recomputed_rows_count": 1398,
   "flow_acc_variant_metric_rows_count": 14,

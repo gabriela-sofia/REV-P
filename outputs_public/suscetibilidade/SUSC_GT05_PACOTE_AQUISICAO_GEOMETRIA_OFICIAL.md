@@ -92,7 +92,7 @@ recebem prioridade geométrica alta sem essa separação.
 ## 16. Exemplos de alvos
 
 - **Geometria forte existente** (`geometria_forte_existente`): nenhum alvo neste estado.
-- **Geometria parcial resolvível** (`geometria_parcial_resolvivel`): alvo `GEO_0001`, event_id `S16ALOCG_00054`, geometry_type `Polygon`, classe `prioridade_geometrica_baixa`, trilhas `buscar_poligono_oficial;consultar_base_setorial_oficial_futura;estimar_incerteza_geometrica`.
+- **Geometria parcial resolvível** (`geometria_parcial_resolvivel`): alvo `GEO_0001`, event_id `S16ALOCG_00070`, geometry_type `not_available`, classe `bloqueado_por_geometria_insuficiente`, trilhas `resolver_endereco_oficial;consultar_base_setorial_oficial_futura;estimar_incerteza_geometrica`.
 - **Geometria contextual insuficiente** (`geometria_contextual_insuficiente`): nenhum alvo neste estado.
 - **Geometria ausente** (`geometria_ausente`): alvo `GEO_0174`, event_id `CUR_HISTORICAL`, geometry_type `not_available`, classe `bloqueado_por_geometria_insuficiente`, trilhas `buscar_ponto_oficial;resolver_endereco_oficial;consultar_base_setorial_oficial_futura`.
 - **Requer footprint técnico futuro** (`requer_footprint_tecnico_futuro`): alvo `GEO_0076`, event_id `REC_2022_05_24_30`, geometry_type `not_available`, classe `bloqueado_por_geometria_insuficiente`, trilhas `preparar_footprint_sar_futuro`.

@@ -1,10 +1,10 @@
 target_id,blocker_type,severity,reason_pt,prevents_priority_high,prevents_positive_strong,prevents_evaluation,prevents_calibration,blocker_id
-TGT_0005,campos_criticos_ausentes,alta,faltam campos criticos demais (evento/data/geometria/patch) para acao imediata,true,true,true,true,BLK_00001
-TGT_0006,campos_criticos_ausentes,alta,faltam campos criticos demais (evento/data/geometria/patch) para acao imediata,true,true,true,true,BLK_00002
-TGT_0007,campos_criticos_ausentes,alta,faltam campos criticos demais (evento/data/geometria/patch) para acao imediata,true,true,true,true,BLK_00003
-TGT_0008,campos_criticos_ausentes,alta,faltam campos criticos demais (evento/data/geometria/patch) para acao imediata,true,true,true,true,BLK_00004
-TGT_0009,campos_criticos_ausentes,alta,faltam campos criticos demais (evento/data/geometria/patch) para acao imediata,true,true,true,true,BLK_00005
-TGT_0010,campos_criticos_ausentes,alta,faltam campos criticos demais (evento/data/geometria/patch) para acao imediata,true,true,true,true,BLK_00006
+TGT_0001,campos_criticos_ausentes,alta,faltam campos criticos demais (evento/data/geometria/patch) para acao imediata,true,true,true,true,BLK_00001
+TGT_0002,campos_criticos_ausentes,alta,faltam campos criticos demais (evento/data/geometria/patch) para acao imediata,true,true,true,true,BLK_00002
+TGT_0003,campos_criticos_ausentes,alta,faltam campos criticos demais (evento/data/geometria/patch) para acao imediata,true,true,true,true,BLK_00003
+TGT_0004,campos_criticos_ausentes,alta,faltam campos criticos demais (evento/data/geometria/patch) para acao imediata,true,true,true,true,BLK_00004
+TGT_0005,campos_criticos_ausentes,alta,faltam campos criticos demais (evento/data/geometria/patch) para acao imediata,true,true,true,true,BLK_00005
+TGT_0006,campos_criticos_ausentes,alta,faltam campos criticos demais (evento/data/geometria/patch) para acao imediata,true,true,true,true,BLK_00006
 TGT_0076,campos_criticos_ausentes,alta,faltam campos criticos demais (evento/data/geometria/patch) para acao imediata,true,true,true,true,BLK_00007
 TGT_0077,campos_criticos_ausentes,alta,faltam campos criticos demais (evento/data/geometria/patch) para acao imediata,true,true,true,true,BLK_00008
 TGT_0078,campos_criticos_ausentes,alta,faltam campos criticos demais (evento/data/geometria/patch) para acao imediata,true,true,true,true,BLK_00009

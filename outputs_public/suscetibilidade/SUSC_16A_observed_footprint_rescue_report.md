@@ -11,7 +11,7 @@ SUSC-15A/15B mantiveram 4412 ocorrencias oficiais reais, mas nao encontraram lat
 A geocodificacao textual chegou ao limite. O SUSC-16A troca a busca por coordenada textual por footprints observacionais: geometrias locais, fontes oficiais/tecnicas e planejamento Sentinel/SAR.
 
 ## 3. Dados locais do PROJETO minerados
-Fontes locais registradas: 2301. Caminhos publicos foram sanitizados e nenhum bruto pesado foi copiado.
+Fontes locais registradas: 3977. Caminhos publicos foram sanitizados e nenhum bruto pesado foi copiado.
 
 ## 4. Geometrias locais encontradas
 Candidatos parseados: 403. Candidatos elegiveis permanecem review-only e dependem de geometria direta e data/metodo documentados.

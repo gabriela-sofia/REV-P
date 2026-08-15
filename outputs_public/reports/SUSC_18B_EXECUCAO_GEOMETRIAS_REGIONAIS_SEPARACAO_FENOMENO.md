@@ -3,7 +3,7 @@
 ## Estado herdado do 18A
 
 - Branch: `marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial`
-- HEAD: `642eae9`
+- HEAD: `72dec09`
 - Status final 18A herdado: 18A_REFERENCIA_REGIONAL_FORTE_MAIS_FILAS_EXECUTAVEIS
 - Status 17B herdado: 17B_APROXIMACAO_REGIONAL_COM_REFERENCIAS_PARCIAS
 - `score_v6` alterado: False

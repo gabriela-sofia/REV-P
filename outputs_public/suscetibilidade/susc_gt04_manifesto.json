@@ -1,8 +1,8 @@
 {
   "marco": "SUSC-GT04",
   "titulo_publico": "Resolvedor de Datas e Janelas Pré/Pós-Evento",
-  "branch": "marco/avaliacao-observacional-review-only-matriz-multimodal",
-  "head": "b608b55",
+  "branch": "marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial",
+  "head": "72dec09",
   "gt03_source_commit": "b608b55",
   "alvos_total": 557,
   "distribuicao_precisao": {
@@ -36,12 +36,12 @@
   "artifacts": [
     {
       "path": "outputs_public/suscetibilidade/SUSC_GT04_RESOLVEDOR_DATAS_JANELAS_PRE_POS_EVENTO.md",
-      "sha256": "c077f3c8059a9848d80e9c03f2ccb1e8115d5d7e2f8bb5859a570f48d84802a1",
+      "sha256": "350a2dbdee2d626e74be5cd0da3012b9124712997cdfac3bb2b7f645978aa569",
       "bytes": 5183
     },
     {
       "path": "outputs_public/suscetibilidade/susc_gt04_datas_resolvidas_por_alvo.csv",
-      "sha256": "7c8899254ee9c50c1caf4194b9bd17bd73354be2830d33306351bfae86cedcf9",
+      "sha256": "cbdc2afc1783511a8173d86cf412e4961fa2dd41eadbf6d46b55df1297968237",
       "bytes": 214706
     },
     {

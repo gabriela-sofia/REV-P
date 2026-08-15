@@ -3,7 +3,7 @@
   "branch_executada": "marco/validacao-label-free-evidencia-estrutural-mv1",
   "branch_esperada": "marco/mv2-12-reconstrucao-espectral-sentinel-baseline",
   "total_medium_bindings_input": 128,
-  "total_gee_sources_discovered": 898,
+  "total_gee_sources_discovered": 901,
   "total_lineage_candidates": 111,
   "lineage_recovered_strong": 0,
   "lineage_recovered_partial": 0,

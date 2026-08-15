@@ -1,8 +1,8 @@
 {
   "marco": "SUSC-GT09",
   "titulo_publico": "Esteira Canária de Revisão Visual, Pareamento Pré/Pós e Pré-Execução SAR",
-  "branch": "marco/avaliacao-observacional-review-only-matriz-multimodal",
-  "head": "963f0b0",
+  "branch": "marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial",
+  "head": "72dec09",
   "gt08_source_commit": "963f0b0",
   "canarios": 5,
   "distribuicao_gate": {
@@ -11,9 +11,9 @@
   "pares_selecionados": 5,
   "pares_mesma_orbita": 5,
   "pares_alternativos": 5,
-  "ativos_locais_total": 42,
+  "ativos_locais_total": 44,
   "ativos_visuais": 30,
-  "ativos_geometricos": 12,
+  "ativos_geometricos": 14,
   "render_executada": 0,
   "raster_baixado": 0,
   "footprint_criado": 0,
@@ -43,7 +43,7 @@
   "artifacts": [
     {
       "path": "outputs_public/suscetibilidade/SUSC_GT09_ESTEIRA_CANARIA_REVISAO_VISUAL_PRE_EXECUCAO_SAR.md",
-      "sha256": "b2eab134c57565d79481798fccd8d0e57ce3d96f5b9399f862401a08fcbb0619",
+      "sha256": "737351e6546886842987c7d60dd77570aff178654d2f1d6a4b695ed6d67a7c3d",
       "bytes": 5946
     },
     {
@@ -63,8 +63,8 @@
     },
     {
       "path": "outputs_public/suscetibilidade/susc_gt09_inventario_ativos_locais.csv",
-      "sha256": "779329d669fb4ba67c641364caf8c6c666afb6d56ffe102276bfb07e99c1d337",
-      "bytes": 8238
+      "sha256": "06b56f3abd796a48b7b6e504153ad1a93408876dbb105a40c869c7cb44f92a0f",
+      "bytes": 8619
     },
     {
       "path": "outputs_public/suscetibilidade/susc_gt09_contrato_renderizacao_futura.csv",

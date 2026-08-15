@@ -3,7 +3,7 @@
 ## Estado herdado do 17F
 
 - Branch: `marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial`
-- HEAD: `b408e6c`
+- HEAD: `72dec09`
 - Status final 17F herdado: 17F_EXPLORATORIA_APRIMORADA_COM_COMPONENTE_FISICO
 - Referencias comparativas no 17F: 5
 - Status 17B herdado: 17B_PARCIAL_COM_CALIBRACAO_EXPLORATORIA_SEM_PRONTIDAO_BENCHMARK

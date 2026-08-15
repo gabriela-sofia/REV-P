@@ -10,8 +10,8 @@ executa lote adicional de aquisicao oficial e recompila a uniao de referencias
 espaciais rastreaveis.
 
 ## 2. Referencias oficiais
-Referencias herdadas do registro 14B: **571**. Manifesto adicional
-14C: **390** linhas. Status de aquisicao: **{'reused_cached_download': 80, 'not_attempted_batch_cap': 310}**.
+Referencias herdadas do registro 14B: **575**. Manifesto adicional
+14C: **392** linhas. Status de aquisicao: **{'reused_cached_download': 52, 'downloaded': 28, 'not_attempted_batch_cap': 312}**.
 
 ## 3. Features parseadas
 Novas features 14C parseadas: **50000**. Features totais na

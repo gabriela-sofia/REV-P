@@ -3,7 +3,7 @@
 ## Estado herdado do 17H
 
 - Branch: `marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial`
-- HEAD: `4bd01ae`
+- HEAD: `72dec09`
 - Status final 17H herdado: 17H_CALIBRACAO_FORTE_COM_DIVERGENCIA_FISICA
 - Status 17B herdado: 17B_AINDA_SEM_PRONTIDAO_BENCHMARK_AMOSTRA_LOCAL
 - `score_v6` alterado: False

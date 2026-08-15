@@ -3,7 +3,7 @@
 ## Estado herdado do 17D
 
 - Branch: `marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial`
-- HEAD: `968781a`
+- HEAD: `72dec09`
 - Itens aceitos para avaliacao no 17D: 5
 - Candidatos a calibracao no 17D: 0
 - Status 17B herdado: 17B_PARCIAL_COM_VALIDACAO_TECNICA_SEM_PRONTIDAO_BENCHMARK

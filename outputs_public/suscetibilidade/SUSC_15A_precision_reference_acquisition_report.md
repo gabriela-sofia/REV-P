@@ -5,7 +5,7 @@ e sao ignorados por Git.
 
 - Linhas no manifesto: **360**
 - Tentativas de download: **60**
-- Status: **{'failed': 9, 'reused_cached_download': 47, 'downloaded': 4, 'not_attempted_batch_cap': 300}**
+- Status: **{'failed': 9, 'reused_cached_download': 51, 'not_attempted_batch_cap': 300}**
 
 Rasters pesados, executaveis, HTML sem dado direto e arquivos acima do limite
 permanecem bloqueados ou apenas manifestados.

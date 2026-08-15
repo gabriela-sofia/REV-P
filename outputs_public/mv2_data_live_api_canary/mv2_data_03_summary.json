@@ -2,7 +2,7 @@
   "stage": "mv2_data_03_live_api_canary",
   "vertente": "B_desbloqueio_cientifico_de_dados",
   "branch": "analysis/temporal-asset-readiness-mv1",
-  "top_commit": "62015f6 MV2-DATA-02: harness de API e raster com canario dry-run",
+  "top_commit": "72dec09 Atualiza HEAD auditado na nota de worktree pre-SUSC-17C8",
   "config_found": false,
   "allow_network": false,
   "allow_metadata_calls": false,

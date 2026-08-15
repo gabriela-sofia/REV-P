@@ -106,7 +106,7 @@ calibração.
 ## 8. Exemplos de decisões
 
 - **Referência forte** (`positive_strong`): nenhum registro neste estado no replay atual.
-- **Referência provisória** (`positive_provisional`): decisão `DEC_0001`, patch `not_available`, evento `S16ALOCG_00054`. Base: evento documentado e rastreavel, mas sem geometria/patch_link/QA suficientes para referencia forte. Requisitos ausentes: event_date;patch_id;patch_link_quality;uncertainty_m;qa_status.
+- **Referência provisória** (`positive_provisional`): decisão `DEC_0001`, patch `not_available`, evento `S16ALOCG_00070`. Base: evento documentado e rastreavel, mas sem geometria/patch_link/QA suficientes para referencia forte. Requisitos ausentes: event_date;geometry_type;patch_id;patch_link_quality;uncertainty_m;qa_status.
 - **Não rotulado** (`unlabeled`): nenhum registro neste estado no replay atual.
 - **Sem dados** (`no_data`): decisão `DEC_0076`, patch `not_available`, evento `REC_2022_05_24_30`. Base: metadados insuficientes para decidir (sem data/fonte/geometria suficientes). Requisitos ausentes: event_date;source_authority;geometry_type;patch_id;patch_link_quality;uncertainty_m;qa_status;phenomenon_type.
 - **Rejeitado** (`rejected`): nenhum registro neste estado no replay atual.

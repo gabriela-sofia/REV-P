@@ -11,4 +11,4 @@ band_stats_17c20,outputs_public/suscetibilidade/susc_17c20_light_artifacts,true,
 chirps_17c25,outputs_public/suscetibilidade/susc_17c25_chirps_artifacts,true,10,diretorio_de_artefatos,CHIRPS diario pre-evento
 score_v6,datasets/suscetibilidade/susc_score_v6_candidate_by_patch_v1.csv,true,300,patch_id;regiao;topography_hydrology_index;rainfall_trigger_index;urban_spectral_index;vegetation_mitigation_index;evidence_support_index;susc_score_v6_candidate;susc_class_v6_candidate;top5_feature_contributions;reason;caution_flags;can_be_used_as_ground_truth;allowed_for_training;review_only,score v6 oficial somente leitura
 score_v7_proibido,datasets/suscetibilidade/susc_score_v7_candidate_by_patch_v1.csv,false,0,,deve permanecer ausente
-estado_git,.,true,not_applicable,branch;head;staged_count;dirty_status_lines,branch=marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial; head=968781a; staged=0; dirty=309
+estado_git,.,true,not_applicable,branch;head;staged_count;dirty_status_lines,branch=marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial; head=72dec09; staged=0; dirty=154

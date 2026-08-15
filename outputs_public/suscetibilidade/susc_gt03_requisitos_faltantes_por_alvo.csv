@@ -1,24 +1,24 @@
 missing_requirement_id,target_id,requirement,required_for_positive_strong,current_value,severity,how_to_resolve_pt,prevents_positive_strong,prevents_calibration,prevents_benchmark
 MRQ_00001,TGT_0001,event_date,true,not_available,alta,resolver data do evento em registro oficial/documental (trilha resolver_data_evento),true,false,true
-MRQ_00002,TGT_0001,geometry_type,true,Polygon,alta,obter geometria oficial (ponto/poligono/bbox) do evento (trilha obter_geometria_oficial),true,true,true
+MRQ_00002,TGT_0001,geometry_type,true,not_available,alta,obter geometria oficial (ponto/poligono/bbox) do evento (trilha obter_geometria_oficial),true,true,true
 MRQ_00003,TGT_0001,patch_id,true,not_available,media,resolver o patch REV-P correspondente (trilha resolver_patch_link),true,false,true
 MRQ_00004,TGT_0001,patch_link_quality,true,not_available,alta,produzir vinculo espacial forte com o patch (trilha resolver_patch_link),true,false,true
 MRQ_00005,TGT_0001,uncertainty_m,true,not_available,media,estimar incerteza espacial em metros (trilha estimar_incerteza_espacial),true,false,true
 MRQ_00006,TGT_0001,qa_status,true,not_available,alta,executar QA humano e registrar aceite (trilha executar_qa_humano),true,true,true
 MRQ_00007,TGT_0002,event_date,true,not_available,alta,resolver data do evento em registro oficial/documental (trilha resolver_data_evento),true,false,true
-MRQ_00008,TGT_0002,geometry_type,true,point_set,alta,obter geometria oficial (ponto/poligono/bbox) do evento (trilha obter_geometria_oficial),true,true,true
+MRQ_00008,TGT_0002,geometry_type,true,not_available,alta,obter geometria oficial (ponto/poligono/bbox) do evento (trilha obter_geometria_oficial),true,true,true
 MRQ_00009,TGT_0002,patch_id,true,not_available,media,resolver o patch REV-P correspondente (trilha resolver_patch_link),true,false,true
 MRQ_00010,TGT_0002,patch_link_quality,true,not_available,alta,produzir vinculo espacial forte com o patch (trilha resolver_patch_link),true,false,true
 MRQ_00011,TGT_0002,uncertainty_m,true,not_available,media,estimar incerteza espacial em metros (trilha estimar_incerteza_espacial),true,false,true
 MRQ_00012,TGT_0002,qa_status,true,not_available,alta,executar QA humano e registrar aceite (trilha executar_qa_humano),true,true,true
 MRQ_00013,TGT_0003,event_date,true,not_available,alta,resolver data do evento em registro oficial/documental (trilha resolver_data_evento),true,false,true
-MRQ_00014,TGT_0003,geometry_type,true,point_set,alta,obter geometria oficial (ponto/poligono/bbox) do evento (trilha obter_geometria_oficial),true,true,true
+MRQ_00014,TGT_0003,geometry_type,true,not_available,alta,obter geometria oficial (ponto/poligono/bbox) do evento (trilha obter_geometria_oficial),true,true,true
 MRQ_00015,TGT_0003,patch_id,true,not_available,media,resolver o patch REV-P correspondente (trilha resolver_patch_link),true,false,true
 MRQ_00016,TGT_0003,patch_link_quality,true,not_available,alta,produzir vinculo espacial forte com o patch (trilha resolver_patch_link),true,false,true
 MRQ_00017,TGT_0003,uncertainty_m,true,not_available,media,estimar incerteza espacial em metros (trilha estimar_incerteza_espacial),true,false,true
 MRQ_00018,TGT_0003,qa_status,true,not_available,alta,executar QA humano e registrar aceite (trilha executar_qa_humano),true,true,true
 MRQ_00019,TGT_0004,event_date,true,not_available,alta,resolver data do evento em registro oficial/documental (trilha resolver_data_evento),true,false,true
-MRQ_00020,TGT_0004,geometry_type,true,point_set,alta,obter geometria oficial (ponto/poligono/bbox) do evento (trilha obter_geometria_oficial),true,true,true
+MRQ_00020,TGT_0004,geometry_type,true,not_available,alta,obter geometria oficial (ponto/poligono/bbox) do evento (trilha obter_geometria_oficial),true,true,true
 MRQ_00021,TGT_0004,patch_id,true,not_available,media,resolver o patch REV-P correspondente (trilha resolver_patch_link),true,false,true
 MRQ_00022,TGT_0004,patch_link_quality,true,not_available,alta,produzir vinculo espacial forte com o patch (trilha resolver_patch_link),true,false,true
 MRQ_00023,TGT_0004,uncertainty_m,true,not_available,media,estimar incerteza espacial em metros (trilha estimar_incerteza_espacial),true,false,true
@@ -36,25 +36,25 @@ MRQ_00034,TGT_0006,patch_link_quality,true,not_available,alta,produzir vinculo e
 MRQ_00035,TGT_0006,uncertainty_m,true,not_available,media,estimar incerteza espacial em metros (trilha estimar_incerteza_espacial),true,false,true
 MRQ_00036,TGT_0006,qa_status,true,not_available,alta,executar QA humano e registrar aceite (trilha executar_qa_humano),true,true,true
 MRQ_00037,TGT_0007,event_date,true,not_available,alta,resolver data do evento em registro oficial/documental (trilha resolver_data_evento),true,false,true
-MRQ_00038,TGT_0007,geometry_type,true,not_available,alta,obter geometria oficial (ponto/poligono/bbox) do evento (trilha obter_geometria_oficial),true,true,true
+MRQ_00038,TGT_0007,geometry_type,true,Polygon,alta,obter geometria oficial (ponto/poligono/bbox) do evento (trilha obter_geometria_oficial),true,true,true
 MRQ_00039,TGT_0007,patch_id,true,not_available,media,resolver o patch REV-P correspondente (trilha resolver_patch_link),true,false,true
 MRQ_00040,TGT_0007,patch_link_quality,true,not_available,alta,produzir vinculo espacial forte com o patch (trilha resolver_patch_link),true,false,true
 MRQ_00041,TGT_0007,uncertainty_m,true,not_available,media,estimar incerteza espacial em metros (trilha estimar_incerteza_espacial),true,false,true
 MRQ_00042,TGT_0007,qa_status,true,not_available,alta,executar QA humano e registrar aceite (trilha executar_qa_humano),true,true,true
 MRQ_00043,TGT_0008,event_date,true,not_available,alta,resolver data do evento em registro oficial/documental (trilha resolver_data_evento),true,false,true
-MRQ_00044,TGT_0008,geometry_type,true,not_available,alta,obter geometria oficial (ponto/poligono/bbox) do evento (trilha obter_geometria_oficial),true,true,true
+MRQ_00044,TGT_0008,geometry_type,true,point_set,alta,obter geometria oficial (ponto/poligono/bbox) do evento (trilha obter_geometria_oficial),true,true,true
 MRQ_00045,TGT_0008,patch_id,true,not_available,media,resolver o patch REV-P correspondente (trilha resolver_patch_link),true,false,true
 MRQ_00046,TGT_0008,patch_link_quality,true,not_available,alta,produzir vinculo espacial forte com o patch (trilha resolver_patch_link),true,false,true
 MRQ_00047,TGT_0008,uncertainty_m,true,not_available,media,estimar incerteza espacial em metros (trilha estimar_incerteza_espacial),true,false,true
 MRQ_00048,TGT_0008,qa_status,true,not_available,alta,executar QA humano e registrar aceite (trilha executar_qa_humano),true,true,true
 MRQ_00049,TGT_0009,event_date,true,not_available,alta,resolver data do evento em registro oficial/documental (trilha resolver_data_evento),true,false,true
-MRQ_00050,TGT_0009,geometry_type,true,not_available,alta,obter geometria oficial (ponto/poligono/bbox) do evento (trilha obter_geometria_oficial),true,true,true
+MRQ_00050,TGT_0009,geometry_type,true,point_set,alta,obter geometria oficial (ponto/poligono/bbox) do evento (trilha obter_geometria_oficial),true,true,true
 MRQ_00051,TGT_0009,patch_id,true,not_available,media,resolver o patch REV-P correspondente (trilha resolver_patch_link),true,false,true
 MRQ_00052,TGT_0009,patch_link_quality,true,not_available,alta,produzir vinculo espacial forte com o patch (trilha resolver_patch_link),true,false,true
 MRQ_00053,TGT_0009,uncertainty_m,true,not_available,media,estimar incerteza espacial em metros (trilha estimar_incerteza_espacial),true,false,true
 MRQ_00054,TGT_0009,qa_status,true,not_available,alta,executar QA humano e registrar aceite (trilha executar_qa_humano),true,true,true
 MRQ_00055,TGT_0010,event_date,true,not_available,alta,resolver data do evento em registro oficial/documental (trilha resolver_data_evento),true,false,true
-MRQ_00056,TGT_0010,geometry_type,true,not_available,alta,obter geometria oficial (ponto/poligono/bbox) do evento (trilha obter_geometria_oficial),true,true,true
+MRQ_00056,TGT_0010,geometry_type,true,point_set,alta,obter geometria oficial (ponto/poligono/bbox) do evento (trilha obter_geometria_oficial),true,true,true
 MRQ_00057,TGT_0010,patch_id,true,not_available,media,resolver o patch REV-P correspondente (trilha resolver_patch_link),true,false,true
 MRQ_00058,TGT_0010,patch_link_quality,true,not_available,alta,produzir vinculo espacial forte com o patch (trilha resolver_patch_link),true,false,true
 MRQ_00059,TGT_0010,uncertainty_m,true,not_available,media,estimar incerteza espacial em metros (trilha estimar_incerteza_espacial),true,false,true

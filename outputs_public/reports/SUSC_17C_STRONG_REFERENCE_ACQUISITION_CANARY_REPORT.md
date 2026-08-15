@@ -3,9 +3,9 @@
 ## Estado inicial
 
 - Branch: `marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial`
-- HEAD: `5270e87`
+- HEAD: `72dec09`
 - Area staged: 0 arquivo(s)
-- Worktree fora dos outputs 17C desta sprint: 293 caminho(s)
+- Worktree fora dos outputs 17C desta sprint: 144 caminho(s)
 - `score_v6` alterado: False
 - `score_v7` criado: False
 

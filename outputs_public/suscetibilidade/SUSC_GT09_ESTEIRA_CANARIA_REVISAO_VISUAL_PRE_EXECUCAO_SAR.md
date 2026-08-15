@@ -43,8 +43,8 @@ requisitos para revisão visual e QA futuro.
 
 ## 5. Inventário de ativos locais
 
-Foram inventariados **42** ativos **já versionados**
-(**30** visuais e **12**
+Foram inventariados **44** ativos **já versionados**
+(**30** visuais e **14**
 geométricos), sem gerar nenhuma imagem nem baixar nada. Incluem prévias de canário
 (pré/pós) e camadas GeoJSON de bbox de patch.
 

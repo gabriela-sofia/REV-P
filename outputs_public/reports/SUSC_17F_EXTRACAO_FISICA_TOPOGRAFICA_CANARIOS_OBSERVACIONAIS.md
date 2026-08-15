@@ -3,7 +3,7 @@
 ## Estado herdado do 17E
 
 - Branch: `marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial`
-- HEAD: `f9000b9`
+- HEAD: `72dec09`
 - Status final 17E herdado: 17E_CALIBRACAO_EXPLORATORIA_REVIEW_ONLY
 - Itens em calibracao exploratoria review-only: 5
 - Status 17B herdado: 17B_PARCIAL_COM_CALIBRACAO_EXPLORATORIA_SEM_PRONTIDAO_BENCHMARK

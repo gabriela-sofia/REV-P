@@ -74,7 +74,7 @@ bloqueada por resolução insuficiente.
 - **Dia exato** (`exact_day`): alvo `TGT_0088`, event_id `S17C_E_SUSC13A_00001`, data resolvida `2022-05-24`, confianca 100, método `campo_event_date_explicito`.
 - **Inferida do identificador** (`inferred_from_event_id`): alvo `TGT_0076`, event_id `REC_2022_05_24_30`, data resolvida `2022-05-24`, confianca 75, método `inferencia_de_event_id`.
 - **Apenas publicação** (`publication_date_only`): nenhum alvo neste nivel.
-- **Desconhecida** (`unknown`): alvo `TGT_0001`, event_id `S16ALOCG_00054`, data resolvida `not_available`, confianca 0, método `nenhuma_data_util`.
+- **Desconhecida** (`unknown`): alvo `TGT_0001`, event_id `S16ALOCG_00070`, data resolvida `not_available`, confianca 0, método `nenhuma_data_util`.
 - **Inválida/conflitante** (`invalid_or_conflicting`): nenhum alvo neste nivel.
 
 ## 15. Confirmação explícita dos bloqueios

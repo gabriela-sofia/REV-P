@@ -104,9 +104,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000317",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000108",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00038",
         "region": "curitiba",
         "event_date": "",
@@ -135,9 +135,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000318",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000109",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00073",
         "region": "curitiba",
         "event_date": "",
@@ -166,9 +166,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000319",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000110",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00163",
         "region": "curitiba",
         "event_date": "",
@@ -197,9 +197,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000320",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000111",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00249",
         "region": "curitiba",
         "event_date": "",
@@ -228,9 +228,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000321",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000112",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00289",
         "region": "curitiba",
         "event_date": "",
@@ -259,9 +259,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000322",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000113",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00293",
         "region": "curitiba",
         "event_date": "",
@@ -290,9 +290,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000323",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000114",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00305",
         "region": "curitiba",
         "event_date": "",
@@ -321,9 +321,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000324",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000115",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00339",
         "region": "curitiba",
         "event_date": "",
@@ -352,9 +352,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000325",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000116",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00340",
         "region": "curitiba",
         "event_date": "",
@@ -383,9 +383,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000326",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000117",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00357",
         "region": "curitiba",
         "event_date": "",
@@ -414,9 +414,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000327",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000118",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00365",
         "region": "curitiba",
         "event_date": "",
@@ -445,9 +445,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000328",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000119",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00367",
         "region": "curitiba",
         "event_date": "",
@@ -476,9 +476,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000329",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000120",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00374",
         "region": "curitiba",
         "event_date": "",
@@ -507,9 +507,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000330",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000121",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00392",
         "region": "curitiba",
         "event_date": "",
@@ -538,9 +538,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000331",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000122",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00399",
         "region": "curitiba",
         "event_date": "",
@@ -569,9 +569,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000332",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000123",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00402",
         "region": "curitiba",
         "event_date": "",
@@ -600,9 +600,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000333",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000124",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00409",
         "region": "curitiba",
         "event_date": "",
@@ -631,9 +631,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000334",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000125",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00410",
         "region": "curitiba",
         "event_date": "",
@@ -662,9 +662,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000335",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000126",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00436",
         "region": "curitiba",
         "event_date": "",
@@ -693,9 +693,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000336",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000127",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00445",
         "region": "curitiba",
         "event_date": "",
@@ -724,9 +724,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000337",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000128",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00466",
         "region": "curitiba",
         "event_date": "",
@@ -755,9 +755,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000338",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000129",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00469",
         "region": "curitiba",
         "event_date": "",
@@ -786,9 +786,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000339",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000130",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00471",
         "region": "curitiba",
         "event_date": "",
@@ -817,9 +817,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000340",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000131",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00531",
         "region": "curitiba",
         "event_date": "",
@@ -848,9 +848,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000341",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000132",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00537",
         "region": "curitiba",
         "event_date": "",
@@ -879,9 +879,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000342",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000133",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00566",
         "region": "curitiba",
         "event_date": "",
@@ -910,9 +910,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000343",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000134",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00597",
         "region": "curitiba",
         "event_date": "",
@@ -941,9 +941,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000344",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000135",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00612",
         "region": "curitiba",
         "event_date": "",
@@ -972,9 +972,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000345",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000136",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00740",
         "region": "curitiba",
         "event_date": "",
@@ -1003,9 +1003,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000346",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000137",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00779",
         "region": "curitiba",
         "event_date": "",
@@ -1034,9 +1034,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000347",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000138",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00887",
         "region": "curitiba",
         "event_date": "",
@@ -1065,9 +1065,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000348",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000139",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00888",
         "region": "curitiba",
         "event_date": "",
@@ -1096,9 +1096,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000349",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000140",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00889",
         "region": "curitiba",
         "event_date": "",
@@ -1127,9 +1127,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000350",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000141",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00891",
         "region": "curitiba",
         "event_date": "",
@@ -1158,9 +1158,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000351",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000142",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00895",
         "region": "curitiba",
         "event_date": "",
@@ -1189,9 +1189,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000352",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000143",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00896",
         "region": "curitiba",
         "event_date": "",
@@ -1220,9 +1220,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000353",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000144",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00899",
         "region": "curitiba",
         "event_date": "",
@@ -1251,9 +1251,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000354",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000145",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00918",
         "region": "curitiba",
         "event_date": "",
@@ -1282,9 +1282,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000355",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000146",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00924",
         "region": "curitiba",
         "event_date": "",
@@ -1313,9 +1313,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000356",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000147",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00926",
         "region": "curitiba",
         "event_date": "",
@@ -1344,9 +1344,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000357",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000148",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00929",
         "region": "curitiba",
         "event_date": "",
@@ -1375,9 +1375,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000358",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000149",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00930",
         "region": "curitiba",
         "event_date": "",
@@ -1406,9 +1406,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000359",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000150",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00931",
         "region": "curitiba",
         "event_date": "",
@@ -1437,9 +1437,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000360",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000151",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00934",
         "region": "curitiba",
         "event_date": "",
@@ -1468,9 +1468,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000361",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000152",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00960",
         "region": "curitiba",
         "event_date": "",
@@ -1499,9 +1499,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000362",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000153",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00969",
         "region": "curitiba",
         "event_date": "",
@@ -1530,9 +1530,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000363",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000154",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00990",
         "region": "curitiba",
         "event_date": "",
@@ -1561,9 +1561,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000364",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000155",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00991",
         "region": "curitiba",
         "event_date": "",
@@ -1592,9 +1592,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000365",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000156",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00992",
         "region": "curitiba",
         "event_date": "",
@@ -1623,9 +1623,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000366",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000157",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_00995",
         "region": "curitiba",
         "event_date": "",
@@ -1654,9 +1654,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000367",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000158",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_01000",
         "region": "curitiba",
         "event_date": "",
@@ -1685,9 +1685,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000368",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000159",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_01001",
         "region": "curitiba",
         "event_date": "",
@@ -1716,9 +1716,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000369",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000160",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_01024",
         "region": "curitiba",
         "event_date": "",
@@ -1747,9 +1747,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000370",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000161",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_01030",
         "region": "curitiba",
         "event_date": "",
@@ -1778,9 +1778,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000371",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000162",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_01040",
         "region": "curitiba",
         "event_date": "",
@@ -1809,9 +1809,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000372",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000163",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_01059",
         "region": "curitiba",
         "event_date": "",
@@ -1840,9 +1840,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000373",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000164",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_01060",
         "region": "curitiba",
         "event_date": "",
@@ -1871,9 +1871,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000374",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000165",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_01065",
         "region": "curitiba",
         "event_date": "",
@@ -1902,9 +1902,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000375",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000166",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_01068",
         "region": "curitiba",
         "event_date": "",
@@ -1933,9 +1933,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000376",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000167",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_01075",
         "region": "curitiba",
         "event_date": "",
@@ -1964,9 +1964,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000377",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000168",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_01101",
         "region": "curitiba",
         "event_date": "",
@@ -1995,9 +1995,9 @@
         ]
       },
       "properties": {
-        "linkage_id": "S16ALINK_000378",
-        "footprint_id": "S16AFP_00315",
-        "event_id": "S16ALOCG_00315",
+        "linkage_id": "S16ALINK_000169",
+        "footprint_id": "S16AFP_00106",
+        "event_id": "S16ALOCG_00106",
         "patch_id": "curitiba_01109",
         "region": "curitiba",
         "event_date": "",

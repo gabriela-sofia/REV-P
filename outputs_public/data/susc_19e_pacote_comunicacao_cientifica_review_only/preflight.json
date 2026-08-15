@@ -1,8 +1,8 @@
 {
   "branch": "marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial",
-  "head": "0346b8d",
+  "head": "72dec09",
   "staged_count": 0,
-  "status_short_count": 182,
+  "status_short_count": 199,
   "entradas_lidas": {
     "outputs_public/data/susc_18h_consolidacao_mestre_cadeia_observacional/summary.json": true,
     "outputs_public/data/susc_18h_consolidacao_mestre_cadeia_observacional/matriz_regional_recife_curitiba_petropolis.csv": true,

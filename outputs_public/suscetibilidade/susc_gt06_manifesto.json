@@ -1,8 +1,8 @@
 {
   "marco": "SUSC-GT06",
   "titulo_publico": "Preparação de Canários SAR sem Execução",
-  "branch": "marco/avaliacao-observacional-review-only-matriz-multimodal",
-  "head": "da52b1a",
+  "branch": "marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial",
+  "head": "72dec09",
   "gt05_source_commit": "da52b1a",
   "alvos_total": 557,
   "distribuicao_elegibilidade": {
@@ -42,7 +42,7 @@
     },
     {
       "path": "outputs_public/suscetibilidade/susc_gt06_pacote_canarios_sar.csv",
-      "sha256": "fe5e5e7d6fbe56b6b0b91e509c654bbb4b91a4e7a3bd82e5640bc394dd11777c",
+      "sha256": "925cc4538d1106fee6035046b4dd5447ad315efc71fa1ee2f4304360538b55ee",
       "bytes": 358868
     },
     {

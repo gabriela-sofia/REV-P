@@ -11,7 +11,7 @@
     "drainage_line": 7,
     "neighborhood_polygon": 289
   },
-  "sha256": "2cd1b4984a87270a5a33e7e40c3875b61965cee39bd74ad12383a003553d6d62",
+  "sha256": "22102d804367cc24e8f1ef261731b4abbdd018e6bee4503e1c3584beb1532c15",
   "allowed_for_training": false,
   "can_be_ground_truth": false,
   "can_be_used_as_ground_truth": false,

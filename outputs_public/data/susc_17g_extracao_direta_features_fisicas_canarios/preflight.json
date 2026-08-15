@@ -1,8 +1,8 @@
 {
   "branch": "marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial",
-  "head": "b408e6c",
+  "head": "72dec09",
   "staged_count": 0,
-  "dirty_lines": 294,
+  "dirty_lines": 161,
   "inputs": [
     {
       "role": "matriz_fisica_17f",

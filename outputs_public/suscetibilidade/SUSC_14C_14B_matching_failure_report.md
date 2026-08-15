@@ -8,7 +8,7 @@ Status: review-only. Sem ground truth, sem treino supervisionado e sem score v7.
 - Ruas sem referencia ranqueadas: **36**
 - Ruas ambiguas ranqueadas: **16**
 - Bairros com falhas ranqueados: **79**
-- Fontes nao tentadas por teto de lote: **390**
+- Fontes nao tentadas por teto de lote: **392**
 
 A auditoria direciona o 14C para recursos oficiais ainda nao tentados e para
 casos onde a normalizacao/fuzzy matching pode reduzir ambiguidade sem inventar

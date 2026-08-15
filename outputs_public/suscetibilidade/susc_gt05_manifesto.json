@@ -1,8 +1,8 @@
 {
   "marco": "SUSC-GT05",
   "titulo_publico": "Pacote de Aquisição de Geometria Oficial",
-  "branch": "marco/avaliacao-observacional-review-only-matriz-multimodal",
-  "head": "5cbe1b1",
+  "branch": "marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial",
+  "head": "72dec09",
   "gt04_source_commit": "5cbe1b1",
   "alvos_total": 557,
   "distribuicao_geometrica": {
@@ -36,22 +36,22 @@
   "artifacts": [
     {
       "path": "outputs_public/suscetibilidade/SUSC_GT05_PACOTE_AQUISICAO_GEOMETRIA_OFICIAL.md",
-      "sha256": "c0e839f853014fcd814e8557b5eb2d37adb6bdc7fb4d4e62c87ed47b8a827d31",
-      "bytes": 7130
+      "sha256": "933bbc3a4d1d9be59f1bc6a78612849e0d9d6a14eec30e6c746bc9e41ae72443",
+      "bytes": 7147
     },
     {
       "path": "outputs_public/suscetibilidade/susc_gt05_pacote_aquisicao_geometria_oficial.csv",
-      "sha256": "15b269c939120ea4e8154261a8fa1fdaa0ca607b4df18c433c0688668e205b69",
+      "sha256": "2bad455d43d749c4cf665f4616f07c8b58e0d68d28619baf3d62d3f001a35b7f",
       "bytes": 358583
     },
     {
       "path": "outputs_public/suscetibilidade/susc_gt05_diagnostico_geometrico_por_alvo.csv",
-      "sha256": "7b1a8ffe153ea98ed50d6e9c52e01e40ecde0b8e09d267334eebd20bee3ba0f2",
+      "sha256": "fc3f56c4cbf909c6a718814b425823fb8e4e9099aa1045805ea3f41139d6cb0b",
       "bytes": 96874
     },
     {
       "path": "outputs_public/suscetibilidade/susc_gt05_trilhas_aquisicao_geometrica.csv",
-      "sha256": "442b469ab0455fb2ed5d8be8c33a8561230351e216c88de56927b0911ea284a0",
+      "sha256": "8d7f9ddde3fd3c981ebae9e19b045fb5db8ac42076fc0c161d71e8726999efc3",
       "bytes": 359185
     },
     {
@@ -61,7 +61,7 @@
     },
     {
       "path": "outputs_public/suscetibilidade/susc_gt05_plano_aquisicao_geometria_por_alvo.csv",
-      "sha256": "fca708cb041a585f25dc24d08297a9d5818f7572c4e5386832ee1da5abc13e1a",
+      "sha256": "2bebb13d4035bf787ea5a0f0e21b79bc385816d1fbf007dc7ae2d4eb06cd97b8",
       "bytes": 192608
     },
     {
@@ -76,7 +76,7 @@
     },
     {
       "path": "outputs_public/suscetibilidade/susc_gt05_alvos_liberados_para_qa_ou_sar_futuro.csv",
-      "sha256": "7e76201d0a8b7ec81504bbe0ac97175ae1383bef95b83bb03ba458421e07e4e3",
+      "sha256": "e08392153d8839fbecee4d4ff64a387ad6a360864332eb375ad61f0d10306267",
       "bytes": 200186
     },
     {

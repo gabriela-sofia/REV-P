@@ -10,10 +10,10 @@ por endereco/logradouro e manteve score v7 bloqueado por falta de vinculos
 patch-evento fortes/moderados.
 
 ## 2. Referencias oficiais descobertas
-Referencias registradas: **571**.
+Referencias registradas: **575**.
 
 ## 3. Referencias baixadas
-Manifesto de aquisicao: **571** linhas. Status: **{'not_direct_data': 60, 'reused_cached_download': 120, 'not_attempted_batch_cap': 390, 'reused_local_official': 1}**.
+Manifesto de aquisicao: **575** linhas. Status: **{'not_direct_data': 62, 'reused_cached_download': 120, 'not_attempted_batch_cap': 392, 'reused_local_official': 1}**.
 
 ## 4. Features de logradouro/endereco/bairro parseadas
 Features oficiais parseadas: **100000**. Por tipo: **{'address_point': 1378, 'river_line': 345, 'street_segment': 98225, 'drainage_line': 7, 'neighborhood_polygon': 45}**.

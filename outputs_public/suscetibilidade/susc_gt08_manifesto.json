@@ -1,8 +1,8 @@
 {
   "marco": "SUSC-GT08",
   "titulo_publico": "Preparação Integrada de AOI e Busca Sentinel-1 para Canários",
-  "branch": "marco/avaliacao-observacional-review-only-matriz-multimodal",
-  "head": "ffc38ed",
+  "branch": "marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial",
+  "head": "72dec09",
   "gt07_source_commit": "ffc38ed",
   "canarios": 5,
   "distribuicao_aoi": {

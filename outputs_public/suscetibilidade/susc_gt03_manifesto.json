@@ -1,13 +1,13 @@
 {
   "marco": "SUSC-GT03",
   "titulo_publico": "Pacote de Alvos para Aquisição de Evidência Forte",
-  "branch": "marco/avaliacao-observacional-review-only-matriz-multimodal",
-  "head": "703285e",
+  "branch": "marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial",
+  "head": "72dec09",
   "gt02_source_commit": "703285e",
   "alvos_total": 557,
   "distribuicao_prioridades": {
-    "prioridade_media": 80,
     "bloqueado_sem_acao_imediata": 476,
+    "prioridade_media": 80,
     "prioridade_baixa": 1
   },
   "positive_strong_promovidos": 0,
@@ -36,12 +36,12 @@
     },
     {
       "path": "outputs_public/suscetibilidade/susc_gt03_pacote_alvos_evidencia_forte.csv",
-      "sha256": "e9d93670f5ab8e253f2024f568a00b6b163e8e333db9604f54e2db2e5a0d36c4",
+      "sha256": "1c1e80156b042be86b533740c6e9c81885316fc914b6d376b60990d1a2b35544",
       "bytes": 375578
     },
     {
       "path": "outputs_public/suscetibilidade/susc_gt03_requisitos_faltantes_por_alvo.csv",
-      "sha256": "40cbc97a070a3cb72ad7391a51ed95cd5fceb968c272a605a74f0434e71cb9eb",
+      "sha256": "fecaab8f2eb938cf3b65028e10ef91ea3e1978bafbcb09d0e6474d226991d8d3",
       "bytes": 558231
     },
     {
@@ -56,7 +56,7 @@
     },
     {
       "path": "outputs_public/suscetibilidade/susc_gt03_plano_aquisicao_por_alvo.csv",
-      "sha256": "a4639a75d1d2a9cf8115d84c355a6ddbb43dd5a9ffdb8389db3eb03f57fc6ed2",
+      "sha256": "0658a08d9270a8ed6b38762291afa6bab8997bf7f12330d989217dd1d1bd93d0",
       "bytes": 205548
     },
     {
@@ -66,7 +66,7 @@
     },
     {
       "path": "outputs_public/suscetibilidade/susc_gt03_bloqueios.csv",
-      "sha256": "79fe55598b7362a764a9f5cac1bd602a060c430d703f0f2423f98464dea0006b",
+      "sha256": "ababcd33e88f853f68b07aa0c74a2b5caf1d8163ea241691280b6fae1463214e",
       "bytes": 71862
     },
     {

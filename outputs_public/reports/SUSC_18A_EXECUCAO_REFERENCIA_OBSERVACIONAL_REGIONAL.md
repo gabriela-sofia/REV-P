@@ -3,7 +3,7 @@
 ## Estado herdado do 17I
 
 - Branch: `marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial`
-- HEAD: `164a791`
+- HEAD: `72dec09`
 - Status final 17I herdado: 17I_AMOSTRA_REGIONAL_PARCIAL_COM_FILAS_EXECUTAVEIS
 - Status 17B herdado: 17B_APROXIMACAO_COM_AMOSTRA_REGIONAL_PARCIAL
 - `score_v6` alterado: False

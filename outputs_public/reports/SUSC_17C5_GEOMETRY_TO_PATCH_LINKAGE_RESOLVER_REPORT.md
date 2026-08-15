@@ -3,7 +3,7 @@
 ## Estado inicial herdado do 17C
 
 - Branch: `marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial`
-- HEAD: `f94c0c6`
+- HEAD: `72dec09`
 - Area staged: 0 arquivo(s)
 - Candidatas 17C: 63
 - Eventos 17C datados: 26
