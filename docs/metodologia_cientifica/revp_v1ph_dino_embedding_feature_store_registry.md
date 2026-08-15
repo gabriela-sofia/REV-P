@@ -14,4 +14,4 @@ Dimensão 768 → `VALID_REVIEW_ONLY`. Dimensão diferente → `BLOCKED_INVALID_
 
 ## Resultado
 
-Embeddings parseados: 0. Válidos 768D: 0.
+Embeddings parseados: 32. Válidos 768D: 32.

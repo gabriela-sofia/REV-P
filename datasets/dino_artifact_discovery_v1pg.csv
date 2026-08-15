@@ -509,3 +509,4 @@ V1PG_ART_2447,local_only:8fc09ed5dfa7c87a,8fc09ed5dfa7c87a,CSV,195,neighbor,fals
 V1PG_ART_2458,local_only:40c64c8aac89b6f8,40c64c8aac89b6f8,CSV,21144,dino,false,true,false,false,,false,false,false,local_only_not_committed,source=local_only
 V1PG_ART_2459,local_only:e61e7e9b35ecf97c,e61e7e9b35ecf97c,CSV,18036,dino,false,true,false,false,,false,false,false,local_only_not_committed,source=local_only
 V1PG_ART_2460,local_only:f2d0dd8e331947c8,f2d0dd8e331947c8,CSV,5318,dino,false,true,false,false,,false,false,false,local_only_not_committed,source=local_only
+V1PG_ART_0511,datasets/dino_smoke_embeddings_feature_store_v1qj.csv,6e02e3a7547be66f,CSV,280029,alias|dino|embedding|patch_id,true,true,false,false,,true,false,true,,source=datasets;manually_appended_v1qu_session_real_smoke_embeddings
