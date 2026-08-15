@@ -1,0 +1,13 @@
+stat_key,stat_value
+sedec_primary_pool_n,163
+n_joined_with_real_dino,78
+n_pos_flood_positive,56
+n_neg_real_clean_sedec_negative,22
+n_neg_of_22_total_covered,22/22
+physical_feature_epv,"3.67 (6 predictors, below 10 heuristic)"
+dino_only_epv,"11.00 (2 predictors, meets 10 heuristic)"
+dino_only_firth_loo_auc,0.4903
+labels_created,0
+used_as_training_feature,false
+analysis_separation,univariate_screen_all_8_features_independent; firth_multivariate_dino_only_2_predictors_never_mixed_with_physical
+status,EXTENDED_ANALYSIS_READY_REVIEW_ONLY
