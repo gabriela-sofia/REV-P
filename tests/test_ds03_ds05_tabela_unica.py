@@ -111,14 +111,83 @@ def test_curitiba_nao_entra_como_negativo_observado():
     assert set(neg["nivel_negativo"].unique()) == {"ausencia"}
 
 
-def test_recife_entra_em_cadeia_nativa_e_curitiba_em_wbt30():
-    """A resolucao segue o mecanismo, nao a regiao (decisao de 12/08/2026)."""
-    for fonte, esperado in (("recife", "nativa_10m"), ("curitiba", "wbt30")):
-        p = RED / f"{fonte}.csv"
-        _exige(p, "python scripts/suscetibilidade/ds04_reduzir_por_fonte.py")
+def test_toda_fonte_canonica_esta_em_wbt30():
+    """Resolucao unica no projeto inteiro (decisao de 13/08/2026).
+
+    Substitui a regra anterior, em que a resolucao seguia o mecanismo e Recife
+    ficava a 10 m. Uma base replicavel nao pode ter duas resolucoes convivendo:
+    `hand_m` passaria a significar coisas diferentes conforme a linha.
+    """
+    _exige(RED, "python scripts/suscetibilidade/ds04_reduzir_por_fonte.py")
+    for p in sorted(RED.glob("*.csv")):
+        if "__variante_" in p.stem:
+            continue
         d = pd.read_csv(p, low_memory=False)
-        assert set(d["cadeia_terreno"].unique()) == {esperado}
+        cadeias = set(d["cadeia_terreno"].unique()) - {"global", "ausente"}
+        assert cadeias <= {"wbt30"}, (
+            f"{p.name} tem cadeia derivada fora de wbt30: {cadeias}")
     assert set(pd.read_csv(RED / "recife.csv")["mecanismo"].unique()) == {"PLUVIAL_URBANO"}
+
+
+def test_a_variante_de_10m_de_recife_continua_disponivel():
+    """A harmonizacao custa declividade e TWI em Recife; o custo tem de ficar
+    mensuravel, entao a cadeia de 10 m e preservada como variante."""
+    p = RED / "recife__variante_nativa_10m.csv"
+    _exige(p, "python scripts/suscetibilidade/ds04_reduzir_por_fonte.py")
+    v = pd.read_csv(p, low_memory=False)
+    assert set(v["cadeia_terreno"].unique()) == {"nativa_10m"}
+    c = pd.read_csv(RED / "recife.csv", low_memory=False)
+    assert len(v) == len(c)
+    # se as duas cadeias dessem o mesmo numero, harmonizar nao teria custo --
+    # e o ter03 ja mediu que tem (slope pearson 0,518)
+    assert not v["slope_deg"].equals(c["slope_deg"])
+
+
+def test_nivel1_tem_aoi_por_chip_e_relevo_medido():
+    """Depois do ter06 as duas fontes de Nivel 1 deixam de ser opacas.
+
+    Antes tinham `aoi` igual ao grupo (pais, no Sen1Floods11) e relevo
+    NAO_CLASSIFICADO por falta de declividade. Com a cadeia derivada por chip a
+    AOI passa a ser o recorte rotulado e o criterio de relevo volta a ser
+    aplicavel -- sobre pontos amostrados, que e outro estimador e por isso fica
+    marcado em `classe_relevo_base`.
+    """
+    for fonte in ("sen1floods11", "ufo"):
+        p = RED / f"{fonte}.csv"
+        _exige(p, "python scripts/terreno/ter06_harmonizar_chips_nivel1.py")
+        d = pd.read_csv(p, low_memory=False)
+        com_terreno = d[d["cadeia_terreno"] == "wbt30"]
+        if com_terreno.empty:
+            pytest.skip(f"{fonte} ainda sem cadeia derivada neste ambiente")
+        # A AOI nunca pode ser mais grossa que o grupo de validacao. Se for
+        # igual nao ha erro: no UFO o chip E o evento, entao as duas coincidem.
+        # No Sen1Floods11 o grupo e o pais e a AOI tem de ser estritamente
+        # mais fina -- 446 chips contra 11 paises.
+        assert d["aoi"].nunique() >= d["grupo_cv"].nunique(), (
+            f"{fonte}: AOI mais grossa que o grupo de validacao")
+        if fonte == "sen1floods11":
+            assert d["aoi"].nunique() > d["grupo_cv"].nunique()
+        classificado = com_terreno[com_terreno["classe_relevo"] != "NAO_CLASSIFICADO"]
+        assert len(classificado) > 0
+        assert set(classificado["classe_relevo_base"].unique()) == {"pontos_amostrados"}
+
+
+def test_hand_nulo_onde_a_rede_de_drenagem_e_degenerada():
+    """Chip cuja janela nao sustenta rede de drenagem sai com HAND nulo.
+
+    HAND e altura acima do canal mais proximo. Numa janela de ~9 km o canal
+    real pode estar fora, e um numero plausivel e errado e pior que a ausencia.
+    """
+    p = RUNS / "ter-02-comparacao" / "resumo_nivel1.json"
+    _exige(p, "python scripts/terreno/ter06_harmonizar_chips_nivel1.py")
+    m = json.loads(p.read_text(encoding="utf-8"))
+    degenerados = {d["chip"] for d in m["chips_rede_degenerada"]}
+    if not degenerados:
+        pytest.skip("nenhum chip com rede degenerada nesta execucao")
+    h = pd.read_csv(RUNS / "ter-02-comparacao" / "dataset_harmonizado_nivel1.csv",
+                    low_memory=False)
+    afetados = h[h["chip"].astype(str).isin(degenerados)]
+    assert afetados["hand_m_wbt"].isna().all()
 
 
 def test_nenhuma_variavel_fisica_foi_imputada_com_zero():

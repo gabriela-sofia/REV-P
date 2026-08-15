@@ -97,8 +97,16 @@ MECANISMO = (
 
 # Cadeia que produziu elevacao/declividade/HAND/TWI daquela linha.
 # `global` e `wbt30` NAO sao intercambiaveis: sao instrumentos diferentes.
-# `nativa_10m` e a cadeia WhiteboxTools a 10 m, auditada em Recife.
+#
+# Desde 13/08/2026 o projeto tem RESOLUCAO UNICA: toda linha canonica e wbt30.
+# A coluna nao foi removida por isso -- ao contrario. Uma procedencia que so
+# admite um valor e a forma de a violacao aparecer como violacao no dia em que
+# alguem introduzir uma segunda cadeia; uma coluna ausente nao acusa nada.
+#
+# `nativa_10m` sobrevive apenas nos arquivos de VARIANTE, que existem para
+# medir o que a harmonizacao custou e nunca entram na tabela unica.
 CADEIA_TERRENO = ("wbt30", "nativa_10m", "global", "ausente")
+CADEIA_CANONICA = "wbt30"
 
 # Fonte da chuva. Coluna obrigatoria justamente porque a violacao ja existe no
 # dado atual: duas fontes ocupando a mesma coluna dentro da mesma regiao.
@@ -242,10 +250,17 @@ def contrato() -> dict:
         "regra_de_ouro": (
             "nenhuma coluna de valor sem a coluna de procedencia "
             "correspondente; ausencia e nulo declarado, nunca estimativa"),
+        "cadeia_canonica": CADEIA_CANONICA,
+        "regra_resolucao": (
+            "resolucao unica em todo o projeto desde 13/08/2026: 30 m, cadeia "
+            "WhiteboxTools, limiar de canal em 0,1123 km2. Substitui a regra "
+            "anterior de resolucao por mecanismo. Linha canonica fora de "
+            "wbt30 e erro de reducao"),
         "regra_twi": (
             "TWI a 10 m e TWI a 30 m nao sao a mesma variavel (pearson 0,293 "
-            "em Recife, 0,205 em Curitiba). Num conjunto que junta regioes, "
-            "ou todo o TWI vem de 30 m, ou TWI sai do conjunto"),
+            "em Recife, 0,205 em Curitiba). A regra era: ou todo o TWI vem de "
+            "30 m, ou TWI sai do conjunto. Com resolucao unica ela passa a ser "
+            "satisfeita por construcao, e nao por vigilancia"),
         "regra_chuva": (
             "duas fontes de precipitacao nao podem ocupar a mesma coluna. "
             "Pool so e licito dentro de uma fonte_chuva"),

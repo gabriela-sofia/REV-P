@@ -141,8 +141,15 @@ def main() -> int:
         print("ABORTADO: nenhuma AOI alvo com derivacao. Rode o ter01 antes.")
         return 1
 
-    base = df[df.grupo_cv.isin(usaveis) & df.classe.isin([0, 1])].copy()
-    print(f"PONTOS={len(base):,} em {base.grupo_cv.nunique()} AOIs")
+    # Sob --todas re-extrai TODAS as classes, nao so 0 e 1. Agua permanente e
+    # movimento de massa nao entram em treino, mas ficavam em cadeia global sem
+    # que isso fosse decisao -- e numa base de conhecimento de resolucao unica,
+    # classe de auditoria em outro instrumento e uma inconsistencia gratuita.
+    # O contraste positivo-negativo continua sendo calculado so em 0 e 1.
+    classes = df.classe.isin([0, 1, 2, 9]) if todas else df.classe.isin([0, 1])
+    base = df[df.grupo_cv.isin(usaveis) & classes].copy()
+    print(f"PONTOS={len(base):,} em {base.grupo_cv.nunique()} AOIs "
+          f"(classes {sorted(base.classe.unique())})")
 
     for col in MAPA:
         base[f"{col}_global"] = base[col]

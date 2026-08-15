@@ -76,6 +76,7 @@ DS01 = RUNS / "ds-01-multirregiao" / "dataset_multirregiao_v1.csv"
 HARM_TODAS = RUNS / "ter-02-comparacao" / "dataset_harmonizado_todas.csv"
 HARM_SERRA = RUNS / "ter-02-comparacao" / "dataset_serra_harmonizado.csv"
 HARM_UK = RUNS / "ter-02-comparacao" / "dataset_harmonizado_uk.csv"
+HARM_N1 = RUNS / "ter-02-comparacao" / "dataset_harmonizado_nivel1.csv"
 HARM_BR = RUNS / "ter-03-brasil-harmonizado"
 RELEVO_AOI = RUNS / "cems-02-analogos-v2" / "verificacao_relevo_por_aoi.csv"
 
@@ -129,11 +130,13 @@ def sobrepor_terreno_harmonizado(d: pd.DataFrame) -> pd.DataFrame:
     chegaram juntas. Linha com tres de wbt30 e uma de global seria a mistura
     que a cadeia harmonizada existe para impedir.
     """
-    # Duas origens de sobreposicao, porque sao duas chaves diferentes: o CEMS
-    # casa por AOI (ter02) e o piloto ingles casa por raster unico (ter05).
-    # Concatenar aqui e o que evita um redutor especial para o UK.
+    # Tres origens de sobreposicao, porque sao tres granularidades de derivacao
+    # diferentes: o CEMS casa por AOI (ter02), o piloto ingles por raster unico
+    # (ter05) e o Nivel 1 por chip (ter06). Todas produzem as mesmas colunas
+    # `_wbt` chaveadas por ponto_id, entao concatenar aqui evita um redutor
+    # especial para cada uma.
     base = HARM_TODAS if HARM_TODAS.exists() else HARM_SERRA
-    caminhos = [p for p in (base, HARM_UK) if p.exists()]
+    caminhos = [p for p in (base, HARM_UK, HARM_N1) if p.exists()]
     d["cadeia_terreno"] = "global"
     if not caminhos:
         print(f"   AVISO: nenhuma sobreposicao harmonizada em {base.parent}")
@@ -227,7 +230,6 @@ def _reduzir_nivel1(regiao: str, fonte: str, mecanismo: str,
         return pd.DataFrame(columns=COLUNAS), {"nota": f"ds01 sem {regiao}"}
     d = d.rename(columns={"rain_decay_index_api": "rain_decay_index"})
     d["fonte"] = fonte
-    d["aoi"] = d["grupo_cv"].astype(str)
     d["procedencia"] = d["fonte_label"]
     d["resolucao_nativa_m"] = pd.to_numeric(d["resolucao_m"], errors="coerce")
     d["fonte_chuva"] = "ausente"
@@ -235,10 +237,38 @@ def _reduzir_nivel1(regiao: str, fonte: str, mecanismo: str,
     d["unidade_agrupamento"] = "chip"
     d["mecanismo"] = mecanismo
     d = sobrepor_terreno_harmonizado(d)
-    # sem slope nao existe fracao acima de 15 graus: o criterio nao e aplicavel
+
+    # A AOI destas fontes e o CHIP -- o recorte que foi efetivamente rotulado.
+    # O `grupo_cv` continua sendo o evento (pais no Sen1Floods11), porque a
+    # unidade de validacao cruzada e outra coisa: 446 chips dariam um bloqueio
+    # espacial muito mais frouxo que 11 paises. O esquema separa as duas
+    # justamente para nao ter que escolher uma so.
+    d["aoi"] = d["grupo_cv"].astype(str)
+    diag: dict = {}
+    if HARM_N1.exists():
+        h = pd.read_csv(HARM_N1, low_memory=False)
+        if {"ponto_id", "chip"} <= set(h.columns):
+            mapa = dict(zip(h["ponto_id"].astype(str), h["chip"].astype(str)))
+            achou = d["ponto_id"].astype(str).map(mapa)
+            d.loc[achou.notna(), "aoi"] = achou[achou.notna()]
+            diag["aoi_por_chip"] = int(achou.notna().sum())
+
+    # O relevo era NAO_CLASSIFICADO porque nao havia declividade. Com a cadeia
+    # de 30 m derivada por chip (ter06) a declividade existe, e o criterio do
+    # cems03 volta a ser aplicavel -- agora sobre os pontos amostrados, que e
+    # um estimador diferente do da janela de raster e por isso fica marcado.
     d["classe_relevo"] = "NAO_CLASSIFICADO"
     d["classe_relevo_base"] = "ausente"
-    return moldar(d), {"relevo": {"motivo": "sem slope_deg no ds01 (declarado la)"}}
+    por_chip = {}
+    for chip, s in d.groupby("aoi"):
+        cls, det = relevo_dos_pontos(s["elevation_m"], s["slope_deg"])
+        por_chip[str(chip)] = cls
+        if cls != "NAO_CLASSIFICADO":
+            d.loc[d["aoi"] == chip, "classe_relevo"] = cls
+            d.loc[d["aoi"] == chip, "classe_relevo_base"] = "pontos_amostrados"
+    diag["relevo"] = {"chips": len(por_chip),
+                      "por_classe": pd.Series(por_chip).value_counts().to_dict()}
+    return moldar(d), diag
 
 
 def reduzir_sen1floods11():
@@ -313,10 +343,36 @@ def _reduzir_brasil(nome: str, cfg: dict, sufixo_terreno: str,
     return moldar(d), diag
 
 
+# RECIFE A 30 M -- reversao declarada da decisao de 12/08/2026.
+#
+# Aquela decisao dizia "a resolucao segue o mecanismo": Recife ficaria a 10 m
+# porque e pluvial e la o terreno nao e o mecanismo. O argumento continua
+# valido no que ele afirmava, e ainda assim a escolha muda, por uma razao que
+# nao e sobre Recife: uma base de conhecimento replicavel nao pode ter duas
+# resolucoes convivendo, porque a coluna `hand_m` passa a significar coisas
+# diferentes conforme a linha -- que e exatamente o erro que esta cadeia toda
+# existe para eliminar.
+#
+# O CUSTO ESTA MEDIDO e nao e pequeno onde incide (ter03):
+#     elevation_m  pearson 0,970   razao 1,156
+#     hand_m       pearson 0,928   razao 1,824
+#     slope_deg    pearson 0,518   razao 2,72   <- mediana 7,20 -> 2,65 graus
+#     twi_dinf     pearson 0,293   razao 0,703
+#
+# A troca so e aceitavel porque as duas variaveis que se perdem sao as duas que
+# o modelo pluvial de Recife declaradamente nao usa: HAND tem coeficiente
+# -0,0001 com p = 0,978 no v12, e o preditor la e a chuva. Perde-se detalhe de
+# microtopografia numa regiao onde a microtopografia nunca entrou no ajuste.
+#
+# A versao de 10 m NAO e descartada: sai em `recife__variante_nativa_10m.csv`,
+# no mesmo esquema, para quem precisar do detalhe fino ou quiser medir o que a
+# harmonizacao custou. O que muda e qual das duas e a canonica.
 CFG_RECIFE = {
     "aoi": "recife_rmr",
     "grupo": "point_id",
     "unidade": "ponto",
+    # a observacao continua sendo de 10 m; o que passa a 30 m e a DERIVACAO de
+    # terreno. Sao coisas diferentes e a coluna registra a primeira.
     "resolucao_nativa_m": 10.0,
     "mecanismo": PLUVIAL,
     # planicie costeira; o proprio v12 registra terreno de 5 a 8 m sobre a
@@ -327,12 +383,15 @@ CFG_RECIFE = {
     # ausencia, e a hierarquia do ds01 e explicita em que ausencia nao entra
     # como negativo observado.
     "nivel_negativo": "ausencia",
-    "colunas_terreno": ["elevation_m", "slope_deg", "hand_m_dinf", "twi_dinf"],
+    "colunas_terreno": ["elevation_m_wbt30", "slope_deg_wbt30",
+                        "hand_m_dinf_wbt30", "twi_dinf_wbt30"],
 }
 
-CFG_RECIFE_WBT30 = {**CFG_RECIFE,
-                    "colunas_terreno": ["elevation_m_wbt30", "slope_deg_wbt30",
-                                        "hand_m_dinf_wbt30", "twi_dinf_wbt30"]}
+# a cadeia de 10 m preservada como variante auditavel, nao descartada
+CFG_RECIFE_NATIVA_10M = {
+    **CFG_RECIFE,
+    "colunas_terreno": ["elevation_m", "slope_deg", "hand_m_dinf", "twi_dinf"],
+}
 
 CFG_CURITIBA = {
     "aoi": "curitiba_amc",
@@ -350,11 +409,11 @@ CFG_CURITIBA = {
 
 
 def reduzir_recife():
-    return _reduzir_brasil("recife", CFG_RECIFE, "", "nativa_10m")
+    return _reduzir_brasil("recife", CFG_RECIFE, "_wbt30", "wbt30")
 
 
-def reduzir_recife_variante_wbt30():
-    return _reduzir_brasil("recife", CFG_RECIFE_WBT30, "_wbt30", "wbt30")
+def reduzir_recife_variante_nativa_10m():
+    return _reduzir_brasil("recife", CFG_RECIFE_NATIVA_10M, "", "nativa_10m")
 
 
 def reduzir_curitiba():
@@ -370,8 +429,9 @@ REDUTORES = {
     "curitiba": reduzir_curitiba,
 }
 
-# nao entram na tabela unica; existem para auditoria e teste de pool
-VARIANTES = {"recife__variante_wbt30": reduzir_recife_variante_wbt30}
+# nao entram na tabela unica; existem para auditoria e para medir o que a
+# harmonizacao custou em cada regiao
+VARIANTES = {"recife__variante_nativa_10m": reduzir_recife_variante_nativa_10m}
 
 # fonte conhecida, sem nenhum ponto. Fica no relatorio para que a ausencia
 # seja um numero e nao um esquecimento.

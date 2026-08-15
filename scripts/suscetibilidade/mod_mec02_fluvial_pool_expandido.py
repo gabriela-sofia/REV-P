@@ -347,8 +347,16 @@ def main() -> int:
         resultados["resposta_loso_curitiba"] = None
     else:
         antes, agora = MEC01["loso_cems_para_curitiba"], alvo["auc"]
-        print(f"\n  com so as 21 AOIs ingremes harmonizadas: AUC={antes:.4f}")
-        print(f"  com as 119 AOIs e o piloto ingles:       AUC={agora:.4f}")
+        # o treino cresce a cada harmonizacao, entao a descricao dele e
+        # calculada e nao escrita: uma frase fixa aqui envelheceria em silencio
+        treino = base[base.fonte != "curitiba"]
+        planicie = int((treino.classe_relevo == "PLANO_OU_ONDULADO").sum())
+        fontes_treino = sorted(treino.fonte.unique())
+        print(f"\n  no mec01, treino de 2 fontes e 1.680 pontos de planicie: "
+              f"AUC={antes:.4f}")
+        print(f"  agora, treino de {len(fontes_treino)} fontes "
+              f"({', '.join(fontes_treino)}) e {planicie:,} de planicie: "
+              f"AUC={agora:.4f}")
 
         # A ordem das checagens importa: so faz sentido perguntar se o modelo
         # transfere depois de saber que ha para onde transferir.
@@ -366,9 +374,10 @@ def main() -> int:
                 "conjunto de teste sem contraste produz AUC de 0,50 qualquer que "
                 "seja o modelo: o numero e propriedade do rotulo de Curitiba, "
                 "nao evidencia sobre transferencia entre climas. O que a "
-                "harmonizacao mostrou foi que aumentar a planicie de 1.680 para "
-                "28.684 pontos nao muda o resultado -- o que e consistente com o "
-                "problema estar do lado do teste")
+                f"harmonizacao mostrou foi que levar a planicie de treino de "
+                f"1.680 para {planicie:,} pontos, em {len(fontes_treino)} "
+                "fontes, nao muda o resultado -- consistente com o problema "
+                "estar do lado do teste")
         elif agora >= 0.65:
             hipotese = "i"
             leitura = ("o colapso vinha da amostra de planicie, nao de "

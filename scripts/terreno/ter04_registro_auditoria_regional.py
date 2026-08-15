@@ -117,13 +117,23 @@ def main() -> int:
         print("ABORTADO: nenhuma derivacao com manifesto.")
         return 1
 
-    d["escopo"] = ["brasil" if n in REGIOES_BR else
-                   ("piloto_uk" if n.startswith("uk_") else "aoi_externa")
-                   for n in d["regiao"]]
+    # Tres granularidades de derivacao, e a distincao importa: a AOI do CEMS
+    # tem dezenas de km, o chip do Nivel 1 tem 3 a 5 km, e numa janela pequena
+    # o canal relevante pode ficar de fora. Misturar as tres numa contagem so
+    # esconderia exatamente o grupo em que o limite de HAND e mais apertado.
+    def escopo(n: str) -> str:
+        if n in REGIOES_BR:
+            return "brasil"
+        if n.startswith("uk_"):
+            return "piloto_uk"
+        if n.startswith("n1chip_"):
+            return "chip_nivel1"
+        return "aoi_externa"
 
-    print(f"DERIVACOES={len(d)}  (brasil={int((d.escopo=='brasil').sum())}, "
-          f"aoi_externa={int((d.escopo=='aoi_externa').sum())}, "
-          f"piloto_uk={int((d.escopo=='piloto_uk').sum())})")
+    d["escopo"] = [escopo(n) for n in d["regiao"]]
+
+    print(f"DERIVACOES={len(d)}  "
+          + ", ".join(f"{k}={v}" for k, v in d.escopo.value_counts().items()))
     if sem_manifesto:
         print(f"SEM_MANIFESTO ({len(sem_manifesto)}): {sem_manifesto[:5]}")
 
