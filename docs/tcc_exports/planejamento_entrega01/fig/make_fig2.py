@@ -74,16 +74,31 @@ a.set_xticklabels(nomes)
 a.set_ylabel("pontos")
 a.set_title("(a) amostra por conjunto", fontsize=6.2, pad=3)
 
-# ---- (b) sobreposicao de classes sob negativo por ausencia -- HAND Recife -----
+# ---- (b) heterogeneidade: variavel disponivel por fonte -----------------------
+# 1 = disponivel na cadeia atual; 0 = ausente. Fatos documentados em
+# ext_analogos_de_petropolis_v1.md (chuva so no piloto UK), mod-neg-01/resumo.json
+# (TWI ausente nas tabelas CEMS ate 2026-08-09), n1g-pontos-com-features/resumo.json
+# (declividade e TWI nao derivadas para Nivel 1) e ext_balanco (mecanismo na origem).
 a = ax[0, 1]
-h = rec[["hand_m_dinf", "label"]].dropna()
-bins = np.linspace(0, 40, 22)
-a.hist(h[h.label == 1].hand_m_dinf, bins=bins, color=C_POS, alpha=.75, density=True, label="positivo")
-a.hist(h[h.label == 0].hand_m_dinf, bins=bins, color=C_NEG, alpha=.55, density=True, label="negativo")
-a.set_xlabel("HAND D-infinity (m)")
-a.set_ylabel("densidade")
-a.legend(frameon=False, handlelength=0.9)
-a.set_title("(b) classes sobrepostas (REC)", fontsize=6.2, pad=2)
+fontes = ["Recife", "Curitiba", "UK/EA", "CEMS", "Nível 1"]
+variaveis = ["elev", "decl", "HAND", "TWI", "chuva", "mec."]
+M = np.array([
+    [1, 1, 1, 1, 1, 0],
+    [1, 1, 1, 1, 1, 0],
+    [1, 1, 1, 1, 1, 1],
+    [1, 1, 1, 1, 0, 1],
+    [1, 0, 1, 0, 0, 0],
+])
+a.imshow(M, cmap=matplotlib.colors.ListedColormap(["#DCDCDC", C_POS]), vmin=0, vmax=1, aspect="auto")
+a.set_xticks(range(len(variaveis)))
+a.set_xticklabels(variaveis, fontsize=4.3)
+a.set_yticks(range(len(fontes)))
+a.set_yticklabels(fontes, fontsize=4.6)
+a.set_xticks(np.arange(-.5, len(variaveis), 1), minor=True)
+a.set_yticks(np.arange(-.5, len(fontes), 1), minor=True)
+a.grid(which="minor", color="white", linewidth=0.6)
+a.tick_params(which="minor", length=0)
+a.set_title("(b) variável disponível por fonte", fontsize=6.2, pad=3)
 
 # ---- (c) o AUC pode medir o criterio, nao o fenomeno --------------------------
 a = ax[1, 0]

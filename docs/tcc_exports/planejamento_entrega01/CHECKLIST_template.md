@@ -177,11 +177,154 @@ Itens que mudaram de estado em relação à v1 e que valem reconferência:
 
 | # | O que mudou | Onde conferir |
 |---|---|---|
-| 8.1 | Correção factual sobre Petrópolis e sobre o negativo brasileiro | `NOTA_v1_para_v2.md` §1 |
+| 8.1 | Correção factual sobre Petrópolis e sobre o negativo brasileiro | `NOTA_versoes.md` §1 |
 | 8.2 | Seção I ganhou um parágrafo inteiro de contextualização física (HAND, TWI, D-infinity em linguagem acessível) | §I, parágrafo 2 |
 | 8.3 | Objetivos passaram de quatro para cinco | §I, parágrafo 4 |
 | 8.4 | Seção II reorganizada com foco em treino; hierarquia do negativo declarada em três níveis | §II, blocos 1–4 |
 | 8.5 | Figura 2 refeita: composição por conjunto, sobreposição de classes, efeito da definição de negativo, régua de HAND por relevo | `fig/make_fig2.py` |
 | 8.6 | Etapas fechadas por evidência, não por data; E4 (holdout temporal) é nova | §III |
 | 8.7 | Referência nova: Tarboton (1997), fonte primária do D-infinity | bibliografia, item 4 |
-| 8.8 | Pendência declarada: curadoria de AOI/conjunto ainda não executada | `NOTA_v1_para_v2.md` §3 |
+| 8.8 | Pendência declarada: curadoria de AOI/conjunto ainda não executada | `NOTA_versoes.md` §3 |
+
+---
+
+## 9. Revisão v3 (2026-08-13) — realinhamento do problema central
+
+| # | O que mudou | Onde conferir |
+|---|---|---|
+| 9.1 | Problema central deixou de ser a classe negativa e passou a ser a heterogeneidade da evidência | §I, par. 4; `NOTA_versoes.md` §6 |
+| 9.2 | Harmonização virou o núcleo da Seção II e a etapa E2 | §II, primeiro bloco; §III |
+| 9.3 | Documento descreve um percurso único, não duas frentes | §I, par. 5; Fig. 1 |
+| 9.4 | Figura 1: coluna 2 é Harmonização, coluna 4 é Serviço | Fig. 1 |
+| 9.5 | Figura 2, painel (b): matriz de variável disponível por fonte | `fig/make_fig2.py` |
+| 9.6 | Etapas E5 (aplicação às regiões brasileiras) e E6 (serviço e explicação) são novas | §III |
+| 9.7 | Título alinhado ao arco: da evidência heterogênea ao serviço de inferência auditável | cabeçalho |
+| 9.8 | Pendência: curadoria/harmonização ainda não executada — é o entregável de E2 | `NOTA_versoes.md` §3 |
+
+---
+
+## 10. Pontos de dados e programação — o que a Seção II já assume como resolvido (E2)
+
+Isolado a pedido seu: só o que é trabalho de dado/código implícito nas suas
+próprias notas em Materiais e Métodos, na ordem em que o texto as levanta. Cada
+bloco cita a frase/nota de origem, decompõe em passo programável, e diz o que
+conta como pronto — no seu padrão de "critério de prova"
+(`PLANO_ACAO_produto_v1.md`), não "deveria funcionar".
+
+> **Status em 2026-08-14, conferido contra o commit `e627af3` (`ds03`-`ds05`,
+> `ter02`/`ter04`/`ter05`, `mod_mec02`, `aud_chuva01`)**: Bloco 1 **fechado** —
+> rodei o pipeline e o teste, artefatos batem com o relatório número a número.
+> Bloco 3 **fechado** — `nivel_negativo=ausência` para Curitiba confirmado no
+> dado. Bloco 2 **fechado para Curitiba, aberto para Petrópolis** — a derivação
+> de terreno existe na convenção nova, mas não há comparação bit a bit
+> registrada porque Petrópolis ainda tem zero pontos rotulados para comparar.
+> Achados novos da validação (não estavam no relatório): ver `## 12` abaixo.
+>
+> **`main.tex` já foi atualizado para v5** para refletir este status (E2
+> marcada concluída, Curitiba/Petrópolis diferenciados, base integrada tirada
+> da lista de pendências) — ver `NOTA_versoes.md` §8. Os achados do `## 12`
+> abaixo (mistura de chuva, TWI, teste de determinismo) **não** entraram no
+> `main.tex`: são achado novo ainda sem correção, e o documento desta entrega
+> não apresenta achado como resultado (regra §6.1).
+
+### Bloco 1 — A tabela única (o "dataset final/tabela de pontos")
+
+**Origem**: a nota que você deixou depois de "HAND das fontes externas vem de
+produto global de 30m — limitação declarada, não equivalência": *"eu faço esse
+ajuste de escopo, diminuindo e transformando todos os dados no dataset
+final/tabela de pontos antes de entregar o planejamento, vou deixar tudo
+perfeito no quesito dados e metodologia antes da entrega"*. É a mesma coisa que
+o parágrafo de abertura da Seção II já promete: *"Toda fonte passa por uma
+redução a tabela de pontos, e cada linha declara procedência, resolução
+nativa, unidade de agrupamento, classe de relevo e mecanismo."* Hoje isso não
+existe como um arquivo único — Recife (v12), Curitiba (SIAC 156) e as fontes
+externas (CEMS, EA/UK) vivem em três pipelines separados, cada um com seu
+próprio schema.
+
+| # | Passo | Entrada | Saída / critério de pronto |
+|---|---|---|---|
+| 1.1 | **Congelar o esquema-alvo** antes de programar qualquer redução (uma tarefa por vez: definir antes de popular) | as 7 colunas que o texto já promete: `fonte`, `AOI`, `nivel_negativo` (observado/exclusão/ausência), `unidade_agrupamento` (evento/AOI), `classe_relevo` (serra/planície), `mecanismo`, + as 6 variáveis físicas (elevação, declividade, HAND, TWI, `rain_max_24h`, `rain_decay_index`) | um arquivo de contrato (schema/dataclass/CSV header) versionado, sem nenhuma linha de dado ainda |
+| 1.2 | **Script de redução por fonte**, um por vez: Recife (v12, 278 pts) → Curitiba (SIAC 156, 1.471 unidades) → Copernicus EMS (EMSR720 RS + análogos serra/planície, 25.249 pts) → EA/UK (7.476 pts) | os datasets já existentes de cada fonte, cada um no seu schema atual | 4 arquivos (um por fonte) já no esquema-alvo, com `nivel_negativo` e `mecanismo` preenchidos por linha; onde uma variável não existe na fonte (ex.: chuva fora do piloto inglês), o campo fica nulo declarado, não estimado |
+| 1.3 | **Filtro de admissão dos três critérios** que o texto já define: dentro da AOI declarada; variáveis computadas na mesma cadeia; grupo de validação identificável | os 4 arquivos do passo 1.2 | cada linha rejeitada tem motivo nomeado registrado (fora da AOI / variável faltando / sem unidade de agrupamento) — isso é literalmente o "restante fica como proveniência, com o motivo do descarte nomeado" que o texto promete |
+| 1.4 | **Checagem de duplicidade entre fontes** (nenhum ponto pode existir em duas fontes) | os 4 arquivos filtrados | relatório de zero duplicatas, ou lista de conflitos resolvidos com critério declarado |
+| 1.5 | **Relatório de contagem** — quantos pontos entram e quantos saem por fonte, com o motivo | passos 1.3 e 1.4 | é o *Entregável* que a Seção III já promete para E2: "contagem do que entra e do que sai por fonte, com o motivo nomeado" — se esse relatório existir, E2 tem prova |
+| 1.6 | **Consolidação final** num único arquivo versionado | os 4 conjuntos admitidos | a "base de conhecimento geoespacial única" que a Seção II descreve deixa de ser frase e vira arquivo com caminho e hash/data |
+
+### Bloco 2 — Auditoria bit a bit da cadeia de terreno (Curitiba e Petrópolis)
+
+**Origem**: nota depois de "reproduzida *bit a bit* contra o raster de
+referência de Recife": *"eu to auditando isso das demais regiões que eu tenho,
+[...] quero colocar aqui o resultado mais atual que eu tiver nesse aspecto"*.
+Hoje só Recife tem essa auditoria (SUSC-20F: HAND/TWI batem exato contra o DTM
+PE3D merged; elevação/declividade com ~2,7m/5,6° de diferença histórica
+documentada, raster original não recuperável). Curitiba e Petrópolis usam o
+mesmo motor genérico (`susc_20g`, HAND/TWI/D-infinity) sem essa checagem
+independente registrada.
+
+| # | Passo | Critério de pronto |
+|---|---|---|
+| 2.1 | Escolher a fonte de terreno de referência de cada região (Tabela I já lista GLO-30 e SGB/CPRM como as outras duas, ao lado do PE3D 10m de Recife — confirmar qual serve de referência para Curitiba e qual para Petrópolis) | fonte nomeada e versão/data registradas, uma por região |
+| 2.2 | Rodar `susc_20g` numa amostra de células conhecidas de cada região e comparar HAND/TWI contra o cálculo de referência (mesmo método usado para validar Recife) | número real de erro (m ou %), não "deveria bater" |
+| 2.3 | Registrar o resultado no mesmo formato do achado de Recife (match exato ou diferença documentada + causa) | um arquivo/linha por região, pronto para entrar na Seção II quando você decidir atualizar o texto — não mexo nisso até você confirmar o número |
+
+### Bloco 3 — Curitiba: o dataset de 1.471 unidades ainda não está no esquema-alvo
+
+**Origem**: implícito no mesmo parágrafo do Bloco 1 — o texto lista "o conjunto
+de Curitiba, com 1.471 unidades" ao lado do que já está auditado, mas o SIAC
+156/SUSC-20N vive num pipeline próprio (`outputs_public/.../susc_20k`), sem os
+campos `nivel_negativo`/`unidade_agrupamento`/`classe_relevo` do esquema novo.
+Isso é o passo 1.2 aplicado especificamente a Curitiba, mas separo porque é
+onde a harmonização é mais trabalhosa: Curitiba não tem hoje um negativo
+*observado* (é ausência de registro, como Recife), então a coluna
+`nivel_negativo` para as 1.471 unidades precisa vir declarada como tal, não
+inferida.
+
+| # | Passo | Critério de pronto |
+|---|---|---|
+| 3.1 | Mapear as colunas atuais do dataset Curitiba (SUSC-20N) para o esquema-alvo do Bloco 1 | tabela de correspondência coluna-antiga → coluna-nova, sem perda de campo |
+| 3.2 | Declarar `nivel_negativo = ausência` para as 1.471 unidades, coerente com a hierarquia que a Seção II já define no texto | nenhuma linha de Curitiba entra como "observado" sem uma fonte real que justifique |
+
+**Como usar os Blocos 1-3**: são trabalho real de dado/código, não edição de
+texto — não faço eles por você. Quando concluir um passo, me diga qual, que eu
+confiro contra o artefato gerado (arquivo, contagem, número de erro) e ajusto
+só o ponto correspondente do `main.tex`, do mesmo jeito que fiz com as notas
+do rascunho anterior.
+
+---
+
+## 11. Outras pendências (não é dado, não é programação — fora do escopo pedido acima, registrado à parte)
+
+| # | Item | O que fazer |
+|---|---|---|
+| 11.1 | Posição do parágrafo de limitações: Materiais e Métodos (onde está) ou Descrição do Projeto? | Pedir ao orientador o documento de expectativas por seção; me diga o que ele disser e eu ajusto |
+| 11.2 | Pergunta já registrada em `NOTA_versoes.md` §4 ("plano por evidência vs. plano por data") | Conferir se já foi respondida pelo professor |
+| 11.3 | Turma e equipe ainda em vermelho como placeholder (`7A`/`N`) | `main.tex` linha 46 |
+| 11.4 | E-mail institucional — confirmar se é o correto | `main.tex` linha 46 |
+| 11.5 | Limite de 3 páginas — ambíguo no meu ambiente (sem hifenização de português) | Recompilar no Overleaf |
+| 11.6 | Seção I com **573 palavras** (recontado após v6), acima do limite de 500 (regra 1.1) — subiu de ~533-535 porque a v6 somou o problema de terreno generalizado e a referência brasileira, sem cortar nada em troca | Cortar ~70-75 palavras antes de entregar. Ainda não cortei nada por conta própria (regra desta conversa); candidato mais barato continua o mesmo apontado antes: o parágrafo 3 ("O plano se apoia...") tem repetição de "positivos oficiais/negativo observado" com o parágrafo 1 |
+| 11.7 | `Fig.~\ref{fig:datasets}` — compilou normal aqui após duas passadas | Confirmar no Overleaf |
+| 11.8 | Grep por overclaim ("validado", "confirmado", "comprovado", "ground truth") | Já rodado: zero ocorrências, sem ação |
+
+---
+
+## 12. Validação do commit `e627af3` (2026-08-14) — achados que o relatório não tinha
+
+Rodei o pipeline de ponta a ponta neste ambiente (`ds03`→`ds05`,
+`aud_chuva01`, e a suíte de teste) e conferi manifesto/CSV contra o texto de
+`ext_tabela_unica_e_pool_harmonizado_v1.md`. Os números do relatório batem
+exatamente com os artefatos (116.992/33.349/33.071, contagem por fonte,
+vereditos do `aud_chuva01` — só Recife é `MISTURA_DE_FONTES`, Curitiba e UK
+são `FONTE_UNICA`). Quatro coisas que a validação encontrou e o relatório não
+menciona:
+
+| # | Achado | Gravidade | O que fazer |
+|---|---|---|---|
+| 12.1 | **`test_consolidacao_e_deterministica` FALHOU aqui.** Rodei `pytest` na suíte inteira: 18/19 passam, esse falha. Investiguei a fundo: não é bug de dado — comparei os dois CSVs por conteúdo (ordenando por `ponto_id`) e são **idênticos**. O que muda é só a **ordem das linhas**, o que já basta para trocar o sha256. `carregar()` em `ds05` concatena as fontes numa ordem fixa, mas nada garante a ordem interna de cada arquivo do `ds04` — provavelmente herdada de alguma operação sem `sort_values`/chave estável rio acima. Rodei `ds05` três vezes seguidas aqui: as três bateram entre si, só divergiram do hash já gravado no manifesto (gerado antes, possivelmente noutra versão de pandas/numpy — `environment.yml` não fixa versão de nenhum dos dois) | **Alta** — é exatamente o tipo de coisa que o teste foi desenhado para pegar, e hoje ele pega até quando não há erro real, o que é tão ruim quanto não pegar | Ordenar explicitamente por `ponto_id` (ou outra chave estável) antes de gravar cada CSV em `ds04` e em `ds05`, e então re-gravar o hash de referência uma vez. Sem isso, o teste vai continuar quebrando em qualquer ambiente novo (você já recriou esse conda do zero uma vez em 06/08) mesmo com o pipeline correto |
+| 12.2 | Comentário no código de `ds05` (linha ~195) diz "209 linhas repetem unidade de observação" em Curitiba; o valor real no manifesto é **812**. Comentário desatualizado, não afeta o dado | Baixa | Atualizar o comentário para 812 quando for mexer nesse arquivo de novo |
+| 12.3 | Bloco 2 (auditoria bit a bit) **não fechou para Petrópolis**, e é estrutural, não esquecimento: `ter04` deriva o terreno de Petrópolis na mesma convenção (registrado em `registro_derivacoes.csv`), mas a comparação bit a bit só existe para Recife e Curitiba porque ela é feita **nos pontos rotulados**, e Petrópolis tem zero. Não dá pra fechar esse item sem rótulo — fica dependente de C4/decisão de Petrópolis, não de rodar mais um script | Informativa | Nenhuma ação de dado possível agora; só rastrear |
+| 12.4 | O próprio relatório já eleva isto a prioridade, e concordo pela medida: a fonte de chuva de Recife (CHIRPS × ERA5-Land na mesma coluna) tem AUC de indicador de fonte (0,826) maior que a própria chuva (0,738) — o preditor principal da trilha pluvial está parcialmente medindo proveniência, não precipitação | **Alta** | Reamostrar uma fonte única de chuva pros 278 pontos de Recife, como o relatório §4 já registra como pendente |
+
+**Reproduzido aqui**: `python -m pytest tests/test_ds03_ds05_tabela_unica.py -q`
+→ 18 passed, 1 failed (`test_consolidacao_e_deterministica`). Os outros 18,
+incluindo os que checam contrato, duplicidade cruzada e admissão pelos três
+critérios, passam limpos.

@@ -4,9 +4,8 @@
 %% Autora: Gabriela Sofia
 %% Formatação: IEEEtran conference (padrão do template dos professores)
 %% Compilar: pdflatex main && pdflatex main
-%% Versão: v6 (2026-08-14) — problema de terreno generalizado (não só cota
-%% rebaixada), referência brasileira somada à global, AOI justificada como
-%% unidade de retorno do produto, DINOv2 nomeado e ligado à explicação na Fig. 1.
+%% Versão: v3 (2026-08-13) — realinhada: heterogeneidade da evidência
+%% como problema central; percurso único; serviço auditável.
 %% =====================================================================
 \documentclass[conference]{IEEEtran}
 \IEEEoverridecommandlockouts
@@ -51,18 +50,13 @@ Turma \textcolor{red}{7A} --- Equipe \textcolor{red}{N}\\
 % =====================================================================
 \section{Descrição do Projeto}
 
-Enchentes, alagamentos e deslizamentos são o desastre de maior recorrência no
-Brasil, e atingem primeiro quem não escolheu onde morar. Relevo que não escoa
-a água e relevo que cede sob ela são duas faces da mesma vulnerabilidade
-física; da hostilidade desse relevo nasce a ocupação urbana precária, e dela,
-a vulnerabilidade social. Entre 2000 e 2018 a população exposta a inundação
-cresceu dez vezes acima do previsto, concentrada nessas áreas~\cite{tellman2021};
-no Brasil, mais de 8 milhões de pessoas moram em área de risco de inundação,
-enxurrada ou movimento de massa~\cite{ibge2018risco}. A atenção que um território recebe acompanha
+Enchentes e alagamentos são o desastre de maior recorrência no Brasil e atingem
+primeiro quem não escolheu onde morar: terreno baixo, drenagem insuficiente e
+ocupação precária são condição física e social ao mesmo tempo. Entre 2000 e 2018
+a população exposta a inundação cresceu dez vezes acima do previsto, concentrada
+nessas áreas~\cite{tellman2021}. A atenção que um território recebe acompanha
 essa desigualdade, e o dado também: o registro oficial nasce de quem consegue
-reportar e ser atendido --- a ausência não é de quem liga, é de poder público que
-alcance as áreas periféricas. O registro descreve o atendimento prestado, não a
-extensão real da água. Ausência de registro não é ausência de
+reportar, e descreve o atendimento, não a extensão da água. Ausência de registro não é ausência de
 evento~\cite{li2022pul,agostini2024}, e é daí que a pesquisa parte, atrás de
 positivos e negativos válidos.
 
@@ -71,13 +65,13 @@ forçamento de chuva: há enchente quando chega a um ponto mais água do que ele
 consegue escoar ou armazenar. Isso se decompõe em três grandezas. \emph{Quanto chega} é a chuva. \emph{Para onde
 converge} é o índice topográfico de umidade~\cite{beven1979}, que mede quanta
 encosta drena para ali. \emph{Quanto precisa subir para ser alcançado} é
-o HAND (\emph{Height Above the Nearest Drainage})~\cite{renno2008}: a altura do ponto acima do curso d'água que o drena, isto
+o HAND~\cite{renno2008}: a altura do ponto acima do curso d'água que o drena, isto
 é, a lâmina que o rio precisa ganhar para alcançá-lo. Ambas exigem saber por
 onde a água desce, e o D-infinity~\cite{tarboton1997} reparte o escoamento de
 cada célula entre direções contínuas, não em uma das oito vizinhas.
 
-O plano se apoia no artigo anterior: revisão de literatura e testes
-sucessivos já fixaram as decisões que mudaram a rota. Variável derivada
+O plano evolui do artigo anterior por revisão de literatura e testes
+sucessivos, e as decisões que mudaram a rota estão fixadas. Variável derivada
 do rótulo produz circularidade: a acurácia balanceada cai de 0,8855 para 0,4834
 sem elas. Composição estática de imagem orbital não carrega assinatura de evento
 pontual, em três tentativas independentes; ela passa a evidência de contexto e
@@ -140,7 +134,7 @@ a territórios urbanos vulneráveis sem inventário local de eventos?
 \node[box] (c1) at (58,-3)  {Procedência, resolução e\\ mecanismo por linha};
 \node[box] (c2) at (58,-14) {Geocodificação, recorte por\\ \textsc{aoi}, descarte documentado};
 \node[box] (c3) at (58,-25) {Elevação, declividade, HAND\\ e TWI por D-infinity; chuva};
-\node[aux] (c4) at (58,-37) {Similaridade via \textsc{dino}v2\\ entre áreas; fila de revisão};
+\node[aux] (c4) at (58,-37) {Semelhança entre áreas\\ vizinhas; fila de revisão};
 
 % ---- coluna 3
 \node[mdl] (m1) at (100,-3)  {\textbf{Firth penalizado}\\ 2--6 variáveis físicas\\ \emph{gate} EPV $\geq$ 10};
@@ -170,9 +164,6 @@ a territórios urbanos vulneráveis sem inventário local de eventos?
 \draw[blk] (b4) -- (c4);
 \draw[blk] (c4) -- (m4);
 \draw[blk] (m4.north) -- (m3.south);
-\draw[blk] (m4.south) -- (100,-48) -- (170,-48) -- (170,-28) -- (p3.east);
-\node[font=\scriptsize,text=cVerm,align=left,anchor=north west] at (150,-48)
-      {\textsc{dino}v2 ilustra a resposta};
 \node[draw=cVerm,cross out,line width=0.7pt,minimum size=2.8mm,inner sep=0pt] at (100,-32) {};
 \node[font=\scriptsize\bfseries,text=cVerm,align=right,anchor=east] at (96,-32) {Limite 1: nunca vira \emph{feature}};
 \node[draw=cVerd,fill=white,line width=0.5pt,rounded corners=1pt,align=center,
@@ -181,10 +172,8 @@ a territórios urbanos vulneráveis sem inventário local de eventos?
 \draw[arv] (p3) -- (pv);
 \end{tikzpicture}}
 \caption{Percurso único, da evidência ao serviço, e os dois limites que o
-governam: a camada orbital (vermelho), com similaridade extraída por
-\textsc{dino}v2, não entra no escore; ela chega à explicação como ilustração,
-nunca como \emph{feature}. O serviço (verde) só explica depois que os
-\emph{gates} decidiram.}
+governam: a camada orbital (vermelho) não entra no escore; o serviço (verde) só
+explica depois que os \emph{gates} decidiram.}
 \label{fig:pipeline}
 \end{figure*}
 
@@ -205,14 +194,11 @@ tem grupo de validação identificável; o restante fica como proveniência, com
 motivo do descarte nomeado.
 
 \textbf{Material próprio, material externo.} Já auditados: a cadeia de derivação
-de terreno, reproduzida \emph{bit a bit} contra o raster de referência em Recife
-e em Curitiba --- Petrópolis segue a mesma convenção de derivação, mas sem ponto
-rotulado para comparar; o modelo de Recife, com 278 pontos; o conjunto de
-Curitiba, com 1.471 unidades; a tabela única harmonizada das seis fontes; e o
-motor de inferência exposto por contrato. Externas: Copernicus EMS e Environment
-Agency do Reino Unido contribuem ponto ao ajuste fluvial; Sen1Floods11 e UFO
-estão no esquema, sem contribuição ainda por cadeia de terreno global. Falta a
-validação prospectiva e a camada de explicação.
+de terreno, reproduzida \emph{bit a bit} contra o raster de Recife; o modelo de
+Recife, com 278 pontos; o conjunto de Curitiba, com 1.471 unidades; e o motor de
+inferência exposto por contrato. Externas são as bases que publicam observação
+declarada de não-inundação. Falta a base integrada, a validação prospectiva e a
+camada de explicação.
 
 \textbf{Rótulo positivo e hierarquia do negativo.} Os positivos são eventos
 oficialmente registrados e geocodificados: Defesa Civil de Recife, SIAC 156 de
@@ -223,9 +209,7 @@ examinou e onde não detectou inundação, com o Copernicus EMS trazendo o tipo 
 evento separado na origem; \emph{exclusão qualificada}, do piloto inglês, por
 quatro critérios sobre os \emph{Recorded Flood Outlines}; e \emph{ausência de
 registro}, que é o que as três regiões brasileiras têm hoje. A unidade
-independente é o evento, ou a AOI, nunca o ponto --- é também a unidade que o
-produto devolve: o contrato de inferência responde por área, não por pixel, e
-validar no mesmo grão que se entrega é o que torna o resultado auditável.
+independente é o evento, ou a AOI, nunca o ponto.
 
 \textbf{Modelo, \emph{gates} e critérios fixados antes de rodar.} O estimador
 principal é a regressão logística penalizada de Firth~\cite{firth1993}, que reduz
@@ -251,14 +235,9 @@ quase 28\,m em serra.
 \textbf{Serviço e camada de explicação.} A API materializa um contrato: a
 requisição declara geometria, CRS, período e camadas; a resposta devolve
 \texttt{status}, maturidade da região, escore com intervalo, variáveis usadas e
-limitações, sempre junto de um \emph{model card}~\cite{mitchell2019} que declara
-região, maturidade e limites de uso --- auditável, aqui, significa rastreável:
-todo escore remonta ao \emph{gate} que o liberou. Quando um \emph{gate} não
-fecha, retorna \texttt{insufficient\_data} em vez de inventar escore; região sem
-modelo responde \texttt{region\_not\_supported}, nunca um escore por analogia. É
-sobre esse \emph{payload} já decidido que a camada de explicação atua --- o
-padrão de predição seletiva~\cite{mitchell2019}. O contrato roda hoje como MVP
-local para Recife.
+limitações. Quando um \emph{gate} não fecha, retorna \texttt{insufficient\_data}
+em vez de inventar escore. É sobre esse \emph{payload} já decidido que a camada
+de explicação atua --- o padrão de predição seletiva~\cite{mitchell2019}.
 
 \textbf{Infraestrutura, carga e ajustes de escopo.} O trabalho é individual e não
 requer GPU: o ajuste de Firth leva 0,056\,s e o de um modelo aditivo explicável
@@ -336,14 +315,11 @@ governança de \emph{claims}, teste de ablação e definição de qual documento
 o trabalho. \emph{Evidência}: artefatos versionados e uma afirmação de estado por
 arquivo.
 
-\textbf{E2 --- Integração e curadoria da evidência (M1, concluída).} Seis fontes
-reduzidas a uma tabela única, com procedência, resolução, unidade de
-agrupamento, classe de relevo e mecanismo por linha; recuperável geocodificado,
-descarte do restante nomeado. \emph{Entregável}: base de conhecimento
-geoespacial única, 33.071 pontos elegíveis ao ajuste fluvial. \emph{Evidência}:
-contagem do que entra e do que sai por fonte publicada; 18 de 19 testes de
-invariante passam, com a checagem de reprodutibilidade bit-exata ainda
-instável entre ambientes.
+\textbf{E2 --- Integração e curadoria da evidência (M1).} Reduzir cada fonte a tabela de
+pontos com procedência, resolução, unidade de agrupamento, classe de relevo e
+mecanismo; geocodificar o recuperável e registrar o descarte do restante.
+\emph{Entregável}: base de conhecimento geoespacial única. \emph{Evidência}: contagem
+do que entra e do que sai por fonte, com o motivo nomeado.
 
 \textbf{E3 --- Estimação e validação agrupada (M2).} Ajustar o modelo por classe
 de relevo, com validação agrupada e aplicação cruzada entre fontes de negativo.
@@ -429,11 +405,6 @@ Pôster e defesa            &   &   &   &   &   & X & X \\
 \bibitem{tellman2021}
 B. Tellman \emph{et al.}, ``Satellite imaging reveals increased proportion of
 population exposed to floods,'' \emph{Nature}, vol. 596, pp. 80--86, 2021.
-
-\bibitem{ibge2018risco}
-Instituto Brasileiro de Geografia e Estatística (IBGE), ``População em áreas
-de risco no Brasil,'' IBGE, Rio de Janeiro, Brazil, Tech. Rep., 2018. [Online].
-Available: \url{https://www.ibge.gov.br/geociencias/informacoes-ambientais/estudos-ambientais/21538-populacao-em-areas-de-risco-no-brasil.html}
 
 \bibitem{renno2008}
 C. D. Rennó \emph{et al.}, ``HAND, a new terrain descriptor using SRTM-DEM:
