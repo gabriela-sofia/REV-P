@@ -151,11 +151,15 @@ def auditar(nome: str, d: pd.DataFrame) -> dict:
         rel["veredito"] = "MISTURA_DE_FONTES"
 
     # 4. as duas fontes cobrem o mesmo periodo?
-    if "data_evento" in d.columns and d["data_evento"].notna().any():
+    # coercao explicita: coluna pode chegar como object com string e NaN
+    # misturados (ponto sem event_date na origem), e comparar os dois tipos
+    # direto quebra o min()/max(). NaT sai do calculo, nao vira 0.
+    dt_evento = pd.to_datetime(d["data_evento"], errors="coerce")
+    if dt_evento.notna().any():
         rel["periodo_por_fonte"] = {
-            f: {"min": str(s["data_evento"].min()), "max": str(s["data_evento"].max()),
-                "datas_distintas": int(s["data_evento"].nunique())}
-            for f, s in d.groupby("fonte_chuva") if s["data_evento"].notna().any()}
+            f: {"min": str(dt_evento[s.index].min()), "max": str(dt_evento[s.index].max()),
+                "datas_distintas": int(dt_evento[s.index].nunique())}
+            for f, s in d.groupby("fonte_chuva") if dt_evento[s.index].notna().any()}
     return rel
 
 

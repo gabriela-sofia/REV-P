@@ -294,25 +294,26 @@ def test_todo_valor_de_chuva_tem_fonte_declarada(unica):
         "valor de chuva sem fonte declarada")
 
 
-def test_recife_continua_registrado_com_mistura_de_fonte_de_chuva(unica):
-    """Guarda de regressao sobre o achado do aud_chuva01.
+def test_recife_tem_fonte_de_chuva_unica(unica):
+    """Guarda de regressao sobre a correcao do achado do aud_chuva01.
 
-    Recife carrega CHIRPS v2 e ERA5-Land na mesma coluna, e a fonte esta
-    associada ao rotulo. Se um dia a mistura for resolvida, este teste falha e
-    obriga a atualizar a auditoria junto -- que e o comportamento desejado.
+    Ate 2026-08-15 Recife carregava CHIRPS v2 (181 pontos) e Open-Meteo/
+    ERA5-Land (97 pontos) na mesma coluna, com a fonte associada ao rotulo
+    (AUC do indicador de fonte 0,826 > AUC da propria chuva 0,738). Corrigido
+    em 2026-08-16 por `chuva02_padronizar_fonte_unica_recife.py`: os 278
+    pontos passam a vir todos de Open-Meteo/ERA5-Land (decisao registrada em
+    `ext_chuva_fonte_unica_recife_v1.md`). Se este teste falhar, a mistura
+    voltou -- reveja o que reescreveu `recife_harmonizado.csv` antes de seguir.
     """
     rec = unica[(unica["fonte"] == "recife") & unica["rain_max_24h"].notna()]
     if rec.empty:
         pytest.skip("recife nao reduzido neste ambiente")
     fontes = set(rec["fonte_chuva"].unique())
-    assert len(fontes) > 1, (
-        "a mistura de fonte de chuva em Recife sumiu: atualize "
-        "aud_chuva01 e a documentacao antes de relaxar este teste")
-
-    aud = RUNS / "aud-chuva-01" / "auditoria_fonte_de_chuva.json"
-    _exige(aud, "python scripts/suscetibilidade/aud_chuva01_fontes_incompativeis.py")
-    m = json.loads(aud.read_text(encoding="utf-8"))
-    assert "recife" in m["fontes_com_mistura"]
+    assert len(fontes) == 1, (
+        f"Recife voltou a ter mais de uma fonte de chuva na mesma coluna: {fontes}. "
+        "Rode aud_chuva01 para medir o confundimento antes de admitir isso na base")
+    assert fontes == {"open_meteo_era5_land"}, (
+        f"fonte unica esperada e open_meteo_era5_land, achei {fontes}")
 
 
 def test_manifesto_registra_hash_do_consolidado():
