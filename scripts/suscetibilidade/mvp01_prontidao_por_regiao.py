@@ -30,9 +30,7 @@ mesmo assim o LOSO fica em 0,4997. Ter sinal interno e transferir sao coisas
 diferentes, e a posicao de MVP exige a segunda. Sem a quinta condicao, a
 matriz teria recomendado uma regiao onde o modelo nao funciona.
 
-Por isso ela separa **aplicavel** de **validavel** de **transferivel**.
-
-Por isso a matriz separa **aplicavel** de **validavel**. Petropolis e o caso
+Por isso ela separa **aplicavel**, **validavel** e **transferivel**. Petropolis e o caso
 extremo util: tem terreno na mesma convencao das outras 123 derivacoes e
 nenhum ponto rotulado. Da para APLICAR e nao da para VALIDAR. Anunciar uma
 regiao assim como disponivel seria servir predicao sem saber o que ela vale.
@@ -59,6 +57,7 @@ from ds03_esquema_alvo import VARIAVEIS_FISICAS, VERSAO  # noqa: E402
 REPO = Path(__file__).resolve().parents[2]
 RUNS = REPO / "local_runs"
 UNI = RUNS / "ds-05-tabela-unica" / f"tabela_unica_{VERSAO}.csv"
+MEC03 = RUNS / "mod-mec-03" / "resultado.json"
 MEC02 = RUNS / "mod-mec-02" / "resultado.json"
 PLUV01 = RUNS / "mod-pluv-01" / "resultado.json"
 TER01 = RUNS / "ter-01-cadeia-harmonizada"
@@ -74,6 +73,10 @@ CONTRASTE_MINIMO = 0.20
 # regiao pode receber predicao, mas ninguem pode afirmar que ela vale.
 AUC_TRANSFERE_MINIMO = 0.60
 
+# reamostragens do IC. Mesmo valor do aud_provenance01, semente propria fixa.
+N_BOOT = 2000
+SEMENTE = 20260816
+
 # regioes sem ponto rotulado, mas com terreno derivado na mesma convencao
 SO_TERRENO = {
     "petropolis": ("petropolis_harmonizado",
@@ -82,18 +85,79 @@ SO_TERRENO = {
 }
 
 
-def separacao(s: pd.DataFrame, y: np.ndarray) -> dict:
-    from sklearn.metrics import roc_auc_score
+def auc_posto(y: np.ndarray, s: np.ndarray) -> float | None:
+    """AUC por posto, sem sklearn no laco de bootstrap -- 2.000 chamadas."""
+    ok = np.isfinite(s)
+    y, s = y[ok], s[ok]
+    n1, n0 = int((y == 1).sum()), int((y == 0).sum())
+    if n1 == 0 or n0 == 0:
+        return None
+    r = pd.Series(s).rank().to_numpy()
+    return float((r[y == 1].sum() - n1 * (n1 + 1) / 2) / (n1 * n0))
 
-    fora = {}
+
+def ic_bootstrap(y: np.ndarray, s: np.ndarray, grupos: np.ndarray | None = None,
+                 n_boot: int = N_BOOT) -> list[float] | None:
+    """IC95 percentil. Reamostra GRUPO quando ha grupo, e nao linha.
+
+    POR QUE O GRUPO IMPORTA (Ploton et al., 2020, Nat. Commun. 11:4540): com
+    dado espacialmente autocorrelacionado, reamostrar linha trata pontos
+    vizinhos como observacoes independentes e estreita o intervalo
+    artificialmente. O mesmo mecanismo que infla validacao cruzada aleatoria
+    infla o IC. Reamostrar o grupo -- evento, AOI, chip -- preserva o bloco.
+    """
+    rng = np.random.default_rng(SEMENTE)
+    amostras = []
+    if grupos is None:
+        for _ in range(n_boot):
+            i = rng.integers(0, len(y), len(y))
+            v = auc_posto(y[i], s[i])
+            if v is not None:
+                amostras.append(v)
+    else:
+        unicos = pd.unique(grupos)
+        idx = {g: np.flatnonzero(grupos == g) for g in unicos}
+        for _ in range(n_boot):
+            esc = rng.choice(unicos, size=len(unicos), replace=True)
+            linhas = np.concatenate([idx[g] for g in esc])
+            v = auc_posto(y[linhas], s[linhas])
+            if v is not None:
+                amostras.append(v)
+    if len(amostras) < 30:
+        return None
+    lo, hi = np.percentile(amostras, [2.5, 97.5])
+    return [round(float(lo), 4), round(float(hi), 4)]
+
+
+def separacao(s: pd.DataFrame, y: np.ndarray) -> tuple[dict, dict]:
+    """Separacao por feature isolada, com IC no melhor valor.
+
+    O IC vai so na melhor: e ela que entra na condicao C4, e bootstrapar as
+    seis multiplicaria o custo por seis para informar o que nao decide nada.
+    """
+    fora, dados = {}, {}
     for f in VARIAVEIS_FISICAS:
-        v = pd.to_numeric(s[f], errors="coerce").to_numpy(dtype=float)
+        v = pd.to_numeric(s[f], errors="coerce").to_numpy(dtype="float64")
         ok = np.isfinite(v)
         if ok.sum() < 30 or len(np.unique(y[ok])) < 2:
             continue
-        a = float(roc_auc_score(y[ok], v[ok]))
+        a = auc_posto(y, v)
+        if a is None:
+            continue
         fora[f] = round(abs(a - 0.5) * 2, 4)
-    return fora
+        dados[f] = v
+    if not fora:
+        return {}, {}
+    melhor = max(fora, key=lambda k: fora[k])
+    g = s["grupo_cv"].to_numpy() if "grupo_cv" in s.columns else None
+    ic_auc = ic_bootstrap(y, dados[melhor], g)
+    # o IC e do AUC; a separacao e |2*(AUC-0,5)|, monotona por parte. Converter
+    # os dois extremos e reordenar da o intervalo da separacao.
+    ic_sep = (sorted(round(abs(x - 0.5) * 2, 4) for x in ic_auc)
+              if ic_auc else None)
+    return fora, {"feature": melhor, "separacao": fora[melhor],
+                  "auc": round(auc_posto(y, dados[melhor]), 4),
+                  "ic95_auc": ic_auc, "ic95_separacao": ic_sep}
 
 
 def main() -> int:
@@ -104,22 +168,33 @@ def main() -> int:
         return 1
     d = pd.read_csv(UNI, low_memory=False)
 
-    loso = {}
-    if MEC02.exists():
+    # o mec03 e preferido porque roda com as seis variaveis e ja traz IC; o
+    # mec02 fica de reserva, e ai o IC vem vazio em vez de inventado
+    loso, origem = {}, None
+    if MEC03.exists():
+        m = json.loads(MEC03.read_text(encoding="utf-8"))
+        for x in m.get("leave_one_source_out", []) or []:
+            loso[x["estrato"]] = {"auc": x.get("auc"), "ic95": x.get("ic95")}
+        origem = "mod-mec-03 (seis variaveis, IC por bootstrap de grupo)"
+    elif MEC02.exists():
         m = json.loads(MEC02.read_text(encoding="utf-8"))
         for x in (m.get("variantes", {}).get("AMPLIADO", {})
                   .get("leave_one_source_out", []) or []):
-            loso[x["estrato"]] = x.get("auc")
+            loso[x["estrato"]] = {"auc": x.get("auc"), "ic95": None}
+        origem = "mod-mec-02 (quatro variaveis, sem IC)"
     else:
-        print(f"AVISO: {MEC02} ausente -- sem validacao externa por fonte")
+        print("AVISO: nem mec03 nem mec02 -- sem validacao externa por fonte")
+    if origem:
+        print(f"validacao externa lida de: {origem}")
 
     linhas = []
     for fonte, s in d.groupby("fonte"):
         bin_ = s[s.classe.isin([0, 1])]
         y = bin_.classe.to_numpy().astype(int)
         seis = s[list(VARIAVEIS_FISICAS)].notna().all(axis=1)
-        sep = separacao(bin_, y) if len(bin_) and len(np.unique(y)) > 1 else {}
-        melhor = max(sep.values()) if sep else None
+        sep, melhor_det = (separacao(bin_, y)
+                           if len(bin_) and len(np.unique(y)) > 1 else ({}, {}))
+        melhor = melhor_det.get("separacao")
 
         linhas.append({
             "regiao": fonte,
@@ -136,7 +211,10 @@ def main() -> int:
             "nivel_negativo": "/".join(sorted(
                 x for x in s.loc[s.classe == 0, "nivel_negativo"].unique())),
             "melhor_separacao": melhor,
-            "loso_auc": loso.get(fonte),
+            "melhor_separacao_ic95": melhor_det.get("ic95_separacao"),
+            "melhor_separacao_feature": melhor_det.get("feature"),
+            "loso_auc": (loso.get(fonte) or {}).get("auc"),
+            "loso_ic95": (loso.get(fonte) or {}).get("ic95"),
         })
 
     for nome, (pasta, nota) in SO_TERRENO.items():
@@ -146,14 +224,38 @@ def main() -> int:
                        "com_6_variaveis": 0, "pct_6_variaveis": 0.0,
                        "fonte_chuva": "ausente", "mecanismo": "FLUVIAL_ENXURRADA",
                        "nivel_negativo": "", "melhor_separacao": None,
-                       "loso_auc": None, "nota": nota})
+                       "melhor_separacao_ic95": None,
+                       "melhor_separacao_feature": None,
+                       "loso_auc": None, "loso_ic95": None, "nota": nota})
 
     t = pd.DataFrame(linhas)
 
     # ---- as quatro condicoes, avaliadas ----
     t["c1_variaveis"] = t.pct_6_variaveis >= 95
     t["c2_aplicavel"] = t.cadeia.str.contains("wbt30")
-    t["c3_rotulo"] = (t.pos >= 30) & (t.neg >= 30)
+    # AUSENCIA DE REGISTRO NAO CONTA COMO NEGATIVO (decisao de 2026-08-16).
+    #
+    # Nao e negativo fraco -- e lacuna de dado. "Nao ha registro de enchente
+    # aqui" e afirmacao sobre o REGISTRO, nao sobre o lugar: pode nao ter
+    # inundado, pode ter inundado sem ninguem anotar. Tratar como classe 0
+    # ensina ao modelo que o lugar e seguro por uma razao que e do arquivo.
+    #
+    # Isso ja estava na hierarquia do ds01 ("ausencia nao entra"), e agora esta
+    # medido: o aud_provenance01 separa `ausencia` de `observado` com AUC 0,1913
+    # em elevacao (separacao 0,617) e 0,7962 em chuva antecedente. Nao sao a
+    # mesma populacao com confianca diferente, sao populacoes diferentes.
+    #
+    # Na pratica: o negativo que conta e o observado mais o por exclusao
+    # qualificada. Regiao cujo negativo e todo ausencia nao tem contra o que
+    # comparar, e a matriz precisa dizer isso em vez de exibir `neg` cheio.
+    neg_real = []
+    for _, r in t.iterrows():
+        niveis = {x for x in str(r.nivel_negativo).split("/") if x}
+        conta = niveis & {"observado", "exclusao_qualificada"}
+        neg_real.append(int(r.neg) if conta else 0)
+    t["neg_utilizavel"] = neg_real
+    t["neg_e_lacuna"] = t.neg_utilizavel.eq(0) & t.neg.gt(0)
+    t["c3_rotulo"] = (t.pos >= 30) & (t.neg_utilizavel >= 30)
     t["c4_contraste"] = t.melhor_separacao.fillna(0) >= CONTRASTE_MINIMO
     # C5 -- a condicao que faltava na primeira versao desta matriz, e que a
     # deixou aprovar Curitiba. Contraste interno acima do limiar NAO garante
@@ -165,9 +267,19 @@ def main() -> int:
     def veredito(r) -> str:
         if not r.c2_aplicavel:
             return "NAO_APLICAVEL_sem_cadeia_de_terreno"
+        # Regiao sem NENHUM ponto e caso de rotulo, nao de variavel. Petropolis
+        # tem terreno derivado na mesma convencao das outras 123 e aparecia como
+        # "faltam variaveis" so porque a cobertura de 0 linhas da 0%. O motivo
+        # verdadeiro -- nao ha o que cobrir -- ficava escondido atras de um
+        # sintoma, e quem lesse a matriz depois concluiria que falta aquisicao
+        # de variavel quando o que falta e evento rotulado.
+        if r.n == 0:
+            return "APLICAVEL_NAO_VALIDAVEL_sem_rotulo"
         if not r.c1_variaveis:
             return "APLICAVEL_INCOMPLETO_faltam_variaveis"
         if not r.c3_rotulo:
+            if r.neg_e_lacuna:
+                return "APLICAVEL_NAO_VALIDAVEL_negativo_e_lacuna_de_dado"
             return "APLICAVEL_NAO_VALIDAVEL_sem_rotulo"
         if not r.c4_contraste:
             return "APLICAVEL_NAO_VALIDAVEL_sem_contraste"
@@ -180,8 +292,17 @@ def main() -> int:
     t["veredito"] = t.apply(veredito, axis=1)
 
     print("\n--- MATRIZ DE PRONTIDAO ---")
-    print(t[["regiao", "n", "pos", "neg", "pct_6_variaveis", "fonte_chuva",
-             "melhor_separacao", "loso_auc", "veredito"]].to_string(index=False))
+    # `nivel_negativo` passa a ser impresso, e nao so gravado no CSV. O
+    # aud_provenance01 mediu que os tres niveis sao fisicamente distintos --
+    # rain_max_24h separa exclusao de observado com AUC 0,8120 -- e que cada
+    # nivel vive numa regiao diferente, sem sobreposicao. Comparar a coluna
+    # `neg` entre regioes sem essa ao lado compara coisas diferentes.
+    print(t[["regiao", "n", "pos", "neg", "neg_utilizavel", "nivel_negativo",
+             "melhor_separacao", "melhor_separacao_ic95", "loso_auc",
+             "loso_ic95", "veredito"]].to_string(index=False))
+    print("  `neg` conta tudo; `neg_utilizavel` exclui ausencia de registro, "
+          "que e lacuna de dado e nao observacao de que nao houve enchente")
+    print("  cada nivel de negativo vive numa regiao so -- ver aud_provenance01")
 
     print("\n--- AS CINCO CONDICOES ---")
     print(t[["regiao", "c1_variaveis", "c2_aplicavel", "c3_rotulo",
@@ -190,10 +311,17 @@ def main() -> int:
     cand = t[t.veredito == "CANDIDATA_A_MVP"]
     print(f"\n--- CANDIDATAS: {len(cand)} ---")
     for _, r in cand.iterrows():
-        val = (f"validacao externa (treinado fora, testado la) = {r.loso_auc}"
-               if r.loso_auc is not None else
-               "sem validacao externa medida no pool")
-        print(f"  {r.regiao}: contraste {r.melhor_separacao}, {val}")
+        val = (f"transferencia {r.loso_auc} IC95 {r.loso_ic95}"
+               if r.loso_auc is not None and not pd.isna(r.loso_auc)
+               else "sem validacao externa medida no pool")
+        folga = ""
+        if isinstance(r.loso_ic95, list) and r.loso_ic95:
+            folga = (" -- LIMIAR DENTRO DO IC, aprovacao marginal"
+                     if r.loso_ic95[0] < AUC_TRANSFERE_MINIMO
+                     else " -- IC inteiro acima do limiar")
+        print(f"  {r.regiao}: contraste {r.melhor_separacao} "
+              f"IC95 {r.melhor_separacao_ic95} em {r.melhor_separacao_feature}, "
+              f"{val}{folga}")
 
     if PLUV01.exists():
         p = json.loads(PLUV01.read_text(encoding="utf-8"))

@@ -136,26 +136,78 @@ def avaliar(d: pd.DataFrame, feats: list[str], folds: list, rng) -> dict:
             "veredito": "COERENTE_COM_CRITERIOS" if not falhas else "FORA_DOS_CRITERIOS"}
 
 
-def transferir(d: pd.DataFrame, feats: list[str], coluna: str) -> list[dict]:
+def _auc_posto(y: np.ndarray, s: np.ndarray) -> float | None:
+    """AUC por posto. No laco de bootstrap isto roda milhares de vezes."""
+    n1, n0 = int((y == 1).sum()), int((y == 0).sum())
+    if n1 == 0 or n0 == 0:
+        return None
+    r = pd.Series(s).rank().to_numpy()
+    return float((r[y == 1].sum() - n1 * (n1 + 1) / 2) / (n1 * n0))
+
+
+def transferir(d: pd.DataFrame, feats: list[str], coluna: str,
+               n_boot: int = 2000) -> list[dict]:
+    """Treina fora do estrato, testa dentro, com IC no estimador.
+
+    POR QUE O IC NAO E ENFEITE (Ploton et al., 2020, Nat. Commun. 11:4540):
+    sem intervalo, 0,7382 e 0,6100 parecem igualmente solidos, e nao sao. Numa
+    matriz de decisao onde o limiar e 0,60, uma aprovacao que encosta no limiar
+    e uma que sobra precisam ser distinguiveis -- caso contrario o limiar
+    decide sozinho, sem dizer com quanta confianca.
+
+    O bootstrap reamostra GRUPO do conjunto de teste, nao linha. Ploton mostra
+    que com dado espacialmente autocorrelacionado tratar pontos vizinhos como
+    independentes infla a confianca; o mecanismo que estreita o IC e o mesmo
+    que infla a validacao cruzada aleatoria. Aqui o grupo e evento, AOI ou
+    chip, entao reamostra-lo preserva o bloco espacial.
+
+    O modelo fica FIXO durante o bootstrap. O que se mede e a variabilidade do
+    ESTIMADOR sobre a amostra de teste, e nao a instabilidade do ajuste -- essa
+    ja esta medida no IC dos coeficientes.
+    """
     from sklearn.metrics import roc_auc_score
 
     y = d.classe.to_numpy().astype(int)
     X = d[feats].to_numpy(dtype=float)
+    rng = np.random.default_rng(SEMENTE)
     saida = []
     for valor in sorted(d[coluna].dropna().unique()):
         te = (d[coluna] == valor).to_numpy()
         tr = ~te
         linha = {"estrato": str(valor), "n_teste": int(te.sum()),
-                 "pos_teste": int(y[te].sum())}
+                 "pos_teste": int(y[te].sum()),
+                 "grupos_teste": int(d.loc[te, "grupo_cv"].nunique())}
         if len(np.unique(y[te])) < 2 or len(np.unique(y[tr])) < 2 or tr.sum() < 50:
             linha["auc"] = None
+            linha["ic95"] = None
             linha["motivo"] = "estrato ou treino sem as duas classes"
+            saida.append(linha)
+            continue
+
+        mu, sd = X[tr].mean(0), X[tr].std(0)
+        sd = np.where(sd == 0, 1, sd)
+        m = ajustar((X[tr] - mu) / sd, y[tr])
+        p = m.predict_proba((X[te] - mu) / sd)[:, 1]
+        yte = y[te]
+        linha["auc"] = round(float(roc_auc_score(yte, p)), 4)
+
+        grupos = d.loc[te, "grupo_cv"].to_numpy()
+        unicos = pd.unique(grupos)
+        idx = {g: np.flatnonzero(grupos == g) for g in unicos}
+        amostras = []
+        for _ in range(n_boot):
+            esc = rng.choice(unicos, size=len(unicos), replace=True)
+            linhas = np.concatenate([idx[g] for g in esc])
+            v = _auc_posto(yte[linhas], p[linhas])
+            if v is not None:
+                amostras.append(v)
+        if len(amostras) >= 30:
+            lo, hi = np.percentile(amostras, [2.5, 97.5])
+            linha["ic95"] = [round(float(lo), 4), round(float(hi), 4)]
+            linha["n_grupos_bootstrap"] = int(len(unicos))
         else:
-            mu, sd = X[tr].mean(0), X[tr].std(0)
-            sd = np.where(sd == 0, 1, sd)
-            m = ajustar((X[tr] - mu) / sd, y[tr])
-            linha["auc"] = round(float(roc_auc_score(
-                y[te], m.predict_proba((X[te] - mu) / sd)[:, 1])), 4)
+            linha["ic95"] = None
+            linha["motivo_sem_ic"] = "menos de 30 reamostragens validas"
         saida.append(linha)
     return saida
 
@@ -243,14 +295,15 @@ def main() -> int:
     loso = transferir(d, feats, "fonte")
     for x in loso:
         print(f"  sem {x['estrato']:14s} -> "
-              + (f"AUC={x['auc']:.4f} (n={x['n_teste']:,})" if x["auc"]
-                 else f"INDEFINIDO ({x.get('motivo')})"))
+              + (f"AUC={x['auc']:.4f} IC95={x.get('ic95')} "
+                 f"(n={x['n_teste']:,}, grupos={x.get('grupos_teste')})"
+                 if x["auc"] else f"INDEFINIDO ({x.get('motivo')})"))
     print("\n--- TRANSFERENCIA ENTRE CLASSES DE RELEVO (seis variaveis) ---")
     relevo = transferir(d, feats, "classe_relevo")
     for x in relevo:
         print(f"  treinar fora de {x['estrato']:20s} -> "
-              + (f"AUC={x['auc']:.4f} (n={x['n_teste']:,})" if x["auc"]
-                 else "INDEFINIDO"))
+              + (f"AUC={x['auc']:.4f} IC95={x.get('ic95')} (n={x['n_teste']:,})"
+                 if x["auc"] else "INDEFINIDO"))
 
     saida = {
         "entrada": str(ENTRADA.relative_to(REPO)),
