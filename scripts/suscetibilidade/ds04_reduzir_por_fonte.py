@@ -26,12 +26,15 @@ DECISOES DE TRADUCAO QUE PRECISAM ESTAR DECLARADAS, porque nenhuma e obvia:
   CURITIBA entra em cadeia wbt30, porque e fluvial e o pool fluvial exige a
   mesma derivacao em todas as regioes.
 
-  O NEGATIVO DE CURITIBA e declarado `ausencia`, nao `observado`. O campo de
-  origem diz `siac156_curitiba_non_hydrological_category_v1`: existe um chamado
-  no 156 e o assunto nao era hidrologico. Isso nao e "a area foi analisada e
-  nao havia inundacao" -- e ausencia de registro de inundacao onde ha registro
-  de outra coisa. Promover isso a negativo observado seria o erro que a
-  hierarquia do ds01 existe para impedir.
+  O NEGATIVO DE CURITIBA entra como `ausencia` e sobe para
+  `exclusao_qualificada` onde o `neg01` provar que o silencio informa. O campo
+  de origem diz `siac156_curitiba_non_hydrological_category_v1`: existe um
+  chamado no 156 e o assunto nao era hidrologico. Isso nunca e "a area foi
+  analisada e nao havia inundacao" -- entao `observado` esta fora dos dois
+  jeitos. Mas tambem nao e silencio: o `neg01` checa contra a base bruta do 156
+  se o canal estava ativo naquele dia e se a cidade registrou alagamento em
+  algum lugar. Passando nos quatro criterios, o ponto vira exclusao
+  qualificada, o mesmo nivel do piloto ingles; 114 de 442 passam.
 
   CLASSE DE RELEVO tem tres procedencias diferentes e a coluna
   `classe_relevo_base` diz qual: medida na janela do raster (CEMS, criterio
@@ -78,6 +81,8 @@ HARM_SERRA = RUNS / "ter-02-comparacao" / "dataset_serra_harmonizado.csv"
 HARM_UK = RUNS / "ter-02-comparacao" / "dataset_harmonizado_uk.csv"
 HARM_N1 = RUNS / "ter-02-comparacao" / "dataset_harmonizado_nivel1.csv"
 CHUVA_GLOBAL = RUNS / "chuva-04-era5-global" / "chuva_era5_por_ponto.csv"
+NEG_RECLASS = (RUNS / "neg-01-exclusao-qualificada"
+               / "curitiba_reclassificacao_negativo.csv")
 HARM_BR = RUNS / "ter-03-brasil-harmonizado"
 RELEVO_AOI = RUNS / "cems-02-analogos-v2" / "verificacao_relevo_por_aoi.csv"
 
@@ -120,6 +125,30 @@ def sobrepor_chuva_era5(d: pd.DataFrame) -> pd.DataFrame:
                         if x.endswith("_era5") or x in ("dt", "precisao_data")])
     print(f"   chuva: {int(tem.sum()):,} pontos em ERA5-Land, "
           f"{int((~tem).sum()):,} sem")
+    return d
+
+
+def sobrepor_nivel_negativo(d: pd.DataFrame) -> pd.DataFrame:
+    """Aplica a reclassificacao do `neg01`, que so SOBE de ausencia.
+
+    O registro traz o resultado dos quatro criterios N1-N4 avaliados contra a
+    base bruta do 156. Ponto aprovado vira `exclusao_qualificada`; reprovado
+    continua `ausencia`. A guarda de sentido unico e proposital: este caminho
+    nunca rebaixa nem promove a `observado` -- observado exige que alguem tenha
+    olhado, e chamado de outro assunto nao e vistoria.
+    """
+    if not NEG_RECLASS.exists():
+        return d
+    r = pd.read_csv(NEG_RECLASS, low_memory=False)
+    r = r.loc[r["aprovado"].astype(bool), ["ponto_id", "nivel_negativo_novo"]]
+    if r.empty:
+        return d
+    mapa = dict(zip(r["ponto_id"].astype(str), r["nivel_negativo_novo"]))
+    alvo = (d["ponto_id"].astype(str).isin(mapa)
+            & (d["nivel_negativo"] == "ausencia"))
+    d.loc[alvo, "nivel_negativo"] = d.loc[alvo, "ponto_id"].astype(str).map(mapa)
+    print(f"   negativo: {int(alvo.sum()):,} de ausencia -> "
+          f"exclusao_qualificada (neg01, criterios N1-N4)")
     return d
 
 
@@ -364,6 +393,8 @@ def _reduzir_brasil(nome: str, cfg: dict, sufixo_terreno: str,
     src = b.get("rain_data_source")
     d["fonte_chuva"] = (src.map(MAPA_FONTE_CHUVA).fillna("ausente")
                         if src is not None else "ausente")
+
+    d = sobrepor_nivel_negativo(d)
 
     diag = {"n": int(len(d)), "grupos": int(d["grupo_cv"].nunique()),
             "point_id_repetido_na_origem": n_repetidos,

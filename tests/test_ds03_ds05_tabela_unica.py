@@ -97,18 +97,46 @@ def test_toda_fonte_reduzida_respeita_o_contrato():
     assert achou, "nenhuma fonte reduzida encontrada"
 
 
-def test_curitiba_nao_entra_como_negativo_observado():
-    """Bloco 3 do checklist: o negativo de Curitiba e ausencia de registro.
+def test_curitiba_nunca_entra_como_negativo_observado():
+    """O negativo de Curitiba nunca pode chegar a `observado`.
 
     O campo de origem diz que houve chamado no 156 e o assunto nao era
-    hidrologico. Isso nao e "a area foi analisada e nao havia inundacao".
+    hidrologico. Isso nunca e "a area foi analisada e nao havia inundacao" --
+    ninguem vistoriou o ponto. `observado` esta fora por definicao.
+
+    O que MUDA e o degrau abaixo: desde o `neg01`, parte dos pontos sobe de
+    `ausencia` para `exclusao_qualificada` quando os quatro criterios N1-N4
+    provam que o silencio informa. A invariante testada e o teto, nao a
+    contagem -- ela muda quando a base do 156 e reprocessada.
     """
     p = RED / "curitiba.csv"
     _exige(p, "python scripts/suscetibilidade/ds04_reduzir_por_fonte.py --fonte curitiba")
     d = pd.read_csv(p, low_memory=False)
     neg = d[d["classe"] == 0]
     assert len(neg) > 0
-    assert set(neg["nivel_negativo"].unique()) == {"ausencia"}
+    niveis = set(neg["nivel_negativo"].unique())
+    assert "observado" not in niveis, (
+        f"Curitiba chegou a negativo observado: {niveis}")
+    assert niveis <= {"ausencia", "exclusao_qualificada"}, (
+        f"nivel inesperado no negativo de Curitiba: {niveis}")
+
+
+def test_reclassificacao_de_negativo_so_sobe_de_ausencia():
+    """O `neg01` e caminho de sentido unico: nunca rebaixa, nunca vira observado."""
+    p = RUNS / "neg-01-exclusao-qualificada" / "curitiba_reclassificacao_negativo.csv"
+    _exige(p, "python scripts/suscetibilidade/neg01_exclusao_qualificada_temporal.py")
+    r = pd.read_csv(p, low_memory=False)
+    assert set(r["nivel_negativo_novo"].unique()) <= {"ausencia",
+                                                      "exclusao_qualificada"}
+    # aprovado <=> subiu; reprovado <=> ficou onde estava
+    assert (r.loc[r["aprovado"].astype(bool), "nivel_negativo_novo"]
+            == "exclusao_qualificada").all()
+    assert (r.loc[~r["aprovado"].astype(bool), "nivel_negativo_novo"]
+            == "ausencia").all()
+    # e todo aprovado passou nos QUATRO criterios, nao em tres
+    crit = [c for c in r.columns if c.startswith(("n1_", "n2_", "n3_", "n4_"))]
+    assert len(crit) == 4
+    assert r.loc[r["aprovado"].astype(bool), crit].all(axis=1).all()
 
 
 def test_toda_fonte_canonica_esta_em_wbt30():

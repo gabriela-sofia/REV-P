@@ -111,15 +111,42 @@ piloto inglês; `ausencia` só em Curitiba e Recife. Nesses dados, nível de
 negativo e região são a mesma variável — não há como separar o efeito de um do
 outro.
 
-### Consequência que precisa ficar dita
+### O que a regra devolveu, e o que ficou
 
-Aplicada a regra, **Recife e Curitiba ficam com zero negativos utilizáveis**. O
-modelo pluvial de Recife é positivo contra não-rotulado, e seu LOO-AUC de 0,6339
-não é discriminação contra negativo observado. Isso não invalida o número; muda
-o que ele significa, e o registro de regiões precisa refletir isso.
+Aplicada a regra, Recife e Curitiba ficaram com zero negativos utilizáveis. O
+`neg01` recuperou parte disso para Curitiba — não promovendo ausência a
+negativo, mas mostrando que ela nunca tinha sido ausência.
 
-O caminho que a literatura oferece para esse caso é avaliação PU — positivo
-contra fundo da própria AOI — em vez de AUC com negativo. Não está implementado.
+Cada um dos 442 pontos **é um chamado ao 156, daquele endereço, naquele dia,
+sobre outro assunto**. Isso prova que o canal funcionava, que o endereço o usa,
+e que a pessoa reportou outra coisa. Não prova que alguém vistoriou o ponto —
+então o destino é `exclusao_qualificada`, o mesmo nível do piloto inglês, e
+nunca `observado`. Os critérios espelham o N1–N4 inglês e foram avaliados
+contra a base bruta do 156 (2.580.703 chamados, 1.306 dias):
+
+| critério | passa |
+|---|---|
+| N1 volume diário ≥ p25 (1.216 chamados) | 368/442 |
+| N2 houve chamado de inundação na cidade naquele dia | 124/442 |
+| N3 o ponto é chamado daquele endereço, outro assunto | 442/442 |
+| N4 ≥ 500 m de positivo da mesma data | 442/442 |
+
+**114 passam nos quatro.** Os 328 restantes seguem `ausencia`, quase todos
+barrados pelo N2: em 70% dos dias a cidade não registrou alagamento nenhum, e
+nesses dias o silêncio do ponto não informa nada.
+
+O ganho não é o número — é que o teste passou a valer. Com negativo por
+exclusão qualificada, o LOSO de Curitiba deixa de ser ininterpretável e dá
+**0,4636 [0,4044; 0,5253]**, com o intervalo inteiro abaixo do limiar de 0,60.
+Antes, o 0,4997 podia ser propriedade do rótulo; agora é resultado sobre o
+modelo, no mesmo tipo de negativo em que o piloto inglês dá 0,7346.
+
+**Recife continua sem.** O repositório não tem o fluxo completo de chamados da
+SEDEC, só os 278 pontos do v12, então N1 e N2 não podem ser avaliados. O modelo
+pluvial de Recife segue sendo positivo contra não-rotulado, e seu LOO-AUC de
+0,6339 não é discriminação contra negativo observado — o registro de regiões
+precisa refletir isso. O caminho alternativo é avaliação PU, positivo contra
+fundo da própria AOI; não está implementado.
 
 ---
 

@@ -73,6 +73,9 @@ CONTRASTE_MINIMO = 0.20
 # regiao pode receber predicao, mas ninguem pode afirmar que ela vale.
 AUC_TRANSFERE_MINIMO = 0.60
 
+# niveis que contam como negativo. Ausencia e lacuna de dado e fica de fora.
+NEGATIVO_UTILIZAVEL = ("observado", "exclusao_qualificada")
+
 # reamostragens do IC. Mesmo valor do aud_provenance01, semente propria fixa.
 N_BOOT = 2000
 SEMENTE = 20260816
@@ -210,6 +213,8 @@ def main() -> int:
             "mecanismo": "/".join(sorted(s.mecanismo.unique())),
             "nivel_negativo": "/".join(sorted(
                 x for x in s.loc[s.classe == 0, "nivel_negativo"].unique())),
+            "neg_utilizavel": int(s.loc[s.classe == 0, "nivel_negativo"]
+                                  .isin(NEGATIVO_UTILIZAVEL).sum()),
             "melhor_separacao": melhor,
             "melhor_separacao_ic95": melhor_det.get("ic95_separacao"),
             "melhor_separacao_feature": melhor_det.get("feature"),
@@ -223,7 +228,8 @@ def main() -> int:
                        "cadeia": "wbt30" if tem else "ausente",
                        "com_6_variaveis": 0, "pct_6_variaveis": 0.0,
                        "fonte_chuva": "ausente", "mecanismo": "FLUVIAL_ENXURRADA",
-                       "nivel_negativo": "", "melhor_separacao": None,
+                       "nivel_negativo": "", "neg_utilizavel": 0,
+                       "melhor_separacao": None,
                        "melhor_separacao_ic95": None,
                        "melhor_separacao_feature": None,
                        "loso_auc": None, "loso_ic95": None, "nota": nota})
@@ -245,15 +251,10 @@ def main() -> int:
     # em elevacao (separacao 0,617) e 0,7962 em chuva antecedente. Nao sao a
     # mesma populacao com confianca diferente, sao populacoes diferentes.
     #
-    # Na pratica: o negativo que conta e o observado mais o por exclusao
-    # qualificada. Regiao cujo negativo e todo ausencia nao tem contra o que
-    # comparar, e a matriz precisa dizer isso em vez de exibir `neg` cheio.
-    neg_real = []
-    for _, r in t.iterrows():
-        niveis = {x for x in str(r.nivel_negativo).split("/") if x}
-        conta = niveis & {"observado", "exclusao_qualificada"}
-        neg_real.append(int(r.neg) if conta else 0)
-    t["neg_utilizavel"] = neg_real
+    # `neg_utilizavel` e contado POR LINHA, na origem. A primeira versao deduzia
+    # do texto agregado de niveis e dava o total inteiro para qualquer regiao com
+    # ao menos um nivel utilizavel -- Curitiba aparecia com 442 quando so 114
+    # tinham subido de ausencia. Erro de agregacao, nao de criterio.
     t["neg_e_lacuna"] = t.neg_utilizavel.eq(0) & t.neg.gt(0)
     t["c3_rotulo"] = (t.pos >= 30) & (t.neg_utilizavel >= 30)
     t["c4_contraste"] = t.melhor_separacao.fillna(0) >= CONTRASTE_MINIMO
