@@ -81,8 +81,7 @@ HARM_SERRA = RUNS / "ter-02-comparacao" / "dataset_serra_harmonizado.csv"
 HARM_UK = RUNS / "ter-02-comparacao" / "dataset_harmonizado_uk.csv"
 HARM_N1 = RUNS / "ter-02-comparacao" / "dataset_harmonizado_nivel1.csv"
 CHUVA_GLOBAL = RUNS / "chuva-04-era5-global" / "chuva_era5_por_ponto.csv"
-NEG_RECLASS = (RUNS / "neg-01-exclusao-qualificada"
-               / "curitiba_reclassificacao_negativo.csv")
+NEG_RECLASS_DIR = RUNS / "neg-01-exclusao-qualificada"
 HARM_BR = RUNS / "ter-03-brasil-harmonizado"
 RELEVO_AOI = RUNS / "cems-02-analogos-v2" / "verificacao_relevo_por_aoi.csv"
 
@@ -137,9 +136,11 @@ def sobrepor_nivel_negativo(d: pd.DataFrame) -> pd.DataFrame:
     nunca rebaixa nem promove a `observado` -- observado exige que alguem tenha
     olhado, e chamado de outro assunto nao e vistoria.
     """
-    if not NEG_RECLASS.exists():
+    arquivos = sorted(NEG_RECLASS_DIR.glob("*_reclassificacao_negativo.csv"))
+    if not arquivos:
         return d
-    r = pd.read_csv(NEG_RECLASS, low_memory=False)
+    r = pd.concat([pd.read_csv(a, low_memory=False) for a in arquivos],
+                  ignore_index=True)
     r = r.loc[r["aprovado"].astype(bool), ["ponto_id", "nivel_negativo_novo"]]
     if r.empty:
         return d
