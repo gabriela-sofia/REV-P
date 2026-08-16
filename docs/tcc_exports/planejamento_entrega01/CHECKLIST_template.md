@@ -301,7 +301,7 @@ do rascunho anterior.
 | 11.3 | Turma e equipe ainda em vermelho como placeholder (`7A`/`N`) | `main.tex` linha 46 |
 | 11.4 | E-mail institucional — confirmar se é o correto | `main.tex` linha 46 |
 | 11.5 | Limite de 3 páginas — ambíguo no meu ambiente (sem hifenização de português) | Recompilar no Overleaf |
-| 11.6 | Seção I com **573 palavras** (recontado após v6), acima do limite de 500 (regra 1.1) — subiu de ~533-535 porque a v6 somou o problema de terreno generalizado e a referência brasileira, sem cortar nada em troca | Cortar ~70-75 palavras antes de entregar. Ainda não cortei nada por conta própria (regra desta conversa); candidato mais barato continua o mesmo apontado antes: o parágrafo 3 ("O plano se apoia...") tem repetição de "positivos oficiais/negativo observado" com o parágrafo 1 |
+| 11.6 | Seção I com **573 palavras** (recontado após v7), acima do limite de 500 (regra 1.1) — igual à v6: a v7 corrigiu "a resolução segue o mecanismo" (decisão revertida em `90ecb5c`) por uma frase mais longa e correta no parágrafo 3, então o total não mudou | Cortar ~70-75 palavras antes de entregar. Ainda não cortei nada por conta própria (regra desta conversa); candidato mais barato continua o parágrafo 3 ("O plano se apoia..."), que soma decisões já implícitas no parágrafo 1 — a correção da v7 tornou uma de suas frases um pouco mais longa, não elimina o candidato |
 | 11.7 | `Fig.~\ref{fig:datasets}` — compilou normal aqui após duas passadas | Confirmar no Overleaf |
 | 11.8 | Grep por overclaim ("validado", "confirmado", "comprovado", "ground truth") | Já rodado: zero ocorrências, sem ação |
 
@@ -328,3 +328,90 @@ menciona:
 → 18 passed, 1 failed (`test_consolidacao_e_deterministica`). Os outros 18,
 incluindo os que checam contrato, duplicidade cruzada e admissão pelos três
 critérios, passam limpos.
+
+---
+
+## 13. Validação do commit `90ecb5c` (2026-08-15) — resolução única de 30 m
+
+Este é o commit sem push que trabalha a lacuna de 30 m em Recife (não é
+nenhum dos seis que você colou — aqueles são trabalho posterior: gate #8,
+Protocolo C, feature store DINO, DINO×SEDEC, reexecução do pipeline oficial.
+`90ecb5c` vem antes de todos eles).
+
+**Veredito**: a estratégia é sólida e resolve a lacuna. Não é o caso de ir
+atrás de dado alternativo em 30 m nativo — a solução (b) que você cogitou,
+resolver cientificamente, é a que já está no commit e ela é suficiente.
+Confirmei cada número do relatório contra o artefato real, não contra o
+texto:
+
+| Número citado | Artefato conferido | Bate? |
+|---|---|---|
+| 89.065 admitidos / 64.989 pool / 4 fontes no pool / 0 em cadeia global | `local_runs/ds-05-tabela-unica/manifesto_v1.json` | Sim, exato |
+| 782 derivações; 658 chips Nível 1 | `local_runs/ter-04-registro-auditoria/registro_auditoria.json` | Sim, exato |
+| 658/661 chips, 0 rede degenerada, pearson elevação 1,000 / HAND 0,946 | `local_runs/_ter06.log` | Sim, exato |
+| AUC 0,7241 (ESTRITO) / 0,7198 (AMPLIADO); HAND −1,3636; TWI +0,4888; declividade +0,0310 [IC cruza zero] | `local_runs/mod-mec-02/resultado.json` (regravado 5 min antes do commit) | Sim, exato |
+| LOSO Curitiba 0,4997; melhor separação isolada 0,186 | idem | Sim, exato |
+| Transferência planície→serra 0,8018; serra→planície 0,6881 | idem, `leave_one_relevo_out` | Sim, exato |
+| `recife__variante_nativa_10m.csv` existe, não é descartada | `local_runs/ds-04-reducao/` — presente, 95.926 bytes, diferente do canônico (94.748 bytes) | Sim |
+
+Por que o argumento central se sustenta, e não é "Recife colapsando": o HAND
+do v12 de Recife tem coeficiente −0,0001 com p = 0,978 — o modelo pluvial não
+usa terreno como preditor, usa chuva. As duas variáveis que se degradam com
+30 m (declividade, TWI) são exatamente as duas que aquele modelo nunca
+consultou. Isso não é uma racionalização pós-hoc: é o mesmo coeficiente que
+já estava registrado antes desta decisão. Nenhuma capacidade "parou de poder
+ser usada" — ao contrário, Sen1Floods11 e UFO **ganharam** `slope_deg` e
+`twi_dinf`, que nunca tinham existido nessas fontes (conferido no log do
+`ter06`: só há comparação de pearson para elevação e HAND porque não havia
+valor anterior de declividade/TWI para comparar). Não há, portanto, ferramenta
+perdida para substituir.
+
+Conferi também o `diff` de `ds04_reduzir_por_fonte.py` linha a linha: a
+hierarquia do negativo (ausência nunca entra como negativo observado) está
+intacta e comentada explicitamente no código; o mapeamento de AOI por chip no
+Nível 1 é razoável e documentado (separa unidade de validação cruzada —
+`grupo_cv`, o país — da unidade de harmonização de terreno — o chip). Nada a
+apagar por erro científico.
+
+**Um achado, e é o mesmo bug do item 12.1, ainda não corrigido:**
+
+| # | Achado | Gravidade | O que fazer |
+|---|---|---|---|
+| 13.1 | `test_consolidacao_e_deterministica` **continua falhando**, mesma causa de 12.1 (ordem de linha, não conteúdo — reconferi agora rodando `ds05` de novo e comparando os CSVs ordenados por `ponto_id`: idênticos). A correção que ficou pendente em 12.1 (ordenar por `ponto_id` antes de gravar em `ds04`/`ds05`, regravar o hash de referência) não foi aplicada entre os dois commits | **Alta** | A mesma recomendação de 12.1, ainda de pé |
+| 13.2 | A mensagem do commit `90ecb5c` afirma **"21 testes passando, um pulado"** — ou seja, zero falhas. Rodei a suíte agora: **20 passed, 1 failed (13.1), 1 skipped**. A contagem de testes bate (22 = 21 + 1, se o pulado for o de rede degenerada — não há chip degenerado nesta execução, então esse teste específico não tem o que avaliar e pula, o que é comportamento correto); a falha é que não deveria haver falha nenhuma e a mensagem do commit não registra a que houve | **Alta, mas só de rastro/commit-hygiene** — não é erro de dado nem de estratégia, é uma afirmação no commit que não é verificável como está | Antes do push: aplicar o fix de 13.1 (resolve o teste e a mensagem passa a ser verdadeira) **ou**, no mínimo, corrigir a alegação da mensagem para registrar a falha conhecida |
+
+A pendência de chuva (12.4) continua igual — este commit não a toca, e o
+próprio relatório (`ext_resolucao_unica_30m_v2.md` §7) registra isso
+explicitamente como prioridade em aberto.
+
+**Reproduzido aqui**: `python -m pytest tests/test_ds03_ds05_tabela_unica.py -q`
+→ 20 passed, 1 failed (`test_consolidacao_e_deterministica`), 1 skipped.
+
+---
+
+## 14. Pendência de chuva resolvida — commit `13fcea2` (2026-08-16)
+
+A pendência 12.4 (fonte de chuva misturada em Recife, CHIRPS×ERA5-Land) foi
+fechada nesta sessão. Decisão tomada com você: padronizar os 278 pontos em
+Open-Meteo/ERA5-Land — não CHIRPS, apesar de ser o produto cientificamente
+preferível (tem estação real), porque o `aq_chirps3_v3.py` deste projeto
+documenta bloqueio por scraping do servidor da CHC, e os 97 pontos a
+reamostrar cobrem 85 datas distintas (2015–2022), não um evento concentrado.
+Open-Meteo já tinha 3 usos bem-sucedidos no projeto sem esse risco.
+
+| # | O que foi feito | Resultado |
+|---|---|---|
+| 14.1 | `chuva02_padronizar_fonte_unica_recife.py` reamostrou os 181 pontos que estavam em CHIRPS, mesma fórmula das fontes Open-Meteo já existentes | 181/181 reamostrados; 269/278 com chuva no total (os 9 sem valor já eram assim antes, sem `event_date` na origem — não é regressão) |
+| 14.2 | `aud_chuva01` re-executado | Recife passa de `MISTURA_DE_FONTES` para `FONTE_UNICA` — nenhuma fonte do projeto tem mais mistura de produto de precipitação. Corrigido de passagem um bug preexistente e não relacionado (`TypeError` em `periodo_por_fonte` com `data_evento` misturando string e NaN) |
+| 14.3 | `mod_recife03_pluvial_fonte_unica.py` repete a metodologia exata do v12 publicado (Firth, 6 features, LOO, mesma semente), só trocando a chuva | LOO-AUC 0,6781 → 0,6276; coeficiente da chuva +0,9896 (p<0,0001) → +0,4910 (p=0,0005) — continua dominante e significativo, só que metade da magnitude antiga media proveniência, não precipitação. HAND segue não significativo. `twi_dinf` perde a significância marginal que tinha (0,046→0,123) — registrado, não é ação imediata mas cite se usar `twi_dinf` isoladamente sobre Recife |
+| 14.4 | Teste de regressão invertido | `test_recife_continua_registrado_com_mistura...` (que existia para *garantir* a mistura, com aviso explícito no docstring para virar quando corrigida) virou `test_recife_tem_fonte_de_chuva_unica`, guardando contra a mistura voltar |
+| 14.5 | Suíte inteira | 21 passed, 1 skipped (rede degenerada, não aplicável nesta execução) — zero falhas |
+
+**Não é o modelo de Recife colapsando — é o modelo ficando mais honesto**: a
+chuva continua o preditor dominante, com sinal certo e p<0,001; só a metade
+inflada pelo confundimento de fonte saiu.
+
+Commitado localmente (`13fcea2`, branch `marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial`),
+**sem push** — mesma regra do CLAUDE.md do REV-P. Detalhe completo, tabela de
+coeficientes e ordem de reprodução em
+`docs/metodologia_cientifica/ext_chuva_fonte_unica_recife_v1.md`.

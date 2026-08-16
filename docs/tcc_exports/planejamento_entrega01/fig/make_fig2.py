@@ -76,9 +76,11 @@ a.set_title("(a) amostra por conjunto", fontsize=6.2, pad=3)
 
 # ---- (b) heterogeneidade: variavel disponivel por fonte -----------------------
 # 1 = disponivel na cadeia atual; 0 = ausente. Fatos documentados em
-# ext_analogos_de_petropolis_v1.md (chuva so no piloto UK), mod-neg-01/resumo.json
-# (TWI ausente nas tabelas CEMS ate 2026-08-09), n1g-pontos-com-features/resumo.json
-# (declividade e TWI nao derivadas para Nivel 1) e ext_balanco (mecanismo na origem).
+# ext_analogos_de_petropolis_v1.md (chuva so no piloto UK e nas duas regioes
+# brasileiras, nenhuma delas no ajuste fluvial), ext_chuva_fonte_unica_recife_v1.md
+# (chuva unica em Recife, 2026-08-16), ext_resolucao_unica_30m_v2.md (declividade
+# e TWI derivadas para Nivel 1/Sen1Floods11+UFO via ter06, 2026-08-14 -- antes
+# vazias por decisao do ds01) e ext_balanco (mecanismo na origem).
 a = ax[0, 1]
 fontes = ["Recife", "Curitiba", "UK/EA", "CEMS", "Nível 1"]
 variaveis = ["elev", "decl", "HAND", "TWI", "chuva", "mec."]
@@ -87,7 +89,7 @@ M = np.array([
     [1, 1, 1, 1, 1, 0],
     [1, 1, 1, 1, 1, 1],
     [1, 1, 1, 1, 0, 1],
-    [1, 0, 1, 0, 0, 0],
+    [1, 1, 1, 1, 0, 0],
 ])
 a.imshow(M, cmap=matplotlib.colors.ListedColormap(["#DCDCDC", C_POS]), vmin=0, vmax=1, aspect="auto")
 a.set_xticks(range(len(variaveis)))

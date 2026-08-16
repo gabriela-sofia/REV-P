@@ -280,3 +280,42 @@ rodada; vale resolver antes da próxima.
 direta** (respondido em conversa): posição do parágrafo de limitações
 (Descrição vs. Materiais e Métodos), necessidade de detalhar curadoria,
 futuro da Fig. 2, e se vale criar imagem de protótipo de interface.
+
+---
+
+## 10. v7 (2026-08-16) — o texto alcança o pipeline: resolução única e chuva de fonte única
+
+Pedido seu: "atualize o artigo de planejamento com o estado atual do
+projeto, cheque todas as seções". Não é revisão de estilo — dois eventos
+reais no REV-P desde a v6 tornaram cinco trechos factualmente errados:
+`90ecb5c` (resolução única de 30 m, reversão declarada de "a resolução segue
+o mecanismo") e a correção de fonte de chuva única em Recife (commit
+`13fcea2`, mesma sessão). Revisei as quatro seções inteiras contra os
+artefatos correntes; só entrou o que uma delas tornou obsoleto.
+
+| Onde | Estava | Passou a estar | Por quê |
+|---|---|---|---|
+| §I, par. 3 | "a resolução segue o mecanismo" | "na mesma resolução para toda a base — inclusive onde isso custa detalhe que o próprio modelo não usa" | decisão citada foi revertida em `90ecb5c`; manter o texto antigo contradiria o `ext_resolucao_unica_30m_v2.md` |
+| §II, "Material próprio, material externo" | "Sen1Floods11 e UFO... sem contribuição ainda por cadeia de terreno global" | Sen1Floods11 contribui ao ajuste desde que a cadeia própria passou a cobri-lo; UFO tem a mesma cadeia, mas segue fora por mecanismo misto, não mais por lacuna de variável | `ter06` derivou 658/661 chips; a exclusão do UFO nunca foi por terreno, e o texto antigo confundia as duas causas |
+| §II, mesmo parágrafo | — | Recife citado com "fonte de chuva única após auditoria de confundimento"; tabela única com "64.989 pontos... nenhum deles mais em cadeia de terreno global" | número e status estavam desatualizados (33.071 → 64.989) e a correção de chuva é achado novo, resolvido nesta sessão |
+| §II, "O que a caracterização dos dados impõe" | "as bases de rótulo por imagem não têm derivadas direcionais" | removida; a frase agora liga a ausência de chuva multirregião à causa real (nenhuma fonte do ajuste fluvial tem chuva, não a falta de declividade/TWI) | Sen1Floods11/UFO ganharam `slope_deg`/`twi_dinf` em `90ecb5c`; a frase antiga é falsa hoje |
+| §II, "Infraestrutura, carga e ajustes de escopo" | "o HAND das fontes externas vem de produto global de 30 m" | "permanece uma fração residual... majoritariamente água permanente no Copernicus EMS... o restante... passou para a cadeia própria" | a limitação generalizada não existe mais; sobra uma fração residual por nodata, não a fonte inteira |
+| §III, evidência de E2 | "33.071 pontos elegíveis ao ajuste fluvial... 18 de 19 testes... instável entre ambientes" | "64.989 pontos... quatro fontes... 21 de 22 testes... sensível à versão de biblioteca" | números desatualizados; "instável" trocado por descrição mais precisa da causa (já diagnosticada, não corrigida no código ainda) |
+| Fig. 2(b), `make_fig2.py` | Nível 1 (Sen1Floods11+UFO) marcado sem declividade/TWI | marcado com as quatro variáveis de terreno disponíveis | matriz era hardcoded contra um fato que deixou de ser verdade em `90ecb5c`; figura regenerada e reconferida visualmente |
+
+**O que não mudou, verificado e mantido**: Tabela I (positivos/negativos por
+fonte, Curitiba 1.045/426/1.471 unidades — números de uma fonte diferente,
+não tocada nesta sessão); a hierarquia do negativo; os parágrafos de modelo,
+*gates* e critérios; o cronograma; a bibliografia. Não fui atrás de reauditar
+números que este ciclo de trabalho não tocou — só o que os dois eventos
+citados tornaram obsoleto.
+
+**Contagem de palavras da Seção I**: 573, igual à v6 — a correção do
+parágrafo 3 trocou uma frase curta e errada por uma mais longa e certa; não
+ajuda nem piora o excesso sobre o limite de 500, que continua em aberto
+(`CHECKLIST_template.md` §11.6).
+
+**Verificação de espaço**: 4 páginas no sandbox, mesma causa de sempre
+(hifenização ausente aqui). Figura 1 e Figura 2 renderizadas e conferidas
+visualmente (`pdftoppm`) — sem colisão, painel (b) da Fig. 2 mostra a matriz
+nova corretamente.

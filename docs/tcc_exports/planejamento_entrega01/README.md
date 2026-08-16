@@ -3,12 +3,16 @@
 Experiência Criativa: Projeto Transformador II — BCC/PUCPR.
 Formato IEEEtran `conference`, português, 3 páginas (limite do template).
 
-**Versão atual**: v5 (2026-08-14) — status de E2 e da auditoria de terreno
-atualizado para refletir o commit `e627af3` (tabela única harmonizada,
-33.071 pontos; auditoria bit a bit de Curitiba; achados novos registrados em
-`CHECKLIST_template.md` §12, não incorporados ao texto ainda). A v1
-(2026-08-09) está preservada em `main_v1_2026-08-09.tex`; a v3 (2026-08-13,
-base da v4/v5) está preservada em `main_v3_2026-08-13.tex`.
+**Versão atual**: v7 (2026-08-16) — texto atualizado contra o estado real do
+pipeline após dois eventos no REV-P desde a v6: a resolução única de 30\,m
+(`90ecb5c`, reversão declarada de "a resolução segue o mecanismo") e a
+correção de fonte de chuva única em Recife (`13fcea2`). Cinco trechos que
+esses dois eventos tornaram factualmente errados foram corrigidos (§I par. 3;
+três parágrafos de §II; a evidência de E2 em §III) e a Fig. 2(b) foi
+regenerada — ver `NOTA_versoes.md` §10 para a tabela nota a nota completa. A
+v1 (2026-08-09) está em `main_v1_2026-08-09.tex`; a v3 (2026-08-13, base da
+v4--v6) está em `main_v3_2026-08-13.tex`; a v6 (2026-08-14) está em
+`main_v6_2026-08-14.tex`.
 
 - v2 corrigiu as afirmações da v1 sobre Petrópolis e sobre o negativo brasileiro.
 - **v3 realinhou o problema central**: não é a classe negativa — foi a combinação
@@ -32,10 +36,11 @@ base da v4/v5) está preservada em `main_v3_2026-08-13.tex`.
 
 | Arquivo | Papel |
 |---|---|
-| `main.tex` | fonte LaTeX v4 (compila em Overleaf sem ajuste; IEEEtran já é padrão lá) |
-| `main.pdf` | saída compilada, 3 páginas no ambiente com hifenização de português (Overleaf); 4 páginas no ambiente de verificação usado aqui, que não tem esse pacote — mesma ressalva já registrada abaixo, confirmada válida também para a v3 antes desta edição |
+| `main.tex` | fonte LaTeX v7 (compila em Overleaf sem ajuste; IEEEtran já é padrão lá) |
+| `main.pdf` | saída compilada, 3 páginas no ambiente com hifenização de português (Overleaf); 4 páginas no ambiente de verificação usado aqui, que não tem esse pacote — mesma ressalva já registrada abaixo, confirmada válida também para as versões anteriores |
 | `main_v1_2026-08-09.tex` | versão v1, preservada para comparação |
-| `main_v3_2026-08-13.tex` | versão v3, base da v4, preservada para comparação |
+| `main_v3_2026-08-13.tex` | versão v3, base da v4--v6, preservada para comparação |
+| `main_v6_2026-08-14.tex` | versão v6, base da v7, preservada para comparação |
 | `fig/fig2_datasets.pdf` | Figura 2, vetorial, gerada a partir dos dados reais do projeto |
 | `fig/make_fig2.py` | script que gera a Figura 2 (reprodutível) |
 | `NOTA_versoes.md` | o que mudou da v1 à v3, por quê, e o que ficou pendente |
@@ -81,7 +86,10 @@ de entregar. Os outros dois controles são a altura da Figura 2 (`figsize` em
 | Recife: 154 pos. / 124 neg.; n = 278 | `PROJETO/local_runs/recife_modelo_v12_extracao_final/dataset_v12_final.csv` |
 | Curitiba: 1.045 pos. / 426 neg.; 1.471 unidades | `outputs_public/data/susc_20k_.../registries/v20n_dataset_curitiba_features_v2.csv` |
 | Piloto UK: 7.476 pontos (3.738/3.738), 201 eventos independentes | `local_runs/mod-uk-01-firth/resumo_rnl.json`; `ext_balanco_e_lacunas_por_regiao_v1.md` §2.2 |
-| Fig. 2(b): variável disponível por fonte | `ext_analogos_de_petropolis_v1.md` §5.1 (chuva só no piloto UK); `local_runs/mod-neg-01/resumo.json` (TWI ausente nas tabelas CEMS iniciais); `local_runs/n1g-pontos-com-features/resumo.json` (declividade e TWI não derivadas no Nível 1) |
+| Fig. 2(b): variável disponível por fonte | `ext_analogos_de_petropolis_v1.md` §5.1 (chuva só no piloto UK e nas regiões brasileiras); `ext_resolucao_unica_30m_v2.md` §4 (declividade e TWI derivadas para Nível 1 via `ter06`, 2026-08-14 — antes vazias por decisão do `ds01`) |
+| E2: 64.989 pontos elegíveis ao ajuste fluvial, 4 fontes, 0 em cadeia global | `local_runs/ds-05-tabela-unica/manifesto_v1.json`; `ext_resolucao_unica_30m_v2.md` §5 |
+| E2: 21 de 22 testes de invariante | `python -m pytest tests/test_ds03_ds05_tabela_unica.py -q`, rodado nesta sessão |
+| Recife: fonte de chuva única (Open-Meteo/ERA5-Land) | `ext_chuva_fonte_unica_recife_v1.md`; commit `13fcea2` |
 | Resolução nativa por fonte (10 m / 30 m / 3–10 m) | `ext_contrato_reducao_a_pontos_v1.md` R2; `ext_criterios_de_acerto_v1.md` §5 |
 | Critérios N1–N4 do negativo por exclusão (400 m, cobertura do solo) | `ext_uk_adjudicacao_negativo_v1.md` §4 |
 | CEMS: 25.249 pontos, 119 AOIs (22 serra + 97 planície) | `local_runs/mod-serra-01/resultado.json` |

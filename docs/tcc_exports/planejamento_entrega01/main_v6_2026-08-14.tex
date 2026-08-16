@@ -4,11 +4,9 @@
 %% Autora: Gabriela Sofia
 %% Formatação: IEEEtran conference (padrão do template dos professores)
 %% Compilar: pdflatex main && pdflatex main
-%% Versão: v7 (2026-08-16) — estado atual do pipeline após a resolução única
-%% de 30 m (reversão declarada de "a resolução segue o mecanismo") e a
-%% correção da fonte de chuva única em Recife: números de E2, Fig. 2(b) e os
-%% parágrafos de material externo e de limitações atualizados; nenhuma
-%% mudança de conteúdo além do que esses dois eventos tornaram desatualizado.
+%% Versão: v6 (2026-08-14) — problema de terreno generalizado (não só cota
+%% rebaixada), referência brasileira somada à global, AOI justificada como
+%% unidade de retorno do produto, DINOv2 nomeado e ligado à explicação na Fig. 1.
 %% =====================================================================
 \documentclass[conference]{IEEEtran}
 \IEEEoverridecommandlockouts
@@ -86,9 +84,8 @@ pontual, em três tentativas independentes; ela passa a evidência de contexto e
 fila de revisão. A unidade de informação é o evento, não o ponto, o
 que dissolveu significância vinda de pseudorreplicação. A definição da
 classe negativa decide o que o modelo aprende: o ajuste de maior desempenho
-próprio é o que menos transfere. A derivação precisa ser única entre regiões, na mesma
-resolução para toda a base --- inclusive onde isso custa detalhe que o
-próprio modelo não usa. E a relação terreno--inundação não caduca: em 25
+próprio é o que menos transfere. A derivação precisa ser única entre regiões, e a
+resolução segue o mecanismo. E a relação terreno--inundação não caduca: em 25
 anos de janela expansiva o modelo fica na faixa esperada em todos os cortes e
 transfere entre classes de relevo.
 
@@ -210,16 +207,12 @@ motivo do descarte nomeado.
 \textbf{Material próprio, material externo.} Já auditados: a cadeia de derivação
 de terreno, reproduzida \emph{bit a bit} contra o raster de referência em Recife
 e em Curitiba --- Petrópolis segue a mesma convenção de derivação, mas sem ponto
-rotulado para comparar; o modelo de Recife, com 278 pontos e fonte de chuva
-única após auditoria de confundimento por proveniência; o conjunto de
-Curitiba, com 1.471 unidades; a tabela única harmonizada das seis fontes, hoje
-com 64.989 pontos elegíveis ao ajuste fluvial, nenhum deles mais em cadeia de
-terreno global; e o motor de inferência exposto por contrato. Externas:
-Copernicus EMS, Environment Agency do Reino Unido e, desde que a mesma cadeia
-de derivação de terreno passou a cobri-lo, Sen1Floods11 contribuem ponto ao
-ajuste fluvial; UFO tem a mesma cadeia de terreno, mas segue fora do ajuste
-por declarar mecanismo misto não separável, não mais por lacuna de variável.
-Falta a validação prospectiva e a camada de explicação.
+rotulado para comparar; o modelo de Recife, com 278 pontos; o conjunto de
+Curitiba, com 1.471 unidades; a tabela única harmonizada das seis fontes; e o
+motor de inferência exposto por contrato. Externas: Copernicus EMS e Environment
+Agency do Reino Unido contribuem ponto ao ajuste fluvial; Sen1Floods11 e UFO
+estão no esquema, sem contribuição ainda por cadeia de terreno global. Falta a
+validação prospectiva e a camada de explicação.
 
 \textbf{Rótulo positivo e hierarquia do negativo.} Os positivos são eventos
 oficialmente registrados e geocodificados: Defesa Civil de Recife, SIAC 156 de
@@ -246,11 +239,10 @@ publicado: o colapso prospectivo de 2026 em Curitiba entra como limite
 conhecido.
 
 \textbf{O que a caracterização dos dados impõe.} A Fig.~\ref{fig:datasets} reúne
-os três desafios que orientam o plano. Nenhuma fonte cobre todas as
-variáveis --- a chuva só existe no piloto inglês e nas duas regiões
-brasileiras, nenhuma delas no conjunto que hoje entra no ajuste fluvial ---,
-por isso o modelo multirregião roda com quatro variáveis de terreno. A
-definição de negativo muda o que o modelo aprende: o
+os três desafios que orientam o plano. Nenhuma fonte cobre todas as variáveis ---
+a chuva só existe no piloto inglês e as bases de rótulo por imagem não têm
+derivadas direcionais ---, por isso o modelo multirregião roda com quatro
+variáveis de terreno. A definição de negativo muda o que o modelo aprende: o
 ajuste sobre exclusão tem AUC próprio maior, mas perde 0,159 ao encontrar
 negativo observado, enquanto o inverso não perde nada. E a régua física muda com
 o relevo: o contraste de HAND entre classes vai de cerca de 3\,m em planície a
@@ -274,11 +266,9 @@ requer GPU: o ajuste de Firth leva 0,056\,s e o de um modelo aditivo explicável
 versão de biblioteca, não de treino, e se resolve reduzindo toda fonte de imagem
 a tabela de pontos. Sem divisão de carga entre pessoas, o paralelismo vem da
 sobreposição de etapas. Duas limitações já forçaram ajuste de escopo: o treino
-sobre \emph{embeddings} foi abandonado após três tentativas, e permanece uma
-fração residual de pontos --- majoritariamente água permanente no Copernicus
-EMS --- cujo HAND ainda vem do produto global por cair fora do raster
-derivado; o restante da base, incluindo o que antes dependia desse produto,
-passou para a cadeia própria.
+sobre \emph{embeddings} foi abandonado após três tentativas, e o HAND das fontes
+externas vem de produto global de 30\,m --- limitação declarada, não
+equivalência.
 
 % ------------------------------ FIGURA 2 ------------------------------
 \begin{figure}[!t]
@@ -350,12 +340,10 @@ arquivo.
 reduzidas a uma tabela única, com procedência, resolução, unidade de
 agrupamento, classe de relevo e mecanismo por linha; recuperável geocodificado,
 descarte do restante nomeado. \emph{Entregável}: base de conhecimento
-geoespacial única, 64.989 pontos elegíveis ao ajuste fluvial, com as quatro
-fontes do ajuste na mesma cadeia de derivação de terreno e Recife com fonte de
-chuva única. \emph{Evidência}: contagem do que entra e do que sai por fonte
-publicada; 21 de 22 testes de invariante passam nesta execução, com a
-checagem de reprodutibilidade bit-exata ainda sensível à versão de biblioteca
-entre ambientes.
+geoespacial única, 33.071 pontos elegíveis ao ajuste fluvial. \emph{Evidência}:
+contagem do que entra e do que sai por fonte publicada; 18 de 19 testes de
+invariante passam, com a checagem de reprodutibilidade bit-exata ainda
+instável entre ambientes.
 
 \textbf{E3 --- Estimação e validação agrupada (M2).} Ajustar o modelo por classe
 de relevo, com validação agrupada e aplicação cruzada entre fontes de negativo.
