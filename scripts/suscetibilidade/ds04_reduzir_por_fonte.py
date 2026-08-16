@@ -77,6 +77,7 @@ HARM_TODAS = RUNS / "ter-02-comparacao" / "dataset_harmonizado_todas.csv"
 HARM_SERRA = RUNS / "ter-02-comparacao" / "dataset_serra_harmonizado.csv"
 HARM_UK = RUNS / "ter-02-comparacao" / "dataset_harmonizado_uk.csv"
 HARM_N1 = RUNS / "ter-02-comparacao" / "dataset_harmonizado_nivel1.csv"
+CHUVA_GLOBAL = RUNS / "chuva-04-era5-global" / "chuva_era5_por_ponto.csv"
 HARM_BR = RUNS / "ter-03-brasil-harmonizado"
 RELEVO_AOI = RUNS / "cems-02-analogos-v2" / "verificacao_relevo_por_aoi.csv"
 
@@ -92,6 +93,34 @@ MAPA_FONTE_CHUVA = {
     "chirps_v2.0_gauge_satellite_blend": "chirps_v2_gauge_satellite_blend",
     "open_meteo_era5_land_archive_api": "open_meteo_era5_land",
 }
+
+
+def sobrepor_chuva_era5(d: pd.DataFrame) -> pd.DataFrame:
+    """Chuva ERA5-Land para as fontes que nao tinham nenhuma.
+
+    O `chuva04` resolve a janela de evento por (celula de 0,1 grau, data) e
+    devolve por ponto. Aqui e so juncao: quem ja tem chuva na fonte unica --
+    Recife e Curitiba -- nao passa por aqui, entao nao ha risco de duas
+    procedencias disputarem a mesma linha.
+    """
+    if not CHUVA_GLOBAL.exists():
+        print("   AVISO: chuva global ausente; rode chuva04")
+        return d
+    c = pd.read_csv(CHUVA_GLOBAL, low_memory=False)
+    c = c[["ponto_id", "rain_max_24h", "rain_decay_index", "fonte_chuva",
+           "dt", "precisao_data"]].drop_duplicates("ponto_id")
+    d = d.merge(c, on="ponto_id", how="left", suffixes=("", "_era5"))
+    tem = d["rain_max_24h_era5"].notna()
+    for col in ("rain_max_24h", "rain_decay_index", "fonte_chuva"):
+        d.loc[tem, col] = d.loc[tem, f"{col}_era5"]
+    # a data de evento tambem vem daqui para as fontes que a tinham perdido
+    sem_data = d["data_evento"].isna() & d["dt"].notna()
+    d.loc[sem_data, "data_evento"] = d.loc[sem_data, "dt"]
+    d = d.drop(columns=[x for x in d.columns
+                        if x.endswith("_era5") or x in ("dt", "precisao_data")])
+    print(f"   chuva: {int(tem.sum()):,} pontos em ERA5-Land, "
+          f"{int((~tem).sum()):,} sem")
+    return d
 
 
 def moldar(d: pd.DataFrame) -> pd.DataFrame:
@@ -185,6 +214,7 @@ def reduzir_uk() -> tuple[pd.DataFrame, dict]:
     d["unidade_agrupamento"] = "evento"
     d["mecanismo"] = FLUVIAL
     d = sobrepor_terreno_harmonizado(d)
+    d = sobrepor_chuva_era5(d)
     cls, diag = relevo_dos_pontos(d["elevation_m"], d["slope_deg"])
     d["classe_relevo"] = cls
     d["classe_relevo_base"] = ("pontos_amostrados" if cls != "NAO_CLASSIFICADO"
@@ -207,6 +237,7 @@ def reduzir_cems() -> tuple[pd.DataFrame, dict]:
     d["unidade_agrupamento"] = "aoi"
     d["mecanismo"] = FLUVIAL
     d = sobrepor_terreno_harmonizado(d)
+    d = sobrepor_chuva_era5(d)
 
     d["classe_relevo"] = "NAO_CLASSIFICADO"
     d["classe_relevo_base"] = "ausente"
@@ -237,6 +268,7 @@ def _reduzir_nivel1(regiao: str, fonte: str, mecanismo: str,
     d["unidade_agrupamento"] = "chip"
     d["mecanismo"] = mecanismo
     d = sobrepor_terreno_harmonizado(d)
+    d = sobrepor_chuva_era5(d)
 
     # A AOI destas fontes e o CHIP -- o recorte que foi efetivamente rotulado.
     # O `grupo_cv` continua sendo o evento (pais no Sen1Floods11), porque a

@@ -52,6 +52,7 @@ Uso:
 from __future__ import annotations
 
 import json
+import shutil
 import subprocess
 import sys
 import warnings
@@ -90,22 +91,48 @@ def bboxes(d: pd.DataFrame) -> dict[str, tuple]:
     return {str(c): (r.minx, r.miny, r.maxx, r.maxy) for c, r in g.iterrows()}
 
 
-def derivar_lote(alvos: dict[str, tuple], teto_s: int) -> dict:
+def chips_incompletos(saida: Path) -> set[str]:
+    """Chips onde algum ponto ficou sem alguma das quatro variaveis.
+
+    Duas causas, e a mesma correcao serve para as duas: derivacao que falhou,
+    e ponto perto da borda do recorte onde o roteamento de fluxo nao alcanca
+    canal nenhum -- ai o HAND sai nodata mesmo com elevacao valida. Alargar a
+    folga e correcao fisica, nao contorno: o canal existe, estava fora da
+    janela.
+    """
+    if not saida.exists():
+        return set()
+    d = pd.read_csv(saida, low_memory=False)
+    cols = [f"{c}_wbt" for c in MAPA]
+    ruim = d[d[cols].isna().any(axis=1)]
+    return set(ruim["chip"].astype(str).unique())
+
+
+def derivar_lote(alvos: dict[str, tuple], teto_s: int, margem: float | None = None,
+                 refazer: set[str] | None = None) -> dict:
     """Um subprocesso por chip, com teto. Mesmo padrao do lote do ter01.
 
     Uma janela patologica -- ilha, delta plano, recorte todo em agua -- nao
     pode custar o lote inteiro. Ja aconteceu duas vezes com as AOIs do CEMS.
     """
+    refazer = refazer or set()
     ok, estourou, falhou = [], [], []
     for i, (chip, bb) in enumerate(sorted(alvos.items()), 1):
         lab = rotulo(chip)
-        if (DERIV / lab / "run_manifest.json").exists():
+        pasta = DERIV / lab
+        man = pasta / "run_manifest.json"
+        if man.exists() and chip not in refazer:
             ok.append(chip)
             continue
+        if chip in refazer and pasta.exists():
+            # apaga a derivacao antiga: o ter01 reaproveita o que ja existe, e
+            # refazer com folga maior exige que ele recomece do DEM
+            shutil.rmtree(pasta, ignore_errors=True)
+        extra = ["--margem", str(margem)] if margem is not None else []
         try:
             r = subprocess.run(
                 [sys.executable, "-u", str(TER01), "--regiao", lab,
-                 "--bbox", ",".join(f"{v:.6f}" for v in bb)],
+                 "--bbox", ",".join(f"{v:.6f}" for v in bb), *extra],
                 capture_output=True, text=True, timeout=teto_s)
             if (DERIV / lab / "run_manifest.json").exists():
                 ok.append(chip)
@@ -154,9 +181,16 @@ def main() -> int:
     print(f"PONTOS={len(d):,} CHIPS={len(alvos)} "
           f"fontes={sorted(d.fonte.unique())}")
 
+    margem = float(args[args.index("--margem") + 1]) if "--margem" in args else None
+    refazer: set[str] = set()
+    if "--refazer-faltantes" in args:
+        refazer = chips_incompletos(OUT / "dataset_harmonizado_nivel1.csv")
+        print(f"--- refazendo {len(refazer)} chips com cobertura incompleta "
+              f"(margem {margem or 'padrao'}) ---")
+
     if "--so-amostrar" not in args:
         print(f"--- derivando (teto {teto}s por chip) ---")
-        lote = derivar_lote(alvos, teto)
+        lote = derivar_lote(alvos, teto, margem, refazer)
         print(f"DERIVADOS={len(lote['derivados'])}/{len(alvos)} "
               f"estouraram={len(lote['estouraram'])} "
               f"falharam={len(lote['falharam'])}")

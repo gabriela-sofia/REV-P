@@ -122,6 +122,11 @@ AREA_CANAL_KM2 = 0.1123
 PISO_SLOPE_GRAUS = 0.05
 RESOLUCAO_M = 30.0
 MARGEM_GRAUS = 0.02          # folga alem da AOI, para a drenagem nao ser cortada
+# Ajustavel por `--margem`. Existe porque numa janela pequena a folga padrao nao
+# basta: o ponto cai perto da borda, o roteamento de fluxo nao alcanca canal
+# nenhum e o HAND sai nodata mesmo com elevacao e declividade validas. Foi o que
+# aconteceu com 2.002 pontos do UFO em 51 chips. Aumentar a folga e a correcao
+# fisica -- o canal existe, so estava fora do recorte.
 
 
 def sha256(p: Path) -> str:
@@ -458,9 +463,13 @@ def rodar_um(label: str, bbox) -> bool:
 
 
 def main() -> int:
+    global MARGEM_GRAUS
     args = sys.argv[1:]
     if "--checar-ambiente" in args:
         return checar_ambiente()
+    if "--margem" in args:
+        MARGEM_GRAUS = float(args[args.index("--margem") + 1])
+        print(f"MARGEM ajustada para {MARGEM_GRAUS} grau")
 
     OUT.mkdir(parents=True, exist_ok=True)
     alvos: list[tuple[str, tuple]] = []
