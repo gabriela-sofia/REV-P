@@ -1,0 +1,350 @@
+file_path,type_guess,size_bytes,n_rows,has_patch_id,has_vector_column,loadable_per_patch_vectors,notes
+datasets/dino_artifact_discovery_summary_v1pg.csv,dino_metadata_registry,217,7,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_artifact_discovery_v1pg.csv,dino_metadata_registry,86513,510,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_backend_model_probe_summary_v1pp.csv,dino_metadata_registry,244,8,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_backend_model_probe_v1pp.csv,dino_metadata_registry,625,9,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_c3_anchor_review_triage_registry.csv,dino_metadata_registry,3557,9,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_cluster_exploratory_v1pk.csv,dino_metadata_registry,143,0,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_control_candidate_review_queue.csv,dino_metadata_registry,1790,4,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_controlled_smoke_embedding_failures_v1pq.csv,dino_metadata_registry,113,0,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_controlled_smoke_embedding_results_v1pq.csv,dino_metadata_registry,224,0,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_controlled_smoke_embedding_summary_v1pq.csv,dino_metadata_registry,192,8,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_dry_run_execution_commands_v1qc.csv,dino_metadata_registry,1484,9,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_dry_run_execution_plan_v1qc.csv,dino_metadata_registry,1218,5,true,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_embedding_execution_queue_summary_v1po.csv,dino_metadata_registry,102,4,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_embedding_execution_queue_v1po.csv,dino_metadata_registry,222,0,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_embedding_feature_store_registry_v1ph.csv,dino_metadata_registry,313,0,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_embedding_feature_store_summary_v1ph.csv,dino_metadata_registry,208,7,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_embedding_quality_audit_v1pi.csv,dino_metadata_registry,284,0,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_embedding_quality_summary_v1pi.csv,dino_metadata_registry,163,6,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_embedding_training_boundary_matrix.csv,dino_metadata_registry,438,1,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_execution_bridge_manifest_v1qf.csv,dino_metadata_registry,958,10,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_execution_bridge_scientific_summary_v1qf.csv,dino_metadata_registry,1493,11,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_execution_manifest_v1pt.csv,dino_metadata_registry,1454,16,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_execution_quality_checks_v1pt.csv,dino_metadata_registry,6780,68,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_execution_queue_from_visual_expansion_summary_v1qa.csv,dino_metadata_registry,150,6,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_execution_queue_from_visual_expansion_v1qa.csv,dino_metadata_registry,20028,100,true,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_execution_readiness_audit_v1qb.csv,dino_metadata_registry,20976,100,true,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_execution_readiness_summary_v1qb.csv,dino_metadata_registry,205,7,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_execution_scientific_summary_v1pt.csv,dino_metadata_registry,1787,15,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_executor_compatibility_report_v1qd.csv,dino_metadata_registry,904,6,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_executor_compatibility_summary_v1qd.csv,dino_metadata_registry,92,4,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_local_asset_preprocessing_audit_v1qi.csv,dino_metadata_registry,4954,32,true,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_local_asset_preprocessing_summary_v1qi.csv,dino_metadata_registry,194,8,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_local_model_offline_audit_v1qg.csv,dino_metadata_registry,416,1,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_local_model_offline_summary_v1qg.csv,dino_metadata_registry,308,12,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_local_readiness_manifest_v1qt.csv,dino_metadata_registry,1048,11,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_local_readiness_quality_checks_v1qt.csv,dino_metadata_registry,414,7,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_local_readiness_scientific_summary_v1qt.csv,dino_metadata_registry,1430,12,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_local_root_environment_audit_v1qn.csv,dino_metadata_registry,431,4,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_local_root_environment_summary_v1qn.csv,dino_metadata_registry,360,14,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_local_smoke_run_readiness_gate_v1qr.csv,dino_metadata_registry,429,8,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_local_smoke_run_readiness_summary_v1qr.csv,dino_metadata_registry,141,6,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_manifest_crosswalk_repair_suggestions_v1qp.csv,dino_metadata_registry,12158,64,true,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_manifest_crosswalk_repair_summary_v1qp.csv,dino_metadata_registry,293,10,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_patch_visual_asset_inventory_summary_v1pn.csv,dino_metadata_registry,141,5,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_patch_visual_asset_inventory_v1pn.csv,dino_metadata_registry,23792,141,true,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_patch_visual_linkage_registry_v1pv.csv,dino_metadata_registry,25913,167,true,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_patch_visual_linkage_summary_v1pv.csv,dino_metadata_registry,210,6,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_pca_cluster_summary_v1pk.csv,dino_metadata_registry,176,6,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_pca_projection_v1pk.csv,dino_metadata_registry,147,0,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_protocol_c_crosswalk_summary_v1pl.csv,dino_metadata_registry,167,5,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_protocol_c_crosswalk_v1pl.csv,dino_metadata_registry,285,0,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_queue_leakage_audit_v1px.csv,dino_metadata_registry,3013,27,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_queue_leakage_summary_v1px.csv,dino_metadata_registry,102,5,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_representation_feature_store_with_smoke_summary_v1qk.csv,dino_metadata_registry,279,11,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_representation_feature_store_with_smoke_v1qk.csv,dino_metadata_registry,11007,0,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_review_only_execution_queue_expanded_summary_v1pw.csv,dino_metadata_registry,177,7,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_review_only_execution_queue_expanded_v1pw.csv,dino_metadata_registry,17074,100,true,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_similarity_matrix_long_v1pj.csv,dino_metadata_registry,109,0,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_similarity_neighbors_v1pj.csv,dino_metadata_registry,205,0,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_similarity_summary_v1pj.csv,dino_metadata_registry,159,5,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_smoke_asset_local_reconciliation_candidates_v1qo.csv,dino_metadata_registry,161,0,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_smoke_asset_local_reconciliation_summary_v1qo.csv,dino_metadata_registry,211,9,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_smoke_asset_local_reconciliation_v1qo.csv,dino_metadata_registry,4830,32,true,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_smoke_cluster_exploratory_v1ps.csv,dino_metadata_registry,143,0,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_smoke_embedding_bundle_manifest_v1qm.csv,dino_metadata_registry,1458,15,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_smoke_embedding_execution_manifest_v1qj.csv,vector_stats_registry_only,4114,32,true,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_smoke_embedding_failures_v1qj.csv,dino_metadata_registry,97,0,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_smoke_embedding_feature_store_summary_v1pr.csv,dino_metadata_registry,162,6,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_smoke_embedding_feature_store_v1pr.csv,dino_metadata_registry,287,0,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_smoke_embedding_quality_checks_v1qm.csv,dino_metadata_registry,881,14,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_smoke_embedding_scientific_summary_v1qm.csv,dino_metadata_registry,1855,15,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_smoke_embedding_summary_v1qj.csv,dino_metadata_registry,256,10,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_smoke_embeddings_feature_store_v1qj.csv,dino_metadata_registry,10981,0,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_smoke_exploratory_clusters_v1ql.csv,dino_metadata_registry,151,0,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_smoke_pca_projection_v1ps.csv,dino_metadata_registry,147,0,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_smoke_pca_projection_v1ql.csv,dino_metadata_registry,156,0,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_smoke_protocol_c_crosswalk_v1ps.csv,dino_metadata_registry,180,0,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_smoke_review_products_summary_v1ps.csv,dino_metadata_registry,200,7,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_smoke_review_products_summary_v1ql.csv,dino_metadata_registry,298,12,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_smoke_sample_selection_v1qh.csv,dino_metadata_registry,6479,32,true,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_smoke_sample_summary_v1qh.csv,dino_metadata_registry,298,12,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_smoke_similarity_matrix_long_v1ql.csv,dino_metadata_registry,106,0,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_smoke_similarity_neighbors_v1ps.csv,dino_metadata_registry,205,0,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_smoke_similarity_neighbors_v1ql.csv,dino_metadata_registry,219,0,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_tcc_results_manifest_v1pm.csv,dino_metadata_registry,406,4,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_tcc_results_scientific_summary_v1pm.csv,dino_metadata_registry,1657,13,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_tcc_table_embedding_inventory_v1pm.csv,dino_metadata_registry,95,0,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_tcc_table_execution_readiness_v1qe.csv,dino_metadata_registry,10943,100,true,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_tcc_table_execution_safety_v1qe.csv,dino_metadata_registry,879,9,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_tcc_table_local_blockers_v1qs.csv,dino_metadata_registry,493,3,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_tcc_table_local_readiness_v1qs.csv,dino_metadata_registry,884,6,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_tcc_table_pca_cluster_results_v1pm.csv,dino_metadata_registry,85,0,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_tcc_table_protocol_c_crosswalk_v1pm.csv,dino_metadata_registry,127,0,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_tcc_table_review_queue_v1py.csv,dino_metadata_registry,11144,100,true,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_tcc_table_similarity_results_v1pm.csv,dino_metadata_registry,97,0,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_tcc_table_smoke_embedding_results_v1qm.csv,dino_metadata_registry,791,5,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_tcc_table_visual_asset_eligibility_v1py.csv,dino_metadata_registry,18882,167,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_visual_asset_eligibility_audit_v1pu.csv,dino_metadata_registry,44759,167,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_visual_asset_eligibility_summary_v1pu.csv,dino_metadata_registry,162,6,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_visual_eligibility_bundle_manifest_v1pz.csv,dino_metadata_registry,946,10,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/dino_visual_eligibility_scientific_summary_v1pz.csv,dino_metadata_registry,1328,10,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/multi_anchor_dino_review_embedding_registry.csv,dino_metadata_registry,1233,9,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/official_anchor_dino_embedding_readiness_registry.csv,dino_metadata_registry,1664,2,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/protocol_c_tcc_table_dino_role_v1rp.csv,dino_metadata_registry,270,4,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/protocolo_c/v1us_dino_review_support_attachment.csv,dino_metadata_registry,40749,172,true,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/protocolo_c/v2bd_seed_dino_crosswalk.csv,dino_metadata_registry,1343,3,true,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/protocolo_c/v2be_seed_dino_binding.csv,dino_metadata_registry,870,3,true,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/protocolo_c/v2bf_dino_link_recovery.csv,dino_metadata_registry,1058,3,true,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/recife_dino_review_only_representation_queue_v1oz.csv,dino_metadata_registry,973,2,true,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/recife_dino_review_only_representation_summary_v1oz.csv,dino_metadata_registry,318,10,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_artifact_discovery_summary_v1pg_schema.csv,dino_metadata_registry,139,2,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_artifact_discovery_v1pg_schema.csv,dino_metadata_registry,1057,16,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_backend_model_probe_summary_v1pp_schema.csv,dino_metadata_registry,141,2,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_backend_model_probe_v1pp_schema.csv,dino_metadata_registry,477,8,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_c3_anchor_review_triage_schema.csv,dino_metadata_registry,759,12,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_cluster_exploratory_v1pk_schema.csv,dino_metadata_registry,666,11,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_control_candidate_review_queue_schema.csv,dino_metadata_registry,939,12,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_controlled_smoke_embedding_failures_v1pq_schema.csv,dino_metadata_registry,540,9,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_controlled_smoke_embedding_results_v1pq_schema.csv,dino_metadata_registry,1041,18,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_controlled_smoke_embedding_summary_v1pq_schema.csv,dino_metadata_registry,123,2,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_dry_run_execution_commands_v1qc_schema.csv,dino_metadata_registry,362,5,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_dry_run_execution_plan_v1qc_schema.csv,dino_metadata_registry,796,13,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_embedding_execution_queue_summary_v1po_schema.csv,dino_metadata_registry,153,2,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_embedding_execution_queue_v1po_schema.csv,dino_metadata_registry,1124,17,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_embedding_feature_store_registry_v1ph_schema.csv,dino_metadata_registry,1457,22,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_embedding_feature_store_summary_v1ph_schema.csv,dino_metadata_registry,149,2,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_embedding_quality_audit_v1pi_schema.csv,dino_metadata_registry,1288,19,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_embedding_quality_summary_v1pi_schema.csv,dino_metadata_registry,137,2,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_embedding_training_boundary_schema.csv,dino_metadata_registry,722,9,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_execution_bridge_manifest_v1qf_schema.csv,dino_metadata_registry,327,6,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_execution_bridge_scientific_summary_v1qf_schema.csv,dino_metadata_registry,429,6,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_execution_manifest_v1pt_schema.csv,dino_metadata_registry,315,6,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_execution_quality_checks_v1pt_schema.csv,dino_metadata_registry,461,8,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_execution_queue_from_visual_expansion_summary_v1qa_schema.csv,dino_metadata_registry,123,2,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_execution_queue_from_visual_expansion_v1qa_schema.csv,dino_metadata_registry,1509,20,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_execution_readiness_audit_v1qb_schema.csv,dino_metadata_registry,1109,16,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_execution_readiness_summary_v1qb_schema.csv,dino_metadata_registry,141,2,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_execution_scientific_summary_v1pt_schema.csv,dino_metadata_registry,417,6,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_executor_compatibility_report_v1qd_schema.csv,dino_metadata_registry,441,7,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_executor_compatibility_summary_v1qd_schema.csv,dino_metadata_registry,137,2,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_local_asset_preprocessing_audit_v1qi_schema.csv,dino_metadata_registry,1453,22,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_local_asset_preprocessing_summary_v1qi_schema.csv,dino_metadata_registry,143,2,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_local_model_offline_audit_v1qg_schema.csv,dino_metadata_registry,1067,17,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_local_model_offline_summary_v1qg_schema.csv,dino_metadata_registry,131,2,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_local_readiness_manifest_v1qt_schema.csv,dino_metadata_registry,321,6,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_local_readiness_quality_checks_v1qt_schema.csv,dino_metadata_registry,355,6,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_local_readiness_scientific_summary_v1qt_schema.csv,dino_metadata_registry,423,6,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_local_root_environment_audit_v1qn_schema.csv,dino_metadata_registry,643,10,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_local_root_environment_summary_v1qn_schema.csv,dino_metadata_registry,137,2,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_local_smoke_run_readiness_gate_v1qr_schema.csv,dino_metadata_registry,432,7,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_local_smoke_run_readiness_summary_v1qr_schema.csv,dino_metadata_registry,143,2,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_manifest_crosswalk_repair_suggestions_v1qp_schema.csv,dino_metadata_registry,915,13,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_manifest_crosswalk_repair_summary_v1qp_schema.csv,dino_metadata_registry,143,2,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_patch_visual_asset_inventory_summary_v1pn_schema.csv,dino_metadata_registry,149,2,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_patch_visual_asset_inventory_v1pn_schema.csv,dino_metadata_registry,919,14,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_patch_visual_linkage_registry_v1pv_schema.csv,dino_metadata_registry,1081,16,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_patch_visual_linkage_summary_v1pv_schema.csv,dino_metadata_registry,133,2,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_pca_cluster_summary_v1pk_schema.csv,dino_metadata_registry,125,2,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_pca_projection_v1pk_schema.csv,dino_metadata_registry,619,11,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_protocol_c_crosswalk_summary_v1pl_schema.csv,dino_metadata_registry,143,2,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_protocol_c_crosswalk_v1pl_schema.csv,dino_metadata_registry,1199,18,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_queue_leakage_audit_v1px_schema.csv,dino_metadata_registry,478,9,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_queue_leakage_summary_v1px_schema.csv,dino_metadata_registry,129,2,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_representation_feature_store_with_smoke_summary_v1qk_schema.csv,dino_metadata_registry,171,2,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_representation_feature_store_with_smoke_v1qk_schema.csv,dino_metadata_registry,59807,787,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_review_only_execution_queue_expanded_summary_v1pw_schema.csv,dino_metadata_registry,155,2,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_review_only_execution_queue_expanded_v1pw_schema.csv,dino_metadata_registry,1161,17,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_similarity_matrix_long_v1pj_schema.csv,dino_metadata_registry,523,8,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_similarity_neighbors_v1pj_schema.csv,dino_metadata_registry,869,13,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_similarity_summary_v1pj_schema.csv,dino_metadata_registry,123,2,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_smoke_asset_local_reconciliation_candidates_v1qo_schema.csv,dino_metadata_registry,911,11,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_smoke_asset_local_reconciliation_summary_v1qo_schema.csv,dino_metadata_registry,157,2,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_smoke_asset_local_reconciliation_v1qo_schema.csv,dino_metadata_registry,1652,23,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_smoke_cluster_exploratory_v1ps_schema.csv,dino_metadata_registry,677,11,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_smoke_embedding_bundle_manifest_v1qm_schema.csv,dino_metadata_registry,363,6,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_smoke_embedding_execution_manifest_v1qj_schema.csv,dino_metadata_registry,825,12,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_smoke_embedding_failures_v1qj_schema.csv,dino_metadata_registry,475,8,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_smoke_embedding_feature_store_summary_v1pr_schema.csv,dino_metadata_registry,151,2,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_smoke_embedding_feature_store_v1pr_schema.csv,dino_metadata_registry,1389,21,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_smoke_embedding_quality_checks_v1qm_schema.csv,dino_metadata_registry,355,6,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_smoke_embedding_scientific_summary_v1qm_schema.csv,dino_metadata_registry,423,6,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_smoke_embedding_summary_v1qj_schema.csv,dino_metadata_registry,123,2,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_smoke_embeddings_feature_store_v1qj_schema.csv,dino_metadata_registry,52633,786,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_smoke_exploratory_clusters_v1ql_schema.csv,dino_metadata_registry,669,10,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_smoke_pca_projection_v1ps_schema.csv,dino_metadata_registry,630,11,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_smoke_pca_projection_v1ql_schema.csv,dino_metadata_registry,677,12,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_smoke_protocol_c_crosswalk_v1ps_schema.csv,dino_metadata_registry,762,11,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_smoke_review_products_summary_v1ps_schema.csv,dino_metadata_registry,135,2,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_smoke_review_products_summary_v1ql_schema.csv,dino_metadata_registry,135,2,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_smoke_sample_selection_v1qh_schema.csv,dino_metadata_registry,1118,19,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_smoke_sample_summary_v1qh_schema.csv,dino_metadata_registry,117,2,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_smoke_similarity_matrix_long_v1ql_schema.csv,dino_metadata_registry,488,7,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_smoke_similarity_neighbors_v1ps_schema.csv,dino_metadata_registry,882,13,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_smoke_similarity_neighbors_v1ql_schema.csv,dino_metadata_registry,910,13,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_tcc_results_manifest_v1pm_schema.csv,dino_metadata_registry,259,6,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_tcc_results_scientific_summary_v1pm_schema.csv,dino_metadata_registry,351,6,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_tcc_table_embedding_inventory_v1pm_schema.csv,dino_metadata_registry,431,7,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_tcc_table_execution_readiness_v1qe_schema.csv,dino_metadata_registry,443,7,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_tcc_table_execution_safety_v1qe_schema.csv,dino_metadata_registry,265,4,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_tcc_table_local_blockers_v1qs_schema.csv,dino_metadata_registry,379,6,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_tcc_table_local_readiness_v1qs_schema.csv,dino_metadata_registry,291,5,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_tcc_table_pca_cluster_results_v1pm_schema.csv,dino_metadata_registry,411,7,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_tcc_table_protocol_c_crosswalk_v1pm_schema.csv,dino_metadata_registry,502,7,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_tcc_table_review_queue_v1py_schema.csv,dino_metadata_registry,421,8,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_tcc_table_similarity_results_v1pm_schema.csv,dino_metadata_registry,397,6,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_tcc_table_smoke_embedding_results_v1qm_schema.csv,dino_metadata_registry,331,5,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_tcc_table_visual_asset_eligibility_v1py_schema.csv,dino_metadata_registry,508,7,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_visual_asset_eligibility_audit_v1pu_schema.csv,dino_metadata_registry,1255,18,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_visual_asset_eligibility_summary_v1pu_schema.csv,dino_metadata_registry,141,2,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_visual_eligibility_bundle_manifest_v1pz_schema.csv,dino_metadata_registry,381,6,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/dino_visual_eligibility_scientific_summary_v1pz_schema.csv,dino_metadata_registry,441,6,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/multi_anchor_dino_review_embedding_schema.csv,dino_metadata_registry,635,8,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/official_anchor_dino_embedding_readiness_schema.csv,dino_metadata_registry,2289,24,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/protocol_c_tcc_table_dino_role_v1rp_schema.csv,dino_metadata_registry,134,3,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/recife_dino_review_only_representation_queue_v1oz_schema.csv,dino_metadata_registry,1059,14,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+datasets/schemas/recife_dino_review_only_representation_summary_v1oz_schema.csv,dino_metadata_registry,91,2,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+docs/metodologia_cientifica/dino_command_registry.md,other,40535,,false,false,false,
+docs/metodologia_cientifica/dino_sentinel_embedding_protocol.md,other,28379,,false,false,false,
+docs/metodologia_cientifica/dino_sentinel_scientific_evidence_summary.md,other,6201,,false,false,false,
+docs/metodologia_cientifica/protocolo_c_dino_triagem_review_only_v1nn.md,other,435,,false,false,false,
+docs/metodologia_cientifica/protocolo_c_embedding_dino_anchor_oficial_v1ja.md,other,2054,,false,false,false,
+docs/metodologia_cientifica/protocolo_c_features_dino_controles_v1kw.md,other,160,,false,false,false,
+docs/metodologia_cientifica/protocolo_c_recife_dino_fila_c3_plus_v1nz.md,other,341,,false,false,false,
+docs/metodologia_cientifica/protocolo_c_recife_dino_triagem_v1nt.md,other,392,,false,false,false,
+docs/metodologia_cientifica/protocolo_c_relatorio_embedding_dino_anchor_oficial_v1ja.md,other,1805,,false,false,false,
+docs/metodologia_cientifica/protocolo_c_revp_v1oq_c3_c4_dino_recheck_after_v3.md,other,638,,false,false,false,
+docs/metodologia_cientifica/revp_v1oz_dino_review_only_representation_queue.md,other,687,,false,false,false,
+docs/metodologia_cientifica/revp_v1pg_dino_artifact_discovery.md,other,708,,false,false,false,
+docs/metodologia_cientifica/revp_v1ph_dino_embedding_feature_store_registry.md,other,694,,false,false,false,
+docs/metodologia_cientifica/revp_v1pi_dino_embedding_quality_audit.md,other,560,,false,false,false,
+docs/metodologia_cientifica/revp_v1pj_dino_similarity_neighbor_graph.md,other,552,,false,false,false,
+docs/metodologia_cientifica/revp_v1pk_dino_pca_cluster_exploratory.md,other,527,,false,false,false,
+docs/metodologia_cientifica/revp_v1pl_dino_protocol_c_crosswalk.md,other,533,,false,false,false,
+docs/metodologia_cientifica/revp_v1pm_dino_tcc_results_bundle.md,other,920,,false,false,false,
+docs/metodologia_cientifica/revp_v1po_dino_embedding_execution_queue.md,other,420,,false,false,false,
+docs/metodologia_cientifica/revp_v1pp_dino_backend_model_probe.md,other,382,,false,false,false,
+docs/metodologia_cientifica/revp_v1pq_controlled_smoke_embedding_executor.md,other,397,,false,false,false,
+docs/metodologia_cientifica/revp_v1pr_import_smoke_embeddings_feature_store.md,other,388,,false,false,false,
+docs/metodologia_cientifica/revp_v1ps_smoke_embedding_review_products.md,other,412,,false,false,false,
+docs/metodologia_cientifica/revp_v1pt_dino_execution_bundle.md,other,700,,false,false,false,
+docs/metodologia_cientifica/revp_v1pw_dino_review_only_queue_expansion.md,other,578,,false,false,false,
+docs/metodologia_cientifica/revp_v1px_dino_queue_leakage_audit.md,other,311,,false,false,false,
+docs/metodologia_cientifica/revp_v1py_dino_visual_queue_tcc_update.md,other,776,,false,false,false,
+docs/metodologia_cientifica/revp_v1qb_dino_execution_readiness_audit.md,other,416,,false,false,false,
+docs/metodologia_cientifica/revp_v1qc_dino_dry_run_execution_package.md,other,499,,false,false,false,
+docs/metodologia_cientifica/revp_v1qe_dino_execution_readiness_tcc_update.md,other,707,,false,false,false,
+docs/metodologia_cientifica/revp_v1qf_dino_execution_bridge_bundle.md,other,377,,false,false,false,
+docs/metodologia_cientifica/revp_v1qg_local_dino_model_offline_audit.md,other,465,,false,false,false,
+docs/metodologia_cientifica/revp_v1qh_dino_smoke_sample_selector.md,other,450,,false,false,false,
+docs/metodologia_cientifica/revp_v1qj_controlled_real_smoke_embedding_executor.md,other,461,,false,false,false,
+docs/metodologia_cientifica/revp_v1qk_import_smoke_embeddings_to_representation_layer.md,other,438,,false,false,false,
+docs/metodologia_cientifica/revp_v1qm_smoke_embedding_scientific_bundle.md,other,753,,false,false,false,
+docs/metodologia_cientifica/revp_v1qq_local_dino_execution_config_template.md,other,1320,,false,false,false,
+docs/protocolo_c/v2bf_curitiba_patch_asset_lineage/recovered_crosswalk_tables/v2bf_dino_link_recovery.csv,dino_metadata_registry,1058,3,true,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+manifests/dino_inputs/revp_v1fu_dino_sentinel_input_manifest/dino_sentinel_input_manifest_v1fu.csv,dino_metadata_registry,103128,128,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+manifests/dino_inputs/revp_v1fu_dino_sentinel_input_manifest/dino_sentinel_input_qa_v1fu.csv,dino_metadata_registry,988,11,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+manifests/dino_inputs/revp_v1fu_dino_sentinel_input_manifest/dino_sentinel_input_status_v1fu.csv,dino_metadata_registry,312,10,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+manifests/dino_inputs/revp_v1fu_dino_sentinel_input_manifest/dino_sentinel_input_summary_v1fu.json,dino_metadata_json,2071,,unknown,unknown,false,"json metadata, not loaded as vectors"
+manifests/training_readiness/revp_v1fs_self_supervised_asset_sanity_and_embedding_plan/embedding_extraction_plan_v1fs.csv,dino_metadata_registry,1505,3,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+manifests/training_readiness/revp_v1fs_self_supervised_asset_sanity_and_embedding_plan/embedding_extraction_readiness_v1fs.csv,dino_metadata_registry,81494,211,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+manifests/training_readiness/revp_v1fs_self_supervised_asset_sanity_and_embedding_plan/embedding_split_matrix_v1fs.csv,dino_metadata_registry,29505,211,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+manifests/training_readiness/revp_v1ft_embedding_config_and_recife_balance_audit/embedding_excluded_assets_v1ft.csv,dino_metadata_registry,29202,83,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+manifests/training_readiness/revp_v1ft_embedding_config_and_recife_balance_audit/embedding_execution_checklist_v1ft.csv,dino_metadata_registry,453,6,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+manifests/training_readiness/revp_v1ft_embedding_config_and_recife_balance_audit/embedding_extraction_config_v1ft.json,dino_metadata_json,1129,,unknown,unknown,false,"json metadata, not loaded as vectors"
+manifests/training_readiness/revp_v1ft_embedding_config_and_recife_balance_audit/embedding_modality_decision_v1ft.csv,dino_metadata_registry,850,4,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+manifests/training_readiness/revp_v1ft_embedding_config_and_recife_balance_audit/embedding_output_schema_v1ft.csv,dino_metadata_registry,566,9,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+manifests/training_readiness/revp_v1ft_embedding_config_and_recife_balance_audit/embedding_ready_assets_v1ft.csv,dino_metadata_registry,35877,128,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+manifests/training_readiness/revp_v1ft_embedding_config_and_recife_balance_audit/embedding_split_config_v1ft.csv,dino_metadata_registry,25842,128,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+manifests/training_readiness/revp_v1ft_embedding_config_and_recife_balance_audit/embedding_transform_policy_v1ft.csv,dino_metadata_registry,428,5,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+outputs_public/appendix_visual_audit/original_auxiliary_figures/dino_knn_neighbor_network_publication.png,other,303092,,false,false,false,
+outputs_public/appendix_visual_audit/original_auxiliary_figures/dino_medoids_outliers_publication.png,other,156850,,false,false,false,
+outputs_public/appendix_visual_audit/original_auxiliary_figures/dino_pca_projection_publication.png,other,199781,,false,false,false,
+outputs_public/appendix_visual_audit/original_auxiliary_figures/dino_region_neighbor_matrix_publication.png,other,132690,,false,false,false,
+outputs_public/appendix_visual_audit/original_auxiliary_figures/dino_similarity_heatmap_publication.png,other,181754,,false,false,false,
+outputs_public/appendix_visual_audit/original_auxiliary_figures/fig_dino_input_corpus_publication.png,other,479682,,false,false,false,
+outputs_public/execution_reports/final_dino_structural_analysis_report.md,other,761,,false,false,false,
+outputs_public/logs_summary/dino_test_repair_diagnosis.txt,other,411,,false,false,false,
+outputs_public/metrics/dino_cluster_summary.csv,dino_metadata_registry,866,3,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+outputs_public/metrics/dino_pca_summary.csv,dino_metadata_registry,101,2,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+outputs_public/metrics/dino_robustness_summary.csv,dino_metadata_registry,527,3,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+outputs_public/metrics/dino_similarity_summary.csv,dino_metadata_registry,595,7,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+outputs_public/tables/revp_vizinhos_embeddings_label_free_mv1.csv,dino_metadata_registry,1572,12,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+outputs_public/tables/table_dino_embedding_inventory.csv,vector_stats_registry_only,5838,12,true,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+outputs_public/tables/table_dino_medoids.csv,dino_metadata_registry,1097,4,true,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+outputs_public/tables/table_dino_nearest_neighbors.csv,dino_metadata_registry,9546,36,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+outputs_public/tables/table_dino_outliers.csv,dino_metadata_registry,1157,4,true,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+outputs_public/tables/table_dino_pca_coordinates.csv,dino_metadata_registry,2648,12,true,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+outputs_public/tables/table_dino_quantitative_summary_by_region.csv,dino_metadata_registry,745,3,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+outputs_public/tables/table_dino_region_neighbor_matrix.csv,dino_metadata_registry,1881,9,false,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+outputs_public/tables/table_dino_similarity_matrix.csv,dino_metadata_registry,1484,12,true,false,false,csv scanned; vectors loadable only with per-row vector + rows + light size
+scripts/dino/revp_v1fu_dino_sentinel_input_manifest.py,dino_script,14451,,false,false,false,"code, not data"
+scripts/dino/revp_v1fv_dino_local_asset_preflight.py,dino_script,12037,,false,false,false,"code, not data"
+scripts/dino/revp_v1fw_dino_embedding_extraction_scaffold.py,dino_script,18866,,false,false,false,"code, not data"
+scripts/dino/revp_v1fx_dino_smoke_embedding_execution.py,dino_script,35860,,false,false,false,"code, not data"
+scripts/dino/revp_v1fy_dino_embedding_corpus_analysis.py,dino_script,25421,,false,false,false,"code, not data"
+scripts/dino/revp_v1fz_dino_balanced_embedding_corpus.py,dino_script,19942,,false,false,false,"code, not data"
+scripts/dino/revp_v1ga_dino_embedding_structural_consistency_analysis.py,dino_script,14609,,false,false,false,"code, not data"
+scripts/dino/revp_v1gb_dino_embedding_local_visual_structural_review.py,dino_script,23119,,false,false,false,"code, not data"
+scripts/dino/revp_v1gc_dino_embedding_geo_structural_diagnostics.py,dino_script,27712,,false,false,false,"code, not data"
+scripts/dino/revp_v1gd_dino_embedding_perturbation_robustness_diagnostics.py,dino_script,27554,,false,false,false,"code, not data"
+scripts/dino/revp_v1ge_dino_expanded_sentinel_embedding_corpus.py,dino_script,17301,,false,false,false,"code, not data"
+scripts/dino/revp_v1gf_dino_structural_evidence_index.py,dino_script,10471,,false,false,false,"code, not data"
+scripts/dino/revp_v1gg_dino_review_gate_package.py,dino_script,9133,,false,false,false,"code, not data"
+scripts/dino/revp_v1gh_dino_longitudinal_structural_diagnostics.py,dino_script,10322,,false,false,false,"code, not data"
+scripts/dino/revp_v1gi_dino_structural_provenance_tracker.py,dino_script,10311,,false,false,false,"code, not data"
+scripts/dino/revp_v1gk_dino_pipeline_reproducibility_audit.py,dino_script,9634,,false,false,false,"code, not data"
+scripts/dino/revp_v1gn_dino_execution_health_monitor.py,dino_script,11201,,false,false,false,"code, not data"
+scripts/dino/revp_v1go_dino_pipeline_orchestrator.py,dino_script,9391,,false,false,false,"code, not data"
+scripts/dino/revp_v1gp_dino_github_release_readiness_audit.py,dino_script,15735,,false,false,false,"code, not data"
+scripts/dino/revp_v1gu_embedding_structural_evidence_package.py,dino_script,22365,,false,false,false,"code, not data"
+scripts/dino/revp_v1pg_dino_artifact_discovery.py,dino_script,7723,,false,false,false,"code, not data"
+scripts/dino/revp_v1pg_v1pm_dino_representation_common.py,dino_script,19613,,false,false,false,"code, not data"
+scripts/dino/revp_v1ph_dino_embedding_feature_store_registry.py,dino_script,7515,,false,false,false,"code, not data"
+scripts/dino/revp_v1pi_dino_embedding_quality_audit.py,dino_script,6063,,false,false,false,"code, not data"
+scripts/dino/revp_v1pj_dino_similarity_neighbor_graph.py,dino_script,6064,,false,false,false,"code, not data"
+scripts/dino/revp_v1pk_dino_pca_cluster_exploratory.py,dino_script,5653,,false,false,false,"code, not data"
+scripts/dino/revp_v1pl_dino_protocol_c_crosswalk.py,dino_script,5924,,false,false,false,"code, not data"
+scripts/dino/revp_v1pm_dino_tcc_results_bundle.py,dino_script,10168,,false,false,false,"code, not data"
+scripts/dino/revp_v1pn_v1pt_dino_execution_common.py,dino_script,8304,,false,false,false,"code, not data"
+scripts/dino/revp_v1po_dino_embedding_execution_queue.py,dino_script,5109,,false,false,false,"code, not data"
+scripts/dino/revp_v1pp_dino_backend_model_probe.py,dino_script,4798,,false,false,false,"code, not data"
+scripts/dino/revp_v1pq_controlled_smoke_embedding_executor.py,dino_script,11781,,false,false,false,"code, not data"
+scripts/dino/revp_v1pr_import_smoke_embeddings_feature_store.py,dino_script,3793,,false,false,false,"code, not data"
+scripts/dino/revp_v1ps_smoke_embedding_review_products.py,dino_script,9582,,false,false,false,"code, not data"
+scripts/dino/revp_v1pt_dino_execution_bundle.py,dino_script,11079,,false,false,false,"code, not data"
+scripts/dino/revp_v1pw_dino_review_only_queue_expansion.py,dino_script,6210,,false,false,false,"code, not data"
+scripts/dino/revp_v1px_dino_queue_leakage_audit.py,dino_script,6878,,false,false,false,"code, not data"
+scripts/dino/revp_v1py_dino_visual_queue_tcc_update.py,dino_script,3366,,false,false,false,"code, not data"
+scripts/dino/revp_v1qb_dino_execution_readiness_audit.py,dino_script,5275,,false,false,false,"code, not data"
+scripts/dino/revp_v1qc_dino_dry_run_execution_package.py,dino_script,4876,,false,false,false,"code, not data"
+scripts/dino/revp_v1qe_dino_execution_readiness_tcc_update.py,dino_script,3300,,false,false,false,"code, not data"
+scripts/dino/revp_v1qf_dino_execution_bridge_bundle.py,dino_script,6458,,false,false,false,"code, not data"
+scripts/dino/revp_v1qg_local_dino_model_offline_audit.py,dino_script,6099,,false,false,false,"code, not data"
+scripts/dino/revp_v1qg_v1qm_smoke_embedding_common.py,dino_script,15748,,false,false,false,"code, not data"
+scripts/dino/revp_v1qh_dino_smoke_sample_selector.py,dino_script,8427,,false,false,false,"code, not data"
+scripts/dino/revp_v1qj_controlled_real_smoke_embedding_executor.py,dino_script,14566,,false,false,false,"code, not data"
+scripts/dino/revp_v1qk_import_smoke_embeddings_to_representation_layer.py,dino_script,6341,,false,false,false,"code, not data"
+scripts/dino/revp_v1qm_smoke_embedding_scientific_bundle.py,dino_script,13624,,false,false,false,"code, not data"
+scripts/protocolo_c/revp_v1ja_dino_embedding_for_official_anchor_pair.py,dino_script,24903,,false,false,false,"code, not data"
+scripts/protocolo_c/revp_v1nn_dino_c3_control_triage_queue.py,dino_script,8052,,false,false,false,"code, not data"
+scripts/protocolo_c/revp_v1oz_dino_review_only_representation_queue.py,dino_script,7961,,false,false,false,"code, not data"
+scripts/protocolo_c/revp_v1us_dino_review_support_attacher.py,dino_script,233,,false,false,false,"code, not data"
+scripts/protocolo_c/revp_v2bd_build_seed_dino_crosswalk.py,dino_script,144,,false,false,false,"code, not data"
+scripts/protocolo_c/revp_v2be_attempt_seed_dino_binding.py,dino_script,144,,false,false,false,"code, not data"
+scripts/protocolo_c/revp_v2bf_recover_dino_links.py,dino_script,130,,false,false,false,"code, not data"
+scripts/suscetibilidade/build_susc_10d_dino_score_diagnostics.py,dino_script,5690,,false,false,false,"code, not data"
+scripts/suscetibilidade/discover_susc_10d_dino_embeddings.py,dino_script,5913,,false,false,false,"code, not data"
+scripts/training_readiness/revp_v1fs_self_supervised_asset_sanity_and_embedding_plan.py,dino_script,26784,,false,false,false,"code, not data"
+scripts/training_readiness/revp_v1ft_embedding_config_and_recife_balance_audit.py,dino_script,34883,,false,false,false,"code, not data"

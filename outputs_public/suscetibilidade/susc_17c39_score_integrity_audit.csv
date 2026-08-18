@@ -1,0 +1,2 @@
+score_integrity_audit_id,official_score_v6_path,official_score_v6_changed,official_matrix_path,official_matrix_changed,score_v7_exists,final_score_computed,review_only
+S17C39_INTEG_0001,datasets/suscetibilidade/susc_score_v6_candidate_by_patch_v1.csv,false,datasets/suscetibilidade/susc_features_by_patch_v1.csv,false,false,false,true

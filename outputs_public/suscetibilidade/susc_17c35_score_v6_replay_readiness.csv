@@ -1,0 +1,12 @@
+score_replay_readiness_id,canary_patch_id,normalization_population_reconstructed,required_features_available,official_equivalent_features_available,proxy_features_used,can_compute_full_score_v6_replay,can_compute_partial_component_replay,score_replay_status,blocking_reason,not_official_score,does_not_replace_score_v6,review_only
+S17C33_RDY_0001,S17C33_EAC_0001,true,false,3,1,false,true,partial_components_only_topography_blocked,topography_hydrology (peso 0.40) exige twi/tpi/flow_acc/HAND full ausentes,true,true,true
+S17C33_RDY_0002,S17C33_EAC_0002,true,false,3,1,false,true,partial_components_only_topography_blocked,topography_hydrology (peso 0.40) exige twi/tpi/flow_acc/HAND full ausentes,true,true,true
+S17C33_RDY_0003,S17C33_EAC_0003,true,false,3,1,false,true,partial_components_only_topography_blocked,topography_hydrology (peso 0.40) exige twi/tpi/flow_acc/HAND full ausentes,true,true,true
+S17C33_RDY_0004,S17C33_EAC_0004,true,false,3,1,false,true,partial_components_only_topography_blocked,topography_hydrology (peso 0.40) exige twi/tpi/flow_acc/HAND full ausentes,true,true,true
+S17C33_RDY_0005,S17C33_EAC_0005,true,false,3,1,false,true,partial_components_only_topography_blocked,topography_hydrology (peso 0.40) exige twi/tpi/flow_acc/HAND full ausentes,true,true,true
+S17C33_RDY_0006,S17C33_EAC_0006,true,false,3,1,false,true,partial_components_only_topography_blocked,topography_hydrology (peso 0.40) exige twi/tpi/flow_acc/HAND full ausentes,true,true,true
+S17C33_RDY_0007,S17C33_EAC_0007,true,false,3,1,false,true,partial_components_only_topography_blocked,topography_hydrology (peso 0.40) exige twi/tpi/flow_acc/HAND full ausentes,true,true,true
+S17C33_RDY_0008,S17C33_EAC_0008,true,false,3,1,false,true,partial_components_only_topography_blocked,topography_hydrology (peso 0.40) exige twi/tpi/flow_acc/HAND full ausentes,true,true,true
+S17C33_RDY_0009,S17C33_EAC_0009,true,false,3,1,false,true,partial_components_only_topography_blocked,topography_hydrology (peso 0.40) exige twi/tpi/flow_acc/HAND full ausentes,true,true,true
+S17C33_RDY_0010,S17C33_EAC_0010,true,false,3,1,false,true,partial_components_only_topography_blocked,topography_hydrology (peso 0.40) exige twi/tpi/flow_acc/HAND full ausentes,true,true,true
+S17C33_RDY_0011,S17C33_EAC_0011,true,false,3,1,false,true,partial_components_only_topography_blocked,topography_hydrology (peso 0.40) exige twi/tpi/flow_acc/HAND full ausentes,true,true,true

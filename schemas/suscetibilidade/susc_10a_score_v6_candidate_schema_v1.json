@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "schema_id": "SUSC-10A-SCORE-V6-CANDIDATE",
+  "created": "2026-06-27",
+  "score_name": "SUSC-10A susceptibility score v6 candidate",
+  "status": "review_only_deterministic_candidate_score",
+  "purpose": "Score v6 candidato deterministico, transparente e explicavel, construido SO com features aprovadas pelos gates metodologicos (SUSC-06B advance_to_score_v6 + cards ready_for_methodology). NAO e modelo supervisionado, NAO usa ground truth, NAO usa label/score v5 como feature, NAO valida ocorrencia real.",
+  "forbidden_as_feature": [
+    "heuristic_label", "score (v5)", "proxy_v5", "proxy_target",
+    "documentary_event_as_target"
+  ],
+  "excluded_from_main_score_flagged_06b": [
+    "curvature_laplacian_mean", "rain_3d_7d_ratio", "flow_acc_log_p75", "water_occurrence_patch"
+  ],
+  "subindices": [
+    "topography_hydrology_index",
+    "rainfall_trigger_index",
+    "urban_spectral_index",
+    "vegetation_mitigation_index",
+    "evidence_support_index"
+  ],
+  "weights": {
+    "topography_hydrology_index": 0.40,
+    "rainfall_trigger_index": 0.25,
+    "urban_spectral_index": 0.20,
+    "vegetation_mitigation_index": -0.10,
+    "evidence_support_index": 0.05
+  },
+  "normalization": {
+    "winsorize": [0.01, 0.99],
+    "scaler": "robust_min_max",
+    "direction_aware": true,
+    "invert_when": ["lower_increases", "higher_decreases"]
+  },
+  "classes": {"method": "global_tertiles", "labels": ["low", "medium", "high"]},
+  "explainability": {"top_contributions_per_patch": 5, "textual_reason": true, "caution_flags": true},
+  "can_be_ground_truth": false,
+  "allowed_for_training": false,
+  "review_only": true,
+  "scientific_status": "deterministic_candidate_score_not_supervised_not_ground_truth"
+}

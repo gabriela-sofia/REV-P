@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-18C self-supervised training tensor schema v1",
+  "type": "object",
+  "required": [
+    "training_tensor_id", "ml_sample_id", "unified_patch_id", "patch_family", "region",
+    "feature_count", "missing_flag_count", "allowed_for_self_supervised", "allowed_for_supervised",
+    "review_only"
+  ],
+  "properties": {
+    "training_tensor_id": {"type": "string", "pattern": "^S18C_TT_"},
+    "allowed_for_self_supervised": {"const": "true"},
+    "allowed_for_supervised": {"const": "false"},
+    "review_only": {"const": "true"}
+  }
+}

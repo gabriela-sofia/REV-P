@@ -10,4 +10,4 @@ Similaridade é sinal exploratório de coerência visual/semântica entre patche
 
 ## Resultado
 
-Embeddings válidos: 0. Pares de vizinhos: 0.
+Embeddings válidos: 32. Pares de vizinhos: 160.

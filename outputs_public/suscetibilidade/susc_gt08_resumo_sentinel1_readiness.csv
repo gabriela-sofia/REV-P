@@ -1,0 +1,2 @@
+aoi_status,count,ready_for_metadata_search_count,par_completo_pre_pos_count,local_scene_candidate_count,can_execute_search_now_count,can_download_now_count,training_allowed_count,ground_truth_allowed_count,score_v7_candidate_count
+aoi_forte_por_bbox_ou_geometria_patch,5,5,5,15,0,0,0,0,0

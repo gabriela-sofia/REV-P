@@ -1,0 +1,8 @@
+criterio,valor_observado,limiar,passou,status,observacao
+total_patches,300,>0,true,19A_MATRIZ_MULTIMODAL_PARCIAL_COM_LACUNAS,universo de patches consolidado
+patch_id_unico,300,== total,true,19A_MATRIZ_MULTIMODAL_PARCIAL_COM_LACUNAS,sem patch_id duplicado
+regioes_presentes,3,>=1,true,19A_MATRIZ_MULTIMODAL_PARCIAL_COM_LACUNAS,"Recife, Curitiba e Petropolis"
+cobertura_fisica_media,1.0,>=0.9,true,19A_MATRIZ_MULTIMODAL_PARCIAL_COM_LACUNAS,features fisicas completas
+ground_truth_zero,0,0,true,19A_MATRIZ_MULTIMODAL_PARCIAL_COM_LACUNAS,sem ground truth
+score_v6_intacto,true,true,true,19A_MATRIZ_MULTIMODAL_PARCIAL_COM_LACUNAS,score_v6 nao alterado
+score_v7_zero,false,false,true,19A_MATRIZ_MULTIMODAL_PARCIAL_COM_LACUNAS,sem score_v7

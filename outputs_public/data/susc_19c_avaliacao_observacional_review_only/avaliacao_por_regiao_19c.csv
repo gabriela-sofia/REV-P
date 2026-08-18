@@ -1,0 +1,4 @@
+regiao,observed_patches,background_patches,score_medio_observado,score_medio_background,topk_resultado,direcoes_consistentes,direcoes_divergentes,status_regional,principal_limite
+recife,5,95,0.6287,0.5697,2/5_em_top30_regional,9,7,recife_review_only_com_amostra_pequena,amostra pequena e sem geometria oficial
+curitiba,2,98,0.5137,0.5151,1/2_em_top30_regional,8,8,curitiba_tecnica_sar_com_amostra_minima,amostra pequena e sem geometria oficial
+petropolis,0,100,NA,0.4800,sem_observados,0,NA,petropolis_excluido_por_fenomeno_misto,fenomeno misto sem separacao

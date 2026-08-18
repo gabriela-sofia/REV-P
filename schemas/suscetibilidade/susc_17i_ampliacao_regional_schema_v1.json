@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17I ampliacao regional da amostra observacional",
+  "type": "object",
+  "properties": {
+    "status_prontidao": {
+      "enum": [
+        "candidato_observacional_forte",
+        "candidato_observacional_parcial",
+        "candidato_contextual",
+        "bloqueado_sem_geometria",
+        "bloqueado_sem_data",
+        "bloqueado_por_fenomeno_misto",
+        "bloqueado_por_lacuna_de_features",
+        "rejeitado"
+      ]
+    },
+    "uso_permitido": {
+      "enum": [
+        "avaliacao_somente_revisao",
+        "contexto_documental",
+        "fila_obtencao_geometria",
+        "fila_obtencao_data",
+        "rejeitado"
+      ]
+    },
+    "classe_fenomeno": {
+      "enum": [
+        "inundacao",
+        "deslizamento",
+        "misto",
+        "insuficiente"
+      ]
+    },
+    "status_final_17i": {
+      "enum": [
+        "17I_AMOSTRA_REGIONAL_EXPANDIDA_COM_CANDIDATOS_FORTES",
+        "17I_AMOSTRA_REGIONAL_PARCIAL_COM_FILAS_EXECUTAVEIS",
+        "17I_CURITIBA_PETROPOLIS_SEM_PRONTIDAO_MAS_COM_PLANO",
+        "17I_APROXIMACAO_17B_SEM_BENCHMARK",
+        "17I_BLOQUEADO_FAIL_CLOSED"
+      ]
+    },
+    "status_17b": {
+      "enum": [
+        "17B_AINDA_BLOQUEADO_AMOSTRA_INSUFICIENTE",
+        "17B_APROXIMACAO_COM_AMOSTRA_REGIONAL_PARCIAL",
+        "17B_PRONTO_PARA_DESENHO_DE_BENCHMARK_SOMENTE_REVISAO"
+      ]
+    },
+    "ground_truth": {
+      "const": "false"
+    },
+    "eligible_for_training": {
+      "const": "false"
+    },
+    "score_v7_allowed": {
+      "const": "false"
+    }
+  },
+  "enums": {
+    "status_prontidao": [
+      "candidato_observacional_forte",
+      "candidato_observacional_parcial",
+      "candidato_contextual",
+      "bloqueado_sem_geometria",
+      "bloqueado_sem_data",
+      "bloqueado_por_fenomeno_misto",
+      "bloqueado_por_lacuna_de_features",
+      "rejeitado"
+    ],
+    "uso_permitido": [
+      "avaliacao_somente_revisao",
+      "contexto_documental",
+      "fila_obtencao_geometria",
+      "fila_obtencao_data",
+      "rejeitado"
+    ],
+    "classe_fenomeno": [
+      "inundacao",
+      "deslizamento",
+      "misto",
+      "insuficiente"
+    ],
+    "lacuna": [
+      "obter_geometria_oficial",
+      "obter_data_exata",
+      "separar_fenomeno",
+      "obter_footprint_tecnico",
+      "extrair_features_fisicas",
+      "extrair_features_espectrais",
+      "extrair_chuva_pre_evento",
+      "resolver_patch_link"
+    ],
+    "status_final_17i": [
+      "17I_AMOSTRA_REGIONAL_EXPANDIDA_COM_CANDIDATOS_FORTES",
+      "17I_AMOSTRA_REGIONAL_PARCIAL_COM_FILAS_EXECUTAVEIS",
+      "17I_CURITIBA_PETROPOLIS_SEM_PRONTIDAO_MAS_COM_PLANO",
+      "17I_APROXIMACAO_17B_SEM_BENCHMARK",
+      "17I_BLOQUEADO_FAIL_CLOSED"
+    ],
+    "status_17b": [
+      "17B_AINDA_BLOQUEADO_AMOSTRA_INSUFICIENTE",
+      "17B_APROXIMACAO_COM_AMOSTRA_REGIONAL_PARCIAL",
+      "17B_PRONTO_PARA_DESENHO_DE_BENCHMARK_SOMENTE_REVISAO"
+    ]
+  },
+  "required_outputs": [
+    "outputs_public/data/susc_17i_ampliacao_regional_amostra_observacional/preflight.json",
+    "outputs_public/data/susc_17i_ampliacao_regional_amostra_observacional/inventario_regional_eventos_observacionais.csv",
+    "outputs_public/data/susc_17i_ampliacao_regional_amostra_observacional/matriz_amostra_observacional_expandida.csv",
+    "outputs_public/data/susc_17i_ampliacao_regional_amostra_observacional/matriz_disponibilidade_features_regionais.csv",
+    "outputs_public/data/susc_17i_ampliacao_regional_amostra_observacional/fila_regional_desbloqueio_observacional.csv",
+    "outputs_public/data/susc_17i_ampliacao_regional_amostra_observacional/gate_ampliacao_regional_observacional.csv",
+    "outputs_public/data/susc_17i_ampliacao_regional_amostra_observacional/gate_prontidao_17b_pos_17i.csv",
+    "outputs_public/data/susc_17i_ampliacao_regional_amostra_observacional/resumo_por_regiao.csv",
+    "outputs_public/data/susc_17i_ampliacao_regional_amostra_observacional/resumo_por_status.csv",
+    "outputs_public/data/susc_17i_ampliacao_regional_amostra_observacional/resumo_por_fenomeno.csv",
+    "outputs_public/data/susc_17i_ampliacao_regional_amostra_observacional/summary.json",
+    "outputs_public/reports/SUSC_17I_AMPLIACAO_REGIONAL_AMOSTRA_OBSERVACIONAL.md",
+    "schemas/suscetibilidade/susc_17i_ampliacao_regional_schema_v1.json"
+  ]
+}

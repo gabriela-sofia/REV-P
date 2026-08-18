@@ -1,0 +1,17 @@
+criterio,valor_observado,limiar,passou,observacao
+regioes_processadas,2,2,true,Curitiba e Petropolis processadas
+regioes_com_evidencia_observacional,3,2,true,inclui Recife herdado + parciais/contextuais
+eventos_distintos_com_geometria_forte,1,3,false,apenas eventos com geometria forte contam
+vinculos_patch_fortes,5,20,false,vinculos fortes herdados de Recife
+candidatos_fortes_curitiba,0,>=0,true,Curitiba sem geometria forte
+candidatos_fortes_petropolis,0,>=0,true,Petropolis com fenomeno misto
+candidatos_parciais,2,>=0,true,candidatos parciais datados
+fila_executavel_criada,true,true,true,fila regional de desbloqueio
+separacao_temporal_possivel,false,true,false,amostra forte ainda de um unico evento
+features_completas_por_evento,0,>=1,false,nenhum evento CUR/PET com features vinculadas
+ground_truth_zero,0,0,true,sem ground truth
+trainable_zero,0,0,true,sem treino
+score_v7_allowed_zero,0,0,true,sem score_v7
+score_v6_intacto,true,true,true,score_v6 nunca alterado
+caminho_funcional_entregue,true,true,true,candidatos ou plano executavel
+status_final_17i,17I_AMOSTRA_REGIONAL_PARCIAL_COM_FILAS_EXECUTAVEIS,enum,true,status final da ampliacao

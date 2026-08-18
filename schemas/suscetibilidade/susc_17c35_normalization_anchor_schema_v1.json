@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C35 normalization anchor schema v1",
+  "type": "object",
+  "required": [
+    "normalization_anchor_id", "component_or_feature", "normalization_method",
+    "population_reconstructed", "normalization_params_recovered", "can_apply_to_canaries",
+    "canary_only_normalization_used", "blocking_reason", "review_only"
+  ],
+  "properties": {
+    "normalization_anchor_id": {"type": "string", "pattern": "^S17C35_NORM_"},
+    "canary_only_normalization_used": {"const": "false"},
+    "review_only": {"const": "true"}
+  }
+}

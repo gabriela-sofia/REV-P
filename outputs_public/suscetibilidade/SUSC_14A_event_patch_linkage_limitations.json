@@ -1,0 +1,30 @@
+{
+  "artifact": "SUSC-14A rescued event patch linkage",
+  "n_preferred_events": 31,
+  "n_links": 31,
+  "spatial_relation_counts": {
+    "insufficient_for_patch_link": 6,
+    "same_region_period_context": 3,
+    "same_neighborhood_context": 22
+  },
+  "linkage_confidence_counts": {
+    "very_weak": 31
+  },
+  "strong_links": 0,
+  "moderate_links": 0,
+  "observational_evaluation_links": 0,
+  "can_be_ground_truth": false,
+  "can_be_used_as_ground_truth": false,
+  "allowed_for_training": false,
+  "review_only": true,
+  "score_v7_created": false,
+  "key_limitations": [
+    "Offline e o modo padrao; sem rede a camada de logradouros oficial nao e baixada.",
+    "A unica referencia oficial local cobre poucos bairros (risco Sul/Recife), entao o geocoding por endereco resulta majoritariamente em contexto de bairro, nao em ponto patch-level.",
+    "Ocorrencia geocodificada por logradouro oficial e no maximo moderada; nunca strong.",
+    "Bairro/regiao/risco/alerta nunca viram evento observado patch-level.",
+    "Footprint oficial exige geometria explicita + data; sem ele nao ha evento forte.",
+    "Sem ground truth, sem treino supervisionado e sem score v7."
+  ],
+  "mandatory_statement": "O SUSC-14A tenta resgatar evidencia observacional a partir de registros oficiais sem coordenada explicita, usando apenas referencias espaciais oficiais/rastreaveis e footprints publicos quando disponiveis. Eventos geocodificados por referencia oficial permanecem review-only, nao criam ground truth, nao liberam treino supervisionado e nao autorizam score v7 automatico."
+}

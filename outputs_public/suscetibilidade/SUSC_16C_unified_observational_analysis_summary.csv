@@ -1,0 +1,10 @@
+metric,value,review_only
+row_count,103,true
+event_link_rows,65,true
+unique_event_patches,62,true
+low_or_medium_event_rows,57,true
+calibration_candidate_rows,57,true
+feature_mapping_used,{},true
+score_v7_created,false,true
+allowed_for_training,false,true
+can_be_ground_truth,false,true

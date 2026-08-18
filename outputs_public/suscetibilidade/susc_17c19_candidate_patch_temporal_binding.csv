@@ -1,0 +1,6 @@
+candidate_patch_temporal_binding_id,candidate_patch_id,event_id,event_period_start,event_period_end,pre_event_window_start,pre_event_window_end,during_event_window_start,during_event_window_end,post_event_window_start,post_event_window_end,temporal_binding_status,usable_for_pre_event_sensor_query,review_only,trainable,ground_truth
+S17C19_TBIND_0001,S17C6_CANARY_REC_00001,REC_2022_05_24_30,2022-05-24,2022-05-30,2022-04-24,2022-05-23,2022-05-24,2022-05-30,2022-05-31,2022-06-29,resolved,true,true,false,false
+S17C19_TBIND_0002,S17C6_CANARY_REC_00002,REC_2022_05_24_30,2022-05-24,2022-05-30,2022-04-24,2022-05-23,2022-05-24,2022-05-30,2022-05-31,2022-06-29,resolved,true,true,false,false
+S17C19_TBIND_0003,S17C6_CANARY_REC_00003,REC_2022_05_24_30,2022-05-24,2022-05-30,2022-04-24,2022-05-23,2022-05-24,2022-05-30,2022-05-31,2022-06-29,resolved,true,true,false,false
+S17C19_TBIND_0004,S17C6_CANARY_REC_00004,REC_2022_05_24_30,2022-05-24,2022-05-30,2022-04-24,2022-05-23,2022-05-24,2022-05-30,2022-05-31,2022-06-29,resolved,true,true,false,false
+S17C19_TBIND_0005,S17C6_CANARY_REC_00005,REC_2022_05_24_30,2022-05-24,2022-05-30,2022-04-24,2022-05-23,2022-05-24,2022-05-30,2022-05-31,2022-06-29,resolved,true,true,false,false

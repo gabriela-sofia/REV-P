@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C14 gate evaluation schema v1",
+  "type": "object",
+  "required": [
+    "gate_evaluation_id",
+    "formal_request_id",
+    "artifact_manifest_id",
+    "gate_id",
+    "gate_name",
+    "gate_pass",
+    "failure_reason",
+    "evidence_class_after_gate",
+    "source_is_official",
+    "review_only"
+  ],
+  "properties": {
+    "gate_evaluation_id": {
+      "type": "string",
+      "pattern": "^S17C14_GATE_"
+    },
+    "gate_id": {
+      "enum": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7"
+      ]
+    },
+    "gate_pass": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "review_only": {
+      "const": "true"
+    }
+  }
+}

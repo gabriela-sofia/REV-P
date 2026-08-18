@@ -1,0 +1,5 @@
+method_equivalence_metric_id,feature_name,pearson_corr,spearman_corr,mae,median_absolute_error,relative_error_median,official_min,official_max,recomputed_min,recomputed_max,scale_ratio_median,rank_preservation_score,equivalence_status_17c37,equivalence_status_17c38,improved_vs_17c37,equivalence_status,review_only
+S17C38_MEM_0001,hand_mean,0.8864,0.9127,3.7395,2.7006,0.2043,1.9457,42.25,1.4893,32.0483,0.9704,0.9127,calibratable,equivalent,false,equivalent,true
+S17C38_MEM_0002,twi_mean,0.7867,0.8805,100.7623,38.4532,0.8243,6.6409,1033.1852,7.5547,11.3435,0.1757,0.8805,calibratable,calibratable,true,calibratable,true
+S17C38_MEM_0003,tpi_250m_mean,0.8415,0.8425,0.5145,0.3727,0.8668,-1.8725,1.842,-2.841,3.6479,1.3625,0.8425,calibratable,calibratable,false,calibratable,true
+S17C38_MEM_0004,flow_acc_log_mean,-0.236,-0.2299,1.0607,0.5289,0.4567,0.7253,4.942,0.7539,1.4287,0.6728,-0.2299,incompatible,incompatible,true,incompatible,true

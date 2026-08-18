@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C34 observational contrast schema v1",
+  "type": "object",
+  "required": [
+    "contrast_id",
+    "comparison_group",
+    "original_patch_id",
+    "canary_patch_id",
+    "distance_original_to_canary_m",
+    "original_has_documented_occurrence_nearby",
+    "canary_has_official_hydrological_occurrence",
+    "score_v6_original_available",
+    "score_v6_canary_available",
+    "contrast_interpretation",
+    "absence_of_occurrence_is_true_negative",
+    "review_only"
+  ],
+  "properties": {
+    "contrast_id": {"type": "string", "pattern": "^S17C34_CON_"},
+    "canary_has_official_hydrological_occurrence": {"const": "true"},
+    "absence_of_occurrence_is_true_negative": {"const": "false"},
+    "review_only": {"const": "true"}
+  }
+}

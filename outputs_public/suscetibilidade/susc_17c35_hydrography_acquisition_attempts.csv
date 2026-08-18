@@ -1,0 +1,8 @@
+hydrography_attempt_id,source,query,authority,status,result_count,failure_reason,review_only
+S17C35_HYA_0001,dados_recife_ckan,hidrografia,official_municipal,searched,0,,true
+S17C35_HYA_0002,dados_recife_ckan,drenagem,official_municipal,searched,3,,true
+S17C35_HYA_0003,dados_recife_ckan,corpos d agua,official_municipal,searched,2,,true
+S17C35_HYA_0004,dados_recife_ckan,rios,official_municipal,searched,2,,true
+S17C35_HYA_0005,dados_recife_ckan,canais,official_municipal,searched,2,,true
+S17C35_HYA_0006,dados_recife_ckan,faixas marginais recursos hidricos,official_municipal,searched,1,,true
+S17C35_HYA_0007,dados_recife_ckan,faixas-marginais download,official_municipal,acquired,81,,true

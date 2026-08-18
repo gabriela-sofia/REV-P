@@ -1,0 +1,11 @@
+criterio,valor_observado,limiar,passou,observacao
+minimo_3_eventos_distintos_fortes,1,3,false,eventos com geometria forte
+minimo_2_regioes_fortes,1,2,false,regioes com referencia forte
+minimo_20_patch_links_fortes,5,20,false,patch-links fortes review-only
+separacao_temporal_possivel,false,true,false,amostra forte ainda de um unico evento
+features_diretas_suficientes,true,true,true,Recife com features completas
+controles_nao_supervisionados,true,true,true,controles seguem nao supervisionados
+ground_truth_zero,0,0,true,sem ground truth
+trainable_zero,0,0,true,sem treino
+score_v7_zero,0,0,true,sem score_v7
+score_v6_intacto,true,true,true,score_v6 intacto

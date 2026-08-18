@@ -1,0 +1,9 @@
+figura_id,titulo,objetivo,fonte_dados,arquivo_existente_sugerido,precisa_criar,prioridade,uso_artigo,uso_slide
+FIG_01,Pipeline geral do REV-P,mostrar Sentinel-first -> features multimodais -> score_v6 -> avaliacao review-only,narrativa 19A/19D,fig_methodological_contribution_matrix.png,true,alta,true,true
+FIG_02,Matriz multimodal por patch,6 familias de features por patch nos 300 patches,susc_19a matriz_multimodal_escalavel_por_patch.csv,fig_local_context_coverage.png,true,alta,true,true
+FIG_03,Separacao event_record/footprint/patch_link/score_evaluation,explicitar as 5 camadas separadas,narrativa 19E,nenhum_reuso_direto,true,alta,true,true
+FIG_04,Mapa conceitual por regiao,Recife forte / Curitiba tecnica SAR / Petropolis bloqueado,susc_18h matriz_regional,fig_regional_roles_summary.png,false,media,true,true
+FIG_05,Barras de cobertura multimodal,cobertura por familia (fisico/espectral/chuva completos; territorial 0.33),susc_19a summary.json,fig_evidence_layer_availability.png,true,alta,true,true
+FIG_06,Ranking score_v6 observacional,posicao dos 7 observados no ranking (0/7 top-30 global),susc_19c ranking_score_v6_observacional_19c.csv,nenhum_reuso_direto,true,alta,true,true
+FIG_07,Contraste de features observacional,aderencia topo/urbano/espectral e divergencia hidrologia/chuva,susc_19c contraste_features_observacional_19c.csv; susc_19d decomposicao_familias,nenhum_reuso_direto,true,alta,true,true
+FIG_08,Bloqueios do score_v7,"amostra, missingness territorial, ausencia de benchmark",susc_19d gate_prontidao_score_v7_pos_19d.csv,nenhum_reuso_direto,false,media,true,true

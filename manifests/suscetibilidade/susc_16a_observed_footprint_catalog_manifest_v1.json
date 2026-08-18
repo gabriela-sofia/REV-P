@@ -1,0 +1,17 @@
+{
+  "artifact": "SUSC-16A observed footprint catalog",
+  "rows": 408,
+  "eligible_footprints_count": 12,
+  "footprint_type_counts": {
+    "official_flood_footprint": 125,
+    "insufficient": 193,
+    "official_susceptibility_reference": 62,
+    "official_risk_context": 24,
+    "official_observed_event_point": 4
+  },
+  "score_v7_created": false,
+  "can_be_ground_truth": false,
+  "can_be_used_as_ground_truth": false,
+  "allowed_for_training": false,
+  "review_only": true
+}

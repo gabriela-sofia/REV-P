@@ -1,0 +1,10 @@
+criterio,valor_observado,limiar,passou,observacao
+aoi_43_patches_criada,43,43,true,AOI tecnica deriva dos patches CUR reais
+raster_sar_local_suficiente,false,true,false,sem par local pre/pos no estado atual
+pacote_gee_criado,true,true,true,script e manifesto GEE presentes
+footprint_sar_produzido,false,true,false,nenhum footprint sem raster
+strong_patch_links_zero,0,0,true,footprint tecnico nao cria vinculo forte
+ground_truth_zero,0,0,true,sem ground truth
+trainable_zero,0,0,true,sem treino
+score_v7_zero,0,0,true,score_v7 nao criado
+score_v6_intacto,true,true,true,score_v6 sem alteracao

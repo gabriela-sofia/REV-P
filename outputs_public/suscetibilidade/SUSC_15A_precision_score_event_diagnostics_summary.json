@@ -1,0 +1,19 @@
+{
+  "artifact": "SUSC-15A precision score event diagnostics",
+  "precision_events_total": 4412,
+  "calibration_eligible_events": 0,
+  "precision_patch_links": 0,
+  "unique_patches_observational": 0,
+  "score_v6_mean_event_links": null,
+  "score_v6_median_event_links": null,
+  "score_v6_class_distribution_event_links": {},
+  "hit_rate_top_10": 0.0,
+  "hit_rate_top_20": 0.0,
+  "hit_rate_top_30": 0.0,
+  "ready_for_score_v7": false,
+  "score_v7_created": false,
+  "can_be_ground_truth": false,
+  "can_be_used_as_ground_truth": false,
+  "allowed_for_training": false,
+  "review_only": true
+}

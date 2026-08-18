@@ -1,0 +1,31 @@
+{
+  "stage": "SUSC-10A score v6 candidate",
+  "deterministic": true,
+  "supervised": false,
+  "trained": false,
+  "ground_truth_used": false,
+  "proxy_target_used": false,
+  "features_excluded_from_main_score": [
+    "curvature_laplacian_mean",
+    "flow_acc_log_p75",
+    "rain_3d_7d_ratio",
+    "water_occurrence_patch"
+  ],
+  "diagnostic_features_normalized": [
+    "curvature_laplacian_mean",
+    "flow_acc_log_p75",
+    "rain_3d_7d_ratio",
+    "water_occurrence_patch"
+  ],
+  "evidence_support_weight": 0.05,
+  "key_limitations": [
+    "Pesos sao escolha metodologica documentada, nao aprendidos.",
+    "Score e candidato review-only; nao valida ocorrencia real de enchente.",
+    "evidence_support_index usa aderencia espacial review-only (07B), nao ground truth.",
+    "As 4 features sinalizadas no SUSC-06B ficam fora do score principal (diagnostico).",
+    "Classes por tercis globais; sensiveis a distribuicao da amostra (300 patches)."
+  ],
+  "can_be_used_as_ground_truth": false,
+  "allowed_for_training": false,
+  "review_only": true
+}

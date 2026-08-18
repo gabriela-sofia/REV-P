@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C event date resolver",
+  "type": "object",
+  "description": "SUSC-17C review-only fail-closed schema. No ground truth, no training, no score v7.",
+  "required": [
+    "candidate_event_id",
+    "event_id",
+    "event_date_resolved",
+    "date_precision",
+    "pre_start",
+    "pre_end",
+    "post_start",
+    "post_end",
+    "temporal_eligible",
+    "temporal_blocking_reason",
+    "review_only",
+    "trainable",
+    "ground_truth",
+    "score_v7_allowed"
+  ],
+  "properties": {
+    "candidate_event_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "event_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "event_date_resolved": {
+      "type": "string",
+      "minLength": 1
+    },
+    "date_precision": {
+      "enum": [
+        "exact_day",
+        "range",
+        "month_only",
+        "unknown"
+      ]
+    },
+    "pre_start": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pre_end": {
+      "type": "string",
+      "minLength": 1
+    },
+    "post_start": {
+      "type": "string",
+      "minLength": 1
+    },
+    "post_end": {
+      "type": "string",
+      "minLength": 1
+    },
+    "temporal_eligible": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "temporal_blocking_reason": {
+      "type": "string",
+      "minLength": 1
+    },
+    "review_only": {
+      "const": "true"
+    },
+    "trainable": {
+      "const": "false"
+    },
+    "ground_truth": {
+      "const": "false"
+    },
+    "score_v7_allowed": {
+      "const": "false"
+    }
+  },
+  "additionalProperties": true
+}

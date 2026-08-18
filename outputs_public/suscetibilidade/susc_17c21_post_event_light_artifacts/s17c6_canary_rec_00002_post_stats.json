@@ -1,0 +1,82 @@
+{
+  "candidate_patch_id": "S17C6_CANARY_REC_00002",
+  "canonical_scene_id": "S2B_MSIL1C_20220601T124319_N0510_R009_T25MBM_20240612T164504.SAFE",
+  "event_id": "REC_2022_05_24_30",
+  "event_end": "2022-05-30",
+  "scene_datetime": "2022-06-01T12:44:09.368000+00:00",
+  "is_post_event": true,
+  "primary_source": "CDSE/OData",
+  "primary_source_status": "cdse_product_level_only",
+  "fallback_source": "earth_search_stac:sentinel-2-l2a",
+  "fallback_item_id": "S2B_25MBM_20220601_0_L2A",
+  "fallback_item_href": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/25/M/BM/2022/6/S2B_25MBM_20220601_0_L2A/B03.tif",
+  "source_role": "materialization_fallback",
+  "cloud_cover": "74.4306",
+  "aoi_bbox_4326": [
+    -34.944464634,
+    -7.995866764,
+    -34.935481481,
+    -7.986973178
+  ],
+  "window_shape": [
+    99,
+    100
+  ],
+  "bands_read": [
+    "B03",
+    "B04",
+    "B08",
+    "B11"
+  ],
+  "band_stats": {
+    "B03": {
+      "mean": "2244.5569",
+      "min": "359.0000",
+      "max": "6392.0000",
+      "valid_pixel_count": "9900"
+    },
+    "B04": {
+      "mean": "2045.0295",
+      "min": "118.0000",
+      "max": "5980.0000",
+      "valid_pixel_count": "9900"
+    },
+    "B08": {
+      "mean": "4024.9501",
+      "min": "1724.0000",
+      "max": "6784.0000",
+      "valid_pixel_count": "9900"
+    },
+    "B11": {
+      "mean": "2999.7264",
+      "min": "1295.0000",
+      "max": "5833.0000",
+      "valid_pixel_count": "9900"
+    }
+  },
+  "index_stats": {
+    "NDVI": {
+      "mean": "0.346456",
+      "min": "-0.006925",
+      "max": "0.942579"
+    },
+    "NDWI": {
+      "mean": "-0.302214",
+      "min": "-0.814545",
+      "max": "0.029940"
+    },
+    "MNDWI": {
+      "mean": "-0.166523",
+      "min": "-0.630100",
+      "max": "0.130776"
+    },
+    "NDBI": {
+      "mean": "-0.147890",
+      "min": "-0.499903",
+      "max": "0.201570"
+    }
+  },
+  "npz_local_path": "local_runs/suscetibilidade/17c21_sensor_qa_temporal_compare/raw/s17c6_canary_rec_00002_post_bandstack.npz",
+  "npz_size_bytes": 50621,
+  "captured_at": "2026-07-01T10:23:08+00:00"
+}

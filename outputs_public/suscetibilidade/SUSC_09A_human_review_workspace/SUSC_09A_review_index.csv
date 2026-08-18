@@ -1,0 +1,14 @@
+case_id,region,patch_id,spatial_relation,case_strength_pre_review,machine_pre_review,has_patch_bbox,has_event_geometry,dossier,map_svg,requires_human_review,can_be_ground_truth,allowed_for_training,review_only
+CASE_001,recife,recife_00019,bbox_overlap,weak_contextual,context_only,true,true,case_dossiers/CASE_001.md,maps_svg/CASE_001.svg,true,false,false,true
+CASE_002,recife,recife_00276,near_patch_buffer_candidate,moderate_candidate,blocked_source_conflict,true,true,case_dossiers/CASE_002.md,maps_svg/CASE_002.svg,true,false,false,true
+CASE_003,recife,recife_00276,near_patch_buffer_candidate,moderate_candidate,blocked_source_conflict,true,true,case_dossiers/CASE_003.md,maps_svg/CASE_003.svg,true,false,false,true
+CASE_004,recife,recife_00229,bbox_overlap,weak_contextual,context_only,true,true,case_dossiers/CASE_004.md,maps_svg/CASE_004.svg,true,false,false,true
+CASE_005,recife,recife_00276,bbox_overlap,weak_contextual,context_only,true,true,case_dossiers/CASE_005.md,maps_svg/CASE_005.svg,true,false,false,true
+CASE_006,recife,recife_00299,bbox_overlap,weak_contextual,context_only,true,true,case_dossiers/CASE_006.md,maps_svg/CASE_006.svg,true,false,false,true
+CASE_007,recife,recife_00322,bbox_overlap,weak_contextual,context_only,true,true,case_dossiers/CASE_007.md,maps_svg/CASE_007.svg,true,false,false,true
+CASE_008,recife,recife_00276,near_patch_buffer_candidate,weak_contextual,context_only,true,true,case_dossiers/CASE_008.md,maps_svg/CASE_008.svg,true,false,false,true
+CASE_009,petropolis,petropolis_00467,near_patch_buffer_candidate,moderate_candidate,candidate_for_tcc_with_caution,true,true,case_dossiers/CASE_009.md,maps_svg/CASE_009.svg,true,false,false,true
+CASE_010,petropolis,REGION_LEVEL_petropolis,same_region_period,weak_contextual,context_only,false,false,case_dossiers/CASE_010.md,maps_svg/CASE_010.svg,true,false,false,true
+CASE_011,petropolis,REGION_LEVEL_petropolis,same_region_period,weak_contextual,context_only,false,false,case_dossiers/CASE_011.md,maps_svg/CASE_011.svg,true,false,false,true
+CASE_012,petropolis,REGION_LEVEL_petropolis,same_region_period,weak_contextual,context_only,false,false,case_dossiers/CASE_012.md,maps_svg/CASE_012.svg,true,false,false,true
+CASE_013,curitiba,REGION_LEVEL_curitiba,insufficient_for_patch_link,insufficient,blocked_pending_geometry,false,false,case_dossiers/CASE_013.md,maps_svg/CASE_013.svg,true,false,false,true

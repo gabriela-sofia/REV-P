@@ -1,0 +1,2 @@
+patch_link_id,patch_id,possui_fisico,possui_espectral,possui_chuva,fonte_fisico,fonte_espectral,fonte_chuva,lacunas,acao_minima
+S18C_LINK_0001,not_available,false,false,false,ausente,ausente,ausente,sem_geometria_de_ocorrencia;sem_patch_link;fisico;espectral;chuva,obter geometria oficial de ocorrencia antes de extrair features por patch

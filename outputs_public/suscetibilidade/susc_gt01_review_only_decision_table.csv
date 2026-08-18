@@ -1,0 +1,12 @@
+input_evidence_type,can_promote_to,max_patch_link_strength,eligible_for_evaluation,eligible_for_calibration,score_v7_candidate,eligible_for_training,eligible_for_ground_truth,review_only,decision,rationale
+official_polygon,positive_strong,intersection_strong,true,true,false,false,false,true,promocao_forte_permitida_com_qa,geometria oficial forte permite patch_link por intersecao quando QA aceito
+official_point,positive_strong,buffer,false,true,false,false,false,true,provisorio_ou_forte_conforme_buffer_e_qa,ponto oficial exige buffer/incerteza; forte apenas com QA e patch_link claro
+official_bbox,positive_provisional,bbox_overlap,false,true,false,false,false,true,provisorio_sem_geometria_fina,bbox nao entrega geometria fina para patch-level forte
+sar_footprint,positive_provisional,bbox_overlap,false,true,false,false,false,true,tecnico_review_only_nunca_verdade_automatica,footprint SAR e tecnico/pos-evento; nao vira verdade automatica nem feature pre-evento
+risk_area,unlabeled,insufficient,false,false,false,false,false,true,nao_promove_area_de_risco_nao_e_evento,area de risco nao e evento ocorrido; nunca patch_link forte
+alert_only,unlabeled,insufficient,false,false,false,false,false,true,nao_promove_alerta_nao_e_evento,alerta nao vira evento observado nem patch_link forte
+news_report,positive_provisional,region_period,false,false,false,false,false,true,documental_fraco_nao_forte,noticia sustenta contexto documental; nunca patch_link forte
+municipality_affected,unlabeled,region_period,false,false,false,false,false,true,nao_promove_municipio_nao_e_patch,municipio atingido nao vira patch atingido
+neighborhood_affected,unlabeled,region_period,false,false,false,false,false,true,nao_promove_bairro_nao_e_patch,bairro atingido nao vira patch atingido
+documentary_context,positive_provisional,region_period,false,false,false,false,false,true,contexto_documental_review_only,contexto documental sustenta provisorio; nunca forte sozinho
+post_event_footprint,no_data,none,false,false,false,false,false,true,nao_vira_feature_pre_evento,footprint pos-evento nao vira feature pre-evento; excluido como feature

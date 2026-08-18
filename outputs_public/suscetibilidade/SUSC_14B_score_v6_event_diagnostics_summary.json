@@ -1,0 +1,13 @@
+{
+  "artifact": "SUSC-14B score v6 event diagnostics",
+  "score_v6_mean_event_links": 0.5679,
+  "hit_rate_top_10": 0.0,
+  "hit_rate_top_20": 0.0,
+  "hit_rate_top_30": 0.0,
+  "observational_patches": 2,
+  "score_v7_created": false,
+  "can_be_ground_truth": false,
+  "can_be_used_as_ground_truth": false,
+  "allowed_for_training": false,
+  "review_only": true
+}

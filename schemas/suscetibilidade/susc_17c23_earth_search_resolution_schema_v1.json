@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C23 earth search resolution schema v1",
+  "type": "object",
+  "required": [
+    "earth_search_resolution_id",
+    "candidate_patch_id",
+    "cdse_scene_or_item_id",
+    "earth_search_item_id",
+    "cdse_processing_level",
+    "earth_search_processing_level",
+    "same_mission",
+    "same_platform",
+    "same_acquisition_date",
+    "same_mgrs_tile",
+    "same_or_compatible_processing_level",
+    "aoi_overlap_confirmed",
+    "bands_required_available",
+    "bands_materialized",
+    "hash_manifest_verified",
+    "replay_verified",
+    "cog_window_read_confirmed",
+    "artifact_size_policy_passed",
+    "equivalence_resolved",
+    "accepted_for_scientific_review_only",
+    "accepted_for_ground_reference",
+    "accepted_for_training",
+    "accepted_for_score_v7",
+    "accepted_for_17b",
+    "remaining_limitation",
+    "review_only",
+    "trainable",
+    "ground_truth"
+  ],
+  "properties": {
+    "earth_search_resolution_id": {
+      "type": "string",
+      "pattern": "^S17C23_ESRES_"
+    },
+    "accepted_for_ground_reference": {
+      "const": "false"
+    },
+    "accepted_for_training": {
+      "const": "false"
+    },
+    "accepted_for_score_v7": {
+      "const": "false"
+    },
+    "accepted_for_17b": {
+      "const": "false"
+    },
+    "review_only": {
+      "const": "true"
+    },
+    "trainable": {
+      "const": "false"
+    },
+    "ground_truth": {
+      "const": "false"
+    }
+  }
+}

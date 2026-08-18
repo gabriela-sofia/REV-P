@@ -1,0 +1,7 @@
+escopo,top_k,observados,universo,observed_in_top_k,esperado_aleatorio,enrichment_ratio,potencia_amostral,limitation
+global,10,7,300,0,0.233,0.000,baixa,metrica exploratoria review-only; amostra pequena; nao e validacao operacional nem benchmark
+global,20,7,300,0,0.467,0.000,baixa,metrica exploratoria review-only; amostra pequena; nao e validacao operacional nem benchmark
+global,30,7,300,0,0.700,0.000,baixa,metrica exploratoria review-only; amostra pequena; nao e validacao operacional nem benchmark
+regional,10,7,100_por_regiao,0,0.700,0.000,baixa,metrica exploratoria review-only; amostra minima por regiao; nao e validacao nem benchmark
+regional,20,7,100_por_regiao,1,1.400,0.714,baixa,metrica exploratoria review-only; amostra minima por regiao; nao e validacao nem benchmark
+regional,30,7,100_por_regiao,3,2.100,1.429,baixa,metrica exploratoria review-only; amostra minima por regiao; nao e validacao nem benchmark

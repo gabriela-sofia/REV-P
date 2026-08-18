@@ -1,0 +1,17 @@
+metric,value,review_only
+strong_events_count,0,true
+moderate_events_count,2,true
+observed_events_count,2,true
+events_with_date_count,1,true
+events_with_geometry_count,2,true
+strong_patch_links_count,0,true
+moderate_patch_links_count,0,true
+strong_or_moderate_patch_links_count,0,true
+observational_evaluation_links_count,7,true
+regions_covered,petropolis|recife,true
+regions_covered_count,2,true
+single_source_dominant,false,true
+ready_for_12a_temporal,false,true
+ready_for_12b_feature_contrast,false,true
+ready_for_12c_proxy_calibration,false,true
+ready_for_score_v7,false,true

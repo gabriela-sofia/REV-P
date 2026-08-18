@@ -1,0 +1,8 @@
+verificacao,resultado,criterio,env_status,observacao
+python_version,3.12.10,python 3.x disponivel,gee_autenticado_pronto,sem impressao de credenciais; apenas indicadores booleanos
+ee_library,1.7.22,biblioteca earthengine-api,gee_autenticado_pronto,sem impressao de credenciais; apenas indicadores booleanos
+earthengine_cli,presente,CLI earthengine,gee_autenticado_pronto,sem impressao de credenciais; apenas indicadores booleanos
+ee_initialize,ok,ee.Initialize() sem credencial impressa,gee_autenticado_pronto,sem impressao de credenciais; apenas indicadores booleanos
+internet,true,conectividade com o Earth Engine,gee_autenticado_pronto,sem impressao de credenciais; apenas indicadores booleanos
+export_permission,true,permissao de leitura/compute (getInfo),gee_autenticado_pronto,sem impressao de credenciais; apenas indicadores booleanos
+writable_folder,true,pasta local gravavel para CSV leve,gee_autenticado_pronto,sem impressao de credenciais; apenas indicadores booleanos

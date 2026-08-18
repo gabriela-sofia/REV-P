@@ -1,0 +1,8 @@
+metric_id,metric_name,metric_value,eligible_rows_count,interpretation,limitations,review_only
+S17C34_METRIC_0001,canary_feature_completeness_mean,0.9394,11,media da razao de completude de familias por canario,features locais parciais; HAND/landcover ausentes,true
+S17C34_METRIC_0002,canary_score_computable_ratio,0.0,11,razao de canarios com score v6 replay completo computavel,0: normalizacao populacional + HAND ausentes,true
+S17C34_METRIC_0003,canary_mean_NDWI,-0.0757,11,NDWI medio pre-evento dos canarios,review-only; sem comparacao supervisionada,true
+S17C34_METRIC_0004,canary_mean_MNDWI,-0.007,11,MNDWI medio pre-evento dos canarios,review-only,true
+S17C34_METRIC_0005,canary_mean_NDBI,-0.0676,11,NDBI medio (built-up proxy) dos canarios,review-only,true
+S17C34_METRIC_0006,canary_mean_chirps_7d,39.4522,11,CHIRPS 7d medio (trigger region-level),region-level; nao discrimina local,true
+S17C34_METRIC_0007,canary_mean_distance_to_drainage,263.1143,7,distancia media a drenagem (OSM proxy),proxy OSM; nao hidrografia oficial,true

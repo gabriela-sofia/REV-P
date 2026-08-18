@@ -1,0 +1,1 @@
+candidate_id,geometry_id,region,geometry_type,bbox,source_file,evidence_status,can_link_to_patch,can_be_ground_truth,allowed_for_training,review_only,requires_manual_review,notes

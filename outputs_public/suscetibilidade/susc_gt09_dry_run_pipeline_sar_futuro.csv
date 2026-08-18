@@ -1,0 +1,56 @@
+dry_run_id,sentinel1_target_id,step_order,step,input_esperado_pt,output_esperado_pt,criterio_sucesso_pt,criterio_fail_closed_pt,executado_agora,requires_raster_future,review_only
+DR_00001,S1_0547,1,confirmar_aoi,bbox do patch,AOI confirmado,AOI valido e intersecta cenas,"sem AOI valido, parar",false,false,true
+DR_00002,S1_0547,2,confirmar_par_pre_pos,par selecionado GT09,par confirmado,pre e pos com scene_id/product_id,"sem par, parar",false,false,true
+DR_00003,S1_0547,3,validar_metadados_grd_iw_vv_vh,metadados das cenas,metadados validados,GRD/IW/VV+VH confirmados,"produto/modo/pol invalido, parar",false,false,true
+DR_00004,S1_0547,4,planejar_calibracao_radiometrica,cenas GRD futuras,plano de calibracao,calibracao especificada,"sem cena, parar",false,true,true
+DR_00005,S1_0547,5,planejar_speckle_filtering,SAR calibrado futuro,plano de speckle,filtro especificado,"sem SAR, parar",false,true,true
+DR_00006,S1_0547,6,planejar_razao_pre_pos,pre e pos futuros,plano de razao pre/pos,razao especificada,"sem par, parar",false,true,true
+DR_00007,S1_0547,7,planejar_mascara_agua_permanente,mascara de agua futura,plano de mascara,mascara especificada,"sem mascara, marcar no_data",false,true,true
+DR_00008,S1_0547,8,planejar_filtro_hand_slope,DEM/HAND futuro,plano de filtro topografico,filtro especificado,"sem HAND, marcar incerteza",false,true,true
+DR_00009,S1_0547,9,planejar_exclusao_urbana,camada urbana futura,plano de exclusao urbana,exclusao especificada,"sem camada, marcar ambiguidade",false,true,true
+DR_00010,S1_0547,10,planejar_poligono_candidato,resultado SAR futuro,poligono candidato (referencia de avaliacao),poligono especificado,"sem resultado, parar",false,true,true
+DR_00011,S1_0547,11,planejar_qa_humano,poligono candidato futuro,plano de QA humano,QA especificado,"sem QA, nao promover",false,false,true
+DR_00012,S1_0548,1,confirmar_aoi,bbox do patch,AOI confirmado,AOI valido e intersecta cenas,"sem AOI valido, parar",false,false,true
+DR_00013,S1_0548,2,confirmar_par_pre_pos,par selecionado GT09,par confirmado,pre e pos com scene_id/product_id,"sem par, parar",false,false,true
+DR_00014,S1_0548,3,validar_metadados_grd_iw_vv_vh,metadados das cenas,metadados validados,GRD/IW/VV+VH confirmados,"produto/modo/pol invalido, parar",false,false,true
+DR_00015,S1_0548,4,planejar_calibracao_radiometrica,cenas GRD futuras,plano de calibracao,calibracao especificada,"sem cena, parar",false,true,true
+DR_00016,S1_0548,5,planejar_speckle_filtering,SAR calibrado futuro,plano de speckle,filtro especificado,"sem SAR, parar",false,true,true
+DR_00017,S1_0548,6,planejar_razao_pre_pos,pre e pos futuros,plano de razao pre/pos,razao especificada,"sem par, parar",false,true,true
+DR_00018,S1_0548,7,planejar_mascara_agua_permanente,mascara de agua futura,plano de mascara,mascara especificada,"sem mascara, marcar no_data",false,true,true
+DR_00019,S1_0548,8,planejar_filtro_hand_slope,DEM/HAND futuro,plano de filtro topografico,filtro especificado,"sem HAND, marcar incerteza",false,true,true
+DR_00020,S1_0548,9,planejar_exclusao_urbana,camada urbana futura,plano de exclusao urbana,exclusao especificada,"sem camada, marcar ambiguidade",false,true,true
+DR_00021,S1_0548,10,planejar_poligono_candidato,resultado SAR futuro,poligono candidato (referencia de avaliacao),poligono especificado,"sem resultado, parar",false,true,true
+DR_00022,S1_0548,11,planejar_qa_humano,poligono candidato futuro,plano de QA humano,QA especificado,"sem QA, nao promover",false,false,true
+DR_00023,S1_0549,1,confirmar_aoi,bbox do patch,AOI confirmado,AOI valido e intersecta cenas,"sem AOI valido, parar",false,false,true
+DR_00024,S1_0549,2,confirmar_par_pre_pos,par selecionado GT09,par confirmado,pre e pos com scene_id/product_id,"sem par, parar",false,false,true
+DR_00025,S1_0549,3,validar_metadados_grd_iw_vv_vh,metadados das cenas,metadados validados,GRD/IW/VV+VH confirmados,"produto/modo/pol invalido, parar",false,false,true
+DR_00026,S1_0549,4,planejar_calibracao_radiometrica,cenas GRD futuras,plano de calibracao,calibracao especificada,"sem cena, parar",false,true,true
+DR_00027,S1_0549,5,planejar_speckle_filtering,SAR calibrado futuro,plano de speckle,filtro especificado,"sem SAR, parar",false,true,true
+DR_00028,S1_0549,6,planejar_razao_pre_pos,pre e pos futuros,plano de razao pre/pos,razao especificada,"sem par, parar",false,true,true
+DR_00029,S1_0549,7,planejar_mascara_agua_permanente,mascara de agua futura,plano de mascara,mascara especificada,"sem mascara, marcar no_data",false,true,true
+DR_00030,S1_0549,8,planejar_filtro_hand_slope,DEM/HAND futuro,plano de filtro topografico,filtro especificado,"sem HAND, marcar incerteza",false,true,true
+DR_00031,S1_0549,9,planejar_exclusao_urbana,camada urbana futura,plano de exclusao urbana,exclusao especificada,"sem camada, marcar ambiguidade",false,true,true
+DR_00032,S1_0549,10,planejar_poligono_candidato,resultado SAR futuro,poligono candidato (referencia de avaliacao),poligono especificado,"sem resultado, parar",false,true,true
+DR_00033,S1_0549,11,planejar_qa_humano,poligono candidato futuro,plano de QA humano,QA especificado,"sem QA, nao promover",false,false,true
+DR_00034,S1_0550,1,confirmar_aoi,bbox do patch,AOI confirmado,AOI valido e intersecta cenas,"sem AOI valido, parar",false,false,true
+DR_00035,S1_0550,2,confirmar_par_pre_pos,par selecionado GT09,par confirmado,pre e pos com scene_id/product_id,"sem par, parar",false,false,true
+DR_00036,S1_0550,3,validar_metadados_grd_iw_vv_vh,metadados das cenas,metadados validados,GRD/IW/VV+VH confirmados,"produto/modo/pol invalido, parar",false,false,true
+DR_00037,S1_0550,4,planejar_calibracao_radiometrica,cenas GRD futuras,plano de calibracao,calibracao especificada,"sem cena, parar",false,true,true
+DR_00038,S1_0550,5,planejar_speckle_filtering,SAR calibrado futuro,plano de speckle,filtro especificado,"sem SAR, parar",false,true,true
+DR_00039,S1_0550,6,planejar_razao_pre_pos,pre e pos futuros,plano de razao pre/pos,razao especificada,"sem par, parar",false,true,true
+DR_00040,S1_0550,7,planejar_mascara_agua_permanente,mascara de agua futura,plano de mascara,mascara especificada,"sem mascara, marcar no_data",false,true,true
+DR_00041,S1_0550,8,planejar_filtro_hand_slope,DEM/HAND futuro,plano de filtro topografico,filtro especificado,"sem HAND, marcar incerteza",false,true,true
+DR_00042,S1_0550,9,planejar_exclusao_urbana,camada urbana futura,plano de exclusao urbana,exclusao especificada,"sem camada, marcar ambiguidade",false,true,true
+DR_00043,S1_0550,10,planejar_poligono_candidato,resultado SAR futuro,poligono candidato (referencia de avaliacao),poligono especificado,"sem resultado, parar",false,true,true
+DR_00044,S1_0550,11,planejar_qa_humano,poligono candidato futuro,plano de QA humano,QA especificado,"sem QA, nao promover",false,false,true
+DR_00045,S1_0551,1,confirmar_aoi,bbox do patch,AOI confirmado,AOI valido e intersecta cenas,"sem AOI valido, parar",false,false,true
+DR_00046,S1_0551,2,confirmar_par_pre_pos,par selecionado GT09,par confirmado,pre e pos com scene_id/product_id,"sem par, parar",false,false,true
+DR_00047,S1_0551,3,validar_metadados_grd_iw_vv_vh,metadados das cenas,metadados validados,GRD/IW/VV+VH confirmados,"produto/modo/pol invalido, parar",false,false,true
+DR_00048,S1_0551,4,planejar_calibracao_radiometrica,cenas GRD futuras,plano de calibracao,calibracao especificada,"sem cena, parar",false,true,true
+DR_00049,S1_0551,5,planejar_speckle_filtering,SAR calibrado futuro,plano de speckle,filtro especificado,"sem SAR, parar",false,true,true
+DR_00050,S1_0551,6,planejar_razao_pre_pos,pre e pos futuros,plano de razao pre/pos,razao especificada,"sem par, parar",false,true,true
+DR_00051,S1_0551,7,planejar_mascara_agua_permanente,mascara de agua futura,plano de mascara,mascara especificada,"sem mascara, marcar no_data",false,true,true
+DR_00052,S1_0551,8,planejar_filtro_hand_slope,DEM/HAND futuro,plano de filtro topografico,filtro especificado,"sem HAND, marcar incerteza",false,true,true
+DR_00053,S1_0551,9,planejar_exclusao_urbana,camada urbana futura,plano de exclusao urbana,exclusao especificada,"sem camada, marcar ambiguidade",false,true,true
+DR_00054,S1_0551,10,planejar_poligono_candidato,resultado SAR futuro,poligono candidato (referencia de avaliacao),poligono especificado,"sem resultado, parar",false,true,true
+DR_00055,S1_0551,11,planejar_qa_humano,poligono candidato futuro,plano de QA humano,QA especificado,"sem QA, nao promover",false,false,true

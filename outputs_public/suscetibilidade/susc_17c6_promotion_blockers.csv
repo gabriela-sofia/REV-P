@@ -1,0 +1,10 @@
+blocker_id,blocker_code,description,blocks_17b,blocks_training,blocks_score_v7,required_resolution,review_only,trainable,ground_truth
+S17C6_BLOCKER_001,candidate_patches_not_official,Patches candidatos nao pertencem a grade oficial SUSC.,true,true,true,official_patch_manifest_or_policy,true,false,false
+S17C6_BLOCKER_002,candidate_patch_features_not_extracted,"Features fisicas, urbanas, espectrais e chuva ainda nao foram extraidas para candidatos.",true,true,true,feature_extraction_pipeline_for_candidate_patches,true,false,false
+S17C6_BLOCKER_003,no_real_embedding_tile,"Nao ha tile real local para DINOv2, SatMAE ou Scale-MAE neste marco.",true,true,true,real_tile_materialization_with_lineage,true,false,false
+S17C6_BLOCKER_004,synthetic_embedding_not_scientific,O smoke test de embedding e apenas hash sintetico deterministico.,true,true,true,real_model_execution_on_real_tile_with_provenance,true,false,false
+S17C6_BLOCKER_005,no_sar_runtime,Runtime SAR segue indisponivel.,true,true,true,sar_runtime_available_and_footprint_pipeline_validated,true,false,false
+S17C6_BLOCKER_006,no_qa_accepted,A geometria Charter 758 ainda esta em QA needs_review.,true,true,true,human_qa_accepted_reference_geometry,true,false,false
+S17C6_BLOCKER_007,no_score_policy_for_candidate_grid,Nao existe politica de score para grade candidata.,true,true,true,separate_score_policy_for_candidate_grid,true,false,false
+S17C6_BLOCKER_008,p0_official_packages_missing,Pacotes formais DRM-RJ PKG_FR_PET_001 e COMPDEC PKG_FR_REC_002 seguem ausentes.,true,true,true,formal_packages_or_explicit_blocker_update,true,false,false
+S17C6_BLOCKER_009,17b_blocked_until_official_patch_or_policy,"17B exige patch oficial ou politica explicita, QA aceito, features reais e evidencia suficiente.",true,true,true,official_patch_or_policy_plus_qa_features_and_observational_evidence,true,false,false

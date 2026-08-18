@@ -1,0 +1,8 @@
+readiness_id,readiness_target,is_ready,evidence,blocking_reason,required_next_step,review_only
+S18A_RDY_0001,ready_for_population_analysis,true,matriz multimodal com >=100 patches oficiais + canarios + controles consolidada,,usar store para analise exploratoria review-only por patch,true
+S18A_RDY_0002,ready_for_review_only_index_expansion,true,componentes transparentes 17C40 integrados; extensivel a populacao,,expandir indice transparente review-only a populacao oficial,true
+S18A_RDY_0003,ready_for_candidate_patch_screening,true,registry unificado + disponibilidade por familia permite triagem,,triagem de novos candidatos com missingness explicita,true
+S18A_RDY_0004,blocked_for_training,false,,sem ground truth; review-only; ausencia nao e negativo verdadeiro,aquisicao de ground reference oficial patch-level validado,true
+S18A_RDY_0005,blocked_for_ground_truth,false,,"ocorrencia oficial e ancora observacional, nao label; sem verdade de terreno",protocolo de ground reference oficial com geometria patch-level,true
+S18A_RDY_0006,blocked_for_score_v7,false,,flow_acc oficial irrecuperavel (17C39); sem base validada p/ score v7,nao aplicavel nesta frente; manter indice transparente review-only,true
+S18A_RDY_0007,blocked_for_17b,false,,17B exige G4_full + ground reference aceito; nao atingido,G4_full com ground reference oficial patch-level,true

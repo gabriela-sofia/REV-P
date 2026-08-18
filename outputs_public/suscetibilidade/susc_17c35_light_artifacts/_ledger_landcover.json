@@ -1,0 +1,174 @@
+{
+  "generated_at_utc": "2026-07-02T14:17:27Z",
+  "attempts": [
+    {
+      "source": "mapbiomas",
+      "query": "mapbiomas recife recorte",
+      "authority": "official_collection",
+      "status": "not_attempted_download_heavy_gee",
+      "failure_reason": "requires_gee_or_heavy_raster"
+    },
+    {
+      "source": "esa_worldcover",
+      "query": "worldcover 2021 recife",
+      "authority": "official_esa",
+      "status": "not_downloaded_cog_heavy",
+      "failure_reason": "cog_class_extraction_deferred"
+    },
+    {
+      "source": "dados_recife_ckan",
+      "query": "cobertura-da-terra download",
+      "authority": "official_municipal",
+      "status": "acquired",
+      "failure_reason": ""
+    }
+  ],
+  "manifest": [
+    {
+      "source": "dados_recife_ckan",
+      "dataset": "cobertura-da-terra",
+      "authority": "official_municipal",
+      "url": "https://dados.recife.pe.gov.br:443/dataset/4eff8deb-49df-47b5-9b6b-096071f309d3/resource/74e613ac-0612-474e-b605-2ce99097c890/download/cobertura-da-terra-recife.geojson",
+      "light_artifact": "landcover_class_fractions_in_ledger",
+      "sha256": "3e33b8b5e3136ed3cb032002573f4f740f42a292b915004f66a5b53e526ad6f1",
+      "size_bytes": "18710097",
+      "raw_size_bytes": "18710097",
+      "feature_count_total": "12395",
+      "legend": "construida=urban;fv=veg;agua=water;areasemcob=bare;areaum=wetland;agrossilvo=veg"
+    }
+  ],
+  "features": [
+    {
+      "point_id": "S17C33_EAC_0001",
+      "role": "canary",
+      "landcover_available": "true",
+      "urban_prop": 0.5513,
+      "vegetation_prop": 0.0441,
+      "water_prop": 0.3098,
+      "source": "dados_recife_cobertura_da_terra",
+      "authority": "official_municipal",
+      "resolution_m": "vector_polygon"
+    },
+    {
+      "point_id": "S17C33_EAC_0002",
+      "role": "canary",
+      "landcover_available": "true",
+      "urban_prop": 0.6321,
+      "vegetation_prop": 0.0464,
+      "water_prop": 0.0468,
+      "source": "dados_recife_cobertura_da_terra",
+      "authority": "official_municipal",
+      "resolution_m": "vector_polygon"
+    },
+    {
+      "point_id": "S17C33_EAC_0003",
+      "role": "canary",
+      "landcover_available": "true",
+      "urban_prop": 0.7555,
+      "vegetation_prop": 0.119,
+      "water_prop": 0.0537,
+      "source": "dados_recife_cobertura_da_terra",
+      "authority": "official_municipal",
+      "resolution_m": "vector_polygon"
+    },
+    {
+      "point_id": "S17C33_EAC_0004",
+      "role": "canary",
+      "landcover_available": "true",
+      "urban_prop": 0.4877,
+      "vegetation_prop": 0.4111,
+      "water_prop": 0.0061,
+      "source": "dados_recife_cobertura_da_terra",
+      "authority": "official_municipal",
+      "resolution_m": "vector_polygon"
+    },
+    {
+      "point_id": "S17C33_EAC_0005",
+      "role": "canary",
+      "landcover_available": "true",
+      "urban_prop": 0.4461,
+      "vegetation_prop": 0.4632,
+      "water_prop": 0.0055,
+      "source": "dados_recife_cobertura_da_terra",
+      "authority": "official_municipal",
+      "resolution_m": "vector_polygon"
+    },
+    {
+      "point_id": "S17C33_EAC_0006",
+      "role": "canary",
+      "landcover_available": "true",
+      "urban_prop": 0.7153,
+      "vegetation_prop": 0.0736,
+      "water_prop": 0.0048,
+      "source": "dados_recife_cobertura_da_terra",
+      "authority": "official_municipal",
+      "resolution_m": "vector_polygon"
+    },
+    {
+      "point_id": "S17C33_EAC_0007",
+      "role": "canary",
+      "landcover_available": "true",
+      "urban_prop": 0.8299,
+      "vegetation_prop": 0.1609,
+      "water_prop": 0.0034,
+      "source": "dados_recife_cobertura_da_terra",
+      "authority": "official_municipal",
+      "resolution_m": "vector_polygon"
+    },
+    {
+      "point_id": "S17C33_EAC_0008",
+      "role": "canary",
+      "landcover_available": "true",
+      "urban_prop": 0.4286,
+      "vegetation_prop": 0.447,
+      "water_prop": 0.0735,
+      "source": "dados_recife_cobertura_da_terra",
+      "authority": "official_municipal",
+      "resolution_m": "vector_polygon"
+    },
+    {
+      "point_id": "S17C33_EAC_0009",
+      "role": "canary",
+      "landcover_available": "true",
+      "urban_prop": 0.6055,
+      "vegetation_prop": 0.3313,
+      "water_prop": 0.0482,
+      "source": "dados_recife_cobertura_da_terra",
+      "authority": "official_municipal",
+      "resolution_m": "vector_polygon"
+    },
+    {
+      "point_id": "S17C33_EAC_0010",
+      "role": "canary",
+      "landcover_available": "true",
+      "urban_prop": 0.4124,
+      "vegetation_prop": 0.5463,
+      "water_prop": 0.0327,
+      "source": "dados_recife_cobertura_da_terra",
+      "authority": "official_municipal",
+      "resolution_m": "vector_polygon"
+    },
+    {
+      "point_id": "S17C33_EAC_0011",
+      "role": "canary",
+      "landcover_available": "true",
+      "urban_prop": 0.7499,
+      "vegetation_prop": 0.2052,
+      "water_prop": 0.0348,
+      "source": "dados_recife_cobertura_da_terra",
+      "authority": "official_municipal",
+      "resolution_m": "vector_polygon"
+    },
+    {
+      "point_id": "S17C6_CANARY_REC_00001",
+      "role": "original",
+      "landcover_available": "true",
+      "urban_prop": 0.367,
+      "vegetation_prop": 0.626,
+      "water_prop": 0.0,
+      "source": "dados_recife_cobertura_da_terra",
+      "authority": "official_municipal",
+      "resolution_m": "vector_polygon"
+    }
+  ]
+}

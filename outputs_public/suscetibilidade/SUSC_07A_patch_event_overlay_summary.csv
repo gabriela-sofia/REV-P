@@ -1,0 +1,5 @@
+region,n_patches,n_evidence,region_proxy_mean,same_region_period,same_region_only,documentary_context_only,insufficient_for_patch_link,exact_patch_overlap,bbox_overlap,review_only
+curitiba,100,8,0.57604,0,0,8,0,0,0,true
+petropolis,100,27,0.593071,18,1,8,0,0,0,true
+recife,100,5,0.585224,1,0,4,0,0,0,true
+unknown,0,21,NA,0,0,0,21,0,0,true

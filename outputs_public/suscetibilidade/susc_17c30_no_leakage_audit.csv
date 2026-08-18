@@ -1,0 +1,13 @@
+no_leakage_audit_id,object_id,object_type,uses_documentary_source_as_ground_truth,uses_news_as_ground_reference,uses_sensor_as_event_observation,uses_chirps_as_event_reference,uses_embedding_as_label,uses_candidate_as_training_label,uses_post_event_as_pre_event_feature,passes_no_leakage,blocking_reason,review_only
+S17C30_LEAK_0001,S17C30_SRC_C28_0001,source_to_event_mapping,false,false,false,false,false,false,false,true,classe B_official_context_candidate: uso documental review-only sem promocao indevida,true
+S17C30_LEAK_0002,S17C30_SRC_C28_0002,source_to_event_mapping,false,false,false,false,false,false,false,true,classe A_institutional_event_candidate: uso documental review-only sem promocao indevida,true
+S17C30_LEAK_0003,S17C30_SRC_C28_0003,source_to_event_mapping,false,false,false,false,false,false,false,true,classe A_institutional_event_candidate: uso documental review-only sem promocao indevida,true
+S17C30_LEAK_0004,S17C30_SRC_C28_0004,source_to_event_mapping,false,false,false,false,false,false,false,true,classe A_institutional_event_candidate: uso documental review-only sem promocao indevida,true
+S17C30_LEAK_0005,S17C30_SRC_C28_0005,source_to_event_mapping,false,false,false,false,false,false,false,true,classe A_institutional_event_candidate: uso documental review-only sem promocao indevida,true
+S17C30_LEAK_0006,S17C30_SRC_C29_0001,source_to_event_mapping,false,false,false,false,false,false,false,true,classe A_institutional_event_candidate: uso documental review-only sem promocao indevida,true
+S17C30_LEAK_0007,S17C30_SRC_C29_0002,source_to_event_mapping,false,false,false,false,false,false,false,true,classe A_institutional_event_candidate: uso documental review-only sem promocao indevida,true
+S17C30_LEAK_0008,S17C30_SRC_C29_0003,source_to_event_mapping,false,false,false,false,false,false,false,true,classe A_institutional_event_candidate: uso documental review-only sem promocao indevida,true
+S17C30_LEAK_0009,S17C30_SRC_C29_0004,source_to_event_mapping,false,false,false,false,false,false,false,true,classe A_institutional_event_candidate: uso documental review-only sem promocao indevida,true
+S17C30_LEAK_0010,S17C30_SRC_C29_0005,source_to_event_mapping,false,false,false,false,false,false,false,true,classe A_institutional_event_candidate: uso documental review-only sem promocao indevida,true
+S17C30_LEAK_0011,S17C30_SRC_C29_0006,source_to_event_mapping,false,false,false,false,false,false,false,true,classe A_institutional_event_candidate: uso documental review-only sem promocao indevida,true
+S17C30_LEAK_0012,S17C30_SRC_C29_0007,source_to_event_mapping,false,false,false,false,false,false,false,true,classe A_institutional_event_candidate: uso documental review-only sem promocao indevida,true

@@ -1,0 +1,13 @@
+criterio,valor_observado,limiar,passou,observacao
+itens_aceitos_avaliados,5,1,true,itens herdados aceitos para avaliacao no 17D
+com_geometria_real,5,5,true,geometria resolvida por item
+com_vinculo_forte,5,5,true,vinculo espacial forte
+com_pelo_menos_2_grupos_features,5,5,true,espectral + chuva reais
+prontos_calibracao_forte,0,>=0,true,requer grupo fisico/topografico
+prontos_calibracao_exploratoria,5,>=1,true,caminho funcional review-only
+prontidao_parcial,0,>=0,true,itens com um unico grupo
+ground_truth_false,0,0,true,sem ground truth
+trainable_false,0,0,true,sem treino
+score_v7_ausente,true,true,true,score_v7 nunca criado
+caminho_funcional_entregue,true,true,true,sprint entrega calibracao ou plano executavel
+status_final_17e,17E_CALIBRACAO_EXPLORATORIA_REVIEW_ONLY,enum,true,status final da prontidao

@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C14 channel resolution schema v1",
+  "type": "object",
+  "required": [
+    "resolution_id",
+    "formal_request_id",
+    "provider_name",
+    "resolved_status",
+    "resolved_channel_type",
+    "resolved_channel_reference",
+    "resolved_channel_source",
+    "source_is_official",
+    "confidence_level",
+    "ready_for_manual_submission_after_review",
+    "still_blocked",
+    "blocking_reason",
+    "review_only",
+    "trainable",
+    "ground_truth"
+  ],
+  "properties": {
+    "resolution_id": {
+      "type": "string",
+      "pattern": "^S17C14_RES_"
+    },
+    "resolved_status": {
+      "enum": [
+        "canal_oficial_confirmado",
+        "canal_candidato_ainda_pendente",
+        "sem_canal_oficial_encontrado",
+        "bloqueado_por_ambiguidade",
+        "usar_canal_alternativo_institucional"
+      ]
+    },
+    "source_is_official": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "ready_for_manual_submission_after_review": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "review_only": {
+      "const": "true"
+    },
+    "trainable": {
+      "const": "false"
+    },
+    "ground_truth": {
+      "const": "false"
+    }
+  }
+}

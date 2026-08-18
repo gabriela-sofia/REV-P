@@ -1,0 +1,6 @@
+# SUSC-13C-LIVE raw acquired data is heavy official data and is NOT versioned.
+# Reproduce it from manifests/suscetibilidade/susc_13c_live_download_manifest_v1.csv
+# (each row carries the source URL, content-type, size and SHA256).
+*
+!.gitignore
+!README.md

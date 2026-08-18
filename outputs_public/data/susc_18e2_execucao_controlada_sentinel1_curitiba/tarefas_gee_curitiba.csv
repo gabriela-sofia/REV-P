@@ -1,0 +1,4 @@
+task_id,task_type,destination,state,detail
+YNY6EV5ZXU25NT737DDJ7VCJ,Export.image.toDrive,Google Drive/REV_P_SUSC_18E2/flood_mask_curitiba_2022_01_15,SUCCEEDED,
+KF4J7MQQDB64TDEM7S5CNLPZ,Export.table.toDrive,Google Drive/REV_P_SUSC_18E2/flood_vector_curitiba_2022_01_15,SUCCEEDED,
+PCSCLVHXO2BGXK6P63XCFF4K,Export.table.toDrive,Google Drive/REV_P_SUSC_18E2/patch_stats_curitiba_2022_01_15,SUCCEEDED,

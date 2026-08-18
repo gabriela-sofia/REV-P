@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C39 calibration schema v1",
+  "type": "object",
+  "required": [
+    "calibration_metric_id", "calibration_model_id", "model_name", "mean_spearman_corr",
+    "mean_pearson_corr", "mean_mae", "mean_rank_preservation_score",
+    "scale_compatible_after_calibration", "passes_calibration_threshold", "review_only"
+  ],
+  "properties": {
+    "calibration_metric_id": {"type": "string", "pattern": "^S17C39_CALM_"},
+    "review_only": {"const": "true"}
+  }
+}

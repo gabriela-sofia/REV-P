@@ -1,0 +1,14 @@
+feature_name,mapped_source_field,event_mean,control_mean,event_median,control_median,difference_event_minus_control,expected_direction_for_susceptibility,observed_direction,direction_agreement,effect_size_simple,sample_size_event,sample_size_control,interpretation,can_be_ground_truth,allowed_for_training,review_only
+hand_mean,hand_mean,21.054347,9.711021,20.125719,6.37482,11.343326,lower_in_event,higher_in_event,feature_direction_divergence,1.125975,65,38,feature_direction_divergence,false,false,true
+slope_mean,slope_mean,3.378453,1.922561,3.095165,1.58962,1.455892,lower_in_event,higher_in_event,feature_direction_divergence,1.129164,65,38,feature_direction_divergence,false,false,true
+distance_to_water_mean,distance_to_water_mean,2543.505963,1948.066521,2212.414194,1877.166841,595.439442,lower_in_event,higher_in_event,feature_direction_divergence,0.456551,65,38,feature_direction_divergence,false,false,true
+twi_mean,twi_mean,49.307394,194.492847,31.076256,135.224416,-145.185453,higher_in_event,lower_in_event,feature_direction_divergence,-1.112202,65,38,feature_direction_divergence,false,false,true
+flow_accumulation_mean,flow_acc_log_mean,1.383877,2.023965,0.896994,2.078325,-0.640088,higher_in_event,lower_in_event,feature_direction_divergence,-0.761667,65,38,feature_direction_divergence,false,false,true
+urban_prop,urban_prop,0.805154,0.779867,0.8732,0.906426,0.025287,higher_in_event,higher_in_event,feature_direction_agreement,0.104794,65,38,feature_direction_agreement_review_only,false,false,true
+ndbi_mean,ndbi_mean,-0.027664,0.008126,-0.033373,0.022212,-0.035789,higher_in_event,lower_in_event,feature_direction_divergence,-0.433616,65,38,feature_direction_divergence,false,false,true
+ndvi_mean,ndvi_mean,0.436733,0.403252,0.437464,0.386635,0.033481,lower_in_event,higher_in_event,feature_direction_divergence,0.276871,65,38,feature_direction_divergence,false,false,true
+mndwi_mean,mndwi_mean,-0.444999,-0.438863,-0.443343,-0.435957,-0.006136,higher_in_event,lower_in_event,feature_direction_divergence,-0.154099,65,38,feature_direction_divergence,false,false,true
+chirps_3d_mm,chirps_3d_mm,0.0,0.0,0.0,0.0,0.0,higher_in_event,equal,feature_direction_inconclusive,,65,38,feature_direction_inconclusive,false,false,true
+chirps_7d_mm,chirps_7d_mm,27.118737,27.622473,26.794821,27.336689,-0.503736,higher_in_event,lower_in_event,feature_direction_divergence,-0.32254,65,38,feature_direction_divergence,false,false,true
+chirps_30d_mm,chirps_30d_mm,126.948752,133.586317,128.041092,134.125407,-6.637565,higher_in_event,lower_in_event,feature_direction_divergence,-1.130096,65,38,feature_direction_divergence,false,false,true
+runoff_context_7d,runoff_context_7d,0.923817,1.813886,0.636779,1.842814,-0.89007,higher_in_event,lower_in_event,feature_direction_divergence,-1.744051,65,38,feature_direction_divergence,false,false,true

@@ -1,0 +1,35 @@
+{
+  "required_private_outputs": [
+    {
+      "file": "s18e_curitiba_2022_01_15_sentinel1_stack.tif",
+      "required_metadata": [
+        "crs",
+        "transform",
+        "bands",
+        "pre_window",
+        "post_window",
+        "orbit_pass",
+        "source_collection"
+      ],
+      "public_versioning": "nao_versionar_raster_pesado"
+    },
+    {
+      "file": "footprint_sar_curitiba.geojson",
+      "required_metadata": [
+        "candidate_event_id",
+        "footprint_id",
+        "crs",
+        "method",
+        "qa_status"
+      ],
+      "public_versioning": "somente vetor leve apos revisao tecnica"
+    }
+  ],
+  "hard_defaults": {
+    "ground_truth": "false",
+    "eligible_for_training": "false",
+    "score_v7_allowed": "false",
+    "review_only": "true"
+  },
+  "local_result_dir": "local_runs/suscetibilidade/18e_sar_curitiba/resultados_gee"
+}

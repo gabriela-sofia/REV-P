@@ -1,0 +1,2 @@
+dem_artifact_manifest_id,source_name,source_authority,artifact_local_path,artifact_type,sha256,size_bytes,crs,resolution_m,bbox,stored_in_outputs_public,raw_heavy,review_only
+S17C38_DEM_0001,copernicus_dem_glo30,copernicus_esa_official,local_runs/suscetibilidade/17c38_basin/basin_dem.npy,npy_local_runs,a75b951e7d1dbc530a2262a014ec89075896abd9b076505267a245d7397bc15a,1010448,EPSG:4326,91.83,"-35.18746,-8.27233,-34.89909,-7.96843",false,true,true

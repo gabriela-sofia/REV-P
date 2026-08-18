@@ -1,0 +1,33 @@
+{
+  "schema_id": "mv2_data_03_corpus_impact_matrix",
+  "title": "MV2-DATA-03 Corpus Impact Matrix",
+  "validates": "outputs_public/mv2_data_live_api_canary/mv2_data_03_corpus_impact_matrix.csv",
+  "primary_key": "impact_id",
+  "required_fields": [
+    "impact_id",
+    "component",
+    "canary_validates",
+    "affects_128_targets",
+    "affects_day10",
+    "affects_sandbox",
+    "allowed_next_step",
+    "forbidden_interpretation",
+    "notes"
+  ],
+  "required_components": [
+    "API auth validated",
+    "metadata probe validated",
+    "raster private path validated",
+    "checksum validation",
+    "band/SCL validation",
+    "corpus lineage still missing",
+    "Dia 10 still blocked",
+    "sandbox still blocked"
+  ],
+  "fail_closed_rules": [
+    "affects_128_targets=false em todas as linhas",
+    "affects_day10=false em todas as linhas",
+    "affects_sandbox=false em todas as linhas",
+    "canary oficial é prova técnica, nunca baseline do corpus"
+  ]
+}

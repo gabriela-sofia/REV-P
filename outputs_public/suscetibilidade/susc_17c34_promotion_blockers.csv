@@ -1,0 +1,9 @@
+blocker_id,blocker_type,description,blocks_full_score_replay,blocks_17b,blocks_score_v7,review_only
+S17C34_BLOCKER_0001,score_v6_replay_blocked_missing_hand,HAND indisponivel (requer pipeline DEM+drenagem),true,true,true,true
+S17C34_BLOCKER_0002,score_v6_replay_blocked_missing_landcover,landcover/urban_prop oficial nao adquirido (NDBI proxy apenas),true,true,true,true
+S17C34_BLOCKER_0003,score_v6_replay_blocked_population_normalization,normalizacao robust_minmax populacional dos patches oficiais indisponivel,true,true,true,true
+S17C34_BLOCKER_0004,full_score_blocked_feature_completeness,completude de features insuficiente para score v6 comparavel,true,true,true,true
+S17C34_BLOCKER_0005,observational_validation_not_ground_truth,validacao observacional review-only NAO e ground truth,true,true,true,true
+S17C34_BLOCKER_0006,canary_patch_not_training_label,patch canario NAO e label de treino,true,true,true,true
+S17C34_BLOCKER_0007,score_v7_blocked,score v7 bloqueado ate replay oficial comparavel e ground reference,true,true,true,true
+S17C34_BLOCKER_0008,17b_blocked,17B bloqueado ate G4_full + ground reference aceito,true,true,true,true

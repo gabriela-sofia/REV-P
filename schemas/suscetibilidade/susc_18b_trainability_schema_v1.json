@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-18B trainability gate schema v1",
+  "type": "object",
+  "required": [
+    "trainability_gate_id", "training_mode", "is_allowed_now", "required_inputs",
+    "available_inputs", "blocking_reason", "safe_next_step", "review_only"
+  ],
+  "properties": {
+    "trainability_gate_id": {"type": "string", "pattern": "^S18B_GATE_"},
+    "review_only": {"const": "true"}
+  }
+}

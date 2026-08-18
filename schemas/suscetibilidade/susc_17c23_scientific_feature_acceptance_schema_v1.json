@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C23 scientific feature acceptance schema v1",
+  "type": "object",
+  "required": [
+    "scientific_feature_acceptance_id",
+    "candidate_patch_id",
+    "event_id",
+    "scene_or_item_id",
+    "feature_name",
+    "feature_value",
+    "feature_unit",
+    "source_artifact_manifest_id",
+    "source_role",
+    "prior_acceptance_status",
+    "fallback_scientific_resolved",
+    "patch_usage_accepted",
+    "acceptance_status",
+    "usable_for_science_now",
+    "usable_for_training",
+    "ground_truth",
+    "eligible_for_score_v7",
+    "eligible_for_17b",
+    "remaining_limitation",
+    "review_only"
+  ],
+  "properties": {
+    "scientific_feature_acceptance_id": {
+      "type": "string",
+      "pattern": "^S17C23_SCIFEAT_"
+    },
+    "usable_for_training": {
+      "const": "false"
+    },
+    "ground_truth": {
+      "const": "false"
+    },
+    "eligible_for_score_v7": {
+      "const": "false"
+    },
+    "eligible_for_17b": {
+      "const": "false"
+    },
+    "review_only": {
+      "const": "true"
+    }
+  }
+}

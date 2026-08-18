@@ -1,0 +1,3 @@
+protocolo_id,destinatario,status,data_envio,data_retorno,proxima_acao
+S18D_PROTO_DEFESA_CIVIL,Defesa Civil Municipal de Curitiba,nao_enviado,not_available,not_available,enviar oficio e registrar protocolo
+S18D_PROTO_GEOCURITIBA_IPPUC,GeoCuritiba / IPPUC,nao_enviado,not_available,not_available,enviar oficio e registrar protocolo

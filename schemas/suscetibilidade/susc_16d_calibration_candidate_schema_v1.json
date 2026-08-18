@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-16D calibration candidate review-only schema",
+  "type": "object",
+  "description": "Review-only schema for SUSC-16D calibration candidates derived from the SUSC-16C divergence diagnostic. It separates susceptibility_signal from evidence_confidence and never creates score v7, ground truth, training data, true negatives, or model artifacts. Observed footprints stay candidate evidence; controls stay 'no documented footprint' controls, not true negatives.",
+  "required": [
+    "patch_id",
+    "score_v6",
+    "score_v6_class",
+    "has_observed_footprint",
+    "failure_mode",
+    "candidate_adjustment_family",
+    "review_only",
+    "trainable",
+    "ground_truth",
+    "score_v6_unchanged",
+    "score_v7_created",
+    "eligible_for_score_v7_future",
+    "not_ground_truth_reason"
+  ],
+  "properties": {
+    "patch_id": { "type": "string" },
+    "event_id": { "type": "string" },
+    "footprint_id": { "type": "string" },
+    "case_id": { "type": "string" },
+    "region": { "type": "string" },
+    "score_v6": { "type": ["number", "string"] },
+    "score_v6_class": { "type": "string" },
+    "has_observed_footprint": { "enum": ["true", "false"] },
+    "documentary_component": { "type": ["number", "string"] },
+    "urban_prop": { "type": ["number", "string"] },
+    "divergent_features_available": { "type": "string" },
+    "failure_mode": { "type": "string" },
+    "candidate_adjustment_family": {
+      "enum": [
+        "decouple_documentary_component_from_susceptibility",
+        "increase_urban_flash_flood_weight",
+        "increase_rainfall_trigger_weight",
+        "increase_spectral_water_weight",
+        "guard_low_documentary_high_physical_signal"
+      ]
+    },
+    "secondary_adjustment_families": { "type": "string" },
+    "signal_domain": { "enum": ["susceptibility_signal", "evidence_confidence", "mixed"] },
+    "review_only": { "const": "true" },
+    "trainable": { "const": "false" },
+    "ground_truth": { "const": "false" },
+    "score_v6_unchanged": { "const": "true" },
+    "score_v7_created": { "const": "false" },
+    "eligible_for_score_v7_future": { "const": "false" },
+    "not_ground_truth_reason": { "type": "string", "minLength": 1 }
+  },
+  "additionalProperties": true
+}

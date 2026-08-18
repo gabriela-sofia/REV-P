@@ -1,0 +1,61 @@
+{
+  "artifact": "SUSC-12B observed event feature contrast",
+  "event_patch_count": 9,
+  "control_patch_count": 9,
+  "weak_context_patch_count": 5,
+  "score_v6_event_mean": 0.593971,
+  "score_v6_control_mean": 0.721077,
+  "score_v6_event_minus_control": -0.127106,
+  "features_direction_agree": [
+    "chirps_30d_mm",
+    "chirps_3d_mm",
+    "distance_to_water_mean",
+    "runoff_context_7d",
+    "urban_prop"
+  ],
+  "features_direction_diverge": [
+    "chirps_7d_mm",
+    "elevation_mean",
+    "flow_acc_log_mean",
+    "hand_mean",
+    "mndwi_mean",
+    "ndbi_mean",
+    "ndvi_mean",
+    "rain_7d_30d_ratio",
+    "rain_persistence_index",
+    "runoff_context_30d",
+    "slope_mean",
+    "tpi_250m_mean",
+    "twi_mean",
+    "vegetation_prop"
+  ],
+  "features_inconclusive": [],
+  "feature_confidence_counts": {
+    "low_sample_size": 18,
+    "near_zero_effect": 1
+  },
+  "region_contrast": [
+    {
+      "region": "petropolis",
+      "event_patch_count": 9,
+      "control_patch_count": 9,
+      "mean_score_event": "0.593971",
+      "mean_score_control": "0.721077",
+      "score_difference_event_minus_control": "-0.127106",
+      "review_only": "true"
+    },
+    {
+      "region": "recife",
+      "event_patch_count": 0,
+      "control_patch_count": 0,
+      "mean_score_event": "",
+      "mean_score_control": "",
+      "score_difference_event_minus_control": "",
+      "review_only": "true"
+    }
+  ],
+  "low_sample_size": true,
+  "can_be_ground_truth": false,
+  "allowed_for_training": false,
+  "review_only": true
+}

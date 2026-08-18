@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C20 light artifact manifest schema v1",
+  "type": "object",
+  "required": [
+    "light_artifact_manifest_id",
+    "candidate_patch_id",
+    "scene_or_item_id",
+    "artifact_type",
+    "artifact_local_path",
+    "sha256",
+    "size_bytes",
+    "format",
+    "bands_included",
+    "source_name",
+    "source_reference",
+    "source_role",
+    "is_fallback_source",
+    "stored_in_outputs_public",
+    "stored_in_local_runs",
+    "raw_heavy",
+    "created_at",
+    "review_only",
+    "trainable",
+    "ground_truth"
+  ],
+  "properties": {
+    "light_artifact_manifest_id": {
+      "type": "string",
+      "pattern": "^S17C20_MANIFEST_"
+    },
+    "raw_heavy": {
+      "const": "false"
+    },
+    "stored_in_outputs_public": {
+      "const": "true"
+    },
+    "is_fallback_source": {
+      "const": "true"
+    },
+    "review_only": {
+      "const": "true"
+    },
+    "trainable": {
+      "const": "false"
+    },
+    "ground_truth": {
+      "const": "false"
+    }
+  }
+}

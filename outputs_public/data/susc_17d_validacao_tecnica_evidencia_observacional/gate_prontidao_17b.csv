@@ -1,0 +1,8 @@
+criterio,valor_observado,limiar,passou,observacao
+minimo_3_eventos_datados,1,3,false,conta apenas itens aceitos
+minimo_2_regioes,1,2,false,regioes aceitas: REC
+minimo_1_geometria_forte_por_regiao,1,2,false,geometrias aceitas ainda concentradas
+minimo_20_patch_links_fortes_aceitos,5,20,false,limiar nao atingido
+validacao_tecnica_aceita_suficiente,5,20,false,aceite review-only insuficiente para benchmark
+ground_truth_false,0,0,true,sem ground truth
+trainable_false,0,0,true,sem treino

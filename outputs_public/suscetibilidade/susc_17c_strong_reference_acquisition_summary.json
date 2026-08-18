@@ -1,0 +1,31 @@
+{
+  "total_sources": 11,
+  "total_candidate_events": 174,
+  "date_resolved_count": 163,
+  "exact_day_count": 161,
+  "date_range_count": 2,
+  "month_only_count": 0,
+  "unknown_date_count": 11,
+  "official_geometry_count": 5,
+  "sar_candidate_count": 162,
+  "strong_reference_candidate_count": 162,
+  "priority_canary_count": 5,
+  "human_qa_items_count": 5,
+  "strong_reference_created_count": 0,
+  "technical_footprint_created_count": 0,
+  "eligible_for_17b_now": false,
+  "blocks_17b": [
+    "strong_candidates_concentrated_in_one_region",
+    "no_sar_footprint_executed_yet_technical_footprint_created_count_0"
+  ],
+  "priority_regions": [
+    "recife"
+  ],
+  "review_only": true,
+  "trainable": false,
+  "ground_truth": false,
+  "score_v6_changed": false,
+  "score_v7_created": false,
+  "readiness_status": "SAR_CANARY_READY",
+  "next_recommended_milestone": "SUSC-17C2 Sentinel-1/SAR Footprint Execution para produzir footprints tecnicos datados a partir dos canaries priorizados"
+}

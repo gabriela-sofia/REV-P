@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-18H consolidacao mestre da cadeia observacional",
+  "type": "object",
+  "description": "Consolidacao metodologica dos marcos 17C ate 18G, somente revisao.",
+  "guardrails": {
+    "ground_truth": {
+      "const": "false"
+    },
+    "eligible_for_training": {
+      "const": "false"
+    },
+    "score_v7_allowed": {
+      "const": "false"
+    },
+    "review_only": {
+      "const": "true"
+    },
+    "benchmark_17b_criado": {
+      "const": "false"
+    },
+    "score_v6_alterado": {
+      "const": "false"
+    }
+  },
+  "evidence_tiers": [
+    "A_oficial_poligono_observado",
+    "B_oficial_ponto_observado",
+    "C_footprint_tecnico_sar",
+    "D_endereco_oficial_resolvido",
+    "E_contexto_rua_bairro",
+    "F_area_risco_ou_suscetibilidade_nao_evento",
+    "G_rejeitado_ou_insuficiente"
+  ],
+  "entidades_linhagem": [
+    "derived_patch_link",
+    "event_record",
+    "feature_evidence",
+    "gate_status",
+    "score_evaluation",
+    "source_footprint"
+  ],
+  "status_17b_allowed": [
+    "17B_APROXIMACAO_COM_AMOSTRA_PARCIAL",
+    "17B_APROXIMACAO_COM_SEGUNDA_REGIAO_TECNICA",
+    "17B_BLOQUEADO_OFICIALMENTE",
+    "17B_NAO_CRIADO",
+    "17B_PRONTO_APENAS_PARA_DESENHO_REVIEW_ONLY"
+  ],
+  "status_17b_mestre": "17B_APROXIMACAO_COM_SEGUNDA_REGIAO_TECNICA",
+  "marcos": [
+    "SUSC-17C",
+    "SUSC-17C5",
+    "SUSC-17D",
+    "SUSC-17E",
+    "SUSC-17F",
+    "SUSC-17G",
+    "SUSC-17H",
+    "SUSC-17I",
+    "SUSC-18A",
+    "SUSC-18B",
+    "SUSC-18C",
+    "SUSC-18D",
+    "SUSC-18E",
+    "SUSC-18E2",
+    "SUSC-18F",
+    "SUSC-18G"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "branch": "marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial",
+  "head": "72dec09",
+  "staged_count": 0,
+  "git_status_short_count": 179,
+  "required_inputs": [
+    {
+      "path": "outputs_public/data/susc_18e_footprint_tecnico_sar_curitiba/summary.json",
+      "exists": true
+    },
+    {
+      "path": "outputs_public/data/susc_18d_protocolo_externo_curitiba/summary.json",
+      "exists": true
+    },
+    {
+      "path": "outputs_public/data/susc_18c_aquisicao_geometria_oficial_curitiba/summary.json",
+      "exists": true
+    },
+    {
+      "path": "outputs_public/data/susc_18e_footprint_tecnico_sar_curitiba/curitiba_aoi_tecnica_43_patches.geojson",
+      "exists": true
+    },
+    {
+      "path": "outputs_public/data/susc_18e_footprint_tecnico_sar_curitiba/curitiba_aoi_tecnica_43_patches.csv",
+      "exists": true
+    },
+    {
+      "path": "outputs_public/data/susc_18e_footprint_tecnico_sar_curitiba/janelas_sar_curitiba.csv",
+      "exists": true
+    },
+    {
+      "path": "outputs_public/data/susc_18e_footprint_tecnico_sar_curitiba/pacote_gee/gee_sentinel1_curitiba_2022_01_15.js",
+      "exists": true
+    },
+    {
+      "path": "outputs_public/data/susc_18e_footprint_tecnico_sar_curitiba/pacote_gee/gee_sentinel1_curitiba_2022_01_15.md",
+      "exists": true
+    },
+    {
+      "path": "outputs_public/data/susc_18e_footprint_tecnico_sar_curitiba/pacote_gee/gee_export_manifest_curitiba.csv",
+      "exists": true
+    },
+    {
+      "path": "outputs_public/data/susc_18e_footprint_tecnico_sar_curitiba/pacote_gee/expected_outputs_schema.json",
+      "exists": true
+    },
+    {
+      "path": "datasets/suscetibilidade/susc_score_v6_candidate_by_patch_v1.csv",
+      "exists": true
+    }
+  ],
+  "local_results_dir": "local_runs/suscetibilidade/18e_sar_curitiba/resultados_gee",
+  "local_results_dir_exists": true,
+  "patch_polys_cur_count": 43,
+  "score_v6_changed": false,
+  "score_v7_created": false,
+  "metadata_status_18e2": "18E2_TAREFAS_GEE_INICIADAS_AGUARDANDO_CONCLUSAO"
+}

@@ -1,0 +1,10 @@
+phenomenon_status_id,formal_request_id,provider_name,phenomenon_class,phenomenon_terms_detected,hydrological_validation_allowed,blocking_reason,review_only
+S17C14_PHEN_0001,P0_COMPDEC_RECIFE_PKG_FR_REC_002,COMPDEC/Defesa Civil PE,UNKNOWN,not_available,false,fenomeno nao classificado por resposta oficial recebida,true
+S17C14_PHEN_0002,P0_DRM_RJ_PKG_FR_PET_001,DRM-RJ/NADE,UNKNOWN,not_available,false,fenomeno nao classificado por resposta oficial recebida,true
+S17C14_PHEN_0003,P1_CHIRPS_PRE_EVENT_WINDOW_REC_2022_05_24_30,CHIRPS/GEE - fonte a confirmar,UNKNOWN,not_available,false,fenomeno nao classificado por resposta oficial recebida,true
+S17C14_PHEN_0004,P1_DEM_HAND_DRAINAGE_COVERAGE_CANDIDATE_GRID,GEE/DEM/HAND/drenagem - fonte a confirmar,UNKNOWN,not_available,false,fenomeno nao classificado por resposta oficial recebida,true
+S17C14_PHEN_0005,P1_PET_2024_VALPARAISO_FLORESTA_GEOMETRY,Defesa Civil Petropolis / DRM-RJ (a confirmar),UNKNOWN,not_available,false,fenomeno nao classificado por resposta oficial recebida,true
+S17C14_PHEN_0006,P1_SENTINEL2_TILE_CANDIDATE_GRID,STAC/CDSE/GEE - fonte a confirmar,UNKNOWN,not_available,false,fenomeno nao classificado por resposta oficial recebida,true
+S17C14_PHEN_0007,P1_SGB_CPRM_VECTOR_OR_COORDINATES,SGB/CPRM,UNKNOWN,not_available,false,fenomeno nao classificado por resposta oficial recebida,true
+S17C14_PHEN_0008,P2_DINO_SATMAE_INPUT_TILE,Pipeline interno DINO/SatMAE - sem execucao nesta sprint,UNKNOWN,not_available,false,fenomeno nao classificado por resposta oficial recebida,true
+S17C14_PHEN_0009,P2_SAR_RUNTIME_OR_EXPORT_PATH,Runtime tecnico SAR - fonte a confirmar,UNKNOWN,not_available,false,fenomeno nao classificado por resposta oficial recebida,true

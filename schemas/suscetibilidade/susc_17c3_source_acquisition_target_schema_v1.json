@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C3 official source acquisition target schema",
+  "type": "object",
+  "description": "Review-only fail-closed schema for SUSC-17C3 official/cartographic source acquisition targets. It registers what real official sources are missing or only partially available, without inventing any package, coordinate, polygon, date or source. It never creates score v7, training data, labels or ground truth. Risk/susceptibility maps are never observed events; PE3D/MDE is a contextual physical layer, not event evidence; neighborhood centroids are never strong geometry; PDF without vector/coordinate stays blocked.",
+  "required": [
+    "source_target_id",
+    "event_id",
+    "city",
+    "region",
+    "event_date_or_period",
+    "phenomenon_type",
+    "source_name",
+    "source_authority",
+    "source_artifact_status",
+    "expected_artifact_type",
+    "expected_geometry_type",
+    "expected_revp_class",
+    "current_blocking_reason",
+    "can_be_patch_level_if_acquired",
+    "requires_formal_request",
+    "requires_pdf_extraction",
+    "requires_vector_download",
+    "requires_human_review",
+    "review_only",
+    "trainable",
+    "ground_truth"
+  ],
+  "properties": {
+    "source_target_id": { "type": "string", "minLength": 1 },
+    "event_id": { "type": "string", "minLength": 1 },
+    "city": { "type": "string", "minLength": 1 },
+    "region": { "type": "string", "minLength": 1 },
+    "event_date_or_period": { "type": "string", "minLength": 1 },
+    "phenomenon_type": { "type": "string", "minLength": 1 },
+    "source_name": { "type": "string", "minLength": 1 },
+    "source_authority": { "type": "string", "minLength": 1 },
+    "source_artifact_status": {
+      "enum": [
+        "available_local",
+        "available_remote_not_downloaded",
+        "missing_source_artifact",
+        "pdf_only",
+        "blocked_access",
+        "unknown",
+        "not_applicable_context_only"
+      ]
+    },
+    "expected_artifact_type": { "type": "string", "minLength": 1 },
+    "expected_geometry_type": { "type": "string", "minLength": 1 },
+    "expected_revp_class": {
+      "enum": [
+        "official_observed_event_polygon",
+        "official_observed_event_point",
+        "technical_remote_sensing_flood_footprint_candidate",
+        "contextual_physical_layer",
+        "documentary_context",
+        "insufficient_reference"
+      ]
+    },
+    "current_blocking_reason": { "type": "string", "minLength": 1 },
+    "can_be_patch_level_if_acquired": { "enum": ["true", "false"] },
+    "requires_formal_request": { "enum": ["true", "false"] },
+    "requires_pdf_extraction": { "enum": ["true", "false"] },
+    "requires_vector_download": { "enum": ["true", "false"] },
+    "requires_human_review": { "enum": ["true", "false"] },
+    "review_only": { "const": "true" },
+    "trainable": { "const": "false" },
+    "ground_truth": { "const": "false" }
+  },
+  "additionalProperties": true
+}

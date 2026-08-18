@@ -1,0 +1,96 @@
+{
+  "schema_id": "mv2_13_sentinel_binding",
+  "title": "MV2-13 Sentinel Binding Matrix",
+  "validates": "outputs_public/mv2_sentinel_binding/mv2_13_binding_matrix.csv",
+  "primary_key": "binding_id",
+  "required_fields": [
+    "binding_id",
+    "anchor_id",
+    "asset_id",
+    "patch_id",
+    "region",
+    "sensor",
+    "platform",
+    "scene_id",
+    "acquisition_datetime",
+    "cloud_cover",
+    "tile_id",
+    "geometry_status",
+    "geometry_path",
+    "bbox",
+    "crs",
+    "crs_status",
+    "binding_strength",
+    "binding_evidence_source",
+    "binding_evidence_level",
+    "conflict_status",
+    "stac_status",
+    "day10_status",
+    "can_stac_dry_run",
+    "can_stac_real_next_step",
+    "can_crop_private_next_step",
+    "can_compute_spectral_features_now",
+    "blocking_reason",
+    "next_action"
+  ],
+  "enums": {
+    "binding_strength": [
+      "BINDING_STRONG",
+      "BINDING_MEDIUM",
+      "BINDING_WEAK",
+      "BINDING_NONE",
+      "BINDING_CONFLICT",
+      "BINDING_INVALID"
+    ],
+    "stac_status": [
+      "STAC_DRY_RUN_ELIGIBLE",
+      "STAC_REAL_FUTURE_ELIGIBLE",
+      "STAC_BLOCKED_NO_PATCH",
+      "STAC_BLOCKED_NO_ASSET",
+      "STAC_BLOCKED_NO_SCENE",
+      "STAC_BLOCKED_NO_DATETIME",
+      "STAC_BLOCKED_NO_GEOMETRY",
+      "STAC_BLOCKED_NO_CRS",
+      "STAC_BLOCKED_NO_SENSOR",
+      "STAC_BLOCKED_WEAK_BINDING",
+      "STAC_BLOCKED_CONFLICT",
+      "STAC_BLOCKED_INVALID",
+      "STAC_NOT_APPLICABLE"
+    ],
+    "day10_status": [
+      "DAY10_BLOCKED_NO_NATIVE_RASTER",
+      "DAY10_BLOCKED_NO_BINDING",
+      "DAY10_BLOCKED_NO_GEOMETRY",
+      "DAY10_BLOCKED_NO_CRS",
+      "DAY10_BLOCKED_NO_TEMPORAL_METADATA",
+      "DAY10_BLOCKED_NO_SCENE_ID",
+      "DAY10_READY_FOR_STAC_DRY_RUN_ONLY",
+      "DAY10_READY_FOR_STAC_REAL_NEXT_STEP",
+      "DAY10_READY_FOR_PRIVATE_CROP_NEXT_STEP",
+      "DAY10_READY_FOR_SPECTRAL_FEATURES_NEXT_STEP",
+      "DAY10_NOT_READY"
+    ],
+    "can_stac_dry_run": [
+      "true",
+      "false"
+    ],
+    "can_stac_real_next_step": [
+      "true",
+      "false"
+    ],
+    "can_crop_private_next_step": [
+      "true",
+      "false"
+    ],
+    "can_compute_spectral_features_now": [
+      "true",
+      "false"
+    ]
+  },
+  "fail_closed_rules": [
+    "BINDING_STRONG exige asset_id+patch_id+geometria+crs+sensor+scene_id (ou tile+datetime+sensor)",
+    "cidade/regiao nunca basta para binding medio/forte",
+    "PNG/NPZ/DINOv2 nunca conta como raster nativo",
+    "binding fraco/none/conflito/invalido nunca autoriza STAC real"
+  ]
+}

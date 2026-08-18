@@ -1,0 +1,22 @@
+{
+  "schema_id": "SUSC-07B-SCAN",
+  "files_with_signals": 451,
+  "real_coordinate_candidates": 33,
+  "status_counts": {
+    "coordinate_signal_no_region_match": 417,
+    "real_coordinate_candidate": 33,
+    "vector_or_doc_requires_manual_parser": 1
+  },
+  "region_counts": {
+    "petropolis": 9,
+    "recife": 19,
+    "curitiba": 5
+  },
+  "external_queue_rows": 200,
+  "governance": {
+    "allowed_for_training": false,
+    "review_only": true,
+    "can_create_ground_truth": false
+  },
+  "note": "Coordinate accepted only from traceable file; no invention; no centroid/geocoding."
+}

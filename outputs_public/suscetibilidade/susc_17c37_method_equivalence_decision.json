@@ -1,0 +1,32 @@
+{
+  "method_equivalence_decision_created": true,
+  "method_equivalence_accepted": false,
+  "method_calibration_possible": false,
+  "accepted_features": [],
+  "calibratable_features": [
+    "hand_mean",
+    "twi_mean",
+    "tpi_250m_mean"
+  ],
+  "incompatible_features": [
+    "flow_acc_log_mean"
+  ],
+  "insufficient_features": [],
+  "blocking_features": [
+    "flow_acc_log_mean"
+  ],
+  "reason": "features incompativeis: flow_acc_log_mean (escala/rank divergentes do metodo oficial nao documentado)",
+  "can_compute_score_v6_final_replay": false,
+  "can_compute_calibrated_component_replay": true,
+  "requires_future_calibration": true,
+  "acceptance_thresholds": {
+    "spearman_equivalent": 0.8,
+    "rel_err_max": 0.25,
+    "scale_ratio": [
+      0.8,
+      1.25
+    ],
+    "spearman_calibratable": 0.7
+  },
+  "review_only": true
+}

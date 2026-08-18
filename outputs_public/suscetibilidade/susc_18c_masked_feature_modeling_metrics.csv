@@ -1,0 +1,7 @@
+mfm_metric_id,experiment_id,mask_policy,masked_feature_count,sample_count,reconstruction_mae,reconstruction_rmse,rank_preservation_score,status,uses_labels,review_only
+S18C_MFM_0001,MFM01_mask_10pct_linear_reconstruction,random_10pct_cells,819,316,0.337394,0.796419,0.695018,completed,false,true
+S18C_MFM_0002,MFM02_mask_20pct_linear_reconstruction,random_20pct_cells,1653,316,0.380184,0.893026,0.622588,completed,false,true
+S18C_MFM_0003,MFM03_mask_30pct_linear_reconstruction,random_30pct_cells,2498,316,0.367576,0.794792,0.568921,completed,false,true
+S18C_MFM_0004,MFM04_family_mask_spectral,family_mask_spectral_sentinel2,2528,316,0.377728,0.736741,0.813079,completed,false,true
+S18C_MFM_0005,MFM05_family_mask_physical,family_mask_physical_topography,1580,316,0.573513,1.033726,0.642498,completed,false,true
+S18C_MFM_0006,MFM06_family_mask_hydrology,family_mask_hydrology_proximity,632,316,0.257639,0.438058,0.402825,completed,false,true

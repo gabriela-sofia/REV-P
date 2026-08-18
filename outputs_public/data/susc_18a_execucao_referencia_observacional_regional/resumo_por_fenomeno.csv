@@ -1,0 +1,6 @@
+regiao,classe_fenomeno,quantidade
+REC,inundacao_alagamento_enxurrada,5
+CUR,inundacao_alagamento_enxurrada,4
+CUR,fenomeno_misto,7
+PET,inundacao_alagamento_enxurrada,1
+PET,fenomeno_misto,29

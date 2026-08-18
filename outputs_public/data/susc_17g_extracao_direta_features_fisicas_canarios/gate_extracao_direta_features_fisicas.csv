@@ -1,0 +1,13 @@
+criterio,valor_observado,limiar,passou,observacao
+canarios_processados,5,5,true,todos os canarios recebem status
+features_diretas_completas,5,>=0,true,extracao completa das seis features fisicas
+features_diretas_parciais,0,>=0,true,extracao parcial
+aguardando_insumo_externo,0,>=0,true,canarios sem insumo local suficiente
+pode_calibracao_forte_review_only,5,>=0,true,features fisicas diretas + espectral + chuva
+exploratoria_com_features_diretas,5,>=0,true,simulacao com descritor topografico direto
+ground_truth_zero,0,0,true,sem ground truth
+trainable_zero,0,0,true,sem treino
+score_v7_allowed_zero,0,0,true,sem score_v7
+score_v6_intacto,true,true,true,score_v6 nunca alterado
+caminho_funcional_entregue,true,true,true,sprint entrega caminho funcional
+status_final_17g,17G_CALIBRACAO_FORTE_REVIEW_ONLY_POSSIVEL,enum,true,status final da extracao direta

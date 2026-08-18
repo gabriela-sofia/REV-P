@@ -5,7 +5,7 @@
 Plano manual de insercao. Nenhuma escrita automatica e aplicada ao manuscrito.
 Cada passo exige revisao humana antes de copiar o texto.
 
-## PP_v2al_0000 -> CLAUDE.md
+## PP_v2al_0000 -> GUIA_INTERNO.md
 - Fonte: docs/tcc_exports/v2al_manuscript_integration/v2al_metodologia_section_candidate.md
 - Ancora (after): `% v2al-anchor: metodologia`
 - Acao manual: Inserir manualmente apos revisao humana; nunca aplicar patch automatico no manuscrito.
@@ -572,7 +572,7 @@ Cada passo exige revisao humana antes de copiar o texto.
 - Risco: low
 - Checagem humana: Confirmar linguagem review-only, ausencia de claim operacional e disclaimers.
 
-## PP_v2al_0081 -> CLAUDE.md
+## PP_v2al_0081 -> GUIA_INTERNO.md
 - Fonte: docs/tcc_exports/v2al_manuscript_integration/v2al_resultados_section_candidate.md
 - Ancora (after): `% v2al-anchor: resultados`
 - Acao manual: Inserir manualmente apos revisao humana; nunca aplicar patch automatico no manuscrito.

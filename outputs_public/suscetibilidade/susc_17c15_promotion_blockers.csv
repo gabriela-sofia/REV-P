@@ -1,0 +1,14 @@
+blocker_id,blocker_type,description,blocks_ground_reference_candidate,blocks_17b,blocks_score_v7,review_only
+S17C15_BLOCKER_0001,official_artifacts_missing_or_pending,"Bloqueio preservado: requer artefato oficial real, hash, manifesto, gates espaciais/temporais/fenomeno e QA antes de promocao.",true,true,true,true
+S17C15_BLOCKER_0002,authenticated_channels_blocked,"Bloqueio preservado: requer artefato oficial real, hash, manifesto, gates espaciais/temporais/fenomeno e QA antes de promocao.",false,true,true,true
+S17C15_BLOCKER_0003,spatial_gate_not_satisfied,"Bloqueio preservado: requer artefato oficial real, hash, manifesto, gates espaciais/temporais/fenomeno e QA antes de promocao.",true,true,true,true
+S17C15_BLOCKER_0004,temporal_gate_not_satisfied,"Bloqueio preservado: requer artefato oficial real, hash, manifesto, gates espaciais/temporais/fenomeno e QA antes de promocao.",true,true,true,true
+S17C15_BLOCKER_0005,phenomenon_gate_not_satisfied,"Bloqueio preservado: requer artefato oficial real, hash, manifesto, gates espaciais/temporais/fenomeno e QA antes de promocao.",true,true,true,true
+S17C15_BLOCKER_0006,candidate_specific_artifacts_missing,"Bloqueio preservado: requer artefato oficial real, hash, manifesto, gates espaciais/temporais/fenomeno e QA antes de promocao.",false,true,true,true
+S17C15_BLOCKER_0007,candidate_patch_policy_missing,"Bloqueio preservado: requer artefato oficial real, hash, manifesto, gates espaciais/temporais/fenomeno e QA antes de promocao.",false,true,true,true
+S17C15_BLOCKER_0008,pipeline_adapters_missing,"Bloqueio preservado: requer artefato oficial real, hash, manifesto, gates espaciais/temporais/fenomeno e QA antes de promocao.",false,true,true,true
+S17C15_BLOCKER_0009,sentinel2_tile_missing,"Bloqueio preservado: requer artefato oficial real, hash, manifesto, gates espaciais/temporais/fenomeno e QA antes de promocao.",false,true,true,true
+S17C15_BLOCKER_0010,embedding_tile_missing,"Bloqueio preservado: requer artefato oficial real, hash, manifesto, gates espaciais/temporais/fenomeno e QA antes de promocao.",false,true,true,true
+S17C15_BLOCKER_0011,sar_runtime_missing,"Bloqueio preservado: requer artefato oficial real, hash, manifesto, gates espaciais/temporais/fenomeno e QA antes de promocao.",false,true,true,true
+S17C15_BLOCKER_0012,qa_not_accepted,"Bloqueio preservado: requer artefato oficial real, hash, manifesto, gates espaciais/temporais/fenomeno e QA antes de promocao.",false,true,true,true
+S17C15_BLOCKER_0013,17b_blocked_until_real_features_and_policy,"Bloqueio preservado: requer artefato oficial real, hash, manifesto, gates espaciais/temporais/fenomeno e QA antes de promocao.",false,true,true,true

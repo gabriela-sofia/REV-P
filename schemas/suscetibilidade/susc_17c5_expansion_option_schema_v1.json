@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C5 expansion option schema",
+  "type": "object",
+  "description": "Review-only schema for fail-closed patch grid expansion options. Options that create patches or require score recompute must be blocked now.",
+  "required": [
+    "expansion_option_id",
+    "option_name",
+    "description",
+    "target_event_id",
+    "target_region",
+    "requires_new_patches",
+    "requires_score_recompute",
+    "requires_feature_extraction",
+    "requires_sentinel_assets",
+    "requires_hydrology_features",
+    "requires_human_qa",
+    "methodological_risk",
+    "benefit",
+    "blocking_reason",
+    "recommended_next_milestone",
+    "allowed_now",
+    "review_only",
+    "trainable",
+    "ground_truth"
+  ],
+  "properties": {
+    "expansion_option_id": { "type": "string", "minLength": 1 },
+    "option_name": {
+      "enum": [
+        "do_not_expand_context_only",
+        "expand_grid_candidate_review_only",
+        "create_protocolc_to_susc_bridge_only",
+        "acquire_compdec_pkg_before_expansion",
+        "run_sar_runtime_on_existing_grid_only"
+      ]
+    },
+    "description": { "type": "string", "minLength": 1 },
+    "target_event_id": { "type": "string", "minLength": 1 },
+    "target_region": { "type": "string", "minLength": 1 },
+    "requires_new_patches": { "enum": ["true", "false"] },
+    "requires_score_recompute": { "enum": ["true", "false"] },
+    "requires_feature_extraction": { "enum": ["true", "false"] },
+    "requires_sentinel_assets": { "enum": ["true", "false"] },
+    "requires_hydrology_features": { "enum": ["true", "false"] },
+    "requires_human_qa": { "enum": ["true", "false"] },
+    "methodological_risk": { "enum": ["low", "medium", "high"] },
+    "benefit": { "type": "string", "minLength": 1 },
+    "blocking_reason": { "type": "string", "minLength": 1 },
+    "recommended_next_milestone": { "type": "string", "minLength": 1 },
+    "allowed_now": { "enum": ["true", "false"] },
+    "review_only": { "const": "true" },
+    "trainable": { "const": "false" },
+    "ground_truth": { "const": "false" }
+  },
+  "additionalProperties": true
+}

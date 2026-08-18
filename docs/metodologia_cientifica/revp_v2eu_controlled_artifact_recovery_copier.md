@@ -1,6 +1,6 @@
 # REV-P v2eu controlled artifact recovery
 
-Rows generated: 69
+Rows generated: 5295
 
 Copying occurs only with --recover-approved and valid candidates.
 

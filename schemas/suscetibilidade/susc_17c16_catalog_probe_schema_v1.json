@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C16 catalog probe schema v1",
+  "type": "object",
+  "required": [
+    "formal_request_id",
+    "provider_name",
+    "catalog_reference",
+    "network_enabled",
+    "probe_status",
+    "dataset_identified",
+    "metadata_available",
+    "download_or_export_performed",
+    "raster_downloaded",
+    "review_only"
+  ],
+  "properties": {
+    "download_or_export_performed": {
+      "const": "false"
+    },
+    "raster_downloaded": {
+      "const": "false"
+    },
+    "review_only": {
+      "const": "true"
+    }
+  }
+}

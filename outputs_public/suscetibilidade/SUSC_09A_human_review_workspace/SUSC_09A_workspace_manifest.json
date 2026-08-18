@@ -1,0 +1,17 @@
+{
+  "workspace": "outputs_public/suscetibilidade/SUSC_09A_human_review_workspace",
+  "n_cases": 13,
+  "n_dossiers": 13,
+  "n_svg_maps": 13,
+  "geojson_layers": [
+    "SUSC_09A_review_cases.geojson",
+    "SUSC_09A_patch_bbox_layer.geojson",
+    "SUSC_09A_event_geometry_layer.geojson"
+  ],
+  "n_patch_features": 6,
+  "n_event_features": 9,
+  "allowed_for_training": false,
+  "can_be_used_as_ground_truth": false,
+  "review_only": true,
+  "scientific_status": "human_review_workspace_not_patch_ground_truth"
+}

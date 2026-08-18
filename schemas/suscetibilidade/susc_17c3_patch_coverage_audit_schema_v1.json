@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C3 patch coverage audit schema",
+  "type": "object",
+  "description": "Review-only fail-closed schema for SUSC-17C3 patch coverage audits. It tests whether candidate event geometry falls inside an existing patch grid, using only real geometry/bbox (never invented). If geometry falls outside the grid no patch-link is created; if there is no geometry none is invented; if the CRS is unclear it is blocked. It never creates score v7, labels or ground truth.",
+  "required": [
+    "coverage_audit_id",
+    "event_id",
+    "city",
+    "candidate_geometry_source",
+    "geometry_available",
+    "geometry_type",
+    "geometry_bbox",
+    "patch_grid_available",
+    "patch_count_region",
+    "intersecting_patch_count",
+    "nearest_patch_distance_m",
+    "coverage_status",
+    "recommended_action",
+    "review_only",
+    "trainable",
+    "ground_truth"
+  ],
+  "properties": {
+    "coverage_audit_id": { "type": "string", "minLength": 1 },
+    "event_id": { "type": "string", "minLength": 1 },
+    "city": { "type": "string", "minLength": 1 },
+    "candidate_geometry_source": { "type": "string", "minLength": 1 },
+    "geometry_available": { "enum": ["true", "false"] },
+    "geometry_type": { "type": "string", "minLength": 1 },
+    "geometry_bbox": { "type": "string", "minLength": 1 },
+    "patch_grid_available": { "enum": ["true", "false"] },
+    "patch_count_region": { "type": ["integer", "string"] },
+    "intersecting_patch_count": { "type": ["integer", "string"] },
+    "nearest_patch_distance_m": { "type": "string", "minLength": 1 },
+    "coverage_status": {
+      "enum": [
+        "intersects_patch_grid",
+        "outside_patch_grid",
+        "no_geometry_to_test",
+        "no_patch_grid",
+        "needs_geometry_first",
+        "needs_grid_expansion_review",
+        "unknown_crs"
+      ]
+    },
+    "recommended_action": { "type": "string", "minLength": 1 },
+    "review_only": { "const": "true" },
+    "trainable": { "const": "false" },
+    "ground_truth": { "const": "false" }
+  },
+  "additionalProperties": true
+}

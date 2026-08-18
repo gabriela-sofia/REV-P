@@ -1,47 +1,32 @@
 # Artefatos públicos do REV-P
 
-Este diretório reúne os artefatos finais da entrega do REV-P: figuras, tabelas, métricas, relatórios e registros de validação. O projeto não apresenta detector operacional, classificador supervisionado ou preditor de inundação — os resultados documentam evidências contextuais, suporte territorial externo e análise visual-estrutural destinada a revisão.
+Este diretório reúne os artefatos finais da entrega do REV-P: os resultados da linha causal por região (Recife, Curitiba, Petrópolis), a frente externa UK/Copernicus EMS, e a análise estrutural DINOv2 como evidência auxiliar. Ver [`README.md`](../README.md) na raiz do repositório para o estado atual completo por região.
 
 ## Estrutura
 
-- `figures/`: figuras de publicação e resultados estruturais DINOv2.
-- `tables/`: tabelas com contagens canônicas, inventários, vizinhos k-NN, coordenadas PCA, medoides, outliers e limites de interpretação.
-- `metrics/`: métricas descritivas de similaridade, PCA, agrupamentos exploratórios, robustez, QA, prontidão e sensibilidade.
-- `logs_summary/`: registros resumidos das validações executadas durante a entrega.
-- `execution_reports/`: relatórios de execução, rastreabilidade, QA, análise DINOv2 e restrições metodológicas.
-- `model/`: declaração da ausência de modelo supervisionado operacional.
-- `correspondencia_artigo/`: correspondência entre as figuras do artigo e os artefatos públicos.
-- `figuras_apendice/`: figuras de apêndice organizadas por função metodológica.
-- `appendix_visual_audit/`: figuras diagnósticas e justificativas de curadoria visual.
-- `auditoria_selecao/`: matriz e relatório das decisões de seleção de patches.
-- `pacote_revisao/`: navegação para banca, orientação e avaliação.
+- `data/susc_20*`: núcleo causal — aquisição de evento, engenharia de features físico-hidrológicas, modelagem Firth, validação, motor de inferência e API, por região.
+- `figures/`: figuras finais de publicação — mapas regionais e análise estrutural DINOv2.
+- `tables/`: tabelas consolidadas citáveis (corpus, distribuição regional, evidência do Protocolo C, inventário DINOv2).
+- `metrics/`: métricas descritivas reais (similaridade, PCA, agrupamento, robustez, QA).
+- `execution_reports/`: índice de entrega, relatório de restrições metodológicas e análise estrutural DINOv2.
+- `model/`: estado do modelo por região — ver `model/ESTADO_DO_MODELO.md`.
 
 ## Resultados principais
 
-- Corpus: 59 recortes territoriais/contextuais — 32 coerentes, 27 parcialmente coerentes.
-- Distribuição regional: Recife 18, Curitiba 14, Petrópolis 27.
-- Manifesto Sentinel-first: 128 assets candidatos.
-- DINOv2: 12 embeddings reais, quatro por região, 768 dimensões, codificador visual congelado.
-- Figura principal validada de Recife: `figures/fig_recife_main_publication_v15_final.png`, patch principal `REC_00205`.
+- Recife: Firth penalizado, n=278 eventos reais, LOO-AUC = 0,68, motor de inferência + API entregues.
+- Curitiba: modelo treinado, colapsa em holdout temporal real 2026 — resultado negativo diagnosticado e documentado.
+- Petrópolis: bloqueado por mistura enchente/deslizamento não separada nas fontes.
+- Frente externa: piloto UK (AUC 0,79, 201 eventos) e multirregião Copernicus EMS (25.249 pontos, 119 áreas).
+- DINOv2: 12 embeddings reais (4 por região, 768 dimensões), testados como feature causal e descartados — mantidos como análise estrutural auxiliar.
 
 ## O que não está aqui
 
-GeoTIFFs, vetores brutos, PE3D/MDE, embeddings `.npz`, modelo DINO, ambientes virtuais, caches e `local_runs/` permanecem locais. Este diretório contém apenas manifests, tabelas resumidas, métricas e figuras derivadas.
+GeoTIFFs, vetores brutos, dados de elevação (PE3D/MDE), embeddings `.npz`, ambientes virtuais, caches e execuções locais (`local_runs/`, `local_only/`) permanecem apenas na máquina local. Este diretório contém relatórios, tabelas resumidas, métricas e figuras derivadas — o suficiente para verificar a cadeia metodológica sem reproduzir os dados brutos.
 
-## Reprodução parcial
+## Reprodução
 
 ```bash
-python scripts/repository/build_outputs_public_delivery.py
-python -m pytest tests
-python scripts/repository/build_outputs_public_delivery.py --validate-only
+conda env create -f ../environment.yml
+conda activate revp-susc
+python -m pytest tests -q
 ```
-
-O índice completo dos artefatos está em [`execution_reports/final_delivery_artifact_index.md`](execution_reports/final_delivery_artifact_index.md).
-
-## Regeneração das figuras auxiliares
-
-As figuras auxiliares em `figures/` foram regeneradas com os mesmos caminhos públicos, usando as tabelas e métricas desta entrega. As figuras principais de patches e regiões foram preservadas sem alteração.
-
-- Relatório: [`execution_reports/figures_regeneration_report.md`](execution_reports/figures_regeneration_report.md)
-- Manifesto: [`tables/figure_regeneration_manifest.csv`](tables/figure_regeneration_manifest.csv)
-- Versões anteriores: [`appendix_visual_audit/original_auxiliary_figures/`](appendix_visual_audit/original_auxiliary_figures/)

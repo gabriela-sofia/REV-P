@@ -1,0 +1,3 @@
+region,event_patch_rows,control_patch_rows,event_mean_score_v6,control_mean_score_v6,score_difference_event_minus_control,pre_event_valid_event_rows,post_event_risk_event_rows,temporal_uncertain_event_rows,review_only
+petropolis,30,30,0.670825,0.694349,-0.023525,0,0,30,true
+recife,14,14,0.652178,0.700619,-0.048441,0,4,10,true

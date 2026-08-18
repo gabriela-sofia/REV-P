@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C12 submission status schema v1",
+  "type": "object",
+  "required": [
+    "status_id",
+    "formal_request_id",
+    "provider_name",
+    "current_status",
+    "prepared_at",
+    "submitted_manually",
+    "submitted_at",
+    "submitted_channel_id",
+    "protocol_number",
+    "response_received",
+    "response_intake_id",
+    "last_agent_mode",
+    "status_source",
+    "review_only",
+    "trainable",
+    "ground_truth"
+  ],
+  "properties": {
+    "status_id": {
+      "type": "string",
+      "pattern": "^S17C12_STATUS_"
+    },
+    "current_status": {
+      "enum": [
+        "not_prepared",
+        "prepared_for_manual_review",
+        "ready_for_manual_submission",
+        "submitted_manually",
+        "response_received_pending_intake",
+        "intake_registered_pending_validation",
+        "blocked"
+      ]
+    },
+    "submitted_manually": {
+      "const": "false"
+    },
+    "protocol_number": {
+      "const": "not_informed"
+    },
+    "response_received": {
+      "const": "false"
+    },
+    "review_only": {
+      "const": "true"
+    },
+    "trainable": {
+      "const": "false"
+    },
+    "ground_truth": {
+      "const": "false"
+    }
+  }
+}

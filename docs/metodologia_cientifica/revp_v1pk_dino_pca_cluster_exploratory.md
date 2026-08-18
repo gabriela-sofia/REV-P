@@ -10,4 +10,4 @@ Os clusters são agrupamentos exploratórios de coerência visual/semântica. `c
 
 ## Resultado
 
-Embeddings válidos: 0. Linhas PCA: 0. Clusters: 0.
+Embeddings válidos: 32. Linhas PCA: 32. Clusters: 3.

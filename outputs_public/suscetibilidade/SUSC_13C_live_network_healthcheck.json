@@ -1,0 +1,158 @@
+{
+  "artifact": "SUSC-13C-LIVE network healthcheck",
+  "checked_at": "2026-06-28T20:30:24.196190+00:00",
+  "n_domains": 13,
+  "n_reachable": 12,
+  "min_reachable_required": 3,
+  "network_ok": true,
+  "reachable_domains": [
+    "https://dados.gov.br/",
+    "https://www.gov.br/mdr/pt-br",
+    "https://www.sgb.gov.br/",
+    "https://www.cemaden.gov.br/",
+    "https://www.ana.gov.br/",
+    "https://dados.recife.pe.gov.br/",
+    "https://www.apac.pe.gov.br/",
+    "https://www.recife.pe.gov.br/",
+    "https://www.inea.rj.gov.br/",
+    "https://www.curitiba.pr.gov.br/",
+    "https://geocuritiba.ippuc.org.br/",
+    "https://www.defesacivil.pr.gov.br/"
+  ],
+  "blocked_domains": [
+    "https://www.petropolis.rj.gov.br/"
+  ],
+  "results": [
+    {
+      "url": "https://dados.gov.br/",
+      "status_code": 200,
+      "content_type": "text/html",
+      "content_length": "9632",
+      "reachable": true,
+      "error": "",
+      "elapsed_ms": 150,
+      "checked_at": "2026-06-28T20:30:03.627436+00:00"
+    },
+    {
+      "url": "https://www.gov.br/mdr/pt-br",
+      "status_code": 200,
+      "content_type": "text/html;charset=utf-8",
+      "content_length": "276531",
+      "reachable": true,
+      "error": "",
+      "elapsed_ms": 137,
+      "checked_at": "2026-06-28T20:30:03.778066+00:00"
+    },
+    {
+      "url": "https://www.sgb.gov.br/",
+      "status_code": 200,
+      "content_type": "text/html;charset=UTF-8",
+      "content_length": "",
+      "reachable": true,
+      "error": "",
+      "elapsed_ms": 817,
+      "checked_at": "2026-06-28T20:30:03.915740+00:00"
+    },
+    {
+      "url": "https://www.cemaden.gov.br/",
+      "status_code": 200,
+      "content_type": "text/html;charset=utf-8",
+      "content_length": "220346",
+      "reachable": true,
+      "error": "",
+      "elapsed_ms": 423,
+      "checked_at": "2026-06-28T20:30:04.734507+00:00"
+    },
+    {
+      "url": "https://www.ana.gov.br/",
+      "status_code": 200,
+      "content_type": "text/html;charset=utf-8",
+      "content_length": "250777",
+      "reachable": true,
+      "error": "",
+      "elapsed_ms": 365,
+      "checked_at": "2026-06-28T20:30:05.158113+00:00"
+    },
+    {
+      "url": "https://dados.recife.pe.gov.br/",
+      "status_code": 200,
+      "content_type": "text/html; charset=utf-8",
+      "content_length": "24976",
+      "reachable": true,
+      "error": "",
+      "elapsed_ms": 677,
+      "checked_at": "2026-06-28T20:30:05.524476+00:00"
+    },
+    {
+      "url": "https://www.apac.pe.gov.br/",
+      "status_code": 200,
+      "content_type": "text/html; charset=utf-8",
+      "content_length": "",
+      "reachable": true,
+      "error": "",
+      "elapsed_ms": 964,
+      "checked_at": "2026-06-28T20:30:06.201669+00:00"
+    },
+    {
+      "url": "https://www.recife.pe.gov.br/",
+      "status_code": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": "695",
+      "reachable": true,
+      "error": "",
+      "elapsed_ms": 339,
+      "checked_at": "2026-06-28T20:30:07.166459+00:00"
+    },
+    {
+      "url": "https://www.petropolis.rj.gov.br/",
+      "status_code": "",
+      "content_type": "",
+      "content_length": "",
+      "reachable": false,
+      "error": "TimeoutError: The read operation timed out",
+      "elapsed_ms": 15284,
+      "checked_at": "2026-06-28T20:30:07.505560+00:00"
+    },
+    {
+      "url": "https://www.inea.rj.gov.br/",
+      "status_code": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": "",
+      "reachable": true,
+      "error": "",
+      "elapsed_ms": 297,
+      "checked_at": "2026-06-28T20:30:22.790377+00:00"
+    },
+    {
+      "url": "https://www.curitiba.pr.gov.br/",
+      "status_code": 403,
+      "content_type": "",
+      "content_length": "",
+      "reachable": true,
+      "error": "HTTPError 403",
+      "elapsed_ms": 38,
+      "checked_at": "2026-06-28T20:30:23.087681+00:00"
+    },
+    {
+      "url": "https://geocuritiba.ippuc.org.br/",
+      "status_code": 200,
+      "content_type": "text/html",
+      "content_length": "837",
+      "reachable": true,
+      "error": "",
+      "elapsed_ms": 326,
+      "checked_at": "2026-06-28T20:30:23.126347+00:00"
+    },
+    {
+      "url": "https://www.defesacivil.pr.gov.br/",
+      "status_code": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": "",
+      "reachable": true,
+      "error": "",
+      "elapsed_ms": 742,
+      "checked_at": "2026-06-28T20:30:23.453299+00:00"
+    }
+  ],
+  "review_only": true
+}

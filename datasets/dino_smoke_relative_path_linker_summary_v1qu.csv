@@ -1,0 +1,8 @@
+stat_key,stat_value
+smoke_rows,32
+sentinel_root_configured,true
+linked_relative_path_ready,32
+unmapped_region,0
+expected_file_not_found,0
+pixel_reads_performed,0
+final_status,LINKING_READY_FOR_V1QI

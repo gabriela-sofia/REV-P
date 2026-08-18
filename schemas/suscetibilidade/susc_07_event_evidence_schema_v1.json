@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "schema_id": "SUSC-07-EVENT-EVIDENCE",
+  "created": "2026-06-27",
+  "purpose": "Registro normalizado de evidencia documental/evento para o overlay SUSC-07A. Cada evidencia recebe nivel de confianca e limitacao explicita. NAO cria ground truth: evidencia documental != ocorrencia confirmada por patch != suscetibilidade != validacao supervisionada.",
+  "governance": {
+    "allowed_for_training": false,
+    "review_only": true,
+    "can_create_ground_truth": false
+  },
+  "record_fields": {
+    "evidence_id": "string",
+    "region": "string",
+    "event_type": "string",
+    "event_subtype": "string",
+    "event_date": "string_or_null",
+    "event_period_start": "string_or_null",
+    "event_period_end": "string_or_null",
+    "source_name": "string",
+    "source_type": "official|technical_report|scientific_paper|news|manual_registry|unknown",
+    "source_path_or_url": "string",
+    "has_geometry": "boolean",
+    "geometry_type": "point|polygon|bbox|municipality|text_only|unknown",
+    "lat": "number_or_null",
+    "lon": "number_or_null",
+    "bbox": "array_or_null",
+    "spatial_precision": "patch|neighborhood|municipality|region|text_only|unknown",
+    "temporal_precision": "day|month|year|period|unknown",
+    "confidence_level": "high|medium|low|insufficient",
+    "can_link_to_patch": "boolean",
+    "can_be_ground_truth": false,
+    "allowed_for_training": false,
+    "review_only": true,
+    "notes": "string"
+  },
+  "source_type_vocabulary": [
+    "official", "technical_report", "scientific_paper", "news", "manual_registry", "unknown"
+  ],
+  "geometry_type_vocabulary": [
+    "point", "polygon", "bbox", "municipality", "text_only", "unknown"
+  ],
+  "spatial_precision_vocabulary": [
+    "patch", "neighborhood", "municipality", "region", "text_only", "unknown"
+  ],
+  "temporal_precision_vocabulary": ["day", "month", "year", "period", "unknown"],
+  "confidence_vocabulary": ["high", "medium", "low", "insufficient"],
+  "evidence_status_vocabulary": [
+    "documentary_context_only",
+    "region_period_context",
+    "approximate_spatial_evidence",
+    "insufficient_for_patch_event_link"
+  ],
+  "governance_invariants": {
+    "can_be_ground_truth": false,
+    "allowed_for_training": false,
+    "review_only": true
+  }
+}

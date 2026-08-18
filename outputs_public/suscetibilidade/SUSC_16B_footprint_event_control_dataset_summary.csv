@@ -1,0 +1,10 @@
+metric,value,review_only
+event_link_rows,65,true
+unique_event_patches,62,true
+control_patch_rows,38,true
+same_region_control_candidates,38,true
+control_semantics,no_documented_footprint_control_not_true_negative,true
+feature_mapping,"{""flow_accumulation_mean"": ""flow_acc_log_mean"", ""hand_min"": ""hand_mean"", ""region"": ""regiao"", ""water_prop"": ""water_occurrence_patch""}",true
+score_v7_created,false,true
+can_be_ground_truth,false,true
+allowed_for_training,false,true

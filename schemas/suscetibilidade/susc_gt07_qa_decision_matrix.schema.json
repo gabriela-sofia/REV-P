@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "susc_gt07_qa_decision_matrix.schema.json",
+  "title": "SUSC-GT07 Matriz de Decisao QA",
+  "type": "object",
+  "required": [
+    "decision_rule_id",
+    "decision_option",
+    "qa_status_future",
+    "can_enable_training",
+    "can_enable_ground_truth",
+    "can_enable_score_v7"
+  ],
+  "properties": {
+    "decision_rule_id": {
+      "type": "string",
+      "pattern": "^DR_\\d+$"
+    },
+    "decision_option": {
+      "enum": [
+        "aceitar_como_referencia_observacional_forte_review_only",
+        "manter_como_referencia_provisoria",
+        "rejeitar_por_incompatibilidade_fenomenologica",
+        "rejeitar_por_incompatibilidade_temporal",
+        "rejeitar_por_incompatibilidade_espacial",
+        "bloquear_por_no_data",
+        "bloquear_por_falta_de_fonte",
+        "bloquear_por_falta_de_footprint",
+        "marcar_como_ambiguo",
+        "manter_apenas_como_contexto_documental"
+      ]
+    },
+    "qa_status_future": {
+      "enum": [
+        "accepted",
+        "rejected",
+        "needs_more_source",
+        "ambiguous",
+        "phenomenon_mismatch",
+        "temporal_mismatch",
+        "spatial_mismatch",
+        "no_data",
+        "not_reviewed"
+      ]
+    },
+    "can_enable_evaluation_review_only": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "can_enable_training": {
+      "const": "false"
+    },
+    "can_enable_ground_truth": {
+      "const": "false"
+    },
+    "can_enable_score_v7": {
+      "const": "false"
+    }
+  }
+}

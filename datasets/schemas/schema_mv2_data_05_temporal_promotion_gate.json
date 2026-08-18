@@ -1,0 +1,40 @@
+{
+  "schema_id": "mv2_data_05_temporal_promotion_gate",
+  "title": "MV2-DATA-05 Temporal Promotion Gate",
+  "validates": "outputs_public/mv2_data_temporal_window_intake/mv2_data_05_temporal_promotion_gate.csv",
+  "primary_key": "promotion_id",
+  "required_fields": [
+    "promotion_id",
+    "target_id",
+    "asset_id",
+    "patch_id",
+    "region",
+    "temporal_window_start",
+    "temporal_window_end",
+    "temporal_window_source",
+    "source_ref",
+    "review_status",
+    "promotion_status",
+    "can_enable_gee_metadata_probe",
+    "can_enable_stac_metadata_probe",
+    "can_enable_odata_probe",
+    "can_unlock_day10_now",
+    "blocking_reason",
+    "next_action"
+  ],
+  "enums": {
+    "promotion_status": [
+      "TEMPORAL_WINDOW_PROMOTED_STRONG",
+      "TEMPORAL_WINDOW_PROMOTED_PARTIAL",
+      "TEMPORAL_WINDOW_REVIEW_REQUIRED",
+      "TEMPORAL_WINDOW_BLOCKED_EMPTY",
+      "TEMPORAL_WINDOW_BLOCKED_INVALID",
+      "TEMPORAL_WINDOW_BLOCKED_CONFLICT"
+    ]
+  },
+  "fail_closed_rules": [
+    "GEE/STAC metadata probe só habilitam com promoção STRONG/PARTIAL",
+    "OData nunca habilita aqui (exige product_id/scene_id)",
+    "can_unlock_day10_now=false sempre neste marco"
+  ]
+}

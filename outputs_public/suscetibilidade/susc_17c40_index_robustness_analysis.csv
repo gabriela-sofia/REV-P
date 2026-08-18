@@ -1,0 +1,4 @@
+robustness_analysis_id,index_variant,canary_count,control_count,canary_median_index,control_median_index,median_delta,canary_higher_count,control_higher_count,similar_count,robustness_interpretation,review_only
+S17C40_ROB_0001,V1_equal_weight_available_components,11,5,0.705,0.25587,0.44913,51,1,3,canario_maior_mediana,true
+S17C40_ROB_0002,V2_v6_weight_inspired_without_flow_acc,11,5,0.60598,0.18004,0.42594,49,4,2,canario_maior_mediana,true
+S17C40_ROB_0003,V3_rank_median_robust_index,11,5,0.74891,0.32439,0.42452,50,4,1,canario_maior_mediana,true

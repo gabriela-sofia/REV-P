@@ -1,0 +1,10 @@
+metric,value
+n_patches,300
+score_min,0.0
+score_max,1.0
+score_mean,0.522559
+class_low,100
+class_medium,99
+class_high,101
+n_features_used,19
+n_features_excluded_flagged,4

@@ -1,0 +1,7 @@
+familia,cobertura_media,status_cobertura,principal_lacuna,coverage_is_susceptibility,observacao
+fisica_topografica,1.0000,completa,nenhuma,false,"cobertura e completude, nao suscetibilidade"
+espectral_umidade,1.0000,completa,nenhuma,false,"cobertura e completude, nao suscetibilidade"
+chuva_hidrometeorologica,1.0000,completa,nenhuma,false,"cobertura e completude, nao suscetibilidade"
+territorial,1.0000,completa,nenhuma,false,"cobertura e completude, nao suscetibilidade"
+documental,0.0200,rara,documental so em Recife,false,"cobertura e completude, nao suscetibilidade"
+observacional,0.0267,rara,evidencia so em Recife e SAR de Curitiba,false,"cobertura e completude, nao suscetibilidade"

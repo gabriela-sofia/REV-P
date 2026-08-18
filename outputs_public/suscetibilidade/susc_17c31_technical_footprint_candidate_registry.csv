@@ -1,0 +1,2 @@
+technical_footprint_candidate_id,candidate_patch_id,event_id,candidate_type,source,source_artifact_manifest_id,pre_event_window,post_event_window,requires_sentinel1_raster,requires_human_qa,can_support_future_g4,can_support_future_g5,not_ground_truth,review_only
+S17C31_TFC_0001,S17C6_CANARY_REC_00001,REC_2022_05_24_30,sentinel1_sar_metadata_feasibility,asf_sentinel1,S17C31_ART_0008,2022-05-15..2022-05-24,2022-05-24..2022-06-10,true,true,true,false,true,true

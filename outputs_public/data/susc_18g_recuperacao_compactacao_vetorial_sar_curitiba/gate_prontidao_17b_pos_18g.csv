@@ -1,0 +1,5 @@
+criterio,valor_observado,limiar,passou,status,observacao
+segunda_regiao_tecnica,true,true,true,17B_APROXIMACAO_COM_SEGUNDA_REGIAO_TECNICA,evidencia tecnica SAR de Curitiba
+geometria_oficial,false,true,false,17B_APROXIMACAO_COM_SEGUNDA_REGIAO_TECNICA,nao substitui resposta oficial
+benchmark_17b_criado,false,false,true,17B_APROXIMACAO_COM_SEGUNDA_REGIAO_TECNICA,nenhum benchmark criado
+ground_truth_zero,0,0,true,17B_APROXIMACAO_COM_SEGUNDA_REGIAO_TECNICA,sem ground truth

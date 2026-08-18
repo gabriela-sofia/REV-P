@@ -1,0 +1,47 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "aoi_id": "S18E_AOI_CUR_43_PATCHES",
+        "candidate_event_id": "S17C_REF_0060",
+        "evento_publico": "CUR_2022_01_15",
+        "patch_count": 43,
+        "uso_permitido": "aoi_tecnica_para_busca_sar",
+        "geometria_de_ocorrencia": false,
+        "ground_truth": false,
+        "eligible_for_training": false,
+        "score_v7_allowed": false,
+        "review_only": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -49.403546858188726,
+              -25.599740077698588
+            ],
+            [
+              -49.08763058997096,
+              -25.599740077698588
+            ],
+            [
+              -49.08763058997096,
+              -25.29008810702265
+            ],
+            [
+              -49.403546858188726,
+              -25.29008810702265
+            ],
+            [
+              -49.403546858188726,
+              -25.599740077698588
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

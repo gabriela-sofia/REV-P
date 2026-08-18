@@ -1,0 +1,4 @@
+task_id,artefato,task_type,destination,status_anterior,status_atual,consulta_realizada,observacao
+YNY6EV5ZXU25NT737DDJ7VCJ,flood_mask,Export.image.toDrive,Google Drive/REV_P_SUSC_18E2/flood_mask_curitiba_2022_01_15,SUCCEEDED,SUCCEEDED,true,status atualizado via Earth Engine CLI
+KF4J7MQQDB64TDEM7S5CNLPZ,flood_vector,Export.table.toDrive,Google Drive/REV_P_SUSC_18E2/flood_vector_curitiba_2022_01_15,SUCCEEDED,SUCCEEDED,true,status atualizado via Earth Engine CLI
+PCSCLVHXO2BGXK6P63XCFF4K,patch_stats,Export.table.toDrive,Google Drive/REV_P_SUSC_18E2/patch_stats_curitiba_2022_01_15,SUCCEEDED,SUCCEEDED,true,status atualizado via Earth Engine CLI

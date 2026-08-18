@@ -1,0 +1,16 @@
+patch_id,regiao,susc_score_v6_candidate,susc_class_v6_candidate,top5_feature_contributions
+recife_00506,recife,1.0,high,ndbi_mean=0.063815; flow_acc_log_mean=0.057143; slope_mean=0.057143; twi_mean=0.057143; hand_mean=0.057075
+petropolis_00140,petropolis,0.977677,high,elevation_mean=0.0566; hand_mean=0.055459; distance_to_water_mean=0.053659; slope_mean=0.046733; tpi_250m_mean=0.044001
+petropolis_00070,petropolis,0.976259,high,elevation_mean=0.057021; hand_mean=0.056813; slope_mean=0.056403; twi_mean=0.044797; flow_acc_log_mean=0.038938
+recife_00227,recife,0.969245,high,elevation_mean=0.057056; hand_mean=0.056791; distance_to_water_mean=0.056018; slope_mean=0.054995; flow_acc_log_mean=0.054356
+petropolis_00068,petropolis,0.950011,high,elevation_mean=0.056863; hand_mean=0.056609; slope_mean=0.05352; distance_to_water_mean=0.041689; runoff_context_30d=0.035306
+recife_00205,recife,0.91929,high,elevation_mean=0.057143; twi_mean=0.057143; slope_mean=0.057005; hand_mean=0.056915; flow_acc_log_mean=0.049603
+recife_00482,recife,0.91003,high,urban_prop=0.058684; elevation_mean=0.056835; hand_mean=0.056068; slope_mean=0.055886; ndbi_mean=0.055762
+petropolis_00860,petropolis,0.909184,high,hand_mean=0.050201; tpi_250m_mean=0.039717; flow_acc_log_mean=0.038994; distance_to_water_mean=0.037792; slope_mean=0.037707
+petropolis_00275,petropolis,0.901346,high,tpi_250m_mean=0.057143; elevation_mean=0.050077; hand_mean=0.047714; distance_to_water_mean=0.035089; runoff_context_30d=0.034543
+petropolis_00016,petropolis,0.897116,high,elevation_mean=0.056309; hand_mean=0.05502; slope_mean=0.045977; tpi_250m_mean=0.042162; runoff_context_7d=0.035714
+curitiba_00661,curitiba,0.883007,high,urban_prop=0.065766; slope_mean=0.056884; hand_mean=0.056812; ndbi_mean=0.053309; twi_mean=0.051181
+petropolis_00033,petropolis,0.875274,high,elevation_mean=0.056879; hand_mean=0.056249; slope_mean=0.053297; distance_to_water_mean=0.050175; runoff_context_30d=0.035306
+petropolis_00050,petropolis,0.863663,high,elevation_mean=0.056089; hand_mean=0.054297; slope_mean=0.043218; runoff_context_7d=0.035714; runoff_context_30d=0.035608
+recife_00291,recife,0.854531,high,ndbi_mean=0.066667; urban_prop=0.066586; hand_mean=0.055051; elevation_mean=0.054652; slope_mean=0.049394
+petropolis_00030,petropolis,0.849721,high,elevation_mean=0.056718; hand_mean=0.055883; distance_to_water_mean=0.054574; slope_mean=0.049845; runoff_context_30d=0.035306

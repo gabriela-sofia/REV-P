@@ -1,0 +1,8 @@
+requested_name,resolved_real_column,present_in_susc03,exact_definition_match,resolution_status,requires_manual_review,notes
+chirps_3d_to_30d_ratio,rain_3d_7d_ratio,true,false,resolved_closest_different_definition,true,alias maps requested/legacy name to the real SUSC-03 column
+chirps_3d_to_7d_ratio,rain_3d_7d_ratio,true,false,resolved_closest_different_definition,true,alias maps requested/legacy name to the real SUSC-03 column
+chirps_7d_to_30d_ratio,rain_7d_30d_ratio,true,true,resolved_exact,false,alias maps requested/legacy name to the real SUSC-03 column
+flow_acc_p75,flow_acc_log_p75,true,true,resolved_exact,false,alias maps requested/legacy name to the real SUSC-03 column
+rain_persistence,rain_persistence_index,true,true,resolved_exact,false,alias maps requested/legacy name to the real SUSC-03 column
+runoff_score,runoff_context_7d,true,false,resolved_closest_different_definition,true,alias maps requested/legacy name to the real SUSC-03 column
+s1_vv_minus_vh,s1_vv_minus_vh_mean_clean,true,true,resolved_exact,false,alias maps requested/legacy name to the real SUSC-03 column

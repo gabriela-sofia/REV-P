@@ -1,0 +1,58 @@
+{
+  "schema_id": "mv2_14_lineage_binding_matrix",
+  "title": "MV2-14 Lineage Binding Matrix",
+  "validates": "outputs_public/mv2_gee_lineage_recovery/mv2_14_lineage_binding_matrix.csv",
+  "primary_key": "lineage_binding_id",
+  "required_fields": [
+    "lineage_binding_id",
+    "target_id",
+    "binding_id",
+    "anchor_id",
+    "asset_id",
+    "patch_id",
+    "region",
+    "recovered_scene_id",
+    "recovered_datetime",
+    "recovered_tile",
+    "recovered_cloud_cover",
+    "recovered_sensor",
+    "export_task_or_source",
+    "evidence_source",
+    "evidence_snippet",
+    "lineage_status",
+    "confidence",
+    "conflict_status",
+    "invalid_reason",
+    "stac_readiness_after_lineage",
+    "day10_status_after_lineage",
+    "blocking_reason",
+    "next_action"
+  ],
+  "enums": {
+    "lineage_status": [
+      "LINEAGE_RECOVERED_STRONG",
+      "LINEAGE_RECOVERED_PARTIAL",
+      "LINEAGE_CANDIDATE_REVIEW",
+      "LINEAGE_CONFLICT",
+      "LINEAGE_INVALID",
+      "LINEAGE_NOT_FOUND"
+    ],
+    "stac_readiness_after_lineage": [
+      "READY_FOR_STAC_DRY_RUN",
+      "READY_FOR_STAC_REAL_REVIEW_REQUIRED",
+      "BLOCKED_NO_SCENE_ID",
+      "BLOCKED_NO_DATETIME",
+      "BLOCKED_NO_TILE",
+      "BLOCKED_NO_CLOUD_COVER",
+      "BLOCKED_NO_EXPORT_PROVENANCE",
+      "BLOCKED_CONFLICT",
+      "BLOCKED_INVALID",
+      "BLOCKED_NO_LINEAGE"
+    ]
+  },
+  "fail_closed_rules": [
+    "cidade/região/tile sozinhos nunca passam de CANDIDATE_REVIEW",
+    "CANDIDATE_REVIEW nunca recupera scene_id automaticamente",
+    "STAC real review só com LINEAGE_RECOVERED_STRONG"
+  ]
+}

@@ -1,0 +1,1 @@
+candidate_patch_link_id,candidate_footprint_id,candidate_event_id,patch_id,link_method,overlap_ratio,distance_m,link_quality,qa_status,eligible_for_17b,review_only,trainable,ground_truth

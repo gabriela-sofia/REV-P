@@ -1,0 +1,1 @@
+patch_id,region,candidate_id,geometry_id,spatial_relation,overlay_confidence,source_file,can_be_used_as_ground_truth,allowed_for_training,review_only,interpretation,limitation

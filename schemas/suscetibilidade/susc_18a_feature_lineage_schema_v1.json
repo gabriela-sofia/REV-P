@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-18A feature lineage manifest schema v1",
+  "type": "object",
+  "required": [
+    "lineage_id", "unified_patch_id", "feature_family", "source_file", "source_milestone",
+    "source_authority", "extraction_method", "extraction_date_or_window", "is_official_source",
+    "is_proxy_source", "is_review_only", "sha256_or_source_hash", "lineage_status"
+  ],
+  "properties": {
+    "lineage_id": {"type": "string", "pattern": "^S18A_LIN_"},
+    "is_review_only": {"const": "true"}
+  }
+}

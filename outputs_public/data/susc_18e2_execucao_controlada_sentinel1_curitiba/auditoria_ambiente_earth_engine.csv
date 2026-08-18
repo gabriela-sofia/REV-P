@@ -1,0 +1,11 @@
+item,comando_testado,disponivel,status,resultado_obtido,detalhe_tecnico
+python,python --version,true,autenticado_pronto_para_execucao,Python 3.12.10,interpretador Python disponivel
+pacote_ee,"python -c ""import ee""",true,ambiente_indeterminado,import_ok,pacote ee encontrado
+earthengine_api,"python -c ""import ee""",true,ambiente_indeterminado,disponivel,biblioteca Python Earth Engine disponivel
+earthengine_cli,earthengine --help,true,ambiente_indeterminado,comando_disponivel,CLI Earth Engine disponivel
+google_application_credentials,$env:GOOGLE_APPLICATION_CREDENTIALS,false,ambiente_indeterminado,variavel_ausente,valor nao impresso por seguranca
+gcloud,gcloud --version,false,ambiente_indeterminado,comando_ausente,gcloud ausente
+internet,GET https://earthengine.googleapis.com,true,ambiente_indeterminado,http_404,endpoint respondeu; conectividade existe
+ee_initialize,ee.Initialize(),true,autenticado_pronto_para_execucao,initialize_ok,sessao Earth Engine inicializada
+pasta_local_destino,write_test local_runs/suscetibilidade/18e_sar_curitiba/resultados_gee,true,ambiente_indeterminado,gravavel,local_runs/suscetibilidade/18e_sar_curitiba/resultados_gee
+permissao_exportacao,Export.image.toDrive/table.toDrive,true,ambiente_indeterminado,preparavel_apos_initialize,permissao efetiva so e confirmada ao iniciar tarefa

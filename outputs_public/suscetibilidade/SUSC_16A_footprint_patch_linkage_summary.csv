@@ -1,0 +1,5 @@
+metric,value,review_only
+footprint_patch_links_total,570,true
+eligible_patch_links_count,65,true
+unique_observational_patches,62,true
+relations,"{""footprint_polygon_covers_patch"": 56, ""footprint_polygon_intersects_patch"": 9, ""insufficient_for_patch_link"": 405, ""risk_context_intersects_patch"": 100}",true

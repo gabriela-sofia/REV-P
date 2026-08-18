@@ -1,0 +1,7 @@
+familia,cobertura_media,cobertura_pct,status_cobertura,principal_lacuna,observacao
+fisica_topografica,1.0000,100.0%,completa,nenhuma,cobertura nao e score de suscetibilidade
+espectral_umidade,1.0000,100.0%,completa,nenhuma,cobertura nao e score de suscetibilidade
+chuva_hidrometeorologica,1.0000,100.0%,completa,nenhuma,cobertura nao e score de suscetibilidade
+territorial,0.3333,33.3%,parcial,MapBiomas_class;exposed_soil_prop;water_prop;impervious_proxy (missingness herdado do 19B),cobertura nao e score de suscetibilidade
+documental,0.0200,2.0%,rara,documental so em Recife e contexto misto em Petropolis,cobertura nao e score de suscetibilidade
+observacional,0.0267,2.7%,rara,evidencia so em Recife e SAR de Curitiba,cobertura nao e score de suscetibilidade

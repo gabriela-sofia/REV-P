@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "susc_gt01_patch_reference_decision.schema.json",
+  "title": "SUSC-GT01 Patch Reference Decision",
+  "type": "object",
+  "required": [
+    "input_evidence_type",
+    "can_promote_to",
+    "max_patch_link_strength",
+    "eligible_for_evaluation",
+    "eligible_for_calibration",
+    "score_v7_candidate",
+    "review_only",
+    "decision"
+  ],
+  "properties": {
+    "input_evidence_type": {
+      "type": "string",
+      "minLength": 1
+    },
+    "can_promote_to": {
+      "enum": [
+        "positive_strong",
+        "positive_provisional",
+        "unlabeled",
+        "hard_negative_audited",
+        "no_data",
+        "rejected"
+      ]
+    },
+    "max_patch_link_strength": {
+      "enum": [
+        "none",
+        "insufficient",
+        "region_period",
+        "buffer",
+        "bbox_overlap",
+        "intersection_strong"
+      ]
+    },
+    "eligible_for_evaluation": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "eligible_for_calibration": {
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "score_v7_candidate": {
+      "const": "false"
+    },
+    "eligible_for_training": {
+      "const": "false"
+    },
+    "eligible_for_ground_truth": {
+      "const": "false"
+    },
+    "review_only": {
+      "const": "true"
+    },
+    "decision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "rationale": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "not_promotable_to_strong_patch_link": [
+    "alert_only",
+    "risk_area",
+    "risk_area_not_event",
+    "news_report",
+    "municipality_affected",
+    "neighborhood_affected",
+    "post_event_footprint"
+  ]
+}

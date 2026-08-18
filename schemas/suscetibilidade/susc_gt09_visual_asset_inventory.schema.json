@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "susc_gt09_visual_asset_inventory.schema.json",
+  "title": "SUSC-GT09 Inventario de Ativos",
+  "type": "object",
+  "required": [
+    "asset_id",
+    "path",
+    "asset_class",
+    "image_generated_in_this_milestone",
+    "downloaded_in_this_milestone",
+    "review_only"
+  ],
+  "properties": {
+    "asset_id": {
+      "type": "string",
+      "pattern": "^AST_\\d+$"
+    },
+    "path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "asset_class": {
+      "enum": [
+        "ativo_visual_existente",
+        "ativo_geometrico_existente",
+        "apenas_metadado",
+        "nenhum_ativo_visual"
+      ]
+    },
+    "image_generated_in_this_milestone": {
+      "const": "false"
+    },
+    "downloaded_in_this_milestone": {
+      "const": "false"
+    },
+    "review_only": {
+      "const": "true"
+    }
+  }
+}

@@ -1,0 +1,73 @@
+feature_name,feature_group,source_file,source_column,origin_status,public_source_known,raw_source_available,computation_script_found,requires_audit,can_be_used_as_feature,can_be_used_as_ground_truth,allowed_for_training,review_only,notes
+patch_id,patch_identity,PROJETO/data/dataset_final.csv,patch_id,raw_existing,true,true,false,false,false,false,false,true,Primary key
+regiao,patch_identity,PROJETO/data/dataset_final.csv,regiao,raw_existing,true,true,false,false,false,false,false,true,Stratification variable
+reference_date,patch_identity,PROJETO/data/dataset_final.csv,reference_date,raw_existing,true,true,false,false,false,false,false,true,Temporal anchor 2022-12-31
+xmin,geometry,PROJETO/data/dataset_final.csv,xmin,raw_existing,true,true,false,false,false,false,false,true,Bbox WGS84
+ymin,geometry,PROJETO/data/dataset_final.csv,ymin,raw_existing,true,true,false,false,false,false,false,true,Bbox WGS84
+xmax,geometry,PROJETO/data/dataset_final.csv,xmax,raw_existing,true,true,false,false,false,false,false,true,Bbox WGS84
+ymax,geometry,PROJETO/data/dataset_final.csv,ymax,raw_existing,true,true,false,false,false,false,false,true,Bbox WGS84
+B2_mean,sentinel2_bands,PROJETO/data/dataset_final.csv,B2_mean,computed_existing,true,true,false,true,true,false,false,true,GEE Sentinel-2 COPERNICUS/S2_SR_HARMONIZED Band 2 Blue 490nm
+B3_mean,sentinel2_bands,PROJETO/data/dataset_final.csv,B3_mean,computed_existing,true,true,false,true,true,false,false,true,GEE Sentinel-2 Band 3 Green 560nm
+B4_mean,sentinel2_bands,PROJETO/data/dataset_final.csv,B4_mean,computed_existing,true,true,false,true,true,false,false,true,GEE Sentinel-2 Band 4 Red 665nm
+B8_mean,sentinel2_bands,PROJETO/data/dataset_final.csv,B8_mean,computed_existing,true,true,false,true,true,false,false,true,GEE Sentinel-2 Band 8 NIR 842nm
+B11_mean,sentinel2_bands,PROJETO/data/dataset_final.csv,B11_mean,computed_existing,true,true,false,true,true,false,false,true,GEE Sentinel-2 Band 11 SWIR1 1610nm
+B12_mean,sentinel2_bands,PROJETO/data/dataset_final.csv,B12_mean,computed_existing,true,true,false,true,true,false,false,true,GEE Sentinel-2 Band 12 SWIR2 2190nm
+ndvi_mean,spectral_index,PROJETO/data/dataset_final.csv,ndvi_mean,computed_existing,true,true,true,true,true,false,false,true,Formula (NIR-RED)/(NIR+RED) confirmed in features_optical.py
+mndwi_mean,spectral_index,PROJETO/data/dataset_final.csv,mndwi_mean,computed_existing,true,true,true,true,true,false,false,true,Formula (GREEN-SWIR)/(GREEN+SWIR) confirmed in features_optical.py
+ndbi_mean,spectral_index,PROJETO/data/dataset_final.csv,ndbi_mean,computed_existing,true,true,true,true,true,false,false,true,Formula (SWIR-NIR)/(SWIR+NIR) confirmed in features_optical.py
+elevation_mean,topography,PROJETO/data/dataset_final.csv,elevation_mean,computed_existing,true,true,false,true,true,false,false,true,Source likely GEE DEM or PE3D/SGB MDE. Script not identified.
+elevation_std,topography,PROJETO/data/dataset_final.csv,elevation_std,computed_existing,true,true,false,true,true,false,false,true,Same provenance as elevation_mean
+slope_mean,topography,PROJETO/data/dataset_final.csv,slope_mean,computed_existing,true,true,false,true,true,false,false,true,Derived from DEM. Spec in features_topo_hydro.py.
+slope_std,topography,PROJETO/data/dataset_final.csv,slope_std,computed_existing,true,true,false,true,true,false,false,true,Same provenance as slope_mean
+hand_mean,hydrology,PROJETO/data/dataset_final.csv,hand_mean,computed_existing,true,false,false,true,true,false,false,true,CRITICAL. Source likely GEE HAND or derived. Script NOT found. Provenance audit required.
+twi_mean,hydrology,PROJETO/data/dataset_final.csv,twi_mean,computed_existing,true,false,false,true,true,false,false,true,Source likely GEE or DEM-derived. Script NOT found.
+tpi_250m_mean,topography,PROJETO/data/dataset_final.csv,tpi_250m_mean,computed_existing,true,false,false,true,true,false,false,true,Window 250m documented. Script NOT found.
+curvature_laplacian_mean,topography,PROJETO/data/dataset_final.csv,curvature_laplacian_mean,computed_existing,true,false,false,true,true,false,false,true,Laplacian curvature from DEM. Script NOT found.
+distance_to_water_mean,hydrology,PROJETO/data/dataset_final.csv,distance_to_water_mean,computed_existing,true,true,true,true,true,false,false,true,v1gq uses GeoJSON hydro layers. GEE also possible.
+water_occurrence_patch,hydrology,PROJETO/data/dataset_final.csv,water_occurrence_patch,computed_existing,true,false,false,true,true,false,false,true,Likely JRC Global Surface Water via GEE.
+flow_acc_log_mean,hydrology,PROJETO/data/dataset_final.csv,flow_acc_log_mean,computed_existing,true,false,false,true,true,false,false,true,Log flow accumulation from DEM routing. Script NOT found.
+flow_acc_log_p75,hydrology,PROJETO/data/dataset_final.csv,flow_acc_log_p75,computed_existing,true,false,false,true,true,false,false,true,Same provenance as flow_acc_log_mean
+runoff_context_7d,precipitation,PROJETO/data/dataset_final.csv,runoff_context_7d,computed_existing,true,false,false,true,true,false,false,true,Composite metric. Formula unknown.
+runoff_context_30d,precipitation,PROJETO/data/dataset_final.csv,runoff_context_30d,computed_existing,true,false,false,true,true,false,false,true,Composite metric. Formula unknown.
+chirps_3d_mm,precipitation,PROJETO/data/dataset_final.csv,chirps_3d_mm,computed_existing,true,false,false,true,true,false,false,true,CHIRPS via GEE. 3-day accumulation relative to reference_date.
+chirps_7d_mm,precipitation,PROJETO/data/dataset_final.csv,chirps_7d_mm,computed_existing,true,false,false,true,true,false,false,true,CHIRPS via GEE. 7-day accumulation.
+chirps_30d_mm,precipitation,PROJETO/data/dataset_final.csv,chirps_30d_mm,computed_existing,true,false,false,true,true,false,false,true,CHIRPS via GEE. 30-day accumulation.
+rain_3d_7d_ratio,precipitation,PROJETO/data/dataset_final.csv,rain_3d_7d_ratio,computed_existing,true,true,false,false,true,false,false,true,Derived from chirps columns.
+rain_7d_30d_ratio,precipitation,PROJETO/data/dataset_final.csv,rain_7d_30d_ratio,computed_existing,true,true,false,false,true,false,false,true,Derived from chirps columns.
+rain_persistence_index,precipitation,PROJETO/data/dataset_final.csv,rain_persistence_index,computed_existing,true,false,false,true,true,false,false,true,Composite metric. Formula unknown.
+s1_vv_mean_clean,sar,PROJETO/data/dataset_final.csv,s1_vv_mean_clean,computed_existing,true,false,false,true,true,false,false,true,Sentinel-1 VV cleaned. Cleaning method unknown.
+s1_vh_mean_clean,sar,PROJETO/data/dataset_final.csv,s1_vh_mean_clean,computed_existing,true,false,false,true,true,false,false,true,Sentinel-1 VH cleaned. Same provenance.
+s1_vv_minus_vh_mean_clean,sar,PROJETO/data/dataset_final.csv,s1_vv_minus_vh_mean_clean,computed_existing,true,true,false,true,true,false,false,true,Derived from s1_vv and s1_vh.
+urban_prop,land_use,PROJETO/data/dataset_final.csv,urban_prop,proxy_existing,false,false,false,true,true,false,false,true,Source UNKNOWN. Possibly MapBiomas or GEE classification. Provenance audit critical.
+vegetation_prop,land_use,PROJETO/data/dataset_final.csv,vegetation_prop,proxy_existing,false,false,false,true,true,false,false,true,Source UNKNOWN. Same concern as urban_prop.
+urban_water_interaction,interaction,PROJETO/data/dataset_final.csv,urban_water_interaction,computed_existing,false,false,false,true,true,false,false,true,Composite interaction. Formula unknown.
+urban_drainage_interaction,interaction,PROJETO/data/dataset_final.csv,urban_drainage_interaction,computed_existing,false,false,false,true,true,false,false,true,Composite interaction. Formula unknown.
+proxy_v5_hand_low,proxy_v5,PROJETO/data/dataset_final.csv,proxy_v5_hand_low,heuristic_existing,false,true,false,true,true,false,false,true,Binary proxy from score v5 system.
+proxy_v5_distance_water_low,proxy_v5,PROJETO/data/dataset_final.csv,proxy_v5_distance_water_low,heuristic_existing,false,true,false,true,true,false,false,true,Binary proxy from score v5 system.
+proxy_v5_flow_accumulation,proxy_v5,PROJETO/data/dataset_final.csv,proxy_v5_flow_accumulation,heuristic_existing,false,true,false,true,true,false,false,true,Binary proxy from score v5 system.
+proxy_v5_twi_wetness,proxy_v5,PROJETO/data/dataset_final.csv,proxy_v5_twi_wetness,heuristic_existing,false,true,false,true,true,false,false,true,Binary proxy from score v5 system.
+proxy_v5_flat_terrain,proxy_v5,PROJETO/data/dataset_final.csv,proxy_v5_flat_terrain,heuristic_existing,false,true,false,true,true,false,false,true,Binary proxy from score v5 system.
+proxy_v5_low_elevation,proxy_v5,PROJETO/data/dataset_final.csv,proxy_v5_low_elevation,heuristic_existing,false,true,false,true,true,false,false,true,Binary proxy from score v5 system.
+proxy_v5_water_history,proxy_v5,PROJETO/data/dataset_final.csv,proxy_v5_water_history,heuristic_existing,false,true,false,true,true,false,false,true,Binary proxy from score v5 system.
+proxy_v5_rainfall_context,proxy_v5,PROJETO/data/dataset_final.csv,proxy_v5_rainfall_context,heuristic_existing,false,true,false,true,true,false,false,true,Binary proxy from score v5 system.
+proxy_v5_runoff_context,proxy_v5,PROJETO/data/dataset_final.csv,proxy_v5_runoff_context,heuristic_existing,false,true,false,true,true,false,false,true,Binary proxy from score v5 system.
+proxy_v5_rain_concentration,proxy_v5,PROJETO/data/dataset_final.csv,proxy_v5_rain_concentration,heuristic_existing,false,true,false,true,true,false,false,true,Binary proxy from score v5 system.
+proxy_v5_rain_persistence,proxy_v5,PROJETO/data/dataset_final.csv,proxy_v5_rain_persistence,heuristic_existing,false,true,false,true,true,false,false,true,Binary proxy from score v5 system.
+proxy_v5_urban_exposure,proxy_v5,PROJETO/data/dataset_final.csv,proxy_v5_urban_exposure,heuristic_existing,false,true,false,true,true,false,false,true,Binary proxy from score v5 system.
+proxy_v5_vegetation_low,proxy_v5,PROJETO/data/dataset_final.csv,proxy_v5_vegetation_low,heuristic_existing,false,true,false,true,true,false,false,true,Binary proxy from score v5 system.
+proxy_v5_urban_water_interaction,proxy_v5,PROJETO/data/dataset_final.csv,proxy_v5_urban_water_interaction,heuristic_existing,false,true,false,true,true,false,false,true,Binary proxy from score v5 system.
+proxy_v5_urban_drainage_interaction,proxy_v5,PROJETO/data/dataset_final.csv,proxy_v5_urban_drainage_interaction,heuristic_existing,false,true,false,true,true,false,false,true,Binary proxy from score v5 system.
+proxy_v5_ndbi_built,proxy_v5,PROJETO/data/dataset_final.csv,proxy_v5_ndbi_built,heuristic_existing,false,true,false,true,true,false,false,true,Binary proxy from score v5 system.
+proxy_v5_ndvi_low,proxy_v5,PROJETO/data/dataset_final.csv,proxy_v5_ndvi_low,heuristic_existing,false,true,false,true,true,false,false,true,Binary proxy from score v5 system.
+proxy_v5_mndwi_wet,proxy_v5,PROJETO/data/dataset_final.csv,proxy_v5_mndwi_wet,heuristic_existing,false,true,false,true,true,false,false,true,Binary proxy from score v5 system.
+score_predisposicao_hidrotopografica_v5,score,PROJETO/data/dataset_final.csv,score_predisposicao_hidrotopografica_v5,heuristic_existing,false,true,false,true,false,false,false,true,Composite heuristic score. Not a feature. Not GT.
+score_gatilho_hidroclimatico_v5,score,PROJETO/data/dataset_final.csv,score_gatilho_hidroclimatico_v5,heuristic_existing,false,true,false,true,false,false,false,true,Composite heuristic score. Not GT.
+score_amplificacao_urbana_v5,score,PROJETO/data/dataset_final.csv,score_amplificacao_urbana_v5,heuristic_existing,false,true,false,true,false,false,false,true,Composite heuristic score. Not GT.
+score_superficie_optica_v5_diagnostic,score,PROJETO/data/dataset_final.csv,score_superficie_optica_v5_diagnostic,heuristic_existing,false,true,false,true,false,false,false,true,Diagnostic heuristic. Not GT.
+score_umidade_antecedente_v5,score,PROJETO/data/dataset_final.csv,score_umidade_antecedente_v5,heuristic_existing,false,true,false,true,false,false,false,true,Heuristic score. Not GT.
+score_impulso_chuva_v5,score,PROJETO/data/dataset_final.csv,score_impulso_chuva_v5,heuristic_existing,false,true,false,true,false,false,false,true,Heuristic score. Not GT.
+score_evento_enchente_potencial_v5_core,score,PROJETO/data/dataset_final.csv,score_evento_enchente_potencial_v5_core,heuristic_existing,false,true,false,true,false,false,false,true,Top-level heuristic. NOT GT. NOT validated.
+label_evento_enchente_potencial_v5_core_regional_p75,heuristic_label,PROJETO/data/dataset_final.csv,label_evento_enchente_potencial_v5_core_regional_p75,heuristic_existing,false,true,false,true,false,false,false,true,CRITICAL: Heuristic label NOT GT. Never use for supervised training.
+label_confidence_v5,heuristic_label,PROJETO/data/dataset_final.csv,label_confidence_v5,heuristic_existing,false,true,false,true,false,false,false,true,Confidence in heuristic not in reality.
+regime_evento_enchente_v5,score,PROJETO/data/dataset_final.csv,regime_evento_enchente_v5,heuristic_existing,false,true,false,true,false,false,false,true,Categorical regime classification. Not GT.
+study_value_score_v1,qa,PROJETO/data/dataset_final.csv,study_value_score_v1,computed_existing,false,true,false,false,false,false,false,true,QA metric for patch selection. Not a susceptibility feature.

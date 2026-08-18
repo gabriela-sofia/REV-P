@@ -1,6 +1,6 @@
 # REV-P v2et recovery candidate validation
 
-Rows generated: 69
+Rows generated: 5295
 
 Candidates must pass directory, schema, count, hash, size and guardrail checks before copying.
 

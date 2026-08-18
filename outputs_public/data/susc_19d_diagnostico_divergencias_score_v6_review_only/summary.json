@@ -1,0 +1,51 @@
+{
+  "branch": "marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial",
+  "head": "72dec09",
+  "staged_count": 0,
+  "observed_patches": 7,
+  "observed_recife": 5,
+  "observed_curitiba": 2,
+  "background_patches": 293,
+  "background_label": "unlabeled_background",
+  "score_medio_observado": 0.5958,
+  "score_medio_background": 0.5208,
+  "observed_in_top_30_global": 0,
+  "familias_aderentes": [
+    "fisica_topografica",
+    "urbana_territorial",
+    "espectral_umidade"
+  ],
+  "familias_divergentes": [
+    "hidrologica",
+    "chuva_hidrometeorologica"
+  ],
+  "familia_agreement_rate": {
+    "fisica_topografica": 1.0,
+    "hidrologica": 0.0,
+    "urbana_territorial": 1.0,
+    "espectral_umidade": 1.0,
+    "chuva_hidrometeorologica": 0.0,
+    "documental_observacional": 1.0,
+    "score_v6": 1.0
+  },
+  "patches_low_score": 1,
+  "divergencia_forte": "curitiba_01101",
+  "componentes_formais_ausentes": false,
+  "n_falhas": 14,
+  "n_hipoteses": 7,
+  "sensibilidade_executada": 3,
+  "sensibilidade_desenho": 2,
+  "status_score_v7": "SCORE_V7_NAO_AUTORIZADO",
+  "status_17b": "17B_NAO_CRIADO",
+  "status_19e": "19E_PRONTO_COM_RESSALVAS",
+  "marco_17b_criado": false,
+  "benchmark_17b_criado": false,
+  "ground_truth_true_count": 0,
+  "eligible_for_training_true_count": 0,
+  "score_v7_allowed_true_count": 0,
+  "score_v6_changed": false,
+  "score_v7_created": false,
+  "sample_power": "baixa",
+  "review_only": true,
+  "proximo_marco": "SUSC-19E"
+}

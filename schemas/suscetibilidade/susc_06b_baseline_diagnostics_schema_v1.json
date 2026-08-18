@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "schema_id": "SUSC-06B-DIAGNOSTICS",
+  "created": "2026-06-27",
+  "diagnostic_name": "SUSC-06B baseline proxy diagnostics",
+  "input_baseline": "SUSC-06A",
+  "diagnostic_status": "review_only_proxy_diagnostic",
+  "purpose": "Camada formal de diagnostico do baseline proxy SUSC-06A. Documenta circularidade do target, recuperabilidade do heuristico, divergencias de direcao, estabilidade regional, elegibilidade de features e readiness para o overlay documental/evento do SUSC-07. NAO valida ocorrencia real.",
+  "checks": [
+    "target_circularity",
+    "partial_effect_direction",
+    "regional_stability",
+    "feature_eligibility",
+    "event_validation_readiness"
+  ],
+  "result_labels": {
+    "circularity_risk": ["high", "medium", "low"],
+    "r2_interpretation": ["heuristic_recoverability", "predictive_power"],
+    "partial_effect_class": [
+      "direction_agrees",
+      "direction_diverges",
+      "near_zero_effect",
+      "ambiguous_expected_direction"
+    ],
+    "divergence_action": [
+      "investigate_before_score_v6",
+      "exclude_from_score_v6_until_review",
+      "keep_as_context_only",
+      "acceptable_due_to_non_monotonicity"
+    ],
+    "feature_action": [
+      "advance_to_score_v6_candidate",
+      "advance_to_spgam_candidate",
+      "advance_to_dino_comparison",
+      "manual_review_required",
+      "hold_until_recomputed",
+      "proxy_only_do_not_score"
+    ],
+    "regional_stability_status": ["stable", "moderately_variable", "unstable"]
+  },
+  "overlay_required_fields": [
+    "patch_id",
+    "regiao",
+    "geometry_or_bbox",
+    "score_or_proxy",
+    "main_physical_features",
+    "future_documentary_evidence",
+    "date_or_period"
+  ],
+  "near_zero_effect_threshold": 0.005,
+  "regional_stability_spread_threshold": 0.05,
+  "expected_outputs": [
+    "outputs_public/suscetibilidade/SUSC_06B_baseline_circularity_report.csv",
+    "outputs_public/suscetibilidade/SUSC_06B_partial_effect_direction_audit.csv",
+    "outputs_public/suscetibilidade/SUSC_06B_region_stability_diagnostics.csv",
+    "outputs_public/suscetibilidade/SUSC_06B_feature_action_matrix.csv",
+    "outputs_public/suscetibilidade/SUSC_06B_event_overlay_readiness_matrix.csv",
+    "outputs_public/suscetibilidade/SUSC_06B_diagnostic_summary.json",
+    "outputs_public/suscetibilidade/SUSC_06B_proxy_baseline_diagnostics_report.md"
+  ],
+  "allowed_for_training": false,
+  "can_be_used_as_ground_truth": false,
+  "review_only": true,
+  "scientific_status": "review_only_proxy_diagnostic_not_event_validation"
+}

@@ -1,0 +1,195 @@
+{
+  "marco": "SUSC-GT01",
+  "titulo_publico": "Ground Reference Policy & Evidence State Taxonomy",
+  "descricao": "Politica oficial de referencia observacional por patch. Separa event_record, footprint, patch_link e score_evaluation. Estado padrao unlabeled (nao negativo). Base metodologica review-only; sem treino, sem ground truth supervisionado, sem score_v7.",
+  "objects": {
+    "event_record": "registro historico/documental do evento (data, cidade, fenomeno, fonte, autoridade, precisao temporal)",
+    "footprint": "geometria observacional/tecnica (poligono, ponto, bbox, footprint SAR, area de risco, alerta, contexto documental)",
+    "patch_link": "vinculo auditavel footprint/evento->patch (intersecao, bbox overlap, buffer, mesma regiao/periodo ou insuficiente)",
+    "score_evaluation": "comparacao review-only entre score/features do patch e a evidencia; nao treina, nao altera score, nao cria score_v7"
+  },
+  "global_guardrails": {
+    "eligible_for_training": "false",
+    "eligible_for_ground_truth": "false",
+    "score_v7_candidate": "false",
+    "trainable": "false",
+    "review_only": "true",
+    "supervised_training_allowed": "false",
+    "score_v6_altered": "false",
+    "score_v7_created": "false",
+    "network_access": "false",
+    "raster_download": "false"
+  },
+  "default_state": "unlabeled",
+  "states": [
+    {
+      "state": "positive_strong",
+      "definition": "Evento real com data compativel, fonte rastreavel, geometria forte, patch_link claro, incerteza documentada e QA aceito.",
+      "allowed_use": "referencia observacional review-only; elegivel para avaliacao e calibracao review-only",
+      "is_default": false,
+      "is_negative": false,
+      "required_fields": [
+        "event_date",
+        "geometry_type",
+        "source_authority",
+        "patch_link_quality",
+        "uncertainty_m",
+        "qa_status"
+      ],
+      "blocking_reason_required": false,
+      "eligible_for_evaluation": true,
+      "eligible_for_calibration": true,
+      "eligible_for_training": false,
+      "eligible_for_ground_truth": false,
+      "score_v7_candidate": false,
+      "trainable": false,
+      "review_only": true
+    },
+    {
+      "state": "positive_provisional",
+      "definition": "Evento bem documentado e plausivel, mas sem geometria suficiente para patch-level forte.",
+      "allowed_use": "referencia review-only provisoria; calibracao review-only permitida; avaliacao patch-level nao habilitada por falta de geometria forte",
+      "is_default": false,
+      "is_negative": false,
+      "required_fields": [
+        "event_date",
+        "source_authority",
+        "documentation_quality"
+      ],
+      "blocking_reason_required": false,
+      "eligible_for_evaluation": false,
+      "eligible_for_calibration": true,
+      "eligible_for_training": false,
+      "eligible_for_ground_truth": false,
+      "score_v7_candidate": false,
+      "trainable": false,
+      "review_only": true
+    },
+    {
+      "state": "unlabeled",
+      "definition": "Sem evidencia suficiente. Estado padrao de todo patch. NAO e negativo: ausencia de registro nao e negativo verdadeiro.",
+      "allowed_use": "universo nao rotulado (unlabeled_background); nunca tratado como negativo; nao entra em avaliacao nem calibracao",
+      "is_default": true,
+      "is_negative": false,
+      "required_fields": [],
+      "blocking_reason_required": false,
+      "eligible_for_evaluation": false,
+      "eligible_for_calibration": false,
+      "eligible_for_training": false,
+      "eligible_for_ground_truth": false,
+      "score_v7_candidate": false,
+      "trainable": false,
+      "review_only": true
+    },
+    {
+      "state": "hard_negative_audited",
+      "definition": "Caso raro: patch observado no mesmo evento, fora de footprint, sem exclusoes relevantes, com comportamento seco e QA aceito.",
+      "allowed_use": "negativo auditado raro review-only; elegivel para avaliacao e calibracao review-only; exige auditoria explicita",
+      "is_default": false,
+      "is_negative": true,
+      "required_fields": [
+        "observability",
+        "exclusion_check",
+        "qa_status"
+      ],
+      "blocking_reason_required": false,
+      "eligible_for_evaluation": true,
+      "eligible_for_calibration": true,
+      "eligible_for_training": false,
+      "eligible_for_ground_truth": false,
+      "score_v7_candidate": false,
+      "trainable": false,
+      "review_only": true
+    },
+    {
+      "state": "no_data",
+      "definition": "Impossivel decidir por nuvem, sombra SAR, layover, speckle, vegetacao, ambiguidade urbana, ausencia de imagem, fonte ruim ou geometria insuficiente.",
+      "allowed_use": "excluido da avaliacao e da calibracao; exige blocking_reason; nunca vira positivo nem negativo",
+      "is_default": false,
+      "is_negative": false,
+      "required_fields": [
+        "blocking_reason"
+      ],
+      "blocking_reason_required": true,
+      "eligible_for_evaluation": false,
+      "eligible_for_calibration": false,
+      "eligible_for_training": false,
+      "eligible_for_ground_truth": false,
+      "score_v7_candidate": false,
+      "trainable": false,
+      "review_only": true
+    },
+    {
+      "state": "rejected",
+      "definition": "Evidencia rejeitada por incompatibilidade de fenomeno, temporalidade, localizacao, fonte ou duplicidade.",
+      "allowed_use": "evidencia descartada; fora de avaliacao e calibracao; registrada com rejection_reason auditavel",
+      "is_default": false,
+      "is_negative": false,
+      "required_fields": [
+        "rejection_reason"
+      ],
+      "blocking_reason_required": false,
+      "eligible_for_evaluation": false,
+      "eligible_for_calibration": false,
+      "eligible_for_training": false,
+      "eligible_for_ground_truth": false,
+      "score_v7_candidate": false,
+      "trainable": false,
+      "review_only": true
+    }
+  ],
+  "evaluation_eligible_states": [
+    "hard_negative_audited",
+    "positive_strong"
+  ],
+  "no_data_blocking_reasons": [
+    "cloud",
+    "sar_shadow",
+    "layover",
+    "speckle",
+    "vegetation",
+    "urban_ambiguity",
+    "no_image",
+    "bad_source",
+    "insufficient_geometry"
+  ],
+  "patch_link_strengths": [
+    "none",
+    "insufficient",
+    "region_period",
+    "buffer",
+    "bbox_overlap",
+    "intersection_strong"
+  ],
+  "strong_patch_link": "intersection_strong",
+  "non_promotable_to_strong_patch_link": [
+    "alert_only",
+    "risk_area",
+    "risk_area_not_event",
+    "news_report",
+    "municipality_affected",
+    "neighborhood_affected",
+    "post_event_footprint"
+  ],
+  "petropolis_phenomenon_separation": {
+    "required": true,
+    "phenomena": [
+      "flood",
+      "flash_flood",
+      "landslide",
+      "mixed_flood_landslide"
+    ],
+    "rule": "Petropolis exige separacao explicita entre flood, flash_flood, landslide e mixed_flood_landslide antes de qualquer promocao"
+  },
+  "operational_forecast_claim": {
+    "revp_operational_flood_forecast": false,
+    "statement": "REV-P nao preve enchentes operacionalmente; produz analise estrutural review-only"
+  },
+  "prepares_next_milestones": [
+    "calibracao candidata review-only",
+    "canarios observacionais SAR",
+    "QA humano",
+    "matriz multimodal escalavel",
+    "benchmark futuro (nao autorizado neste marco)"
+  ]
+}

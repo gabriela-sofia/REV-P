@@ -9,7 +9,7 @@ v1jo analisa a camada C1-C4 ja consolidada em v1jn e transforma os bloqueios rem
 - Eventos C3 confirmados: 9
 - Eventos C4 prontos: 0
 - Negativos formais: 0
-- Pseudo-ausencias review-only: 4
+- Pseudo-ausencias review-only: 1
 - Pares S1 completos: 1
 - Pares S1 parciais: 8
 

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C36 topography parity schema v1",
+  "type": "object",
+  "required": [
+    "topography_parity_id", "canary_patch_id", "hand_parity", "twi_parity", "tpi_parity",
+    "flow_acc_parity", "topography_hydrology_parity_ratio",
+    "sufficient_for_topography_component_replay", "sufficient_for_score_v6_full_replay",
+    "blocking_reason", "review_only"
+  ],
+  "properties": {
+    "topography_parity_id": {"type": "string", "pattern": "^S17C36_TP_"},
+    "review_only": {"const": "true"}
+  }
+}

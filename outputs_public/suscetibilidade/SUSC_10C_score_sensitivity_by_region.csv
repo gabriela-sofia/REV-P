@@ -1,0 +1,4 @@
+regiao,n_patches,mean_class_stability,n_robust,n_unstable,metric_basis
+curitiba,100,0.693636,33,12,review_only_not_validation
+petropolis,100,0.741818,52,15,review_only_not_validation
+recife,100,0.679091,29,11,review_only_not_validation

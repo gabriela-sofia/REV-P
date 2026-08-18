@@ -7,13 +7,13 @@ ART_v1uh_0004,configs/protocolo_c/v1uh_sensitive_data_policy.yaml,config,v1uh,90
 ART_v1uh_0005,datasets/protocolo_c/v1uh_crs_geometry_quality_audit.csv,dataset,v1uh,3fd1847dbedfa5d3,225,true,Safe for git
 ART_v1uh_0006,datasets/protocolo_c/v1uh_event_field_mapping_registry.csv,dataset,v1uh,9f0a396916655de1,174,true,Safe for git
 ART_v1uh_0007,datasets/protocolo_c/v1uh_formal_response_registry.csv,dataset,v1uh,b5b6d55c9b29a33f,246,true,Safe for git
-ART_v1uh_0008,datasets/protocolo_c/v1uh_ground_reference_candidate_blocker_matrix.csv,dataset,v1uh,e7e69bb8c65b22ae,2667,true,Safe for git
-ART_v1uh_0009,datasets/protocolo_c/v1uh_next_actions_registry.csv,dataset,v1uh,ffbbdc4df83b0f60,652,true,Safe for git
+ART_v1uh_0008,datasets/protocolo_c/v1uh_ground_reference_candidate_blocker_matrix.csv,dataset,v1uh,b6372662558a860b,174,true,Safe for git
+ART_v1uh_0009,datasets/protocolo_c/v1uh_next_actions_registry.csv,dataset,v1uh,cd522ccf536b3773,73,true,Safe for git
 ART_v1uh_0010,datasets/protocolo_c/v1uh_observed_geometry_candidate_registry.csv,dataset,v1uh,88244b00de627737,422,true,Safe for git
 ART_v1uh_0011,datasets/protocolo_c/v1uh_phenomenon_temporal_gate_audit.csv,dataset,v1uh,97e8029d55a3b585,297,true,Safe for git
 ART_v1uh_0012,datasets/protocolo_c/v1uh_response_asset_inventory.csv,dataset,v1uh,6f8ca5980a413403,259,true,Safe for git
 ART_v1uh_0013,datasets/protocolo_c/v1uh_supervisor_review_queue.csv,dataset,v1uh,7d12f0bfcd39a587,233,true,Safe for git
-ART_v1uh_0014,datasets/protocolo_c/v1uh_versionable_artifacts_manifest.csv,dataset,v1uh,36d367157bbf1801,3010,true,Safe for git
+ART_v1uh_0014,datasets/protocolo_c/v1uh_versionable_artifacts_manifest.csv,dataset,v1uh,e1584a82db0aebdb,3008,true,Safe for git
 ART_v1uh_0015,scripts/protocolo_c/revp_v1uh_completion_report.py,script,v1uh,357190f5f5c0e80c,14717,true,Safe for git
 ART_v1uh_0016,scripts/protocolo_c/revp_v1uh_crs_and_geometry_quality_audit.py,script,v1uh,f263384291b95f24,5473,true,Safe for git
 ART_v1uh_0017,scripts/protocolo_c/revp_v1uh_event_field_mapper.py,script,v1uh,1d8ee55ad520f85b,5662,true,Safe for git

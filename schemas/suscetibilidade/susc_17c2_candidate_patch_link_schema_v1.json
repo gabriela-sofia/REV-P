@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C2 candidate patch link schema",
+  "type": "object",
+  "description": "Review-only fail-closed schema for SUSC-17C2 candidate links between a candidate footprint and an existing patch. A candidate patch link is review-only evidence, never ground truth, never a label. It is never eligible for 17B before human QA accepts both the footprint and the link. Links are computed from real footprint and patch geometry/bbox; none is invented.",
+  "required": [
+    "candidate_patch_link_id",
+    "candidate_footprint_id",
+    "candidate_event_id",
+    "patch_id",
+    "link_method",
+    "overlap_ratio",
+    "distance_m",
+    "link_quality",
+    "qa_status",
+    "eligible_for_17b",
+    "review_only",
+    "trainable",
+    "ground_truth"
+  ],
+  "properties": {
+    "candidate_patch_link_id": { "type": "string", "minLength": 1 },
+    "candidate_footprint_id": { "type": "string", "minLength": 1 },
+    "candidate_event_id": { "type": "string", "minLength": 1 },
+    "patch_id": { "type": "string", "minLength": 1 },
+    "link_method": { "type": "string", "minLength": 1 },
+    "overlap_ratio": { "type": ["number", "string"] },
+    "distance_m": { "type": ["number", "string"] },
+    "link_quality": {
+      "enum": ["high_spatial_overlap", "moderate_spatial_overlap", "low_spatial_overlap", "adjacent_no_overlap", "not_available"]
+    },
+    "qa_status": {
+      "enum": ["needs_review", "accepted", "rejected", "ambiguous", "spatial_mismatch"]
+    },
+    "eligible_for_17b": { "const": "false" },
+    "review_only": { "const": "true" },
+    "trainable": { "const": "false" },
+    "ground_truth": { "const": "false" }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,2 @@
+candidate_id,source_id,phenomenon,date_parsed,patch_id,scene_date,temporal_class,spatial_support_status,territorial_support_status,dino_status,recheck_status,failed_gates,can_create_operational_label,can_train_model,c4_open,notes
+C1,RECIFE_EMLURB_156,alagamento,2022-05-24,REC_PATCH_A,2022-05-29,TEMPORAL_MODERATE,SPATIAL_APPROXIMATION_REVIEW,PE3D_MDE_CONTEXT_REGISTERED_REVIEW_ONLY,REVIEW_ONLY_REPRESENTATION,REC_C3_PLUS_POSITIVE_REVIEW_CANDIDATE,,false,false,false,"Recheck after Sentinel date recovery; no label, no training, no C4 opening."

@@ -1,0 +1,2 @@
+gate_state,count,can_advance_to_download_controlled_future_count,can_advance_to_qa_visual_future_count,render_executada_count,raster_baixado_count,footprint_criado_count,qa_executado_count,training_allowed_count,ground_truth_allowed_count,score_v7_candidate_count
+pronto_para_renderizacao_visual_futura,5,5,5,0,0,0,0,0,0,0

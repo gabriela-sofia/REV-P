@@ -1,0 +1,29 @@
+{
+  "artifact": "datasets/suscetibilidade/susc_07_event_evidence_catalog_v1.csv",
+  "sources_read": [
+    "outputs_public/tables/revp_observed_event_registry_v2dz.csv",
+    "outputs_public/tables/revp_indice_eventos_externos_candidatos_mv1.csv"
+  ],
+  "scan_input": "outputs_public/suscetibilidade/SUSC_07A_event_source_scan.csv",
+  "n_evidence": 61,
+  "by_region": {
+    "petropolis": 27,
+    "recife": 5,
+    "curitiba": 8,
+    "unknown": 21
+  },
+  "with_date": 27,
+  "with_geometry": 11,
+  "linkable_to_patch": 0,
+  "by_evidence_status": {
+    "approximate_spatial_evidence": 10,
+    "region_period_context": 10,
+    "documentary_context_only": 20,
+    "insufficient_for_patch_event_link": 21
+  },
+  "allowed_for_training": false,
+  "can_be_used_as_ground_truth": false,
+  "review_only": true,
+  "scientific_status": "documentary_event_evidence_not_patch_ground_truth",
+  "disclaimer": "Catalogo review-only de evidencia documental/evento. NAO e ground truth por patch; sem coordenada precisa, can_link_to_patch=false."
+}

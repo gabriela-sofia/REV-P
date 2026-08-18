@@ -1,0 +1,7 @@
+feature_family,source,availability_plan,note,review_only
+sentinel2_spectral,17c25_multimodal + 17c34_stac_cog,inheritable_original_only_extract_for_canary,NDVI/NDWI/MNDWI/NDBI disponiveis para patch original (17c25); canarios exigem extracao S2 nova,true
+chirps_trigger,17c25_multimodal,inheritable_region_level,"CHIRPS 3d/7d/30d region-level do 17c25 (orig 30d_sum=121.8943); antecedente/trigger, nao pos-evento",true
+terrain_dem,opentopodata_srtm30m,extract_for_all_points,elevation/slope extraiveis por ponto; nao presentes nas matrizes anteriores,true
+hand,none,not_available_requires_dem_drainage_pipeline,HAND exige pipeline DEM+drenagem; nao computavel neste marco,true
+drainage_distance,osm_overpass_proxy,extract_proxy_for_all_points,distancia a drenagem via OSM proxy; nao hidrografia oficial,true
+landcover_urban,none_official,not_available_ndbi_proxy_only,landcover oficial (MapBiomas/WorldCover) nao adquirido; NDBI como built_up_proxy,true

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C34 score v6 replay schema v1",
+  "type": "object",
+  "required": [
+    "score_v6_replay_id",
+    "canary_patch_id",
+    "event_id",
+    "score_v6_replay_status",
+    "score_v6_review_only",
+    "score_v6_class_review_only",
+    "feature_completeness_ratio",
+    "missing_required_features",
+    "physical_component_status",
+    "urban_component_status",
+    "spectral_component_status",
+    "rainfall_component_status",
+    "documentary_component_status",
+    "not_official_score",
+    "does_not_replace_score_v6",
+    "review_only",
+    "ground_truth",
+    "training_label"
+  ],
+  "properties": {
+    "score_v6_replay_id": {"type": "string", "pattern": "^S17C34_SV6R_"},
+    "not_official_score": {"const": "true"},
+    "does_not_replace_score_v6": {"const": "true"},
+    "review_only": {"const": "true"},
+    "ground_truth": {"const": "false"},
+    "training_label": {"const": "false"}
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "FeatureCollection",
+  "name": "susc_15a_precision_event_patch_linkage",
+  "features": [],
+  "score_v7_created": false,
+  "can_be_ground_truth": false,
+  "can_be_used_as_ground_truth": false,
+  "allowed_for_training": false,
+  "review_only": true
+}

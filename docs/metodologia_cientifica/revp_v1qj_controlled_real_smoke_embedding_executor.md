@@ -10,4 +10,4 @@ Não baixa modelo. Não treina. Não cria rótulo/target/ground truth. Vetores s
 
 ## Status
 
-**DINO_SMOKE_EMBEDDINGS_DRY_RUN_ONLY**. Vetores válidos 768D: 0.
+**DINO_SMOKE_EMBEDDINGS_READY_REVIEW_ONLY**. Vetores válidos 768D: 6.

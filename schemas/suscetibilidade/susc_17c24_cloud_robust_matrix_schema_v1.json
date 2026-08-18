@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C24 cloud robust matrix schema v1",
+  "type": "object",
+  "required": [
+    "candidate_patch_id",
+    "event_id",
+    "scene_count",
+    "cloud_cover_min",
+    "cloud_cover_median",
+    "temporal_span_days",
+    "B03_mean_temporal_median",
+    "B04_mean_temporal_median",
+    "B08_mean_temporal_median",
+    "B11_mean_temporal_median",
+    "NDVI_mean_temporal_median",
+    "NDWI_mean_temporal_median",
+    "MNDWI_mean_temporal_median",
+    "NDBI_mean_temporal_median",
+    "NDVI_mean_temporal_std",
+    "NDWI_mean_temporal_std",
+    "MNDWI_mean_temporal_std",
+    "NDBI_mean_temporal_std",
+    "features_real_count",
+    "usable_for_science_now",
+    "usable_for_training",
+    "ground_truth",
+    "eligible_for_score_v7",
+    "eligible_for_17b",
+    "review_only"
+  ],
+  "properties": {
+    "usable_for_training": {
+      "const": "false"
+    },
+    "ground_truth": {
+      "const": "false"
+    },
+    "eligible_for_score_v7": {
+      "const": "false"
+    },
+    "eligible_for_17b": {
+      "const": "false"
+    },
+    "review_only": {
+      "const": "true"
+    }
+  }
+}

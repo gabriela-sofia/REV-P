@@ -1,0 +1,2 @@
+qa_preparation_status,count,qa_can_be_completed_now_count,future_qa_required_count,accepted_now_count,rejected_now_count,pending_review_count,training_allowed_count,ground_truth_allowed_count,score_v7_candidate_count
+pronto_para_qa_futuro,5,0,5,0,0,5,0,0,0

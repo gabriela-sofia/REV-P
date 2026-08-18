@@ -1,0 +1,15 @@
+criterio,valor_observado,limiar,passou,observacao
+canarios_processados,5,5,true,todos os canarios na matriz integrada
+features_fisicas_diretas_completas,5,5,true,features fisicas diretas do 17G
+features_espectrais_disponiveis,5,5,true,espectral pre-evento do 17E
+chuva_disponivel,5,5,true,CHIRPS pre-evento do 17E
+vinculo_espacial_aceito,5,5,true,exact_polygon_overlap herdado
+componentes_normalizados_0_1,true,true,true,todos os componentes em 0-1
+ground_truth_zero,0,0,true,sem ground truth
+trainable_zero,0,0,true,sem treino
+score_v7_allowed_zero,0,0,true,sem score_v7
+score_oficial_zero,0,0,true,sem score oficial
+score_v6_intacto,true,true,true,score_v6 nunca alterado
+benchmark_17b_nao_criado,true,true,true,nenhum benchmark 17B criado
+caminho_funcional_entregue,true,true,true,calibracao ou diagnostico forte
+status_final_17h,17H_CALIBRACAO_FORTE_COM_DIVERGENCIA_FISICA,enum,true,status final da calibracao

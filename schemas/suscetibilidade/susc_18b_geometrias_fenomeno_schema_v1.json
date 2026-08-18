@@ -1,0 +1,179 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-18B execucao de geometrias regionais e separacao de fenomeno",
+  "type": "object",
+  "properties": {
+    "status_referencia_observacional": {
+      "enum": [
+        "referencia_observacional_forte_somente_revisao",
+        "referencia_observacional_parcial",
+        "evidencia_contextual",
+        "bloqueado_sem_geometria",
+        "bloqueado_sem_data",
+        "bloqueado_por_fenomeno",
+        "bloqueado_sem_patch_link",
+        "bloqueado_sem_features",
+        "fila_executavel"
+      ]
+    },
+    "uso_permitido": {
+      "enum": [
+        "avaliacao_somente_revisao",
+        "contexto_documental",
+        "fila_obtencao_geometria",
+        "fila_obtencao_data",
+        "fila_separacao_fenomeno",
+        "fila_execucao_footprint",
+        "fila_extracao_features"
+      ]
+    },
+    "classe_fenomeno": {
+      "enum": [
+        "inundacao_alagamento_enxurrada",
+        "deslizamento",
+        "fenomeno_misto",
+        "insuficiente"
+      ]
+    },
+    "classe_vinculo": {
+      "enum": [
+        "exact_polygon_overlap",
+        "point_within_patch",
+        "bbox_overlap",
+        "near_patch_buffer_10m",
+        "near_patch_buffer_30m",
+        "same_region_only",
+        "insufficient_for_patch_link"
+      ]
+    },
+    "status_execucao_geometria": {
+      "enum": [
+        "geometria_oficial_resolvida",
+        "geometria_tecnica_resolvida",
+        "geometria_textual_bloqueada",
+        "geometria_ausente_com_tarefa_externa",
+        "rejeitado"
+      ]
+    },
+    "status_final_18b": {
+      "enum": [
+        "18B_SEGUNDA_REGIAO_FORTE_ALCANCADA",
+        "18B_BLOQUEIOS_REGIONAIS_REDUZIDOS_COM_FILAS_EXECUTAVEIS",
+        "18B_SEM_AVANCO_FORTE_MAS_COM_PLANO",
+        "18B_BLOQUEADO_FAIL_CLOSED"
+      ]
+    },
+    "status_17b": {
+      "enum": [
+        "17B_PRONTO_PARA_DESENHO_SOMENTE_REVISAO",
+        "17B_APROXIMACAO_COM_SEGUNDA_REGIAO_FORTE",
+        "17B_APROXIMACAO_REGIONAL_COM_REFERENCIAS_PARCIAS",
+        "17B_BLOQUEADO_POR_GEOMETRIA",
+        "17B_BLOQUEADO_POR_FENOMENO",
+        "17B_BLOQUEADO_POR_AMOSTRA",
+        "17B_BLOQUEADO_FAIL_CLOSED"
+      ]
+    },
+    "ground_truth": {
+      "const": "false"
+    },
+    "eligible_for_training": {
+      "const": "false"
+    },
+    "score_v7_allowed": {
+      "const": "false"
+    },
+    "review_only": {
+      "const": "true"
+    }
+  },
+  "enums": {
+    "status_referencia_observacional": [
+      "referencia_observacional_forte_somente_revisao",
+      "referencia_observacional_parcial",
+      "evidencia_contextual",
+      "bloqueado_sem_geometria",
+      "bloqueado_sem_data",
+      "bloqueado_por_fenomeno",
+      "bloqueado_sem_patch_link",
+      "bloqueado_sem_features",
+      "fila_executavel"
+    ],
+    "uso_permitido": [
+      "avaliacao_somente_revisao",
+      "contexto_documental",
+      "fila_obtencao_geometria",
+      "fila_obtencao_data",
+      "fila_separacao_fenomeno",
+      "fila_execucao_footprint",
+      "fila_extracao_features"
+    ],
+    "classe_fenomeno": [
+      "inundacao_alagamento_enxurrada",
+      "deslizamento",
+      "fenomeno_misto",
+      "insuficiente"
+    ],
+    "classe_vinculo": [
+      "exact_polygon_overlap",
+      "point_within_patch",
+      "bbox_overlap",
+      "near_patch_buffer_10m",
+      "near_patch_buffer_30m",
+      "same_region_only",
+      "insufficient_for_patch_link"
+    ],
+    "status_execucao_geometria": [
+      "geometria_oficial_resolvida",
+      "geometria_tecnica_resolvida",
+      "geometria_textual_bloqueada",
+      "geometria_ausente_com_tarefa_externa",
+      "rejeitado"
+    ],
+    "status_final_18b": [
+      "18B_SEGUNDA_REGIAO_FORTE_ALCANCADA",
+      "18B_BLOQUEIOS_REGIONAIS_REDUZIDOS_COM_FILAS_EXECUTAVEIS",
+      "18B_SEM_AVANCO_FORTE_MAS_COM_PLANO",
+      "18B_BLOQUEADO_FAIL_CLOSED"
+    ],
+    "status_17b": [
+      "17B_PRONTO_PARA_DESENHO_SOMENTE_REVISAO",
+      "17B_APROXIMACAO_COM_SEGUNDA_REGIAO_FORTE",
+      "17B_APROXIMACAO_REGIONAL_COM_REFERENCIAS_PARCIAS",
+      "17B_BLOQUEADO_POR_GEOMETRIA",
+      "17B_BLOQUEADO_POR_FENOMENO",
+      "17B_BLOQUEADO_POR_AMOSTRA",
+      "17B_BLOQUEADO_FAIL_CLOSED"
+    ]
+  },
+  "hard_defaults": {
+    "ground_truth": "false",
+    "eligible_for_training": "false",
+    "score_v7_allowed": "false",
+    "review_only": "true"
+  },
+  "required_outputs": [
+    "outputs_public/data/susc_18b_execucao_geometrias_regionais_separacao_fenomeno/preflight.json",
+    "outputs_public/data/susc_18b_execucao_geometrias_regionais_separacao_fenomeno/curitiba_execucao_geometria.csv",
+    "outputs_public/data/susc_18b_execucao_geometrias_regionais_separacao_fenomeno/curitiba_geometrias_normalizadas.csv",
+    "outputs_public/data/susc_18b_execucao_geometrias_regionais_separacao_fenomeno/curitiba_tarefas_externas_geometria.csv",
+    "outputs_public/data/susc_18b_execucao_geometrias_regionais_separacao_fenomeno/petropolis_separacao_fenomeno_executada.csv",
+    "outputs_public/data/susc_18b_execucao_geometrias_regionais_separacao_fenomeno/petropolis_candidatos_inundacao_separada.csv",
+    "outputs_public/data/susc_18b_execucao_geometrias_regionais_separacao_fenomeno/petropolis_bloqueios_fenomeno.csv",
+    "outputs_public/data/susc_18b_execucao_geometrias_regionais_separacao_fenomeno/petropolis_tarefas_externas_separacao.csv",
+    "outputs_public/data/susc_18b_execucao_geometrias_regionais_separacao_fenomeno/footprints_tecnicos_18b.csv",
+    "outputs_public/data/susc_18b_execucao_geometrias_regionais_separacao_fenomeno/fila_sar_18b.csv",
+    "outputs_public/data/susc_18b_execucao_geometrias_regionais_separacao_fenomeno/vinculos_evento_patch_18b.csv",
+    "outputs_public/data/susc_18b_execucao_geometrias_regionais_separacao_fenomeno/features_regionais_18b.csv",
+    "outputs_public/data/susc_18b_execucao_geometrias_regionais_separacao_fenomeno/fila_features_regionais_18b.csv",
+    "outputs_public/data/susc_18b_execucao_geometrias_regionais_separacao_fenomeno/matriz_referencia_observacional_18b.csv",
+    "outputs_public/data/susc_18b_execucao_geometrias_regionais_separacao_fenomeno/comparacao_regional_recife_curitiba_petropolis.csv",
+    "outputs_public/data/susc_18b_execucao_geometrias_regionais_separacao_fenomeno/gate_prontidao_17b_pos_18b.csv",
+    "outputs_public/data/susc_18b_execucao_geometrias_regionais_separacao_fenomeno/resumo_por_regiao.csv",
+    "outputs_public/data/susc_18b_execucao_geometrias_regionais_separacao_fenomeno/resumo_por_status.csv",
+    "outputs_public/data/susc_18b_execucao_geometrias_regionais_separacao_fenomeno/resumo_por_fenomeno.csv",
+    "outputs_public/data/susc_18b_execucao_geometrias_regionais_separacao_fenomeno/summary.json",
+    "outputs_public/reports/SUSC_18B_EXECUCAO_GEOMETRIAS_REGIONAIS_SEPARACAO_FENOMENO.md",
+    "schemas/suscetibilidade/susc_18b_geometrias_fenomeno_schema_v1.json"
+  ]
+}

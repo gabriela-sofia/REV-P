@@ -1,0 +1,16 @@
+metric,value,review_only
+total_events,13,true
+total_patches,300,true
+total_links,48,true
+links_by_region,"{""petropolis"": 31, ""recife"": 17}",true
+links_by_spatial_relation,"{""documentary_context_only"": 2, ""event_point_inside_patch"": 4, ""event_point_near_patch"": 40, ""same_region_only"": 1, ""same_region_same_period"": 1}",true
+links_by_evidence_level,"{""administrative_record_only"": 3, ""documentary_context_only"": 2, ""observed_flood_bbox_moderate"": 1, ""official_occurrence_point_moderate"": 30, ""risk_area_context"": 12}",true
+strong_links,0,true
+moderate_links,1,true
+weak_links,47,true
+events_linked_to_any_patch,9,true
+patches_with_observed_event_evidence,0,true
+patches_with_only_contextual_evidence,14,true
+review_only_count,48,true
+training_allowed_count,0,true
+ground_truth_count,0,true

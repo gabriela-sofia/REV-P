@@ -1,0 +1,6 @@
+criterio,bloqueio,status_score_v7,observacao
+autorizacao_geral,true,SCORE_V7_NAO_AUTORIZADO,score_v7 nao autorizado nesta etapa
+amostra_observacional,true,SCORE_V7_BLOQUEADO_POR_AMOSTRA,apenas 7 patches observacionais
+missingness_territorial,true,SCORE_V7_BLOQUEADO_POR_MISSINGNESS_TERRITORIAL,4 features territoriais ausentes nos 300 (19B)
+ausencia_benchmark,true,SCORE_V7_BLOQUEADO_POR_AUSENCIA_BENCHMARK,sem benchmark 17B
+hipoteses_review_only,true,SCORE_V7_APENAS_HIPOTESES_REVIEW_ONLY,"existem hipoteses, nenhuma vira score oficial"

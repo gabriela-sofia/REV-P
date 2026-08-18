@@ -1,0 +1,6 @@
+leakage_id,sentinel1_target_id,post_event_scene_id,post_scene_used_as_pre_event_feature,footprint_is_evaluation_reference_only,pre_event_features_from_pre_window_only,post_event_only_for_reference_not_feature,leakage_check_status,reason_pt,review_only
+LK_0547,S1_0547,S1A_IW_GRDH_1SDV_20220528T075411_20220528T075436_043408_052EF7_33C5,false,true,true,true,sem_leakage_por_construcao,cena pos-evento e referencia de avaliacao futura; nunca entra como feature pre-evento,true
+LK_0548,S1_0548,S1A_IW_GRDH_1SDV_20220528T075411_20220528T075436_043408_052EF7_33C5,false,true,true,true,sem_leakage_por_construcao,cena pos-evento e referencia de avaliacao futura; nunca entra como feature pre-evento,true
+LK_0549,S1_0549,S1A_IW_GRDH_1SDV_20220528T075411_20220528T075436_043408_052EF7_33C5,false,true,true,true,sem_leakage_por_construcao,cena pos-evento e referencia de avaliacao futura; nunca entra como feature pre-evento,true
+LK_0550,S1_0550,S1A_IW_GRDH_1SDV_20220528T075411_20220528T075436_043408_052EF7_33C5,false,true,true,true,sem_leakage_por_construcao,cena pos-evento e referencia de avaliacao futura; nunca entra como feature pre-evento,true
+LK_0551,S1_0551,S1A_IW_GRDH_1SDV_20220528T075411_20220528T075436_043408_052EF7_33C5,false,true,true,true,sem_leakage_por_construcao,cena pos-evento e referencia de avaliacao futura; nunca entra como feature pre-evento,true

@@ -1,0 +1,12 @@
+canary_patch_id,chirps_3d_sum,chirps_3d_mean,chirps_3d_max,chirps_7d_sum,chirps_7d_mean,chirps_7d_max,chirps_30d_sum,chirps_30d_mean,chirps_30d_max,chirps_source,chirps_is_trigger_not_observation,chirps_is_post_event,chirps_discriminates_local,chirps_available,review_only
+S17C33_EAC_0001,18.2800,6.0933,18.2800,39.4522,5.6360,21.1722,121.8943,4.0631,47.3064,inherited_region_level_17c25,true,false,false,true,true
+S17C33_EAC_0002,18.2800,6.0933,18.2800,39.4522,5.6360,21.1722,121.8943,4.0631,47.3064,inherited_region_level_17c25,true,false,false,true,true
+S17C33_EAC_0003,18.2800,6.0933,18.2800,39.4522,5.6360,21.1722,121.8943,4.0631,47.3064,inherited_region_level_17c25,true,false,false,true,true
+S17C33_EAC_0004,18.2800,6.0933,18.2800,39.4522,5.6360,21.1722,121.8943,4.0631,47.3064,inherited_region_level_17c25,true,false,false,true,true
+S17C33_EAC_0005,18.2800,6.0933,18.2800,39.4522,5.6360,21.1722,121.8943,4.0631,47.3064,inherited_region_level_17c25,true,false,false,true,true
+S17C33_EAC_0006,18.2800,6.0933,18.2800,39.4522,5.6360,21.1722,121.8943,4.0631,47.3064,inherited_region_level_17c25,true,false,false,true,true
+S17C33_EAC_0007,18.2800,6.0933,18.2800,39.4522,5.6360,21.1722,121.8943,4.0631,47.3064,inherited_region_level_17c25,true,false,false,true,true
+S17C33_EAC_0008,18.2800,6.0933,18.2800,39.4522,5.6360,21.1722,121.8943,4.0631,47.3064,inherited_region_level_17c25,true,false,false,true,true
+S17C33_EAC_0009,18.2800,6.0933,18.2800,39.4522,5.6360,21.1722,121.8943,4.0631,47.3064,inherited_region_level_17c25,true,false,false,true,true
+S17C33_EAC_0010,18.2800,6.0933,18.2800,39.4522,5.6360,21.1722,121.8943,4.0631,47.3064,inherited_region_level_17c25,true,false,false,true,true
+S17C33_EAC_0011,18.2800,6.0933,18.2800,39.4522,5.6360,21.1722,121.8943,4.0631,47.3064,inherited_region_level_17c25,true,false,false,true,true

@@ -1,0 +1,351 @@
+{
+  "type": "FeatureCollection",
+  "properties": {
+    "review_only": true,
+    "can_be_ground_truth": false
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -34.98938031645536,
+              -8.227099689447009
+            ],
+            [
+              -34.98039716361417,
+              -8.227099689447009
+            ],
+            [
+              -34.98039716361417,
+              -8.218208885589318
+            ],
+            [
+              -34.98938031645536,
+              -8.218208885589318
+            ],
+            [
+              -34.98938031645536,
+              -8.227099689447009
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "case_id": "CASE_001",
+        "patch_id": "recife_00019",
+        "spatial_relation": "bbox_overlap",
+        "machine_pre_review": "context_only",
+        "review_only": true,
+        "can_be_ground_truth": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -34.95344770509058,
+              -8.129289922403812
+            ],
+            [
+              -34.944464552249386,
+              -8.129289922403812
+            ],
+            [
+              -34.944464552249386,
+              -8.120396938238713
+            ],
+            [
+              -34.95344770509058,
+              -8.120396938238713
+            ],
+            [
+              -34.95344770509058,
+              -8.129289922403812
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "case_id": "CASE_002",
+        "patch_id": "recife_00276",
+        "spatial_relation": "near_patch_buffer_candidate",
+        "machine_pre_review": "blocked_source_conflict",
+        "review_only": true,
+        "can_be_ground_truth": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -34.95344770509058,
+              -8.129289922403812
+            ],
+            [
+              -34.944464552249386,
+              -8.129289922403812
+            ],
+            [
+              -34.944464552249386,
+              -8.120396938238713
+            ],
+            [
+              -34.95344770509058,
+              -8.120396938238713
+            ],
+            [
+              -34.95344770509058,
+              -8.129289922403812
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "case_id": "CASE_003",
+        "patch_id": "recife_00276",
+        "spatial_relation": "near_patch_buffer_candidate",
+        "machine_pre_review": "blocked_source_conflict",
+        "review_only": true,
+        "can_be_ground_truth": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -34.96243085793177,
+              -8.147075299041528
+            ],
+            [
+              -34.95344770509058,
+              -8.147075299041528
+            ],
+            [
+              -34.95344770509058,
+              -8.13818270940803
+            ],
+            [
+              -34.96243085793177,
+              -8.13818270940803
+            ],
+            [
+              -34.96243085793177,
+              -8.147075299041528
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "case_id": "CASE_004",
+        "patch_id": "recife_00229",
+        "spatial_relation": "bbox_overlap",
+        "machine_pre_review": "context_only",
+        "review_only": true,
+        "can_be_ground_truth": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -34.95344770509058,
+              -8.129289922403812
+            ],
+            [
+              -34.944464552249386,
+              -8.129289922403812
+            ],
+            [
+              -34.944464552249386,
+              -8.120396938238713
+            ],
+            [
+              -34.95344770509058,
+              -8.120396938238713
+            ],
+            [
+              -34.95344770509058,
+              -8.129289922403812
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "case_id": "CASE_005",
+        "patch_id": "recife_00276",
+        "spatial_relation": "bbox_overlap",
+        "machine_pre_review": "context_only",
+        "review_only": true,
+        "can_be_ground_truth": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -34.95344770509058,
+              -8.120396938238713
+            ],
+            [
+              -34.944464552249386,
+              -8.120396938238713
+            ],
+            [
+              -34.944464552249386,
+              -8.111503757122588
+            ],
+            [
+              -34.95344770509058,
+              -8.111503757122588
+            ],
+            [
+              -34.95344770509058,
+              -8.120396938238713
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "case_id": "CASE_006",
+        "patch_id": "recife_00299",
+        "spatial_relation": "bbox_overlap",
+        "machine_pre_review": "context_only",
+        "review_only": true,
+        "can_be_ground_truth": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -34.95344770509058,
+              -8.111503757122588
+            ],
+            [
+              -34.944464552249386,
+              -8.111503757122588
+            ],
+            [
+              -34.944464552249386,
+              -8.102610379265364
+            ],
+            [
+              -34.95344770509058,
+              -8.102610379265364
+            ],
+            [
+              -34.95344770509058,
+              -8.111503757122588
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "case_id": "CASE_007",
+        "patch_id": "recife_00322",
+        "spatial_relation": "bbox_overlap",
+        "machine_pre_review": "context_only",
+        "review_only": true,
+        "can_be_ground_truth": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -34.95344770509058,
+              -8.129289922403812
+            ],
+            [
+              -34.944464552249386,
+              -8.129289922403812
+            ],
+            [
+              -34.944464552249386,
+              -8.120396938238713
+            ],
+            [
+              -34.95344770509058,
+              -8.120396938238713
+            ],
+            [
+              -34.95344770509058,
+              -8.129289922403812
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "case_id": "CASE_008",
+        "patch_id": "recife_00276",
+        "spatial_relation": "near_patch_buffer_candidate",
+        "machine_pre_review": "context_only",
+        "review_only": true,
+        "can_be_ground_truth": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -43.208965166148985,
+              -22.49449702929361
+            ],
+            [
+              -43.19998201330779,
+              -22.49449702929361
+            ],
+            [
+              -43.19998201330779,
+              -22.486197099204848
+            ],
+            [
+              -43.208965166148985,
+              -22.486197099204848
+            ],
+            [
+              -43.208965166148985,
+              -22.49449702929361
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "case_id": "CASE_009",
+        "patch_id": "petropolis_00467",
+        "spatial_relation": "near_patch_buffer_candidate",
+        "machine_pre_review": "candidate_for_tcc_with_caution",
+        "review_only": true,
+        "can_be_ground_truth": false
+      }
+    }
+  ]
+}

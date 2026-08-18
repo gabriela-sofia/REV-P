@@ -1,0 +1,28 @@
+{
+  "schema_id": "mv2_14_lineage_candidates",
+  "title": "MV2-14 Lineage Candidates",
+  "validates": "outputs_public/mv2_gee_lineage_recovery/mv2_14_lineage_candidates.csv",
+  "primary_key": "candidate_id",
+  "required_fields": [
+    "candidate_id",
+    "source_id",
+    "source_path_or_ref",
+    "candidate_type",
+    "raw_value",
+    "normalized_value",
+    "inferred_sensor",
+    "inferred_tile",
+    "inferred_datetime",
+    "inferred_cloud_cover",
+    "inferred_asset_id",
+    "inferred_patch_id",
+    "inferred_region",
+    "extraction_method",
+    "extraction_confidence",
+    "evidence_snippet",
+    "notes"
+  ],
+  "fail_closed_rules": [
+    "candidato nunca é verdade; texto/filename fraco fica confidence=LOW; datetime futuro é inválido"
+  ]
+}

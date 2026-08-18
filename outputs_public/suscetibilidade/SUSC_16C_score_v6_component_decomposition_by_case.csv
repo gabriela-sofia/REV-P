@@ -1,0 +1,3 @@
+case_class,n,dominant_lowest_component,lowest_component_distribution,review_only
+high_confidence_underestimated_event_patch,57,documentary_component,"{""documentary_component"": 57}",true
+score_v6_consistent_event_patch,8,documentary_component,"{""documentary_component"": 8}",true

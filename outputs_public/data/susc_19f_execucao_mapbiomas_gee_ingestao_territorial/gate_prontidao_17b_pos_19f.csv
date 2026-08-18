@@ -1,0 +1,4 @@
+criterio,valor_observado,limiar,status_17b,observacao
+benchmark_criado,false,false,17B_NAO_CRIADO,nenhum benchmark 17B criado
+geometria_oficial,false,true,17B_BLOQUEADO_POR_GEOMETRIA_OFICIAL,Curitiba so SAR; sem geometria oficial
+segunda_regiao_tecnica,true,true,17B_APROXIMACAO_COM_SEGUNDA_REGIAO_TECNICA,Recife forte + Curitiba tecnica SAR

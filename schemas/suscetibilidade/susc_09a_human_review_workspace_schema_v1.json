@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "schema_id": "SUSC-09A-HUMAN-REVIEW-WORKSPACE",
+  "created": "2026-06-27",
+  "review_name": "SUSC-09A human review workspace",
+  "status": "review_only_human_review_workspace",
+  "purpose": "Workspace auditavel para que uma pessoa revise os casos espaciais/documentais do SUSC-08. NAO executa nem substitui a revisao humana; NAO cria ground truth; impede que aderencia espacial seja confundida com ocorrencia confirmada.",
+  "input_sources": [
+    "susc_08_spatiotemporal_review_cases_v1",
+    "susc_07b_real_event_coordinates",
+    "susc_07b_event_evidence_geometry_enriched",
+    "susc_features_by_patch_v1",
+    "SUSC_07B_refined_patch_event_overlay",
+    "SUSC_08_manual_review_form",
+    "feature_cards"
+  ],
+  "allowed_machine_pre_review": [
+    "candidate_for_tcc_with_caution",
+    "context_only",
+    "blocked_pending_geometry",
+    "blocked_source_conflict",
+    "needs_human_review"
+  ],
+  "forbidden_machine_pre_review": [
+    "approved",
+    "strong_candidate",
+    "ground_truth",
+    "training_ready"
+  ],
+  "workspace_layout": {
+    "index": ["SUSC_09A_review_index.md", "SUSC_09A_review_index.csv"],
+    "manifest": "SUSC_09A_workspace_manifest.json",
+    "forms": ["forms/SUSC_09A_human_review_form_prefill.csv", "forms/SUSC_09A_human_review_instructions.md"],
+    "geojson": ["geojson/SUSC_09A_review_cases.geojson", "geojson/SUSC_09A_patch_bbox_layer.geojson", "geojson/SUSC_09A_event_geometry_layer.geojson"],
+    "per_case": ["case_dossiers/<case_id>.md", "maps_svg/<case_id>.svg"]
+  },
+  "can_be_ground_truth": false,
+  "allowed_for_training": false,
+  "review_only": true,
+  "scientific_status": "human_review_workspace_not_patch_ground_truth"
+}

@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "susc_gt02_state_summary.schema.json",
+  "title": "SUSC-GT02 Resumo de Estados",
+  "type": "object",
+  "required": [
+    "assigned_state",
+    "count",
+    "eligible_for_evaluation_count",
+    "eligible_for_calibration_count",
+    "training_allowed_count",
+    "ground_truth_allowed_count",
+    "score_v7_candidate_count"
+  ],
+  "properties": {
+    "assigned_state": {
+      "enum": [
+        "positive_strong",
+        "positive_provisional",
+        "unlabeled",
+        "hard_negative_audited",
+        "no_data",
+        "rejected"
+      ]
+    },
+    "count": {
+      "type": "string",
+      "pattern": "^\\d+$"
+    },
+    "eligible_for_evaluation_count": {
+      "type": "string",
+      "pattern": "^\\d+$"
+    },
+    "eligible_for_calibration_count": {
+      "type": "string",
+      "pattern": "^\\d+$"
+    },
+    "training_allowed_count": {
+      "const": "0"
+    },
+    "ground_truth_allowed_count": {
+      "const": "0"
+    },
+    "score_v7_candidate_count": {
+      "const": "0"
+    }
+  }
+}

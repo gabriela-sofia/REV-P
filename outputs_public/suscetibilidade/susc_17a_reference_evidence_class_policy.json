@@ -1,0 +1,163 @@
+{
+  "protocol": "susc_17a_reference_evidence_protocol",
+  "schema": "schemas/suscetibilidade/susc_17a_reference_evidence_protocol_schema_v1.json",
+  "note": "Avaliacao forte somente para official_observed_event_polygon, official_observed_event_point e technical_remote_sensing_flood_footprint. official_address_resolved pode ser avaliacao moderada (nunca forte sem QA e exige uncertainty_m). Classes de contexto/administrativas nao validam patch-level. rejected_non_event e insufficient_reference nunca entram em avaliacao ou calibracao. Nenhuma classe e ground truth ou negativo verdadeiro.",
+  "strong_evaluation_classes": [
+    "official_observed_event_point",
+    "official_observed_event_polygon",
+    "technical_remote_sensing_flood_footprint"
+  ],
+  "moderate_evaluation_classes": [
+    "official_address_resolved"
+  ],
+  "context_classes_no_patch_validation": [
+    "administrative_disaster_record",
+    "alert_only",
+    "documentary_context",
+    "risk_area_not_event",
+    "street_neighborhood_context_only"
+  ],
+  "excluded_classes": [
+    "insufficient_reference",
+    "rejected_non_event"
+  ],
+  "documentary_absence_is_true_negative": false,
+  "footprint_is_ground_truth": false,
+  "official_score_v6_changed": false,
+  "score_v7_created": false,
+  "review_only": true,
+  "classes": [
+    {
+      "evidence_class": "official_observed_event_polygon",
+      "tier_class": "strong",
+      "can_be_strong_evaluation": true,
+      "can_be_moderate_evaluation": false,
+      "validates_patch_level": true,
+      "represents_observed_occurrence": true,
+      "eligible_for_calibration": true,
+      "requires_uncertainty_m": false,
+      "can_be_ground_truth": false,
+      "can_be_true_negative": false
+    },
+    {
+      "evidence_class": "official_observed_event_point",
+      "tier_class": "strong",
+      "can_be_strong_evaluation": true,
+      "can_be_moderate_evaluation": false,
+      "validates_patch_level": true,
+      "represents_observed_occurrence": true,
+      "eligible_for_calibration": true,
+      "requires_uncertainty_m": false,
+      "can_be_ground_truth": false,
+      "can_be_true_negative": false
+    },
+    {
+      "evidence_class": "technical_remote_sensing_flood_footprint",
+      "tier_class": "strong",
+      "can_be_strong_evaluation": true,
+      "can_be_moderate_evaluation": false,
+      "validates_patch_level": true,
+      "represents_observed_occurrence": true,
+      "eligible_for_calibration": true,
+      "requires_uncertainty_m": false,
+      "can_be_ground_truth": false,
+      "can_be_true_negative": false
+    },
+    {
+      "evidence_class": "official_address_resolved",
+      "tier_class": "moderate",
+      "can_be_strong_evaluation": false,
+      "can_be_moderate_evaluation": true,
+      "validates_patch_level": true,
+      "represents_observed_occurrence": true,
+      "eligible_for_calibration": false,
+      "requires_uncertainty_m": true,
+      "can_be_ground_truth": false,
+      "can_be_true_negative": false
+    },
+    {
+      "evidence_class": "street_neighborhood_context_only",
+      "tier_class": "context",
+      "can_be_strong_evaluation": false,
+      "can_be_moderate_evaluation": false,
+      "validates_patch_level": false,
+      "represents_observed_occurrence": false,
+      "eligible_for_calibration": false,
+      "requires_uncertainty_m": false,
+      "can_be_ground_truth": false,
+      "can_be_true_negative": false
+    },
+    {
+      "evidence_class": "risk_area_not_event",
+      "tier_class": "context",
+      "can_be_strong_evaluation": false,
+      "can_be_moderate_evaluation": false,
+      "validates_patch_level": false,
+      "represents_observed_occurrence": false,
+      "eligible_for_calibration": false,
+      "requires_uncertainty_m": false,
+      "can_be_ground_truth": false,
+      "can_be_true_negative": false
+    },
+    {
+      "evidence_class": "alert_only",
+      "tier_class": "context",
+      "can_be_strong_evaluation": false,
+      "can_be_moderate_evaluation": false,
+      "validates_patch_level": false,
+      "represents_observed_occurrence": false,
+      "eligible_for_calibration": false,
+      "requires_uncertainty_m": false,
+      "can_be_ground_truth": false,
+      "can_be_true_negative": false
+    },
+    {
+      "evidence_class": "administrative_disaster_record",
+      "tier_class": "context",
+      "can_be_strong_evaluation": false,
+      "can_be_moderate_evaluation": false,
+      "validates_patch_level": false,
+      "represents_observed_occurrence": true,
+      "eligible_for_calibration": false,
+      "requires_uncertainty_m": false,
+      "can_be_ground_truth": false,
+      "can_be_true_negative": false
+    },
+    {
+      "evidence_class": "documentary_context",
+      "tier_class": "context",
+      "can_be_strong_evaluation": false,
+      "can_be_moderate_evaluation": false,
+      "validates_patch_level": false,
+      "represents_observed_occurrence": false,
+      "eligible_for_calibration": false,
+      "requires_uncertainty_m": false,
+      "can_be_ground_truth": false,
+      "can_be_true_negative": false
+    },
+    {
+      "evidence_class": "rejected_non_event",
+      "tier_class": "excluded",
+      "can_be_strong_evaluation": false,
+      "can_be_moderate_evaluation": false,
+      "validates_patch_level": false,
+      "represents_observed_occurrence": false,
+      "eligible_for_calibration": false,
+      "requires_uncertainty_m": false,
+      "can_be_ground_truth": false,
+      "can_be_true_negative": false
+    },
+    {
+      "evidence_class": "insufficient_reference",
+      "tier_class": "excluded",
+      "can_be_strong_evaluation": false,
+      "can_be_moderate_evaluation": false,
+      "validates_patch_level": false,
+      "represents_observed_occurrence": false,
+      "eligible_for_calibration": false,
+      "requires_uncertainty_m": false,
+      "can_be_ground_truth": false,
+      "can_be_true_negative": false
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "schema_id": "SUSC-16B-FOOTPRINT-SCORE-EVALUATION",
+  "created": "2026-06-29",
+  "artifact_name": "SUSC-16B footprint score v6 observational evaluation",
+  "status": "review_only_observational_evaluation",
+  "purpose": "Avaliar, sem calibrar, se o score v6 e suas features concordam com footprints observacionais elegiveis do SUSC-16A.",
+  "required_concepts": [
+    "observed_footprint_patch",
+    "no_documented_footprint_control",
+    "review_only_observational_evaluation",
+    "feature_direction_agreement",
+    "feature_direction_divergence",
+    "score_v6_underestimation",
+    "score_v6_overestimation",
+    "calibration_recommendation_candidate",
+    "not_ground_truth",
+    "not_training_data"
+  ],
+  "dataset_groups": [
+    "observed_footprint_patch",
+    "no_documented_footprint_control"
+  ],
+  "required_dataset_fields": [
+    "row_id",
+    "group_type",
+    "patch_id",
+    "region",
+    "footprint_id",
+    "event_date",
+    "footprint_type",
+    "evidence_strength",
+    "score_v6",
+    "score_v6_class",
+    "hand_mean",
+    "hand_min",
+    "slope_mean",
+    "elevation_mean",
+    "twi_mean",
+    "distance_to_water_mean",
+    "flow_accumulation_mean",
+    "ndvi_mean",
+    "mndwi_mean",
+    "ndbi_mean",
+    "urban_prop",
+    "vegetation_prop",
+    "water_prop",
+    "chirps_3d_mm",
+    "chirps_7d_mm",
+    "chirps_30d_mm",
+    "runoff_context_7d",
+    "control_selection_reason",
+    "can_be_ground_truth",
+    "allowed_for_training",
+    "review_only"
+  ],
+  "feature_name_mapping": {
+    "region": "regiao",
+    "flow_accumulation_mean": "flow_acc_log_mean",
+    "water_prop": "water_occurrence_patch",
+    "hand_min": "hand_mean"
+  },
+  "governance": {
+    "allowed_for_training": false,
+    "can_be_ground_truth": false,
+    "can_be_used_as_ground_truth": false,
+    "review_only": true,
+    "score_v7_created": false
+  },
+  "control_semantics": "Controles sao no_documented_footprint_control, isto e, ausencia documentada de footprint elegivel no SUSC-16A; nao sao negativos verdadeiros.",
+  "rules": [
+    "Nao criar score v7.",
+    "Nao criar ground truth.",
+    "Nao liberar treino supervisionado.",
+    "Nao reclassificar footprint candidato como ground truth.",
+    "Nao usar controles como negativos verdadeiros.",
+    "Registrar divergencia entre score v6 e footprints quando ocorrer."
+  ],
+  "can_be_ground_truth": false,
+  "allowed_for_training": false,
+  "review_only": true,
+  "scientific_status": "review_only_observational_evaluation_not_ground_truth_not_training_data"
+}

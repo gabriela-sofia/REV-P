@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C10 formal request schema v1",
+  "type": "object",
+  "required": [
+    "formal_request_id",
+    "priority",
+    "provider_name",
+    "provider_type",
+    "city_or_region",
+    "related_event_id",
+    "related_package_id",
+    "request_title",
+    "artifact_requested",
+    "artifact_type_requested",
+    "minimum_required_fields",
+    "why_needed",
+    "revp_use_case",
+    "unblocks_feature_layer",
+    "unblocks_observational_evidence",
+    "unblocks_candidate_patch_features",
+    "unblocks_embedding_input",
+    "unblocks_qa",
+    "unblocks_17b_future",
+    "submission_channel_known",
+    "submission_channel_reference",
+    "request_status",
+    "do_not_mark_as_received",
+    "review_only",
+    "trainable",
+    "ground_truth"
+  ],
+  "properties": {
+    "priority": {
+      "enum": [
+        "P0",
+        "P1",
+        "P2"
+      ]
+    },
+    "provider_type": {
+      "enum": [
+        "defesa_civil",
+        "servico_geologico",
+        "prefeitura",
+        "agencia_hidrometeorologica",
+        "portal_dados",
+        "sensoriamento_remoto",
+        "infraestrutura_dados",
+        "runtime_tecnico",
+        "outro"
+      ]
+    },
+    "request_status": {
+      "enum": [
+        "draft_ready_for_manual_submission",
+        "needs_contact_channel",
+        "needs_provider_confirmation",
+        "context_only_do_not_request_now",
+        "blocked_insufficient_provider_info"
+      ]
+    },
+    "do_not_mark_as_received": {
+      "const": "true"
+    },
+    "review_only": {
+      "const": "true"
+    },
+    "trainable": {
+      "const": "false"
+    },
+    "ground_truth": {
+      "const": "false"
+    }
+  }
+}

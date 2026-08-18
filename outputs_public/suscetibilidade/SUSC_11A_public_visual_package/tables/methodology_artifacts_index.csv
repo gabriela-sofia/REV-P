@@ -1,0 +1,11 @@
+stage,artifact
+SUSC-03,susc_features_by_patch_v1.csv
+SUSC-05,feature_cards/susc_feature_cards_v1.json
+SUSC-06B,SUSC_06B_feature_action_matrix.csv
+SUSC-07B,SUSC_07B_refined_patch_event_overlay.csv
+SUSC-08,susc_08_spatiotemporal_review_cases_v1.csv
+SUSC-09A,SUSC_09A_human_review_workspace/
+SUSC-10A,susc_score_v6_candidate_by_patch_v1.csv
+SUSC-10B,SUSC_10B_score_comparison_report.md
+SUSC-10C,SUSC_10C_score_sensitivity_report.md
+SUSC-10D,SUSC_10D_dino_score_diagnostics_report.md

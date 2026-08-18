@@ -1,0 +1,7 @@
+trainability_gate_id,training_mode,is_allowed_now,required_inputs,available_inputs,blocking_reason,safe_next_step,review_only
+S18B_GATE_0001,supervised_training,false,labels de ground reference oficiais aceitos (>=50 ev>=5 reg>=3),0 labels aceitos,sem labels validos,aquisicao de ground reference oficial patch-level,true
+S18B_GATE_0002,weak_supervision,false,regras/proxies aprovados como fraca supervisao,nenhuma regra aprovada,proxy nao aprovado como label,nao usar ancora/canario como fraca supervisao sem aprovacao,true
+S18B_GATE_0003,positive_unlabeled_learning,false,conjunto positivo confiavel + nao rotulados,sem positivos confiaveis (canario!=positivo),canario nao e positivo verdadeiro,aguardar ground reference,true
+S18B_GATE_0004,self_supervised_learning,true,features multimodais sem label,feature tensor 316x26,none,pretexto self-supervised review-only (mascaramento/reconstrucao),true
+S18B_GATE_0005,unsupervised_clustering,true,features multimodais normalizadas,tensor + normalizacao prontos,none,clustering/embedding review-only (ja executado),true
+S18B_GATE_0006,candidate_screening,true,percentis + similaridade + outlier,similarity + candidate queue prontos,none,triagem review-only p/ aquisicao futura,true

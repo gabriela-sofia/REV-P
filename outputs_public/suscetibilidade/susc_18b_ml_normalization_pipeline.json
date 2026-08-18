@@ -1,0 +1,16 @@
+{
+  "milestone": "SUSC-18B",
+  "methods": {
+    "robust_median_iqr": "x' = (x - median) / IQR; principal p/ tensor",
+    "minmax": "x' = (x - min)/(max-min); auditado",
+    "rank_percentile": "posto/percentil por feature; auditado",
+    "missing_indicator": "flag m_<familia> separada; imputacao=median(0) so unsupervised"
+  },
+  "population_used": "combined_all_316_patches_review_only",
+  "primary_method_for_tensor": "robust_median_iqr",
+  "used_for_unsupervised": true,
+  "used_for_supervised": false,
+  "not_score_v6_normalization": true,
+  "not_score_v7_normalization": true,
+  "review_only": true
+}

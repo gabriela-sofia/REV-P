@@ -1,0 +1,362 @@
+source_id,source_file,parse_status,n_features,by_feature_type,review_only,notes
+susc_14c_union,datasets/suscetibilidade/susc_14c_official_spatial_reference_features_union_v1.csv,parsed,12158,"{""address_point"": 2622, ""drainage_line"": 13, ""neighborhood_polygon"": 334, ""river_line"": 567, ""street_segment_without_number_range"": 10716}",true,14C official union recast into precision feature types
+S15ASRC_0000,,no_file,0,{},true,HTTP Error 404: Not Found
+S15ASRC_0001,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0001.json,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0002,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0002.json,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0003,,no_file,0,{},true,HTTP Error 404: Not Found
+S15ASRC_0004,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0004.json,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0005,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0005.json,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0006,,no_file,0,{},true,HTTP Error 404: Not Found
+S15ASRC_0007,,no_file,0,{},true,HTTP Error 410: Gone
+S15ASRC_0008,,no_file,0,{},true,HTTP Error 404: Not Found
+S15ASRC_0009,,no_file,0,{},true,HTTP Error 404: Not Found
+S15ASRC_0010,,no_file,0,{},true,HTTP Error 404: Not Found
+S15ASRC_0014,,no_file,0,{},true,HTTP Error 404: Not Found
+S15ASRC_0017,,no_file,0,{},true,<urlopen error [Errno 11001] getaddrinfo failed>
+S15ASRC_0024,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0024.csv,parsed,321,"{""address_point"": 286, ""drainage_line"": 1, ""river_line"": 27, ""street_segment_without_number_range"": 7}",true,precision parser review-only
+S15ASRC_0025,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0025.csv,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0026,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0026.csv,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0027,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0027.csv,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0028,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0028.json,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0029,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0029.json,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0030,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0030.json,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0031,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0031.json,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0032,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0032.csv,parsed,311,"{""address_point"": 277, ""drainage_line"": 1, ""river_line"": 27, ""street_segment_without_number_range"": 6}",true,precision parser review-only
+S15ASRC_0033,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0033.csv,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0034,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0034.csv,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0035,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0035.csv,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0036,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0036.json,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0037,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0037.json,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0038,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0038.json,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0039,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0039.json,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0040,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0040.csv,parsed,298,"{""address_point"": 263, ""drainage_line"": 1, ""river_line"": 26, ""street_segment_without_number_range"": 8}",true,precision parser review-only
+S15ASRC_0041,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0041.csv,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0042,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0042.csv,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0043,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0043.csv,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0044,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0044.json,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0045,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0045.json,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0046,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0046.json,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0047,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0047.json,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0048,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0048.csv,parsed,307,"{""address_point"": 270, ""drainage_line"": 1, ""river_line"": 28, ""street_segment_without_number_range"": 8}",true,precision parser review-only
+S15ASRC_0049,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0049.csv,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0050,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0050.csv,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0051,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0051.csv,parsed,500,"{""neighborhood_polygon"": 45, ""river_line"": 156, ""street_segment_without_number_range"": 299}",true,precision parser review-only
+S15ASRC_0052,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0052.csv,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0053,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0053.json,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0054,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0054.json,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0055,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0055.json,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0056,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0056.json,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0057,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0057.csv,parsed,319,"{""address_point"": 282, ""drainage_line"": 1, ""river_line"": 27, ""street_segment_without_number_range"": 9}",true,precision parser review-only
+S15ASRC_0058,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0058.csv,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0059,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0059.csv,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0060,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0060.csv,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0061,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0061.json,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0062,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0062.json,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0063,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0063.json,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0064,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0064.json,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0065,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0065.csv,parsed,38,"{""drainage_line"": 1, ""river_line"": 27, ""street_segment_without_number_range"": 10}",true,precision parser review-only
+S15ASRC_0066,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0066.csv,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0067,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0067.csv,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0068,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0068.csv,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0069,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0069.json,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0070,datasets/suscetibilidade/precision_references_susc15a/S15ASRC_0070.json,no_supported_features,0,{},true,precision parser review-only
+S15ASRC_0071,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0072,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0073,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0074,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0075,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0076,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0077,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0078,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0079,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0080,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0081,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0082,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0083,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0084,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0085,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0086,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0087,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0088,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0089,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0090,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0091,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0092,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0093,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0094,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0095,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0096,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0097,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0098,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0099,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0100,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0101,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0102,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0103,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0104,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0105,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0106,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0107,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0108,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0109,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0110,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0111,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0112,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0113,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0114,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0115,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0116,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0117,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0118,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0119,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0120,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0121,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0122,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0123,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0124,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0125,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0126,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0127,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0128,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0129,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0130,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0131,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0132,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0133,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0134,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0135,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0136,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0137,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0138,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0139,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0140,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0141,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0142,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0143,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0144,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0145,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0146,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0147,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0148,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0149,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0150,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0151,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0152,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0153,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0154,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0155,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0156,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0157,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0158,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0159,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0160,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0161,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0162,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0163,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0164,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0165,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0166,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0167,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0168,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0169,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0170,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0171,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0172,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0173,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0174,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0175,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0176,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0177,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0178,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0179,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0180,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0181,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0182,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0183,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0184,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0185,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0186,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0187,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0188,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0189,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0190,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0191,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0192,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0193,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0194,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0195,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0196,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0197,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0198,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0199,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0200,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0201,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0202,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0203,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0204,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0205,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0206,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0207,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0208,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0209,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0210,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0211,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0212,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0213,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0214,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0215,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0216,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0217,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0218,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0219,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0220,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0221,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0222,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0223,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0224,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0225,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0226,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0227,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0228,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0229,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0230,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0231,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0232,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0233,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0234,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0235,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0236,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0237,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0238,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0239,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0240,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0241,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0242,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0243,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0244,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0245,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0246,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0247,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0248,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0249,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0250,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0251,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0252,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0253,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0254,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0255,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0256,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0257,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0258,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0259,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0260,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0261,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0262,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0263,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0264,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0265,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0266,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0267,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0268,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0269,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0270,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0271,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0272,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0273,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0274,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0275,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0276,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0277,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0278,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0279,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0280,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0281,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0282,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0283,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0284,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0285,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0286,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0287,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0288,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0289,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0290,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0291,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0292,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0293,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0294,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0295,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0296,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0297,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0298,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0299,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0300,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0301,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0302,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0303,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0304,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0305,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0306,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0307,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0308,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0309,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0310,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0311,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0312,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0313,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0314,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0315,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0316,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0317,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0318,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0319,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0320,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0321,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0322,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0323,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0324,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0325,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0326,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0327,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0328,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0329,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0330,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0331,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0332,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0333,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0334,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0335,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0336,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0337,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0338,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0339,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0340,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0341,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0342,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0343,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0344,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0345,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0346,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0347,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0348,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0349,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0350,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0351,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0352,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0353,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0354,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0355,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0356,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0357,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0358,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0511,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0512,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0524,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0532,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0540,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0548,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0556,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0565,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0566,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0577,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0578,,no_file,0,{},true,max_60_new_resources_reached
+S15ASRC_0579,,no_file,0,{},true,max_60_new_resources_reached

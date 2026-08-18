@@ -1,0 +1,33 @@
+{
+  "schema_id": "mv2_data_03_private_raster_canary_validation",
+  "title": "MV2-DATA-03 Private Raster Canary Validation",
+  "validates": "outputs_public/mv2_data_live_api_canary/mv2_data_03_private_raster_canary_validation.csv",
+  "primary_key": "validation_id",
+  "required_fields": [
+    "validation_id",
+    "execution_id",
+    "raster_executed",
+    "public_leak_detected",
+    "private_file_exists",
+    "size_ok",
+    "sha256_ok",
+    "bands_ok",
+    "scl_ok",
+    "crs_ok",
+    "geotransform_ok",
+    "validation_status",
+    "notes"
+  ],
+  "validation_status_values": [
+    "NO_RASTER_EXECUTED_OK",
+    "PRIVATE_RASTER_VALID",
+    "INVALID_PUBLIC_OR_NONPRIVATE_PATH",
+    "INVALID_FILE_MISSING",
+    "INVALID_SIZE_SHA_BANDS_OR_SCL"
+  ],
+  "fail_closed_rules": [
+    "sem download => NO_RASTER_EXECUTED_OK (validação passa)",
+    "public_leak_detected=true invalida o intake",
+    "crs_ok/geotransform_ok=UNKNOWN quando rasterio ausente (limitação registrada, não falha)"
+  ]
+}

@@ -1,0 +1,4 @@
+source_file,source_origin,parse_status,classification_status,n_records,n_coordinates,requires_manual_review,can_be_ground_truth,allowed_for_training,review_only,notes
+datasets/suscetibilidade/susc_11b_observed_event_catalog_v1.csv,susc11b_catalog,ingested,legacy_reclassified,13,0,true,false,false,true,SUSC-11B catalog reused conservatively
+datasets/suscetibilidade/observed_event_sources_susc11b,susc11b_drop_dir,checked,no_direct_promotion,0,0,true,false,false,true,legacy acquisition dir retained as source context
+manifests/suscetibilidade/susc_13a_strong_event_download_manifest_v1.csv,susc13a_download_manifest,checked,download_status_available,15,0,true,false,false,true,download manifest reviewed for local files

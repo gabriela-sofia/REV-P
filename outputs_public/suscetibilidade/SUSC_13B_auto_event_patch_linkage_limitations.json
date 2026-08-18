@@ -1,0 +1,29 @@
+{
+  "artifact": "SUSC-13B-AUTO consolidated event patch linkage",
+  "n_events_total": 13,
+  "n_events_preferred": 8,
+  "n_links": 14,
+  "spatial_relation_counts": {
+    "insufficient_for_patch_link": 5,
+    "same_region_period_context": 2,
+    "near_patch_buffer_candidate": 7
+  },
+  "linkage_confidence_counts": {
+    "very_weak": 7,
+    "weak": 7
+  },
+  "observational_evaluation_links": 7,
+  "can_be_ground_truth": false,
+  "allowed_for_training": false,
+  "review_only": true,
+  "score_v7_created": false,
+  "model_persisted": false,
+  "key_limitations": [
+    "Offline e o modo padrao; sem rede nenhum evento novo e adquirido.",
+    "Eventos fortes, se existirem, permanecem review-only.",
+    "Risco, alerta e registros administrativos nao sao evento observado.",
+    "Interseccao por bbox e ponto-dentro-bbox sao aproximacoes para revisao.",
+    "Sem ground truth, sem treino supervisionado e sem score v7."
+  ],
+  "mandatory_statement": "O SUSC-13B-AUTO realiza descoberta e aquisição automática de fontes oficiais/rastreáveis para fortalecer a camada observacional de alagamento/inundação. Mesmo quando encontra eventos fortes, a etapa mantém todos os vínculos em modo review-only, não cria ground truth, não treina modelo supervisionado e não cria score v7 automaticamente."
+}

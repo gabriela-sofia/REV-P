@@ -1,0 +1,5 @@
+anti_leakage_audit_id,network_snapshot_id,source_name,catalog_metadata_misused_as_event,raster_metadata_misused_as_feature,uses_post_event_data_as_pre_event_feature,uses_synthetic_as_real,passes_anti_leakage,blocking_reason,review_only
+S17C17_LEAK_0001,S17C17_SNAP_0001,CHIRPS_OFFICIAL_DATA_PORTAL,false,false,false,false,true,metadado de catalogo nao foi usado como evento observado nem como feature de suscetibilidade,true
+S17C17_LEAK_0002,S17C17_SNAP_0002,CHIRPS_GEE_CATALOG,false,false,false,false,true,metadado de catalogo nao foi usado como evento observado nem como feature de suscetibilidade,true
+S17C17_LEAK_0003,S17C17_SNAP_0003,SENTINEL2_CDSE_DATA_COLLECTION_PAGE,false,false,false,false,true,metadado de catalogo nao foi usado como evento observado nem como feature de suscetibilidade,true
+S17C17_LEAK_0004,S17C17_SNAP_0004,SENTINEL2_CDSE_STAC_API,false,false,false,false,true,metadado de catalogo nao foi usado como evento observado nem como feature de suscetibilidade,true

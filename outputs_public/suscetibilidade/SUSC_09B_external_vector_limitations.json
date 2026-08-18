@@ -1,0 +1,22 @@
+{
+  "stage": "SUSC-09B external vector integration",
+  "external_geometries_parsed": 0,
+  "event_geometry_candidates": 0,
+  "overlay_candidates": 0,
+  "downloads_attempted": 13,
+  "downloads_succeeded": 0,
+  "download_status_counts": {
+    "not_attempted_no_direct_url_or_no_network": 13
+  },
+  "can_be_used_as_ground_truth": false,
+  "allowed_for_training": false,
+  "review_only": true,
+  "scientific_status": "external_official_vector_acquisition_not_patch_ground_truth",
+  "key_limitations": [
+    "Aquisicao externa offline-safe: sem URL direta, downloads nao realizados nesta passada.",
+    "Geometrias candidatas (quando houver) sao review-only, nao footprints validados.",
+    "Shapefile/PDF exigem biblioteca/parse manual; registrados como metadata.",
+    "Nada vira ground truth ou rotulo de treino."
+  ],
+  "prepares": "aquisicao manual oficial (GeoCuritiba/APAC/CPRM/INEA) + re-parse + re-overlay."
+}

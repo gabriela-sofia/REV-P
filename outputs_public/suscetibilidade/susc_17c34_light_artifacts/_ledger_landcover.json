@@ -1,0 +1,113 @@
+{
+  "generated_at_utc": "2026-07-02T10:58:53Z",
+  "landcover": [
+    {
+      "point_id": "S17C33_EAC_0001",
+      "role": "canary",
+      "landcover_source": "none_official_landcover_not_acquired",
+      "landcover_status": "not_available_follow_up_mapbiomas_or_worldcover",
+      "urban_prop_status": "not_available",
+      "built_up_proxy_available": "true",
+      "built_up_proxy_source": "ndbi_from_sentinel2"
+    },
+    {
+      "point_id": "S17C33_EAC_0002",
+      "role": "canary",
+      "landcover_source": "none_official_landcover_not_acquired",
+      "landcover_status": "not_available_follow_up_mapbiomas_or_worldcover",
+      "urban_prop_status": "not_available",
+      "built_up_proxy_available": "true",
+      "built_up_proxy_source": "ndbi_from_sentinel2"
+    },
+    {
+      "point_id": "S17C33_EAC_0003",
+      "role": "canary",
+      "landcover_source": "none_official_landcover_not_acquired",
+      "landcover_status": "not_available_follow_up_mapbiomas_or_worldcover",
+      "urban_prop_status": "not_available",
+      "built_up_proxy_available": "true",
+      "built_up_proxy_source": "ndbi_from_sentinel2"
+    },
+    {
+      "point_id": "S17C33_EAC_0004",
+      "role": "canary",
+      "landcover_source": "none_official_landcover_not_acquired",
+      "landcover_status": "not_available_follow_up_mapbiomas_or_worldcover",
+      "urban_prop_status": "not_available",
+      "built_up_proxy_available": "true",
+      "built_up_proxy_source": "ndbi_from_sentinel2"
+    },
+    {
+      "point_id": "S17C33_EAC_0005",
+      "role": "canary",
+      "landcover_source": "none_official_landcover_not_acquired",
+      "landcover_status": "not_available_follow_up_mapbiomas_or_worldcover",
+      "urban_prop_status": "not_available",
+      "built_up_proxy_available": "true",
+      "built_up_proxy_source": "ndbi_from_sentinel2"
+    },
+    {
+      "point_id": "S17C33_EAC_0006",
+      "role": "canary",
+      "landcover_source": "none_official_landcover_not_acquired",
+      "landcover_status": "not_available_follow_up_mapbiomas_or_worldcover",
+      "urban_prop_status": "not_available",
+      "built_up_proxy_available": "true",
+      "built_up_proxy_source": "ndbi_from_sentinel2"
+    },
+    {
+      "point_id": "S17C33_EAC_0007",
+      "role": "canary",
+      "landcover_source": "none_official_landcover_not_acquired",
+      "landcover_status": "not_available_follow_up_mapbiomas_or_worldcover",
+      "urban_prop_status": "not_available",
+      "built_up_proxy_available": "true",
+      "built_up_proxy_source": "ndbi_from_sentinel2"
+    },
+    {
+      "point_id": "S17C33_EAC_0008",
+      "role": "canary",
+      "landcover_source": "none_official_landcover_not_acquired",
+      "landcover_status": "not_available_follow_up_mapbiomas_or_worldcover",
+      "urban_prop_status": "not_available",
+      "built_up_proxy_available": "true",
+      "built_up_proxy_source": "ndbi_from_sentinel2"
+    },
+    {
+      "point_id": "S17C33_EAC_0009",
+      "role": "canary",
+      "landcover_source": "none_official_landcover_not_acquired",
+      "landcover_status": "not_available_follow_up_mapbiomas_or_worldcover",
+      "urban_prop_status": "not_available",
+      "built_up_proxy_available": "true",
+      "built_up_proxy_source": "ndbi_from_sentinel2"
+    },
+    {
+      "point_id": "S17C33_EAC_0010",
+      "role": "canary",
+      "landcover_source": "none_official_landcover_not_acquired",
+      "landcover_status": "not_available_follow_up_mapbiomas_or_worldcover",
+      "urban_prop_status": "not_available",
+      "built_up_proxy_available": "true",
+      "built_up_proxy_source": "ndbi_from_sentinel2"
+    },
+    {
+      "point_id": "S17C33_EAC_0011",
+      "role": "canary",
+      "landcover_source": "none_official_landcover_not_acquired",
+      "landcover_status": "not_available_follow_up_mapbiomas_or_worldcover",
+      "urban_prop_status": "not_available",
+      "built_up_proxy_available": "true",
+      "built_up_proxy_source": "ndbi_from_sentinel2"
+    },
+    {
+      "point_id": "S17C6_CANARY_REC_00001",
+      "role": "original_control",
+      "landcover_source": "none_official_landcover_not_acquired",
+      "landcover_status": "not_available_follow_up_mapbiomas_or_worldcover",
+      "urban_prop_status": "not_available",
+      "built_up_proxy_available": "true",
+      "built_up_proxy_source": "ndbi_from_sentinel2"
+    }
+  ]
+}

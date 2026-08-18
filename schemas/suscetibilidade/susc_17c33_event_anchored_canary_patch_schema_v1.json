@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C33 event-anchored canary patch schema v1",
+  "type": "object",
+  "required": [
+    "event_anchored_canary_patch_id",
+    "namespace",
+    "candidate_patch_id_original",
+    "event_id",
+    "bairro",
+    "logradouro",
+    "occurrence_date",
+    "occurrence_type",
+    "hydrological_signal",
+    "center_lat",
+    "center_lon",
+    "xmin",
+    "ymin",
+    "xmax",
+    "ymax",
+    "crs",
+    "uncertainty_m",
+    "patch_half_size_m",
+    "distance_to_original_patch_m",
+    "nearest_original_patch_id",
+    "link_type_to_occurrence",
+    "geocoder_is_official",
+    "replaces_original_patch",
+    "is_ground_truth",
+    "is_training",
+    "review_only"
+  ],
+  "properties": {
+    "event_anchored_canary_patch_id": {"type": "string", "pattern": "^S17C33_EAC_"},
+    "namespace": {"const": "event_anchored_canary_patch"},
+    "hydrological_signal": {"const": "true"},
+    "geocoder_is_official": {"const": "false"},
+    "replaces_original_patch": {"const": "false"},
+    "is_ground_truth": {"const": "false"},
+    "is_training": {"const": "false"},
+    "review_only": {"const": "true"}
+  }
+}

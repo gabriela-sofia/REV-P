@@ -1,0 +1,22 @@
+source_file,discovery_id,source_format,parse_status,classification_status,n_records,n_coordinates,missing_dependency,requires_manual_review,can_be_ground_truth,allowed_for_training,review_only,notes
+datasets/suscetibilidade/observed_event_sources_susc13c_live/.gitignore,LIVE,,unsupported_extension,not_classified,0,0,,true,false,false,true,
+datasets/suscetibilidade/observed_event_sources_susc13c_live/arcgis/recife_diamente_brasil_MapServer_2.geojson,S13CDL_0032,.geojson,parsed,weak_risk_area_context,1,1000,,true,false,false,true,fonte parseada review-only
+datasets/suscetibilidade/observed_event_sources_susc13c_live/ckan/atendimentos-2014.csv,S13CDL_0023,.csv,no_valid_coordinate,not_classified,0,0,,true,false,false,true,sem coordenada dentro do Brasil
+datasets/suscetibilidade/observed_event_sources_susc13c_live/ckan/atendimentos-2015.csv,S13CDL_0022,.csv,no_valid_coordinate,not_classified,0,0,,true,false,false,true,sem coordenada dentro do Brasil
+datasets/suscetibilidade/observed_event_sources_susc13c_live/ckan/atendimentos-2016.csv,S13CDL_0021,.csv,no_valid_coordinate,not_classified,0,0,,true,false,false,true,sem coordenada dentro do Brasil
+datasets/suscetibilidade/observed_event_sources_susc13c_live/ckan/atendimentos-2017.csv,S13CDL_0020,.csv,no_valid_coordinate,not_classified,0,0,,true,false,false,true,sem coordenada dentro do Brasil
+datasets/suscetibilidade/observed_event_sources_susc13c_live/ckan/atendimentos-2018.csv,S13CDL_0019,.csv,no_valid_coordinate,not_classified,0,0,,true,false,false,true,sem coordenada dentro do Brasil
+datasets/suscetibilidade/observed_event_sources_susc13c_live/ckan/atendimentos-2019.csv,S13CDL_0018,.csv,no_valid_coordinate,not_classified,0,0,,true,false,false,true,sem coordenada dentro do Brasil
+datasets/suscetibilidade/observed_event_sources_susc13c_live/ckan/atendimentos-2020.csv,S13CDL_0017,.csv,no_valid_coordinate,not_classified,0,0,,true,false,false,true,sem coordenada dentro do Brasil
+datasets/suscetibilidade/observed_event_sources_susc13c_live/ckan/atendimentos-2021.csv,S13CDL_0016,.csv,no_valid_coordinate,not_classified,0,0,,true,false,false,true,sem coordenada dentro do Brasil
+datasets/suscetibilidade/observed_event_sources_susc13c_live/ckan/atendimentos-2022.csv,S13CDL_0015,.csv,no_valid_coordinate,not_classified,0,0,,true,false,false,true,sem coordenada dentro do Brasil
+datasets/suscetibilidade/observed_event_sources_susc13c_live/ckan/atendimentos-2023.csv,S13CDL_0014,.csv,no_valid_coordinate,not_classified,0,0,,true,false,false,true,sem coordenada dentro do Brasil
+datasets/suscetibilidade/observed_event_sources_susc13c_live/ckan/atendimentos-2024.csv,S13CDL_0013,.csv,no_valid_coordinate,not_classified,0,0,,true,false,false,true,sem coordenada dentro do Brasil
+datasets/suscetibilidade/observed_event_sources_susc13c_live/ckan/atendimentos-2025.csv,S13CDL_0012,.csv,no_valid_coordinate,not_classified,0,0,,true,false,false,true,sem coordenada dentro do Brasil
+datasets/suscetibilidade/observed_event_sources_susc13c_live/ckan/coordenadas-geograficas-da-regiao-sul.geojson,S13CDL_0024,.geojson,parsed,documentary_only,1,400,,true,false,false,true,fonte parseada review-only
+datasets/suscetibilidade/observed_event_sources_susc13c_live/ckan/dicionario-de-dados-tipo-ocorrencias-tempo-real.json,S13CDL_0027,.json,no_valid_coordinate,not_classified,0,0,,true,false,false,true,sem coordenada dentro do Brasil
+datasets/suscetibilidade/observed_event_sources_susc13c_live/ckan/efetivo-da-defesa-civil-2023.csv,S13CDL_0025,.csv,no_valid_coordinate,not_classified,0,0,,true,false,false,true,sem coordenada dentro do Brasil
+datasets/suscetibilidade/observed_event_sources_susc13c_live/html/alagamento_pdf.pdf,S13CDL_0030,.pdf,no_valid_coordinate,not_classified,0,0,,true,false,false,true,sem coordenada dentro do Brasil
+datasets/suscetibilidade/observed_event_sources_susc13c_live/html/enchente_de_uniao_da_vitoria_de_1983.pdf,S13CDL_0028,.pdf,no_valid_coordinate,not_classified,0,0,,true,false,false,true,sem coordenada dentro do Brasil
+datasets/suscetibilidade/observed_event_sources_susc13c_live/html/enxurrada_pdf.pdf,S13CDL_0031,.pdf,no_valid_coordinate,not_classified,0,0,,true,false,false,true,sem coordenada dentro do Brasil
+datasets/suscetibilidade/observed_event_sources_susc13c_live/html/inundacao_pdf.pdf,S13CDL_0029,.pdf,no_valid_coordinate,not_classified,0,0,,true,false,false,true,sem coordenada dentro do Brasil

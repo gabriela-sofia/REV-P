@@ -1,0 +1,9 @@
+metric,value,review_only
+occurrence_rows,4412,true
+reference_rows,100000,true
+occurrence_blocking_keys,503,true
+reference_blocking_keys,539,true
+overlapping_blocking_keys,16,true
+occurrences_with_number_detected,966,true
+occurrences_with_complement_detected,2815,true
+normalization_rules,strip_accents|uppercase_equivalent|street_abbrev|punctuation|number|complement|tokens|difflib,true

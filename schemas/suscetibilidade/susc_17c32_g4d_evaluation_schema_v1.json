@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C32 g4d evaluation schema v1",
+  "type": "object",
+  "required": [
+    "g4d_evaluation_id",
+    "geocoded_point_id",
+    "hydrological_occurrence_target_id",
+    "candidate_patch_id",
+    "event_id",
+    "distance_to_patch_m",
+    "acceptable_buffer_m",
+    "within_patch_or_acceptable_buffer",
+    "geometry_is_official_or_controlled_point",
+    "uncertainty_m",
+    "G4d_patch_buffer_link_confirmed",
+    "blocking_reason",
+    "review_only"
+  ],
+  "properties": {
+    "g4d_evaluation_id": {"type": "string", "pattern": "^S17C32_G4D_"},
+    "review_only": {"const": "true"}
+  }
+}

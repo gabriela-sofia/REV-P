@@ -1,0 +1,16 @@
+download_id,region,institution,source_name,download_status,file_size_bytes,content_ext,requires_manual_review,can_be_ground_truth,allowed_for_training,review_only
+S13ADL_000,recife,Defesa Civil Recife (CODECIR),ocorrencias oficiais de alagamento com coordenada,not_attempted_no_direct_url_or_no_network,,,true,false,false,true
+S13ADL_001,recife,APAC,alagamentos/inundacoes observados e bacias afetadas,not_attempted_no_direct_url_or_no_network,,,true,false,false,true
+S13ADL_002,recife,Prefeitura do Recife Dados Abertos,bases abertas de alagamento/ocorrencia,not_attempted_no_direct_url_or_no_network,,,true,false,false,true
+S13ADL_003,recife,CPRM/SGB,relatorios tecnicos de inundacao/risco,not_attempted_no_direct_url_or_no_network,,,true,false,false,true
+S13ADL_004,recife,S2iD Defesa Civil Nacional,registros oficiais de desastre,not_attempted_no_direct_url_or_no_network,,,true,false,false,true
+S13ADL_005,petropolis,CPRM/SGB,footprint ou relatorio tecnico 2022 Petropolis,not_attempted_no_direct_url_or_no_network,,,true,false,false,true
+S13ADL_006,petropolis,Defesa Civil Petropolis,ocorrencias oficiais 2022 com coordenada,not_attempted_no_direct_url_or_no_network,,,true,false,false,true
+S13ADL_007,petropolis,Prefeitura de Petropolis,boletins e dados abertos de ocorrencias,not_attempted_no_direct_url_or_no_network,,,true,false,false,true
+S13ADL_008,petropolis,INEA/RJ,mancha/area atingida por inundacao,not_attempted_no_direct_url_or_no_network,,,true,false,false,true
+S13ADL_009,petropolis,S2iD Defesa Civil Nacional,registros oficiais de desastre 2022,not_attempted_no_direct_url_or_no_network,,,true,false,false,true
+S13ADL_010,curitiba,GeoCuritiba/IPPUC,ocorrencias/areas de alagamento georreferenciadas,not_attempted_no_direct_url_or_no_network,,,true,false,false,true
+S13ADL_011,curitiba,Defesa Civil Curitiba/PR,ocorrencias oficiais de alagamento com coordenada,not_attempted_no_direct_url_or_no_network,,,true,false,false,true
+S13ADL_012,curitiba,Prefeitura de Curitiba,dados abertos de alagamento/inundacao,not_attempted_no_direct_url_or_no_network,,,true,false,false,true
+S13ADL_013,curitiba,IAT/Aguas Parana,"mancha, bacia ou registro hidrologico",not_attempted_no_direct_url_or_no_network,,,true,false,false,true
+S13ADL_014,curitiba,S2iD Defesa Civil Nacional,registros oficiais de desastre,not_attempted_no_direct_url_or_no_network,,,true,false,false,true

@@ -1,0 +1,10 @@
+anti_leakage_audit_id,formal_request_id,artifact_manifest_id,uses_post_event_data_as_pre_event_feature,uses_risk_area_as_event,uses_document_as_susceptibility_feature,uses_synthetic_as_real,uses_official_patch_neighbor_proxy,passes_anti_leakage,blocking_reason,review_only
+S17C15_LEAK_0001,P0_COMPDEC_RECIFE_PKG_FR_REC_002,S17C15_MANIFEST_0001,false,false,false,false,false,true,sem artefato real usado como feature; anti-leakage preservado,true
+S17C15_LEAK_0002,P0_DRM_RJ_PKG_FR_PET_001,S17C15_MANIFEST_0002,false,false,false,false,false,true,sem artefato real usado como feature; anti-leakage preservado,true
+S17C15_LEAK_0003,P1_CHIRPS_PRE_EVENT_WINDOW_REC_2022_05_24_30,S17C15_MANIFEST_0003,false,false,false,false,false,true,sem artefato real usado como feature; anti-leakage preservado,true
+S17C15_LEAK_0004,P1_DEM_HAND_DRAINAGE_COVERAGE_CANDIDATE_GRID,S17C15_MANIFEST_0004,false,false,false,false,false,true,sem artefato real usado como feature; anti-leakage preservado,true
+S17C15_LEAK_0005,P1_PET_2024_VALPARAISO_FLORESTA_GEOMETRY,S17C15_MANIFEST_0005,false,false,false,false,false,true,sem artefato real usado como feature; anti-leakage preservado,true
+S17C15_LEAK_0006,P1_SENTINEL2_TILE_CANDIDATE_GRID,S17C15_MANIFEST_0006,false,false,false,false,false,true,sem artefato real usado como feature; anti-leakage preservado,true
+S17C15_LEAK_0007,P1_SGB_CPRM_VECTOR_OR_COORDINATES,S17C15_MANIFEST_0007,false,false,false,false,false,true,sem artefato real usado como feature; anti-leakage preservado,true
+S17C15_LEAK_0008,P2_DINO_SATMAE_INPUT_TILE,S17C15_MANIFEST_0008,false,false,false,false,false,true,sem artefato real usado como feature; anti-leakage preservado,true
+S17C15_LEAK_0009,P2_SAR_RUNTIME_OR_EXPORT_PATH,S17C15_MANIFEST_0009,false,false,false,false,false,true,sem artefato real usado como feature; anti-leakage preservado,true

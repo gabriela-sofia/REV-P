@@ -1,0 +1,46 @@
+render_contract_id,sentinel1_target_id,panel,panel_description_pt,renderizacao_executada,raster_baixado,footprint_criado,requires_scene_download_future,requires_footprint_future,input_esperado_pt,review_only
+RC_00001,S1_0547,painel_pre_sar,painel da cena SAR pre-evento,false,false,false,true,false,cenas SAR/overlays futuros,true
+RC_00002,S1_0547,painel_pos_sar,painel da cena SAR pos-evento,false,false,false,true,false,cenas SAR/overlays futuros,true
+RC_00003,S1_0547,diferenca_pre_pos,painel de diferenca pre/pos,false,false,false,true,false,geometria/AOI local,true
+RC_00004,S1_0547,overlay_aoi_patch,overlay do AOI/patch,false,false,false,false,false,geometria/AOI local,true
+RC_00005,S1_0547,overlay_agua_permanente_futura,overlay de agua permanente (futuro),false,false,false,false,false,geometria/AOI local,true
+RC_00006,S1_0547,overlay_hand_slope_futuro,overlay HAND/slope (futuro),false,false,false,false,false,geometria/AOI local,true
+RC_00007,S1_0547,overlay_exclusoes_urbanas_futuras,overlay de exclusoes urbanas (futuro),false,false,false,false,false,geometria/AOI local,true
+RC_00008,S1_0547,mascara_candidata_futura,mascara candidata (futuro),false,false,false,true,true,cenas SAR/overlays futuros,true
+RC_00009,S1_0547,painel_qa,painel de QA humano,false,false,false,false,true,geometria/AOI local,true
+RC_00010,S1_0548,painel_pre_sar,painel da cena SAR pre-evento,false,false,false,true,false,cenas SAR/overlays futuros,true
+RC_00011,S1_0548,painel_pos_sar,painel da cena SAR pos-evento,false,false,false,true,false,cenas SAR/overlays futuros,true
+RC_00012,S1_0548,diferenca_pre_pos,painel de diferenca pre/pos,false,false,false,true,false,geometria/AOI local,true
+RC_00013,S1_0548,overlay_aoi_patch,overlay do AOI/patch,false,false,false,false,false,geometria/AOI local,true
+RC_00014,S1_0548,overlay_agua_permanente_futura,overlay de agua permanente (futuro),false,false,false,false,false,geometria/AOI local,true
+RC_00015,S1_0548,overlay_hand_slope_futuro,overlay HAND/slope (futuro),false,false,false,false,false,geometria/AOI local,true
+RC_00016,S1_0548,overlay_exclusoes_urbanas_futuras,overlay de exclusoes urbanas (futuro),false,false,false,false,false,geometria/AOI local,true
+RC_00017,S1_0548,mascara_candidata_futura,mascara candidata (futuro),false,false,false,true,true,cenas SAR/overlays futuros,true
+RC_00018,S1_0548,painel_qa,painel de QA humano,false,false,false,false,true,geometria/AOI local,true
+RC_00019,S1_0549,painel_pre_sar,painel da cena SAR pre-evento,false,false,false,true,false,cenas SAR/overlays futuros,true
+RC_00020,S1_0549,painel_pos_sar,painel da cena SAR pos-evento,false,false,false,true,false,cenas SAR/overlays futuros,true
+RC_00021,S1_0549,diferenca_pre_pos,painel de diferenca pre/pos,false,false,false,true,false,geometria/AOI local,true
+RC_00022,S1_0549,overlay_aoi_patch,overlay do AOI/patch,false,false,false,false,false,geometria/AOI local,true
+RC_00023,S1_0549,overlay_agua_permanente_futura,overlay de agua permanente (futuro),false,false,false,false,false,geometria/AOI local,true
+RC_00024,S1_0549,overlay_hand_slope_futuro,overlay HAND/slope (futuro),false,false,false,false,false,geometria/AOI local,true
+RC_00025,S1_0549,overlay_exclusoes_urbanas_futuras,overlay de exclusoes urbanas (futuro),false,false,false,false,false,geometria/AOI local,true
+RC_00026,S1_0549,mascara_candidata_futura,mascara candidata (futuro),false,false,false,true,true,cenas SAR/overlays futuros,true
+RC_00027,S1_0549,painel_qa,painel de QA humano,false,false,false,false,true,geometria/AOI local,true
+RC_00028,S1_0550,painel_pre_sar,painel da cena SAR pre-evento,false,false,false,true,false,cenas SAR/overlays futuros,true
+RC_00029,S1_0550,painel_pos_sar,painel da cena SAR pos-evento,false,false,false,true,false,cenas SAR/overlays futuros,true
+RC_00030,S1_0550,diferenca_pre_pos,painel de diferenca pre/pos,false,false,false,true,false,geometria/AOI local,true
+RC_00031,S1_0550,overlay_aoi_patch,overlay do AOI/patch,false,false,false,false,false,geometria/AOI local,true
+RC_00032,S1_0550,overlay_agua_permanente_futura,overlay de agua permanente (futuro),false,false,false,false,false,geometria/AOI local,true
+RC_00033,S1_0550,overlay_hand_slope_futuro,overlay HAND/slope (futuro),false,false,false,false,false,geometria/AOI local,true
+RC_00034,S1_0550,overlay_exclusoes_urbanas_futuras,overlay de exclusoes urbanas (futuro),false,false,false,false,false,geometria/AOI local,true
+RC_00035,S1_0550,mascara_candidata_futura,mascara candidata (futuro),false,false,false,true,true,cenas SAR/overlays futuros,true
+RC_00036,S1_0550,painel_qa,painel de QA humano,false,false,false,false,true,geometria/AOI local,true
+RC_00037,S1_0551,painel_pre_sar,painel da cena SAR pre-evento,false,false,false,true,false,cenas SAR/overlays futuros,true
+RC_00038,S1_0551,painel_pos_sar,painel da cena SAR pos-evento,false,false,false,true,false,cenas SAR/overlays futuros,true
+RC_00039,S1_0551,diferenca_pre_pos,painel de diferenca pre/pos,false,false,false,true,false,geometria/AOI local,true
+RC_00040,S1_0551,overlay_aoi_patch,overlay do AOI/patch,false,false,false,false,false,geometria/AOI local,true
+RC_00041,S1_0551,overlay_agua_permanente_futura,overlay de agua permanente (futuro),false,false,false,false,false,geometria/AOI local,true
+RC_00042,S1_0551,overlay_hand_slope_futuro,overlay HAND/slope (futuro),false,false,false,false,false,geometria/AOI local,true
+RC_00043,S1_0551,overlay_exclusoes_urbanas_futuras,overlay de exclusoes urbanas (futuro),false,false,false,false,false,geometria/AOI local,true
+RC_00044,S1_0551,mascara_candidata_futura,mascara candidata (futuro),false,false,false,true,true,cenas SAR/overlays futuros,true
+RC_00045,S1_0551,painel_qa,painel de QA humano,false,false,false,false,true,geometria/AOI local,true

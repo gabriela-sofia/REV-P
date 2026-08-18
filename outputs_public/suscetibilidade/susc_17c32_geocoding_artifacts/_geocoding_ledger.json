@@ -1,0 +1,204 @@
+{
+  "generated_at_utc": "2026-07-02T10:17:17Z",
+  "generated_from_network": true,
+  "geocoder": "nominatim_osm",
+  "geocoder_is_official": false,
+  "attempts": [
+    {
+      "target_id": "S17C32_TGT_0001",
+      "query": "street=Avenida Republica do Libano; county=Pina; city=Recife; state=Pernambuco",
+      "geocoder": "nominatim_osm",
+      "status": "resolved",
+      "failure_reason": ""
+    },
+    {
+      "target_id": "S17C32_TGT_0002",
+      "query": "street=Rua Joao Murilo de Oliveira; county=Imbiribeira; city=Recife; state=Pernambuco",
+      "geocoder": "nominatim_osm",
+      "status": "resolved",
+      "failure_reason": ""
+    },
+    {
+      "target_id": "S17C32_TGT_0003",
+      "query": "street=Rua Vicente Ribeiro de Barros; county=Afogados; city=Recife; state=Pernambuco",
+      "geocoder": "nominatim_osm",
+      "status": "resolved",
+      "failure_reason": ""
+    },
+    {
+      "target_id": "S17C32_TGT_0004",
+      "query": "street=Rua Joao Paulo Ii; county=Areias; city=Recife; state=Pernambuco",
+      "geocoder": "nominatim_osm",
+      "status": "resolved",
+      "failure_reason": ""
+    },
+    {
+      "target_id": "S17C32_TGT_0005",
+      "query": "street=Rua Jose Firmino Pinho; county=Areias; city=Recife; state=Pernambuco",
+      "geocoder": "nominatim_osm",
+      "status": "empty",
+      "failure_reason": "no_result"
+    },
+    {
+      "target_id": "S17C32_TGT_0006",
+      "query": "street=Rua Jose Firmino Pires; county=Areias; city=Recife; state=Pernambuco",
+      "geocoder": "nominatim_osm",
+      "status": "resolved",
+      "failure_reason": ""
+    },
+    {
+      "target_id": "S17C32_TGT_0007",
+      "query": "street=Rua Alvorada; county=Ipsep; city=Recife; state=Pernambuco",
+      "geocoder": "nominatim_osm",
+      "status": "resolved",
+      "failure_reason": ""
+    },
+    {
+      "target_id": "S17C32_TGT_0008",
+      "query": "street=Estrada do Barbalho; county=Iputinga; city=Recife; state=Pernambuco",
+      "geocoder": "nominatim_osm",
+      "status": "resolved",
+      "failure_reason": ""
+    },
+    {
+      "target_id": "S17C32_TGT_0009",
+      "query": "street=Rua Luiz Souto Dourado; county=Iputinga; city=Recife; state=Pernambuco",
+      "geocoder": "nominatim_osm",
+      "status": "resolved",
+      "failure_reason": ""
+    },
+    {
+      "target_id": "S17C32_TGT_0010",
+      "query": "street=Avenida Melvin Jones; county=Varzea; city=Recife; state=Pernambuco",
+      "geocoder": "nominatim_osm",
+      "status": "resolved",
+      "failure_reason": ""
+    },
+    {
+      "target_id": "S17C32_TGT_0011",
+      "query": "street=Rua Pe Henrique; county=Varzea; city=Recife; state=Pernambuco",
+      "geocoder": "nominatim_osm",
+      "status": "resolved",
+      "failure_reason": ""
+    },
+    {
+      "target_id": "S17C32_TGT_0012",
+      "query": "street=Rua Torres Homem; county=Varzea; city=Recife; state=Pernambuco",
+      "geocoder": "nominatim_osm",
+      "status": "resolved",
+      "failure_reason": ""
+    }
+  ],
+  "points": [
+    {
+      "target_id": "S17C32_TGT_0001",
+      "bairro": "Pina",
+      "logradouro": "Avenida Republica do Libano",
+      "lat": -8.0869199,
+      "lon": -34.8910955,
+      "osm_type": "primary",
+      "osm_class": "highway",
+      "importance": 0.05340317311360338
+    },
+    {
+      "target_id": "S17C32_TGT_0002",
+      "bairro": "Imbiribeira",
+      "logradouro": "Rua Joao Murilo de Oliveira",
+      "lat": -8.1085591,
+      "lon": -34.9048617,
+      "osm_type": "residential",
+      "osm_class": "highway",
+      "importance": 0.05340317311360338
+    },
+    {
+      "target_id": "S17C32_TGT_0003",
+      "bairro": "Afogados",
+      "logradouro": "Rua Vicente Ribeiro de Barros",
+      "lat": -8.0802551,
+      "lon": -34.9198368,
+      "osm_type": "residential",
+      "osm_class": "highway",
+      "importance": 0.05340317311360338
+    },
+    {
+      "target_id": "S17C32_TGT_0004",
+      "bairro": "Areias",
+      "logradouro": "Rua Joao Paulo Ii",
+      "lat": -8.1038967,
+      "lon": -34.9378954,
+      "osm_type": "residential",
+      "osm_class": "highway",
+      "importance": 0.05340317311360338
+    },
+    {
+      "target_id": "S17C32_TGT_0006",
+      "bairro": "Areias",
+      "logradouro": "Rua Jose Firmino Pires",
+      "lat": -8.1020338,
+      "lon": -34.9389074,
+      "osm_type": "residential",
+      "osm_class": "highway",
+      "importance": 0.05340317311360338
+    },
+    {
+      "target_id": "S17C32_TGT_0007",
+      "bairro": "Ipsep",
+      "logradouro": "Rua Alvorada",
+      "lat": -8.1072331,
+      "lon": -34.925592,
+      "osm_type": "residential",
+      "osm_class": "highway",
+      "importance": 0.05340317311360338
+    },
+    {
+      "target_id": "S17C32_TGT_0008",
+      "bairro": "Iputinga",
+      "logradouro": "Estrada do Barbalho",
+      "lat": -8.0379797,
+      "lon": -34.9407764,
+      "osm_type": "secondary",
+      "osm_class": "highway",
+      "importance": 0.05340317311360338
+    },
+    {
+      "target_id": "S17C32_TGT_0009",
+      "bairro": "Iputinga",
+      "logradouro": "Rua Luiz Souto Dourado",
+      "lat": -8.0285513,
+      "lon": -34.9410443,
+      "osm_type": "residential",
+      "osm_class": "highway",
+      "importance": 0.05340317311360338
+    },
+    {
+      "target_id": "S17C32_TGT_0010",
+      "bairro": "Varzea",
+      "logradouro": "Avenida Melvin Jones",
+      "lat": -8.0332851,
+      "lon": -34.9561321,
+      "osm_type": "residential",
+      "osm_class": "highway",
+      "importance": 0.05340317311360338
+    },
+    {
+      "target_id": "S17C32_TGT_0011",
+      "bairro": "Varzea",
+      "logradouro": "Rua Pe Henrique",
+      "lat": -8.0474626,
+      "lon": -34.9617547,
+      "osm_type": "residential",
+      "osm_class": "highway",
+      "importance": 0.05340317311360338
+    },
+    {
+      "target_id": "S17C32_TGT_0012",
+      "bairro": "Varzea",
+      "logradouro": "Rua Torres Homem",
+      "lat": -8.040708,
+      "lon": -34.9549835,
+      "osm_type": "residential",
+      "osm_class": "highway",
+      "importance": 0.05340317311360338
+    }
+  ]
+}

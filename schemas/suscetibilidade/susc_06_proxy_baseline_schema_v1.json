@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "schema_id": "SUSC-06A-PROXY-BASELINE",
+  "created": "2026-06-27",
+  "baseline_name": "SUSC-06A proxy GAM/SPGAM-style baseline",
+  "baseline_status": "proxy_baseline_review_only",
+  "purpose": "Define o contrato do baseline interpretavel estilo GAM/SPGAM ajustado APENAS contra proxies internos de suscetibilidade (scores/labels heuristicos v5). Diagnostico metodologico review-only. NAO valida ocorrencia real de enchente, NAO cria ground truth, NAO desbloqueia treino supervisionado.",
+  "allowed_target_types": ["score", "heuristic_label", "proxy_v5"],
+  "forbidden_target_types": ["ground_truth", "confirmed_event", "observed_flood_by_patch"],
+  "allowed_feature_status": ["ready_for_methodology", "usable_with_caution"],
+  "preferred_feature_status": ["ready_for_methodology"],
+  "excluded_feature_status": ["proxy_only", "blocked_until_recomputed", "unresolved"],
+  "feature_groups": [
+    "topography",
+    "topography_hydrology",
+    "hydrology",
+    "land_use",
+    "spectral_index",
+    "precipitation",
+    "interaction",
+    "sar"
+  ],
+  "target_priority": [
+    "final_susceptibility_score",
+    "composite_v5_score",
+    "heuristic_label_fallback"
+  ],
+  "scientific_constraints": [
+    "target e proxy interno, NUNCA ocorrencia confirmada de enchente",
+    "metricas sao contra proxy, nao contra evento real",
+    "nenhum modelo persistido em disco (review-only, em memoria)",
+    "nenhuma linguagem de predicao real de enchente",
+    "componente espacial via estratificacao por regiao, nao por coordenada inventada"
+  ],
+  "allowed_metrics": {
+    "continuous_target": ["r2", "mae", "rmse"],
+    "binary_proxy_target": ["accuracy", "balanced_accuracy", "roc_auc"]
+  },
+  "modeling_backends_priority": ["pygam", "statsmodels_gam", "sklearn_spline_fallback"],
+  "expected_outputs": [
+    "datasets/suscetibilidade/susc_06_proxy_baseline_dataset_v1.csv",
+    "manifests/suscetibilidade/susc_06_proxy_baseline_dataset_manifest_v1.json",
+    "outputs_public/suscetibilidade/SUSC_06_proxy_baseline_feature_table.csv",
+    "outputs_public/suscetibilidade/SUSC_06_proxy_baseline_metrics.csv",
+    "outputs_public/suscetibilidade/SUSC_06_proxy_baseline_region_metrics.csv",
+    "outputs_public/suscetibilidade/SUSC_06_proxy_baseline_partial_effects.csv",
+    "outputs_public/suscetibilidade/SUSC_06_proxy_baseline_target_policy.json",
+    "outputs_public/suscetibilidade/SUSC_06_proxy_gam_spgam_baseline_report.md"
+  ],
+  "allowed_for_training": false,
+  "can_be_used_as_ground_truth": false,
+  "review_only": true
+}

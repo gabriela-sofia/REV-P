@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C30 event record candidate schema v1",
+  "type": "object",
+  "required": [
+    "event_record_candidate_id",
+    "source_id",
+    "source_name",
+    "candidate_patch_id",
+    "event_id",
+    "event_date_candidate",
+    "event_period_candidate",
+    "location_text",
+    "spatial_precision_level",
+    "phenomenon_candidate",
+    "phenomenon_precision_level",
+    "source_authority",
+    "source_quality_class",
+    "created_from_documentary_evidence",
+    "has_patch_level_geometry",
+    "can_be_reference_evidence_now",
+    "can_be_ground_reference_candidate",
+    "can_be_ground_truth",
+    "can_be_training_label",
+    "review_only"
+  ],
+  "properties": {
+    "event_record_candidate_id": {"type": "string", "pattern": "^S17C30_ERC_"},
+    "can_be_reference_evidence_now": {"const": "false"},
+    "can_be_ground_reference_candidate": {"const": "false"},
+    "can_be_ground_truth": {"const": "false"},
+    "can_be_training_label": {"const": "false"},
+    "review_only": {"const": "true"}
+  }
+}

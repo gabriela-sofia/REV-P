@@ -1,0 +1,39 @@
+{
+  "schema_id": "mv2_data_03_private_raster_canary_execution_manifest",
+  "title": "MV2-DATA-03 Private Raster Canary Execution Manifest (public, light)",
+  "validates": "outputs_public/mv2_data_live_api_canary/mv2_data_03_private_raster_canary_execution_manifest.csv",
+  "primary_key": "execution_id",
+  "max_rows": 1,
+  "required_fields": [
+    "execution_id",
+    "canary_candidate_id",
+    "executed",
+    "provider",
+    "scene_id",
+    "product_id",
+    "private_output_ref",
+    "public_output_created",
+    "bands_requested",
+    "scl_requested",
+    "file_size_bytes",
+    "sha256",
+    "download_started_at",
+    "download_finished_at",
+    "execution_status",
+    "blocking_reason",
+    "notes"
+  ],
+  "execution_status_values": [
+    "NOT_EXECUTED_GUARDRAIL",
+    "NOT_EXECUTED_NO_DOWNLOAD_URL",
+    "NOT_EXECUTED_FETCH_DEP_MISSING",
+    "NOT_EXECUTED_FETCH_ERROR",
+    "EXECUTED_PRIVATE_ONLY"
+  ],
+  "fail_closed_rules": [
+    "no máximo 1 execução (max_rows=1)",
+    "executed=true exige todos os gates + consenso forte + env REV_P_ALLOW_RASTER_CANARY=YES",
+    "private_output_ref relativo sanitizado, sempre em diretório privado git-ignored",
+    "public_output_created=false sempre; raster nunca em outputs_public"
+  ]
+}

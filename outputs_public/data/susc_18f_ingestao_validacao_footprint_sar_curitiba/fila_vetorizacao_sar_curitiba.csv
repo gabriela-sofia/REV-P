@@ -1,0 +1,2 @@
+task_id,artefato,status,caminho_esperado,acao_requerida,criterio_de_sucesso
+S18F_VET_0001,flood_vector_curitiba_2022_01_15.geojson,pendente_recuperacao,local_runs/suscetibilidade/18e_sar_curitiba/resultados_gee/flood_vector_curitiba_2022_01_15.geojson,recuperar export Drive task KF4J7MQQDB64TDEM7S5CNLPZ,GeoJSON leve com CRS EPSG:4326 e metadados somente revisao

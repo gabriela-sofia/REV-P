@@ -1,0 +1,33 @@
+{
+  "policy_id": "SUSC_17C5_EXPANSION_RISK_POLICY_V1",
+  "review_only": true,
+  "trainable": false,
+  "ground_truth": false,
+  "score_v6_changed": false,
+  "score_v7_created": false,
+  "blocked_actions": {
+    "silent_grid_expansion": true,
+    "patch_creation_without_manifest": true,
+    "patch_link_without_official_patch": true,
+    "protocolc_susc_namespace_mixing": true,
+    "score_recompute_without_protocol": true,
+    "charter_as_ground_truth": true,
+    "candidate_aoi_as_strong_evidence": true,
+    "benchmark_17b_without_qa_accepted_and_valid_patch_link": true
+  },
+  "allowed_actions_now": [
+    "review_only_inventory",
+    "review_only_candidate_expansion_aoi",
+    "formal_request_preparation",
+    "human_qa_reference_geometry_only"
+  ],
+  "required_before_official_grid_change": [
+    "explicit_grid_expansion_protocol",
+    "candidate_patch_manifest",
+    "feature_extraction_plan",
+    "hydrology_feature_plan",
+    "sentinel_asset_plan",
+    "human_qa_acceptance",
+    "separate_score_recompute_protocol"
+  ]
+}

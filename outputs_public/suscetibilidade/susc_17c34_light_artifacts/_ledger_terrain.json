@@ -1,0 +1,115 @@
+{
+  "generated_at_utc": "2026-07-02T10:58:57Z",
+  "source": "opentopodata_srtm30m",
+  "stencil_step_deg": 0.0009,
+  "terrain": [
+    {
+      "point_id": "S17C33_EAC_0001",
+      "role": "canary",
+      "status": "ok",
+      "elevation_mean": 8.2,
+      "elevation_min": 3.0,
+      "elevation_max": 10.0,
+      "slope_mean_deg": 4.004
+    },
+    {
+      "point_id": "S17C33_EAC_0002",
+      "role": "canary",
+      "status": "ok",
+      "elevation_mean": 8.8,
+      "elevation_min": 7.0,
+      "elevation_max": 11.0,
+      "slope_mean_deg": 1.718
+    },
+    {
+      "point_id": "S17C33_EAC_0003",
+      "role": "canary",
+      "status": "ok",
+      "elevation_mean": 7.0,
+      "elevation_min": 6.0,
+      "elevation_max": 8.0,
+      "slope_mean_deg": 1.146
+    },
+    {
+      "point_id": "S17C33_EAC_0004",
+      "role": "canary",
+      "status": "ok",
+      "elevation_mean": 6.2,
+      "elevation_min": 4.0,
+      "elevation_max": 10.0,
+      "slope_mean_deg": 2.291
+    },
+    {
+      "point_id": "S17C33_EAC_0005",
+      "role": "canary",
+      "status": "ok",
+      "elevation_mean": 5.8,
+      "elevation_min": 4.0,
+      "elevation_max": 7.0,
+      "slope_mean_deg": 1.146
+    },
+    {
+      "point_id": "S17C33_EAC_0006",
+      "role": "canary",
+      "status": "ok",
+      "elevation_mean": 8.6,
+      "elevation_min": 7.0,
+      "elevation_max": 10.0,
+      "slope_mean_deg": 1.146
+    },
+    {
+      "point_id": "S17C33_EAC_0007",
+      "role": "canary",
+      "status": "ok",
+      "elevation_mean": 14.0,
+      "elevation_min": 12.0,
+      "elevation_max": 16.0,
+      "slope_mean_deg": 1.146
+    },
+    {
+      "point_id": "S17C33_EAC_0008",
+      "role": "canary",
+      "status": "ok",
+      "elevation_mean": 9.2,
+      "elevation_min": 8.0,
+      "elevation_max": 13.0,
+      "slope_mean_deg": 2.862
+    },
+    {
+      "point_id": "S17C33_EAC_0009",
+      "role": "canary",
+      "status": "ok",
+      "elevation_mean": 11.2,
+      "elevation_min": 8.0,
+      "elevation_max": 14.0,
+      "slope_mean_deg": 1.718
+    },
+    {
+      "point_id": "S17C33_EAC_0010",
+      "role": "canary",
+      "status": "ok",
+      "elevation_mean": 15.4,
+      "elevation_min": 13.0,
+      "elevation_max": 19.0,
+      "slope_mean_deg": 2.291
+    },
+    {
+      "point_id": "S17C33_EAC_0011",
+      "role": "canary",
+      "status": "ok",
+      "elevation_mean": 13.2,
+      "elevation_min": 11.0,
+      "elevation_max": 16.0,
+      "slope_mean_deg": 2.291
+    },
+    {
+      "point_id": "S17C6_CANARY_REC_00001",
+      "role": "original_control",
+      "status": "ok",
+      "elevation_mean": 77.0,
+      "elevation_min": 59.0,
+      "elevation_max": 95.0,
+      "slope_mean_deg": 15.642
+    }
+  ]
+}

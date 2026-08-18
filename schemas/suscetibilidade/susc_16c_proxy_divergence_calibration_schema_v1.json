@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-16C proxy divergence and calibration review schema",
+  "type": "object",
+  "description": "Review-only schema for SUSC-16C diagnostics. It supports proxy divergence analysis and future calibration design without creating score v7, ground truth, training data, or model artifacts.",
+  "required": [
+    "row_id",
+    "patch_id",
+    "score_v6",
+    "score_v6_class",
+    "case_class",
+    "review_only",
+    "score_v7_created",
+    "allowed_for_training",
+    "can_be_ground_truth",
+    "can_be_used_as_ground_truth"
+  ],
+  "properties": {
+    "row_id": { "type": "string" },
+    "case_id": { "type": "string" },
+    "patch_id": { "type": "string" },
+    "region": { "type": "string" },
+    "group_type": { "type": "string" },
+    "footprint_id": { "type": "string" },
+    "footprint_type": { "type": "string" },
+    "footprint_quality_tier": { "type": "string" },
+    "evidence_strength": { "type": "string" },
+    "overlap_ratio": { "type": ["number", "string"] },
+    "distance_m": { "type": ["number", "string"] },
+    "score_v6": { "type": ["number", "string"] },
+    "score_v6_class": { "type": "string" },
+    "score_percentile_region": { "type": ["number", "string"] },
+    "case_class": {
+      "enum": [
+        "high_confidence_underestimated_event_patch",
+        "medium_confidence_underestimated_event_patch",
+        "low_confidence_underestimated_event_patch",
+        "score_v6_consistent_event_patch",
+        "score_v6_overestimated_control_patch",
+        "insufficient_evidence_case"
+      ]
+    },
+    "diagnostic_concept": {
+      "enum": [
+        "score_v6_underestimation_case",
+        "score_v6_overestimation_case",
+        "feature_supports_observed_footprint",
+        "feature_contradicts_observed_footprint",
+        "component_underweighted_candidate",
+        "component_overweighted_candidate",
+        "footprint_quality_limited",
+        "proxy_calibration_candidate",
+        "score_v7_not_created",
+        "review_only"
+      ]
+    },
+    "is_event_patch": { "enum": ["true", "false"] },
+    "is_control_patch": { "enum": ["true", "false"] },
+    "is_low_score_event_case": { "enum": ["true", "false"] },
+    "is_high_score_event_case": { "enum": ["true", "false"] },
+    "is_calibration_candidate_case": { "enum": ["true", "false"] },
+    "can_be_ground_truth": { "const": "false" },
+    "can_be_used_as_ground_truth": { "const": "false" },
+    "allowed_for_training": { "const": "false" },
+    "review_only": { "const": "true" },
+    "score_v7_created": { "const": "false" }
+  },
+  "additionalProperties": true
+}

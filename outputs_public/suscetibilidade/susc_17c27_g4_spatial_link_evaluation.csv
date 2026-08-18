@@ -1,0 +1,2 @@
+g4_evaluation_id,observed_event_candidate_id,candidate_patch_id,has_observed_geometry_or_geocodable_location,distance_to_patch_m,uncertainty_m,within_patch_or_acceptable_buffer,G4_vinculo_espacial_evento,blocking_reason,review_only
+S17C27_G4_0001,S17C27_OEC_0001,S17C6_CANARY_REC_00001,false,not_computable_no_geometry,10000_or_more_city_level,false,false,sem geometria/endereco patch-level; localizacao apenas cidade/regiao; incerteza alta demais para G4 patch-level,true

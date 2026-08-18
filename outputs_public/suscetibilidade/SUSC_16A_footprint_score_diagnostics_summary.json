@@ -1,0 +1,23 @@
+{
+  "eligible_footprints_count": 12,
+  "eligible_patch_links_count": 65,
+  "unique_observational_patches": 62,
+  "mean_score_footprint_patches": 0.457698,
+  "median_score_footprint_patches": 0.430251,
+  "score_class_distribution": {
+    "medium": 26,
+    "low": 31,
+    "high": 8
+  },
+  "hit_rate_top_10": 0.0,
+  "hit_rate_top_20": 0.0,
+  "hit_rate_top_30": 0.0,
+  "low_score_footprint_cases": 5,
+  "high_score_footprint_cases": 1,
+  "ready_for_16B_score_evaluation": true,
+  "ready_for_score_v7_discussion": false,
+  "score_v7_created": false,
+  "can_be_ground_truth": false,
+  "allowed_for_training": false,
+  "review_only": true
+}

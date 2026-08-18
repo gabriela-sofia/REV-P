@@ -1,0 +1,14 @@
+region,feature_name,event_mean,control_mean,difference_event_minus_control,expected_direction_for_susceptibility,observed_direction,direction_agreement,sample_size_event,sample_size_control,review_only
+curitiba,hand_mean,21.054347,9.711021,11.343326,lower_in_event,higher_in_event,feature_direction_divergence,65,38,true
+curitiba,slope_mean,3.378453,1.922561,1.455892,lower_in_event,higher_in_event,feature_direction_divergence,65,38,true
+curitiba,distance_to_water_mean,2543.505963,1948.066521,595.439442,lower_in_event,higher_in_event,feature_direction_divergence,65,38,true
+curitiba,twi_mean,49.307394,194.492847,-145.185453,higher_in_event,lower_in_event,feature_direction_divergence,65,38,true
+curitiba,flow_accumulation_mean,1.383877,2.023965,-0.640088,higher_in_event,lower_in_event,feature_direction_divergence,65,38,true
+curitiba,urban_prop,0.805154,0.779867,0.025287,higher_in_event,higher_in_event,feature_direction_agreement,65,38,true
+curitiba,ndbi_mean,-0.027664,0.008126,-0.035789,higher_in_event,lower_in_event,feature_direction_divergence,65,38,true
+curitiba,ndvi_mean,0.436733,0.403252,0.033481,lower_in_event,higher_in_event,feature_direction_divergence,65,38,true
+curitiba,mndwi_mean,-0.444999,-0.438863,-0.006136,higher_in_event,lower_in_event,feature_direction_divergence,65,38,true
+curitiba,chirps_3d_mm,0.0,0.0,0.0,higher_in_event,equal,feature_direction_inconclusive,65,38,true
+curitiba,chirps_7d_mm,27.118737,27.622473,-0.503736,higher_in_event,lower_in_event,feature_direction_divergence,65,38,true
+curitiba,chirps_30d_mm,126.948752,133.586317,-6.637565,higher_in_event,lower_in_event,feature_direction_divergence,65,38,true
+curitiba,runoff_context_7d,0.923817,1.813886,-0.89007,higher_in_event,lower_in_event,feature_direction_divergence,65,38,true

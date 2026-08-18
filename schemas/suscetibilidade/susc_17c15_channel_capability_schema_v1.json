@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SUSC-17C15 channel capability schema v1",
+  "type": "object",
+  "required": [
+    "capability_id",
+    "formal_request_id",
+    "provider_name",
+    "channel_id",
+    "channel_type",
+    "channel_reference",
+    "channel_status",
+    "driver_name",
+    "can_probe_publicly",
+    "can_collect_publicly",
+    "requires_network",
+    "requires_login",
+    "requires_captcha",
+    "requires_manual_protocol",
+    "requires_external_authorization",
+    "can_run_in_build",
+    "can_run_with_network_opt_in",
+    "blocked_reason",
+    "review_only",
+    "trainable",
+    "ground_truth"
+  ],
+  "properties": {
+    "capability_id": {
+      "type": "string",
+      "pattern": "^S17C15_CAP_"
+    },
+    "driver_name": {
+      "enum": [
+        "OfficialStaticDownloadDriver",
+        "OfficialPageProbeDriver",
+        "OfficialPdfTextProbeDriver",
+        "OfficialDataPortalDriver",
+        "OfficialSensorCatalogProbeDriver",
+        "BlockedAuthenticatedPortalDriver"
+      ]
+    },
+    "can_run_in_build": {
+      "const": "false"
+    },
+    "review_only": {
+      "const": "true"
+    },
+    "trainable": {
+      "const": "false"
+    },
+    "ground_truth": {
+      "const": "false"
+    }
+  }
+}

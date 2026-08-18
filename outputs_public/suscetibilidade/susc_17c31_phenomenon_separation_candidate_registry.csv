@@ -1,0 +1,43 @@
+phenomenon_separation_candidate_id,source_artifact_manifest_id,candidate_patch_id,event_id,location_text,phenomenon_text,hydrological_signal,mass_movement_signal,hydrological_separated_by_location,mass_movement_excluded_for_location,evidence_snippet,can_evaluate_g5d,review_only
+S17C31_PHSEP_0001,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Afogados,hidrologico,true,false,true,true,Vistoria Alagado / Analise Visual Estrutural @ Afogados,true,true
+S17C31_PHSEP_0002,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Agua Fria,movimento_de_massa,false,true,false,false,Vistoria /  @ Agua Fria,true,true
+S17C31_PHSEP_0003,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Alto Jose Bonifacio ,movimento_de_massa,false,true,false,false,Vistoria / Notificacao de Situacao de Risco @ Alto Jose Bonifacio ,true,true
+S17C31_PHSEP_0004,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Alto Santa Terezinha,movimento_de_massa,false,true,false,false,Vistoria /  @ Alto Santa Terezinha,true,true
+S17C31_PHSEP_0005,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Apipucos,hidrologico,true,false,true,true,Monitoramento Alagado / Analise Visual Estrutural @ Apipucos,true,true
+S17C31_PHSEP_0006,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Apipucos ,movimento_de_massa,false,true,false,false,Vistoria / Orientado a Sair do Imovel em Caso de Chuva @ Apipucos ,true,true
+S17C31_PHSEP_0007,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Areias,hidrologico,true,false,true,true,Vistoria Alagado / Analise Visual Estrutural @ Areias,true,true
+S17C31_PHSEP_0008,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Barro,movimento_de_massa,false,true,false,false,Vistoria / Mapeamento de Area de Risco @ Barro,true,true
+S17C31_PHSEP_0009,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Beberibe,misto,true,true,false,false,Vistoria Alagado / Analise Visual Estrutural @ Beberibe,true,true
+S17C31_PHSEP_0010,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Bomba do Hemeterio,movimento_de_massa,false,true,false,false,Vistoria /  @ Bomba do Hemeterio,true,true
+S17C31_PHSEP_0011,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Brejo da Guabiraba,movimento_de_massa,false,true,false,false,Vistoria / Atendimento Social @ Brejo da Guabiraba,true,true
+S17C31_PHSEP_0012,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Brejo de Beberibe,hidrologico,true,false,true,true,Vistoria Alagado / Analise Visual Estrutural @ Brejo de Beberibe,true,true
+S17C31_PHSEP_0013,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Cajueiro,misto,true,true,false,false,Vistoria Alagado / Analise Visual Estrutural @ Cajueiro,true,true
+S17C31_PHSEP_0014,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Campina do Barreto,hidrologico,true,false,true,true,Monitoramento Alagado / Mapeamento de Area de Risco @ Campina do Barreto,true,true
+S17C31_PHSEP_0015,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Casa Amarela ,movimento_de_massa,false,true,false,false,Vistoria / Notificacao de Situacao de Risco @ Casa Amarela ,true,true
+S17C31_PHSEP_0016,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Caxanga,hidrologico,true,false,true,true,Monitoramento Alagado / Mapeamento de Area de Risco @ Caxanga,true,true
+S17C31_PHSEP_0017,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Cohab,movimento_de_massa,false,true,false,false,Vistoria / Analise Visual Estrutural @ Cohab,true,true
+S17C31_PHSEP_0018,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Coqueiral,misto,true,true,false,false,Vistoria Alagado / Analise Visual Estrutural @ Coqueiral,true,true
+S17C31_PHSEP_0019,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Cordeiro,hidrologico,true,false,true,true,Vistoria Alagado / Analise Visual Estrutural @ Cordeiro,true,true
+S17C31_PHSEP_0020,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Corrego do Jenipapo,misto,true,true,false,false,Vistoria Alagado / Analise Visual Estrutural @ Corrego do Jenipapo,true,true
+S17C31_PHSEP_0021,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Dois Irmaos,movimento_de_massa,false,true,false,false,Vistoria / Atendimento Social @ Dois Irmaos,true,true
+S17C31_PHSEP_0022,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Dois Unidos,misto,true,true,false,false,Vistoria /  @ Dois Unidos,true,true
+S17C31_PHSEP_0023,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Estancia,hidrologico,true,false,true,true,Monitoramento Alagado / Analise Visual Estrutural @ Estancia,true,true
+S17C31_PHSEP_0024,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Fundao,movimento_de_massa,false,true,false,false,Vistoria /  @ Fundao,true,true
+S17C31_PHSEP_0025,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Guabiraba,misto,true,true,false,false,Vistoria Alagado / Analise Visual Estrutural @ Guabiraba,true,true
+S17C31_PHSEP_0026,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Ibura ,movimento_de_massa,false,true,false,false,Vistoria / Analise Visual Estrutural @ Ibura ,true,true
+S17C31_PHSEP_0027,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Imbiribeira,hidrologico,true,false,true,true,Vistoria Alagado / Analise Visual Estrutural @ Imbiribeira,true,true
+S17C31_PHSEP_0028,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Ipsep,hidrologico,true,false,true,true,Vistoria Alagado / Analise Visual Estrutural @ Ipsep,true,true
+S17C31_PHSEP_0029,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Iputinga,hidrologico,true,false,true,true,Vistoria Alagado / Analise Visual Estrutural @ Iputinga,true,true
+S17C31_PHSEP_0030,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Jardim Sao Paulo,movimento_de_massa,false,true,false,false,Vistoria / Orientado a Sair do Imovel em Caso de Chuva @ Jardim Sao Paulo,true,true
+S17C31_PHSEP_0031,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Jiquia,hidrologico,true,false,true,true,Monitoramento Alagado / Analise Visual Estrutural @ Jiquia,true,true
+S17C31_PHSEP_0032,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Jordao,movimento_de_massa,false,true,false,false,Vistoria / Analise Visual Estrutural @ Jordao,true,true
+S17C31_PHSEP_0033,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Jordao ,movimento_de_massa,false,true,false,false,Vistoria / Analise Visual Estrutural @ Jordao ,true,true
+S17C31_PHSEP_0034,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Linha do Tiro,misto,true,true,false,false,Vistoria / Orientado a Sair do Imovel em Caso de Chuva @ Linha do Tiro,true,true
+S17C31_PHSEP_0035,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Macaxeira ,movimento_de_massa,false,true,false,false,Vistoria / Orientado a Sair do Imovel em Caso de Chuva @ Macaxeira ,true,true
+S17C31_PHSEP_0036,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Monteiro,hidrologico,true,false,true,true,Vistoria Alagado / Analise Visual Estrutural @ Monteiro,true,true
+S17C31_PHSEP_0037,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Nao Informado,movimento_de_massa,false,true,false,false,Vistoria / Orientado a Sair do Imovel em Caso de Chuva @ Nao Informado,true,true
+S17C31_PHSEP_0038,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Nova Descoberta,movimento_de_massa,false,true,false,false,Vistoria / Orientado a Sair do Imovel em Caso de Chuva @ Nova Descoberta,true,true
+S17C31_PHSEP_0039,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Passarinho,movimento_de_massa,false,true,false,false,Vistoria / Atendimento Social @ Passarinho,true,true
+S17C31_PHSEP_0040,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Pina,hidrologico,true,false,true,true,Vistoria em Imveis / Analise Visual Estrutural @ Pina,true,true
+S17C31_PHSEP_0041,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Varzea,misto,true,true,false,false,Colocao de Lonas Plsticas / Rocagem @ Varzea,true,true
+S17C31_PHSEP_0042,S17C31_ART_0003,S17C6_CANARY_REC_00001,REC_2022_05_24_30,Vasco da Gama ,movimento_de_massa,false,true,false,false,Vistoria / Orientado a Sair do Imovel em Caso de Chuva @ Vasco da Gama ,true,true

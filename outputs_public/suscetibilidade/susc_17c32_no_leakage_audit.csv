@@ -1,0 +1,12 @@
+no_leakage_audit_id,object_id,object_type,uses_bairro_centroid_as_g4d,uses_osm_alone_to_open_g4d,uses_risk_sector_to_open_g4d,invented_coordinate,logradouro_without_number_marked_high_uncertainty,uses_geocoded_point_as_ground_truth,uses_candidate_as_training_label,passes_no_leakage,blocking_reason,review_only
+S17C32_LEAK_0001,S17C32_GEO_0001,geocoded_point,false,false,false,false,true,false,false,true,geocode OSM street-level review-only; nao abre G4d sozinho,true
+S17C32_LEAK_0002,S17C32_GEO_0002,geocoded_point,false,false,false,false,true,false,false,true,geocode OSM street-level review-only; nao abre G4d sozinho,true
+S17C32_LEAK_0003,S17C32_GEO_0003,geocoded_point,false,false,false,false,true,false,false,true,geocode OSM street-level review-only; nao abre G4d sozinho,true
+S17C32_LEAK_0004,S17C32_GEO_0004,geocoded_point,false,false,false,false,true,false,false,true,geocode OSM street-level review-only; nao abre G4d sozinho,true
+S17C32_LEAK_0005,S17C32_GEO_0005,geocoded_point,false,false,false,false,true,false,false,true,geocode OSM street-level review-only; nao abre G4d sozinho,true
+S17C32_LEAK_0006,S17C32_GEO_0006,geocoded_point,false,false,false,false,true,false,false,true,geocode OSM street-level review-only; nao abre G4d sozinho,true
+S17C32_LEAK_0007,S17C32_GEO_0007,geocoded_point,false,false,false,false,true,false,false,true,geocode OSM street-level review-only; nao abre G4d sozinho,true
+S17C32_LEAK_0008,S17C32_GEO_0008,geocoded_point,false,false,false,false,true,false,false,true,geocode OSM street-level review-only; nao abre G4d sozinho,true
+S17C32_LEAK_0009,S17C32_GEO_0009,geocoded_point,false,false,false,false,true,false,false,true,geocode OSM street-level review-only; nao abre G4d sozinho,true
+S17C32_LEAK_0010,S17C32_GEO_0010,geocoded_point,false,false,false,false,true,false,false,true,geocode OSM street-level review-only; nao abre G4d sozinho,true
+S17C32_LEAK_0011,S17C32_GEO_0011,geocoded_point,false,false,false,false,true,false,false,true,geocode OSM street-level review-only; nao abre G4d sozinho,true

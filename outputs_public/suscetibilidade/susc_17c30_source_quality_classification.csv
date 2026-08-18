@@ -1,0 +1,13 @@
+source_quality_classification_id,source_id,source_name,source_family,authority_tier,total_source_quality_score,source_quality_class,blocking_reason,review_only
+S17C30_CLS_0001,S17C30_SRC_C28_0001,Agencia Brasil / EBC (empresa publica federal),agencia_brasil,institutional_public,24,B_official_context_candidate,none,true
+S17C30_CLS_0002,S17C30_SRC_C28_0002,Agencia Brasil / EBC (empresa publica federal),agencia_brasil,institutional_public,27,A_institutional_event_candidate,none,true
+S17C30_CLS_0003,S17C30_SRC_C28_0003,Agencia Brasil / EBC (empresa publica federal),agencia_brasil,institutional_public,25,A_institutional_event_candidate,none,true
+S17C30_CLS_0004,S17C30_SRC_C28_0004,Agencia Brasil / EBC (empresa publica federal),agencia_brasil,institutional_public,26,A_institutional_event_candidate,none,true
+S17C30_CLS_0005,S17C30_SRC_C28_0005,Agencia Brasil / EBC (empresa publica federal),agencia_brasil,institutional_public,25,A_institutional_event_candidate,none,true
+S17C30_CLS_0006,S17C30_SRC_C29_0001,Agencia Brasil / EBC (empresa publica federal),agencia_brasil,institutional_public,28,A_institutional_event_candidate,none,true
+S17C30_CLS_0007,S17C30_SRC_C29_0002,Agencia Brasil / EBC (empresa publica federal),agencia_brasil,institutional_public,26,A_institutional_event_candidate,none,true
+S17C30_CLS_0008,S17C30_SRC_C29_0003,Agencia Brasil / EBC (empresa publica federal),agencia_brasil,institutional_public,27,A_institutional_event_candidate,none,true
+S17C30_CLS_0009,S17C30_SRC_C29_0004,Agencia Brasil / EBC (empresa publica federal),agencia_brasil,institutional_public,29,A_institutional_event_candidate,none,true
+S17C30_CLS_0010,S17C30_SRC_C29_0005,Agencia Brasil / EBC (empresa publica federal),agencia_brasil,institutional_public,27,A_institutional_event_candidate,none,true
+S17C30_CLS_0011,S17C30_SRC_C29_0006,Agencia Brasil / EBC (empresa publica federal),agencia_brasil,institutional_public,30,A_institutional_event_candidate,none,true
+S17C30_CLS_0012,S17C30_SRC_C29_0007,Agencia Brasil / EBC (empresa publica federal),agencia_brasil,institutional_public,29,A_institutional_event_candidate,none,true

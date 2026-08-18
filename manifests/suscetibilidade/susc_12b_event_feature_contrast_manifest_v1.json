@@ -1,0 +1,47 @@
+{
+  "artifact": "SUSC-12B event feature contrast dataset",
+  "dataset": "datasets/suscetibilidade/susc_12b_event_feature_contrast_dataset_v1.csv",
+  "dataset_sha256": "2d86b51ce5badf49b21724775f5772b4626dd73c59efadf595e8943297132c46",
+  "schema": "schemas/suscetibilidade/susc_12b_observed_event_feature_contrast_schema_v1.json",
+  "rows": 23,
+  "groups": {
+    "moderate_observed_event_patch": 9,
+    "weak_context_patch": 5,
+    "no_documented_event_control": 9
+  },
+  "event_like_patch_count": 9,
+  "weak_context_patch_count": 5,
+  "control_count": 9,
+  "features_used_for_score_v6": [
+    "chirps_30d_mm",
+    "chirps_3d_mm",
+    "chirps_7d_mm",
+    "distance_to_water_mean",
+    "elevation_mean",
+    "flow_acc_log_mean",
+    "hand_mean",
+    "mndwi_mean",
+    "ndbi_mean",
+    "ndvi_mean",
+    "rain_7d_30d_ratio",
+    "rain_persistence_index",
+    "runoff_context_30d",
+    "runoff_context_7d",
+    "slope_mean",
+    "tpi_250m_mean",
+    "twi_mean",
+    "urban_prop",
+    "vegetation_prop"
+  ],
+  "feature_cards": "outputs_public/suscetibilidade/feature_cards/susc_feature_cards_v1.json",
+  "feature_action_matrix": "outputs_public/suscetibilidade/SUSC_06B_feature_action_matrix.csv",
+  "can_be_ground_truth": false,
+  "allowed_for_training": false,
+  "review_only": true,
+  "scientific_status": "observed_event_feature_contrast_review_only",
+  "limitations": [
+    "Eventos fortes/moderados sao escassos; controles nao representam ausencia formal.",
+    "risk_area_context, alert_only e contextos documentais nao calibram como evento observado forte.",
+    "Sem treino supervisionado, sem ground truth e sem modelo persistido."
+  ]
+}
