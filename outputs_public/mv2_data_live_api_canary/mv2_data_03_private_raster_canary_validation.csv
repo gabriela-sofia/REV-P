@@ -1,2 +1,0 @@
-validation_id,execution_id,raster_executed,public_leak_detected,private_file_exists,size_ok,sha256_ok,bands_ok,scl_ok,crs_ok,geotransform_ok,validation_status,notes
-MV2_DATA_03_VAL_01,MV2_DATA_03_EXEC_01,false,false,false,NA,NA,NA,NA,NA,NA,NO_RASTER_EXECUTED_OK,nenhum raster executado; fail-closed preservado

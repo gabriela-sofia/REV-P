@@ -1,9 +1,0 @@
-impact_id,component,canary_validates,affects_128_targets,affects_day10,affects_sandbox,allowed_next_step,forbidden_interpretation,notes
-MV2_DATA_03_IMP_01,API auth validated,true,false,false,false,reusar credencial via env var para probes de metadados,tratar auth ok como lineage do corpus,"canary oficial = prova tecnica, nao baseline do corpus"
-MV2_DATA_03_IMP_02,metadata probe validated,true,false,false,false,consultar metadados Sentinel dos candidates oficiais,preencher scene_id dos 128 targets sem recuperacao real,"canary oficial = prova tecnica, nao baseline do corpus"
-MV2_DATA_03_IMP_03,raster private path validated,true,false,false,false,baixar 1 raster canary em diretorio privado,publicar raster ou baixar os 128 targets,"canary oficial = prova tecnica, nao baseline do corpus"
-MV2_DATA_03_IMP_04,checksum validation,true,false,false,false,verificar integridade do raster privado por SHA256,assumir corpus baixado/integro,"canary oficial = prova tecnica, nao baseline do corpus"
-MV2_DATA_03_IMP_05,band/SCL validation,true,false,false,false,confirmar bandas B02..B12 + SCL no raster canary,gerar feature espectral do corpus,"canary oficial = prova tecnica, nao baseline do corpus"
-MV2_DATA_03_IMP_06,corpus lineage still missing,false,false,false,false,recuperar scene_id/datetime/tile/cloud dos 128 via DATA-01/02,considerar lineage do corpus resolvido pelo canary,"canary oficial = prova tecnica, nao baseline do corpus;gargalo do corpus permanece"
-MV2_DATA_03_IMP_07,Dia 10 still blocked,false,false,false,false,manter Dia 10 bloqueado ate lineage forte + raster do corpus validado,desbloquear Dia 10 com base no canary oficial,"canary oficial = prova tecnica, nao baseline do corpus;gargalo do corpus permanece"
-MV2_DATA_03_IMP_08,sandbox still blocked,false,false,false,false,manter sandbox bloqueado,abrir sandbox/treino com base no canary,"canary oficial = prova tecnica, nao baseline do corpus;gargalo do corpus permanece"

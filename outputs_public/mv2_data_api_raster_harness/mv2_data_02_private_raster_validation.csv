@@ -1,3 +1,0 @@
-validation_id,canary_id,raster_executed,private_path_registered,public_leak_detected,file_exists_private,size_bytes,sha256,bands_ok,scl_ok,crs_ok,geotransform_ok,validation_status,notes
-MV2_DATA_02_PRV_001,MV2_DATA_02_CANARY_01,false,,false,false,,,NA,NA,NA,NA,NO_RASTER_EXECUTED,nenhum raster executado; fail-closed preservado
-MV2_DATA_02_PRV_002,MV2_DATA_02_CANARY_02,false,,false,false,,,NA,NA,NA,NA,NO_RASTER_EXECUTED,nenhum raster executado; fail-closed preservado

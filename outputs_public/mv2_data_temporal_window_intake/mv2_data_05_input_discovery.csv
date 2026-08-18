@@ -1,5 +1,0 @@
-input_id,path_or_ref,location_type,exists,is_public_template,is_filled_candidate,rows,read_status,notes
-MV2_DATA_05_IN_01,outputs_public/mv2_data_corpus_metadata_probe/mv2_data_04_temporal_window_template.csv,PUBLIC_TEMPLATE,true,true,false,15,READ_OK,template DATA-04 (campos temporais vazios; fallback sem promocao)
-MV2_DATA_05_IN_02,local_only/mv2_data_temporal_window/mv2_data_05_temporal_window_filled.csv,PRIVATE_FILLED_CANDIDATE,false,false,false,0,NOT_PRESENT,git-ignored; humano deposita o template preenchido aqui
-MV2_DATA_05_IN_03,data_local/mv2_data_temporal_window/mv2_data_05_temporal_window_filled.csv,PRIVATE_FILLED_CANDIDATE,false,false,false,0,NOT_PRESENT,git-ignored; humano deposita o template preenchido aqui
-MV2_DATA_05_IN_04,private_outputs/mv2_data_temporal_window/mv2_data_05_temporal_window_filled.csv,PRIVATE_FILLED_CANDIDATE,false,false,false,0,NOT_PRESENT,git-ignored; humano deposita o template preenchido aqui

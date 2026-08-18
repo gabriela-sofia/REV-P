@@ -1,3 +1,0 @@
-canary_id,target_id,executed,execution_status,private_raster_path,size_bytes,sha256,bands_present,scl_present,max_download_mb,unmet_requirements,blocking_reason,notes
-MV2_DATA_02_CANARY_01,REFPATCH_PET2022_CPRM_MOINHO_PRETO_S2_V1IX_PRE_EVENT,false,NOT_EXECUTED_GUARDRAIL,,,,,,50,allow_network=false|allow_raster_download=false|allow_canary_download=false|env_REV_P_ALLOW_RASTER_CANARY!=YES,guardrail_fail_closed,nenhum raster baixado; nenhuma chamada de rede
-MV2_DATA_02_CANARY_02,REFPATCH_PET2022_CPRM_MOINHO_PRETO_S2_V1IX_POST_EVENT_SURVEY,false,NOT_EXECUTED_GUARDRAIL,,,,,,50,allow_network=false|allow_raster_download=false|allow_canary_download=false|env_REV_P_ALLOW_RASTER_CANARY!=YES,guardrail_fail_closed,nenhum raster baixado; nenhuma chamada de rede
