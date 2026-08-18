@@ -1,37 +1,62 @@
 # REV-P
 
-O REV-P organiza uma cadeia auditável de evidências para análise físico-ambiental urbana em três regiões brasileiras: Recife, Petrópolis e Curitiba. O projeto usa imagens Sentinel-2, fontes territoriais externas e representações visuais auto-supervisionadas (DINOv2 congelado) para estruturar corpus, inspeções e relatórios destinados à revisão humana. Não há classificador supervisionado, rótulo de treinamento ou predição operacional nesta entrega.
+O REV-P investiga vulnerabilidade urbana a enchentes em três regiões brasileiras — Recife, Curitiba e Petrópolis — a partir de uma base físico-hidrológica causal. O modelo não tenta "descobrir" o que causa enchente: parte de relações físicas já conhecidas (acúmulo de água, capacidade de escoamento, proximidade a corpos hídricos, chuva antecedente) e testa essas relações contra eventos reais registrados por fontes oficiais (Defesa Civil, ANA, Diário Oficial, bases internacionais de inundação). Dado orbital (Sentinel-1/2) entra só como evidência auxiliar — nunca como variável causal.
 
-**Contribuição em uma frase:** um protocolo reprodutível que separa, com rastreabilidade auditável, evidência contextual de referência candidata e de ground truth operacional — e documenta explicitamente o que ainda não pode ser afirmado.
+**Método principal**: regressão logística penalizada de Firth (rota interpretável, adequada a eventos raros) com GBM monotônico causal como diagnóstico de não linearidade, nunca como substituto do modelo interpretável.
 
 A narrativa científica completa (problema, motivação, contribuição, limites) está em [`docs/metodologia_cientifica/revp_narrativa_cientifica_consolidada.md`](docs/metodologia_cientifica/revp_narrativa_cientifica_consolidada.md).
 
 ---
 
-## O que o projeto faz
+## Estado atual por região
 
-O REV-P constrói e audita uma base de evidências estruturais e territoriais:
+| Região | Estado | Resultado |
+|---|---|---|
+| **Recife** | Modelo causal maduro, auditado ponta a ponta | Firth penalizado (`v12`), n=278 eventos reais (154 positivos / 124 negativos), **LOO-AUC = 0,68** (repetido 5-fold: 0,67 ± 0,01). Coerência física preservada nos 6 sinais de coeficiente. Motor de inferência local + API de contrato entregues. |
+| **Curitiba** | Modelo treinado, mas não generaliza — reportado como tal | Firth (`SUSC-20N`) com AUC embaralhado de 0,65 colapsa para 0,52 em holdout temporal real de 2026. Sete diagnósticos independentes descartaram vazamento espacial, sazonalidade, ruído de amostra, deriva administrativa e correlação com El Niño/La Niña como causa. Não linearidade real confirmada (GBM = 0,59), mas não resolve o colapso. Rota declarada continua linear/interpretável. |
+| **Petrópolis** | Bloqueado | Enchente e deslizamento não estão separados nas fontes disponíveis — dado insuficiente para inferência nesta entrega. |
+| **Frente externa (Reino Unido / Copernicus EMS)** | Piloto internacional concluído | Piloto UK: 7.476 pontos, 201 eventos independentes, AUC agrupada 0,79. Multirregião Copernicus: 25.249 pontos em 119 áreas (serra e planície), transferência serra↔planície sem perda relevante de desempenho (0,77). Achado metodológico: a definição de negativo afeta a métrica mais do que o fenômeno em si — AUC alto pode medir o critério de amostragem, não a suscetibilidade real. |
 
-- organiza **59 patches territoriais/contextuais** distribuídos entre as três regiões (Recife 18, Petrópolis 27, Curitiba 14);
-- mantém um manifesto de **128 assets Sentinel candidatos** como inventário de entrada do pipeline visual;
-- extrai embeddings com encoder **DINOv2 congelado** — 12 embeddings reais (4 por região, 768 dimensões) — e aplica análise estrutural: similaridade, k-NN, PCA, medoids, outliers;
-- aplica o **Protocolo C** para organizar evidências externas candidatas, distinguindo: evidência contextual, referência temporal, referência candidata e ground truth operacional (este último ainda não estabelecido em nenhuma região);
-- produz **figuras, tabelas, métricas e relatórios auditáveis** para apoio à revisão e à entrega acadêmica;
-- registra em manifests e registries os estados metodológicos, bloqueios, lacunas e decisões, mantendo rastreabilidade completa.
+Em nenhuma das três regiões brasileiras há negativo formal aceito (`C4_BLOCKED_NO_FORMAL_NEGATIVES`); a ausência de rótulo negativo oficial é uma condição declarada e auditável, não contornada por proxy.
 
 ---
 
-## O que o projeto ainda não faz
+## Onde estão os resultados
 
-O REV-P opera em modo **review-only**. Nesta versão:
+- **Recife** (pipeline completo — aquisição de evento, features físico-hidrológicas, modelagem, motor de inferência, API): [`outputs_public/data/susc_20a_aquisicao_eventos_reais_recife/`](outputs_public/data/susc_20a_aquisicao_eventos_reais_recife/) até [`susc_20f_pipeline_geoprocessamento_sob_demanda_recife/`](outputs_public/data/susc_20f_pipeline_geoprocessamento_sob_demanda_recife/). Relatório final: `susc_20c_modelagem_validacao_estatistica_rigorosa_recife/reports/RELATORIO_v12_master.md`.
+- **Camadas físicas genéricas** (HAND/TWI, candidatos de água Sentinel-1/2, janelas de evento): [`outputs_public/data/susc_20g_hand_twi_dinfinity_generico/`](outputs_public/data/susc_20g_hand_twi_dinfinity_generico/) até `susc_20j_sentinel1_sar_water_candidates/`.
+- **Curitiba** (aquisição, features, modelagem e a cadeia completa de diagnóstico do colapso temporal): [`outputs_public/data/susc_20k_siac156_curitiba_flood_candidates/`](outputs_public/data/susc_20k_siac156_curitiba_flood_candidates/) — relatórios `susc_20l` a `susc_21a` em sua pasta `reports/`.
+- **Frente externa UK/Copernicus EMS** (script, tabela de pontos harmonizada, modelos piloto): [`scripts/externo/`](scripts/externo/) e [`docs/metodologia_cientifica/ext_tabela_unica_e_pool_harmonizado_v1.md`](docs/metodologia_cientifica/ext_tabela_unica_e_pool_harmonizado_v1.md).
+- **Figuras finais** (mapas por região, matriz de vizinhança DINOv2, PCA, heatmap de similaridade): [`outputs_public/figures/`](outputs_public/figures/).
+- **Embeddings DINOv2** (análise estrutural auxiliar — similaridade, k-NN, PCA, medoids, outliers; testados e descartados como feature causal via comparação A/B contra o modelo físico): [`docs/metodologia_cientifica/PLANO_ACAO_produto_v1.md`](docs/metodologia_cientifica/PLANO_ACAO_produto_v1.md), seção 0 e Fase 1.
+- **Linhagem do pipeline SUSC-17→19** (versão anterior ao pivô causal SUSC-20, review-only): [`outputs_public/suscetibilidade/`](outputs_public/suscetibilidade/) e [`datasets/suscetibilidade/`](datasets/suscetibilidade/). Mantida integralmente no repositório como registro de como o projeto chegou à rota atual — não é o resultado principal, mas documenta a evolução metodológica.
 
-- não declara ground truth operacional em nível de patch em nenhuma região;
-- não cria rótulos binários de treinamento;
-- não treina classificador supervisionado;
-- não usa DINOv2 como detector ou preditor de inundação;
-- não transforma evidência contextual em validação automática de evento observado.
+---
 
-Essas restrições são escolhas metodológicas, não falhas técnicas. A separação entre evidência contextual, referência candidata e rótulo operacional é parte central do design do projeto.
+## Metodologia
+
+O projeto segue um princípio fixo: **a base causal é físico-hidrológica**. Variáveis orbitais (Sentinel-2, CBERS) e representações auto-supervisionadas (DINOv2) entram só como evidência auxiliar de apoio à revisão — nunca como variável causal do modelo, nunca como substituto de física conhecida. O modelo não deve "aprender" a enchente a partir de um padrão de imagem; ele testa hipóteses físicas já estabelecidas contra evento real.
+
+Rota primária: regressão logística penalizada de Firth, escolhida por lidar bem com eventos raros e por manter coeficientes interpretáveis com significância estatística e sinal esperado. GBM monotônico entra apenas como diagnóstico complementar — para checar se há não linearidade real no fenômeno — nunca como modelo de produção, e é sempre restrito a manter a mesma direção causal esperada em cada feature.
+
+Validação: leave-one-out cross-validation (LOO) e k-fold repetido, sempre reportando desvio-padrão, nunca um único número. Testes de coerência física (sinal e significância de cada coeficiente) fazem parte da validação, não são um passo opcional.
+
+---
+
+## Ambiente de execução
+
+Duas linhas de dependência, não misturar:
+
+- **Linha causal (SUSC — Firth + candidatos interpretáveis)**: ambiente conda dedicado, com trava real de versão de Python (`<3.11`) exigida por `firthlogist`/`interpret`. Configuração em `environment.yml` (conda, recomendado) ou `requirements-susc.txt` (pip/venv). Detalhes em `docs/ambiente_treino_susc.md`.
+- **Linha DINOv2/embeddings** (auxiliar, análise estrutural): `requirements.txt`, ambiente Python padrão.
+
+```bash
+conda env create -f environment.yml
+conda activate revp-susc
+python -m pytest tests -q
+```
+
+Toda a modelagem foi rodada localmente, direto na máquina de desenvolvimento — sem serviço externo de treinamento.
 
 ---
 
@@ -39,166 +64,37 @@ Essas restrições são escolhas metodológicas, não falhas técnicas. A separa
 
 ```text
 REV-P/
-├── configs/          # Templates e checklists de execução local
-├── datasets/         # Registries CSV/JSON, schemas e tabelas auxiliares
-├── docs/             # Documentação técnica e metodológica
-├── manifests/        # Manifests auditáveis de corpus, preflight e validação
-├── outputs_public/   # Artefatos públicos finais
-│   ├── figures/      # Figuras finais para artigo e apresentação
-│   ├── tables/       # Tabelas consolidadas de corpus, evidência e análise
-│   ├── metrics/      # Métricas descritivas e de QA
-│   ├── logs_summary/ # Logs resumidos de execução e testes
-│   ├── execution_reports/  # Relatórios de execução, auditoria e rastreabilidade
-│   └── model/        # Declaração sobre ausência de modelo operacional
-├── scripts/          # Scripts de extração, análise, QA e orquestração
-├── tests/            # Testes automatizados do pipeline
-└── requirements.txt  # Dependências Python
+├── docs/                     # Documentação metodológica e cronograma científico
+├── datasets/                 # Registries, schemas e evidência estruturada do Protocolo C
+│   └── suscetibilidade/      # Linhagem do pipeline SUSC-17→19 (anterior ao pivô causal)
+├── outputs_public/
+│   ├── data/susc_20*/        # Núcleo causal: eventos, features, modelagem, API (por região)
+│   ├── figures/               # Figuras finais para artigo e apresentação
+│   ├── tables/                # Tabelas consolidadas citáveis
+│   ├── metrics/                # Métricas descritivas reais (similaridade, PCA, robustez)
+│   ├── execution_reports/     # Índice de entrega e relatórios de restrição metodológica
+│   ├── model/                 # Estado do modelo por região
+│   └── suscetibilidade/      # Linhagem do pipeline SUSC-17→19 (anterior ao pivô causal)
+├── scripts/externo/           # Frente externa UK/Copernicus EMS
+├── tests/                     # Testes automatizados do pipeline
+└── environment.yml            # Ambiente conda da linha causal (Firth)
 ```
-
----
-
-## Como ler este repositório
-
-- **`README.md`** — mapa principal. Comece por aqui.
-- **`outputs_public/`** — a entrega pública: figuras, tabelas, métricas, relatórios e a declaração de ausência de modelo operacional. É o que sustenta a banca.
-- **`docs/metodologia_cientifica/`** — base metodológica e histórico, incluindo a narrativa consolidada e o índice legível de estágios.
-- **`scripts/`** — reprodução técnica do pipeline.
-- **`tests/`** — validação técnica (determinismo, travas metodológicas, offline).
-- **Códigos `v1*`/`v2*`** — rastreabilidade de etapas, **não** narrativa obrigatória para a banca.
-
-Três camadas de leitura:
-
-- **Principal** — README, narrativa consolidada, figuras e tabelas de `outputs_public/figures/` e `outputs_public/tables/`, declaração em `outputs_public/model/`.
-- **Apêndice** — relatórios de execução, métricas descritivas, auditoria visual.
-- **Histórico** — dossiês por etapa, relatórios em `outputs_public/execution_reports/arquivo_etapas/`, tabelas em `outputs_public/tables/saidas_intermediarias/` e os scripts/testes por microversão. São evidência reproduzível, não resultado final.
-
----
-
-## Cadeia metodológica
-
-O pipeline segue esta sequência:
-
-1. **Corpus territorial** — definição dos 59 patches urbanos por região com documentação de linhagem;
-2. **Pipeline Sentinel-first** — inventário dos 128 assets candidatos, preflight e controle de qualidade de entrada;
-3. **Embeddings DINOv2** — extração com encoder congelado, análise de similaridade, vizinhança, PCA e detecção de outliers;
-4. **Protocolo C** — organização de evidências externas candidatas por região (fontes oficiais, meteorológicas, cartográficas), separação de tipos de referência, adjudicação de gates;
-5. **Busca por ground truth** — tentativa de obter geometria oficial de evento e sobreposição patch-evento; documentada como busca e bloqueio auditável, não como validação;
-6. **Auditoria de continuidade** — rastreabilidade e recuperabilidade da base de trabalho candidata anterior (`v2dz`–`v2ef`), via cadeias `v2es`–`v2ey` e `v2ez`–`v2ff`, sem recuperar ground truth nem substituir base por fallback;
-7. **Auditoria e entrega** — geração de figuras, tabelas, métricas, relatórios e manifests para submissão e revisão.
-
-Cada etapa tem testes automatizados, registries auditáveis e documentação metodológica em `docs/metodologia_cientifica/`. O mapeamento completo dos códigos internos para nomes legíveis está em `docs/metodologia_cientifica/revp_indice_etapas.md`.
-
----
-
-## Como interpretar os resultados
-
-Para evitar leitura equivocada dos artefatos, três pontos são centrais:
-
-- **Protocolo C** é uma cadeia de **evidência para revisão**, não validação operacional. Ele separa evidência contextual, referência temporal, referência candidata e ground truth operacional. As pontuações regionais (Recife 0.76, Curitiba 0.70, Petrópolis 0.55) qualificam **referências candidatas**, não confirmam evento observado. O gate `can_create_training_label` está bloqueado (`C4_BLOCKED_NO_FORMAL_NEGATIVES`): ausência de registro e pseudo-ausência não constituem negativo formal.
-- **DINOv2** entra apenas como **encoder visual congelado** (`facebook/dinov2-with-registers-base`). Os 12 embeddings reais (4 por região, 768 dimensões, com SHA256 registrado) servem a análise estrutural exploratória — similaridade, k-NN, PCA, medoids, outliers. O encoder não é ajustado nem retreinado, não é classificador, não mede acurácia de detecção e não valida inundação observada.
-- **Ground truth ausente** é uma condição declarada, não contornada. Não há rótulo binário, negativo formal ou referência operacional patch-level em nenhuma região (`ground_truth_operational_status = ABSENT`, `training_ready = false`). A base de trabalho candidata anterior (`v2dz`–`v2ef`) está em `ORIGINAL_BASE_REQUIRES_MANUAL_RESTORE`: 53 registros não recuperáveis automaticamente, sem fallback. Referência recuperável não é conteúdo recuperado, e fallback não substitui base original.
-
----
-
-## Como ler a linha do tempo técnica
-
-O REV-P foi construído em muitas trilhas internas de execução, identificadas por códigos `v1*` e `v2*`. Para leitura pública:
-
-- as **microversões não precisam ser lidas uma a uma** pela banca — são rastreabilidade interna;
-- o que importa são os **marcos científicos**: corpus territorial → Sentinel-first → embeddings DINOv2 → Protocolo C → busca por ground truth (bloqueada) → auditoria de continuidade → entrega;
-- os arquivos granulares (scripts, testes, dossiês por etapa) permanecem no repositório como evidência reproduzível, mas em papel de **anexo**;
-- o índice legível dos estágios, com finalidade e status de cada código, está em `docs/metodologia_cientifica/revp_indice_etapas.md`;
-- relatórios de execução intermediários já arquivados ficam em `outputs_public/execution_reports/arquivo_etapas/` e tabelas intermediárias em `outputs_public/tables/saidas_intermediarias/`.
-
----
-
-## Dados e artefatos locais
-
-Arquivos pesados não são versionados no GitHub:
-
-- GeoTIFFs Sentinel originais (10–200 MB cada);
-- shapefiles e GeoJSONs brutos;
-- embeddings DINOv2 (`.npz`);
-- dados de elevação (PE3D/MDE);
-- logs completos e caches locais.
-
-O repositório público contém manifests, registries, hashes, tabelas resumidas, figuras derivadas e relatórios leves — o suficiente para verificar a cadeia metodológica sem reproduzir os dados brutos.
-
----
-
-## Estado atual
-
-| Item | Estado |
-|---|---|
-| Corpus territorial | 59 patches (Recife 18, Petrópolis 27, Curitiba 14) |
-| Assets Sentinel candidatos | 128 |
-| Embeddings DINOv2 reais | 12 (4/região, 768D, encoder congelado) |
-| Protocolo C — Recife | Referência candidata validada (pontuação 0.76) |
-| Protocolo C — Curitiba | Referência temporal validada (pontuação 0.70) |
-| Protocolo C — Petrópolis | Referência contextual validada (pontuação 0.55) |
-| Ground truth operacional | Não declarado em nenhuma região |
-| Treinamento supervisionado | Bloqueado por restrições metodológicas |
-| Modelo operacional entregue | Não — ver `outputs_public/model/` |
-
----
-
-## Como reproduzir os relatórios públicos
-
-Preparação do ambiente:
-
-```bash
-python -m venv .venv
-source .venv/bin/activate   # Linux/Mac
-# .\.venv\Scripts\Activate.ps1  # Windows PowerShell
-pip install -r requirements.txt
-```
-
-**Duas linhas de dependência, não misturar**: o `requirements.txt` acima
-serve a linha DINOv2/embeddings (histórica, encerrada como candidata a
-feature — ver `PLANO_ACAO_produto_v1.md`). A linha causal ativa (SUSC — Firth
-penalizado + candidatos interpretáveis como EBM) tem ambiente próprio, com um
-requisito real de versão de Python (<3.11): veja
-`docs/ambiente_treino_susc.md`, `environment.yml` (conda, recomendado) ou
-`requirements-susc.txt` (pip/venv).
-
-Execução dos testes:
-
-```bash
-python -m pytest tests -q
-```
-
-Validação dos artefatos públicos:
-
-```bash
-python scripts/repository/build_outputs_public_delivery.py --validate-only
-```
-
-Geração completa dos artefatos públicos:
-
-```bash
-python scripts/repository/build_outputs_public_delivery.py
-python scripts/repository/build_outputs_public_delivery.py --finalize
-```
-
-O índice principal dos artefatos está em:
-`outputs_public/execution_reports/final_delivery_artifact_index.md`
 
 ---
 
 ## Limitações
 
-- Sem ground truth operacional patch-level: a ausência não é contornada por proxy nem por ausência de evidência negativa.
-- Corpus de embeddings pequeno: 12 vetores reais são suficientes para análise estrutural exploratória, não para validação estatística de desempenho.
-- Geometria de evento observado ausente em Curitiba e Petrópolis: a sobreposição patch-evento não foi executada por falta de geometria oficial.
-- Separação de fenômeno pendente em Petrópolis 2022: inundação e deslizamento coexistem nas fontes; sem separação, a geocodificação controlada permanece bloqueada.
-- Fontes externas oficiais não respondidas: 12 solicitações formais a instituições (COMPDEC, DRM-RJ, Defesa Civil, CPRM) estão pendentes de resposta.
+- Nenhuma das três regiões brasileiras tem negativo formal aceito; a ausência é documentada, não contornada.
+- Curitiba: o modelo físico não generaliza para o período temporal de 2026 apesar de diagnóstico extensivo; reportado como resultado negativo informativo, não escondido.
+- Petrópolis: mistura enchente/deslizamento nas fontes impede inferência nesta entrega.
+- Corpus de embeddings DINOv2 é pequeno (12 vetores reais) — suficiente para análise estrutural exploratória, não para validação estatística de desempenho.
+- Fontes externas oficiais (COMPDEC, DRM-RJ, Defesa Civil, CPRM) têm solicitações formais pendentes de resposta.
 
 ---
 
 ## Próximos passos
 
-- Obter geometria oficial de evento em Recife (COMPDEC) e Petrópolis (DRM-RJ, PKG_FR_PET_001).
-- Resolver separação de fenômeno em Petrópolis 2022 com produto oficial.
-- Ampliar o corpus de embeddings DINOv2 além dos 12 vetores atuais.
-- Executar sobreposição patch-evento assim que geometria oficial estiver disponível.
-- Definir protocolo de label supervisionado após ground truth estabelecido em pelo menos uma região.
+- Obter geometria oficial de evento em Petrópolis (DRM-RJ) para destravar a região.
+- Resolver a separação de fenômeno (enchente x deslizamento) em Petrópolis 2022.
+- Consolidar a métrica final de Curitiba como resultado negativo documentado no artigo, em vez de buscar mais diagnósticos.
+- Ampliar a tabela de pontos harmonizada da frente externa como evidência de transferência regional.
