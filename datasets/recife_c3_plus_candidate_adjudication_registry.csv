@@ -1,0 +1,2 @@
+candidate_id,source_id,phenomenon,date_parsed,patch_id,temporal_class,spatial_support_status,territorial_support_status,adjudication_status,failed_gates,can_create_operational_label,can_train_model,c4_open,notes
+C1,RECIFE_EMLURB_156,alagamento,2022-05-24,REC_PATCH,TEMPORAL_STRONG,SPATIAL_APPROXIMATION_REVIEW,PE3D_MDE_CONTEXT_REGISTERED_REVIEW_ONLY,C4_PREFLIGHT_POSITIVE_ONLY_BLOCKED_NO_NEGATIVE,,false,false,false,C3+/preflight adjudication only; positive evidence cannot open C4 without formal negatives.
