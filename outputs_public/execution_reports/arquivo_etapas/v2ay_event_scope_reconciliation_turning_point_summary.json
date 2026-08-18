@@ -1,7 +1,7 @@
 {
   "stage": "v2ay_event_scope_reconciliation_turning_point",
   "status": "OK_WITH_EXPECTED_BLOCKERS",
-  "recife_events_expected_from_previous_prompt": 3,
+  "recife_events_expected_baseline": 3,
   "recife_events_observed": 1,
   "event_scope_reconciled": true,
   "event_invention_detected": false,
