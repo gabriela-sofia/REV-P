@@ -1,0 +1,14 @@
+{
+  "stage": "DATA-07",
+  "artifact": "sensor_lineage_human_pack",
+  "targets_in_template": 10,
+  "spectral_eligible": 0,
+  "promotion_status": "UNKNOWN_BLOCKED",
+  "inferred_sensors": 0,
+  "api_calls": 0,
+  "downloads": 0,
+  "rasters": 0,
+  "crops": 0,
+  "promotion_template_found": true,
+  "seed_found": false
+}

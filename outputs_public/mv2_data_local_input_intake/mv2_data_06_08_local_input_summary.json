@@ -1,0 +1,41 @@
+{
+  "stage": "DATA-06/07/08 local input intake",
+  "fail_closed": true,
+  "data_06_status": "NO_LOCAL_INPUT_FOUND",
+  "data_07_status": "NO_LOCAL_INPUT_FOUND",
+  "data_08_status": "BLOCKED_NO_CONFIG",
+  "data_06": {
+    "status": "NO_LOCAL_INPUT_FOUND",
+    "rows": 0,
+    "promoted_rows": 0,
+    "blocked_rows": 0,
+    "errors": []
+  },
+  "data_07": {
+    "status": "NO_LOCAL_INPUT_FOUND",
+    "rows": 0,
+    "sentinel_2_eligible": 0,
+    "blocked_rows": 0,
+    "errors": []
+  },
+  "data_08": {
+    "status": "BLOCKED_NO_CONFIG",
+    "config_present": false,
+    "safe_flags": {
+      "allow_network": false,
+      "allow_metadata_calls": false,
+      "allow_raster_download": false,
+      "allow_canary_download": false
+    },
+    "errors": []
+  },
+  "local_input_counts": {
+    "data_06_templates": 0,
+    "data_07_templates": 0,
+    "data_08_configs": 0
+  },
+  "live_calls": 0,
+  "downloads": 0,
+  "rasters": 0,
+  "crops": 0
+}

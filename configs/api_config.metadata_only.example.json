@@ -1,0 +1,21 @@
+{
+  "_comment": "Exemplo publico metadata-only. Default seguro: tudo desligado. Para sair de dry-run, copie para configs/api_config.local.json (NAO versionado) e habilite apenas allow_network e allow_metadata_calls. Nunca habilite raster/canary aqui. Segredos vao em variaveis de ambiente.",
+  "allow_network": false,
+  "allow_metadata_calls": false,
+  "allow_raster_download": false,
+  "allow_canary_download": false,
+  "providers": {
+    "GEE": {
+      "enabled": false,
+      "project_id_env": "REV_P_GEE_PROJECT_ID"
+    },
+    "CDSE_STAC": {
+      "enabled": false,
+      "base_url": "https://stac.dataspace.copernicus.eu/v1"
+    },
+    "CDSE_ODATA": {
+      "enabled": false,
+      "base_url": "https://catalogue.dataspace.copernicus.eu/odata/v1"
+    }
+  }
+}

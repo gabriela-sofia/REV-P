@@ -1,0 +1,57 @@
+{
+  "schema_id": "schema_mv2_data_06_temporal_window_human_pack",
+  "required_fields": [
+    "patch_id",
+    "asset_id",
+    "temporal_window_start",
+    "temporal_window_end",
+    "temporal_window_source",
+    "source_ref",
+    "source_type",
+    "review_status"
+  ],
+  "template_fields": [
+    "target_rank",
+    "patch_id",
+    "asset_id",
+    "city",
+    "bbox",
+    "crs",
+    "temporal_window_start",
+    "temporal_window_end",
+    "temporal_window_source",
+    "source_ref",
+    "source_type",
+    "evidence_strength",
+    "review_status",
+    "reviewer_notes",
+    "blocked_reason"
+  ],
+  "accepted_source_types": [
+    "BOLETIM_OFICIAL",
+    "RELATORIO_OFICIAL",
+    "CEMADEN",
+    "DEFESA_CIVIL",
+    "CEMS_COPERNICUS_EMS",
+    "SGB_CPRM",
+    "ANA",
+    "PUBLICACAO_CIENTIFICA",
+    "REGISTRO_INTERNO_AUDITAVEL"
+  ],
+  "rejected_source_types": [
+    "MEMORIA_HUMANA_SEM_REGISTRO",
+    "ESTIMATIVA_VISUAL",
+    "DATA_INVENTADA",
+    "JANELA_ABERTA_SEM_JUSTIFICATIVA",
+    "BBOX_ONLY_SEARCH"
+  ],
+  "rules": [
+    "datas nunca preenchidas automaticamente",
+    "sem inferencia por bbox",
+    "sem inferencia por cidade",
+    "sem evento provavel sem fonte",
+    "janela so com fonte rastreavel",
+    "se vazio mantem BLOCKED_NO_FILLED_TEMPLATE"
+  ],
+  "default_blocked_reason": "BLOCKED_NO_FILLED_TEMPLATE"
+}

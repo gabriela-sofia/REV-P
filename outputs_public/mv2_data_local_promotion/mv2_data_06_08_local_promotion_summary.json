@@ -1,0 +1,28 @@
+{
+  "stage": "DATA-06/07/08 local promotion",
+  "branch": "dados/promocao-local-metadados-data-06-08",
+  "worktree": "REV-P-promocao-local-metadados-data-06-08",
+  "fail_closed": true,
+  "allow_live_metadata_requested": false,
+  "live_metadata_allowed_by_preflight": false,
+  "local_inputs_found": {
+    "data_06_templates": 0,
+    "data_07_templates": 0,
+    "data_08_configs": 0
+  },
+  "data_06_status": "BLOCKED_NO_FILLED_TEMPLATE",
+  "data_07_status": "UNKNOWN_BLOCKED",
+  "data_08_status": "BLOCKED_NO_CONFIG",
+  "mv2_16_status": "READY_FOR_MV2_16_DRY_RUN",
+  "day10_status": "BLOCKED",
+  "live_calls": 0,
+  "downloads": 0,
+  "rasters": 0,
+  "crops": 0,
+  "ready_for_real_metadata_only": false,
+  "next_human_inputs": [
+    "DATA-06: preencher template temporal local com fonte rastreavel.",
+    "DATA-07: preencher lineage sensorial local com sensor_source_ref.",
+    "DATA-08: criar config local metadata-only com flags seguras."
+  ]
+}
