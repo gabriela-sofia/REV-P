@@ -82,7 +82,7 @@ Só depois da validação acima. Fontes: os MDTs/MDEs SGB/CPRM já confirmados l
 
 Rasters gerados: `hand_dinf.tif` e `twi_dinf.tif` por região, em
 `local_runs/susc_20g_hand_twi_dinfinity_generico/<região>/` (diretório git-ignored, como manda o
-CLAUDE.md). Inventário sanitizado em `registries/v20g_hand_twi_dinf_readiness_registry.csv`.
+a regra fixa do projeto). Inventário sanitizado em `registries/v20g_hand_twi_dinf_readiness_registry.csv`.
 
 ### Ressalvas registradas, não contornadas
 

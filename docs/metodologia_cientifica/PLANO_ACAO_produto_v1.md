@@ -297,21 +297,21 @@ cada doc/pasta linkado):
 
 ---
 
-## 0. Achado que muda o ponto de partida do plano (descoberto agora, não estava nas minhas contas)
+## 0. Achado que muda o ponto de partida do plano
 
-Fazendo o levantamento pra este plano, encontrei uma coisa que nem eu tinha me dado conta
-até agora: **existem três frentes rodando em paralelo com maturidades bem diferentes**, e
-o documento do seu colega já está ancorado numa delas que eu não tinha usado nesta sessão.
+Ao consolidar este plano, identifiquei que **existem três frentes rodando em paralelo
+com maturidades bem diferentes**, e uma nota de rascunho anterior já estava ancorada
+numa delas sem considerar o dado mais atual disponível.
 
 | Frente | Onde vive | O que é | Maturidade real |
 |---|---|---|---|
-| **v12 (modelo supervisionado real)** | `PROJETO/local_runs/recife_modelo_v12_extracao_final/` | Firth penalizado + bootstrap N=1000 + LOO/k-fold, **n=278 (154 pos / 124 neg)**, 6 features físicas, **LOO-AUC = 0,6781** | **A mais madura.** É o número que o rascunho do seu colega já cita (278/154/124/0,678) — ele já está olhando pra essa, não pro v5. |
+| **v12 (modelo supervisionado real)** | `PROJETO/local_runs/recife_modelo_v12_extracao_final/` | Firth penalizado + bootstrap N=1000 + LOO/k-fold, **n=278 (154 pos / 124 neg)**, 6 features físicas, **LOO-AUC = 0,6781** | **A mais madura.** É o número que o rascunho anterior já cita (278/154/124/0,678) — a referência correta é essa, não o v5. |
 | **SUSC_01→18C (pipeline auditado)** | `REV-P/outputs_public/suscetibilidade/` | Score v5 (circular, já documentado) + score v6 candidato (determinístico, não-supervisionado, 300 patches, `review_only=true`) + gates formais de treino | **Deliberadamente travada.** `SUSC_18C`: `accepted_ground_reference_count=0`, `label_contract_training_allowed=false`, `supervised_training_allowed_after_18c=false` — o SUSC nunca absorveu os eventos SEDEC reais como referência aceita, por desenho (respeita a regra do REV-P de nunca ter treino supervisionado). |
-| **DINO x SEDEC (o que fiz nesta sessão)** | `REV-P/scripts/dino/` | Embeddings DINO reais testados contra `dataset_v4_features_finais.csv` — **só 163 pontos (141 pos / 22 neg)**, não os 278 do v12 | Real, mas **testado contra o dataset errado** — o v12 (278 pontos) é mais novo e mais forte, e eu não sabia da existência dele quando rodei o join. |
+| **DINO x SEDEC** | `REV-P/scripts/dino/` | Embeddings DINO reais testados contra `dataset_v4_features_finais.csv` — **só 163 pontos (141 pos / 22 neg)**, não os 278 do v12 | Real, mas **testado contra o dataset errado** — o v12 (278 pontos) é mais novo e mais forte, e esse teste precede a consolidação do v12. |
 
 **Consequência prática**: a pergunta central do documento — "DINO agrega valor além da física?"
 — ainda não foi respondida com o dado mais forte que existe. O LOO-AUC=0,490 (nível de
-chance) que achei pro DINO sozinho foi contra um recorte de 78 pontos tirado dos 163
+chance) obtido pro DINO sozinho foi contra um recorte de 78 pontos tirado dos 163
 antigos. Isso é uma pista forte, não a resposta final. **Fase 1 abaixo resolve isso.**
 
 ---

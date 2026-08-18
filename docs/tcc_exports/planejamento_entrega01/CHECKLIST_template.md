@@ -412,6 +412,6 @@ chuva continua o preditor dominante, com sinal certo e p<0,001; só a metade
 inflada pelo confundimento de fonte saiu.
 
 Commitado localmente (`13fcea2`, branch `marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial`),
-**sem push** — mesma regra do CLAUDE.md do REV-P. Detalhe completo, tabela de
+**sem push** — mesma regra interna do REV-P. Detalhe completo, tabela de
 coeficientes e ordem de reprodução em
 `docs/metodologia_cientifica/ext_chuva_fonte_unica_recife_v1.md`.

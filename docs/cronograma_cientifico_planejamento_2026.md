@@ -5,7 +5,7 @@ substitui `docs/metodologia_cientifica/PLANO_ACAO_produto_v1.md`. Serve para ali
 calendário acadêmico fixo da disciplina com o estado científico real do projeto.
 
 **Criado**: 2026-08-04. **Ponto de partida auditado**: HEAD real do REV-P em `c7d7c6f`
-(02/08/2026, SUSC-21A), não a narrativa do README.md nem do CLAUDE.md do REV-P/PROJETO —
+(02/08/2026, SUSC-21A), não a narrativa do README.md nem dos guias internos do REV-P/PROJETO —
 ambos desatualizados em pontos específicos (ver seção 1).
 
 **Regra que rege este cronograma**: uma tarefa por vez. Nenhuma semana abaixo abre mais de
@@ -24,8 +24,8 @@ para este cronograma:
 
 | Fonte | O que diz | Validade |
 |---|---|---|
-| `CLAUDE.md` do PROJETO (v1fn, 11/05/2026) | Descreve uma frente de *patch grounding*/binding TIF (59 patches, gates B1–B7 todos bloqueados) | Frente lateral e antiga. Não é o estado do SUSC. |
-| `CLAUDE.md` do REV-P | Descreve "Sentinel-first + DINOv2 with registers" como rota principal validada | Superado em 01–02/08/2026: a linha DINO/patch estático foi **fechada definitivamente** como candidata a feature ou score (SUSC-22/v1r9). DINOv2 permanece só como evidência visual auxiliar, nunca causal — conforme a regra fixa do projeto. |
+| Guia interno do PROJETO (v1fn, 11/05/2026) | Descreve uma frente de *patch grounding*/binding TIF (59 patches, gates B1–B7 todos bloqueados) | Frente lateral e antiga. Não é o estado do SUSC. |
+| Guia interno do REV-P | Descreve "Sentinel-first + DINOv2 with registers" como rota principal validada | Superado em 01–02/08/2026: a linha DINO/patch estático foi **fechada definitivamente** como candidata a feature ou score (SUSC-22/v1r9). DINOv2 permanece só como evidência visual auxiliar, nunca causal — conforme a regra fixa do projeto. |
 | `README.md` do REV-P | Descreve modo "review-only", sem classificador supervisionado, sem ground truth declarado | Descreve a narrativa pública consolidada em torno do Protocolo C/DINOv2. Não reflete a frente causal SUSC (Firth penalizado com eventos reais SEDEC/ANA/Diário Oficial), que é supervisionada por desenho e é a rota mais madura do projeto (`v12`, Recife, LOO-AUC=0,6781). Precisa de reconciliação editorial antes da entrega final — sinalizado como tarefa, não resolvido aqui. |
 | `docs/metodologia_cientifica/PLANO_ACAO_produto_v1.md` (atualizado 02/08/2026) | Estado de execução real, fase a fase, com número/arquivo conferível em cada entrada | **Fonte válida para este cronograma.** |
 
@@ -81,7 +81,7 @@ metodológico documentado (mistura de fenômenos sem fonte oficial de separaçã
 
 | Data | Tarefa única da semana | Entregável |
 |---|---|---|
-| 04/08 (hoje) | Formação de grupo/escopo já dado. Consolidar por escrito a síntese da seção 1 deste documento como ponto de partida oficial do planejamento — decidir explicitamente que fonte (PLANO_ACAO, não README/CLAUDE.md antigos) rege o TCC. | Síntese de estado assinada (este documento) |
+| 04/08 (hoje) | Formação de grupo/escopo já dado. Consolidar por escrito a síntese da seção 1 deste documento como ponto de partida oficial do planejamento — decidir explicitamente que fonte (PLANO_ACAO, não documentos internos antigos) rege o TCC. | Síntese de estado assinada (este documento) |
 | 11/08 | Decisão formal sobre Petrópolis: excluir do modelo quantitativo final e documentar como estudo de caso de bloqueio, **ou** tentar 1 fonte externa de separação de fenômeno (DRM-RJ) se o prazo permitir. Uma decisão, não uma investigação nova em paralelo. | Parágrafo de decisão + justificativa (mesmo padrão dos outros registros do PLANO_ACAO) |
 | 18/08 | Redigir a estrutura do Documento de Planejamento do Projeto: introdução, motivação, pergunta de pesquisa, metodologia consolidada das 3 regiões (com os números reais da seção 1), cronograma de escrita (baseado neste documento), limitações já conhecidas. | Rascunho do Documento de Planejamento |
 | 25/08 | Revisão do rascunho; ajuste de escopo se a decisão de Petrópolis (11/08) mudar alguma seção. | Documento de Planejamento pronto para entrega |

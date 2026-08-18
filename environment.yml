@@ -113,7 +113,7 @@ dependencies:
       # API. O que a cadeia auditada usou -- e o que o `ter01` exige -- e o
       # WhiteboxTools classico, que vem com ESTE pacote. O binario e baixado
       # pelo proprio pacote no primeiro uso; nao deve ser versionado no repo
-      # (regra do CLAUDE.md: nenhum artefato pesado em git).
+      # (regra fixa do projeto: nenhum artefato pesado em git).
       #
       # Versao verificada em 12/08/2026, identica a da auditoria do Recife:
       #     WhiteboxTools v2.4.0 (c) Dr. John Lindsay 2017-2023

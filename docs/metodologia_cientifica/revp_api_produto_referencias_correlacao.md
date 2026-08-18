@@ -101,7 +101,7 @@ a área encontra quando testa isso com rigor.
 
 ## 5. Correlação ponto a ponto: regra fixa do projeto ↔ decisão já tomada ↔ referência
 
-| Regra fixa (CLAUDE.md) | Onde já está implementada | Referência externa que confirma |
+| Regra fixa do projeto | Onde já está implementada | Referência externa que confirma |
 |---|---|---|
 | Variáveis físico-hidrológicas são a base causal | 6 features do v12 no `score_engine` | Consenso dos reviews de flood susceptibility mapping |
 | Orbital (Sentinel/DINO) é só auxiliar, nunca causal | `evidence.dino_embedding_available`, nunca em `features_used` | Ablation do Flood-DamageSense; achado A/B do próprio REV-P |

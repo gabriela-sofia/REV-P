@@ -4,7 +4,7 @@
 e escolher a forma de falar. Cruza (1) a estrutura obrigatória observada nos 3 pôsteres-exemplo
 dados pelos professores e (2) o estado real do projeto em 2026-08-12 (fonte:
 `REV-P/docs/metodologia_cientifica/PLANO_ACAO_produto_v1.md` + auditoria direta do git, não o
-README/CLAUDE.md desatualizados).
+documentos internos desatualizados).
 
 Cada bloco abaixo dá o tópico + o que ele precisa comunicar. O texto final do pôster deve ser
 bem mais curto que estas descrições — os 3 exemplos usam frases telegráficas de 1-2 linhas, não

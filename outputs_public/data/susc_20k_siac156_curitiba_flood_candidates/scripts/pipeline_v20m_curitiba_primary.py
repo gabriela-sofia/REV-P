@@ -35,7 +35,7 @@ Duas divergencias em relacao a Recife, ambas decididas e documentadas antes de r
    estatistico. Sinal "correto" tambem nao refuta confundimento: bairro mais alto pode
    so registrar menos queixa por composicao socioeconomica, nao por exposicao fisica
    real. Fica como sensibilidade, nao vira primario, ate haver argumento causal novo
-   (decisao humana, nao automatica -- ver CLAUDE.md).
+   (decisao humana, nao automatica -- regra fixa do projeto).
 
 Alem do modelo primario, roda duas sensibilidades explicitamente rotuladas como
 NAO-PRIMARIAS: (S1) as 6 features originais -- reprovava a EPV em n=103 (SUSC-20M),

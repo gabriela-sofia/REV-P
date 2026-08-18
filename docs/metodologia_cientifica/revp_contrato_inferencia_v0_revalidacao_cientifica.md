@@ -19,7 +19,7 @@ não ter treino supervisionado no REV-P.
 
 Isso está alinhado com a arquitetura conceitual que já está em vigor no projeto (DINO
 auxiliar, física causal, nada de score/threshold como feature) e não contradiz nenhuma
-regra fixa do `CLAUDE.md`. É, na prática, um plano de produto que **usa** o motor
+regra fixa do projeto. É, na prática, um plano de produto que **usa** o motor
 científico já existente, não uma mudança nele.
 
 ## 2. Cruzamento com o que já rodamos de verdade

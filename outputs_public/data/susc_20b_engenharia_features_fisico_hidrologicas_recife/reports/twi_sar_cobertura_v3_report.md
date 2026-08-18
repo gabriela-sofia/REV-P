@@ -62,7 +62,7 @@ em nodata).
   **NÃO calibrado para sigma0** — documentado, não afirmado como backscatter calibrado).
   2 falhas de leitura de rede pontuais, 9 pontos sem `event_date` (mesmos 9 do v2).
 - **Comparação com Sentinel-2 óptico do v2**: cobertura SAR (96,1%) é **muito maior** que a
-  cobertura óptica de patch do v2 (9,4%) — confirma a hipótese do prompt (SAR penetra nuvens).
+  cobertura óptica de patch do v2 (9,4%) — confirma que SAR penetra nuvens.
 - **Gap de data real** (data da cena mais próxima vs. `event_date` do ponto): mediana **2,3
   dias**, p75=27,3 dias, máximo=480,3 dias (para positivos anteriores a 2015-04-28, início da
   cobertura Sentinel-1 real sobre Recife nos dados públicos indexados) — reportado

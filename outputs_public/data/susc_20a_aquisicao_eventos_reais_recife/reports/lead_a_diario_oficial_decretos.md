@@ -44,7 +44,7 @@ Ambas as datas de decreto (2022-05-28 e 2026-05-02) são genuinamente novas.
 
 O texto do decreto em si (`35.669` e `39.714`) é **somente municipal** — declara emergência
 "no âmbito do Município do Recife" sem listar bairros/ruas no corpo do decreto (achado
-honesto: contradiz a expectativa do prompt de que decretos brasileiros de enchente
+honesto: contradiz a expectativa inicial de que decretos brasileiros de enchente
 frequentemente nomeiam bairros — nestes dois casos não nomeiam).
 
 Entretanto, a **mesma edição extra** (nº 072, 28/05/2022) do Diário Oficial publica, junto ao

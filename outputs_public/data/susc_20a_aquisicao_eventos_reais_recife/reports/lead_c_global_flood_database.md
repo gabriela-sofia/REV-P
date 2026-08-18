@@ -58,7 +58,7 @@ baixo).
 | LEADC_2008_0001 | 2008-03-30 | -8.082997 | -34.880064 | `global_flood_database_modis_event_extent_centroid` (centróide de cluster de pixels MODIS reais, não endereço/bairro-oficial) |
 
 Esta data (**2008-03-30**) é anterior a toda a cobertura do `dataset_v9_final.csv`
-(2014-01-03 em diante) — é, de fato, "terreno historicamente novo" como o prompt antecipava,
+(2014-01-03 em diante) — é, de fato, "terreno historicamente novo",
 via satélite MODIS validado (não via decreto/jornal).
 
 ## Não incorporado (documentado, não descartado por preguiça)

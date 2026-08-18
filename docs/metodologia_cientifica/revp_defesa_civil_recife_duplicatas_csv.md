@@ -2,7 +2,7 @@
 
 **Status**: nota curta de decisão — etapa 3 de
 `revp_proxima_linhagem_programacao_pos_api.md`. Não altera dado, não apaga
-nada em `PROJETO` (read-only por definição de `REV-P/CLAUDE.md`).
+nada em `PROJETO` (read-only por definição das regras internas do projeto).
 
 ## O que foi comparado
 
@@ -40,7 +40,7 @@ duplicata confirmada, não cobertura adicional.
 ## O que não foi feito
 
 Nenhum arquivo foi apagado em `PROJETO` — é diretório privado/histórico,
-read-only por `REV-P/CLAUDE.md`. Se a limpeza física for desejada, é ação
+read-only pelas regras internas do projeto. Se a limpeza física for desejada, é ação
 manual do usuário em `PROJETO`, fora do escopo do REV-P.
 
 ## Efeito prático

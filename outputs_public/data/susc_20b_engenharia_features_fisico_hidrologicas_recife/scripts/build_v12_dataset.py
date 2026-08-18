@@ -3,7 +3,7 @@
 # Nota de sanitizacao (REV-P): o path absoluto local da sessao de execucao foi substituido
 # por um placeholder relativo. Os arquivos _scratch_*/dataset_v9_final.csv/sar_backscatter_*
 # referenciados abaixo sao artefatos intermediarios de local_runs (nao versionados no REV-P
-# por politica; ver CLAUDE.md). Script mantido como registro do metodo real executado.
+# por politica interna). Script mantido como registro do metodo real executado.
 import json
 import numpy as np
 import pandas as pd

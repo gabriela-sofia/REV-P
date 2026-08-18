@@ -52,7 +52,7 @@ exatamente porque descrevem qual sub-pipeline gerou o registro, não um sinal f�
 | `point_id` (prefixo) | **100% perfeita** (`recife_pos_*`=positivos; `REC_NEGV3_*`=negativos) | Identificador de linhagem, nunca deveria (e não é) usado como feature numérica/categórica |
 | `reference_date_is_synthetic` | **100% perfeita** (False=positivos datados; True=negativos, que recebem data de referência reamostrada) | Por construção metodológica documentada em v5 (não há data real de "não evento"); não é sinal de risco físico |
 
-**Verificação explícita item-a-item pedida no prompt**:
+**Verificação explícita item-a-item**:
 - Remanescentes de texto de tipo de ocorrência (`classe`) → **SIM, encontrado**, tratado como
   metadado, nunca como feature.
 - Prefixos de ID de registro (`point_id`) → **SIM, encontrado** (`recife_pos_` vs `REC_NEGV3_`),
