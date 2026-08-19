@@ -1,0 +1,9 @@
+stat_key,stat_value
+smoke_rows,17
+assets_resolved,17
+assets_missing,0
+metadata_only,0
+preprocessing_ready,17
+unreadable,0
+pixel_read_allowed,true
+final_status,ASSET_READY_FOR_DINO_PREPROCESSING

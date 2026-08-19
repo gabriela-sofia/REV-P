@@ -1,0 +1,28 @@
+{
+ "branch": "marco/validacao-label-free-evidencia-estrutural-mv1",
+ "status_plano_stage": "PLANO_STAGE_SELETIVO_PRONTO_REVISAO_MANUAL",
+ "total_arquivos_candidatos_stage": 113,
+ "total_arquivos_excluidos": 17,
+ "total_arquivos_excluidos_nominais": 8,
+ "total_padroes_excluidos": 9,
+ "pode_usar_git_add_A": false,
+ "pode_fazer_stage_seletivo": "true_com_revisao_manual",
+ "brutos_pesados_incluidos": 0,
+ "local_only_incluido": false,
+ "ground_truth_operacional_status": "ausente",
+ "treino_supervisionado_status": "bloqueado",
+ "itens_podem_virar_label_agora": 0,
+ "arquivos_candidatos_ausentes_no_working_tree": [],
+ "guardrails_preservados": [
+  "evidencia externa nao vira label",
+  "download nao vira validacao operacional",
+  "suscetibilidade nao vira evento observado",
+  "landslide scar nao vira flood extent",
+  "Curitiba nao vira negativo formal",
+  "nao liberar treino",
+  "nao declarar ground truth operacional",
+  "pode_virar_label_agora=false",
+  "git add -A proibido; stage seletivo por grupo"
+ ],
+ "gerado_em_utc": "2026-06-19T00:00:00+00:00"
+}

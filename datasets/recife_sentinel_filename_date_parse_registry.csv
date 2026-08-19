@@ -1,0 +1,2 @@
+patch_id,scene_date,date_source,date_source_type,parse_confidence
+REC_2022_05_24_30,2022-05-24,event_windows.csv,EVENT_WINDOW_NOT_SCENE_DATE,LOW

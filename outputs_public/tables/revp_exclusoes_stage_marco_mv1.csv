@@ -1,0 +1,18 @@
+caminho_ou_padrao,motivo_exclusao,risco_se_stageado,acao_recomendada,observacao
+outputs_public/execution_reports/revp_auditoria_integral_estado_atual.md,auditoria_ptbr_fora_do_marco_mv1,polui o commit do marco com material fora de escopo,avaliar em commit/branch separado de curadoria PT-BR,untracked; nao pertence ao marco MV1
+outputs_public/execution_reports/revp_current_project_state_after_ptbr_curation.md,auditoria_ptbr_fora_do_marco_mv1,polui o commit do marco com material fora de escopo,avaliar em commit/branch separado de curadoria PT-BR,untracked; nao pertence ao marco MV1
+outputs_public/execution_reports/revp_diagnostico_linguagem_publica_ptbr.md,auditoria_ptbr_fora_do_marco_mv1,polui o commit do marco com material fora de escopo,avaliar em commit/branch separado de curadoria PT-BR,untracked; nao pertence ao marco MV1
+outputs_public/tables/revp_diagnostico_linguagem_publica_ptbr.csv,auditoria_ptbr_fora_do_marco_mv1,polui o commit do marco com material fora de escopo,avaliar em commit/branch separado de curadoria PT-BR,untracked; nao pertence ao marco MV1
+outputs_public/tables/revp_arquivos_cruciais_para_defesa.csv,auditoria_ptbr_fora_do_marco_mv1,polui o commit do marco com material fora de escopo,avaliar em commit/branch separado de curadoria PT-BR,untracked; nao pertence ao marco MV1
+outputs_public/tables/revp_arquivos_historicos_ou_auxiliares.csv,auditoria_ptbr_fora_do_marco_mv1,polui o commit do marco com material fora de escopo,avaliar em commit/branch separado de curadoria PT-BR,untracked; nao pertence ao marco MV1
+outputs_public/tables/revp_estado_git_branches_curadoria_ptbr.csv,auditoria_ptbr_fora_do_marco_mv1,polui o commit do marco com material fora de escopo,avaliar em commit/branch separado de curadoria PT-BR,untracked; nao pertence ao marco MV1
+outputs_public/tables/revp_mapa_pipeline_real_atual.csv,auditoria_ptbr_fora_do_marco_mv1,polui o commit do marco com material fora de escopo,avaliar em commit/branch separado de curadoria PT-BR,untracked; nao pertence ao marco MV1
+local_only/,quarentena de evidencias externas brutas (git-ignored),vazamento de dado bruto/pesado e caminhos privados,nunca stagear; manter git-ignored,exclusao estrutural/permanente
+"data/ , *.tif, *.tiff, *.geotiff",dados brutos / rasters,repositorio pesado e nao auditavel,manter fora do git,exclusao estrutural/permanente
+"*.npz, *.npy",embeddings brutos,artefato pesado nao reproduzivel em git,manter em local_runs/local_only,exclusao estrutural/permanente
+local_runs/,outputs locais e scripts temporarios,outputs nao publicaveis,nunca stagear,exclusao estrutural/permanente
+__pycache__/,cache de bytecode Python,ruido no historico,git-ignored; nunca stagear,exclusao estrutural/permanente
+.pytest_cache/,cache de testes,ruido no historico,git-ignored; nunca stagear,exclusao estrutural/permanente
+outputs_public/logs_summary/*.log,log de execucao,ruido/possivel path privado,git-ignored; usar twin .txt se necessario,exclusao estrutural/permanente
+scripts/**/_tmp_*.py,scripts temporarios de geracao,codigo descartavel no historico,remover/local_runs; nunca stagear,exclusao estrutural/permanente
+git add -A,captura indiscriminada,"inclui PT-BR fora do escopo, caches e nao relacionados",usar git add explicito por grupo,exclusao estrutural/permanente

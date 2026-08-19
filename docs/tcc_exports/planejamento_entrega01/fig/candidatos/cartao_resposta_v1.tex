@@ -1,0 +1,107 @@
+\documentclass[border=2mm]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,fit,backgrounds,shapes.misc,shapes.geometric}
+\usepackage{xcolor}
+\usepackage{amssymb}
+
+\definecolor{cAzul}{HTML}{1F4E79}
+\definecolor{cVerm}{HTML}{C0504D}
+\definecolor{cVerd}{HTML}{3F6F4A}
+\definecolor{cCinz}{HTML}{7F7F7F}
+\definecolor{cFundo}{HTML}{EEF3F8}
+\definecolor{cFundoAux}{HTML}{F7F0EE}
+\definecolor{cFundoPrd}{HTML}{EDF3EE}
+\definecolor{cFundoCinz}{HTML}{F2F2F2}
+
+\begin{document}
+\begin{tikzpicture}[
+  x=1mm,y=1mm,font=\scriptsize,
+  hdr/.style={font=\scriptsize\bfseries,text=black!70},
+  gate/.style={draw=cAzul,fill=cFundo,rounded corners=1pt,line width=0.6pt,
+              align=center,inner sep=2pt,minimum height=24mm,text width=30mm},
+  card/.style={draw=cVerd,fill=cFundoPrd,rounded corners=1.5pt,line width=0.7pt,
+              align=left,inner sep=3pt,text width=92mm},
+  ghost/.style={draw=cCinz,fill=cFundoCinz,rounded corners=1pt,line width=0.4pt,
+               align=left,inner sep=2pt,text width=56mm,text=black!55},
+  chip/.style={draw=cAzul!60,fill=white,rounded corners=1pt,line width=0.4pt,
+              align=center,inner sep=1.5pt,font=\scriptsize},
+  chipns/.style={draw=cCinz,fill=white,rounded corners=1pt,line width=0.4pt,
+                align=center,inner sep=1.5pt,font=\scriptsize,text=black!60},
+  aux/.style={draw=cVerm!70,fill=white,rounded corners=1pt,line width=0.4pt,dashed,
+             align=center,inner sep=1.5pt,text width=38mm,font=\scriptsize},
+  arok/.style={-{Latex[length=1.6mm,width=1.3mm]},draw=cVerd,line width=0.7pt},
+  argh/.style={-{Latex[length=1.4mm,width=1.1mm]},draw=cCinz,line width=0.4pt},
+  lbl/.style={align=center,font=\scriptsize\bfseries,text=cAzul},
+]
+
+% ---- cabecalho: a requisicao (o contrato) ----
+% ponto real de validacao (nao fictício), publicado por bairro -- nao por
+% lat/lon -- pela mesma razao que a Defesa Civil usa boletim por bairro
+\node[anchor=north west,font=\tiny\ttfamily,text=black!65,align=left] at (0,18)
+  {exemplo real: ponto de validação \texttt{recife\_pos\_0093} ·
+   bairro Ilha do Retiro, Recife--PE · evento de 21/02/2018\\
+   escore fora da amostra (\emph{leave-one-out}), não uma chamada ao vivo --
+   o serviço ainda é MVP local};
+
+% ---- coluna 1: o gate (vertente reject-option) ----
+\node[lbl] at (17,10) {Gate de inferência};
+\node[gate] (g) at (17,-6)
+  {\emph{status} decidido antes\\de qualquer escore:\\
+   geometria, CRS,\\região, modelo e\\variáveis fechados?};
+
+% ---- os tres ramos saem do MESMO ponto do gate, em alturas separadas ----
+% ramo ativo: ok -> cartao (vertente model card + clareza de score)
+\draw[arok] (g.east) -| (66,6);
+\node[font=\scriptsize\bfseries,text=cVerd,anchor=south west] at (67,7) {\texttt{ok}};
+\node[card,anchor=north west] (card) at (66,6) {
+  \textbf{Suscetibilidade pluvial --- escore auditável}\\[1.5pt]
+  \begin{tikzpicture}[x=1mm,y=1mm,baseline=0mm]
+    \draw[line width=0.5pt,cCinz] (0,0) -- (78,0);
+    \foreach \x/\v in {0/0{,}0, 39/0{,}5, 78/1{,}0}
+      \draw[cCinz,line width=0.3pt] (\x,-0.8) -- (\x,0.8) node[below=1pt,font=\tiny,text=black!55] {\v};
+    \draw[cVerd!50,line width=2.2pt] (30.4,0) -- (50.7,0);
+    \draw[cVerd,line width=0.7pt] (39.8,-1.6) -- (39.8,1.6);
+    \node[cVerd,font=\tiny] at (39.8,3.2) {\textbf{0{,}51}};
+    \node[font=\tiny,text=black!55] at (39.8,-3.4) {IC95\% [0{,}39; 0{,}65] (\emph{bootstrap}, $N$=1000)};
+    \node[anchor=west,font=\tiny,text=black!60] at (0,-6.5) {baixa};
+    \node[anchor=east,font=\tiny,text=black!60] at (78,-6.5) {alta};
+  \end{tikzpicture}\\[6pt]
+  \begin{tikzpicture}[x=1mm,y=1mm,baseline=0mm]
+    \node[chip,text width=27mm] at (0,0)
+      {chuva (índice) $39{,}1$\\$\beta=+0{,}49$, $p{=}0{,}0005$ \textcolor{cVerd}{\checkmark}};
+    \node[chipns,text width=27mm] at (30,0)
+      {HAND $3{,}37$\,m\\$\beta=-0{,}11$, $p{=}0{,}70$ (n.s.)};
+    \node[chip,text width=20mm] at (60,0) {\emph{gate} EPV $\geq 10$\\$\approx 20{,}7$ \textcolor{cVerd}{\checkmark}};
+  \end{tikzpicture}\\[8pt]
+  {\scriptsize Chuva antecedente é o preditor dominante e significativo
+   ($p<0{,}001$); HAND não separa as classes neste ponto nem neste modelo ---
+   mecanismo pluvial urbano, não fluvial. Firth penalizado, validação
+   agrupada, sinal causal conferido antes de publicar.}\\[5pt]
+  \begin{tikzpicture}[x=1mm,y=1mm,baseline=0mm]
+    \node[aux,anchor=west] at (0,0)
+      {Evidência visual \textsc{dino}v2\\{\scriptsize\itshape ilustrativa --- não usada no escore}};
+    \node[anchor=west,font=\tiny,text=black!55,align=left,text width=38mm] at (42,0)
+      {\emph{model card} v1\\maturidade: MVP local Recife};
+  \end{tikzpicture}
+};
+
+% ---- os dois ramos fantasma: lado a lado, logo abaixo do cartao, compactos ----
+% tronco comum descendo do gate, depois um barramento horizontal com dois
+% ramos verticais -- o mesmo gate, dois desfechos que nao viraram este exemplo
+\draw[cCinz,line width=0.4pt] (g.south) -- (17,-52) -- (87,-52);
+\draw[cCinz,line width=0.4pt] (87,-52) -- (137,-52);
+\draw[argh] (87,-52) -- (87,-56);
+\draw[argh] (137,-52) -- (137,-56);
+
+\node[ghost,anchor=north,text width=42mm] (gh1) at (87,-56)
+  {\texttt{insufficient\_data}\\
+   {\scriptsize\itshape ex.: TWI ausente na cadeia da AOI}};
+
+\node[ghost,anchor=north,text width=42mm] (gh2) at (137,-56)
+  {\texttt{region\_not\_supported}\\
+   {\scriptsize\itshape ex.: Petrópolis, sem modelo ajustado}};
+
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,146 @@
+\documentclass[border=2mm]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,fit,backgrounds,shapes.misc,shapes.geometric,calc}
+\usepackage{xcolor}
+\usepackage{amssymb}
+
+\definecolor{cAzul}{HTML}{1F4E79}
+\definecolor{cVerm}{HTML}{C0504D}
+\definecolor{cVerd}{HTML}{3F6F4A}
+\definecolor{cCinz}{HTML}{7F7F7F}
+\definecolor{cFundo}{HTML}{EEF3F8}
+\definecolor{cFundoAux}{HTML}{F7F0EE}
+\definecolor{cFundoPrd}{HTML}{EDF3EE}
+\definecolor{cFundoCinz}{HTML}{F2F2F2}
+
+\begin{document}
+\begin{tikzpicture}[
+  x=1mm,y=1mm,font=\scriptsize,
+  hdr/.style={font=\scriptsize\bfseries,text=black!70},
+  card/.style={draw=cVerd,fill=cFundoPrd,rounded corners=1.5pt,line width=0.7pt,
+              align=left,inner sep=3pt,text width=96mm},
+  chip/.style={draw=cAzul!60,fill=white,rounded corners=1pt,line width=0.4pt,
+              align=center,inner sep=1.5pt,font=\scriptsize},
+  chipns/.style={draw=cCinz,fill=white,rounded corners=1pt,line width=0.4pt,
+                align=center,inner sep=1.5pt,font=\scriptsize,text=black!60},
+  aux/.style={draw=cVerm!70,fill=white,rounded corners=1pt,line width=0.4pt,dashed,
+             align=center,inner sep=1.5pt,text width=38mm,font=\scriptsize},
+  apicall/.style={draw=cAzul!55,dashed,rounded corners=1pt,fill=white,line width=0.5pt,
+                  align=left,inner sep=2.5pt,font=\tiny\ttfamily,text=black!75},
+  pinok/.style={circle,fill=cVerd,draw=cVerd,minimum size=2.4mm,inner sep=0},
+  pinno/.style={circle,fill=white,draw=cCinz,line width=0.6pt,minimum size=2.4mm,inner sep=0},
+  arok/.style={-{Latex[length=1.6mm,width=1.2mm]},draw=cVerd,line width=0.6pt},
+  argh/.style={-{Latex[length=1.6mm,width=1.2mm]},draw=cCinz,line width=0.6pt},
+]
+
+% ================= nota de topo =================
+\node[anchor=north west,font=\tiny,text=black!65,align=left,text width=190mm] at (0,8)
+  {\textbf{esboço de telas mínimas (baixa fidelidade)} --- forma visual e stack não
+   decididos; o que muda de tela para tela é o \emph{status} devolvido pelo mesmo
+   contrato de inferência, não o contrato em si. Exemplo real reaproveitado:
+   ponto \texttt{recife\_pos\_0093}, bairro Ilha do Retiro (ver figura candidata
+   \texttt{cartao\_resposta\_v1}).};
+
+% ================= TELA A: mapa de cobertura =================
+\draw[cCinz,line width=0.8pt,rounded corners=2pt,fill=white] (0,-2) rectangle (62,-84);
+\fill[cCinz!15] (0,-2) rectangle (62,-10);
+\foreach \dx in {3,6,9} \fill[cCinz!55] (\dx,-6) circle (0.5mm);
+\node[anchor=west,font=\tiny\bfseries,text=black!70] at (13,-6) {Tela 1 --- cobertura};
+
+\draw[cCinz!40,line width=0.4pt,rounded corners=1pt,fill=cFundo] (4,-14) rectangle (58,-68);
+\foreach \gx in {16,28,40,52}
+  \draw[cCinz!20,line width=0.3pt] (\gx,-14) -- (\gx,-68);
+\foreach \gy in {-24,-36,-48,-60}
+  \draw[cCinz!20,line width=0.3pt] (4,\gy) -- (58,\gy);
+\node[anchor=north west,font=\tiny,text=black!45] at (5,-15) {\emph{esquemático, não georreferenciado}};
+
+\node[pinok] (p1) at (18,-28) {};
+\node[anchor=west,font=\tiny,text=black!75,fill=cFundo,inner sep=0.5pt] at (21.5,-28) {Recife (ativo)};
+
+\node[pinno] (p2) at (44,-56) {};
+\node[anchor=east,font=\tiny,text=black!75] at (41.5,-56) {Petrópolis};
+
+\node[pinok,minimum size=1.8mm,anchor=west] (lg1) at (5,-72) {};
+\node[anchor=west,font=\tiny,text=black!60] at (7,-72) {modelo ativo};
+\node[pinno,minimum size=1.8mm,anchor=west] (lg2) at (32,-72) {};
+\node[anchor=west,font=\tiny,text=black!60] at (34,-72) {ainda não suportado};
+
+\node[apicall,anchor=north west,text width=58mm] at (0,-90)
+  {\textbf{GET /regioes}\\
+   lista de AOIs + \emph{status} de maturidade\\
+   (antes de qualquer escore)};
+
+% ================= TELA B: cartão de resposta =================
+\draw[cCinz,line width=0.8pt,rounded corners=2pt,fill=white] (90,-2) rectangle (194,-84);
+\fill[cCinz!15] (90,-2) rectangle (194,-10);
+\foreach \dx in {93,96,99} \fill[cCinz!55] (\dx,-6) circle (0.5mm);
+\node[anchor=west,font=\tiny\bfseries,text=black!70] at (103,-6)
+  {Tela 2 --- cartão de resposta (\texttt{status: ok})};
+
+\node[card,anchor=north west] (card) at (94,-14) {
+  \textbf{Suscetibilidade pluvial --- escore auditável}\\[1.5pt]
+  \begin{tikzpicture}[x=1mm,y=1mm,baseline=0mm]
+    \draw[line width=0.5pt,cCinz] (0,0) -- (78,0);
+    \foreach \x/\v in {0/0{,}0, 39/0{,}5, 78/1{,}0}
+      \draw[cCinz,line width=0.3pt] (\x,-0.8) -- (\x,0.8) node[below=1pt,font=\tiny,text=black!55] {\v};
+    \draw[cVerd!50,line width=2.2pt] (30.4,0) -- (50.7,0);
+    \draw[cVerd,line width=0.7pt] (39.8,-1.6) -- (39.8,1.6);
+    \node[cVerd,font=\tiny] at (39.8,3.2) {\textbf{0{,}51}};
+    \node[font=\tiny,text=black!55] at (39.8,-3.4) {IC95\% [0{,}39; 0{,}65] (\emph{bootstrap}, $N$=1000)};
+    \node[anchor=west,font=\tiny,text=black!60] at (0,-6.5) {baixa};
+    \node[anchor=east,font=\tiny,text=black!60] at (78,-6.5) {alta};
+  \end{tikzpicture}\\[6pt]
+  \begin{tikzpicture}[x=1mm,y=1mm,baseline=0mm]
+    \node[chip,text width=27mm] at (0,0)
+      {chuva (índice) $39{,}1$\\$\beta=+0{,}49$, $p{=}0{,}0005$ \textcolor{cVerd}{\checkmark}};
+    \node[chipns,text width=27mm] at (30,0)
+      {HAND $3{,}37$\,m\\$\beta=-0{,}11$, $p{=}0{,}70$ (n.s.)};
+    \node[chip,text width=20mm] at (60,0) {\emph{gate} EPV $\geq 10$\\$\approx 20{,}7$ \textcolor{cVerd}{\checkmark}};
+  \end{tikzpicture}\\[6pt]
+  {\scriptsize Chuva antecedente é o preditor dominante e significativo; HAND não
+   separa as classes neste ponto --- mecanismo pluvial urbano, não fluvial.}\\[5pt]
+  \begin{tikzpicture}[x=1mm,y=1mm,baseline=0mm]
+    \node[aux,anchor=west] at (0,0)
+      {Evidência visual \textsc{dino}v2\\{\scriptsize\itshape ilustrativa --- não usada no escore}};
+    \node[anchor=west,font=\tiny,text=black!55,align=left,text width=38mm] at (42,0)
+      {\emph{model card} v1\\maturidade: MVP local Recife};
+  \end{tikzpicture}
+};
+
+\node[apicall,anchor=north west,text width=100mm] at (90,-90)
+  {\textbf{POST /inferencia} \{aoi: recife\_pos\_0093, data: 2026-08-16\}\\
+   $\rightarrow$ \emph{status} \texttt{ok} + escore 0{,}51 [IC95\% 0{,}39; 0{,}65] +
+   variáveis --- mesmo contrato da Fig. candidata \texttt{cartao\_resposta\_v1}};
+
+% ================= TELA C: estado de recusa =================
+\draw[cCinz,line width=0.8pt,rounded corners=2pt,fill=white] (90,-108) rectangle (194,-156);
+\fill[cCinz!15] (90,-108) rectangle (194,-116);
+\foreach \dx in {93,96,99} \fill[cCinz!55] (\dx,-112) circle (0.5mm);
+\node[anchor=west,font=\tiny\bfseries,text=black!70] at (103,-112)
+  {Tela 3 --- recusa (\texttt{status: region\_not\_supported})};
+
+\draw[cCinz,line width=1pt] (100,-136) circle (5mm);
+\draw[cCinz,line width=1pt] ($(100,-136)+(-3.5,-3.5)$) -- ($(100,-136)+(3.5,3.5)$);
+
+\node[anchor=north west,align=left,text width=78mm,font=\scriptsize] at (110,-124)
+  {\textbf{\texttt{region\_not\_supported}}\\[2pt]
+   Petrópolis ainda não tem modelo ajustado neste MVP --- \emph{gates} B1--B7
+   bloqueados.\\[2pt]
+   {\scriptsize\itshape Nenhum escore, IC ou variável é calculado: o gate barra
+   antes da inferência, não depois.}};
+
+\node[apicall,anchor=north west,text width=100mm] at (90,-162)
+  {\textbf{POST /inferencia} \{aoi: petropolis\_x\}\\
+   $\rightarrow$ \emph{status} \texttt{region\_not\_supported} (nenhum escore calculado)};
+
+% ================= setas de fluxo =================
+\draw[arok] (p1.center) -- (63,-28) -- (89,-40);
+\node[font=\tiny,text=cVerd,anchor=south] at (76,-31) {clica pino verde};
+
+\draw[argh] (p2.center) -- (63,-56) -- (89,-132);
+\node[font=\tiny,text=cCinz,anchor=south] at (76,-95) {clica pino cinza};
+
+\end{tikzpicture}
+\end{document}

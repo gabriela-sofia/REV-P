@@ -1,0 +1,1 @@
+event_id,city,event_type,event_window_start,event_window_end,geometry_status,geometry_wgs84,crs,uncertainty_class,uncertainty_reason,buffer_uncertainty_m,source_ref,evidence_sources,adjudication_status,silver_candidate,silver_status,blocked_reason

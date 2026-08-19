@@ -1,0 +1,20 @@
+{
+  "stage": "v2bc_recife_gis_digitization_workbench",
+  "status": "OK_WITH_EXPECTED_BLOCKERS",
+  "priority_package_id": "PKG_34713b8aab96",
+  "priority_patch_id": "REC_00019",
+  "priority_event_id": "REC_2022_05_24_30",
+  "risk_context_features": 400,
+  "quickview_files": 1,
+  "context_layers_written": 5,
+  "gis_workbench_artifacts": 8,
+  "manual_digitization_tasks": 5,
+  "operational_patch_boundaries": 0,
+  "operational_event_polygons": 0,
+  "ready_feeds_created": 0,
+  "turning_point_level": "TP0_CONTEXTUAL_GIS_WORKBENCH_READY",
+  "turning_point_ready": false,
+  "can_train_model": false,
+  "can_create_operational_labels": false,
+  "methodological_status": "CONTEXTUAL_GIS_WORKBENCH_READY_FOR_MANUAL_DIGITIZATION_NOT_FOR_TRAINING"
+}
