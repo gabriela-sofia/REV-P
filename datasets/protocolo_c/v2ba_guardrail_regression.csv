@@ -1,0 +1,12 @@
+regression_id,artifact_path,violation_count,status
+GR_v2ba_001,datasets/protocolo_c/v2ba_review_ready_packet_selection.csv,0,PASS
+GR_v2ba_002,datasets/protocolo_c/v2ba_geometry_search_plan.csv,0,PASS
+GR_v2ba_003,datasets/protocolo_c/v2ba_official_geometry_source_probe.csv,0,PASS
+GR_v2ba_004,datasets/protocolo_c/v2ba_geometry_evidence_classification.csv,0,PASS
+GR_v2ba_005,datasets/protocolo_c/v2ba_candidate_digitization_registry.csv,0,PASS
+GR_v2ba_006,datasets/protocolo_c/v2ba_candidate_geojson_manifest.csv,0,PASS
+GR_v2ba_007,datasets/protocolo_c/v2ba_candidate_geometry_validation.csv,0,PASS
+GR_v2ba_008,datasets/protocolo_c/v2ba_geometry_uncertainty_scores.csv,0,PASS
+GR_v2ba_009,datasets/protocolo_c/v2ba_human_adjudication_queue.csv,0,PASS
+GR_v2ba_010,datasets/protocolo_c/v2ba_geometry_audit_report.csv,0,PASS
+GR_v2ba_011,docs/protocolo_c/v2ba_official_geometry_search_and_digitization/evidence_cache/.gitignore,0,PASS

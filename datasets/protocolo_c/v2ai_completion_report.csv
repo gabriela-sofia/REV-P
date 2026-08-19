@@ -1,0 +1,12 @@
+completion_id,metric,value,status,notes
+CR_v2ai_000,inputs_read,datasets/protocolo_c/v2ah_ground_truth_search_stop_gate.csv|datasets/protocolo_c/v2ah_candidate_reference_review_queue.csv|datasets/protocolo_c/v2ah_candidate_evidence_dossier_index.csv|datasets/protocolo_c/v2ah_reopen_conditions_registry.csv|datasets/protocolo_c/v2ah_safe_tcc_export_registry.csv|datasets/protocolo_c/v2ah_guardrail_regression.csv|datasets/protocolo_c/v2ah_next_actions_registry.csv,RECORDED,v2ah artifacts required and present.
+CR_v2ai_001,outputs_created,9,RECORDED,datasets/protocolo_c/v2ai_review_assignment_registry.csv|datasets/protocolo_c/v2ai_reviewer_decision_template.csv|datasets/protocolo_c/v2ai_adjudication_queue.csv|datasets/protocolo_c/v2ai_uncertainty_registry.csv|datasets/protocolo_c/v2ai_review_outcome_registry.csv|datasets/protocolo_c/v2ai_safe_promotion_blockers.csv|datasets/protocolo_c/v2ai_guardrail_regression.csv|datasets/protocolo_c/v2ai_next_actions_registry.csv|datasets/protocolo_c/v2ai_completion_report.csv
+CR_v2ai_002,candidates,172,REVIEW_ONLY,Read from v2ah review queue.
+CR_v2ai_003,assignments,344,PENDING_HUMAN_REVIEW,Two reviewer slots per candidate.
+CR_v2ai_004,decision_templates,344,PENDING_HUMAN_REVIEW,No reviewer decision simulated.
+CR_v2ai_005,promotion_blockers,172,PROMOTION_BLOCKED,promotion_allowed=false for every package.
+CR_v2ai_006,human_review_status,PENDING_HUMAN_REVIEW,NOT_COMPLETED,No real human review recorded.
+CR_v2ai_007,adjudication_status,WAITING_FOR_HUMAN_REVIEW,NOT_COMPLETED,172 packages waiting.
+CR_v2ai_008,guardrail_failures,0,PASS,v2ai/v2ah guardrail regression.
+CR_v2ai_009,next_action_rank_1,HUMAN_REVIEW_EXECUTION_OR_SAFE_TCC_EXPORT,SAFE_NEXT_ACTION,No operational promotion.
+CR_v2ai_010,decision_final,human_review_package_prepared_no_operational_promotion,NO_OPERATIONAL_PROMOTION,"No label, training, overlay, prediction, ground truth, or Protocol B."

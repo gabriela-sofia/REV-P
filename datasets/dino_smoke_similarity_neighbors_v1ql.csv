@@ -1,0 +1,1 @@
+neighbor_id,source_embedding_id,source_patch_id,source_region,neighbor_embedding_id,neighbor_patch_id,neighbor_region,rank,cosine_similarity,similarity_validates_event,cluster_is_label,can_create_label,can_train_model

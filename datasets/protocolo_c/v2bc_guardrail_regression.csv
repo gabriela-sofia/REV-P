@@ -1,0 +1,10 @@
+regression_id,artifact_path,violation_count,status
+GR_v2bc_001,datasets/protocolo_c/v2bc_strongest_external_validation_diagnosis.csv,0,PASS
+GR_v2bc_002,datasets/protocolo_c/v2bc_curitiba_local_seed_candidates.csv,0,PASS
+GR_v2bc_003,datasets/protocolo_c/v2bc_ground_truth_seed_registry.csv,0,PASS
+GR_v2bc_004,datasets/protocolo_c/v2bc_seed_evidence_bundle.csv,0,PASS
+GR_v2bc_005,datasets/protocolo_c/v2bc_sentinel_context_crosscheck.csv,0,PASS
+GR_v2bc_006,datasets/protocolo_c/v2bc_seed_strength_scores.csv,0,PASS
+GR_v2bc_007,datasets/protocolo_c/v2bc_non_selected_region_queue.csv,0,PASS
+GR_v2bc_008,datasets/protocolo_c/v2bc_seed_review_packet_index.csv,0,PASS
+GR_v2bc_009,docs/protocolo_c/v2bc_curitiba_ground_truth_seed/evidence_cache/.gitignore,0,PASS

@@ -1,0 +1,15 @@
+completion_id,metric,value,status,notes
+CR_v2ap_000,candidates_loaded,9,PASS,From v2ao.
+CR_v2ap_001,sentinel_assets_inventoried,367,RECORDED,No raw data opened.
+CR_v2ap_002,sentinel_assets_usable_as_evidence,9,RECORDED,Explicit filename/manifest dates only.
+CR_v2ap_003,patch_registries_found,82,RECORDED,Header-column inventory.
+CR_v2ap_004,temporal_windows,9,RECORDED,Policy windows; no asset selected.
+CR_v2ap_005,crosswalk_candidate_rows,9,RECORDED,No DINO/visual inference.
+CR_v2ap_006,explicit_crosswalk_candidates,1,RECORDED,Region+explicit date+asset/patch+manifest evidence.
+CR_v2ap_007,patch_level_reference_candidates,0,RECORDED,Needs geometry+patch+explicit crosswalk.
+CR_v2ap_008,candidates_missing_event_geometry,7,RECORDED,No geometry invented.
+CR_v2ap_009,patch_truth_allowed,0,GUARDRAIL_OK,Must remain 0.
+CR_v2ap_010,readiness_scores,9,RECORDED,Patch-level readiness.
+CR_v2ap_011,guardrail_regression_failures,0,PASS,Fail-closed.
+CR_v2ap_012,next_action_rank_1,COLLECT_EVENT_GEOMETRY_FOR_TOP_CANDIDATES,SAFE_NEXT_ACTION,Geometry/crosswalk acquisition path.
+CR_v2ap_013,final_decision,geometry_crosswalk_readiness_built_no_operational_ground_truth,NO_OPERATIONAL_GROUND_TRUTH,patch_truth_allowed=false; protocol_b blocked.

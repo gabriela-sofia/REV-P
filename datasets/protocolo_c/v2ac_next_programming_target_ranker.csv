@@ -1,0 +1,7 @@
+rank,next_target,programming_value,ground_truth_value,blocker_reduction_value,expected_effort,overclaim_risk,recommended_version,recommended_action,notes
+1,EVENT_PATCH_PACKAGE_V2_QA_HARNESS,65,0,45,LOW,LOW,v2ad — Event-Patch Package V2 QA Harness,SELECTED_NEXT_TARGET,"Lock the migrated v2 schema with a QA harness (contract regression tests, invariants) before further data acquisition."
+2,MULTI_REGION_REGISTRY_HARDENING,55,0,40,LOW,LOW,v2ad — Multi-Region Registry Hardening,RANKED_ALTERNATIVE,Fold the migrated v2 packages into the multi-region registries.
+3,SENTINEL_DATE_CROSSWALK_DISCOVERY,45,0,55,MEDIUM,MEDIUM,v2ad — Sentinel Date Crosswalk Discovery,RANKED_ALTERNATIVE,Search for an explicit key linking the numeric and anchor namespaces; uncertain and only useful if such a key exists.
+4,PUBLIC_SOURCE_RECHECK_HOLD,20,0,20,LOW,LOW,v2ad — Public Source Recheck Hold,RANKED_ALTERNATIVE,Hold until a new public source with linkable patch identity appears.
+5,DINO_REVIEW_SUPPORT_COMPLETION,10,0,10,MEDIUM,LOW,v2ad — DINO Review Support Completion,RANKED_ALTERNATIVE,DINO review support already attached for nearly all candidates.
+6,STOP_GROUND_TRUTH_SEARCH_UNTIL_NEW_SOURCE,10,0,0,LOW,LOW,v2ad — Ground Truth Search Hold,RANKED_ALTERNATIVE,Explicit stop on ground-truth search until a qualifying public source is published.

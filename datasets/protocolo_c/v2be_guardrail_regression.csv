@@ -1,0 +1,11 @@
+regression_id,artifact_path,violation_count,status
+GR_v2be_001,datasets/protocolo_c/v2be_curitiba_blocked_seed_selection.csv,0,PASS
+GR_v2be_002,datasets/protocolo_c/v2be_sentinel_asset_candidate_scores.csv,0,PASS
+GR_v2be_003,datasets/protocolo_c/v2be_candidate_seed_asset_links.csv,0,PASS
+GR_v2be_004,datasets/protocolo_c/v2be_best_asset_per_seed.csv,0,PASS
+GR_v2be_005,datasets/protocolo_c/v2be_visual_review_asset_binding.csv,0,PASS
+GR_v2be_006,datasets/protocolo_c/v2be_seed_dino_binding.csv,0,PASS
+GR_v2be_007,datasets/protocolo_c/v2be_candidate_reference_readiness_update.csv,0,PASS
+GR_v2be_008,datasets/protocolo_c/v2be_revised_promotion_gate.csv,0,PASS
+GR_v2be_009,datasets/protocolo_c/v2be_visual_review_packet_index.csv,0,PASS
+GR_v2be_010,docs/protocolo_c/v2be_curitiba_sentinel_crosswalk_resolution/evidence_cache/.gitignore,0,PASS

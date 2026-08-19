@@ -1,0 +1,11 @@
+step_order,step_name,status,output,output_hash,notes
+1,hydromet_source_registry,OK,datasets/protocolo_c/v2ax_hydromet_source_registry.csv,17b165ee8268393d,Completed.
+2,station_candidates,OK,datasets/protocolo_c/v2ax_station_candidate_registry.csv,6551f56c5ebf0dcd,Completed.
+3,event_temporal_windows,OK,datasets/protocolo_c/v2ax_event_temporal_window_registry.csv,d44feb9836601f4d,Completed.
+4,timeseries_acquisition_manifest,OK,datasets/protocolo_c/v2ax_timeseries_acquisition_manifest.csv,dad33f6169d5453e,Completed.
+5,timeseries_quality_audit,OK,datasets/protocolo_c/v2ax_timeseries_quality_audit.csv,45774ae905258baa,Completed.
+6,precipitation_event_summary,OK,datasets/protocolo_c/v2ax_precipitation_event_summary.csv,83eabbbcdf61337f,Completed.
+7,event_patch_temporal_linkage,OK,datasets/protocolo_c/v2ax_event_patch_temporal_linkage.csv,facab9deddd4c49a,Completed.
+8,temporal_readiness,OK,datasets/protocolo_c/v2ax_temporal_evidence_readiness.csv,c9eaff6584dcbc21,Completed.
+9,observational_gap_report,OK,datasets/protocolo_c/v2ax_observational_gap_report.csv,310a5887ac85ed32,Completed.
+10,guardrail_regression,OK,datasets/protocolo_c/v2ax_guardrail_regression.csv,33a86f12db677061,Completed.

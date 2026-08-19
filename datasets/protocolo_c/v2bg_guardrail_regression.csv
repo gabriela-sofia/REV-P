@@ -1,0 +1,11 @@
+regression_id,artifact_path,violation_count,status
+GR_v2bg_001,datasets/protocolo_c/v2bg_charter_activation_758_registry.csv,0,PASS
+GR_v2bg_002,datasets/protocolo_c/v2bg_recife_source_priority_registry.csv,0,PASS
+GR_v2bg_003,datasets/protocolo_c/v2bg_recife_evidence_separation_matrix.csv,0,PASS
+GR_v2bg_004,datasets/protocolo_c/v2bg_recife_protocol_gate_status.csv,0,PASS
+GR_v2bg_005,datasets/protocolo_c/v2bg_recife_manual_product_access_tasks.csv,0,PASS
+GR_v2bg_006,CHARTER_NOT_FLOOD_EXTENT,0,PASS
+GR_v2bg_007,OLINDA_NOT_TRANSFERRED,0,PASS
+GR_v2bg_008,COPERNICUS_NOT_POSITIVE,0,PASS
+GR_v2bg_009,PROXIES_NOT_A301_REPLACEMENT,0,PASS
+GR_v2bg_010,docs/protocolo_c/v2bg_recife_hydro_geomorphic_grounding_pack/evidence_cache/.gitignore,0,PASS

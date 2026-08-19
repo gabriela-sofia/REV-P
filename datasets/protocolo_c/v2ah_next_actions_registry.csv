@@ -1,0 +1,6 @@
+rank,next_action,score,allowed,blocked_operational_use,required_input,recommended_script_or_artifact,notes
+1,HUMAN_REVIEW_ADJUDICATION_PACKAGE,95,true,true,review queue and dossier index,v2ah_candidate_reference_review_queue.csv,"No next action may create labels, training data, overlay, prediction, or Protocol B reopening."
+2,SAFE_TCC_EVIDENCE_EXPORT,90,true,true,safe claim registry,v2ah_safe_tcc_export_registry.csv,"No next action may create labels, training data, overlay, prediction, or Protocol B reopening."
+3,REOPEN_CONDITION_MONITORING,60,true,true,new qualified source,v2ah_reopen_conditions_registry.csv,"No next action may create labels, training data, overlay, prediction, or Protocol B reopening."
+4,REGISTRY_MAINTENANCE_ONLY,35,true,true,existing metadata,v2ah_completion_report.csv,"No next action may create labels, training data, overlay, prediction, or Protocol B reopening."
+5,OPERATIONAL_MODELING_TRAINING_OVERLAY,0,false,true,blocked by stop gate,none,"No next action may create labels, training data, overlay, prediction, or Protocol B reopening."

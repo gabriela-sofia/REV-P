@@ -1,0 +1,2 @@
+action_id,event_id,action_type,priority,description,target,status,notes
+NA_v1uz_0000,CUR_2022_01_15,SENTINEL_DATE_RECOVERY_FOR_EVENT_PATCH_PACKAGES,1,Selected from v1uz score-based next-programming-target ranker.,MULTI_REGION_EVENT_PATCH_PROGRAMMING,RECOMMENDED_NEXT_STEP,"No overlay, labels, ground truth or ground reference; next version not started."

@@ -1,0 +1,11 @@
+regression_id,artifact_path,violation_count,status
+GR_v2bh_001,datasets/protocolo_c/v2bh_charter_758_product_inventory.csv,0,PASS
+GR_v2bh_002,datasets/protocolo_c/v2bh_recife_olinda_product_classification.csv,0,PASS
+GR_v2bh_003,datasets/protocolo_c/v2bh_product_access_vector_crs_license_audit.csv,0,PASS
+GR_v2bh_004,datasets/protocolo_c/v2bh_product_hazard_geometry_type_classification.csv,0,PASS
+GR_v2bh_005,datasets/protocolo_c/v2bh_candidate_geometry_source_registry.csv,0,PASS
+GR_v2bh_006,datasets/protocolo_c/v2bh_recife_gate_status_update.csv,0,PASS
+GR_v2bh_007,datasets/protocolo_c/v2bh_manual_access_request_tasks.csv,0,PASS
+GR_v2bh_008,datasets/protocolo_c/v2bh_charter_product_review_packet_index.csv,0,PASS
+GR_v2bh_009,docs/protocolo_c/v2bh_recife_charter_758_product_audit/evidence_cache/.gitignore,0,PASS
+GR_v2bh_010,C7_FINAL_GROUND_TRUTH,0,PASS

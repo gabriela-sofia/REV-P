@@ -1,0 +1,24 @@
+artifact_id,artifact_path,artifact_type,protocol_version,sha256_prefix,file_size_bytes,is_versionable,reason
+ART_v1um_0000,configs/protocolo_c/v1um_recife_review_sampling_policy.yaml,config,v1um,fe2cc841a8e6aca1,290,true,Safe Human Review metadata artifact
+ART_v1um_0001,configs/protocolo_c/v1um_recife_locality_normalization_policy.yaml,config,v1um,483789fe244909c3,151,true,Safe Human Review metadata artifact
+ART_v1um_0002,configs/protocolo_c/v1um_recife_hazard_semantics_policy.yaml,config,v1um,e1575044c75040fa,239,true,Safe Human Review metadata artifact
+ART_v1um_0003,configs/protocolo_c/v1um_recife_redaction_policy.yaml,config,v1um,d6e3e5381b740ae6,153,true,Safe Human Review metadata artifact
+ART_v1um_0004,configs/protocolo_c/v1um_recife_human_review_batch_policy.yaml,config,v1um,2584d0968850355d,167,true,Safe Human Review metadata artifact
+ART_v1um_0005,configs/protocolo_c/v1um_recife_non_overlay_decision_policy.yaml,config,v1um,2d8a300f6d4acc31,208,true,Safe Human Review metadata artifact
+ART_v1um_0006,datasets/protocolo_c/v1um_recife_locality_candidate_sample_registry.csv,dataset,v1um,6e428854429cd9f7,2308983,true,Safe Human Review metadata artifact
+ART_v1um_0007,datasets/protocolo_c/v1um_recife_locality_normalization_registry.csv,dataset,v1um,668b05be4d801a34,1728295,true,Safe Human Review metadata artifact
+ART_v1um_0008,datasets/protocolo_c/v1um_recife_hazard_semantics_rank_registry.csv,dataset,v1um,54df7d685cf66717,1305613,true,Safe Human Review metadata artifact
+ART_v1um_0009,datasets/protocolo_c/v1um_recife_human_review_batch_registry.csv,dataset,v1um,580f4e5ddb08b304,1522,true,Safe Human Review metadata artifact
+ART_v1um_0010,datasets/protocolo_c/v1um_recife_redacted_evidence_package_registry.csv,dataset,v1um,2535a9e8610c0df0,2308734,true,Safe Human Review metadata artifact
+ART_v1um_0011,datasets/protocolo_c/v1um_recife_neighborhood_signal_aggregation.csv,dataset,v1um,803b843255733676,19945,true,Safe Human Review metadata artifact
+ART_v1um_0012,datasets/protocolo_c/v1um_recife_human_review_decision_matrix.csv,dataset,v1um,c44875ea59c43360,2488909,true,Safe Human Review metadata artifact
+ART_v1um_0013,datasets/protocolo_c/v1um_recife_non_overlay_readiness_matrix.csv,dataset,v1um,2491bb6bedf8a1d8,1550054,true,Safe Human Review metadata artifact
+ART_v1um_0014,datasets/protocolo_c/v1um_recife_ground_reference_blocker_matrix.csv,dataset,v1um,6654f42d7a4daad9,1582,true,Safe Human Review metadata artifact
+ART_v1um_0015,datasets/protocolo_c/v1um_next_actions_registry.csv,dataset,v1um,85a7eae0cf3d57b8,281,true,Safe Human Review metadata artifact
+ART_v1um_0016,datasets/protocolo_c/v1um_versionable_artifacts_manifest.csv,dataset,v1um,0dc2abe1d8dbd2bb,3727,true,Safe Human Review metadata artifact
+ART_v1um_0017,docs/metodologia_cientifica/protocolo_c_v1um_recife_human_review_locality_only.md,doc,v1um,9fba771aa7545b0b,849,true,Safe Human Review metadata artifact
+ART_v1um_0018,docs/metodologia_cientifica/protocolo_c_relatorio_v1um_recife_human_review_locality_only.md,doc,v1um,239fb14faf1d0a64,1370,true,Safe Human Review metadata artifact
+ART_v1um_0019,docs/metodologia_cientifica/protocolo_c_status_atual_v1um.md,doc,v1um,7d11e34a986123b5,771,true,Safe Human Review metadata artifact
+ART_v1um_0020,docs/review_packages/protocolo_c/v1um_recife_human_review_batch_01.md,doc,v1um,48bbe4b2c332e7ce,7987,true,Safe Human Review metadata artifact
+ART_v1um_0021,docs/review_packages/protocolo_c/v1um_recife_human_review_batch_02.md,doc,v1um,c9b96afe37728be4,8104,true,Safe Human Review metadata artifact
+ART_v1um_0022,docs/review_packages/protocolo_c/v1um_recife_human_review_batch_03.md,doc,v1um,fec71df14ddfb2b9,8104,true,Safe Human Review metadata artifact

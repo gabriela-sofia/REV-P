@@ -1,0 +1,9 @@
+step_order,step_name,status,output,output_hash,notes
+1,discover_cached_timeseries,OK,datasets/protocolo_c/v2ay_cached_timeseries_inventory.csv,ce4fd4292c04b92c,Completed.
+2,parse_timeseries,OK,datasets/protocolo_c/v2ay_timeseries_parse_audit.csv,5da57ba7a51fecb0,Completed.
+3,normalize_timeseries_schema,OK,datasets/protocolo_c/v2ay_normalized_timeseries_manifest.csv,a7ee5700d63ce53e,Completed.
+4,compute_window_precipitation_metrics,OK,datasets/protocolo_c/v2ay_window_precipitation_metrics.csv,e7c968d54ccde9fb,Completed.
+5,audit_timeseries_quality,OK,datasets/protocolo_c/v2ay_timeseries_quality_report.csv,13c253e81efe1274,Completed.
+6,update_temporal_readiness,OK,datasets/protocolo_c/v2ay_event_patch_temporal_readiness_update.csv,50158d5d82245835,Completed.
+7,generate_ingestion_report,OK,datasets/protocolo_c/v2ay_ingestion_gap_report.csv,becd31a6f5718c91,Completed.
+8,guardrail_regression,OK,datasets/protocolo_c/v2ay_guardrail_regression.csv,6c250d2abe7ba0a7,Completed.

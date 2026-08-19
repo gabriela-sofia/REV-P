@@ -1,0 +1,13 @@
+step_order,step_name,status,output,output_hash,notes
+1,scan_manual_intake_cache,OK,datasets/protocolo_c/v2bi_manual_intake_cache_inventory.csv,68afcd27ebe27f43,Fail-closed manual intake; raw payload remains ignored.
+2,audit_charter_files,OK,datasets/protocolo_c/v2bi_charter_file_audit.csv,4638ca9035afec2c,Fail-closed manual intake; raw payload remains ignored.
+3,extract_charter_vector_metadata,OK,datasets/protocolo_c/v2bi_charter_vector_metadata.csv,c2ad39a49d9f30cf,Fail-closed manual intake; raw payload remains ignored.
+4,validate_charter_crs_geometry,OK,datasets/protocolo_c/v2bi_charter_crs_geometry_validation.csv,88f4f66c719c4c63,Fail-closed manual intake; raw payload remains ignored.
+5,build_charter_candidate_geometry_readiness,OK,datasets/protocolo_c/v2bi_charter_candidate_geometry_readiness.csv,c456f633de448877,Fail-closed manual intake; raw payload remains ignored.
+6,scan_temporal_series_cache,OK,datasets/protocolo_c/v2bi_temporal_series_cache_inventory.csv,382694541a92de7b,Fail-closed manual intake; raw payload remains ignored.
+7,parse_apac_cemaden_series,OK,datasets/protocolo_c/v2bi_apac_cemaden_series_parse_report.csv,55dc06fd4fda3de9,Fail-closed manual intake; raw payload remains ignored.
+8,compute_recife_temporal_metrics,OK,datasets/protocolo_c/v2bi_recife_temporal_metrics.csv,21614ab17d30a391,Fail-closed manual intake; raw payload remains ignored.
+9,update_recife_protocol_gates,OK,datasets/protocolo_c/v2bi_recife_protocol_gate_update.csv,7b818b6e980ec190,Fail-closed manual intake; raw payload remains ignored.
+10,build_manual_blocker_tasks,OK,datasets/protocolo_c/v2bi_manual_blocker_tasks.csv,61cbd0d30a291f1c,Fail-closed manual intake; raw payload remains ignored.
+11,generate_recife_intake_report,OK,docs/protocolo_c/v2bi_recife_charter_temporal_intake/README.md,9b484fdae6ba4cd8,Fail-closed manual intake; raw payload remains ignored.
+12,run_guardrail_regression,OK,datasets/protocolo_c/v2bi_guardrail_regression.csv,45437bb489783c82,Fail-closed manual intake; raw payload remains ignored.

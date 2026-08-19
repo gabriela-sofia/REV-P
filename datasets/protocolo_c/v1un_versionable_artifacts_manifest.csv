@@ -1,0 +1,21 @@
+artifact_id,artifact_path,artifact_type,protocol_version,sha256_prefix,file_size_bytes,is_versionable,reason
+ART_v1un_0000,configs/protocolo_c/v1un_recife_evidence_strength_policy.yaml,config,v1un,2c53ac5561f56f68,185,true,Safe v1un Human Review Evidence artifact
+ART_v1un_0001,configs/protocolo_c/v1un_recife_safe_claims_policy.yaml,config,v1un,01a380d66c43f9ff,160,true,Safe v1un Human Review Evidence artifact
+ART_v1un_0002,configs/protocolo_c/v1un_recife_limitations_policy.yaml,config,v1un,2d80402f686e335e,131,true,Safe v1un Human Review Evidence artifact
+ART_v1un_0003,configs/protocolo_c/v1un_recife_tcc_export_policy.yaml,config,v1un,57c375fc255482f1,143,true,Safe v1un Human Review Evidence artifact
+ART_v1un_0004,configs/protocolo_c/v1un_protocol_c_status_policy.yaml,config,v1un,1a064679e5530517,149,true,Safe v1un Human Review Evidence artifact
+ART_v1un_0005,datasets/protocolo_c/v1un_recife_human_review_evidence_consolidation.csv,dataset,v1un,55020b4568573bb5,732,true,Safe v1un Human Review Evidence artifact
+ART_v1un_0006,datasets/protocolo_c/v1un_recife_evidence_strength_registry.csv,dataset,v1un,107a74cf18cf60c5,2473,true,Safe v1un Human Review Evidence artifact
+ART_v1un_0007,datasets/protocolo_c/v1un_recife_safe_claims_registry.csv,dataset,v1un,d74c797b3fc9d85f,1378,true,Safe v1un Human Review Evidence artifact
+ART_v1un_0008,datasets/protocolo_c/v1un_recife_prohibited_claims_registry.csv,dataset,v1un,62954397a55fcc3e,1373,true,Safe v1un Human Review Evidence artifact
+ART_v1un_0009,datasets/protocolo_c/v1un_recife_limitations_matrix.csv,dataset,v1un,f65b7fdacb6e3976,2401,true,Safe v1un Human Review Evidence artifact
+ART_v1un_0010,datasets/protocolo_c/v1un_recife_tcc_evidence_export_registry.csv,dataset,v1un,dc366072f596a56b,2555,true,Safe v1un Human Review Evidence artifact
+ART_v1un_0011,datasets/protocolo_c/v1un_recife_protocol_c_status_registry.csv,dataset,v1un,df128fcc9928980c,547,true,Safe v1un Human Review Evidence artifact
+ART_v1un_0012,datasets/protocolo_c/v1un_ground_reference_blocker_matrix.csv,dataset,v1un,1544136d45d9f335,1268,true,Safe v1un Human Review Evidence artifact
+ART_v1un_0013,datasets/protocolo_c/v1un_next_actions_registry.csv,dataset,v1un,d881758c822ef296,266,true,Safe v1un Human Review Evidence artifact
+ART_v1un_0014,datasets/protocolo_c/v1un_versionable_artifacts_manifest.csv,dataset,v1un,MISSING,0,false,File not found
+ART_v1un_0015,docs/metodologia_cientifica/protocolo_c_v1un_recife_human_review_evidence_consolidation.md,doc,v1un,MISSING,0,false,File not found
+ART_v1un_0016,docs/metodologia_cientifica/protocolo_c_relatorio_v1un_recife_human_review_evidence_consolidation.md,doc,v1un,MISSING,0,false,File not found
+ART_v1un_0017,docs/metodologia_cientifica/protocolo_c_status_atual_v1un.md,doc,v1un,MISSING,0,false,File not found
+ART_v1un_0018,docs/metodologia_cientifica/protocolo_c_recife_safe_claims_for_tcc_v1un.md,doc,v1un,MISSING,0,false,File not found
+ART_v1un_0019,docs/writing_support/protocolo_c/v1un_recife_tcc_paragraphs.md,doc,v1un,9c43b4e28852e1a5,1432,true,Safe v1un Human Review Evidence artifact

@@ -1,0 +1,7 @@
+rank,next_target,programming_value,ground_truth_value,blocker_reduction_value,expected_effort,overclaim_risk,recommended_version,recommended_action,notes
+1,SENTINEL_DATE_RECOVERY_FOR_EVENT_PATCH_PACKAGES,99,0,99,MEDIUM,LOW,v2aa — Sentinel Date Recovery for Event-Patch Packages,SELECTED_NEXT_TARGET,171 of 172 event-patch candidates miss a Sentinel scene date; recovering it is metadata-only and unblocks temporal linkage.
+2,MULTI_REGION_REGISTRY_HARDENING,60,0,40,LOW,LOW,v2aa — Multi-Region Registry Hardening,RANKED_ALTERNATIVE,Consolidates Recife/Petropolis/Curitiba registries; organizational value but does not remove occurrence blockers.
+3,EVENT_PATCH_PACKAGE_SCHEMA_HARDENING,55,0,35,LOW,LOW,v2aa — Event-Patch Package Schema Hardening,RANKED_ALTERNATIVE,Hardens event-patch package schema; supports later Sentinel/temporal work without creating truth.
+4,PUBLIC_SOURCE_RECHECK_HOLD,20,0,25,LOW,LOW,v2aa — Public Source Recheck Hold,RANKED_ALTERNATIVE,Periodic recheck of public sources; held until a new public source appears.
+5,STOP_GROUND_TRUTH_SEARCH_UNTIL_NEW_SOURCE,10,0,0,LOW,LOW,v2aa — Ground Truth Search Hold,RANKED_ALTERNATIVE,Explicit stop on ground-truth search until a qualifying public source is published.
+6,DINO_REVIEW_SUPPORT_COMPLETION,5,0,10,MEDIUM,LOW,v2aa — DINO Review Support Completion,RANKED_ALTERNATIVE,DINO review support is already attached for nearly all candidates; remaining completion is small and review-only.

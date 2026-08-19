@@ -1,0 +1,2 @@
+action_id,event_id,action_type,priority,description,target,status,notes
+ACT_v1uq_0000,PET_2022_02_15,PROGRAMMING_DEEPENING,1,v1ur - Petropolis Public Geodata Path Recovery,PET,PENDING,Selected from v1uq document-audit gates; still non-operational.

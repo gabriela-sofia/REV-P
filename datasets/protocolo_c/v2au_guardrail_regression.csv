@@ -1,0 +1,15 @@
+regression_id,artifact_path,violation_count,status
+GR_v2au_0000,datasets/protocolo_c/v2au_blocker_to_action_map.csv,0,PASS
+GR_v2au_0001,datasets/protocolo_c/v2au_crs_resolution_matrix.csv,0,PASS
+GR_v2au_0002,datasets/protocolo_c/v2au_guardrail_regression.csv,0,PASS
+GR_v2au_0003,datasets/protocolo_c/v2au_input_validation.csv,0,PASS
+GR_v2au_0004,datasets/protocolo_c/v2au_license_resolution_matrix.csv,0,PASS
+GR_v2au_0005,datasets/protocolo_c/v2au_manual_download_instructions.csv,0,PASS
+GR_v2au_0006,datasets/protocolo_c/v2au_next_actions_registry.csv,0,PASS
+GR_v2au_0007,datasets/protocolo_c/v2au_orchestrator_manifest.csv,0,PASS
+GR_v2au_0008,datasets/protocolo_c/v2au_resolution_task_registry.csv,0,PASS
+GR_v2au_0009,datasets/protocolo_c/v2au_review_packet_priority_queue.csv,0,PASS
+GR_v2au_0010,datasets/protocolo_c/v2au_source_contact_and_terms_audit.csv,0,PASS
+GR_v2au_0011,datasets/protocolo_c/v2au_source_endpoint_attempts.csv,0,PASS
+GR_v2au_0012,datasets/protocolo_c/v2au_temporal_data_request_plan.csv,0,PASS
+GR_v2au_0013,docs/protocolo_c/v2au_source_resolution_plan/evidence_cache/.gitignore,0,PASS

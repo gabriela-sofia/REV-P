@@ -1,0 +1,4 @@
+action_id,event_id,action_type,priority,description,target,status,notes
+ACT_v1uj_0000,PET_2022_02_15,DEEPEN_FOCUSED_OR_REGIONAL,2,Fonte mais promissora: none_yet,Resolvers focados com --allow-web,PENDING,
+ACT_v1uj_0001,PET_2024_03_21_28,DEEPEN_FOCUSED_OR_REGIONAL,2,Fonte mais promissora: none_yet,Resolvers focados com --allow-web,PENDING,
+ACT_v1uj_0002,REC_2022_05_24_30,DEEPEN_FOCUSED_OR_REGIONAL,2,Fonte mais promissora: ckan,Resolvers focados com --allow-web,PENDING,

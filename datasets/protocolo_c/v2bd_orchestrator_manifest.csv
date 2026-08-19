@@ -1,0 +1,11 @@
+step_order,step_name,status,output,output_hash,notes
+1,select_curitiba_seeds,OK,datasets/protocolo_c/v2bd_curitiba_seed_selection.csv,32bc7fd424608dde,Completed without truth or label promotion.
+2,discover_sentinel_assets,OK,datasets/protocolo_c/v2bd_sentinel_asset_discovery.csv,994602d76052fcda,Completed without truth or label promotion.
+3,build_seed_sentinel_crosswalk,OK,datasets/protocolo_c/v2bd_seed_sentinel_crosswalk.csv,fb01b9f63441c751,Completed without truth or label promotion.
+4,build_seed_patch_crosswalk,OK,datasets/protocolo_c/v2bd_seed_patch_crosswalk.csv,5e3e9e6811017cf2,Completed without truth or label promotion.
+5,build_seed_dino_crosswalk,OK,datasets/protocolo_c/v2bd_seed_dino_crosswalk.csv,ca665118c6aa0817,Completed without truth or label promotion.
+6,audit_visual_review_assets,OK,datasets/protocolo_c/v2bd_visual_review_asset_audit.csv,6744c4f85b0cdc2d,Completed without truth or label promotion.
+7,compute_candidate_reference_readiness,OK,datasets/protocolo_c/v2bd_candidate_reference_readiness.csv,cc00b72a08e9b61d,Completed without truth or label promotion.
+8,candidate_promotion_gate,OK,datasets/protocolo_c/v2bd_candidate_promotion_gate.csv,dd9c38135c1aaeb3,Completed without truth or label promotion.
+9,generate_candidate_reference_packets,OK,datasets/protocolo_c/v2bd_candidate_reference_packet_index.csv,665d78eede6a4f9f,Completed without truth or label promotion.
+10,guardrail_regression,OK,datasets/protocolo_c/v2bd_guardrail_regression.csv,ecb198079300e4af,Completed without truth or label promotion.

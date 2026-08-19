@@ -1,0 +1,11 @@
+regression_id,artifact_path,violation_count,status
+GR_v2bf_001,datasets/protocolo_c/v2bf_internal_sentinel_lineage_sources.csv,0,PASS
+GR_v2bf_002,datasets/protocolo_c/v2bf_asset_date_recovery.csv,0,PASS
+GR_v2bf_003,datasets/protocolo_c/v2bf_asset_patch_link_recovery.csv,0,PASS
+GR_v2bf_004,datasets/protocolo_c/v2bf_asset_file_reference_resolution.csv,0,PASS
+GR_v2bf_005,datasets/protocolo_c/v2bf_sentinel_review_asset_materialization.csv,0,PASS
+GR_v2bf_006,datasets/protocolo_c/v2bf_dino_link_recovery.csv,0,PASS
+GR_v2bf_007,datasets/protocolo_c/v2bf_lineage_confidence_scores.csv,0,PASS
+GR_v2bf_008,datasets/protocolo_c/v2bf_seed_asset_crosswalk_status_update.csv,0,PASS
+GR_v2bf_009,datasets/protocolo_c/v2bf_curitiba_lineage_review_packet_index.csv,0,PASS
+GR_v2bf_010,docs/protocolo_c/v2bf_curitiba_patch_asset_lineage/evidence_cache/.gitignore,0,PASS

@@ -1,0 +1,6 @@
+rank,next_target,programming_value,ground_truth_value,blocker_reduction_value,expected_effort,overclaim_risk,recommended_version,recommended_action,notes
+1,SENTINEL_DATE_CROSSWALK_DISCOVERY,45,0,55,MEDIUM,MEDIUM,v2ag — Sentinel Date Crosswalk Discovery,SELECTED_NEXT_TARGET,"Attempt to discover an explicit key linking the numeric and anchor namespaces; the dominant residual blocker, but uncertain and only useful if a real key exists."
+2,STOP_GROUND_TRUTH_SEARCH_UNTIL_NEW_SOURCE,35,0,30,LOW,LOW,v2ag — Stop Ground Truth Search Until New Source,RANKED_ALTERNATIVE,QA automation is green and ground-truth search is exhausted in all three regions; formally stop until a qualifying new public source appears.
+3,MULTI_REGION_REGISTRY_MAINTENANCE,40,0,25,LOW,LOW,v2ag — Multi-Region Registry Maintenance,RANKED_ALTERNATIVE,Maintain the hardened canonical registries and the automated QA gate.
+4,PUBLIC_SOURCE_RECHECK_HOLD,20,0,20,LOW,LOW,v2ag — Public Source Recheck Hold,RANKED_ALTERNATIVE,Periodic recheck hold for new public occurrence-level sources.
+5,DINO_REVIEW_SUPPORT_COMPLETION,10,0,10,MEDIUM,LOW,v2ag — DINO Review Support Completion,RANKED_ALTERNATIVE,DINO review support already attached for nearly all candidates.

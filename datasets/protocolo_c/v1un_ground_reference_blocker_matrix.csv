@@ -1,0 +1,8 @@
+blocker_id,event_id,blocker,status,evidence_count,ground_truth_operational,patch_bound_truth,operational_validation,can_create_ground_reference,can_create_training_label,notes
+BLOCK_v1un_0000,REC_2022_05_24_30,no_coordinates,ACTIVE,6672,false,false,false,false,false,Blocker preserved after Human Review Evidence Consolidation.
+BLOCK_v1un_0001,REC_2022_05_24_30,locality_only,ACTIVE,6672,false,false,false,false,false,Blocker preserved after Human Review Evidence Consolidation.
+BLOCK_v1un_0002,REC_2022_05_24_30,no_overlay,ACTIVE,6672,false,false,false,false,false,Blocker preserved after Human Review Evidence Consolidation.
+BLOCK_v1un_0003,REC_2022_05_24_30,no_ground_reference,ACTIVE,6672,false,false,false,false,false,Blocker preserved after Human Review Evidence Consolidation.
+BLOCK_v1un_0004,REC_2022_05_24_30,no_training_label,ACTIVE,6672,false,false,false,false,false,Blocker preserved after Human Review Evidence Consolidation.
+BLOCK_v1un_0005,REC_2022_05_24_30,no_patch_bound_truth,ACTIVE,6672,false,false,false,false,false,Blocker preserved after Human Review Evidence Consolidation.
+BLOCK_v1un_0006,REC_2022_05_24_30,no_operational_validation,ACTIVE,6672,false,false,false,false,false,Blocker preserved after Human Review Evidence Consolidation.

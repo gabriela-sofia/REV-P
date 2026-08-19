@@ -1,0 +1,2 @@
+action_id,event_id,action_type,priority,description,target,status,notes
+NA_v2ad_0000,MULTI_REGION,MULTI_REGION_REGISTRY_HARDENING,1,Selected from v2ad score-based next-programming-target ranker after the QA harness.,EVENT_PATCH_PACKAGE_V2,RECOMMENDED_NEXT_STEP,"No overlay, labels, ground truth, ground reference, inferred date or inferred crosswalk."
