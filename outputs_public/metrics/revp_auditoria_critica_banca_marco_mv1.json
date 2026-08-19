@@ -1,0 +1,32 @@
+{
+ "status_auditoria_critica": "MARCO_DEFENSAVEL_COMO_REVIEW_ONLY_COM_RESSALVAS",
+ "total_criticas": 28,
+ "criticas_fatais": 11,
+ "criticas_corrigiveis": 13,
+ "limitacoes_aceitaveis": 4,
+ "itens_bloqueiam_stage": 1,
+ "pode_fazer_stage_seletivo_agora": "true_com_revisao_manual",
+ "recomendacao_principal": "Stage seletivo permitido com revisao manual (sem git add -A); nenhum claim operacional, label, negativo formal ou treino liberado no estado atual. As criticas fatais sao fatais por natureza e estao todas controladas por guardrail ou declaradas como abertas sem reivindicacao; nenhuma esta violada. Antes de elevar qualquer claim, resolver confound temporal/nuvem (C16/C17), checagem de dominio DINOv2-Sentinel (C03) e reprodutibilidade (C22), e converter guardrails criticos em checagens programaticas.",
+ "guardrails_preservados": true,
+ "nota_fatalidade": "criticas_fatais conta classes de erro fatais por natureza; no estado atual nenhuma esta violada, por isso nao bloqueiam o stage seletivo.",
+ "maior_risco_metodologico": "Confound temporal/nuvem (C16/C17) somado ao gap de dominio DINOv2-Sentinel (C03): tornam a topologia interpretavel apenas como ilustracao.",
+ "maior_ajuste_textual": "Quantificar a fragilidade topologica (sobreposicao intra/inter e variancia intra) em vez de descreve-la apenas qualitativamente (C26).",
+ "categorias_cobertas": [
+  "artigo_slides",
+  "circularidade",
+  "cloud_cover",
+  "crs",
+  "dinov2_sentinel",
+  "evidencia_externa",
+  "geometria",
+  "ground_truth",
+  "landslide_vs_flood",
+  "linguagem_publica",
+  "n_amostral",
+  "negativos_formais",
+  "reprodutibilidade",
+  "temporalidade",
+  "treino_supervisionado"
+ ],
+ "gerado_em_utc": "2026-06-19T00:00:00+00:00"
+}

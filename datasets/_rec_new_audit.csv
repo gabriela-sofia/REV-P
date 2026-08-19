@@ -1,0 +1,3 @@
+asset_check_id,smoke_id,patch_id,region,relative_path,path_hash,local_path_hash,file_exists,file_sha256_short,file_size_bytes,ext,pixel_read_allowed,pixel_read_performed,image_width,image_height,image_channels,raster_bands,dtype,preprocessing_ready,status,blocked_reason,notes
+V1QI_AS_00001,V1R0_SMK_00001,REC_00322,RECIFE,recife/recife_00322__rgb_preview.png,6ad5e017e2946db8,4740546ab25e9531,true,3214ff3e49142651,115750,.png,true,true,256,256,3,,RGB,true,ASSET_READY_FOR_DINO_PREPROCESSING,,pil
+V1QI_AS_00002,V1R0_SMK_00002,REC_00528,RECIFE,recife/recife_00528__rgb_preview.png,56050c607234ab29,b44925f8903b30e1,true,48c4a6a476d4b26d,116249,.png,true,true,256,256,3,,RGB,true,ASSET_READY_FOR_DINO_PREPROCESSING,,pil

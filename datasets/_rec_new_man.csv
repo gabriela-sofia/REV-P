@@ -1,0 +1,3 @@
+manifest_id,smoke_id,patch_id,relative_path,path_hash,execution_mode,embedding_attempted,embedding_valid,vector_norm,status,blocked_reason,notes
+V1QJ_MAN_00001,V1R0_SMK_00001,REC_00322,recife/recife_00322__rgb_preview.png,6ad5e017e2946db8,REAL_EXECUTION,true,true,1.000000,DINO_SMOKE_EMBEDDINGS_READY_REVIEW_ONLY,,sha=e53a271b29690fa6
+V1QJ_MAN_00002,V1R0_SMK_00002,REC_00528,recife/recife_00528__rgb_preview.png,56050c607234ab29,REAL_EXECUTION,true,true,1.000000,DINO_SMOKE_EMBEDDINGS_READY_REVIEW_ONLY,,sha=b33c4571903e4c2a

@@ -4,11 +4,11 @@
 %% Autora: Gabriela Sofia
 %% Formatação: IEEEtran conference (padrão do template dos professores)
 %% Compilar: pdflatex main && pdflatex main
-%% Versão: v7 (2026-08-16) — estado atual do pipeline após a resolução única
-%% de 30 m (reversão declarada de "a resolução segue o mecanismo") e a
-%% correção da fonte de chuva única em Recife: números de E2, Fig. 2(b) e os
-%% parágrafos de material externo e de limitações atualizados; nenhuma
-%% mudança de conteúdo além do que esses dois eventos tornaram desatualizado.
+%% Versão: v9 (2026-08-18) — delta real do planejamento02.pdf contra o v8
+%% real (não a v4 que ele já tinha gerado): gloss em PT-BR de "payload",
+%% reprodutibilidade amarrada ao ambiente do projeto, propósito explícito no
+%% cronograma, parágrafo de integração reordenado. Ver NOTA_versoes.md §12
+%% para o detalhe nota a nota.
 %% =====================================================================
 \documentclass[conference]{IEEEtran}
 \IEEEoverridecommandlockouts
@@ -68,9 +68,9 @@ extensão real da água. Ausência de registro não é ausência de
 evento~\cite{li2022pul,agostini2024}, e é daí que a pesquisa parte, atrás de
 positivos e negativos válidos.
 
-Suscetibilidade é a predisposição do terreno a acumular água sob um dado
-forçamento de chuva: há enchente quando chega a um ponto mais água do que ele
-consegue escoar ou armazenar. Isso se decompõe em três grandezas. \emph{Quanto chega} é a chuva. \emph{Para onde
+Neste projeto, suscetibilidade é definida como a predisposição do terreno a
+acumular água sob um dado forçamento de chuva: há enchente quando chega a um
+ponto mais água do que ele consegue escoar ou armazenar. Isso se decompõe em três grandezas. \emph{Quanto chega} é a chuva. \emph{Para onde
 converge} é o índice topográfico de umidade~\cite{beven1979}, que mede quanta
 encosta drena para ali. \emph{Quanto precisa subir para ser alcançado} é
 o HAND (\emph{Height Above the Nearest Drainage})~\cite{renno2008}: a altura do ponto acima do curso d'água que o drena, isto
@@ -78,29 +78,30 @@ o HAND (\emph{Height Above the Nearest Drainage})~\cite{renno2008}: a altura do 
 onde a água desce, e o D-infinity~\cite{tarboton1997} reparte o escoamento de
 cada célula entre direções contínuas, não em uma das oito vizinhas.
 
-O plano se apoia no artigo anterior: revisão de literatura e testes
-sucessivos já fixaram as decisões que mudaram a rota. Variável derivada
-do rótulo produz circularidade: a acurácia balanceada cai de 0,8855 para 0,4834
-sem elas. Composição estática de imagem orbital não carrega assinatura de evento
-pontual, em três tentativas independentes; ela passa a evidência de contexto e
-fila de revisão. A unidade de informação é o evento, não o ponto, o
-que dissolveu significância vinda de pseudorreplicação. A definição da
+O plano se apoia no artigo anterior, que já fixou as decisões que mudaram a
+rota. Variável derivada do rótulo produz circularidade: acurácia balanceada
+cai de 0,8855 para 0,4834 sem elas. Composição estática de imagem orbital não
+carrega assinatura de evento pontual em três tentativas independentes; vira
+evidência de contexto e fila de revisão. A unidade de informação é o evento,
+não o ponto, dissolvendo significância de pseudorreplicação. A definição da
 classe negativa decide o que o modelo aprende: o ajuste de maior desempenho
-próprio é o que menos transfere. A derivação precisa ser única entre regiões, na mesma
-resolução para toda a base --- inclusive onde isso custa detalhe que o
-próprio modelo não usa. E a relação terreno--inundação não caduca: em 25
-anos de janela expansiva o modelo fica na faixa esperada em todos os cortes e
-transfere entre classes de relevo.
+próprio é o que menos transfere. A derivação é única entre regiões, na mesma
+resolução para toda a base, mesmo onde custa detalhe que o modelo não usa; e a
+relação terreno--inundação não caduca em 25 anos de janela expansiva, com
+transferência entre classes de relevo.
 
-O que resta é a vastidão de evidência reunida e não integrada. As fontes
-vêm de cadeias de derivação, resoluções e mecanismos distintos,
-e um mesmo nome de coluna pode designar variáveis não comensuráveis; o efeito não aparece como erro visível, mas como mapa plausível. A etapa
-que precede o treino é de integração e curadoria: uma base de conhecimento
-geoespacial única, com proveniência, resolução, mecanismo e unidade
-de validação declarados por registro.
+A base física já está consolidada: as fontes, antes em cadeias de derivação,
+resoluções e mecanismos distintos --- onde um mesmo nome de coluna podia
+designar variáveis não comensuráveis, sem erro visível, só mapa plausível ---
+foram reduzidas a uma base de conhecimento geoespacial única, com
+proveniência, resolução, mecanismo e unidade de validação declarados por
+registro (E2, Seção~\ref{sec:etapas}). Evoluir, daqui em diante, é ajustar,
+testar e corrigir o modelo sobre o que já existe, rodada a rodada --- não
+reunir mais dado bruto.
 
-O objetivo é converter essa base em conhecimento replicável: ajustar o modelo
-onde existe observação declarada e aplicá-lo às regiões brasileiras de mesmas
+O objetivo é aplicar essa base e a metodologia causal já fixada para decidir,
+por AOI, se o terreno é suscetível a enchente: ajustar o modelo onde existe
+observação declarada e aplicá-lo às regiões brasileiras de mesmas
 características físicas e sem esse registro, entregando o resultado como serviço
 auditável (Fig.~\ref{fig:pipeline}).
 \textbf{Pergunta de pesquisa}: um modelo interpretável de suscetibilidade a
@@ -194,17 +195,17 @@ nunca como \emph{feature}. O serviço (verde) só explica depois que os
 % =====================================================================
 \section{Materiais e Métodos}
 
-\textbf{Integração e curadoria: o que precede o treino.} Reunir evidência não é o
-gargalo; torná-la comparável é. Uma fonte traz terreno de 10\,m e outra de 30\,m,
-o que muda a escala em que HAND e TWI são lidos; parte das evidências documentais
-não é geocodificável; áreas de interesse declaradas não coincidem com o recorte
-urbano que interessa; cenas ópticas chegam com nuvem; milímetros de chuva não
-transferem entre climatologias; e há áreas cujo mecanismo dominante é movimento
-de massa. Toda fonte passa por uma
-redução a tabela de pontos, e cada linha declara procedência, resolução nativa,
-unidade de agrupamento, classe de relevo e mecanismo. Entra no treino apenas o
-que está dentro da AOI declarada, tem as variáveis computadas na mesma cadeia e
-tem grupo de validação identificável; o restante fica como proveniência, com o
+\textbf{Integração e curadoria: o que precede o treino.} Toda fonte passa por
+uma redução a tabela de pontos, e cada linha declara procedência, resolução
+nativa, unidade de agrupamento, classe de relevo e mecanismo --- reunir
+evidência não é o gargalo; torná-la comparável é. Uma fonte traz terreno de
+10\,m e outra de 30\,m, o que muda a escala em que HAND e TWI são lidos; parte
+das evidências documentais não é geocodificável; áreas de interesse declaradas
+não coincidem com o recorte urbano que interessa; cenas ópticas chegam com
+nuvem; milímetros de chuva não transferem entre climatologias; e há áreas cujo
+mecanismo dominante é movimento de massa. Entra no treino apenas o que está
+dentro da AOI declarada, tem as variáveis computadas na mesma cadeia e tem
+grupo de validação identificável; o restante fica como proveniência, com o
 motivo do descarte nomeado.
 
 \textbf{Material próprio, material externo.} Já auditados: a cadeia de derivação
@@ -213,7 +214,7 @@ e em Curitiba --- Petrópolis segue a mesma convenção de derivação, mas sem 
 rotulado para comparar; o modelo de Recife, com 278 pontos e fonte de chuva
 única após auditoria de confundimento por proveniência; o conjunto de
 Curitiba, com 1.471 unidades; a tabela única harmonizada das seis fontes, hoje
-com 64.989 pontos elegíveis ao ajuste fluvial, nenhum deles mais em cadeia de
+com 65.070 pontos elegíveis ao ajuste fluvial, nenhum deles mais em cadeia de
 terreno global; e o motor de inferência exposto por contrato. Externas:
 Copernicus EMS, Environment Agency do Reino Unido e, desde que a mesma cadeia
 de derivação de terreno passou a cobri-lo, Sen1Floods11 contribuem ponto ao
@@ -222,14 +223,16 @@ por declarar mecanismo misto não separável, não mais por lacuna de variável.
 Falta a validação prospectiva e a camada de explicação.
 
 \textbf{Rótulo positivo e hierarquia do negativo.} Os positivos são eventos
-oficialmente registrados e geocodificados: Defesa Civil de Recife, SIAC 156 de
-Curitiba, Diário Oficial, ANA/SNIRH e Global Flood Database~\cite{tellman2021}. O
+oficialmente registrados e geocodificados por órgãos e fontes públicas,
+listados por completo na Tabela~\ref{tab:mm}. O
 negativo é tratado em três níveis, declarados por linha e reportados em proporção
 sempre que um modelo os misturar: \emph{observado} --- área que um analista
 examinou e onde não detectou inundação, com o Copernicus EMS trazendo o tipo de
-evento separado na origem; \emph{exclusão qualificada}, do piloto inglês, por
-quatro critérios sobre os \emph{Recorded Flood Outlines}; e \emph{ausência de
-registro}, que é o que as três regiões brasileiras têm hoje. A unidade
+evento separado na origem; \emph{exclusão qualificada}, por quatro critérios
+sobre os \emph{Recorded Flood Outlines} do piloto inglês, e, pelo mesmo
+padrão de critérios, 114 pontos de Curitiba antes classificados por
+\emph{ausência}; e \emph{ausência de registro}, que é o que Recife e
+Petrópolis têm hoje. A unidade
 independente é o evento, ou a AOI, nunca o ponto --- é também a unidade que o
 produto devolve: o contrato de inferência responde por área, não por pixel, e
 validar no mesmo grão que se entrega é o que torna o resultado auditável.
@@ -246,11 +249,14 @@ publicado: o colapso prospectivo de 2026 em Curitiba entra como limite
 conhecido.
 
 \textbf{O que a caracterização dos dados impõe.} A Fig.~\ref{fig:datasets} reúne
-os três desafios que orientam o plano. Nenhuma fonte cobre todas as
-variáveis --- a chuva só existe no piloto inglês e nas duas regiões
-brasileiras, nenhuma delas no conjunto que hoje entra no ajuste fluvial ---,
-por isso o modelo multirregião roda com quatro variáveis de terreno. A
-definição de negativo muda o que o modelo aprende: o
+os três desafios que orientam o plano. A chuva é o mais difícil deles: é a
+essência física do fenômeno e a variável mais custosa de medir de forma
+comparável entre fontes --- as datas de evento de Copernicus EMS,
+Sen1Floods11 e UFO estavam presentes em artefato local, não descartadas, só
+em três formatos nunca lidos juntos; recuperadas, a chuva passa de 14\% para
+100\% de cobertura na base harmonizada. Quantas dessas variáveis entram em
+cada ajuste é decisão de E3, não deste plano. A definição de negativo muda o
+que o modelo aprende: o
 ajuste sobre exclusão tem AUC próprio maior, mas perde 0,159 ao encontrar
 negativo observado, enquanto o inverso não perde nada. E a régua física muda com
 o relevo: o contraste de HAND entre classes vai de cerca de 3\,m em planície a
@@ -264,16 +270,21 @@ região, maturidade e limites de uso --- auditável, aqui, significa rastreável
 todo escore remonta ao \emph{gate} que o liberou. Quando um \emph{gate} não
 fecha, retorna \texttt{insufficient\_data} em vez de inventar escore; região sem
 modelo responde \texttt{region\_not\_supported}, nunca um escore por analogia. É
-sobre esse \emph{payload} já decidido que a camada de explicação atua --- o
-padrão de predição seletiva~\cite{mitchell2019}. O contrato roda hoje como MVP
-local para Recife.
+sobre esse \emph{payload} --- a resposta que o contrato já devolveu --- que a
+camada de explicação atua: o padrão de predição seletiva~\cite{mitchell2019}. O contrato roda hoje como MVP
+local para Recife --- única região com modelo auditado e validação
+prospectiva executada; Curitiba tem modelo próprio, mas colapso prospectivo de
+2026 sem causa isolada, e Petrópolis segue com zero pontos rotulados (filtro
+COBRADE aplicado, resultado nulo). Estender às demais é o objetivo declarado
+de E5, não uma limitação de infraestrutura.
 
 \textbf{Infraestrutura, carga e ajustes de escopo.} O trabalho é individual e não
 requer GPU: o ajuste de Firth leva 0,056\,s e o de um modelo aditivo explicável
 25,3\,s no maior conjunto. O gargalo medido é de carregamento de arquivo e de
-versão de biblioteca, não de treino, e se resolve reduzindo toda fonte de imagem
-a tabela de pontos. Sem divisão de carga entre pessoas, o paralelismo vem da
-sobreposição de etapas. Duas limitações já forçaram ajuste de escopo: o treino
+versão de biblioteca, não de treino; ambos já resolvidos --- toda fonte de
+imagem reduzida a uma tabela única de pontos (E2) e ambiente Python dedicado
+isolando a incompatibilidade de biblioteca da linha causal. Sem divisão de
+carga entre pessoas, o paralelismo vem da sobreposição de etapas. Duas limitações já forçaram ajuste de escopo: o treino
 sobre \emph{embeddings} foi abandonado após três tentativas, e permanece uma
 fração residual de pontos --- majoritariamente água permanente no Copernicus
 EMS --- cujo HAND ainda vem do produto global por cair fora do raster
@@ -310,7 +321,9 @@ Copernicus EMS, 25.249 pontos em 119 AOIs, mais a ativação EMSR720 no Rio Gran
 Sul (216,55\,km$^2$; 5,94:1). Negativo por \emph{exclusão qualificada}: Environment
 Agency/UK, 7.476 pontos (3.738/3.738) em 201 eventos independentes &
 Três níveis declarados por linha. Nenhuma região brasileira tem o nível de
-observação; o portão de negativo formal segue aberto para as três. \\
+observação; Curitiba passou a ter 114 pontos em exclusão qualificada
+(critério do piloto inglês); o portão segue aberto para Recife e
+Petrópolis. \\
 Integração, variáveis e modelos &
 Redução de toda fonte a tabela de pontos com procedência, resolução nativa, unidade
 de agrupamento, classe de relevo e mecanismo. MDT PE3D 10\,m, Copernicus DEM GLO-30 e
@@ -320,8 +333,9 @@ por D-infinity~\cite{tarboton1997}; pico e decaimento de chuva. Firth~\cite{firt
 como rota primária, não lineares como diagnóstico; \emph{gate} EPV~\cite{peduzzi1996},
 \emph{bootstrap} de grupos $N$\,=\,1000, validação agrupada e \emph{walk-forward} &
 Nenhuma variável derivada do rótulo, de escore ou de limiar; as orbitais \textbf{não
-são causais}. Chuva só existe no piloto inglês: o modelo multirregião roda com quatro
-variáveis. A rota primária segue linear mesmo quando o não linear tem AUC maior. \\
+são causais}. Chuva recuperada para 100\% da base harmonizada; quantas variáveis
+entram em cada ajuste é decisão de E3. A rota primária segue linear mesmo quando o
+não linear tem AUC maior. \\
 Serviço, ambiente e recursos &
 API FastAPI com contrato de inferência e geoprocessamento sob demanda; \emph{model
 card}~\cite{mitchell2019}; camada de explicação. Python 3.10 com \texttt{firthlogist},
@@ -350,12 +364,13 @@ arquivo.
 reduzidas a uma tabela única, com procedência, resolução, unidade de
 agrupamento, classe de relevo e mecanismo por linha; recuperável geocodificado,
 descarte do restante nomeado. \emph{Entregável}: base de conhecimento
-geoespacial única, 64.989 pontos elegíveis ao ajuste fluvial, com as quatro
+geoespacial única, 65.070 pontos elegíveis ao ajuste fluvial, com as quatro
 fontes do ajuste na mesma cadeia de derivação de terreno e Recife com fonte de
 chuva única. \emph{Evidência}: contagem do que entra e do que sai por fonte
-publicada; 21 de 22 testes de invariante passam nesta execução, com a
-checagem de reprodutibilidade bit-exata ainda sensível à versão de biblioteca
-entre ambientes.
+publicada; 21 de 22 testes de invariante passam nesta execução. No ambiente
+fixado do projeto (Python 3.10, Tabela~\ref{tab:mm}) a reprodução bate exata;
+a sensibilidade que resta é entre ambientes diferentes desse, ainda dependente
+da versão de biblioteca.
 
 \textbf{E3 --- Estimação e validação agrupada (M2).} Ajustar o modelo por classe
 de relevo, com validação agrupada e aplicação cruzada entre fontes de negativo.
@@ -395,7 +410,13 @@ pesquisa.
 \label{sec:crono}
 
 O cronograma (Tabela~\ref{tab:crono}) cobre da submissão deste plano à
-apresentação final e incorpora os \emph{checkpoints} da disciplina. O estado da
+apresentação final e incorpora os \emph{checkpoints} da disciplina. As
+durações partem do que o trabalho já feito levou de fato --- a integração da
+Seção~\ref{sec:etapas} ocupou as duas primeiras quinzenas porque foi o tempo
+real gasto para reduzir seis fontes a uma tabela única ---, e cada intervalo
+carrega o resultado que a etapa correspondente busca (Seção~\ref{sec:etapas}
+declara o \emph{entregável} e a \emph{evidência} de cada uma), não só a data
+da disciplina. O estado da
 arte já está em curso e permanece ativo até a redação. Sendo o trabalho
 individual, as etapas se sobrepõem no tempo em vez de correr em paralelo entre
 pessoas; foram identificadas de antemão sem que a ordem de conclusão seja

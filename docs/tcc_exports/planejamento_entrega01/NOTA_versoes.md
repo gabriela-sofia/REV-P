@@ -319,3 +319,140 @@ ajuda nem piora o excesso sobre o limite de 500, que continua em aberto
 (hifenização ausente aqui). Figura 1 e Figura 2 renderizadas e conferidas
 visualmente (`pdftoppm`) — sem colisão, painel (b) da Fig. 2 mostra a matriz
 nova corretamente.
+
+---
+
+## 11. v8 (2026-08-16) — nota a nota sobre o rascunho v1 do plano de produto, e realinhamento contra os commits do dia
+
+Duas rodadas na mesma sessão. Primeiro, sete notas suas sobre o rascunho do
+plano produto→MVP; depois, enquanto eu ainda revisava, mais uma leva de
+commits reais chegou (`cbd6f2c` a `ebe072c`, 16:01–19:09) que tornou parte do
+que eu estava prestes a escrever desatualizado antes mesmo de eu terminar —
+por isso a v8 tem duas partes.
+
+### 11.1 — Nota a nota (rascunho plano produto)
+
+| Sua nota | O que a v8 faz |
+|---|---|
+| "estude o MVP local pra Recife, valide se dá pra usar outras regiões" | Não dá, e agora por dois motivos diferentes e nomeados: Curitiba tem modelo próprio mas colapso prospectivo de 2026 sem causa isolada (limite já conhecido, não resolvido aqui); Petrópolis segue com zero pontos rotulados (filtro COBRADE aplicado, resultado nulo — `revp_petropolis_separacao_fenomeno_enchente_deslizamento.md`). §II, "Serviço e camada de explicação", ganhou a frase que nomeia os dois motivos e aponta que estender às demais **já é** o objetivo declarado de E5 — não uma lacuna nova a criar |
+| "já resolvemos carregamento de arquivo/biblioteca reduzindo tudo a tabela de pontos? isso é infraestrutura, tem que resolver" | Já estava resolvido, em dois pontos: a redução a tabela única (E2, concluída) e um ambiente Python dedicado que isola a incompatibilidade `firthlogist`/scikit-learn de versão (`docs/ambiente_treino_susc.md`). §II, "Infraestrutura, carga e ajustes de escopo", passou de "se resolve reduzindo" (tom de estratégia genérica) para "ambos já resolvidos" com os dois nomeados. Paralelismo/divisão de carga já estava coberto pela frase existente (trabalho individual, sobreposição de etapas) — mantida |
+| "não listar os eventos positivos duas vezes; no texto só dizer que vêm de fontes públicas, tabela embaixo" | §II, "Rótulo positivo...", trocou a lista nomeada (5 fontes) por "eventos oficialmente registrados e geocodificados por órgãos e fontes públicas, listados por completo na Tabela I" — a lista completa continua existindo, só que uma vez |
+| "deixar claro que suscetibilidade é a definição do meu projeto, não a acepção genérica" | §I, parágrafo 2, passou a abrir com "Neste projeto, suscetibilidade é definida como..." |
+| "não quero o parágrafo 'o que resta' desse jeito — a base já está consolidada, evoluir agora é ajustar/corrigir o modelo, não juntar mais dado" | §I, parágrafo 4, reescrito: de "a vastidão de evidência reunida e não integrada" para "a base física já está consolidada... evoluir, daqui em diante, é ajustar, testar e corrigir o modelo sobre o que já existe, rodada a rodada — não reunir mais dado bruto". Isso não contradiz Petrópolis (zero pontos) nem Curitiba (colapso 2026): são limitações de **inventário local**/generalização temporal, já declaradas à parte em §II e E5 — não o tipo "evidência heterogênea não integrada" que este parágrafo tratava |
+| "reorganizar o objetivo alinhado com a evolução do trabalho + esboço de telas mínimas + pergunta de pesquisa consolidada" | §I, parágrafo 5, ganhou a cláusula "usar essa base e a metodologia causal já fixada para decidir, por AOI, se o terreno é suscetível a enchente" antes do objetivo original (mantido). Pergunta de pesquisa: mantida como está — já cumpria os critérios da autoavaliação do `CHECKLIST_template.md` §1, não achei motivo para reescrevê-la. Esboço de telas: criado como arquivo separado, `esboco_telas_minimas_produto_v1.md`, e não como figura nova no `main.tex` — o produto é contrato de API, não GUI, e a pergunta "vale imagem de protótipo?" já estava em aberto desde a v6 (linha 261-262 acima); a resposta mínima é o *payload* dos três estados (`ok`/`insufficient_data`/`region_not_supported`) que o texto já declara, sem gastar página nova |
+| deslizamento como feature/alerta extra | **Recomendação, sem mudança de texto.** O critério de separação enchente/deslizamento já está fixado e é de exclusão, não de feature conjunta (COBRADE 11300 excluído do rótulo — `revp_petropolis_separacao_fenomeno_enchente_deslizamento.md`); os 36 registros de deslizamento que o REV-P tem são só CPRM/Petrópolis, sem geometria e sem as variáveis geotécnicas (tipo/profundidade de solo, ângulo de ruptura) que um modelo de deslizamento exigiria — as seis variáveis atuais não bastam. Juntar um "alerta de deslizamento" ao escore de enchente hoje seria inferir fenômeno sem feature própria, o que a regra fixa do projeto proíbe. Fica registrado como linha futura possível, não como parte deste plano |
+
+### 11.2 — Realinhamento contra os commits do dia (`cbd6f2c`…`ebe072c`, 16:01–19:09)
+
+Enquanto eu revisava, seis commits reais tornaram duas afirmações do texto
+desatualizadas antes de eu terminar. Corrigido contra o commit, não contra
+suposição:
+
+1. **Chuva deixou de ser 14% da base e passou a 100%** (`cbd6f2c`): as datas
+   de evento de Copernicus EMS, Sen1Floods11 e UFO não estavam perdidas,
+   estavam em três formatos locais nunca lidos juntos (`eventTime` do
+   catálogo CEMS, `datetime` do STAC do Sen1Floods11, data no nome do arquivo
+   do UFO). Recuperadas: 107.558/107.558. §II, "O que a caracterização dos
+   dados impõe", e a célula correspondente da Tabela I foram reescritas —
+   removi a afirmação "por isso o modelo multirregião roda com quatro
+   variáveis de terreno" (não é mais verdadeira como estava) e não a
+   substituí por uma alegação de resultado: qual variável entra em cada
+   ajuste fica declarado como decisão de E3, não deste plano. Isto porque já
+   existe um ajuste de seis variáveis rodado hoje (`mod-mec-03`,
+   AUC=0,7228 vs. 0,7234 do ajuste de quatro) — **não trouxe esse número para
+   o texto**: é achado do dia, ainda sem correção nem promoção a rota
+   primária, e o `CHECKLIST_template.md` §6.1 proíbe apresentar resultado
+   como resultado desta entrega. Fica registrado aqui, não no manuscrito.
+2. **Curitiba deixou de ser só "ausência" no negativo** (`98e2a68`,
+   `c3284b6`): 114 dos 442 pontos passaram por quatro critérios (canal ativo,
+   categoria em uso, endereço com chamado de outro assunto, afastamento
+   ≥500 m de positivo na mesma data) e subiram para `exclusão qualificada`,
+   o mesmo nível do piloto inglês. §II, "Rótulo positivo...", e a Tabela I
+   foram corrigidas: "ausência de registro" já não é mais o que as três
+   regiões brasileiras têm — é só Recife e Petrópolis. **Não trouxe** o
+   resultado do LOSO de Curitiba com esse novo negativo (0,4636, abaixo do
+   limiar) — é exatamente a pergunta que E5 existe para responder, e
+   trazê-lo agora seria antecipar resultado de etapa futura.
+3. **E2**: contagem do pool fluvial passou de 64.989 para 65.070 pontos
+   (`local_runs/ds-05-tabela-unica/manifesto_v1.json`, gerado 2026-08-16
+   22:06 UTC) — atualizado nos dois lugares do texto que citavam o número
+   antigo. Não toquei na frase "21 de 22 testes de invariante passam": não
+   tenho `pytest` neste ambiente de verificação (falta o ambiente dedicado
+   de `docs/ambiente_treino_susc.md`) para confirmar se esse número mudou
+   depois da reclassificação de Curitiba — fica como pendência de
+   reconferência sua, não inventei um número novo.
+
+**O que fica pendente, nomeado, não meu para decidir sozinho**:
+
+- **Fig. 2, painel (b)** ("variável disponível por fonte") agora contradiz o
+  texto — a matriz ainda mostra chuva ausente em CEMS e Nível 1, o que deixou
+  de ser verdade. Você também achou esse painel pouco útil, independente da
+  desatualização. Não regenerei a figura nesta rodada: os arquivos-fonte que
+  `fig/make_fig2.py` lê (`mod-neg-01/resumo.json`) foram suplantados por
+  `aud-provenance-01/` e `mod-mec-03/`, com schema que só conferi
+  parcialmente, e um TCC não é lugar para uma figura remontada às pressas.
+  Sugestão concreta: trocar o painel (b) por algo que mostre a recuperação
+  da chuva (14%→100%, sem número de AUC — mantém o painel fora da categoria
+  "resultado"); e no painel (c), ao lado do AUC, um valor físico (coeficiente
+  ou magnitude), no mesmo espírito do painel (d). Preciso da sua confirmação
+  antes de mexer nos dados de origem do script.
+- **"Projeto inteiro com a mesma ferramenta por feature em todas as
+  regiões?"** — parcialmente sim, e é tendência clara nos commits de hoje:
+  chuva unificada via ERA5-Land nas quatro fontes do ajuste fluvial
+  (`cbd6f2c`); terreno já unificado em resolução única desde `90ecb5c`;
+  critério de negativo generalizado por região do mesmo padrão N1–N4
+  (`aud_chuva01`→`aud_provenance01`→`neg01` generalizado, `518588f`/`98e2a68`/
+  `2b18f31`). Não fiz o inventário completo de script-por-feature-por-região
+  nem apaguei nada — é tarefa própria, maior que esta rodada, e você mesma
+  pediu para checar peso individual antes de decidir apagar. Candidato mais
+  óbvio pra revisão nessa lógica: `aq_chirps3_v3.py` (scraper CHIRPS já
+  documentado como bloqueado e substituído por Open-Meteo/ERA5-Land em todo
+  lugar que chuva é usada hoje) — mas isso é levantamento pra próxima rodada
+  dedicada, não dentro desta.
+
+**Verificação de espaço**: Seção I recontada por script (não à mão):
+585 palavras — mesma ordem de grandeza da v7 (não cortei parágrafo 3, que
+segue como candidato mais barato já registrado em `CHECKLIST_template.md`
+§11.6). Compilado neste sandbox (mesma limitação de sempre, sem
+hifenização de português): 4 páginas, zero erro fatal, Fig. 1/Fig. 2/Tabelas
+I e II renderizadas e conferidas visualmente (`pdftoppm`), sem colisão.
+Overleaf continua sendo a fonte de verdade para a contagem final de 3
+páginas.
+
+---
+
+## 12. v9 (2026-08-18) — delta real do `planejamento02.pdf` contra o v8 (não a v4 que ele já tinha gerado)
+
+**Origem**: você reenviou `planejamento02.pdf` — o mesmo rascunho anotado que
+gerou a v4 (§7) — pedindo para eu estudar as notas antes de mexer em
+qualquer coisa. Comparei nota a nota contra o `main.tex` real de hoje (v8),
+não contra a v4: a maioria já tinha sido aplicada ou decidida conscientemente
+entre a v4 e a v8 (ver tabela abaixo, coluna "Situação"). Só entrou mudança
+onde a nota ainda não tinha sido atendida em nenhuma versão.
+
+| Sua nota (`planejamento02.pdf`) | Situação até a v8 | O que a v9 faz |
+|---|---|---|
+| "trocar a palavra dado daqui" (repetição de "o dado") | **Já resolvido na v4.** "O dado descreve..." virou "O registro descreve...". | Nada a fazer. |
+| "ache outras palavras pra Integração e curadoria, mas mantenha 'o que precede o treino'" | **Decisão consciente, não esquecimento** (§7, linha da tabela sobre "harmonização"): "Integração e curadoria" foi mantido de propósito — é o par organizar+validar que você pediu; "Harmonização" ficou só como nome da Fig. 1/etapa E2. | Nada a fazer. |
+| "mencione as dificuldades de forma sintetizada, o foco é a curadoria" | **Já resolvido.** Frase reescrita com causa concreta (escala muda a leitura de HAND/TWI; evidência documental não geocodificável), sem se alongar. | Nada a fazer. |
+| "coloque o final do parágrafo no começo" (abrir com "toda fonte passa por...") | **Não aplicado até a v8** — o parágrafo abria com "Reunir evidência não é o gargalo; torná-la comparável é.", que cumpre função parecida mas não é a reordenação pedida. | **Aplicado.** §II, "Integração e curadoria", agora abre com "Toda fonte passa por uma redução a tabela de pontos..." e liga com travessão à frase-síntese que já existia, antes da lista de dificuldades. |
+| "elabore bem, em algum lugar, o diferencial de Petrópolis (é outro conceito — deslizamento/movimento de massa)" | **Decisão consciente, tomada na transição v1→v2** (linhas 19–39 deste arquivo): prever em Petrópolis já é possível hoje, validar é que exige inventário local; a distinção fica para a Entrega 02, não para este documento de planejamento. | Nada a fazer — mantenho a decisão registrada, não reabri sem pedido seu. |
+| "cheque todos os conceitos específicos (D-infinity etc.) pensando em quem lê o projeto do zero" | **Já coberto** — HAND, TWI e D-infinity têm tradução de uma frase cada desde a v3/v4; virou princípio geral em [[feedback-gab-escrita-cientifica]], não item fechado. | Nada a fazer nesta rodada; reaplicar o princípio a cada revisão futura. |
+| "datasets externos: só explicar e citar, tabela embaixo, formato de paper de CS" | **Já resolvido.** Externas citadas em uma frase; Tabela I concentra o resto, posicionada como tabela de largura dupla ao fim de §II — convenção IEEE padrão. | Nada a fazer. |
+| "deixar claro que a resposta É o produto" | **Resolvido por reestruturação de frase já feita entre v4 e v8** — "a resposta devolve status, maturidade da região, escore..." já lista o conteúdo completo da resposta como o que o contrato entrega. | Nada a fazer. |
+| "gosto de *payload*, mas quero o que isso significa em PT-BR; a frase só declara 'predição seletiva', não explica" | **Não aplicado até a v8** — a frase seguia igual ao rascunho original, só com a citação. | **Aplicado.** §II, "Serviço e camada de explicação": "...é sobre esse *payload* --- a resposta que o contrato já devolveu --- que a camada de explicação atua: o padrão de predição seletiva~\cite{mitchell2019}." Não elaborei mais que isso sobre predição seletiva, como você pediu — a referência já cobre. |
+| "quero a fórmula do meu ambiente — dentro de como eu configurei, funciona; deixar clara a sensibilidade a outros ambientes" | **Não aplicado até a v8** — a frase de reprodutibilidade do E2 seguia com a ressalva de sensibilidade, sem amarrar ao ambiente descrito na Tabela I. | **Aplicado.** §III, evidência de E2: "No ambiente fixado do projeto (Python 3.10, Tabela~\ref{tab:mm}) a reprodução bate exata; a sensibilidade que resta é entre ambientes diferentes desse, ainda dependente da versão de biblioteca." |
+| "o cronograma tem que exalar que cada etapa tem propósito, baseado no tempo real que já levamos (ex.: a curadoria)" | **Não aplicado até a v8** — a abertura da Seção IV falava só de checkpoints e sobreposição de etapas, sem amarrar à duração real já observada. | **Aplicado.** §IV abre agora citando que a integração ocupou as duas primeiras quinzenas porque foi o tempo real gasto para reduzir seis fontes a uma tabela única, e que cada intervalo carrega o resultado que a etapa busca (remete à Seção III, que já declara *entregável* e *evidência* por etapa). |
+
+**Verificação de compilação feita**: compilei a v8 original e a v9 editada
+lado a lado neste sandbox (mesma limitação de sempre, sem hifenização de
+português — `Unknown option 'brazil'` do babel, idêntico nas duas). Nenhum
+erro novo introduzido pelas edições; as duas saem em 4 páginas neste
+ambiente. Diferença de tamanho do PDF compilado é de ~736 bytes (~0,5%),
+menor que o salto v3→v4 (~2%) — ainda assim, confirme 3 páginas no Overleaf
+antes de entregar, pela mesma razão de sempre.
+
+**Pergunta que continua em aberto, não tocada nesta rodada**: posição do
+parágrafo de limitações da heterogeneidade da evidência (§7, linha sobre o
+documento de expectativas do orientador) — ainda depende de informação que
+não está disponível no projeto.

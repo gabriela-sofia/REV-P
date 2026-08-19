@@ -1,0 +1,10 @@
+{
+  "config_local_present": false,
+  "preflight_status": "BLOCKED_NO_CONFIG",
+  "allow_network": false,
+  "allow_metadata_calls": false,
+  "allow_raster_download": false,
+  "allow_canary_download": false,
+  "metadata_calls_executed": 0,
+  "downloads_executed": 0
+}

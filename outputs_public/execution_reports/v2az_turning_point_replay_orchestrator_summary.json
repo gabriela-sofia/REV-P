@@ -1,0 +1,20 @@
+{
+  "stage": "v2az_turning_point_replay_orchestrator",
+  "status": "OK_WITH_EXPECTED_BLOCKERS",
+  "mode": "dry_run",
+  "manual_patch_rows": 55,
+  "manual_event_rows": 1,
+  "valid_patch_boundaries": 0,
+  "valid_event_polygons": 0,
+  "valid_patch_event_pairs": 0,
+  "feed_v2aw_rows": 0,
+  "feed_v2av_rows": 0,
+  "feed_v2au_rows": 0,
+  "turning_point_level": "TP0_DOCUMENTED_ABSENCE",
+  "turning_point_ready": false,
+  "can_attempt_replay": false,
+  "can_attempt_tp4": false,
+  "can_train_model": false,
+  "can_create_operational_labels": false,
+  "methodological_status": "TURNING_POINT_REPLAY_READY_WAITING_FOR_REAL_GEOMETRY_NOT_FOR_TRAINING"
+}

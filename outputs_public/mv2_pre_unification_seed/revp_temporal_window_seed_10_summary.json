@@ -1,0 +1,5 @@
+{
+  "seed_targets": 10,
+  "promoted_probe_ready": 0,
+  "blocked_no_temporal_window": 10
+}
