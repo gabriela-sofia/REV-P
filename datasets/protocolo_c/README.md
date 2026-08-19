@@ -3,17 +3,15 @@ Protocolo C é o processo de busca, aquisição e adjudicação de evidência de
 
 **Resultado final da linhagem**: nenhuma das três regiões tem negativo formal ou label operacional aceito — Recife chega a `PROTOCOL_VALIDATED_CANDIDATE_REFERENCE` (produto cartográfico oficial, score 0,76), Curitiba a `PROTOCOL_VALIDATED_TEMPORAL_REFERENCE` (evidência temporal local forte, score 0,7), Petrópolis a `PROTOCOL_VALIDATED_CONTEXTUAL_REFERENCE` (proxy regional, score 0,55). Ver relatório completo: [`docs/protocolo_c/v2bm_cross_region_reapplication/reports/protocol_c_cross_region_reapplication_report.md`](../../docs/protocolo_c/v2bm_cross_region_reapplication/reports/protocol_c_cross_region_reapplication_report.md).
 
-## Limpeza aplicada (auditoria de 2026-08-19)
+## Auditoria de 2026-08-19
 
-Das 639 saídas originais desta pasta, 159 eram bookkeeping puro de processo — log de "próxima ação", checagem automática de guardrail, manifesto de artefato versionável, relatório de conclusão de etapa — repetidos com o mesmo formato a cada uma das 59 etapas, sem conteúdo científico próprio. Foram removidos do diretório de trabalho (permanecem recuperáveis no histórico do git, `git log --all --full-history`, se algum dia forem necessários para auditoria de processo).
+Os arquivos de bookkeeping por etapa (`*_next_actions_registry.csv`, `*_guardrail_regression.csv`, `*_orchestrator_manifest.csv`, `*_versionable_artifacts_manifest.csv`, `*_completion_report.csv`, `*_next_programming_target_ranker.csv`) e as 21 variações de `*_ground_reference_blocker_matrix.csv` pareciam bookkeeping puro removível — mas checando o código (`scripts/protocolo_c/*_common.py`) cada um é lido de volta (`load_csv(...)`) pela própria automação da etapa seguinte, como parte de um padrão "carrega se existir, senão recalcula". Apagar esses arquivos quebraria a possibilidade de re-executar/auditar o pipeline. Por isso **nenhum arquivo foi removido desta pasta** — os 639 originais continuam todos aqui, intactos.
 
-As 21 variações de `*_ground_reference_blocker_matrix.csv` (uma por etapa, mesmo conceito — por que um evento ainda não pode virar referência de terreno — com esquema de colunas ligeiramente diferente a cada etapa) foram consolidadas em uma única tabela longitudinal: [`protocolo_c_ground_reference_blocker_matrix_consolidado.csv`](protocolo_c_ground_reference_blocker_matrix_consolidado.csv) (271 linhas, todas as 21 fontes, nenhuma informação perdida — colunas extras de cada etapa viraram texto na coluna `notes`).
-
-Resultado: 639 → 481 arquivos nesta pasta, sem perda de evidência única.
+O que foi adicionado (sem remover nada): uma tabela de conveniência que junta as 21 variações de `*_ground_reference_blocker_matrix.csv` num único lugar pra leitura humana, sem duplicar esforço de abrir 21 arquivos: [`protocolo_c_ground_reference_blocker_matrix_consolidado.csv`](protocolo_c_ground_reference_blocker_matrix_consolidado.csv) (271 linhas, todas as 21 fontes — os originais continuam existindo e sendo usados pelo pipeline).
 
 ## Índice das 59 etapas
 
-| Etapa | Região | Tópico | Arquivos únicos restantes |
+| Etapa | Região | Tópico | Arquivos de evidência única (fora do bookkeeping) |
 |---|---|---|---|
 | `v1uc` | Geral | acceptance audit | 1 |
 | `v1ud` | Geral | real source acquisition | 5 |

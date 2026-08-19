@@ -1,0 +1,20 @@
+artifact_id,artifact_path,artifact_type,protocol_version,sha256_prefix,file_size_bytes,is_versionable,reason
+ART_v1uk_0000,configs/protocolo_c/v1uk_recife_ckan_schema_policy.yaml,config,v1uk,98fa4accd9ea0043,407,true,Safe metadata-only artifact
+ART_v1uk_0001,configs/protocolo_c/v1uk_recife_event_window_policy.yaml,config,v1uk,cc2feb8c1c75aed9,385,true,Safe metadata-only artifact
+ART_v1uk_0002,configs/protocolo_c/v1uk_recife_field_mapping_policy.yaml,config,v1uk,f1860f6635ab79a5,390,true,Safe metadata-only artifact
+ART_v1uk_0003,configs/protocolo_c/v1uk_recife_sensitive_value_policy.yaml,config,v1uk,d2b3ec3046354797,335,true,Safe metadata-only artifact
+ART_v1uk_0004,configs/protocolo_c/v1uk_recife_candidate_scoring_policy.yaml,config,v1uk,940e8a4f6dcf3a86,713,true,Safe metadata-only artifact
+ART_v1uk_0005,datasets/protocolo_c/v1uk_recife_asset_schema_registry.csv,dataset,v1uk,5d65a15a8e06d0da,24393,true,Safe metadata-only artifact
+ART_v1uk_0006,datasets/protocolo_c/v1uk_recife_field_semantics_registry.csv,dataset,v1uk,eaa8076a20909334,139032,true,Safe metadata-only artifact
+ART_v1uk_0007,datasets/protocolo_c/v1uk_recife_occurrence_table_profile.csv,dataset,v1uk,4f2729c147b85f54,11838,true,Safe metadata-only artifact
+ART_v1uk_0008,datasets/protocolo_c/v1uk_recife_event_window_match_registry.csv,dataset,v1uk,950936e4661f9887,7542068,true,Safe metadata-only artifact
+ART_v1uk_0009,datasets/protocolo_c/v1uk_recife_coordinate_evidence_audit.csv,dataset,v1uk,d7c7d5e95c0222dd,10373,true,Safe metadata-only artifact
+ART_v1uk_0010,datasets/protocolo_c/v1uk_recife_locality_evidence_audit.csv,dataset,v1uk,da743a4e6e441b6e,11487,true,Safe metadata-only artifact
+ART_v1uk_0011,datasets/protocolo_c/v1uk_recife_candidate_row_registry.csv,dataset,v1uk,e03125b1db5e9279,8972394,true,Safe metadata-only artifact
+ART_v1uk_0012,datasets/protocolo_c/v1uk_recife_supervisor_review_prepackage_registry.csv,dataset,v1uk,6afa2841828650d3,640,true,Safe metadata-only artifact
+ART_v1uk_0013,datasets/protocolo_c/v1uk_recife_ground_reference_blocker_matrix.csv,dataset,v1uk,6694809528669813,1134,true,Safe metadata-only artifact
+ART_v1uk_0014,datasets/protocolo_c/v1uk_next_actions_registry.csv,dataset,v1uk,4d7251984d4f1715,284,true,Safe metadata-only artifact
+ART_v1uk_0015,datasets/protocolo_c/v1uk_versionable_artifacts_manifest.csv,dataset,v1uk,48118d8c55f60a75,2788,true,Safe metadata-only artifact
+ART_v1uk_0016,docs/metodologia_cientifica/protocolo_c_v1uk_recife_ckan_schema_deep_audit.md,doc,v1uk,35e8c148360dbd31,1704,true,Safe metadata-only artifact
+ART_v1uk_0017,docs/metodologia_cientifica/protocolo_c_relatorio_v1uk_recife_ckan_schema_deep_audit.md,doc,v1uk,1260a627b4c7aeb7,1558,true,Safe metadata-only artifact
+ART_v1uk_0018,docs/metodologia_cientifica/protocolo_c_status_atual_v1uk.md,doc,v1uk,e961c0d39367e583,428,true,Safe metadata-only artifact

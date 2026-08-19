@@ -1,0 +1,12 @@
+regression_id,check,detail,violation_count,status
+GR_v2bl_001,forbidden_flags::v2bl_recife_real_evidence_state.csv,no operational-label/negative/training flag is true,0,PASS
+GR_v2bl_002,forbidden_flags::v2bl_non_blocking_limitations_reclassification.csv,no operational-label/negative/training flag is true,0,PASS
+GR_v2bl_003,forbidden_flags::v2bl_automated_protocol_adjudication.csv,no operational-label/negative/training flag is true,0,PASS
+GR_v2bl_004,forbidden_flags::v2bl_recife_candidate_reference_promotion.csv,no operational-label/negative/training flag is true,0,PASS
+GR_v2bl_005,forbidden_flags::v2bl_validated_candidate_reference_registry.csv,no operational-label/negative/training flag is true,0,PASS
+GR_v2bl_006,forbidden_flags::v2bl_protocol_evidence_scorecard.csv,no operational-label/negative/training flag is true,0,PASS
+GR_v2bl_007,forbidden_flags::v2bl_reapplication_learning_matrix.csv,no operational-label/negative/training flag is true,0,PASS
+GR_v2bl_008,c7_operational_label_blocked,C7 stays not-created/blocked,0,PASS
+GR_v2bl_009,registry_forbidden_use,registry forbids label/negative/training/flood-extent,0,PASS
+GR_v2bl_010,limitations_do_not_block_reference,reclassified limitations do not block candidate reference,0,PASS
+GR_v2bl_011,public_outputs_safe,outputs_public has only derived csv/md,0,PASS

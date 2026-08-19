@@ -1,0 +1,2 @@
+action_id,event_id,action_type,priority,description,target,status,notes
+NA_v2aa_0000,MULTI_REGION,EVENT_PATCH_PACKAGE_SCHEMA_HARDENING,1,Selected from v2aa score-based next-programming-target ranker after Sentinel date recovery.,EVENT_PATCH_PACKAGE_TEMPORAL_READINESS,RECOMMENDED_NEXT_STEP,"No overlay, labels, ground truth, ground reference or inferred Sentinel dates."

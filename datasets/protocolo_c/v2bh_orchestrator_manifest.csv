@@ -1,0 +1,11 @@
+step_order,step_name,status,output,output_hash,notes
+1,load_charter_758_registry,OK,datasets/protocolo_c/v2bg_charter_activation_758_registry.csv,4a7bf53fd44a50d9,Offline product audit; no geometry or truth promotion.
+2,inventory_charter_products,OK,datasets/protocolo_c/v2bh_charter_758_product_inventory.csv,9a5da252c7721c9a,Offline product audit; no geometry or truth promotion.
+3,classify_recife_olinda_products,OK,datasets/protocolo_c/v2bh_recife_olinda_product_classification.csv,4e3585b9221efac0,Offline product audit; no geometry or truth promotion.
+4,audit_product_access_vector_crs_license,OK,datasets/protocolo_c/v2bh_product_access_vector_crs_license_audit.csv,17f926bf7127992d,Offline product audit; no geometry or truth promotion.
+5,classify_product_hazard_geometry_type,OK,datasets/protocolo_c/v2bh_product_hazard_geometry_type_classification.csv,2a38a3b547de5fa0,Offline product audit; no geometry or truth promotion.
+6,build_candidate_geometry_source_registry,OK,datasets/protocolo_c/v2bh_candidate_geometry_source_registry.csv,eb4ca03ec29c2249,Offline product audit; no geometry or truth promotion.
+7,update_recife_gate_status,OK,datasets/protocolo_c/v2bh_recife_gate_status_update.csv,df8dbc97061f0c43,Offline product audit; no geometry or truth promotion.
+8,build_manual_access_request_tasks,OK,datasets/protocolo_c/v2bh_manual_access_request_tasks.csv,c3537a3ed0023f97,Offline product audit; no geometry or truth promotion.
+9,generate_charter_product_review_packets,OK,datasets/protocolo_c/v2bh_charter_product_review_packet_index.csv,b2304159b3a1adee,Offline product audit; no geometry or truth promotion.
+10,run_guardrail_regression,OK,datasets/protocolo_c/v2bh_guardrail_regression.csv,381a361169dc1c97,Offline product audit; no geometry or truth promotion.

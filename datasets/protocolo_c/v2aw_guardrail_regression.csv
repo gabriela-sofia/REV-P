@@ -1,0 +1,11 @@
+regression_id,artifact_path,violation_count,status
+GR_v2aw_000,datasets/protocolo_c/v2aw_event_patch_observation_package_index.csv,0,PASS
+GR_v2aw_001,datasets/protocolo_c/v2aw_guardrail_regression.csv,0,PASS
+GR_v2aw_002,datasets/protocolo_c/v2aw_hydrometeorological_acquisition_plan.csv,0,PASS
+GR_v2aw_003,datasets/protocolo_c/v2aw_license_blocker_reclassification.csv,0,PASS
+GR_v2aw_004,datasets/protocolo_c/v2aw_observational_data_target_registry.csv,0,PASS
+GR_v2aw_005,datasets/protocolo_c/v2aw_observational_readiness_report.csv,0,PASS
+GR_v2aw_006,datasets/protocolo_c/v2aw_orchestrator_manifest.csv,0,PASS
+GR_v2aw_007,datasets/protocolo_c/v2aw_public_source_provenance_registry.csv,0,PASS
+GR_v2aw_008,datasets/protocolo_c/v2aw_temporal_window_candidate_registry.csv,0,PASS
+GR_v2aw_009,docs/protocolo_c/v2aw_public_data_observational_acquisition/evidence_cache/.gitignore,0,PASS

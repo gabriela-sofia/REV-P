@@ -1,0 +1,11 @@
+regression_id,artifact_path,violation_count,status
+GR_v2bb_001,datasets/protocolo_c/v2bb_adjudication_packet_selection.csv,0,PASS
+GR_v2bb_002,datasets/protocolo_c/v2bb_secondary_source_targets.csv,0,PASS
+GR_v2bb_003,datasets/protocolo_c/v2bb_secondary_evidence_probe.csv,0,PASS
+GR_v2bb_004,datasets/protocolo_c/v2bb_secondary_evidence_classification.csv,0,PASS
+GR_v2bb_005,datasets/protocolo_c/v2bb_secondary_evidence_correlation.csv,0,PASS
+GR_v2bb_006,datasets/protocolo_c/v2bb_uncertainty_update.csv,0,PASS
+GR_v2bb_007,datasets/protocolo_c/v2bb_digitization_review_candidate_matrix.csv,0,PASS
+GR_v2bb_008,datasets/protocolo_c/v2bb_adjudication_decision_table.csv,0,PASS
+GR_v2bb_009,datasets/protocolo_c/v2bb_secondary_evidence_packet_index.csv,0,PASS
+GR_v2bb_010,docs/protocolo_c/v2bb_secondary_evidence_adjudication/evidence_cache/.gitignore,0,PASS

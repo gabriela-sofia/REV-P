@@ -1,0 +1,11 @@
+blocker_id,event_id,blocker,status,ground_truth_operational,can_create_ground_reference,can_create_training_label,can_reopen_protocol_b,dino_usage,no_overlay_executed,no_coordinates_invented,patch_bound_truth,operational_validation,event_candidate_only,public_official_discovery,geocoding_executed,centroid_used,notes
+GB_v1uw_0000,CUR_2022_01_15,no_observed_geometry,BLOCKED,false,false,false,false,SUPPORT_ONLY,true,true,false,false,true,true,false,false,Curitiba candidate remains non-operational; blocker is explicit.
+GB_v1uw_0001,CUR_2022_01_15,no_occurrence_coordinates,BLOCKED,false,false,false,false,SUPPORT_ONLY,true,true,false,false,true,true,false,false,Curitiba candidate remains non-operational; blocker is explicit.
+GB_v1uw_0002,CUR_2022_01_15,no_overlay,BLOCKED,false,false,false,false,SUPPORT_ONLY,true,true,false,false,true,true,false,false,Curitiba candidate remains non-operational; blocker is explicit.
+GB_v1uw_0003,CUR_2022_01_15,no_ground_reference,BLOCKED,false,false,false,false,SUPPORT_ONLY,true,true,false,false,true,true,false,false,Curitiba candidate remains non-operational; blocker is explicit.
+GB_v1uw_0004,CUR_2022_01_15,no_training_label,BLOCKED,false,false,false,false,SUPPORT_ONLY,true,true,false,false,true,true,false,false,Curitiba candidate remains non-operational; blocker is explicit.
+GB_v1uw_0005,CUR_2022_01_15,sentinel_date_missing,BLOCKED,false,false,false,false,SUPPORT_ONLY,true,true,false,false,true,true,false,false,Curitiba candidate remains non-operational; blocker is explicit.
+GB_v1uw_0006,CUR_2022_01_15,hydromet_is_not_occurrence,BLOCKED,false,false,false,false,SUPPORT_ONLY,true,true,false,false,true,true,false,false,Curitiba candidate remains non-operational; blocker is explicit.
+GB_v1uw_0007,CUR_2022_01_15,alert_is_not_ground_truth,BLOCKED,false,false,false,false,SUPPORT_ONLY,true,true,false,false,true,true,false,false,Curitiba candidate remains non-operational; blocker is explicit.
+GB_v1uw_0008,CUR_2022_01_15,context_layer_is_not_occurrence,BLOCKED,false,false,false,false,SUPPORT_ONLY,true,true,false,false,true,true,false,false,Curitiba candidate remains non-operational; blocker is explicit.
+GB_v1uw_0009,CUR_2022_01_15,patch_truth_forbidden,BLOCKED,false,false,false,false,SUPPORT_ONLY,true,true,false,false,true,true,false,false,Curitiba candidate remains non-operational; blocker is explicit.

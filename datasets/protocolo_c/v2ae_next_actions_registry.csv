@@ -1,0 +1,2 @@
+action_id,event_id,action_type,priority,description,target,status,notes
+NA_v2ae_0000,MULTI_REGION,EVENT_PATCH_PACKAGE_V2_QA_AUTOMATION,1,Selected from v2ae score-based next-programming-target ranker after registry hardening.,CANONICAL_MULTIREGION_REGISTRY,RECOMMENDED_NEXT_STEP,"No overlay, labels, ground truth, ground reference, inferred date or inferred crosswalk."

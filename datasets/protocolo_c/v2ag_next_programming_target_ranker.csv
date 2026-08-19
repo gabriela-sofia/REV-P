@@ -1,0 +1,6 @@
+rank,next_target,score,programming_value,ground_truth_value,blocker_reduction_value,expected_effort,overclaim_risk,recommended_version,recommended_action,notes
+1,STOP_GROUND_TRUTH_SEARCH_UNTIL_NEW_SOURCE,70,high,none,prevents_invalid_promotion,low,low,v2ah,stop_operational_search_until_explicit_source,"Ranked from v2ag evidence counts, not hardcoded final status."
+2,DINO_REVIEW_SUPPORT_COMPLETION,60,medium,none,support_only,medium,medium,v2ah,keep_support_only_no_execution,"Ranked from v2ag evidence counts, not hardcoded final status."
+3,PUBLIC_SOURCE_RECHECK_HOLD,50,medium,none,uncertain,low,low,v2ah,hold_until_new_versionable_source,"Ranked from v2ag evidence counts, not hardcoded final status."
+4,MULTI_REGION_REGISTRY_MAINTENANCE,35,low,none,none,low,low,v2ah,defer,"Ranked from v2ag evidence counts, not hardcoded final status."
+5,EVENT_PATCH_PACKAGE_V2_CROSSWALK_MIGRATION,5,low,none,none,medium,medium,v2ah,hold,"Ranked from v2ag evidence counts, not hardcoded final status."

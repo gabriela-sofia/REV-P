@@ -1,0 +1,11 @@
+step_order,step_name,status,output,output_hash,notes
+1,select_curitiba_blocked_seeds,OK,datasets/protocolo_c/v2be_curitiba_blocked_seed_selection.csv,b98d41d5447521a9,Review-only candidate resolution completed.
+2,score_sentinel_asset_candidates,OK,datasets/protocolo_c/v2be_sentinel_asset_candidate_scores.csv,c2f04d017956603e,Review-only candidate resolution completed.
+3,resolve_candidate_seed_asset_links,OK,datasets/protocolo_c/v2be_candidate_seed_asset_links.csv,7660a93b2b4dce5e,Review-only candidate resolution completed.
+4,build_best_asset_per_seed,OK,datasets/protocolo_c/v2be_best_asset_per_seed.csv,f2a39f1991aed887,Review-only candidate resolution completed.
+5,bind_visual_review_assets,OK,datasets/protocolo_c/v2be_visual_review_asset_binding.csv,26fb0403d4b53785,Review-only candidate resolution completed.
+6,attempt_seed_dino_binding,OK,datasets/protocolo_c/v2be_seed_dino_binding.csv,2050053bc439bceb,Review-only candidate resolution completed.
+7,update_candidate_reference_readiness,OK,datasets/protocolo_c/v2be_candidate_reference_readiness_update.csv,b13d7bcd231d586e,Review-only candidate resolution completed.
+8,apply_revised_promotion_gate,OK,datasets/protocolo_c/v2be_revised_promotion_gate.csv,a67661a0aa7f54df,Review-only candidate resolution completed.
+9,generate_visual_review_packets,OK,datasets/protocolo_c/v2be_visual_review_packet_index.csv,86c9695f08c4379a,Review-only candidate resolution completed.
+10,guardrail_regression,OK,datasets/protocolo_c/v2be_guardrail_regression.csv,ef7e9ccff4f300a8,Review-only candidate resolution completed.

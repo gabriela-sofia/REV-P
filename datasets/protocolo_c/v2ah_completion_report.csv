@@ -1,0 +1,7 @@
+completion_id,metric,value,status,notes
+CR_v2ah_000,files_read,60,RECORDED,Prior v2 artifacts inspected by stage utilities.
+CR_v2ah_001,files_generated,9,RECORDED,datasets/protocolo_c/v2ah_ground_truth_search_stop_gate.csv|datasets/protocolo_c/v2ah_candidate_reference_review_queue.csv|datasets/protocolo_c/v2ah_candidate_evidence_dossier_index.csv|datasets/protocolo_c/v2ah_reopen_conditions_registry.csv|datasets/protocolo_c/v2ah_stratified_review_sampling.csv|datasets/protocolo_c/v2ah_safe_tcc_export_registry.csv|datasets/protocolo_c/v2ah_guardrail_regression.csv|datasets/protocolo_c/v2ah_next_actions_registry.csv|datasets/protocolo_c/v2ah_completion_report.csv
+CR_v2ah_002,review_queue_rows,172,REVIEW_ONLY,Candidates are not labels or references.
+CR_v2ah_003,stop_gate,GROUND_TRUTH_SEARCH_STOPPED_UNTIL_NEW_QUALIFIED_SOURCE,FAIL_CLOSED,Search remains stopped until a new qualified source.
+CR_v2ah_004,guardrail_failures,0,PASS,Guardrail regression over v2ah plus v2af/v2ag.
+CR_v2ah_005,decision_final,maintain_candidate_review_only_layer,NO_OPERATIONAL_PROMOTION,"No overlay, label, training, prediction, or Protocol B reopening."

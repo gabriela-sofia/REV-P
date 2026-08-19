@@ -1,0 +1,9 @@
+blocker_id,event_id,blocker,status,evidence_count,ground_truth_operational,can_create_ground_reference,can_create_training_label,human_review_status,notes
+BLOCK_v1um_0000,REC_2022_05_24_30,locality_only_no_geometry,ACTIVE,6672,false,false,false,PREPARED_NOT_OPERATIONAL,Revisao Humana locality-only sem overlay e sem promocao operacional.
+BLOCK_v1um_0001,REC_2022_05_24_30,no_coordinates,ACTIVE,6672,false,false,false,PREPARED_NOT_OPERATIONAL,Revisao Humana locality-only sem overlay e sem promocao operacional.
+BLOCK_v1um_0002,REC_2022_05_24_30,no_overlay,ACTIVE,6672,false,false,false,PREPARED_NOT_OPERATIONAL,Revisao Humana locality-only sem overlay e sem promocao operacional.
+BLOCK_v1um_0003,REC_2022_05_24_30,no_supervisor_review,ACTIVE,6672,false,false,false,PREPARED_NOT_OPERATIONAL,Revisao Humana locality-only sem overlay e sem promocao operacional.
+BLOCK_v1um_0004,REC_2022_05_24_30,sensitive_review_required,ACTIVE,6672,false,false,false,PREPARED_NOT_OPERATIONAL,Revisao Humana locality-only sem overlay e sem promocao operacional.
+BLOCK_v1um_0005,REC_2022_05_24_30,hazard_ambiguity,ACTIVE,5760,false,false,false,PREPARED_NOT_OPERATIONAL,Revisao Humana locality-only sem overlay e sem promocao operacional.
+BLOCK_v1um_0006,REC_2022_05_24_30,label_forbidden,ACTIVE,6672,false,false,false,PREPARED_NOT_OPERATIONAL,Revisao Humana locality-only sem overlay e sem promocao operacional.
+BLOCK_v1um_0007,REC_2022_05_24_30,patch_truth_forbidden,ACTIVE,6672,false,false,false,PREPARED_NOT_OPERATIONAL,Revisao Humana locality-only sem overlay e sem promocao operacional.

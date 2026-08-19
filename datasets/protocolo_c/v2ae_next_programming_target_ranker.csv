@@ -1,0 +1,7 @@
+rank,next_target,programming_value,ground_truth_value,blocker_reduction_value,expected_effort,overclaim_risk,recommended_version,recommended_action,notes
+1,EVENT_PATCH_PACKAGE_V2_QA_AUTOMATION,60,0,45,LOW,LOW,v2af — Event-Patch Package V2 QA Automation,SELECTED_NEXT_TARGET,Canonical registries are consistent and the QA gate is green; turn the QA harness into a repeatable automated gate.
+2,MULTI_REGION_REGISTRY_MAINTENANCE,45,0,30,LOW,LOW,v2af — Multi-Region Registry Maintenance,RANKED_ALTERNATIVE,Maintain the hardened canonical registries as new versions append.
+3,SENTINEL_DATE_CROSSWALK_DISCOVERY,40,0,50,MEDIUM,MEDIUM,v2af — Sentinel Date Crosswalk Discovery,RANKED_ALTERNATIVE,Search for an explicit key linking numeric and anchor namespaces; uncertain and only useful if a key exists.
+4,PUBLIC_SOURCE_RECHECK_HOLD,20,0,20,LOW,LOW,v2af — Public Source Recheck Hold,RANKED_ALTERNATIVE,Hold until a new public source with linkable occurrence evidence appears.
+5,DINO_REVIEW_SUPPORT_COMPLETION,10,0,10,MEDIUM,LOW,v2af — DINO Review Support Completion,RANKED_ALTERNATIVE,DINO review support already attached for nearly all candidates.
+6,STOP_GROUND_TRUTH_SEARCH_UNTIL_NEW_SOURCE,10,0,0,LOW,LOW,v2af — Stop Ground Truth Search Until New Source,RANKED_ALTERNATIVE,Explicit stop on ground-truth search until a qualifying public source is published.

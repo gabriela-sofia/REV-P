@@ -1,0 +1,13 @@
+regression_id,artifact_path,violation_count,status
+GR_v2ax_000,datasets/protocolo_c/v2ax_event_patch_temporal_linkage.csv,0,PASS
+GR_v2ax_001,datasets/protocolo_c/v2ax_event_temporal_window_registry.csv,0,PASS
+GR_v2ax_002,datasets/protocolo_c/v2ax_guardrail_regression.csv,0,PASS
+GR_v2ax_003,datasets/protocolo_c/v2ax_hydromet_source_registry.csv,0,PASS
+GR_v2ax_004,datasets/protocolo_c/v2ax_observational_gap_report.csv,0,PASS
+GR_v2ax_005,datasets/protocolo_c/v2ax_orchestrator_manifest.csv,0,PASS
+GR_v2ax_006,datasets/protocolo_c/v2ax_precipitation_event_summary.csv,0,PASS
+GR_v2ax_007,datasets/protocolo_c/v2ax_station_candidate_registry.csv,0,PASS
+GR_v2ax_008,datasets/protocolo_c/v2ax_temporal_evidence_readiness.csv,0,PASS
+GR_v2ax_009,datasets/protocolo_c/v2ax_timeseries_acquisition_manifest.csv,0,PASS
+GR_v2ax_010,datasets/protocolo_c/v2ax_timeseries_quality_audit.csv,0,PASS
+GR_v2ax_011,docs/protocolo_c/v2ax_hydrometeorological_temporal_evidence/evidence_cache/.gitignore,0,PASS

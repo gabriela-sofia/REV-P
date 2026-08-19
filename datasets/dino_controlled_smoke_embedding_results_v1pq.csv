@@ -1,0 +1,1 @@
+embedding_run_id,queue_id,visual_asset_id,patch_id,alias,region,model_source,vector_dim,embedding,vector_sha256_16,execution_mode,dino_allowed_use,can_create_label,can_train_model,target_created,status,blocked_reason,notes

@@ -1,0 +1,9 @@
+step_order,step_name,status,output,output_hash,notes
+1,terms_snapshot_registry,OK,datasets/protocolo_c/v2av_source_terms_snapshot_registry.csv,499887eef225134a,Completed.
+2,access_page_registry,OK,datasets/protocolo_c/v2av_official_access_page_registry.csv,4fe0ab7d6448ee42,Completed.
+3,manual_acquisition_packets,OK,datasets/protocolo_c/v2av_manual_acquisition_packet_index.csv,9f820ddb796c8574,Completed.
+4,license_resolution_candidates,OK,datasets/protocolo_c/v2av_license_resolution_candidates.csv,6a9383622cf01766,Completed.
+5,temporal_observation_targets,OK,datasets/protocolo_c/v2av_temporal_observation_targets.csv,19b7e4dde0d1f3ab,Completed.
+6,source_priority_recheck,OK,datasets/protocolo_c/v2av_source_priority_recheck.csv,f3a29931a628c76c,Completed.
+7,unresolved_terms_report,OK,datasets/protocolo_c/v2av_unresolved_terms_report.csv,f61aa3291640bfda,Completed.
+8,guardrail_regression,OK,datasets/protocolo_c/v2av_guardrail_regression.csv,9a56cf6a5c0d683c,Completed.
