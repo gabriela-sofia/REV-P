@@ -5,9 +5,9 @@ DINOv2 é um encoder visual pré-treinado e congelado, usado só para análise e
 
 O teste que decide se DINOv2 entra no modelo causal está em [`dino_v12_ab_comparison_summary_v1r5.csv`](dino_v12_ab_comparison_summary_v1r5.csv): comparando o modelo físico (`rain_decay_index_api_chirps, twi_dinf, slope_deg`) com e sem duas componentes PCA do DINOv2, o teste de razão de verossimilhança (LRT) deu significativo (p=0,0048) — **mas** 109 pontos mapeiam para só 23 vetores DINO únicos (até 10 pontos compartilhando o mesmo vetor), então essa significância é efeito de pseudorreplicação em nível de patch, não sinal real. Decisão registrada: `DINO_LRT_SIGNIFICANT_BUT_CONFOUNDED_BY_PATCH_LEVEL_PSEUDOREPLICATION` — DINO não virou feature de treino (`used_as_training_feature=false`, `labels_created=0`). É esse resultado que justifica DINO ficar de fora do modelo causal, com o motivo estatístico exato, não só "não ajudou".
 
-## Limpeza aplicada (auditoria de 2026-08-19)
+## Auditoria de 2026-08-19
 
-21 arquivos de rodadas de teste ("smoke test") que processaram 0 itens (`_results`, `_failures` e `_summary` todos vazios ou "0 items processed") foram removidos — nenhuma informação real existia neles. Restam 115 arquivos, ~2 MB no total (o volume aqui nunca foi um problema de espaço, é puramente de navegação).
+21 arquivos de rodadas de teste ("smoke test") ficaram com 0 linhas de dado (`_results`, `_failures` e `_summary` vazios ou "0 items processed"). Pareciam remoção óbvia, mas checando o código eles são lidos de volta por scripts consolidadores de etapas posteriores (`revp_v1pt_dino_execution_bundle.py`, `revp_v1qm_smoke_embedding_scientific_bundle.py`, `revp_v1ql_smoke_similarity_pca_review_products.py`, entre outros — o próprio docstring de um deles diz "reads outputs of prior stages"). Removê-los quebraria essa cadeia de consolidação. Por isso **nenhum arquivo foi removido desta pasta** — os 136 originais continuam todos aqui, intactos. O volume aqui (~2 MB no total) nunca foi um problema de espaço — é puramente de navegação, e é isso que o índice abaixo resolve.
 
 ## Índice por etapa
 
@@ -16,17 +16,17 @@ O teste que decide se DINOv2 entra no modelo causal está em [`dino_v12_ab_compa
 | `(sem código)` | dino_c3_anchor_review_triage_registry.csv, dino_control_candidate_review_queue.csv, dino_embedding_training_boundary_matrix.csv |
 | `v1pg` | dino_artifact_discovery_summary_v1pg.csv, dino_artifact_discovery_v1pg.csv |
 | `v1ph` | dino_embedding_feature_store_registry_v1ph.csv, dino_embedding_feature_store_summary_v1ph.csv |
-| `v1pi` | dino_embedding_quality_summary_v1pi.csv |
+| `v1pi` | dino_embedding_quality_audit_v1pi.csv, dino_embedding_quality_summary_v1pi.csv |
 | `v1pj` | dino_similarity_matrix_long_v1pj.csv, dino_similarity_neighbors_v1pj.csv, dino_similarity_summary_v1pj.csv |
 | `v1pk` | dino_cluster_exploratory_v1pk.csv, dino_pca_cluster_summary_v1pk.csv, dino_pca_projection_v1pk.csv |
-| `v1pl` | dino_protocol_c_crosswalk_summary_v1pl.csv |
-| `v1pm` | dino_tcc_results_manifest_v1pm.csv, dino_tcc_results_scientific_summary_v1pm.csv |
+| `v1pl` | dino_protocol_c_crosswalk_summary_v1pl.csv, dino_protocol_c_crosswalk_v1pl.csv |
+| `v1pm` | dino_tcc_results_manifest_v1pm.csv, dino_tcc_results_scientific_summary_v1pm.csv, dino_tcc_table_embedding_inventory_v1pm.csv, dino_tcc_table_pca_cluster_results_v1pm.csv, dino_tcc_table_protocol_c_crosswalk_v1pm.csv, dino_tcc_table_similarity_results_v1pm.csv |
 | `v1pn` | dino_patch_visual_asset_inventory_summary_v1pn.csv, dino_patch_visual_asset_inventory_v1pn.csv |
-| `v1po` | dino_embedding_execution_queue_summary_v1po.csv |
+| `v1po` | dino_embedding_execution_queue_summary_v1po.csv, dino_embedding_execution_queue_v1po.csv |
 | `v1pp` | dino_backend_model_probe_summary_v1pp.csv, dino_backend_model_probe_v1pp.csv |
-| `v1pq` | dino_controlled_smoke_embedding_summary_v1pq.csv |
-| `v1pr` | dino_smoke_embedding_feature_store_summary_v1pr.csv |
-| `v1ps` | dino_smoke_review_products_summary_v1ps.csv |
+| `v1pq` | dino_controlled_smoke_embedding_failures_v1pq.csv, dino_controlled_smoke_embedding_results_v1pq.csv, dino_controlled_smoke_embedding_summary_v1pq.csv |
+| `v1pr` | dino_smoke_embedding_feature_store_summary_v1pr.csv, dino_smoke_embedding_feature_store_v1pr.csv |
+| `v1ps` | dino_smoke_cluster_exploratory_v1ps.csv, dino_smoke_pca_projection_v1ps.csv, dino_smoke_protocol_c_crosswalk_v1ps.csv, dino_smoke_review_products_summary_v1ps.csv, dino_smoke_similarity_neighbors_v1ps.csv |
 | `v1pt` | dino_execution_manifest_v1pt.csv, dino_execution_quality_checks_v1pt.csv, dino_execution_scientific_summary_v1pt.csv |
 | `v1pu` | dino_visual_asset_eligibility_audit_v1pu.csv, dino_visual_asset_eligibility_summary_v1pu.csv |
 | `v1pv` | dino_patch_visual_linkage_registry_v1pv.csv, dino_patch_visual_linkage_summary_v1pv.csv |
@@ -43,12 +43,12 @@ O teste que decide se DINOv2 entra no modelo causal está em [`dino_v12_ab_compa
 | `v1qg` | dino_local_model_offline_audit_v1qg.csv, dino_local_model_offline_summary_v1qg.csv |
 | `v1qh` | dino_smoke_sample_selection_v1qh.csv, dino_smoke_sample_summary_v1qh.csv |
 | `v1qi` | dino_local_asset_preprocessing_audit_v1qi.csv, dino_local_asset_preprocessing_summary_v1qi.csv |
-| `v1qj` | dino_smoke_embedding_execution_manifest_v1qj.csv, dino_smoke_embedding_summary_v1qj.csv, dino_smoke_embeddings_feature_store_v1qj.csv |
-| `v1qk` | dino_representation_feature_store_with_smoke_summary_v1qk.csv |
-| `v1ql` | dino_smoke_review_products_summary_v1ql.csv |
+| `v1qj` | dino_smoke_embedding_execution_manifest_v1qj.csv, dino_smoke_embedding_failures_v1qj.csv, dino_smoke_embedding_summary_v1qj.csv, dino_smoke_embeddings_feature_store_v1qj.csv |
+| `v1qk` | dino_representation_feature_store_with_smoke_summary_v1qk.csv, dino_representation_feature_store_with_smoke_v1qk.csv |
+| `v1ql` | dino_smoke_exploratory_clusters_v1ql.csv, dino_smoke_pca_projection_v1ql.csv, dino_smoke_review_products_summary_v1ql.csv, dino_smoke_similarity_matrix_long_v1ql.csv, dino_smoke_similarity_neighbors_v1ql.csv |
 | `v1qm` | dino_smoke_embedding_bundle_manifest_v1qm.csv, dino_smoke_embedding_quality_checks_v1qm.csv, dino_smoke_embedding_scientific_summary_v1qm.csv, dino_tcc_table_smoke_embedding_results_v1qm.csv |
 | `v1qn` | dino_local_root_environment_audit_v1qn.csv, dino_local_root_environment_summary_v1qn.csv |
-| `v1qo` | dino_smoke_asset_local_reconciliation_summary_v1qo.csv, dino_smoke_asset_local_reconciliation_v1qo.csv |
+| `v1qo` | dino_smoke_asset_local_reconciliation_candidates_v1qo.csv, dino_smoke_asset_local_reconciliation_summary_v1qo.csv, dino_smoke_asset_local_reconciliation_v1qo.csv |
 | `v1qp` | dino_manifest_crosswalk_repair_suggestions_v1qp.csv, dino_manifest_crosswalk_repair_summary_v1qp.csv |
 | `v1qr` | dino_local_smoke_run_readiness_gate_v1qr.csv, dino_local_smoke_run_readiness_summary_v1qr.csv |
 | `v1qs` | dino_tcc_table_local_blockers_v1qs.csv, dino_tcc_table_local_readiness_v1qs.csv |
