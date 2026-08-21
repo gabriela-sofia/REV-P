@@ -105,6 +105,13 @@ resultado sobre topografia, e nunca foi.
 
 ### Pendência que isto expõe
 
+
+> **Nota de 20/08/2026.** A pendência de fonte de chuva descrita aqui foi
+> resolvida: o `chuva02` (Recife, 16/08) e o `chuva04` (base inteira, 16/08)
+> deixaram as seis fontes em Open-Meteo/ERA5-Land com a mesma fórmula. A
+> limitação que restou é de escala, não de procedência — ver
+> `ext_chuva_estado_do_projeto_v1.md`.
+
 Recife usa CHIRPS e Curitiba usa Open-Meteo ERA5-Land, apesar de as colunas
 terem sufixo `_chirps`. Se a chuva é o preditor principal da trilha pluvial, a
 fonte de chuva deixa de ser detalhe de proveniência e vira a variável central —

@@ -137,6 +137,15 @@ también estivesse carona no confundimento de fonte. Registrado aqui, não
 escondido; não é um resultado que motive ação imediata, mas deve ser citado
 se `twi_dinf` for usado em qualquer afirmação sobre Recife especificamente.
 
+> **Nota de 20/08/2026 — a correção deixou de ser só de Recife.** No mesmo dia
+> desta padronização, o `chuva04_adquirir_era5_global.py` reextraiu a chuva de
+> CEMS, Sen1Floods11, UFO e do piloto inglês com a mesma fórmula, e a base
+> inteira passou a ter produto único. O invariante que aqui era um teste de
+> Recife virou dois testes de projeto. E a auditoria seguinte
+> (`ext_chuva_estado_do_projeto_v1.md`) mostrou o que esta correção não
+> alcançava: em Recife, positivos e negativos dividem só 5 das 205 datas, então
+> o coeficiente de chuva que sobrou descreve o dia, não o lugar.
+
 ## 8. O que isto não faz
 
 Não promove esta rota a canônica em `PROJETO` — `dataset_v12_final.csv`

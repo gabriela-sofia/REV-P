@@ -29,6 +29,13 @@ eliminar, e o projeto já o cometeu três vezes, todas documentadas:
    produto global (`ext_cadeia_de_terreno_harmonizada_v1.md`)
 2. `hand_m` com limiar de canal diferente em cada região, todos rotulados
    "percentil 98" (`ext_hand_incomparavel_entre_regioes_v1.md`)
+
+> **Nota de 20/08/2026.** A pendência de fonte de chuva descrita aqui foi
+> resolvida: o `chuva02` (Recife, 16/08) e o `chuva04` (base inteira, 16/08)
+> deixaram as seis fontes em Open-Meteo/ERA5-Land com a mesma fórmula. A
+> limitação que restou é de escala, não de procedência — ver
+> `ext_chuva_estado_do_projeto_v1.md`.
+
 3. `rain_max_24h_chirps` com CHIRPS em 181 pontos e ERA5-Land em 97, dentro da
    mesma região (`ext_tabela_unica_e_pool_harmonizado_v1.md` §4)
 

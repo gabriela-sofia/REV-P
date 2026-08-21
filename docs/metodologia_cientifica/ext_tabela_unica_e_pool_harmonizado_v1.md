@@ -126,6 +126,13 @@ TWI 0,428.
 
 ## 4. Achado novo: a coluna de chuva de Recife carrega duas fontes, e a fonte prediz o rótulo
 
+
+> **Nota de 20/08/2026.** A pendência de fonte de chuva descrita aqui foi
+> resolvida: o `chuva02` (Recife, 16/08) e o `chuva04` (base inteira, 16/08)
+> deixaram as seis fontes em Open-Meteo/ERA5-Land com a mesma fórmula. A
+> limitação que restou é de escala, não de procedência — ver
+> `ext_chuva_estado_do_projeto_v1.md`.
+
 A pendência declarada dizia que Recife usava CHIRPS e Curitiba usava ERA5-Land.
 A mistura não é entre as duas cidades. **É dentro de Recife.** O campo
 `rain_data_source` do próprio v12 registra 181 pontos em CHIRPS v2.0 e 97 em
