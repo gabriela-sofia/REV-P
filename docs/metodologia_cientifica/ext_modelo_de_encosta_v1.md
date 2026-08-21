@@ -6,6 +6,13 @@
 
 ---
 
+> **Nota de 20/08/2026 — substituido pela v2.** Este documento vale como
+> registro do MOD-SERRA-01, que rodou na `ds-01` (base anterior a
+> harmonizacao) e contou EPV por grupos totais. Na tabela unica o estrato
+> ingreme tem 19 grupos positivos, e pela regra de EPV da classe minoritaria
+> comporta uma variavel, nao duas. A conclusao qualitativa se mantem; os
+> coeficientes mudaram. Ver `ext_modelo_de_encosta_v2.md`.
+
 ## 1. A pergunta
 
 Propagar o modelo para Petrópolis só faz sentido se a relação HAND → inundação
