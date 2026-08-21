@@ -54,6 +54,8 @@ DINOv2 com registros (`facebook/dinov2-with-registers-base`) é usado exclusivam
 
 O colapso do modelo de Curitiba em holdout temporal real (AUC 0,65 embaralhado → 0,52 real) foi investigado com sete diagnósticos independentes, descartando as explicações mais prováveis (vazamento espacial, sazonalidade, ruído amostral, deriva administrativa, El Niño/La Niña). Um GBM monotônico causal confirmou não linearidade real no fenômeno, mas não resolveu o problema de generalização temporal. A rota declarada continua sendo a linear/interpretável, e o resultado é reportado como achado negativo informativo — parte legítima do método científico, não uma falha a esconder.
 
+Em 20/08/2026 o holdout temporal do piloto inglês (E4, `ext_holdout_temporal_e4_v1.md`) fechou a hipótese que faltava: com a mesma rota linear, as mesmas variáveis e um horizonte de 21 anos, o modelo **não colapsa** (8 cortes, AUC médio 0,7992, nenhum abaixo de 0,60). Isso elimina "o colapso é propriedade do método" como explicação e devolve o problema ao dado de Curitiba — onde a mesma rodada mediu o buraco: 114 negativos contra 1.238 positivos, insuficiente para sustentar um holdout temporal próprio na base harmonizada. O oitavo diagnóstico, portanto, não achou a causa: descartou a última explicação metodológica e nomeou o limite amostral.
+
 ## 9. O que pode ser afirmado
 
 - O modelo causal de Recife é real, auditado ponta a ponta, e generaliza sob validação cruzada (LOO-AUC 0,68).

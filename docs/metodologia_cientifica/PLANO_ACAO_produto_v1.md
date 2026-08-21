@@ -11,6 +11,15 @@ reformulada, não carimbada como concluída.
 
 ---
 
+> **Nota de 20/08/2026 — o que mudou para o caso de Curitiba.** O holdout
+> temporal do piloto inglês (E4, `ext_holdout_temporal_e4_v1.md`) descartou a
+> última explicação metodológica para o colapso de 2026: com a mesma rota
+> linear e horizonte de 21 anos, o piloto não colapsa. E, na base harmonizada,
+> Curitiba **não sustenta** holdout temporal próprio — 114 negativos contra
+> 1.238 positivos, com 1,2 ponto por grupo. Os diagnósticos SUSC-20O a 21A
+> registrados abaixo continuam válidos como executados; o que mudou é a
+> leitura: o gargalo é amostral, e a rota de saída é negativo, não modelo.
+
 ## Status de execução (atualizado 2026-07-23, sessão posterior a este rascunho)
 
 Fases 1-4 já rodaram com prova real. Resumo pra realinhamento rápido (detalhe completo em

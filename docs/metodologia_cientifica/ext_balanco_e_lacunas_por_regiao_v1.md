@@ -109,9 +109,13 @@ Firth existe (LOO-AUC 0,6459) mas colapsa em holdout temporal 2026
 - Portal de dados abertos da Prefeitura (ArcGIS Hub, com CSV/GeoJSON)
 - Coordenadoria Estadual de Defesa Civil do PR — Mapas de Ocorrências e GEODC
 
-**Prioridade**: média. O problema de Curitiba pode não ser de dado, e sim de
-método — o piloto inglês, com 201 eventos e holdout temporal real, é o teste
-mais direto dessa hipótese e já está montado.
+**Prioridade**: média. A hipótese "o problema é de método, não de dado" foi
+testada em 20/08/2026 e **caiu**: o piloto inglês, com 201 eventos e horizonte
+de 21 anos, não colapsa (`ext_holdout_temporal_e4_v1.md`). Com a mesma rota
+linear e as mesmas variáveis, o método aguenta o tempo. Sobra o dado de
+Curitiba — e a mesma rodada mediu o tamanho do buraco: **114 negativos contra
+1.238 positivos**, com 1,2 ponto por grupo, insuficiente para sustentar um
+holdout temporal próprio na base harmonizada.
 
 ### 3.4. Rio Grande do Sul — nova região, decidida
 

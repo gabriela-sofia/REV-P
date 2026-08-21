@@ -241,10 +241,14 @@ Em ordem de força probatória:
    falta o bootstrap das 6.
 4. **Transferência entre regiões sem colapso** — o modelo de observação
    transfere a 0,7798. Este é o teste mais forte que temos.
-5. **Holdout temporal com dezenas de eventos** — possível com os 201 eventos
-   ingleses e ~158 datas em 25 anos. **Ainda não foi feito**, e é o teste que
-   ataca diretamente o colapso de Curitiba.
+5. **Holdout temporal com dezenas de eventos** — **feito** (20/08/2026,
+   `ext_holdout_temporal_e4_v1.md`). São 201 eventos ingleses em **110 datas
+   distintas** entre 2000 e 2025 — o "~158" desta lista era estimativa e
+   nunca se confirmou. Janela expansiva sobre a tabela única, 8 folds com IC
+   de grupos, AUC médio 0,7890, nenhum fold abaixo de 0,60:
+   `PROSPECTIVAMENTE_ESTAVEL`. Ataca o colapso de Curitiba pelo lado do
+   método e o descarta como explicação; não explica o dado de Curitiba.
 6. **Validação em região tropical de serra** — não disponível hoje.
 
-O item 5 é o próximo passo de maior valor científico e não depende de nenhuma
-aquisição nova.
+O item 5 deixou de ser o próximo passo. O de maior valor científico agora é o
+item 6, e ele **depende de aquisição** — é o pedido LAI de Petrópolis.

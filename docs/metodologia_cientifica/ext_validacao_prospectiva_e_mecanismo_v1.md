@@ -4,6 +4,17 @@
 **Artefatos**: `local_runs/mod-prosp-01/`, `local_runs/ter-03-brasil-harmonizado/`
 **Scripts**: `mod_prosp01_holdout_temporal.py`, `ter03_reextrair_brasil.py`
 
+> **Nota de 20/08/2026 — a seção 1 foi refeita e continua valendo, mas não é
+> mais a medida corrente.** O MOD-PROSP-01 rodou na `ds-01`, base anterior à
+> harmonização, ordenou blocos negativos por uma data que eles não têm, e
+> reportou AUC sem intervalo de confiança. A execução que fecha o E4 é o
+> MOD-PROSP-02, sobre a tabela única, com IC de grupos em todo fold:
+> `ext_holdout_temporal_e4_v1.md`. O veredito não mudou
+> (`PROSPECTIVAMENTE_ESTAVEL`); o que mudou foi a base em que ele se apoia —
+> oito folds com prevalência de teste 0,46–0,50, em vez de nove com
+> prevalência derivando de 0,30 a 0,93. As seções 2 a 5 deste documento
+> seguem correntes.
+
 ---
 
 ## 1. A validação prospectiva — o teste que faltava
@@ -181,7 +192,14 @@ EPV descarta os cortes sem amostra, mas o primeiro fold ainda opera no limite.
 regional. Ela refuta "o colapso é do método", mas não prova estabilidade em
 clima tropical de serra.
 
-**A fonte de chuva difere entre as regiões brasileiras.** Recife usa CHIRPS;
+**A fonte de chuva difere entre as regiões brasileiras.** ~~Recife usa CHIRPS;
 Curitiba usa Open-Meteo ERA5-Land, apesar de as colunas terem sufixo `_chirps`.
-O campo `rain_data_source` registra. Isso não foi resolvido e impede tratar as
-duas chuvas como a mesma variável.
+Isso não foi resolvido e impede tratar as duas chuvas como a mesma variável.~~
+
+**Resolvido em 16/08/2026 e verificado em 20/08.** O `chuva02` padronizou
+Recife e o `chuva04` reextraiu toda a base: as seis fontes usam Open-Meteo/
+ERA5-Land, mesma janela de 14 dias e mesmo decaimento de 0,85/dia, com testes
+que guardam o invariante. Em troca, a limitação mudou de lugar: a chuva é
+medida em células de ~11 km enquanto o modelo compara pontos dentro do mesmo
+evento, e não discrimina nessa escala em nenhuma das seis fontes. Ver
+`ext_chuva_estado_do_projeto_v1.md`.
