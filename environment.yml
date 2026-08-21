@@ -54,7 +54,7 @@ dependencies:
   - numpy
   - pandas
   - scipy
-  - scikit-learn
+  - scikit-learn<1.6   # >=1.6 remove _validate_data (API interna) e quebra o firthlogist
   - statsmodels        # diagnostico do modelo: GLM de referencia, VIF, testes
   - matplotlib
   - seaborn            # figuras do artigo/poster

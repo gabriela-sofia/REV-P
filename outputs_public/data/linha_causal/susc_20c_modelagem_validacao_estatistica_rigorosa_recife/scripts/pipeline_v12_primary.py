@@ -1,33 +1,62 @@
-# SUSC-20C — pipeline final de modelagem/validacao estatistica rigorosa (v12 primary):
-# screening univariado (Mann-Whitney), Firth penalized logistic regression multivariada,
-# bootstrap estratificado N=1000 (CIs e taxa de sign-flip), e AUC preditivo (LOO-CV +
-# 5-fold repetido 50x). Mesma metodologia exata usada desde v5.
-# Original: local_runs/recife_modelo_v12_extracao_final/pipeline_v12_primary.py
-# Nota de sanitizacao (REV-P): path absoluto local da sessao de execucao substituido por
-# placeholder relativo.
-import json, warnings
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+SUSC-20 — pipeline causal de Recife, versao consolidada e certeira.
+
+Um script, um dataset de entrada, um conjunto de resultados. Substitui a
+cadeia de 4 scripts espalhados em 2 pastas (susc_20b/scripts/*.py +
+susc_20c/scripts/pipeline_v12_primary.py), cujo script de modelagem apontava
+pra um caminho local (`local_runs/...`) que nao existe no repositorio - por
+isso, como estava, NAO DAVA PRA RODAR a partir de um clone limpo. Esta versao
+le e escreve so em caminhos que existem de verdade no repo.
+
+Metodologia (identica ao original, so o encanamento de arquivo mudou):
+screening univariado (Mann-Whitney), regressao logistica penalizada de Firth
+multivariada, bootstrap estratificado N=1000 (CIs e taxa de sign-flip), e AUC
+preditivo (leave-one-out + 5-fold repetido 50x).
+
+Verificado: rodando este script contra o dataset ja publicado no repo, os
+numeros batem exatamente com os que ja estao documentados no README e no
+relatorio v12 master (LOO-AUC=0.6781, n=269, mesmos coeficientes de Firth) -
+ver `docs/reproducibilidade_susc20_recife.md`.
+
+Ambiente necessario (ver environment.yml): Python 3.10, `scikit-learn<1.6`
+(versoes mais novas quebram `firthlogist` - `_validate_data` foi removido da
+API interna do sklearn) e `firthlogist`.
+
+Roda a partir da raiz do repo:
+
+    python outputs_public/data/linha_causal/susc_20c_modelagem_validacao_estatistica_rigorosa_recife/scripts/pipeline_v12_primary.py
+"""
+import json
+import warnings
+from pathlib import Path
+
 import numpy as np
 import pandas as pd
 from scipy import stats
 from sklearn.linear_model import LogisticRegression
-from sklearn.model_selection import LeaveOneOut, StratifiedKFold
 from sklearn.metrics import roc_auc_score
+from sklearn.model_selection import LeaveOneOut, StratifiedKFold
 from sklearn.preprocessing import StandardScaler
+
 warnings.filterwarnings("ignore")
 
-LOCAL_RUNS_ROOT = "<local_runs_root>"  # era um path absoluto privado da sessao de execucao
-V12 = f"{LOCAL_RUNS_ROOT}/recife_modelo_v12_extracao_final"
-SEED = 20260723
+ROOT = next(
+    p for p in (Path(__file__).resolve(), *Path(__file__).resolve().parents)
+    if (p / ".git").is_dir() and (p / "environment.yml").is_file()
+)
+DATASET = ROOT / "outputs_public" / "data" / "linha_causal" / "susc_20a_aquisicao_eventos_reais_recife" / "dataset" / "dataset_eventos_features_v12_final.csv"
+RESULTS_DIR = ROOT / "outputs_public" / "data" / "linha_causal" / "susc_20c_modelagem_validacao_estatistica_rigorosa_recife" / "results"
 
-FEATURE_COLS_PRIMARY = ["elevation_m", "slope_deg", "hand_m_dinf", "twi_dinf",
-                         "rain_peak_residual_orthogonalized", "rain_decay_index_api_chirps"]
+SEED = 20260723
+FEATURE_COLS = ["elevation_m", "slope_deg", "hand_m_dinf", "twi_dinf",
+                 "rain_peak_residual_orthogonalized", "rain_decay_index_api_chirps"]
 EXPECTED_SIGN = {"elevation_m": -1, "slope_deg": -1, "hand_m_dinf": -1, "twi_dinf": +1,
                   "rain_peak_residual_orthogonalized": +1, "rain_decay_index_api_chirps": +1}
 
-primary = pd.read_csv(f"{V12}/dataset_v12_final.csv")
-print(f"primary n={len(primary)} ({(primary.label==1).sum()} pos / {(primary.label==0).sum()} neg)")
 
-def univariate_screen(df, feature_cols):
+def univariate_screen(df: pd.DataFrame, feature_cols: list[str]) -> pd.DataFrame:
     rows = []
     for feat in feature_cols:
         d = df.dropna(subset=[feat])
@@ -46,13 +75,13 @@ def univariate_screen(df, feature_cols):
                       "significant_p05": bool(p < 0.05)})
     return pd.DataFrame(rows)
 
-def firth_multivariate(df, feature_cols):
+
+def firth_multivariate(df: pd.DataFrame, feature_cols: list[str]) -> tuple[pd.DataFrame, dict]:
     from firthlogist import FirthLogisticRegression
     d = df.dropna(subset=feature_cols).copy()
     X = d[feature_cols].values
     y = d["label"].astype(int).values
-    scaler = StandardScaler()
-    Xs = scaler.fit_transform(X)
+    Xs = StandardScaler().fit_transform(X)
     model = FirthLogisticRegression(fit_intercept=True)
     model.fit(Xs, y)
     rows = []
@@ -70,22 +99,22 @@ def firth_multivariate(df, feature_cols):
               "loglik": float(model.loglik_)}
     return coef_df, report
 
-def bootstrap_firth_coefs(df, feature_cols, n_boot=1000, seed=SEED):
+
+def bootstrap_firth_coefs(df: pd.DataFrame, feature_cols: list[str], n_boot: int = 1000, seed: int = SEED) -> tuple[pd.DataFrame, dict]:
     from firthlogist import FirthLogisticRegression
     d = df.dropna(subset=feature_cols).reset_index(drop=True)
     X = d[feature_cols].values
     y = d["label"].astype(int).values
-    pos_idx = np.where(y == 1)[0]; neg_idx = np.where(y == 0)[0]
+    pos_idx, neg_idx = np.where(y == 1)[0], np.where(y == 0)[0]
     rng = np.random.default_rng(seed)
     boot_coefs = {f: [] for f in feature_cols}
     n_failed = 0
-    for b in range(n_boot):
+    for _ in range(n_boot):
         bi = np.concatenate([rng.choice(pos_idx, size=len(pos_idx), replace=True),
                               rng.choice(neg_idx, size=len(neg_idx), replace=True)])
         Xb, yb = X[bi], y[bi]
         try:
-            scaler = StandardScaler()
-            Xbs = scaler.fit_transform(Xb)
+            Xbs = StandardScaler().fit_transform(Xb)
             m = FirthLogisticRegression(fit_intercept=True, skip_ci=True, skip_pvals=True)
             m.fit(Xbs, yb)
             for i, f in enumerate(feature_cols):
@@ -103,57 +132,68 @@ def bootstrap_firth_coefs(df, feature_cols, n_boot=1000, seed=SEED):
                       "ci_crosses_zero": bool(ci_lo <= 0 <= ci_hi), "pct_sign_flips": round(flip_pct, 1)})
     return pd.DataFrame(rows), {"n_boot_requested": n_boot, "n_boot_failed": n_failed, "seed": seed}
 
-def predictive_auc(df, feature_cols, k=5, n_repeats=50, seed=SEED):
+
+def predictive_auc(df: pd.DataFrame, feature_cols: list[str], k: int = 5, n_repeats: int = 50, seed: int = SEED) -> dict:
     d = df.dropna(subset=feature_cols).reset_index(drop=True)
-    X = d[feature_cols].values; y = d["label"].astype(int).values
-    loo = LeaveOneOut()
-    y_true, y_score = [], []
-    for tr_idx, te_idx in loo.split(X):
+    X, y = d[feature_cols].values, d["label"].astype(int).values
+
+    def _fit_score(tr_idx, te_idx):
         scaler = StandardScaler()
-        Xtr = scaler.fit_transform(X[tr_idx]); Xte = scaler.transform(X[te_idx])
+        Xtr, Xte = scaler.fit_transform(X[tr_idx]), scaler.transform(X[te_idx])
         clf = LogisticRegression(penalty="l2", C=1.0, max_iter=2000, class_weight="balanced")
         clf.fit(Xtr, y[tr_idx])
-        y_score.append(clf.predict_proba(Xte)[:, 1][0]); y_true.append(y[te_idx][0])
+        return clf.predict_proba(Xte)[:, 1]
+
+    y_true, y_score = [], []
+    for tr_idx, te_idx in LeaveOneOut().split(X):
+        y_score.append(_fit_score(tr_idx, te_idx)[0])
+        y_true.append(y[te_idx][0])
     loo_auc = roc_auc_score(y_true, y_score)
+
     rng = np.random.default_rng(seed)
     reps_auc = []
-    for rep in range(n_repeats):
+    for _ in range(n_repeats):
         skf = StratifiedKFold(n_splits=k, shuffle=True, random_state=int(rng.integers(0, 1_000_000)))
         yt, ys = [], []
         for tr_idx, te_idx in skf.split(X, y):
-            scaler = StandardScaler()
-            Xtr = scaler.fit_transform(X[tr_idx]); Xte = scaler.transform(X[te_idx])
-            clf = LogisticRegression(penalty="l2", C=1.0, max_iter=2000, class_weight="balanced")
-            clf.fit(Xtr, y[tr_idx])
-            ys.extend(clf.predict_proba(Xte)[:, 1]); yt.extend(y[te_idx])
+            ys.extend(_fit_score(tr_idx, te_idx))
+            yt.extend(y[te_idx])
         reps_auc.append(roc_auc_score(yt, ys))
     reps_auc = np.array(reps_auc)
+
     return {"n_used": int(len(d)), "loo_auc": round(float(loo_auc), 4), "skf_k": k, "skf_n_repeats": n_repeats,
             "skf_auc_mean": round(float(reps_auc.mean()), 4), "skf_auc_std": round(float(reps_auc.std()), 4),
             "skf_auc_min": round(float(reps_auc.min()), 4), "skf_auc_max": round(float(reps_auc.max()), 4)}
 
-print("[1] PRIMARY univariate")
-univ_df = univariate_screen(primary, FEATURE_COLS_PRIMARY)
-univ_df.to_csv(f"{V12}/primaria_v12_univariate_mannwhitney.csv", index=False)
-print(univ_df.to_string(index=False))
 
-print("[2] PRIMARY Firth multivariate")
-firth_df, firth_report = firth_multivariate(primary, FEATURE_COLS_PRIMARY)
-firth_df.to_csv(f"{V12}/primaria_v12_firth_multivariate_coefs.csv", index=False)
-print(json.dumps(firth_report, indent=2)); print(firth_df.to_string(index=False))
+def main():
+    primary = pd.read_csv(DATASET)
+    print(f"primary n={len(primary)} ({(primary.label == 1).sum()} pos / {(primary.label == 0).sum()} neg)")
 
-print("[3] PRIMARY bootstrap (1000)")
-boot_df, boot_report = bootstrap_firth_coefs(primary, FEATURE_COLS_PRIMARY)
-boot_df.to_csv(f"{V12}/primaria_v12_bootstrap_coefs.csv", index=False)
-print(json.dumps(boot_report, indent=2)); print(boot_df.to_string(index=False))
+    print("[1] screening univariado (Mann-Whitney)")
+    univ_df = univariate_screen(primary, FEATURE_COLS)
+    univ_df.to_csv(RESULTS_DIR / "primaria_v12_univariate_mannwhitney.csv", index=False)
 
-print("[4] PRIMARY predictive AUC (LOO + repeated k-fold)")
-auc_report = predictive_auc(primary, FEATURE_COLS_PRIMARY)
-with open(f"{V12}/primaria_v12_predictive_auc.json", "w") as f:
-    json.dump(auc_report, f, indent=2)
-print(json.dumps(auc_report, indent=2))
+    print("[2] Firth multivariada")
+    firth_df, firth_report = firth_multivariate(primary, FEATURE_COLS)
+    firth_df.to_csv(RESULTS_DIR / "primaria_v12_firth_multivariate_coefs.csv", index=False)
+    print(json.dumps(firth_report, indent=2))
 
-all_reports = {"firth_report": firth_report, "boot_report": boot_report, "auc_report": auc_report}
-with open(f"{V12}/all_reports_v12_primary.json", "w") as f:
-    json.dump(all_reports, f, indent=2, default=str)
-print("DONE.")
+    print("[3] bootstrap (N=1000)")
+    boot_df, boot_report = bootstrap_firth_coefs(primary, FEATURE_COLS)
+    boot_df.to_csv(RESULTS_DIR / "primaria_v12_bootstrap_coefs.csv", index=False)
+
+    print("[4] AUC preditivo (LOO + 5-fold repetido 50x)")
+    auc_report = predictive_auc(primary, FEATURE_COLS)
+    with open(RESULTS_DIR / "primaria_v12_predictive_auc.json", "w") as f:
+        json.dump(auc_report, f, indent=2)
+    print(json.dumps(auc_report, indent=2))
+
+    with open(RESULTS_DIR / "all_reports_v12_primary.json", "w") as f:
+        json.dump({"firth_report": firth_report, "boot_report": boot_report, "auc_report": auc_report}, f, indent=2, default=str)
+
+    print("\nDONE.")
+
+
+if __name__ == "__main__":
+    main()
