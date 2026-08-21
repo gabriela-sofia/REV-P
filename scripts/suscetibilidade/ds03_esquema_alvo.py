@@ -27,6 +27,26 @@ REGRA DE OURO DO CONTRATO:
     de onde aquele valor veio. Onde a fonte nao tem a variavel, o campo e
     NULO DECLARADO -- nunca estimado, nunca imputado, nunca zero.
 
+DELTA v2 (2026-08-19) -- elevacao relativa, permanente:
+
+  `elevation_m` absoluta e o QUARTO caso desta mesma classe de erro (as tres
+  do topo deste docstring), achado em `app01-transferencia-curitiba-sem-
+  rotulo-local`: Curitiba (~900 m) teve 0% dos pontos dentro do intervalo
+  5-95% de um treino externo perto do nivel do mar (diferenca padronizada de
+  media = 2,76 desvios). HAND ja e relativo por construcao (altura acima da
+  drenagem); elevacao sozinha nao era, e por isso quebra entre regioes de
+  altitude de base diferente.
+
+  Correcao: `elevation_baseline_m` (P1 de elevation_m DENTRO da mesma fonte)
+  e `elevation_rel_m` (elevation_m - elevation_baseline_m). Aplicada dentro
+  de `moldar()` no ds04, para todo redutor, presente ou futuro -- nao e uma
+  correcao pontual de Curitiba, e uma regra permanente do contrato: toda
+  regiao nova (Petropolis e as que vierem depois) ganha o mesmo tratamento
+  sem que ninguem precise lembrar de pedir. `elevation_m` continua no
+  contrato, inalterada -- e a leitura absoluta, util dentro de uma fonte;
+  `elevation_rel_m` e a leitura que pode ser comparada ou agrupada ENTRE
+  fontes. Ver `regra_elevacao` em `contrato()`.
+
 Uso:
     python scripts/suscetibilidade/ds03_esquema_alvo.py
 """
@@ -40,7 +60,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[2]
 OUT = REPO / "local_runs" / "ds-03-esquema"
 
-VERSAO = "v1"
+VERSAO = "v2"
 
 
 @dataclass(frozen=True)
@@ -140,6 +160,13 @@ VARIAVEIS_FISICAS = (
 # serem comparaveis entre regioes.
 VARIAVEIS_TERRENO = ("elevation_m", "slope_deg", "hand_m", "twi_dinf")
 
+# As mesmas quatro, na versao que pode ser AGRUPADA OU COMPARADA ENTRE
+# fontes/regioes. So elevacao muda (absoluta -> relativa ao nivel de
+# referencia da propria fonte); slope/HAND/TWI ja eram comparaveis. Usar esta
+# tupla, nao VARIAVEIS_TERRENO, em qualquer ajuste que misture mais de uma
+# fonte -- ver regra_elevacao em contrato().
+VARIAVEIS_TERRENO_TRANSFERIVEL = ("elevation_rel_m", "slope_deg", "hand_m", "twi_dinf")
+
 
 ESQUEMA: tuple[Coluna, ...] = (
     # ---- identidade ----
@@ -201,6 +228,14 @@ ESQUEMA: tuple[Coluna, ...] = (
            "precipitacao maxima em 24 h na janela do evento, mm"),
     Coluna("rain_decay_index", "float", "fisica", False,
            "indice de precipitacao antecedente com decaimento (API)"),
+
+    # ---- elevacao relativa (v2, permanente -- ver DELTA v2 no topo) ----
+    Coluna("elevation_baseline_m", "float", "procedencia", False,
+           "P1 de elevation_m dentro da mesma fonte; nivel de referencia "
+           "local subtraido para obter elevation_rel_m"),
+    Coluna("elevation_rel_m", "float", "fisica_derivada", False,
+           "elevation_m - elevation_baseline_m; comparavel entre fontes de "
+           "altitude de base diferente, ao contrario de elevation_m absoluta"),
 )
 
 COLUNAS = tuple(c.nome for c in ESQUEMA)
@@ -245,6 +280,7 @@ def contrato() -> dict:
         "classes": {str(k): v for k, v in CLASSE.items()},
         "variaveis_fisicas": list(VARIAVEIS_FISICAS),
         "variaveis_terreno": list(VARIAVEIS_TERRENO),
+        "variaveis_terreno_transferivel": list(VARIAVEIS_TERRENO_TRANSFERIVEL),
         "criterios_admissao": CRITERIOS_ADMISSAO,
         "gate_pool_fluvial_30m": GATE_POOL_FLUVIAL_30M,
         "regra_de_ouro": (
@@ -264,6 +300,17 @@ def contrato() -> dict:
         "regra_chuva": (
             "duas fontes de precipitacao nao podem ocupar a mesma coluna. "
             "Pool so e licito dentro de uma fonte_chuva"),
+        "regra_elevacao": (
+            "elevation_m absoluta nao e comparavel entre fontes de altitude "
+            "de base diferente (achado app01, 19/08/2026: Curitiba ~900 m, "
+            "0% dos pontos dentro do intervalo 5-95% de treino externo perto "
+            "do nivel do mar, diferenca padronizada = 2,76). elevation_rel_m "
+            "(elevation_m menos o P1 da propria fonte) e obrigatoria em "
+            "qualquer ajuste que agrupe ou compare mais de uma fonte -- use "
+            "VARIAVEIS_TERRENO_TRANSFERIVEL, nao VARIAVEIS_TERRENO, nesses "
+            "casos. elevation_m absoluta continua valida dentro de uma unica "
+            "fonte. Regra permanente, aplicada a toda fonte no ds04 por "
+            "construcao, nao por lembranca"),
     }
 
 

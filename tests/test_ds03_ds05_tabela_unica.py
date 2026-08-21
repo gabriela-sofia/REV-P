@@ -31,8 +31,22 @@ ESQ = RUNS / "ds-03-esquema"
 sys.path.insert(0, str(ROOT / "scripts" / "suscetibilidade"))
 from ds03_esquema_alvo import (  # noqa: E402
     CLASSE, CLASSES_TREINO, COLUNAS, DOMINIOS, OBRIGATORIAS,
-    VARIAVEIS_TERRENO, VERSAO, contrato,
+    VARIAVEIS_TERRENO, VARIAVEIS_TERRENO_TRANSFERIVEL, VERSAO, contrato,
 )
+from ds04_reduzir_por_fonte import REDUTORES, VARIANTES  # noqa: E402
+
+
+def _arquivos_reduzidos() -> list[Path]:
+    """So os arquivos que o ds04 ATUAL declara produzir.
+
+    Nao usa glob("*.csv"): local_runs pode conter orfaos de convencoes de
+    nomeacao anteriores (ex.: `recife__variante_wbt30.csv`, anterior a
+    reversao de 12/08/2026, sem correspondente em REDUTORES/VARIANTES hoje) --
+    esses arquivos nao sao regenerados nem apagados por este script, e testar
+    contra eles testaria uma versao do pipeline que ja nao existe.
+    """
+    return [RED / f"{nome}.csv" for nome in {**REDUTORES, **VARIANTES}
+            if (RED / f"{nome}.csv").exists()]
 
 
 def _exige(p: Path, comando: str) -> None:
@@ -85,7 +99,7 @@ def test_esquema_alvo_nao_contem_dado():
 def test_toda_fonte_reduzida_respeita_o_contrato():
     _exige(RED, "python scripts/suscetibilidade/ds04_reduzir_por_fonte.py")
     achou = False
-    for p in sorted(RED.glob("*.csv")):
+    for p in sorted(_arquivos_reduzidos()):
         d = pd.read_csv(p, low_memory=False)
         achou = True
         assert list(d.columns) == list(COLUNAS), f"{p.name} fora do contrato"
@@ -147,7 +161,7 @@ def test_toda_fonte_canonica_esta_em_wbt30():
     `hand_m` passaria a significar coisas diferentes conforme a linha.
     """
     _exige(RED, "python scripts/suscetibilidade/ds04_reduzir_por_fonte.py")
-    for p in sorted(RED.glob("*.csv")):
+    for p in sorted(_arquivos_reduzidos()):
         if "__variante_" in p.stem:
             continue
         d = pd.read_csv(p, low_memory=False)
@@ -221,7 +235,7 @@ def test_hand_nulo_onde_a_rede_de_drenagem_e_degenerada():
 def test_nenhuma_variavel_fisica_foi_imputada_com_zero():
     """Ausencia e nulo declarado. Zero em HAND ou chuva seria um valor real."""
     _exige(RED, "python scripts/suscetibilidade/ds04_reduzir_por_fonte.py")
-    for p in sorted(RED.glob("*.csv")):
+    for p in sorted(_arquivos_reduzidos()):
         d = pd.read_csv(p, low_memory=False)
         for v in ("hand_m", "rain_max_24h", "rain_decay_index"):
             # zero e valor legitimo isolado; o que denuncia imputacao e a
@@ -344,6 +358,40 @@ def test_recife_tem_fonte_de_chuva_unica(unica):
         f"fonte unica esperada e open_meteo_era5_land, achei {fontes}")
 
 
+def test_toda_fonte_tem_produto_de_chuva_unico(unica):
+    """A garantia de Recife vale para a base inteira desde o `chuva04`.
+
+    O teste acima nasceu quando so Recife tinha o problema. Depois do
+    `chuva04_adquirir_era5_global.py` (2026-08-16) as seis fontes passaram a
+    usar Open-Meteo/ERA5-Land com a mesma janela de 14 dias e o mesmo fator de
+    decaimento -- entao o invariante deixou de ser sobre Recife e passou a ser
+    sobre o projeto. Manter os dois: o de Recife guarda a correcao historica,
+    este guarda a propriedade atual da base.
+    """
+    com_chuva = unica[unica["rain_max_24h"].notna()]
+    if com_chuva.empty:
+        pytest.skip("nenhuma linha com chuva")
+    por_fonte = com_chuva.groupby("fonte")["fonte_chuva"].nunique()
+    misturadas = por_fonte[por_fonte > 1]
+    assert misturadas.empty, (
+        f"fontes com mais de um produto de precipitacao: {dict(misturadas)}. "
+        "Rode aud_chuva01 para medir o confundimento antes de admitir na base")
+
+
+def test_chuva_de_toda_a_base_vem_do_mesmo_produto(unica):
+    """Comparar chuva entre fontes exige que seja a mesma grandeza medida igual.
+
+    Sem isto, o coeficiente de chuva de um modelo multirregiao mistura produto
+    com regiao, que e a versao entre fontes do achado do `aud_chuva01`.
+    """
+    com_chuva = unica[unica["rain_max_24h"].notna()]
+    if com_chuva.empty:
+        pytest.skip("nenhuma linha com chuva")
+    produtos = set(com_chuva["fonte_chuva"].unique())
+    assert produtos == {"open_meteo_era5_land"}, (
+        f"a base deixou de ter produto unico de precipitacao: {produtos}")
+
+
 def test_manifesto_registra_hash_do_consolidado():
     p = UNI / f"manifesto_{VERSAO}.json"
     _exige(p, "python scripts/suscetibilidade/ds05_admissao_consolidacao.py")
@@ -372,3 +420,101 @@ def test_nada_de_local_runs_esta_staged():
     staged = subprocess.check_output(
         ["git", "diff", "--cached", "--name-only"], cwd=ROOT, text=True)
     assert "local_runs/" not in staged
+
+
+# --------------------------------------------------------------------------
+# elevacao relativa (v2, 2026-08-19) -- ver DELTA v2 no ds03 e
+# docs/metodologia_cientifica/elevacao_relativa_regra_permanente_v1.md
+#
+# Estes testes protegem uma regra permanente, nao um teste pontual de
+# Curitiba: qualquer fonte futura (Petropolis, ou outra) tem de ganhar
+# elevation_rel_m automaticamente, e o achado que motivou a regra (Curitiba
+# fora do dominio de elevacao absoluta de fontes ao nivel do mar) tem de
+# continuar corrigido enquanto o pipeline evoluir.
+# --------------------------------------------------------------------------
+
+def test_elevation_rel_m_e_reconstruivel_a_partir_do_baseline():
+    """elevation_rel_m tem de ser SEMPRE elevation_m - elevation_baseline_m.
+
+    Nao pode virar um numero solto: a regra de ouro do contrato exige que
+    toda coluna de valor seja rastreavel ate a procedencia.
+    """
+    _exige(RED, "python scripts/suscetibilidade/ds04_reduzir_por_fonte.py")
+    achou = False
+    for p in sorted(_arquivos_reduzidos()):
+        d = pd.read_csv(p, low_memory=False)
+        com_elev = d[d["elevation_m"].notna()]
+        if com_elev.empty:
+            continue
+        achou = True
+        reconstruido = com_elev["elevation_m"] - com_elev["elevation_baseline_m"]
+        assert (reconstruido - com_elev["elevation_rel_m"]).abs().max() < 1e-6, (
+            f"{p.name}: elevation_rel_m nao reconstroi a partir do baseline")
+    assert achou, "nenhuma fonte com elevation_m para checar"
+
+
+def test_elevation_baseline_e_constante_dentro_da_fonte():
+    """O baseline e o P1 de elevation_m DENTRO da mesma fonte -- um so valor
+    por fonte, nunca um numero que varia linha a linha dentro dela."""
+    _exige(RED, "python scripts/suscetibilidade/ds04_reduzir_por_fonte.py")
+    for p in sorted(_arquivos_reduzidos()):
+        d = pd.read_csv(p, low_memory=False)
+        base = d["elevation_baseline_m"].dropna().unique()
+        assert len(base) <= 1, (
+            f"{p.name}: elevation_baseline_m varia dentro da fonte: {base}")
+
+
+def test_elevation_rel_m_nulo_apenas_onde_elevation_m_e_nulo():
+    """Nulo declarado, nunca imputado: se elevation_m falta, elevation_rel_m
+    tem de faltar tambem -- nunca zero, nunca o baseline sozinho."""
+    _exige(RED, "python scripts/suscetibilidade/ds04_reduzir_por_fonte.py")
+    for p in sorted(_arquivos_reduzidos()):
+        d = pd.read_csv(p, low_memory=False)
+        assert (d["elevation_m"].isna() == d["elevation_rel_m"].isna()).all(), (
+            f"{p.name}: nulidade de elevation_rel_m nao acompanha elevation_m")
+
+
+def test_curitiba_ganha_dominio_comparavel_com_elevacao_relativa(unica):
+    """Guarda de regressao do achado central (app01, 19/08/2026): elevation_m
+    absoluta tinha 0% dos pontos de Curitiba dentro do intervalo 5-95% de
+    treino externo (CEMS+UK+Sen1Floods11), diferenca padronizada ~2,4 desvios
+    -- Curitiba fica a ~900 m, as fontes externas ficam perto do nivel do
+    mar. elevation_rel_m resolve isso por construcao. Se este teste falhar,
+    a correcao de elevacao relativa parou de funcionar ou uma fonte nova
+    entrou com baseline mal calculado.
+    """
+    pool = unica[unica["elegivel_pool_fluvial"]]
+    ext = pool[pool["fonte"].isin(["cems", "uk", "sen1floods11"])]
+    cur = pool[pool["fonte"] == "curitiba"]
+    if ext.empty or cur.empty:
+        pytest.skip("pool fluvial sem as fontes necessarias neste ambiente")
+
+    p5, p95 = ext["elevation_rel_m"].quantile([0.05, 0.95])
+    cobertura_rel = ((cur["elevation_rel_m"] >= p5)
+                     & (cur["elevation_rel_m"] <= p95)).mean()
+    assert cobertura_rel > 0.80, (
+        f"cobertura de Curitiba em elevation_rel_m caiu para {cobertura_rel:.1%} "
+        "-- a correcao de elevacao relativa parece ter parado de funcionar")
+
+    # a variavel absoluta continua com o problema original -- documentado
+    # aqui, nao escondido, para que a diferenca entre as duas fique visivel
+    # no proprio teste
+    p5a, p95a = ext["elevation_m"].quantile([0.05, 0.95])
+    cobertura_abs = ((cur["elevation_m"] >= p5a)
+                     & (cur["elevation_m"] <= p95a)).mean()
+    assert cobertura_abs < 0.10, (
+        "elevation_m absoluta deixou de ter o problema de dominio esperado -- "
+        "confirme se isso e uma mudanca real de dado antes de comemorar")
+
+
+def test_variaveis_terreno_transferivel_troca_so_a_elevacao():
+    """A tupla usada em ajuste multirregiao difere da tupla bruta em UM
+    unico elemento -- se mais de um mudar, algo alem da elevacao foi alterado
+    sem que a regra permanente tenha sido revisada."""
+    assert len(VARIAVEIS_TERRENO) == len(VARIAVEIS_TERRENO_TRANSFERIVEL)
+    diferentes = [a for a, b in zip(VARIAVEIS_TERRENO, VARIAVEIS_TERRENO_TRANSFERIVEL)
+                 if a != b]
+    assert diferentes == ["elevation_m"], (
+        f"esperava so elevation_m trocada por elevation_rel_m, achei: {diferentes}")
+    assert VARIAVEIS_TERRENO_TRANSFERIVEL[
+        VARIAVEIS_TERRENO.index("elevation_m")] == "elevation_rel_m"

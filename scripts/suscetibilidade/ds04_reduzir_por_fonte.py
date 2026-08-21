@@ -153,8 +153,44 @@ def sobrepor_nivel_negativo(d: pd.DataFrame) -> pd.DataFrame:
     return d
 
 
+def aplicar_elevacao_relativa(d: pd.DataFrame) -> pd.DataFrame:
+    """elevation_rel_m = elevation_m menos o nivel de referencia da propria fonte.
+
+    Achado de 2026-08-19 (`app01-transferencia-curitiba-sem-rotulo-local`):
+    elevation_m absoluta nao e comparavel entre regioes de altitude de base
+    diferente -- Curitiba (~900 m) tinha 0% dos pontos dentro do intervalo
+    5-95% de um treino externo perto do nivel do mar (diferenca padronizada
+    de media = 2,76). HAND ja e relativo por definicao (altura acima da
+    drenagem mais proxima); elevation_m sozinha nao era, e por isso quebrava
+    entre fontes.
+
+    baseline = P1 de elevation_m DENTRO da mesma fonte -- nunca entre fontes,
+    porque cada redutor so ve a propria fonte, por design (ver docstring do
+    modulo). Fica gravado em `elevation_baseline_m` para que elevation_rel_m
+    seja sempre reconstruivel, nunca um numero solto sem procedencia.
+
+    Roda dentro de `moldar()`, que todo redutor -- presente ou futuro --
+    chama antes de devolver. E essa a garantia permanente pedida: nenhuma
+    regiao nova pode deixar de receber a correcao por esquecimento.
+    """
+    if "elevation_m" not in d.columns:
+        d["elevation_baseline_m"] = np.nan
+        d["elevation_rel_m"] = np.nan
+        return d
+    e = pd.to_numeric(d["elevation_m"], errors="coerce")
+    if e.notna().sum() == 0:
+        d["elevation_baseline_m"] = np.nan
+        d["elevation_rel_m"] = np.nan
+        return d
+    baseline = float(e.quantile(0.01))
+    d["elevation_baseline_m"] = baseline
+    d["elevation_rel_m"] = np.where(e.notna(), e - baseline, np.nan)
+    return d
+
+
 def moldar(d: pd.DataFrame) -> pd.DataFrame:
     """Garante as colunas do contrato, na ordem, sem inventar valor."""
+    d = aplicar_elevacao_relativa(d)
     for c in COLUNAS:
         if c not in d.columns:
             d[c] = np.nan
