@@ -456,3 +456,96 @@ antes de entregar, pela mesma razão de sempre.
 parágrafo de limitações da heterogeneidade da evidência (§7, linha sobre o
 documento de expectativas do orientador) — ainda depende de informação que
 não está disponível no projeto.
+
+---
+
+## §13 — v10 (2026-08-20): E4 deixa de ser promessa
+
+Esta rodada não veio de nota do orientador: veio de conferir o texto contra os
+artefatos. O parágrafo do E4 dizia "teste ainda não realizado" e citava
+"cerca de 158 datas". As duas coisas estavam erradas.
+
+| O que o texto dizia | O que os artefatos mostram | O que a v10 faz |
+|---|---|---|
+| "Teste ainda não realizado" | O `MOD-PROSP-01` rodou em 12/08/2026 e deu `PROSPECTIVAMENTE_ESTAVEL`. A frase vinha de `ext_criterios_de_acerto_v1.md` (09/08), verdadeira quando foi escrita, copiada para o plano em 18/08 sem revisão. | E4 vira **concluída (M3)**, com número e evidência. |
+| "cerca de 158 datas em 25 anos" | Estimativa nunca conferida. São **110 datas distintas**, 201 eventos independentes e 401 grupos, entre 01/06/2000 e 01/01/2025. | Número corrigido no parágrafo do E4. |
+| — | O `MOD-PROSP-01` rodou na base anterior à harmonização, ordenou blocos negativos por uma data que eles não têm e não reportou IC. | Nova execução (`MOD-PROSP-02`) sobre a tabela única, com IC de grupos em todo fold: `ext_holdout_temporal_e4_v1.md`. |
+| "Em E4, se o desempenho temporal não superar o acaso, o resultado é publicado como está" (risco declarado no futuro) | A regra foi cumprida: o fold mais fraco e o estrato de Curitiba, que não sustenta o teste, estão relatados. | Frase passa ao passado e cita onde doeu. |
+
+**Efeito na paginação — confira no Overleaf.** O parágrafo do E4 cresceu de 4
+para 10 linhas de fonte; foi comprimido depois de escrito, mas ainda é maior
+que o anterior. Não consegui compilar nesta rodada (sem `pdflatex` no
+ambiente), então o número de páginas não foi verificado como nas versões
+anteriores. Se estourar, o corte natural é a última frase do E4 (a ressalva
+de "um país só"), que está dita com mais detalhe em §III e no documento de
+metodologia.
+
+**O que esta versão não toca**: a tabela do cronograma agrupa E3--E4 numa
+linha só ("Experimentação"), então concluir o E4 antes do previsto não muda
+nenhuma célula. E o E3 continua aberto no texto — corretamente.
+
+---
+
+## §14 — v11 (2026-08-20): E3 e E6 saem do papel
+
+Continuação da conferência do texto contra os artefatos. Desta vez o que mudou
+não foi só redação: duas etapas passaram a ter entregável real.
+
+| O que o texto dizia | O que passou a existir | O que a v11 faz |
+|---|---|---|
+| "E3 — Ajustar o modelo por classe de relevo" (futuro) | `MOD-SERRA-03` sobre a tabela única: serra AUC 0,7916, planície 0,7245, transferência planície→serra 0,7957 | E3 vira **concluída (M2)**, com coeficientes e IC no parágrafo. |
+| "Falta a validação prospectiva e a camada de explicação" | E4 fechado na v10; camada de explicação agora existe como gerador por regras | Frase corrigida. |
+| "E6 — Expor o modelo pelo contrato" (futuro) | `SVC-01`/`SVC-02`: contrato como função pura, cinco portões, 29 testes | E6 vira **contrato executável (M5)**, com os três estados reais no texto. |
+| "o contraste de HAND vai de cerca de 3 m em planície a quase 28 m em serra" | Na base harmonizada: **2,5 m e 34,5 m** | Números corrigidos. |
+| "O contrato roda hoje como MVP local para Recife" | Recife responde `mvp_local` **carregando o critério que não atinge**; Curitiba, transferência; Petrópolis, `region_not_supported` | Parágrafo de serviço reescrito com o comportamento real. |
+
+**Achado que o texto precisa carregar, e agora carrega**: o estrato íngreme tem
+19 eventos positivos, não 24 grupos. Pela regra de EPV como ela é enunciada —
+eventos da classe rara por variável — ele comporta **uma** variável. O
+`MOD-SERRA-01`, que produziu os coeficientes citados até a v10, usou duas. A
+conclusão sobrevive (com uma variável os dois estratos passam em todos os
+critérios), mas os números mudaram e o texto passou a citar os novos.
+
+**Paginação — conferir no Overleaf antes de entregar.** Esta é a segunda versão
+seguida em que parágrafos crescem: E3 foi de 5 para 10 linhas, E6 de 4 para 10,
+e o parágrafo de serviço da §II de 6 para 11. Somados aos da v10, são ~25 linhas
+a mais que a v9. Não consigo compilar neste ambiente. **Se estourar, a ordem de
+corte sugerida é**: (1) a lista de limitações de Recife no parágrafo do E6 —
+está completa no `model_card`; (2) a frase sobre o portão de domínio na §II —
+está em `ext_servico_contrato_inferencia_v1.md`; (3) os IC dos coeficientes no
+E3, mantendo só os pontos estimados.
+
+---
+
+## §15 — v12 (2026-08-20): E5 sai do papel, e Petrópolis muda de resposta
+
+| O que o texto dizia | O que passou a existir | O que a v12 faz |
+|---|---|---|
+| "E5 — Levar o modelo às três regiões" (futuro) | Grade de 120 m: 56.666 células em Recife, 65.275 em Curitiba, 172.015 em Petrópolis, com IC por célula e distância de domínio | E5 vira **concluída (M4)**, com os números no parágrafo. |
+| "Petrópolis responde `region_not_supported`" (v11) | Petrópolis responde `ok` com maturidade `transferencia_sem_referencia_local` | Comportamento corrigido em três lugares do texto. |
+
+**Por que Petrópolis mudou de resposta, e por que isso não é afrouxamento.**
+Dois documentos do projeto divergiam: o esboço de telas declarava
+`region_not_supported`, e `ext_criterios_de_acerto_v1.md` §6 dizia que "para
+PREDIZER em Petrópolis não falta nada; o que falta é a validação". O próprio E5
+desempata — ele manda levar o modelo às três regiões, e a evidência que exige
+não é acerto, é que não se afirme acerto onde falta inventário. Recusar
+impediria o E5.
+
+A resposta carrega um nível de maturidade novo, criado para não confundir
+Petrópolis com Curitiba: Curitiba tem inventário local que o projeto decidiu não
+usar como critério; Petrópolis não tem nem isso. `region_not_supported` passa a
+valer para geometria que não cai em região alguma com modelo.
+
+**Dois achados que o texto passou a carregar**: em Curitiba a elevação está a
+**5,05 desvios** do domínio de ajuste sobre o território (era 2,76 nos pontos
+rotulados) e **nenhuma célula** cai na faixa vista; e **91,3% de Petrópolis cabe
+na faixa de HAND** que o modelo de serra viu nas AOIs europeias — a serra
+brasileira não é, nessa variável, domínio estranho.
+
+**Paginação — terceira versão seguida em que o texto cresce.** E5 foi de 4 para
+11 linhas. Somando v10, v11 e v12, são ~35 linhas a mais que a v9, e continuo
+sem conseguir compilar aqui. **Ordem de corte sugerida, atualizada**: (1) a
+lista de limitações de Recife no E6; (2) a frase do portão de domínio na §II;
+(3) os IC dos coeficientes no E3; (4) no E5, a frase sobre célula vazia — está
+inteira em `ext_grade_suscetibilidade_e5_v1.md`.

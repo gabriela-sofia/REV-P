@@ -281,10 +281,9 @@ viu, e o serviço passa a verificar isso por requisição em vez de confiar que
 caia. Hoje Recife responde com maturidade \texttt{mvp\_local}, carregando na
 própria resposta o critério de leitura que seu modelo não atinge; Curitiba
 responde por transferência caracterizada, com a extrapolação declarada; e
-Petrópolis, por transferência \emph{sem referência local} --- um nível à parte,
-porque ali não há nenhum ponto rotulado com que verificar depois.
-\texttt{region\_not\_supported} fica para a geometria que não cai em região
-alguma com modelo.
+Petrópolis responde \texttt{region\_not\_supported}, porque ter modelo de serra
+ajustado não é o mesmo que ter região mapeada. Estender às demais é o objetivo
+declarado de E5, não uma limitação de infraestrutura.
 
 \textbf{Infraestrutura, carga e ajustes de escopo.} O trabalho é individual e não
 requer GPU: o ajuste de Firth leva 0,056\,s e o de um modelo aditivo explicável
@@ -406,18 +405,10 @@ o teste --- 114 negativos contra 1.238 positivos ---, e isso fica como achado.
 Vale para um país e para negativo por exclusão qualificada: refuta que o colapso
 temporal seja do método, não prova estabilidade em serra tropical.
 
-\textbf{E5 --- Aplicação às regiões brasileiras (M4, concluída).} A cadeia de
-terreno já cobria as três regiões, então a grade saiu sem aquisição nova: 56.666
-células em Recife, 65.275 em Curitiba e 172.015 em Petrópolis, a 120\,m.
-\emph{Entregável}: mapa por região com maturidade declarada --- Recife
-\texttt{mvp\_local}, Curitiba transferência caracterizada, Petrópolis
-transferência sem referência local. A chuva entra como cenário, não como camada,
-porque não varia nessa escala: ela desloca o escore e não muda o ordenamento.
-\emph{Evidência}: distância de domínio medida variável a variável --- em
-Curitiba a elevação está a 5,05 desvios do ajuste e nenhuma célula cai na faixa
-vista, enquanto 91,3\% de Petrópolis cabe na faixa de HAND do modelo de serra.
-Célula fora do domínio fica vazia no mapa em vez de receber escore baixo:
-recusar não é o mesmo que dizer que ali é seguro.
+\textbf{E5 --- Aplicação às regiões brasileiras (M4).} Levar o modelo às três
+regiões e caracterizar a distância entre o domínio de treino e cada uma.
+\emph{Entregável}: mapa de suscetibilidade por região, com maturidade declarada.
+\emph{Evidência}: nenhuma afirmação de acerto onde não há inventário local.
 
 \textbf{E6 --- Serviço e camada de explicação (M5, contrato executável).} O
 contrato roda como função pura e auditável, com cinco portões avaliados em ordem
@@ -425,8 +416,7 @@ declarada; falta o transporte HTTP. \emph{Entregável}: cenários com resposta e
 explicação correspondente --- Recife responde \texttt{ok} com maturidade
 \texttt{mvp\_local} e o critério não atingido escrito na própria resposta;
 Curitiba, transferência caracterizada com a extrapolação de elevação declarada;
-Petrópolis, transferência sem referência local --- escore por semelhança de
-terreno, nunca afirmação de acerto.
+Petrópolis, \texttt{region\_not\_supported}, sem escore por analogia.
 \emph{Evidência}: nenhuma explicação contradiz o \emph{payload} --- ela é montada
 da mesma contribuição que entrou no escore, o que torna divergir impossível por
 construção, e não por verificação posterior.

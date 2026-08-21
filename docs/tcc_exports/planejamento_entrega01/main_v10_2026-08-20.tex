@@ -138,7 +138,7 @@ a territórios urbanos vulneráveis sem inventário local de eventos?
 % ---- coluna 1
 \node[box] (b1) at (16,-3)  {Eventos registrados\\ \textsc{sedec} $|$ \textsc{siac 156} $|$ \textsc{dome}};
 \node[box] (b2) at (16,-14) {\textbf{Negativo observado}\\ Copernicus \textsc{ems} $|$ \textsc{ea}/UK};
-\node[box] (b3) at (16,-25) {MDT 10--30\,m e chuva\\ \textsc{pe3d} $|$ \textsc{glo-30} $|$ \textsc{era5-land}};
+\node[box] (b3) at (16,-25) {MDT 10--30\,m e chuva\\ \textsc{pe3d} $|$ \textsc{glo-30} $|$ \textsc{chirps}};
 \node[aux] (b4) at (16,-37) {Sentinel-1/2 e cobertura\\ do solo (\textsc{gee})};
 
 % ---- coluna 2
@@ -221,8 +221,7 @@ Copernicus EMS, Environment Agency do Reino Unido e, desde que a mesma cadeia
 de derivação de terreno passou a cobri-lo, Sen1Floods11 contribuem ponto ao
 ajuste fluvial; UFO tem a mesma cadeia de terreno, mas segue fora do ajuste
 por declarar mecanismo misto não separável, não mais por lacuna de variável.
-A validação prospectiva foi executada (E4) e a camada de explicação existe como
-gerador por regras sobre o \emph{payload} já decidido (E6).
+Falta a validação prospectiva e a camada de explicação.
 
 \textbf{Rótulo positivo e hierarquia do negativo.} Os positivos são eventos
 oficialmente registrados e geocodificados por órgãos e fontes públicas,
@@ -261,8 +260,8 @@ cada ajuste é decisão de E3, não deste plano. A definição de negativo muda 
 que o modelo aprende: o
 ajuste sobre exclusão tem AUC próprio maior, mas perde 0,159 ao encontrar
 negativo observado, enquanto o inverso não perde nada. E a régua física muda com
-o relevo: o contraste de HAND entre classes vai de 2,5\,m em planície a
-34,5\,m em serra.
+o relevo: o contraste de HAND entre classes vai de cerca de 3\,m em planície a
+quase 28\,m em serra.
 
 \textbf{Serviço e camada de explicação.} A API materializa um contrato: a
 requisição declara geometria, CRS, período e camadas; a resposta devolve
@@ -273,18 +272,12 @@ todo escore remonta ao \emph{gate} que o liberou. Quando um \emph{gate} não
 fecha, retorna \texttt{insufficient\_data} em vez de inventar escore; região sem
 modelo responde \texttt{region\_not\_supported}, nunca um escore por analogia. É
 sobre esse \emph{payload} --- a resposta que o contrato já devolveu --- que a
-camada de explicação atua: o padrão de predição seletiva~\cite{mitchell2019}. São
-cinco \emph{gates} em ordem declarada --- geometria, região, modelo, variáveis e
-domínio ---, e a resposta nomeia o primeiro que não fechou. O de domínio nasceu
-de uma medida: nenhum ponto de Curitiba cai na faixa de elevação que o ajuste
-viu, e o serviço passa a verificar isso por requisição em vez de confiar que
-caia. Hoje Recife responde com maturidade \texttt{mvp\_local}, carregando na
-própria resposta o critério de leitura que seu modelo não atinge; Curitiba
-responde por transferência caracterizada, com a extrapolação declarada; e
-Petrópolis, por transferência \emph{sem referência local} --- um nível à parte,
-porque ali não há nenhum ponto rotulado com que verificar depois.
-\texttt{region\_not\_supported} fica para a geometria que não cai em região
-alguma com modelo.
+camada de explicação atua: o padrão de predição seletiva~\cite{mitchell2019}. O contrato roda hoje como MVP
+local para Recife --- única região com modelo auditado e validação
+prospectiva executada; Curitiba tem modelo próprio, mas colapso prospectivo de
+2026 sem causa isolada, e Petrópolis segue com zero pontos rotulados (filtro
+COBRADE aplicado, resultado nulo). Estender às demais é o objetivo declarado
+de E5, não uma limitação de infraestrutura.
 
 \textbf{Infraestrutura, carga e ajustes de escopo.} O trabalho é individual e não
 requer GPU: o ajuste de Firth leva 0,056\,s e o de um modelo aditivo explicável
@@ -335,18 +328,14 @@ Petrópolis. \\
 Integração, variáveis e modelos &
 Redução de toda fonte a tabela de pontos com procedência, resolução nativa, unidade
 de agrupamento, classe de relevo e mecanismo. MDT PE3D 10\,m, Copernicus DEM GLO-30 e
-SGB/CPRM; precipitação de fonte única Open-Meteo/ERA5-Land~\cite{munoz2021} em toda a
-base, depois que a auditoria de confundimento por procedência retirou a mistura com
-CHIRPS~\cite{funk2015}; Sentinel-1/2 e cobertura
+SGB/CPRM; CHIRPS~\cite{funk2015} e ERA5-Land~\cite{munoz2021}; Sentinel-1/2 e cobertura
 do solo (auxiliares). Elevação, declividade, HAND~\cite{renno2008} e TWI~\cite{beven1979}
 por D-infinity~\cite{tarboton1997}; pico e decaimento de chuva. Firth~\cite{firth1993}
 como rota primária, não lineares como diagnóstico; \emph{gate} EPV~\cite{peduzzi1996},
 \emph{bootstrap} de grupos $N$\,=\,1000, validação agrupada e \emph{walk-forward} &
 Nenhuma variável derivada do rótulo, de escore ou de limiar; as orbitais \textbf{não
-são causais}. Chuva recuperada para 99,99\% da base, de produto único, mas medida em
-células de $\sim$11\,km enquanto o modelo compara pontos dentro do mesmo evento: nas
-seis fontes ela não discrimina nessa escala, e entra como forçamento declarado, não
-como propriedade do lugar. Quantas variáveis entram em cada ajuste é decisão de E3. A rota primária segue linear mesmo quando o
+são causais}. Chuva recuperada para 100\% da base harmonizada; quantas variáveis
+entram em cada ajuste é decisão de E3. A rota primária segue linear mesmo quando o
 não linear tem AUC maior. \\
 Serviço, ambiente e recursos &
 API FastAPI com contrato de inferência e geoprocessamento sob demanda; \emph{model
@@ -384,16 +373,11 @@ fixado do projeto (Python 3.10, Tabela~\ref{tab:mm}) a reprodução bate exata;
 a sensibilidade que resta é entre ambientes diferentes desse, ainda dependente
 da versão de biblioteca.
 
-\textbf{E3 --- Estimação e validação agrupada (M2, concluída).} Ajuste por classe
-de relevo sobre a tabela única, com validação agrupada e aplicação cruzada.
-\emph{Entregável}: coeficientes e desempenho por classe --- serra AUC 0,7916 com
-\texttt{hand\_m} $-$1,44 [$-$3,11; $-$0,83]; planície 0,7245 com \texttt{hand\_m}
-$-$2,10 [$-$2,78; $-$1,56] e \texttt{twi\_dinf} $+$0,40 [$+$0,33; $+$0,45]. O
-modelo de planície aplicado à serra atinge 0,7957, acima do que a serra alcança
-sozinha: a relação é a mesma nos dois terrenos, e o que separa é quão bem cada um
-está estimado. \emph{Evidência}: EPV verificado antes de cada ajuste --- o
-estrato íngreme tem 19 eventos positivos e comporta uma variável, não quatro ---,
-sinais físicos conferidos depois, nenhum ajuste após olhar o teste.
+\textbf{E3 --- Estimação e validação agrupada (M2).} Ajustar o modelo por classe
+de relevo, com validação agrupada e aplicação cruzada entre fontes de negativo.
+\emph{Entregável}: tabelas de coeficientes e de desempenho por classe.
+\emph{Evidência}: EPV verificado antes de cada ajuste, sinais físicos conferidos
+depois, nenhum ajuste após olhar o teste.
 
 \textbf{E4 --- \emph{Holdout} temporal (M3, concluída).} Janela expansiva sobre o
 piloto inglês, 201 eventos em 110 datas entre 2000 e 2025, sem aquisição nova. O
@@ -406,30 +390,15 @@ o teste --- 114 negativos contra 1.238 positivos ---, e isso fica como achado.
 Vale para um país e para negativo por exclusão qualificada: refuta que o colapso
 temporal seja do método, não prova estabilidade em serra tropical.
 
-\textbf{E5 --- Aplicação às regiões brasileiras (M4, concluída).} A cadeia de
-terreno já cobria as três regiões, então a grade saiu sem aquisição nova: 56.666
-células em Recife, 65.275 em Curitiba e 172.015 em Petrópolis, a 120\,m.
-\emph{Entregável}: mapa por região com maturidade declarada --- Recife
-\texttt{mvp\_local}, Curitiba transferência caracterizada, Petrópolis
-transferência sem referência local. A chuva entra como cenário, não como camada,
-porque não varia nessa escala: ela desloca o escore e não muda o ordenamento.
-\emph{Evidência}: distância de domínio medida variável a variável --- em
-Curitiba a elevação está a 5,05 desvios do ajuste e nenhuma célula cai na faixa
-vista, enquanto 91,3\% de Petrópolis cabe na faixa de HAND do modelo de serra.
-Célula fora do domínio fica vazia no mapa em vez de receber escore baixo:
-recusar não é o mesmo que dizer que ali é seguro.
+\textbf{E5 --- Aplicação às regiões brasileiras (M4).} Levar o modelo às três
+regiões e caracterizar a distância entre o domínio de treino e cada uma.
+\emph{Entregável}: mapa de suscetibilidade por região, com maturidade declarada.
+\emph{Evidência}: nenhuma afirmação de acerto onde não há inventário local.
 
-\textbf{E6 --- Serviço e camada de explicação (M5, contrato executável).} O
-contrato roda como função pura e auditável, com cinco portões avaliados em ordem
-declarada; falta o transporte HTTP. \emph{Entregável}: cenários com resposta e
-explicação correspondente --- Recife responde \texttt{ok} com maturidade
-\texttt{mvp\_local} e o critério não atingido escrito na própria resposta;
-Curitiba, transferência caracterizada com a extrapolação de elevação declarada;
-Petrópolis, transferência sem referência local --- escore por semelhança de
-terreno, nunca afirmação de acerto.
-\emph{Evidência}: nenhuma explicação contradiz o \emph{payload} --- ela é montada
-da mesma contribuição que entrou no escore, o que torna divergir impossível por
-construção, e não por verificação posterior.
+\textbf{E6 --- Serviço e camada de explicação (M5).} Expor o modelo pelo contrato
+e testar a explicação sobre respostas reais, inclusive as de recusa.
+\emph{Entregável}: cenários com resposta e explicação correspondente.
+\emph{Evidência}: nenhuma explicação contradiz o \emph{payload}.
 
 \textbf{E7 --- Congelamento, redação e pôster (M6--M7).} Testes completos,
 repositório limpo e \emph{tag} de congelamento; depois disso, apenas redação
