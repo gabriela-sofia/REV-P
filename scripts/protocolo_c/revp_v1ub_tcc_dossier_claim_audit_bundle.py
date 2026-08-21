@@ -15,7 +15,7 @@ from revp_v1tx_v1ub_tcc_dossier_common import (
     guardrail_row_review, scan_guardrails, safe_relpath, scan_forbidden_claims,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 OUT_AUD = _p("REVP_V1UB_OUT_AUD", DATASETS / "protocol_c_tcc_dossier_claim_audit_v1ub.csv")
 OUT_MAN = _p("REVP_V1UB_OUT_MAN", DATASETS / "protocol_c_tcc_dossier_bundle_manifest_v1ub.csv")

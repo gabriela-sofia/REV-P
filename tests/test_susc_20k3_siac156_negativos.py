@@ -6,7 +6,7 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "outputs_public/data/susc_20k_siac156_curitiba_flood_candidates/scripts"))
+sys.path.insert(0, str(next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file()) / "outputs_public/data/linha_causal/susc_20k_siac156_curitiba_flood_candidates/scripts"))
 import negative_categories_curitiba as cat_mod  # noqa: E402
 import mine_negative_candidates_siac156 as mine_mod  # noqa: E402
 

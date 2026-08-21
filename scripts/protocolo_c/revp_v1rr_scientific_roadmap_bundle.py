@@ -28,7 +28,7 @@ from revp_v1qu_v1qz_ground_reference_common import (
     write_schema_safe,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 # --- Inputs (small expected CSVs) ---
 IN_PARTIAL_SUMMARY = _p("REVP_V1RR_IN_PARTIAL_SUMMARY", DATASETS / "protocol_c_ground_reference_partial_scientific_summary_v1qz.csv")

@@ -1,0 +1,116 @@
+{
+  "preflight": [
+    {
+      "artifact_role": "calibracao_17e",
+      "path": "outputs_public/data/linhagem_anterior/susc_17e_prontidao_calibracao_observacional_exploratoria/matriz_calibracao_exploratoria.csv",
+      "exists": "true",
+      "row_count": "5",
+      "columns_found": "item_validacao_id;candidate_event_id;patch_id;geometry_id;regiao;grupos_disponiveis;NDVI;NDWI;MNDWI;NDBI;CHIRPS_3d;CHIRPS_7d;CHIRPS_30d;rain_idx;urban_spectral_idx;vegetation_idx;moisture_idx;score_exploratorio_baseline;score_exploratorio_class_baseline;score_v6_reference_value;score_v6_reference_class;score_v6_reference_source;comparacao_parcial_vs_completa;elegivel_calibracao_exploratoria;justificativa_tecnica;lacunas;score_oficial;substituir_score_v6;usar_em_treino;ground_truth;review_only",
+      "notes": "calibracao exploratoria herdada com espectral e chuva"
+    },
+    {
+      "artifact_role": "prontidao_17e",
+      "path": "outputs_public/data/linhagem_anterior/susc_17e_prontidao_calibracao_observacional_exploratoria/matriz_prontidao_calibracao.csv",
+      "exists": "true",
+      "row_count": "5",
+      "columns_found": "item_validacao_id;candidate_event_id;source_id;geometry_id;patch_id;cidade;regiao;tipo_fenomeno;data_evento;classe_vinculo;qualidade_fonte;qualidade_temporal;qualidade_geometrica;qualidade_vinculo_patch;qualidade_fenomeno;qualidade_incerteza;disponibilidade_features;consistencia_features;estabilidade_regional;risco_vazamento_temporal;severidade_bloqueios;prontidao_calibracao;grupos_features_disponiveis;grupos_features_ausentes;accepted_for_evaluation;ground_truth;eligible_for_training;score_v7_allowed;review_only;justificativa_tecnica",
+      "notes": "prontidao herdada do 17E"
+    },
+    {
+      "artifact_role": "resumo_17e",
+      "path": "outputs_public/data/linhagem_anterior/susc_17e_prontidao_calibracao_observacional_exploratoria/summary.json",
+      "exists": "true",
+      "row_count": "1",
+      "columns_found": "json_or_markdown",
+      "notes": "estado herdado do 17E"
+    },
+    {
+      "artifact_role": "decisoes_17d",
+      "path": "outputs_public/data/linhagem_anterior/susc_17d_validacao_tecnica_evidencia_observacional/decisoes_validacao_tecnica.csv",
+      "exists": "true",
+      "row_count": "5",
+      "columns_found": "item_validacao_id;candidate_event_id;source_id;source_type;geometry_id;patch_id;cidade;regiao;tipo_fenomeno;data_evento;classe_vinculo;pontuacao_confiabilidade_fonte;pontuacao_qualidade_temporal;pontuacao_qualidade_geometrica;pontuacao_qualidade_vinculo_patch;pontuacao_compatibilidade_fenomeno;pontuacao_incerteza_espacial;pontuacao_consistencia_features;pontuacao_risco_vazamento_temporal;pontuacao_severidade_bloqueios;confianca_tecnica_final;status_validacao_tecnica;accepted_for_evaluation;accepted_for_calibration_candidate;eligible_for_training;ground_truth;review_only;score_v7_allowed;not_ground_truth_reason;justificativa_tecnica;bloqueios_criticos",
+      "notes": "vinculos aceitos para avaliacao"
+    },
+    {
+      "artifact_role": "patch_links_17c5",
+      "path": "outputs_public/data/linhagem_anterior/susc_17c5_geometry_to_patch_linkage_resolver/susc_17c5_patch_links.csv",
+      "exists": "true",
+      "row_count": "67",
+      "columns_found": "patch_link_id;candidate_event_id;event_id;source_id;source_type;geometry_id;patch_id;patch_namespace;official_patch;region;city;link_class;link_strength;strong_link_candidate;overlap_area_m2;overlap_ratio;distance_m;uncertainty_m;spatial_eligible;eligible_for_evaluation;eligible_for_calibration;eligible_for_training;ground_truth;review_only;score_v7_allowed;not_ground_truth_reason;spatial_blocking_reason",
+      "notes": "classe de vinculo e sobreposicao"
+    },
+    {
+      "artifact_role": "grade_canario_17c6",
+      "path": "outputs_public/suscetibilidade/susc_17c6_candidate_patch_grid.csv",
+      "exists": "true",
+      "row_count": "5",
+      "columns_found": "candidate_patch_id;candidate_grid_id;region;source_event_id;source_reference_candidate_id;xmin;ymin;xmax;ymax;crs;generation_method;intersects_reference_geometry;overlap_ratio_patch;overlap_ratio_reference;distance_to_reference_m;nearest_official_patch_id;nearest_official_patch_distance_m;official_patch;review_only;trainable;ground_truth;not_official_patch_reason",
+      "notes": "bbox do canario e patch oficial mais proximo"
+    },
+    {
+      "artifact_role": "features_by_patch",
+      "path": "datasets/suscetibilidade/susc_features_by_patch_v1.csv",
+      "exists": "true",
+      "row_count": "300",
+      "columns_found": "patch_id;regiao;reference_date;xmin;ymin;xmax;ymax;B2_mean;B3_mean;B4_mean;B8_mean;B11_mean;B12_mean;ndvi_mean;mndwi_mean;ndbi_mean;elevation_mean;elevation_std;slope_mean;slope_std;hand_mean;twi_mean;tpi_250m_mean;curvature_laplacian_mean;distance_to_water_mean;water_occurrence_patch;flow_acc_log_mean;flow_acc_log_p75;runoff_context_7d;runoff_context_30d;chirps_3d_mm;chirps_7d_mm;chirps_30d_mm;rain_3d_7d_ratio;rain_7d_30d_ratio;rain_persistence_index;s1_vv_mean_clean;s1_vh_mean_clean;s1_vv_minus_vh_mean_clean;urban_prop;vegetation_prop;urban_water_interaction;urban_drainage_interaction;proxy_v5_hand_low;proxy_v5_distance_water_low;proxy_v5_flow_accumulation;proxy_v5_twi_wetness;proxy_v5_flat_terrain;proxy_v5_low_elevation;proxy_v5_water_history;proxy_v5_rainfall_context;proxy_v5_runoff_context;proxy_v5_rain_concentration;proxy_v5_rain_persistence;proxy_v5_urban_exposure;proxy_v5_vegetation_low;proxy_v5_urban_water_interaction;proxy_v5_urban_drainage_interaction;proxy_v5_ndbi_built;proxy_v5_ndvi_low;proxy_v5_mndwi_wet;score_predisposicao_hidrotopografica_v5;score_gatilho_hidroclimatico_v5;score_amplificacao_urbana_v5;score_superficie_optica_v5_diagnostic;score_umidade_antecedente_v5;score_impulso_chuva_v5;score_evento_enchente_potencial_v5_core;label_evento_enchente_potencial_v5_core_regional_p75;label_confidence_v5;study_value_score_v1;regime_evento_enchente_v5",
+      "notes": "features fisicas oficiais por patch"
+    },
+    {
+      "artifact_role": "score_v6",
+      "path": "datasets/suscetibilidade/susc_score_v6_candidate_by_patch_v1.csv",
+      "exists": "true",
+      "row_count": "300",
+      "columns_found": "patch_id;regiao;topography_hydrology_index;rainfall_trigger_index;urban_spectral_index;vegetation_mitigation_index;evidence_support_index;susc_score_v6_candidate;susc_class_v6_candidate;top5_feature_contributions;reason;caution_flags;can_be_used_as_ground_truth;allowed_for_training;review_only",
+      "notes": "score v6 oficial somente leitura"
+    },
+    {
+      "artifact_role": "topografia_17c38",
+      "path": "outputs_public/suscetibilidade/susc_17c38_official_patch_basin_aware_topography_features.csv",
+      "exists": "true",
+      "row_count": "100",
+      "columns_found": "recomputed_feature_id;patch_id;dem_source;pipeline_source;domain_id;recomputed_hand_mean;recomputed_twi_mean;recomputed_tpi_250m_mean;recomputed_flow_acc_log_mean;recomputed_elevation_mean;recomputed_slope_mean;valid_pixel_count;patch_inside_domain;edge_effect_risk;method_equivalence_status;review_only",
+      "notes": "topografia recomputada de patches oficiais"
+    },
+    {
+      "artifact_role": "terreno_17c34",
+      "path": "outputs_public/suscetibilidade/susc_17c34_terrain_features.csv",
+      "exists": "true",
+      "row_count": "11",
+      "columns_found": "canary_patch_id;elevation_mean;elevation_min;elevation_max;slope_mean_deg;HAND_mean;HAND_min;HAND_available;HAND_status;terrain_source;terrain_available;status;review_only",
+      "notes": "terreno dos canarios ancorados no evento"
+    },
+    {
+      "artifact_role": "dem_manifest_17c36",
+      "path": "outputs_public/suscetibilidade/susc_17c36_dem_artifact_manifest.csv",
+      "exists": "true",
+      "row_count": "1",
+      "columns_found": "dem_artifact_manifest_id;source_name;source_authority;artifact_local_path;artifact_type;sha256;size_bytes;crs;resolution_m;bbox;stored_in_outputs_public;raw_heavy;usable_for_hydrologic_grid;review_only",
+      "notes": "manifesto do DEM Copernicus local"
+    },
+    {
+      "artifact_role": "drenagem_17c35",
+      "path": "outputs_public/suscetibilidade/susc_17c35_official_drainage_features.csv",
+      "exists": "true",
+      "row_count": "11",
+      "columns_found": "official_drainage_feature_id;canary_patch_id;source_artifact_manifest_id;drainage_source;drainage_source_authority;official_drainage_available;drainage_proxy_used;distance_to_official_drainage_m;distance_to_official_water_m;distance_to_proxy_drainage_m;nearest_feature_type;review_only",
+      "notes": "drenagem oficial por patch"
+    },
+    {
+      "artifact_role": "score_v7_proibido",
+      "path": "datasets/suscetibilidade/susc_score_v7_candidate_by_patch_v1.csv",
+      "exists": "false",
+      "row_count": "0",
+      "columns_found": "",
+      "notes": "deve permanecer ausente"
+    },
+    {
+      "artifact_role": "estado_git",
+      "path": ".",
+      "exists": "true",
+      "row_count": "not_applicable",
+      "columns_found": "branch;head;staged_count;dirty_status_lines",
+      "notes": "branch=marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial; head=72dec09; staged=0; dirty=158"
+    }
+  ]
+}

@@ -18,7 +18,7 @@ from revp_v1sr_v1sz_hydromet_context_common import (
     hash_short,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 OUT_PROX  = _p("REVP_V1SR_OUT_PROX",  DATASETS / "protocol_c_inmet_station_region_proximity_v1sr.csv")
 OUT_SUM   = _p("REVP_V1SR_OUT_SUM",   DATASETS / "protocol_c_inmet_station_region_proximity_summary_v1sr.csv")

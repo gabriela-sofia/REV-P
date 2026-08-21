@@ -16,7 +16,7 @@ from revp_v1tg_v1tm_hydromet_review_integration_common import (
     hash_short, parse_float_safe,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 OUT_SCR  = _p("REVP_V1TI_OUT_SCR",  DATASETS / "protocol_c_hydromet_review_scores_v1ti.csv")
 OUT_SUM  = _p("REVP_V1TI_OUT_SUM",  DATASETS / "protocol_c_hydromet_review_scoring_summary_v1ti.csv")

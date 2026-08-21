@@ -15,7 +15,7 @@ def test_autofill_candidates_created_only_for_valid_geometry(tmp_path):
 
 def test_replay_readiness_stays_tp0_without_valid_pair():
     from pathlib import Path
-    root = Path(__file__).resolve().parents[1]
+    root = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
     row = engine.load_csv(root/"datasets"/"v2bb_replay_readiness_update.csv")[0]
     assert row["can_attempt_v2az_replay"] == "false"
     assert row["turning_point_level"] == "TP0_DOCUMENTED_ABSENCE_WITH_PUBLIC_SEARCH_DOSSIER"

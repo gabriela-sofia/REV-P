@@ -14,7 +14,7 @@ from revp_v1ta_v1tf_inmet_canonical_common import (
     read_csv_safe, write_csv_with_header, write_schema, write_doc,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 OUT_COR = _p("REVP_V1TE_OUT_COR", DATASETS / "protocol_c_tcc_table_inmet_coordinate_correction_v1te.csv")
 OUT_EVB = _p("REVP_V1TE_OUT_EVB", DATASETS / "protocol_c_tcc_table_hydromet_evidence_bridge_v1te.csv")

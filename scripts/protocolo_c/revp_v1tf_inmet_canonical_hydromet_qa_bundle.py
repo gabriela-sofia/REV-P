@@ -19,7 +19,7 @@ from revp_v1ta_v1tf_inmet_canonical_common import (
     read_csv_safe, write_csv_with_header, write_schema, write_doc,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 IN_TA  = _p("REVP_V1TF_IN_TA", DATASETS / "protocol_c_inmet_canonical_station_registry_summary_v1ta.csv")
 IN_TB  = _p("REVP_V1TF_IN_TB", DATASETS / "protocol_c_inmet_coordinate_parse_discrepancy_summary_v1tb.csv")

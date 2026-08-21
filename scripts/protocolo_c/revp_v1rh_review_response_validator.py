@@ -31,7 +31,7 @@ from revp_v1rg_v1rm_review_response_common import (
     write_schema_safe,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 IN_PACKETS = _p("REVP_V1RH_IN_PACKETS", DATASETS / "protocol_c_double_review_packet_manifest_v1qw.csv")
 OUT_VALIDATION = _p("REVP_V1RH_OUT_VALIDATION", DATASETS / "protocol_c_review_response_validation_v1rh.csv")

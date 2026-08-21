@@ -7,7 +7,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 VALIDATOR = ROOT / "scripts" / "suscetibilidade" / "validate_susc_12b_12c_observed_event_calibration.py"
 DATASET = ROOT / "datasets" / "suscetibilidade" / "susc_12b_event_feature_contrast_dataset_v1.csv"
 RECS = ROOT / "outputs_public" / "suscetibilidade" / "SUSC_12C_proxy_calibration_recommendations.csv"

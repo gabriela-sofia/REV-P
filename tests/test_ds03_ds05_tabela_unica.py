@@ -22,7 +22,7 @@ from pathlib import Path
 import pandas as pd
 import pytest
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 RUNS = ROOT / "local_runs"
 RED = RUNS / "ds-04-reducao"
 UNI = RUNS / "ds-05-tabela-unica"

@@ -43,7 +43,7 @@ from susc_io import (  # noqa: E402
 # ---------------------------------------------------------------------------
 # Caminhos
 # ---------------------------------------------------------------------------
-OUT = ROOT / "outputs_public" / "data" / "susc_19f_execucao_mapbiomas_gee_ingestao_territorial"
+OUT = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_19f_execucao_mapbiomas_gee_ingestao_territorial"
 CARDS = OUT / "cartoes_regionais"
 REPORTS = ROOT / "outputs_public" / "reports"
 SCHEMAS_DIR = ROOT / "schemas" / "suscetibilidade"
@@ -54,7 +54,7 @@ SCHEMA = SCHEMAS_DIR / "susc_19f_mapbiomas_schema_v1.json"
 SCORE_V6 = ROOT / "datasets" / "suscetibilidade" / "susc_score_v6_candidate_by_patch_v1.csv"
 SCORE_V7 = ROOT / "datasets" / "suscetibilidade" / "susc_score_v7_candidate_by_patch_v1.csv"
 
-DATA = ROOT / "outputs_public" / "data"
+DATA = ROOT / "outputs_public" / "data" / "linhagem_anterior"
 PKG_19B = DATA / "susc_19b_auditoria_lacunas_territoriais" / "pacote_gee"
 MANIFEST_19B = PKG_19B / "gee_export_manifest_19b.csv"
 MAT_19A = DATA / "susc_19a_matriz_multimodal_escalavel_por_patch" / "matriz_multimodal_escalavel_por_patch.csv"

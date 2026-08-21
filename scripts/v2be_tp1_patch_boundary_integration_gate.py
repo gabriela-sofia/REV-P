@@ -12,7 +12,7 @@ from pathlib import Path
 
 from rasterio.warp import transform_geom
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 CONFIG_NAME = "v2be_tp1_patch_boundary_integration_gate_config.json"
 STAGE = "v2be_tp1_patch_boundary_integration_gate"
 SOURCE_DOCUMENT = "manifests/training_readiness/revp_v1fs_self_supervised_asset_sanity_and_embedding_plan/asset_sanity_audit_v1fs.csv"

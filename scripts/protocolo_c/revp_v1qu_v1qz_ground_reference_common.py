@@ -20,7 +20,7 @@ from typing import Any
 
 from revp_v1lj_v1lq_common import DATASETS, DOCS, SCHEMAS  # noqa: F401
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 # ---------------------------------------------------------------------------
 # Source families

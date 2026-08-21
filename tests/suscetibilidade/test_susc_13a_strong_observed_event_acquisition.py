@@ -7,7 +7,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 VALIDATOR = ROOT / "scripts" / "suscetibilidade" / "validate_susc_13a_strong_observed_event_acquisition.py"
 PARSED = ROOT / "datasets" / "suscetibilidade" / "susc_13a_strong_observed_events_parsed_v1.csv"
 LINKAGE = ROOT / "datasets" / "suscetibilidade" / "susc_13a_strong_event_patch_linkage_v1.csv"

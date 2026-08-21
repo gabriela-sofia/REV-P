@@ -9,7 +9,7 @@ from pathlib import Path
 import numpy as np
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 SCRIPT = ROOT / "scripts" / "dino" / "revp_v1gd_dino_embedding_perturbation_robustness_diagnostics.py"
 
 

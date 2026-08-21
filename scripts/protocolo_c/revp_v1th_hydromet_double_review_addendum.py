@@ -16,7 +16,7 @@ from revp_v1tg_v1tm_hydromet_review_integration_common import (
     hash_short, build_hydromet_question_set,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 OUT_MAN  = _p("REVP_V1TH_OUT_MAN",  DATASETS / "protocol_c_hydromet_double_review_addendum_manifest_v1th.csv")
 OUT_FORM = _p("REVP_V1TH_OUT_FORM", DATASETS / "protocol_c_hydromet_double_review_addendum_forms_v1th.csv")

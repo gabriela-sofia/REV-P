@@ -15,7 +15,7 @@ from revp_v1tx_v1ub_tcc_dossier_common import (
     build_dossier_sections, DOSSIER_SECTION_KEYS,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 OUT_DOS = _p("REVP_V1TX_OUT_DOS", DATASETS / "protocol_c_case_dossier_v1tx.csv")
 OUT_SEC = _p("REVP_V1TX_OUT_SEC", DATASETS / "protocol_c_case_dossier_sections_v1tx.csv")

@@ -15,7 +15,7 @@ from revp_v1sg_v1sz_official_download_common import (
     domain_from_url, classify_source_family, forbidden_guardrail_scan,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 IN_REQUIREMENTS = _p("REVP_V1SK_IN_REQUIREMENTS", DATASETS / "protocol_c_official_evidence_source_requirements_v1qu.csv")
 IN_BACKLOG = _p("REVP_V1SK_IN_BACKLOG", DATASETS / "protocol_c_ground_reference_evidence_backlog_v1ro.csv")

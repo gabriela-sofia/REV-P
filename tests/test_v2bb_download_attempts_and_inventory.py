@@ -3,7 +3,7 @@
 from pathlib import Path
 import scripts.v2bb_public_geometry_retrieval_feed_builder as engine
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 
 def test_public_downloads_are_audited_and_hashed():

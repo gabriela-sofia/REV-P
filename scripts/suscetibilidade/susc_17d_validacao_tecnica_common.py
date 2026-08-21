@@ -22,9 +22,9 @@ from susc_io import ensure_dir, read_csv, read_json, rel, write_csv, write_json,
 
 DATASETS = ROOT / "datasets"
 DAT_SUSC = DATASETS / "suscetibilidade"
-OUT_DATA_17C = ROOT / "outputs_public" / "data" / "susc_17c_strong_reference_acquisition_canary"
-OUT_DATA_17C5 = ROOT / "outputs_public" / "data" / "susc_17c5_geometry_to_patch_linkage_resolver"
-OUT_DATA = ROOT / "outputs_public" / "data" / "susc_17d_validacao_tecnica_evidencia_observacional"
+OUT_DATA_17C = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_17c_strong_reference_acquisition_canary"
+OUT_DATA_17C5 = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_17c5_geometry_to_patch_linkage_resolver"
+OUT_DATA = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_17d_validacao_tecnica_evidencia_observacional"
 CARDS_DIR = OUT_DATA / "cartoes_evidencia"
 OUT_REPORTS = ROOT / "outputs_public" / "reports"
 SCHEMAS = ROOT / "schemas" / "suscetibilidade"

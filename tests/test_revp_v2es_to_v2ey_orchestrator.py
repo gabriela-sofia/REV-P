@@ -4,7 +4,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 sys.path.insert(0, str(ROOT / "scripts" / "ground_truth"))
 
 from revp_v2es_to_v2ey_common import GLOBAL_GUARDS, read_csv, run_integrated, table

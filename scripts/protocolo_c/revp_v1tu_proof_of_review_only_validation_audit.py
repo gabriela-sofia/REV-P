@@ -17,7 +17,7 @@ from revp_v1tn_v1tw_automated_review_common import (
     classify_review_only_validation_status,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 OUT_PROOF = _p("REVP_V1TU_OUT_PROOF", DATASETS / "protocol_c_proof_of_review_only_validation_audit_v1tu.csv")
 OUT_SUM   = _p("REVP_V1TU_OUT_SUM",   DATASETS / "protocol_c_proof_of_review_only_validation_summary_v1tu.csv")

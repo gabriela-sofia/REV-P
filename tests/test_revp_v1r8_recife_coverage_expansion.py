@@ -11,7 +11,7 @@ from __future__ import annotations
 import csv
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 EXPANSION = ROOT / "datasets" / "dino_recife_coverage_expansion_embeddings_v1r8.csv"
 AUDIT = ROOT / "datasets" / "dino_recife_coverage_expansion_audit_v1r8.csv"
 BASE = ROOT / "datasets" / "dino_recife_sedec_all_embeddings_v1r3.csv"

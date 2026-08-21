@@ -51,7 +51,7 @@ o score continua sendo entregue, marcado para revisão.
 | `scripts/dino/revp_v2fg_dinov2_embedder.py` | `Dinov2Embedder`: `facebook/dinov2-with-registers-base`, 768D, L2, CPU/GPU. Fail-closed sem pesos locais. |
 | `scripts/dino/revp_v2fg_dinov2_governance_engine.py` | `Dinov2GovernanceEngine`: cosseno, medoid territorial, gate OOD, auditoria. |
 | `scripts/dino/revp_v2fg_build_dinov2_governance_corpus.py` | E2/E3: valida embeddings reais, calcula medoids, escreve manifesto. |
-| `outputs_public/data/susc_20e_api_contrato_inferencia_recife/scripts/dino_governance_bridge.py` | Resolve o embedding da requisição e chama a engine. |
+| `outputs_public/data/linha_causal/susc_20e_api_contrato_inferencia_recife/scripts/dino_governance_bridge.py` | Resolve o embedding da requisição e chama a engine. |
 | `.../contract_schema.py` | `DinoGovernance`, `DinoMedoidSimilarity`, `DinoGovernanceAudit`. |
 
 ## 4. Corpus e medoids — de onde vêm os números

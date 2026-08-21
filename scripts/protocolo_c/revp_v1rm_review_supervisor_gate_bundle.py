@@ -26,7 +26,7 @@ from revp_v1rg_v1rm_review_response_common import (
     write_schema_safe,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 FORBIDDEN_TRUE = ["can_create_operational_label", "can_train_model", "target_created",
                   "ground_truth_operational", "formal_negative", "dino_validates_event",

@@ -9,7 +9,7 @@ import scripts.v2az_turning_point_replay_orchestrator as engine
 from v2az_test_helpers import make_dataset
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 
 def read(path):

@@ -17,7 +17,7 @@ from revp_v1tn_v1tw_automated_review_common import (
     classify_review_only_validation_status,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 OUT_STATUS  = _p("REVP_V1TT_OUT_STATUS",  DATASETS / "protocol_c_tcc_table_automated_review_case_status_v1tt.csv")
 OUT_OUTCOME = _p("REVP_V1TT_OUT_OUTCOME", DATASETS / "protocol_c_tcc_table_automated_review_outcomes_v1tt.csv")

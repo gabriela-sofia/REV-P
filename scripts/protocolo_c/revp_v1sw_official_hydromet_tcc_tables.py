@@ -14,7 +14,7 @@ from revp_v1sr_v1sz_hydromet_context_common import (
     guardrail_row, scan_guardrails, read_csv_safe,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 OUT_COV   = _p("REVP_V1SW_OUT_COV",   DATASETS / "protocol_c_tcc_table_hydromet_station_coverage_v1sw.csv")
 OUT_WIN   = _p("REVP_V1SW_OUT_WIN",   DATASETS / "protocol_c_tcc_table_hydromet_event_windows_v1sw.csv")

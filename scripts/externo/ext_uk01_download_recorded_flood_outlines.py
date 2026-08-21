@@ -55,7 +55,7 @@ BASE = (
     "8c75e700-d465-11e4-8b5b-f0def148f590/ogc/features/v1/"
     "collections/Recorded_Flood_Outlines/items"
 )
-REPO = Path(__file__).resolve().parents[2]
+REPO = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 OUTDIR = REPO / "local_runs" / "ext-uk-01-aquisicao"
 PAGEDIR = OUTDIR / "pages_v2"
 PAGE_SIZE = 1000

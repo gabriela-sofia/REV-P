@@ -30,10 +30,10 @@ ROOT = HERE.parents[1]
 import susc_18c_curitiba_geometria_common as s18c  # noqa: E402
 from susc_io import ensure_dir, read_csv, read_json, rel, sha256_file, write_csv, write_json, write_markdown  # noqa: E402
 
-OUT_18E = ROOT / "outputs_public" / "data" / "susc_18e_footprint_tecnico_sar_curitiba"
-OUT_18D = ROOT / "outputs_public" / "data" / "susc_18d_protocolo_externo_curitiba"
-OUT_18C = ROOT / "outputs_public" / "data" / "susc_18c_aquisicao_geometria_oficial_curitiba"
-OUT_DATA = ROOT / "outputs_public" / "data" / "susc_18e2_execucao_controlada_sentinel1_curitiba"
+OUT_18E = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_18e_footprint_tecnico_sar_curitiba"
+OUT_18D = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_18d_protocolo_externo_curitiba"
+OUT_18C = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_18c_aquisicao_geometria_oficial_curitiba"
+OUT_DATA = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_18e2_execucao_controlada_sentinel1_curitiba"
 REPORTS = ROOT / "outputs_public" / "reports"
 
 AOI_GEOJSON_18E = OUT_18E / "curitiba_aoi_tecnica_43_patches.geojson"

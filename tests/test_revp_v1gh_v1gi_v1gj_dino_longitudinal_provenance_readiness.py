@@ -7,7 +7,7 @@ import sys
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 V1GH = ROOT / "scripts" / "dino" / "revp_v1gh_dino_longitudinal_structural_diagnostics.py"
 V1GI = ROOT / "scripts" / "dino" / "revp_v1gi_dino_structural_provenance_tracker.py"
 V1GJ = ROOT / "scripts" / "dino" / "revp_v1gj_multimodal_readiness_audit.py"

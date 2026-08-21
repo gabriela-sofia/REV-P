@@ -46,7 +46,7 @@ from susc_io import (  # noqa: E402
 # ---------------------------------------------------------------------------
 # Caminhos
 # ---------------------------------------------------------------------------
-OUT = ROOT / "outputs_public" / "data" / "susc_19e_pacote_comunicacao_cientifica_review_only"
+OUT = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_19e_pacote_comunicacao_cientifica_review_only"
 REPORTS = ROOT / "outputs_public" / "reports"
 SCHEMAS_DIR = ROOT / "schemas" / "suscetibilidade"
 FIGURES_DIR = ROOT / "outputs_public" / "figures"
@@ -57,7 +57,7 @@ SCHEMA = SCHEMAS_DIR / "susc_19e_comunicacao_cientifica_schema_v1.json"
 SCORE_V6 = ROOT / "datasets" / "suscetibilidade" / "susc_score_v6_candidate_by_patch_v1.csv"
 SCORE_V7 = ROOT / "datasets" / "suscetibilidade" / "susc_score_v7_candidate_by_patch_v1.csv"
 
-DATA = ROOT / "outputs_public" / "data"
+DATA = ROOT / "outputs_public" / "data" / "linhagem_anterior"
 SUM_18H = DATA / "susc_18h_consolidacao_mestre_cadeia_observacional" / "summary.json"
 REG_18H = DATA / "susc_18h_consolidacao_mestre_cadeia_observacional" / "matriz_regional_recife_curitiba_petropolis.csv"
 SUM_19A = DATA / "susc_19a_matriz_multimodal_escalavel_por_patch" / "summary.json"

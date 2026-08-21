@@ -53,7 +53,7 @@ os.environ.setdefault("GDAL_HTTP_RETRY_DELAY", "3")
 os.environ.setdefault("GDAL_HTTP_TIMEOUT", "90")
 os.environ.setdefault("GDAL_DISABLE_READDIR_ON_OPEN", "EMPTY_DIR")
 
-REPO = Path(__file__).resolve().parents[2]
+REPO = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 RUNS = REPO / "local_runs"
 STORE = RUNS / "geostore"
 OUT = RUNS / "aq-chirps3"

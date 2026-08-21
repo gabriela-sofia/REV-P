@@ -17,7 +17,7 @@ from revp_v1tg_v1tm_hydromet_review_integration_common import (
     classify_hydromet_support_level,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 OUT_PKT  = _p("REVP_V1TG_OUT_PKT",  DATASETS / "protocol_c_hydromet_evidence_packet_registry_v1tg.csv")
 OUT_SUM  = _p("REVP_V1TG_OUT_SUM",  DATASETS / "protocol_c_hydromet_evidence_packet_summary_v1tg.csv")

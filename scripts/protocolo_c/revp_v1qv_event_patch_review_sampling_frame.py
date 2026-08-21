@@ -29,7 +29,7 @@ from revp_v1qu_v1qz_ground_reference_common import (
     write_schema_safe,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 OUT_FRAME = _p("REVP_V1QV_OUT_FRAME", DATASETS / "protocol_c_event_patch_review_sampling_frame_v1qv.csv")
 OUT_SAMPLE = _p("REVP_V1QV_OUT_SAMPLE", DATASETS / "protocol_c_event_patch_review_sample_v1qv.csv")

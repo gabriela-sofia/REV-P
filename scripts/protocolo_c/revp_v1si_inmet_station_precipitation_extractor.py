@@ -14,7 +14,7 @@ from revp_v1sg_v1sz_official_download_common import (
     raw_root, read_csv_safe, safe_relpath, hash_short,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 OUT_STATIONS = _p("REVP_V1SI_OUT_STATIONS", DATASETS / "protocol_c_inmet_station_candidates_v1si.csv")
 OUT_PRECIP = _p("REVP_V1SI_OUT_PRECIP", DATASETS / "protocol_c_inmet_precipitation_daily_review_v1si.csv")

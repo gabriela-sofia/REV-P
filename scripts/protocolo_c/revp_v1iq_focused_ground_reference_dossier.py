@@ -27,7 +27,7 @@ from dataclasses import dataclass, asdict
 from typing import List, Dict, Optional, Tuple
 import sys
 
-REPO_ROOT = Path(__file__).resolve().parents[2]
+REPO_ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 sys.path.insert(0, str(REPO_ROOT / "scripts" / "protocolo_c"))
 
 SOURCE_LAYER_ALIAS = "PET_CPRM_DESLIZAMENTO_AREA_FOTOINTERPRETADA"

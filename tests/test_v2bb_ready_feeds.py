@@ -15,6 +15,6 @@ def test_valid_pair_builds_tp3_feeds_but_not_tp4(tmp_path):
 
 def test_canonical_public_context_creates_no_ready_feed():
     from pathlib import Path
-    root = Path(__file__).resolve().parents[1]
+    root = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
     for name in ("v2bb_ready_patch_boundary_feed.csv", "v2bb_ready_event_polygon_feed.csv", "v2bb_ready_turning_point_pair_feed.csv"):
         assert engine.load_csv(root/"datasets"/name) == []

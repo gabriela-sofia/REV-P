@@ -46,7 +46,7 @@ from rasterio.enums import Resampling
 from rasterio.merge import merge
 from rasterio.warp import calculate_default_transform, reproject
 
-REPO = Path(__file__).resolve().parents[2]
+REPO = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 RUNS = REPO / "local_runs"
 FEAT = RUNS / "aq-features"
 OUT = RUNS / "ft-uk-01-rasters"

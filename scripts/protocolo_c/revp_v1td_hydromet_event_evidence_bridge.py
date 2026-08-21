@@ -17,7 +17,7 @@ from revp_v1ta_v1tf_inmet_canonical_common import (
     parse_decimal_comma_float,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 OUT_BRG  = _p("REVP_V1TD_OUT_BRG",  DATASETS / "protocol_c_hydromet_event_evidence_bridge_v1td.csv")
 OUT_SUM  = _p("REVP_V1TD_OUT_SUM",  DATASETS / "protocol_c_hydromet_event_evidence_bridge_summary_v1td.csv")

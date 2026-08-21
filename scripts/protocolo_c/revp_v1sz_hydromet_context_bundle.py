@@ -21,7 +21,7 @@ from revp_v1sr_v1sz_hydromet_context_common import (
     read_csv_safe,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 IN_SR_SUM  = _p("REVP_V1SZ_IN_SR",  DATASETS / "protocol_c_inmet_station_region_proximity_summary_v1sr.csv")
 IN_SS_SUM  = _p("REVP_V1SZ_IN_SS",  DATASETS / "protocol_c_event_date_windows_summary_v1ss.csv")

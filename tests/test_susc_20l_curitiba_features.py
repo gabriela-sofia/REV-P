@@ -15,9 +15,9 @@ import numpy as np
 import pandas as pd
 import pytest
 
-ROOT = Path(__file__).resolve().parents[1]
-SCRIPTS = ROOT / "outputs_public/data/susc_20k_siac156_curitiba_flood_candidates/scripts"
-REGISTRIES = ROOT / "outputs_public/data/susc_20k_siac156_curitiba_flood_candidates/registries"
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
+SCRIPTS = ROOT / "outputs_public/data/linha_causal/susc_20k_siac156_curitiba_flood_candidates/scripts"
+REGISTRIES = ROOT / "outputs_public/data/linha_causal/susc_20k_siac156_curitiba_flood_candidates/registries"
 sys.path.insert(0, str(SCRIPTS))
 import build_v20l_curitiba_features as b20l  # noqa: E402
 

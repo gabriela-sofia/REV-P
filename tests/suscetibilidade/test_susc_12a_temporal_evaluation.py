@@ -7,7 +7,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 VALIDATOR = ROOT / "scripts" / "suscetibilidade" / "validate_susc_12a_temporal_evaluation.py"
 DATASET = ROOT / "datasets" / "suscetibilidade" / "susc_12a_pre_event_evaluation_dataset_v1.csv"
 HIT_RATE = ROOT / "outputs_public" / "suscetibilidade" / "SUSC_12A_temporal_hit_rate_topk.csv"

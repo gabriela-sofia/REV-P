@@ -15,7 +15,7 @@ from datetime import date
 from pathlib import Path
 from typing import Any
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
+PROJECT_ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 LOCAL_INPUT_ROOT = PROJECT_ROOT / "inputs_local"
 OUT_DIR = PROJECT_ROOT / "outputs_public" / "mv2_data_local_input_intake"
 

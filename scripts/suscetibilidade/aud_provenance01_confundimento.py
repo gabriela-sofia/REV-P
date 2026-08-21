@@ -66,7 +66,7 @@ from ds03_esquema_alvo import (  # noqa: E402
     VARIAVEIS_FISICAS, VARIAVEIS_TERRENO, VERSAO,
 )
 
-REPO = Path(__file__).resolve().parents[2]
+REPO = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 RUNS = REPO / "local_runs"
 UNI = RUNS / "ds-05-tabela-unica" / f"tabela_unica_{VERSAO}.csv"
 OUT = RUNS / "aud-provenance-01"

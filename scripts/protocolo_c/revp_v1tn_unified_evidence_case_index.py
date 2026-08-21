@@ -19,7 +19,7 @@ from revp_v1tn_v1tw_automated_review_common import (
     classify_case_readiness, next_required_action, blocking_factors,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 OUT_IDX  = _p("REVP_V1TN_OUT_IDX",  DATASETS / "protocol_c_unified_evidence_case_index_v1tn.csv")
 OUT_SUM  = _p("REVP_V1TN_OUT_SUM",  DATASETS / "protocol_c_unified_evidence_case_index_summary_v1tn.csv")

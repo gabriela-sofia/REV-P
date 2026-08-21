@@ -29,7 +29,7 @@ import sys
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 SCRIPT = ROOT / "scripts" / "protocolo_c" / "revp_v1ih_official_open_data_event_vector_discovery_validation.py"
 LOCAL_RUNS = ROOT / "local_runs" / "protocolo_c" / "v1ih"
 DATASETS_DIR = ROOT / "datasets"

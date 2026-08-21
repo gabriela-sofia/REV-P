@@ -84,7 +84,7 @@ de entregar. Os outros dois controles são a altura da Figura 2 (`figsize` em
 |---|---|
 | Ablação: 0,8855 / 0,4834 / 0,4689 | relatório de ablação da Entrega 01 |
 | Recife: 154 pos. / 124 neg.; n = 278 | `PROJETO/local_runs/recife_modelo_v12_extracao_final/dataset_v12_final.csv` |
-| Curitiba: 1.045 pos. / 426 neg.; 1.471 unidades | `outputs_public/data/susc_20k_.../registries/v20n_dataset_curitiba_features_v2.csv` |
+| Curitiba: 1.045 pos. / 426 neg.; 1.471 unidades | `outputs_public/data/linha_causal/susc_20k_.../registries/v20n_dataset_curitiba_features_v2.csv` |
 | Piloto UK: 7.476 pontos (3.738/3.738), 201 eventos independentes | `local_runs/mod-uk-01-firth/resumo_rnl.json`; `ext_balanco_e_lacunas_por_regiao_v1.md` §2.2 |
 | Fig. 2(b): variável disponível por fonte | `ext_analogos_de_petropolis_v1.md` §5.1 (chuva só no piloto UK e nas regiões brasileiras); `ext_resolucao_unica_30m_v2.md` §4 (declividade e TWI derivadas para Nível 1 via `ter06`, 2026-08-14 — antes vazias por decisão do `ds01`) |
 | E2: 64.989 pontos elegíveis ao ajuste fluvial, 4 fontes, 0 em cadeia global | `local_runs/ds-05-tabela-unica/manifesto_v1.json`; `ext_resolucao_unica_30m_v2.md` §5 |

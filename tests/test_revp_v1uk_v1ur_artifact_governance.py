@@ -18,7 +18,7 @@ import pytest
 # ---------------------------------------------------------------------------
 
 import sys, os
-_REPO_ROOT = Path(__file__).resolve().parents[1]
+_REPO_ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 sys.path.insert(0, str(_REPO_ROOT / "scripts" / "repository"))
 
 from revp_v1uk_v1ur_artifact_governance_common import (

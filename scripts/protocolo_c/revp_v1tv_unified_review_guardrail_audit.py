@@ -16,7 +16,7 @@ from revp_v1tn_v1tw_automated_review_common import (
     guardrail_row_review, scan_guardrails, FORBIDDEN_TRUE_FLAGS, ABS_PATH_RE,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 OUT_AUDIT = _p("REVP_V1TV_OUT_AUDIT", DATASETS / "protocol_c_unified_review_guardrail_audit_v1tv.csv")
 OUT_SUM   = _p("REVP_V1TV_OUT_SUM",   DATASETS / "protocol_c_unified_review_guardrail_summary_v1tv.csv")

@@ -54,7 +54,7 @@ from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
-REPO = Path(__file__).resolve().parents[2]
+REPO = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 RUNS = REPO / "local_runs"
 STORE = RUNS / "geostore"
 OUT = RUNS / "aq-chirps3"

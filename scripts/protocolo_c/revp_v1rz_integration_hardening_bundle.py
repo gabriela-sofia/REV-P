@@ -15,7 +15,7 @@ from revp_v1rs_v1rz_integration_common import (
     write_csv_with_header, write_doc, write_schema_safe,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 IN_INV_SUMMARY = _p("REVP_V1RZ_IN_INV_SUMMARY", DATASETS / "protocol_c_integrated_artifact_inventory_summary_v1rs.csv")
 IN_EDGES_SUMMARY = _p("REVP_V1RZ_IN_EDGES_SUMMARY", DATASETS / "protocol_c_dependency_graph_summary_v1rt.csv")

@@ -5,7 +5,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 REPORT = ROOT / "outputs_public" / "suscetibilidade" / "SUSC_10B_11A_INTEGRATED_ANALYSIS_REPORT.md"
 MANIFEST = ROOT / "manifests" / "suscetibilidade" / "susc_10b_11a_integrated_manifest_v1.json"
 

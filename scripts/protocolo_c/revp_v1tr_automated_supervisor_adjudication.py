@@ -18,7 +18,7 @@ from revp_v1tn_v1tw_automated_review_common import (
     supervisor_final_for_review_only, supervisor_ready_for_tcc,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 OUT_SUP  = _p("REVP_V1TR_OUT_SUP",  DATASETS / "protocol_c_automated_supervisor_adjudication_v1tr.csv")
 OUT_SUM  = _p("REVP_V1TR_OUT_SUM",  DATASETS / "protocol_c_automated_supervisor_adjudication_summary_v1tr.csv")

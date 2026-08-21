@@ -23,8 +23,8 @@ import pytest
 import rasterio
 from rasterio.transform import from_origin
 
-ROOT = Path(__file__).resolve().parents[1]
-SCRIPTS = ROOT / "outputs_public" / "data" / "susc_20g_hand_twi_dinfinity_generico" / "scripts"
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
+SCRIPTS = ROOT / "outputs_public" / "data" / "linha_causal" / "susc_20g_hand_twi_dinfinity_generico" / "scripts"
 
 # PROJETO é o repositório privado irmão de REV-P; `REVP_PROJETO_ROOT` permite apontar para
 # outro local sem editar o teste.

@@ -16,7 +16,7 @@ ativa da API SUSC-20E, sem tocar no modelo físico de Firth.
 | `scripts/dino/revp_v2fg_dinov2_embedder.py` | `Dinov2Embedder` — `facebook/dinov2-with-registers-base`, 768D, L2, CPU/GPU, fail-closed sem pesos, mock só com opt-in. |
 | `scripts/dino/revp_v2fg_dinov2_governance_engine.py` | `Dinov2GovernanceEngine` — cosseno, medoid territorial, gate OOD, bloco de auditoria. |
 | `scripts/dino/revp_v2fg_build_dinov2_governance_corpus.py` | Pipeline E2/E3 — valida embeddings reais, calcula medoids, escreve manifesto. |
-| `outputs_public/data/susc_20e_api_contrato_inferencia_recife/scripts/dino_governance_bridge.py` | Ponte da API: resolve o embedding de consulta e delega à engine. |
+| `outputs_public/data/linha_causal/susc_20e_api_contrato_inferencia_recife/scripts/dino_governance_bridge.py` | Ponte da API: resolve o embedding de consulta e delega à engine. |
 | `datasets/dinov2_governance_medoids_v2fg.json` | Manifesto: medoids + vetores + config do gate + diagnósticos + cross-check. |
 | `datasets/dinov2_governance_corpus_v2fg.csv` | Auditoria candidato-a-candidato (134 linhas). |
 | `datasets/dinov2_governance_summary_v2fg.csv` | Contagens (candidatos/válidos/bloqueados). |

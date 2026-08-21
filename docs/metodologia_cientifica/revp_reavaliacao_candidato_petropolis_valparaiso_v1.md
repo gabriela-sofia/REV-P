@@ -118,7 +118,7 @@ Nada disso é objetivo desta rodada; fica registrado como caminho concreto, não
 
 ## 5. O que muda no repositório
 
-- `outputs_public/data/susc_20e_api_contrato_inferencia_recife/scripts/region_registry.py`:
+- `outputs_public/data/linha_causal/susc_20e_api_contrato_inferencia_recife/scripts/region_registry.py`:
   `status_note` de Petrópolis reescrito para N=0 e candidato fraco.
 - Nenhuma mudança em `region_maturity` (já era `insufficient`) nem em `model_version` (já era
   `None`).

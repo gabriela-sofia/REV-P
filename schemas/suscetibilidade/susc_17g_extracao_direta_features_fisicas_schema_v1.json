@@ -91,16 +91,16 @@
     "TWI_REF": 15.0
   },
   "required_outputs": [
-    "outputs_public/data/susc_17g_extracao_direta_features_fisicas_canarios/preflight.json",
-    "outputs_public/data/susc_17g_extracao_direta_features_fisicas_canarios/auditoria_insumos_extracao_fisica.csv",
-    "outputs_public/data/susc_17g_extracao_direta_features_fisicas_canarios/matriz_features_fisicas_diretas_canarios.csv",
-    "outputs_public/data/susc_17g_extracao_direta_features_fisicas_canarios/fila_insumos_externos_features_fisicas.csv",
-    "outputs_public/data/susc_17g_extracao_direta_features_fisicas_canarios/reavaliacao_calibracao_17e_com_features_diretas.csv",
-    "outputs_public/data/susc_17g_extracao_direta_features_fisicas_canarios/simulacao_sensibilidade_features_diretas_review_only.csv",
-    "outputs_public/data/susc_17g_extracao_direta_features_fisicas_canarios/gate_extracao_direta_features_fisicas.csv",
-    "outputs_public/data/susc_17g_extracao_direta_features_fisicas_canarios/resumo_por_canario.csv",
-    "outputs_public/data/susc_17g_extracao_direta_features_fisicas_canarios/resumo_por_status.csv",
-    "outputs_public/data/susc_17g_extracao_direta_features_fisicas_canarios/summary.json",
+    "outputs_public/data/linhagem_anterior/susc_17g_extracao_direta_features_fisicas_canarios/preflight.json",
+    "outputs_public/data/linhagem_anterior/susc_17g_extracao_direta_features_fisicas_canarios/auditoria_insumos_extracao_fisica.csv",
+    "outputs_public/data/linhagem_anterior/susc_17g_extracao_direta_features_fisicas_canarios/matriz_features_fisicas_diretas_canarios.csv",
+    "outputs_public/data/linhagem_anterior/susc_17g_extracao_direta_features_fisicas_canarios/fila_insumos_externos_features_fisicas.csv",
+    "outputs_public/data/linhagem_anterior/susc_17g_extracao_direta_features_fisicas_canarios/reavaliacao_calibracao_17e_com_features_diretas.csv",
+    "outputs_public/data/linhagem_anterior/susc_17g_extracao_direta_features_fisicas_canarios/simulacao_sensibilidade_features_diretas_review_only.csv",
+    "outputs_public/data/linhagem_anterior/susc_17g_extracao_direta_features_fisicas_canarios/gate_extracao_direta_features_fisicas.csv",
+    "outputs_public/data/linhagem_anterior/susc_17g_extracao_direta_features_fisicas_canarios/resumo_por_canario.csv",
+    "outputs_public/data/linhagem_anterior/susc_17g_extracao_direta_features_fisicas_canarios/resumo_por_status.csv",
+    "outputs_public/data/linhagem_anterior/susc_17g_extracao_direta_features_fisicas_canarios/summary.json",
     "outputs_public/reports/SUSC_17G_EXTRACAO_DIRETA_FEATURES_FISICAS_CANARIOS.md",
     "schemas/suscetibilidade/susc_17g_extracao_direta_features_fisicas_schema_v1.json"
   ]

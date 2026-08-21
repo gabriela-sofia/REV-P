@@ -1,0 +1,42 @@
+{
+  "branch": "marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial",
+  "head": "72dec09",
+  "staged_count": 0,
+  "status_short_count": 199,
+  "entradas_lidas": {
+    "outputs_public/data/linhagem_anterior/susc_18h_consolidacao_mestre_cadeia_observacional/summary.json": true,
+    "outputs_public/data/linhagem_anterior/susc_18h_consolidacao_mestre_cadeia_observacional/matriz_regional_recife_curitiba_petropolis.csv": true,
+    "outputs_public/data/linhagem_anterior/susc_19a_matriz_multimodal_escalavel_por_patch/summary.json": true,
+    "outputs_public/data/linhagem_anterior/susc_19c_avaliacao_observacional_review_only/summary.json": true,
+    "outputs_public/data/linhagem_anterior/susc_19d_diagnostico_divergencias_score_v6_review_only/summary.json": true
+  },
+  "score_v6_baseline_path": "datasets/suscetibilidade/susc_score_v6_candidate_by_patch_v1.csv",
+  "score_v6_changed": false,
+  "score_v7_created": false,
+  "figuras_existentes": [
+    "dino_knn_neighbor_network_publication.png",
+    "dino_medoids_outliers_publication.png",
+    "dino_pca_projection_publication.png",
+    "dino_region_neighbor_matrix_publication.png",
+    "dino_similarity_heatmap_publication.png",
+    "fig_corpus_counts_by_region_status.png",
+    "fig_curitiba_main_publication_v17.png",
+    "fig_dino_input_corpus_publication.png",
+    "fig_evidence_layer_availability.png",
+    "fig_local_context_coverage.png",
+    "fig_methodological_contribution_matrix.png",
+    "fig_petropolis_main_publication_v17.png",
+    "fig_recife_main_publication_v15_final.png",
+    "fig_recife_pe3d_mde_publication.png",
+    "fig_recife_sentinel_technical_publication.png",
+    "fig_regional_roles_summary.png"
+  ],
+  "lacunas_herdadas": {
+    "cobertura_territorial": 0.3333333333333333,
+    "observados": 7,
+    "top30_global": 0,
+    "divergencia_forte": "curitiba_01101"
+  },
+  "outputs_ignorados_pelo_git": [],
+  "summary_versionavel": true
+}

@@ -1,0 +1,6 @@
+ordem,item,status,evidencia_esperada
+1,Validar destinatario institucional,pendente,contato ou protocolo oficial
+2,Enviar oficio Defesa Civil,pendente,numero de protocolo ou e-mail
+3,Enviar oficio GeoCuritiba/IPPUC,pendente,numero de protocolo ou e-mail
+4,Salvar resposta em local_runs,pendente,local_runs/suscetibilidade/18d_resposta_oficial_curitiba
+5,Executar ingestao 18D,pendente,outputs_public/data/linhagem_anterior/susc_18d_protocolo_externo_curitiba/matriz_ingestao_resposta_curitiba.csv

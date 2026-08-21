@@ -5,7 +5,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 OUT = ROOT / "outputs_public" / "suscetibilidade"
 DISCOVERY = OUT / "SUSC_10D_dino_embedding_discovery.csv"
 DISCOVERY_SUMMARY = OUT / "SUSC_10D_dino_embedding_discovery_summary.json"

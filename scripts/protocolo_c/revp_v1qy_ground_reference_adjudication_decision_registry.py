@@ -22,7 +22,7 @@ from revp_v1qu_v1qz_ground_reference_common import (
     write_schema_safe,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 IN_SCORES = _p("REVP_V1QY_IN_SCORES", DATASETS / "protocol_c_observational_evidence_scores_v1qx.csv")
 OUT_REGISTRY = _p("REVP_V1QY_OUT_REGISTRY", DATASETS / "protocol_c_ground_reference_adjudication_registry_v1qy.csv")

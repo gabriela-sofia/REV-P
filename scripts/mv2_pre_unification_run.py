@@ -20,7 +20,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
+PROJECT_ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 MV2_WORKTREE = Path(r"C:\Users\gabriela\Documents\REV-P-mv2-01-reconciliado")
 
 EXEC_REPORTS = PROJECT_ROOT / "outputs_public" / "execution_reports"

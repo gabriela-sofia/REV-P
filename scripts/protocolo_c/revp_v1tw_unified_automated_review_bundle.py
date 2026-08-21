@@ -15,7 +15,7 @@ from revp_v1tn_v1tw_automated_review_common import (
     scan_guardrails, safe_relpath,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 OUT_MAN = _p("REVP_V1TW_OUT_MAN", DATASETS / "protocol_c_unified_automated_review_manifest_v1tw.csv")
 OUT_QC  = _p("REVP_V1TW_OUT_QC",  DATASETS / "protocol_c_unified_automated_review_quality_checks_v1tw.csv")

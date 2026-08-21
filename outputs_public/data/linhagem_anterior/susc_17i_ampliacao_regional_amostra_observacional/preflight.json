@@ -1,0 +1,47 @@
+{
+  "branch": "marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial",
+  "head": "72dec09",
+  "staged_count": 0,
+  "dirty_lines": 167,
+  "inputs": [
+    {
+      "role": "target_pack_17c",
+      "path": "outputs_public/data/linhagem_anterior/susc_17c_strong_reference_acquisition_canary/susc_17c_source_target_pack.csv",
+      "exists": true
+    },
+    {
+      "role": "normalized_geometry_17c5",
+      "path": "outputs_public/data/linhagem_anterior/susc_17c5_geometry_to_patch_linkage_resolver/susc_17c5_normalized_geometry.csv",
+      "exists": true
+    },
+    {
+      "role": "patch_links_17c5",
+      "path": "outputs_public/data/linhagem_anterior/susc_17c5_geometry_to_patch_linkage_resolver/susc_17c5_patch_links.csv",
+      "exists": true
+    },
+    {
+      "role": "summary_17h",
+      "path": "outputs_public/data/linhagem_anterior/susc_17h_calibracao_observacional_forte_somente_revisao/summary.json",
+      "exists": true
+    },
+    {
+      "role": "features_by_patch",
+      "path": "datasets/suscetibilidade/susc_features_by_patch_v1.csv",
+      "exists": true
+    },
+    {
+      "role": "score_v6",
+      "path": "datasets/suscetibilidade/susc_score_v6_candidate_by_patch_v1.csv",
+      "exists": true
+    },
+    {
+      "role": "score_v7_proibido",
+      "path": "datasets/suscetibilidade/susc_score_v7_candidate_by_patch_v1.csv",
+      "exists": false
+    }
+  ],
+  "regioes_alvo": [
+    "CUR",
+    "PET"
+  ]
+}

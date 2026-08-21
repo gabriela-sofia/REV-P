@@ -17,7 +17,7 @@ from revp_v1sr_v1sz_hydromet_context_common import (
     hash_short,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 OUT_FEAT = _p("REVP_V1SU_OUT_FEAT", DATASETS / "protocol_c_rolling_rainfall_context_features_v1su.csv")
 OUT_SUM  = _p("REVP_V1SU_OUT_SUM",  DATASETS / "protocol_c_rolling_rainfall_context_features_summary_v1su.csv")

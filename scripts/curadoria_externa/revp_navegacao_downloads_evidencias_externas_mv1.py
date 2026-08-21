@@ -28,7 +28,7 @@ import json
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 ORIG_SCRIPT = ROOT / "scripts" / "curadoria_externa" / "revp_curadoria_evidencias_externas_mv1.py"
 QUARENTENA = ROOT / "local_only" / "evidencias_externas_quarentena"
 DATA_ACESSO = "2026-06-18"

@@ -17,7 +17,7 @@ from revp_v1rs_v1rz_integration_common import (
     write_csv_with_header, write_doc, write_schema_safe,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 OUT_RECOMMENDED = _p("REVP_V1RV_OUT_RECOMMENDED", DATASETS / "protocol_c_commit_readiness_recommended_files_v1rv.csv")
 OUT_EXCLUDED = _p("REVP_V1RV_OUT_EXCLUDED", DATASETS / "protocol_c_commit_readiness_excluded_files_v1rv.csv")

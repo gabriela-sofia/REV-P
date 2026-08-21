@@ -16,7 +16,7 @@ from revp_v1tn_v1tw_automated_review_common import (
     guardrail_row_review, scan_guardrails,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 OUT_FLOW = _p("REVP_V1TS_OUT_FLOW", DATASETS / "protocol_c_single_flow_review_export_v1ts.csv")
 OUT_SEC  = _p("REVP_V1TS_OUT_SEC",  DATASETS / "protocol_c_single_flow_review_export_sections_v1ts.csv")

@@ -14,7 +14,7 @@ from collections import Counter
 from pathlib import Path
 from typing import Any
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
+PROJECT_ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 OUT_DIR = PROJECT_ROOT / "outputs_public" / "mv2_data_source_sensor_lineage_promotion"
 SEED_PATH = PROJECT_ROOT / "outputs_public" / "mv2_pre_unification_seed" / "revp_source_sensor_lineage_seed_10.csv"
 

@@ -15,7 +15,7 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 CONFIG_NAME = "v2bg_charter758_deep_product_mining_tp2_recovery_config.json"
 STAGE = "v2bg_charter758_deep_product_mining_tp2_recovery"
 MODES = ("charter_page_probe", "enumerate_products", "discover_internal_endpoints", "download_products",

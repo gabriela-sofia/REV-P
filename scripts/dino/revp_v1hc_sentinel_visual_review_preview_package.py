@@ -39,7 +39,7 @@ except ImportError:
     rasterio = None  # type: ignore[assignment]
     RASTERIO_AVAILABLE = False
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 PHASE = "v1hc"
 V1HB_DIR = ROOT / "local_runs" / "dino_embeddings" / "v1hb"
 OUT_DIR = ROOT / "local_runs" / "dino_embeddings" / "v1hc"

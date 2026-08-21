@@ -15,8 +15,8 @@ import numpy as np
 import pandas as pd
 import pytest
 
-ROOT = Path(__file__).resolve().parents[1]
-PKG = ROOT / "outputs_public/data/susc_20k_siac156_curitiba_flood_candidates"
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
+PKG = ROOT / "outputs_public/data/linha_causal/susc_20k_siac156_curitiba_flood_candidates"
 sys.path.insert(0, str(PKG / "scripts"))
 import pipeline_v20y_gam_spline_curitiba as p20y  # noqa: E402
 

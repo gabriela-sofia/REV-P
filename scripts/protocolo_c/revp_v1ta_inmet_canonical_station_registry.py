@@ -19,7 +19,7 @@ from revp_v1ta_v1tf_inmet_canonical_common import (
     hash_short,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 OUT_REG  = _p("REVP_V1TA_OUT_REG",  DATASETS / "protocol_c_inmet_canonical_station_registry_v1ta.csv")
 OUT_SUM  = _p("REVP_V1TA_OUT_SUM",  DATASETS / "protocol_c_inmet_canonical_station_registry_summary_v1ta.csv")

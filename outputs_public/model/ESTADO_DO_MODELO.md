@@ -6,7 +6,7 @@ O REV-P não entrega um único modelo operacional para as três regiões — o e
 
 Regressão logística penalizada de Firth (`v12`), treinada sobre 278 eventos reais (154 positivos / 124 negativos) confirmados por Defesa Civil, ANA e Diário Oficial. LOO-AUC = 0,68 (repetido 5-fold: 0,67 ± 0,01). Os 6 sinais de coeficiente preservam coerência física esperada; a variável de chuva antecedente (`rain_decay_index_api_chirps`) é o preditor mais forte e estatisticamente significativo (p < 0,0001).
 
-Motor de inferência local e API de contrato foram implementados e auditados ponta a ponta — ver `outputs_public/data/susc_20d_motor_inferencia_local_mvp_recife/` e `susc_20e_api_contrato_inferencia_recife/`.
+Motor de inferência local e API de contrato foram implementados e auditados ponta a ponta — ver `outputs_public/data/linha_causal/susc_20d_motor_inferencia_local_mvp_recife/` e `outputs_public/data/linha_causal/susc_20e_api_contrato_inferencia_recife/`.
 
 ## Curitiba — modelo treinado, não operacional
 

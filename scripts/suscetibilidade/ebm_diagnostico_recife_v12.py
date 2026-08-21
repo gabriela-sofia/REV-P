@@ -47,7 +47,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 sys.path.insert(0, str(ROOT / "scripts" / "suscetibilidade"))
 
 FEATURES_CAUSAIS = [
@@ -73,7 +73,7 @@ SAIDA = ROOT / "local_runs" / "ebm_diagnostico_recife_v12"
 CAMINHOS_CONHECIDOS = [
     # Caminho real confirmado em 05/08/2026 -- publicado e versionado no git,
     # nao em local_runs/ (que e efemero e ja nao tinha mais o arquivo).
-    "outputs_public/data/susc_20a_aquisicao_eventos_reais_recife/dataset/dataset_eventos_features_v12_final.csv",
+    "outputs_public/data/linha_causal/susc_20a_aquisicao_eventos_reais_recife/dataset/dataset_eventos_features_v12_final.csv",
     # Caminhos antigos mencionados nos relatorios (local_runs/), mantidos como
     # fallback caso um dia voltem a existir.
     "local_runs/recife_modelo_v12_extracao_final/dataset_v12_final.csv",

@@ -52,6 +52,6 @@ SAÍDA   status: region_not_supported
 
 Não é mockup de tela para usuário final, não é decisão de design de produto
 (cores, fluxo de navegação) e não substitui o contrato de API real
-(`susc_20e_api_contrato_inferencia_recife/`). É só a tradução mínima, em três
+(`outputs_public/data/linha_causal/susc_20e_api_contrato_inferencia_recife/`). É só a tradução mínima, em três
 estados, do que "serviço auditável" já significa no texto do plano — para uso
 em conversa com o orientador ou em pôster, se for útil.

@@ -61,7 +61,7 @@ import sys as _sys
 _sys.path.insert(0, str(__import__('pathlib').Path(__file__).resolve().parent))
 import susc_firth_shim  # noqa: F401,E402
 
-REPO = Path(__file__).resolve().parents[2]
+REPO = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 RUNS = REPO / "local_runs"
 ENTRADA = RUNS / "ft-uk-04-chuva" / "amostra_candidata_uk_v2_com_chuva.csv"
 OUT = RUNS / "mod-uk-01-firth"

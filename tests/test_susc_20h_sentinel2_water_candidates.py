@@ -15,9 +15,9 @@ from pathlib import Path
 import numpy as np
 import pytest
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 SCRIPT = (
-    ROOT / "outputs_public" / "data" / "susc_20h_sentinel2_water_candidates"
+    ROOT / "outputs_public" / "data" / "linha_causal" / "susc_20h_sentinel2_water_candidates"
     / "scripts" / "detect_water_candidates.py"
 )
 

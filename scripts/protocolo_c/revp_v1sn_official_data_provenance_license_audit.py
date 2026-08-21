@@ -14,7 +14,7 @@ from revp_v1sg_v1sz_official_download_common import (
     domain_from_url, forbidden_guardrail_scan,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 IN_ORCHESTRATOR = _p("REVP_V1SN_IN_ORCHESTRATOR", DATASETS / "protocol_c_official_download_orchestrator_manifest_v1sl.csv")
 OUT_AUDIT = _p("REVP_V1SN_OUT_AUDIT", DATASETS / "protocol_c_official_data_provenance_license_audit_v1sn.csv")

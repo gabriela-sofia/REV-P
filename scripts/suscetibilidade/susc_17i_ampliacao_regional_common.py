@@ -28,12 +28,12 @@ from susc_io import ensure_dir, read_csv, read_json, rel, write_csv, write_json,
 
 DATASETS = ROOT / "datasets"
 DAT_SUSC = DATASETS / "suscetibilidade"
-OUT_DATA_17H = ROOT / "outputs_public" / "data" / "susc_17h_calibracao_observacional_forte_somente_revisao"
-OUT_DATA_17G = ROOT / "outputs_public" / "data" / "susc_17g_extracao_direta_features_fisicas_canarios"
-OUT_DATA_17D = ROOT / "outputs_public" / "data" / "susc_17d_validacao_tecnica_evidencia_observacional"
-OUT_DATA_17C = ROOT / "outputs_public" / "data" / "susc_17c_strong_reference_acquisition_canary"
-OUT_DATA_17C5 = ROOT / "outputs_public" / "data" / "susc_17c5_geometry_to_patch_linkage_resolver"
-OUT_DATA = ROOT / "outputs_public" / "data" / "susc_17i_ampliacao_regional_amostra_observacional"
+OUT_DATA_17H = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_17h_calibracao_observacional_forte_somente_revisao"
+OUT_DATA_17G = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_17g_extracao_direta_features_fisicas_canarios"
+OUT_DATA_17D = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_17d_validacao_tecnica_evidencia_observacional"
+OUT_DATA_17C = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_17c_strong_reference_acquisition_canary"
+OUT_DATA_17C5 = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_17c5_geometry_to_patch_linkage_resolver"
+OUT_DATA = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_17i_ampliacao_regional_amostra_observacional"
 CARDS_DIR = OUT_DATA / "cartoes_regionais"
 OUT_REPORTS = ROOT / "outputs_public" / "reports"
 SCHEMAS = ROOT / "schemas" / "suscetibilidade"
@@ -414,34 +414,34 @@ def fila_rows(items):
             add(region, cidade, cid, "obter_geometria_oficial",
                 "geoportal_municipal_ou_defesa_civil", "geometria_oficial_do_evento", "geojson",
                 f"local_runs/suscetibilidade/17i_regional/{low}_geometria.geojson",
-                f"outputs_public/data/susc_17i_ampliacao_regional_amostra_observacional/{low}_geometria_resolvida.csv",
+                f"outputs_public/data/linhagem_anterior/susc_17i_ampliacao_regional_amostra_observacional/{low}_geometria_resolvida.csv",
                 "obter poligono/ponto oficial do evento datado e resolver com a logica do 17C5", "alta",
                 "geometria oficial com CRS resolvida e vinculavel a patch")
             add(region, cidade, cid, "resolver_patch_link",
                 "patches_oficiais_regiao", "vinculo_evento_patch", "csv",
                 f"local_runs/suscetibilidade/17i_regional/{low}_geometria.geojson",
-                f"outputs_public/data/susc_17i_ampliacao_regional_amostra_observacional/{low}_patch_link.csv",
+                f"outputs_public/data/linhagem_anterior/susc_17i_ampliacao_regional_amostra_observacional/{low}_patch_link.csv",
                 "apos obter a geometria, rodar o resolvedor de vinculo evento-patch do 17C5", "alta",
                 "pelo menos um patch link forte aceito para o evento")
         elif it["status"] == "bloqueado_sem_geometria":
             add(region, cidade, cid, "obter_geometria_oficial",
                 "geoportal_municipal_ou_defesa_civil", "geometria_oficial_do_evento", "geojson",
                 f"local_runs/suscetibilidade/17i_regional/{low}_geometria.geojson",
-                f"outputs_public/data/susc_17i_ampliacao_regional_amostra_observacional/{low}_geometria_resolvida.csv",
+                f"outputs_public/data/linhagem_anterior/susc_17i_ampliacao_regional_amostra_observacional/{low}_geometria_resolvida.csv",
                 "substituir endereco/texto por geometria oficial com CRS", "media",
                 "geometria oficial forte com CRS (nao textual)")
         elif it["status"] == "bloqueado_sem_data":
             add(region, cidade, cid, "obter_data_exata",
                 "relatorio_oficial_ou_defesa_civil", "data_do_evento", "documento_ou_csv",
                 f"local_runs/suscetibilidade/17i_regional/{low}_data.txt",
-                f"outputs_public/data/susc_17i_ampliacao_regional_amostra_observacional/{low}_data_resolvida.csv",
+                f"outputs_public/data/linhagem_anterior/susc_17i_ampliacao_regional_amostra_observacional/{low}_data_resolvida.csv",
                 "resolver data exata ou intervalo do evento a partir de fonte oficial", "media",
                 "data exata ou intervalo confirmado por fonte oficial")
         elif it["status"] == "candidato_contextual":
             add(region, cidade, cid, "obter_footprint_tecnico",
                 "sentinel1_rtc_stac", "footprint_tecnico_de_inundacao", "geojson",
                 f"local_runs/suscetibilidade/17i_regional/{low}_footprint.geojson",
-                f"outputs_public/data/susc_17i_ampliacao_regional_amostra_observacional/{low}_footprint.csv",
+                f"outputs_public/data/linhagem_anterior/susc_17i_ampliacao_regional_amostra_observacional/{low}_footprint.csv",
                 "gerar footprint tecnico pre/pos com o metodo do DEVRO02D, se a data permitir", "baixa",
                 "footprint tecnico candidato review-only")
 
@@ -452,7 +452,7 @@ def fila_rows(items):
             add(region, REGION_CITY[region], f"{region}_EVENTOS_MISTOS_{len(mistos)}", "separar_fenomeno",
                 "relatorios_oficiais_cprm_defesa_civil", "classificacao_de_fenomeno_por_ocorrencia", "csv",
                 f"local_runs/suscetibilidade/17i_regional/{region.lower()}_ocorrencias_classificadas.csv",
-                f"outputs_public/data/susc_17i_ampliacao_regional_amostra_observacional/{region.lower()}_fenomeno_separado.csv",
+                f"outputs_public/data/linhagem_anterior/susc_17i_ampliacao_regional_amostra_observacional/{region.lower()}_fenomeno_separado.csv",
                 "separar inundacao/alagamento de deslizamento por ocorrencia antes de usar como evidencia de inundacao", "alta",
                 "ocorrencias de inundacao separadas de deslizamento com fonte oficial")
     return rows

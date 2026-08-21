@@ -17,7 +17,7 @@ from revp_v1ta_v1tf_inmet_canonical_common import (
     hash_short,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 OUT_AUD  = _p("REVP_V1TB_OUT_AUD",  DATASETS / "protocol_c_inmet_coordinate_parse_discrepancy_audit_v1tb.csv")
 OUT_SUM  = _p("REVP_V1TB_OUT_SUM",  DATASETS / "protocol_c_inmet_coordinate_parse_discrepancy_summary_v1tb.csv")

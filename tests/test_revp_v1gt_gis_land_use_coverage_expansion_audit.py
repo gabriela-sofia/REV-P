@@ -20,7 +20,7 @@ import pytest
 # Import
 # ---------------------------------------------------------------------------
 
-SCRIPTS_DIR = Path(__file__).resolve().parents[1] / "scripts" / "dino"
+SCRIPTS_DIR = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file()) / "scripts" / "dino"
 sys.path.insert(0, str(SCRIPTS_DIR))
 
 import revp_v1gt_gis_land_use_coverage_expansion_audit as _v1gt
@@ -819,7 +819,7 @@ class TestNoForbiddenOutputs:
 
     def test_no_private_paths_in_script(self):
         script = (
-            Path(__file__).resolve().parents[1]
+            next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
             / "scripts" / "dino"
             / "revp_v1gt_gis_land_use_coverage_expansion_audit.py"
         )

@@ -10,7 +10,7 @@ from pathlib import Path
 
 import pytest
 
-SCRIPTS_DIR = Path(__file__).resolve().parents[1] / "outputs_public/data/susc_20k_siac156_curitiba_flood_candidates/scripts"
+SCRIPTS_DIR = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file()) / "outputs_public/data/linha_causal/susc_20k_siac156_curitiba_flood_candidates/scripts"
 sys.path.insert(0, str(SCRIPTS_DIR))
 import qa_dedup_siac156 as qa_mod  # noqa: E402
 import build_final_dataset as build_mod  # noqa: E402

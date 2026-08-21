@@ -30,7 +30,7 @@ from sklearn.metrics import silhouette_score
 from sklearn.metrics.pairwise import cosine_similarity
 
 
-REPO = Path(__file__).resolve().parents[2]
+REPO = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 PROJECT = REPO.parent / "PROJETO"
 OUT = REPO / "outputs_public"
 NOW = datetime.now().astimezone()

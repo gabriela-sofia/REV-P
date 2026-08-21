@@ -8,8 +8,8 @@ benchmark, treino nem ground truth. Onde a feature nao existe, marca NA e lacuna
 Fontes reais herdadas:
 - datasets/suscetibilidade/susc_features_by_patch_v1.csv (features por patch)
 - datasets/suscetibilidade/susc_score_v6_candidate_by_patch_v1.csv (score_v6)
-- outputs_public/data/susc_18h_... (linhagem consolidada)
-- outputs_public/data/susc_18g_... (overlays tecnicos SAR de Curitiba)
+- outputs_public/data/linhagem_anterior/susc_18h_... (linhagem consolidada)
+- outputs_public/data/linhagem_anterior/susc_18g_... (overlays tecnicos SAR de Curitiba)
 
 Guardrails: ground_truth=false, eligible_for_training=false, score_v7_allowed=false,
 score_v6 intacto, patch_stats SAR (pos-evento) nunca vira feature pre-evento.
@@ -38,7 +38,7 @@ from susc_io import (  # noqa: E402
 # ---------------------------------------------------------------------------
 # Caminhos
 # ---------------------------------------------------------------------------
-OUT = ROOT / "outputs_public" / "data" / "susc_19a_matriz_multimodal_escalavel_por_patch"
+OUT = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_19a_matriz_multimodal_escalavel_por_patch"
 CARDS = OUT / "cartoes_regionais"
 REPORTS = ROOT / "outputs_public" / "reports"
 SCHEMAS_DIR = ROOT / "schemas" / "suscetibilidade"
@@ -49,8 +49,8 @@ SCHEMA = SCHEMAS_DIR / "susc_19a_matriz_multimodal_schema_v1.json"
 FEATURES_SRC = ROOT / "datasets" / "suscetibilidade" / "susc_features_by_patch_v1.csv"
 SCORE_V6 = ROOT / "datasets" / "suscetibilidade" / "susc_score_v6_candidate_by_patch_v1.csv"
 SCORE_V7 = ROOT / "datasets" / "suscetibilidade" / "susc_score_v7_candidate_by_patch_v1.csv"
-LINHAGEM_18H = ROOT / "outputs_public" / "data" / "susc_18h_consolidacao_mestre_cadeia_observacional" / "linhagem_mestre_evidencia_observacional.csv"
-OVERLAYS_18G = ROOT / "outputs_public" / "data" / "susc_18g_recuperacao_compactacao_vetorial_sar_curitiba" / "vinculos_vetoriais_sar_patch_curitiba_18g.csv"
+LINHAGEM_18H = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_18h_consolidacao_mestre_cadeia_observacional" / "linhagem_mestre_evidencia_observacional.csv"
+OVERLAYS_18G = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_18g_recuperacao_compactacao_vetorial_sar_curitiba" / "vinculos_vetoriais_sar_patch_curitiba_18g.csv"
 
 # Saidas
 INVENTARIO = OUT / "inventario_fontes_multimodais.csv"
@@ -349,7 +349,7 @@ def inventario_rows() -> list[dict]:
         row("FONTE_18G_SAR", rel(OVERLAYS_18G), "csv_overlays_sar", "curitiba", "technical_sar_overlap",
             "technical_sar_vector_overlap", "por_patch", "pos-evento tecnico", "EPSG:4326", "utilizavel_com_join",
             "overlays tecnicos em curitiba_01050 e curitiba_01101 como evidencia, nunca como feature pre-evento"),
-        row("FONTE_18F_PATCH_STATS", rel(ROOT / "outputs_public" / "data" / "susc_18f_ingestao_validacao_footprint_sar_curitiba"),
+        row("FONTE_18F_PATCH_STATS", rel(ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_18f_ingestao_validacao_footprint_sar_curitiba"),
             "csv_patch_stats_sar", "curitiba", "sar_patch_stats_pos_evento", "flood_mask_mean;pixel_count",
             "por_patch", "pos-evento", "EPSG:4326", "bloqueado_por_lacuna",
             "patch_stats SAR e pos-evento; bloqueado como feature pre-evento por regra cientifica"),

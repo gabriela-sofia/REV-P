@@ -43,7 +43,7 @@ from susc_io import (  # noqa: E402
 # ---------------------------------------------------------------------------
 # Caminhos
 # ---------------------------------------------------------------------------
-OUT = ROOT / "outputs_public" / "data" / "susc_19b_auditoria_lacunas_territoriais"
+OUT = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_19b_auditoria_lacunas_territoriais"
 PACOTE_GEE = OUT / "pacote_gee"
 CARDS = OUT / "cartoes_regionais"
 REPORTS = ROOT / "outputs_public" / "reports"
@@ -53,7 +53,7 @@ REPORT = REPORTS / "SUSC_19B_AUDITORIA_LACUNAS_TERRITORIAIS.md"
 SCHEMA = SCHEMAS_DIR / "susc_19b_lacunas_territoriais_schema_v1.json"
 
 # Fontes herdadas / reais
-OUT_19A = ROOT / "outputs_public" / "data" / "susc_19a_matriz_multimodal_escalavel_por_patch"
+OUT_19A = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_19a_matriz_multimodal_escalavel_por_patch"
 MAT_19A = OUT_19A / "matriz_multimodal_escalavel_por_patch.csv"
 INDICE_19A = OUT_19A / "indice_cobertura_multimodal_review_only.csv"
 FEATURES_SRC = ROOT / "datasets" / "suscetibilidade" / "susc_features_by_patch_v1.csv"

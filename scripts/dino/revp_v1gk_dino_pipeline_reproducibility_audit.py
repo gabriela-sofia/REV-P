@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 DEFAULT_OUTPUT_DIR = ROOT / "local_runs" / "dino_embeddings" / "v1gk"
 PHASES = ["v1fw", "v1fx", "v1fy", "v1fz", "v1ga", "v1gb", "v1gc", "v1gd", "v1ge", "v1gf", "v1gg", "v1gh", "v1gi", "v1gj", "v1gk"]
 SCRIPT_BY_PHASE = {

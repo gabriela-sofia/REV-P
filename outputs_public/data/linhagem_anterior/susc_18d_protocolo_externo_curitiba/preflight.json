@@ -1,0 +1,29 @@
+{
+  "branch": "marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial",
+  "head": "72dec09",
+  "staged_count": 0,
+  "input_dir": "local_runs/suscetibilidade/18d_resposta_oficial_curitiba",
+  "input_dir_exists": false,
+  "input_files": [],
+  "patch_polys_disponiveis": 43,
+  "required_18c": [
+    {
+      "path": "outputs_public/data/linhagem_anterior/susc_18c_aquisicao_geometria_oficial_curitiba/summary.json",
+      "exists": true
+    },
+    {
+      "path": "outputs_public/data/linhagem_anterior/susc_18c_aquisicao_geometria_oficial_curitiba/solicitacao_geometria_ocorrencia_curitiba.md",
+      "exists": true
+    },
+    {
+      "path": "outputs_public/data/linhagem_anterior/susc_18c_aquisicao_geometria_oficial_curitiba/schema_resposta_esperada_curitiba.json",
+      "exists": true
+    },
+    {
+      "path": "outputs_public/data/linhagem_anterior/susc_18c_aquisicao_geometria_oficial_curitiba/modelo_planilha_resposta_curitiba.csv",
+      "exists": true
+    }
+  ],
+  "score_v6_changed": false,
+  "score_v7_created": false
+}

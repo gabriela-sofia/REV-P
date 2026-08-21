@@ -17,7 +17,7 @@ from revp_v1rs_v1rz_integration_common import (
     safe_relpath, write_csv_with_header, write_doc, write_schema_safe,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 OUT_INVENTORY = _p("REVP_V1RS_OUT_INVENTORY", DATASETS / "protocol_c_integrated_artifact_inventory_v1rs.csv")
 OUT_SUMMARY = _p("REVP_V1RS_OUT_SUMMARY", DATASETS / "protocol_c_integrated_artifact_inventory_summary_v1rs.csv")

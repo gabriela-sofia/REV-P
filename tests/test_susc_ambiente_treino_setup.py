@@ -35,7 +35,7 @@ interpret = pytest.importorskip(
     "interpret", reason="ambiente sem interpret -- ver docs/ambiente_treino_susc.md"
 )
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 COMPAT_PATH = ROOT / "scripts" / "suscetibilidade" / "susc_ambiente_compat_common.py"
 
 SEED = 20260805  # data em que o ambiente foi verificado pela primeira vez

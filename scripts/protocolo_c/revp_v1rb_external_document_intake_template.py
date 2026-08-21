@@ -19,7 +19,7 @@ from revp_v1ra_v1rf_external_intake_common import (
     write_doc,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 CONFIGS = ROOT / "configs"
 
 OUT_TEMPLATE = _p("REVP_V1RB_OUT_TEMPLATE", DATASETS / "protocol_c_external_document_intake_template_v1rb.csv")

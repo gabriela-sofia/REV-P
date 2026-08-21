@@ -45,7 +45,7 @@ import numpy as np
 import pandas as pd
 from shapely.geometry import box
 
-REPO = Path(__file__).resolve().parents[2]
+REPO = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 RUNS = REPO / "local_runs"
 RFO = RUNS / "ext-uk-02-area-piloto" / "elegiveis.gpkg"
 FZ_DIR = RUNS / "ext-uk-04-flood-zones" / "Flood_Zones_2_3_Rivers_and_Sea"

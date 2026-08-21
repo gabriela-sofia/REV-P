@@ -8,7 +8,7 @@ from pathlib import Path
 import scripts.v2ax_recife_geometry_intake_pack_engine as engine
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 
 def snapshot():

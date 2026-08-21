@@ -52,7 +52,7 @@ from pathlib import Path
 import geopandas as gpd
 import pandas as pd
 
-REPO = Path(__file__).resolve().parents[2]
+REPO = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 OUT = REPO / "local_runs" / "br-01-cems-negativo"
 CRS_METRICO = 31982   # SIRGAS 2000 / UTM 22S -- cobre o Rio Grande do Sul
 

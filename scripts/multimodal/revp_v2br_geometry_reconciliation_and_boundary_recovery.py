@@ -48,7 +48,7 @@ except Exception:  # pragma: no cover
     HAS_PYPROJ = False
 
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 DEFAULT_OUTPUT_DIR = ROOT / "local_runs" / "ground_truth" / "v2br"
 RECOVERED_DIR_NAME = "recovered_patch_boundaries"
 STAGE = "v2br"

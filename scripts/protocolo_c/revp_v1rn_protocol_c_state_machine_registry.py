@@ -24,7 +24,7 @@ from revp_v1qu_v1qz_ground_reference_common import (
     write_schema_safe,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 OUT_REGISTRY = _p("REVP_V1RN_OUT_REGISTRY", DATASETS / "protocol_c_state_machine_registry_v1rn.csv")
 OUT_SUMMARY = _p("REVP_V1RN_OUT_SUMMARY", DATASETS / "protocol_c_state_machine_summary_v1rn.csv")

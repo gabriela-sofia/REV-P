@@ -7,7 +7,7 @@ from __future__ import annotations
 import csv
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 SCHEMA = ROOT / "schemas" / "suscetibilidade" / "susc_09b_external_vector_acquisition_schema_v1.json"
 REGISTRY = ROOT / "manifests" / "suscetibilidade" / "susc_09b_external_source_registry_v1.csv"
 DL_MANIFEST = ROOT / "manifests" / "suscetibilidade" / "susc_09b_external_download_manifest_v1.csv"

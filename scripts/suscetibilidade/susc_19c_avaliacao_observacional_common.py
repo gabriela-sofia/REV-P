@@ -39,7 +39,7 @@ from susc_io import (  # noqa: E402
 # ---------------------------------------------------------------------------
 # Caminhos
 # ---------------------------------------------------------------------------
-OUT = ROOT / "outputs_public" / "data" / "susc_19c_avaliacao_observacional_review_only"
+OUT = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_19c_avaliacao_observacional_review_only"
 CARDS = OUT / "cartoes_observacionais"
 REPORTS = ROOT / "outputs_public" / "reports"
 SCHEMAS_DIR = ROOT / "schemas" / "suscetibilidade"
@@ -50,8 +50,8 @@ SCHEMA = SCHEMAS_DIR / "susc_19c_avaliacao_observacional_schema_v1.json"
 FEATURES_SRC = ROOT / "datasets" / "suscetibilidade" / "susc_features_by_patch_v1.csv"
 SCORE_V6 = ROOT / "datasets" / "suscetibilidade" / "susc_score_v6_candidate_by_patch_v1.csv"
 SCORE_V7 = ROOT / "datasets" / "suscetibilidade" / "susc_score_v7_candidate_by_patch_v1.csv"
-MAT_19A = ROOT / "outputs_public" / "data" / "susc_19a_matriz_multimodal_escalavel_por_patch" / "matriz_multimodal_escalavel_por_patch.csv"
-OVERLAYS_18G = ROOT / "outputs_public" / "data" / "susc_18g_recuperacao_compactacao_vetorial_sar_curitiba" / "vinculos_vetoriais_sar_patch_curitiba_18g.csv"
+MAT_19A = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_19a_matriz_multimodal_escalavel_por_patch" / "matriz_multimodal_escalavel_por_patch.csv"
+OVERLAYS_18G = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_18g_recuperacao_compactacao_vetorial_sar_curitiba" / "vinculos_vetoriais_sar_patch_curitiba_18g.csv"
 
 # Saidas
 REG_OBS = OUT / "registro_patches_observacionais_19c.csv"

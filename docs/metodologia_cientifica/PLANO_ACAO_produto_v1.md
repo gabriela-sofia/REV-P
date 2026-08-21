@@ -31,7 +31,7 @@ cada doc/pasta linkado):
   (reproduz coeficientes e bootstrap publicados do SUSC-20C a <1e-3) e auditado contra os
   269/278 rótulos reais (AUC in-sample=0.7107 vs LOO-AUC=0.6781 documentado -- números
   diferentes por desenho, não conflatados). Ver
-  `outputs_public/data/susc_20d_motor_inferencia_local_mvp_recife/`.
+  `outputs_public/data/linha_causal/susc_20d_motor_inferencia_local_mvp_recife/`.
 - **Fase 4 -- PARCIALMENTE FECHADA.** Leads B (ANA) e C (Global Flood Database) para
   Curitiba concluídos com dado real e achados novos (corroboração hidrológica real em 2
   estações da RMC para o evento de 2022-01-15/16; evento MODIS-validado real DFO_4276/2015
@@ -39,8 +39,8 @@ cada doc/pasta linkado):
   tentativa real registrada, decreto específico ainda não recuperado. Curitiba continua
   "evidência em processamento", não "análise disponível" -- geometria de ocorrência do
   evento de 2022 ainda ausente (bloqueio já conhecido de `SUSC-18C`). Ver
-  `outputs_public/data/susc_curitiba_leadb_ana_estacoes_reais/reports/RELATORIO_fase4_curitiba_leads_abc.md`.
-- **Fase 5 -- FEITA (MVP local).** API FastAPI real (`susc_20e_api_contrato_inferencia_recife/`)
+  `outputs_public/data/linhagem_anterior/susc_curitiba_leadb_ana_estacoes_reais/reports/RELATORIO_fase4_curitiba_leads_abc.md`.
+- **Fase 5 -- FEITA (MVP local).** API FastAPI real (`outputs_public/data/linha_causal/susc_20e_api_contrato_inferencia_recife/`)
   implementando o contrato do rascunho, gates completos, testada com 7 cenários reais.
   **Extensão SUSC-20F (2026-07-24)**: pipeline de geoprocessamento sob demanda fecha a
   limitação "só pontos conhecidos" -- terreno real amostrado do DTM PE3D merged
@@ -48,7 +48,7 @@ cada doc/pasta linkado):
   documentada, raster original não recuperável) + chuva ao vivo via Open-Meteo
   ERA5-Land (match exato). API agora responde `ok` com score real pra qualquer
   coordenada dentro da cobertura real (~21km x 28km em Recife), não só os 269 pontos
-  de treino. Ver `susc_20f_pipeline_geoprocessamento_sob_demanda_recife/`.
+  de treino. Ver `outputs_public/data/linha_causal/susc_20f_pipeline_geoprocessamento_sob_demanda_recife/`.
 - **Fase 1b (SUSC-21/21b, 2026-08-01) -- FECHADA, DECISÃO: voltar o foco pro causal.**
   Depois da Fase 1 fechar "DINO não é feature", testou-se um segundo papel: DINO como
   refinador de evidência (fila de revisão priorizada por similaridade, adaptado do
@@ -114,7 +114,7 @@ cada doc/pasta linkado):
   como opção de metodologia maior que ataca a limitação estrutural já conhecida
   (positivo=dia de queixa, negativo=data arbitrária não-hidrológica) -- **não é diagnóstico,
   é redesenho, exige aprovação explícita antes de rodar, não decidido aqui**. Ver
-  outputs_public/data/susc_20k_siac156_curitiba_flood_candidates/reports/
+  outputs_public/data/linha_causal/susc_20k_siac156_curitiba_flood_candidates/reports/
   (susc_20o_validacao_temporal_holdout_curitiba_report.md,
   susc_20p_validacao_blocos_espaciais_curitiba_report.md,
   susc_20q_bateria_exaustiva_diagnosticos_temporais_curitiba_report.md).

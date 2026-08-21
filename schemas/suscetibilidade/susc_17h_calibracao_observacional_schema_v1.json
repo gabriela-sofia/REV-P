@@ -123,17 +123,17 @@
     "CHIRPS_30d": 250.0
   },
   "required_outputs": [
-    "outputs_public/data/susc_17h_calibracao_observacional_forte_somente_revisao/preflight.json",
-    "outputs_public/data/susc_17h_calibracao_observacional_forte_somente_revisao/matriz_calibracao_observacional_forte.csv",
-    "outputs_public/data/susc_17h_calibracao_observacional_forte_somente_revisao/politica_componentes_calibracao_observacional.csv",
-    "outputs_public/data/susc_17h_calibracao_observacional_forte_somente_revisao/simulacao_pesos_calibracao_observacional.csv",
-    "outputs_public/data/susc_17h_calibracao_observacional_forte_somente_revisao/diagnostico_aderencia_observacional.csv",
-    "outputs_public/data/susc_17h_calibracao_observacional_forte_somente_revisao/gate_calibracao_observacional_forte.csv",
-    "outputs_public/data/susc_17h_calibracao_observacional_forte_somente_revisao/gate_prontidao_17b_pos_17h.csv",
-    "outputs_public/data/susc_17h_calibracao_observacional_forte_somente_revisao/resumo_por_canario.csv",
-    "outputs_public/data/susc_17h_calibracao_observacional_forte_somente_revisao/resumo_por_cenario.csv",
-    "outputs_public/data/susc_17h_calibracao_observacional_forte_somente_revisao/resumo_por_aderencia.csv",
-    "outputs_public/data/susc_17h_calibracao_observacional_forte_somente_revisao/summary.json",
+    "outputs_public/data/linhagem_anterior/susc_17h_calibracao_observacional_forte_somente_revisao/preflight.json",
+    "outputs_public/data/linhagem_anterior/susc_17h_calibracao_observacional_forte_somente_revisao/matriz_calibracao_observacional_forte.csv",
+    "outputs_public/data/linhagem_anterior/susc_17h_calibracao_observacional_forte_somente_revisao/politica_componentes_calibracao_observacional.csv",
+    "outputs_public/data/linhagem_anterior/susc_17h_calibracao_observacional_forte_somente_revisao/simulacao_pesos_calibracao_observacional.csv",
+    "outputs_public/data/linhagem_anterior/susc_17h_calibracao_observacional_forte_somente_revisao/diagnostico_aderencia_observacional.csv",
+    "outputs_public/data/linhagem_anterior/susc_17h_calibracao_observacional_forte_somente_revisao/gate_calibracao_observacional_forte.csv",
+    "outputs_public/data/linhagem_anterior/susc_17h_calibracao_observacional_forte_somente_revisao/gate_prontidao_17b_pos_17h.csv",
+    "outputs_public/data/linhagem_anterior/susc_17h_calibracao_observacional_forte_somente_revisao/resumo_por_canario.csv",
+    "outputs_public/data/linhagem_anterior/susc_17h_calibracao_observacional_forte_somente_revisao/resumo_por_cenario.csv",
+    "outputs_public/data/linhagem_anterior/susc_17h_calibracao_observacional_forte_somente_revisao/resumo_por_aderencia.csv",
+    "outputs_public/data/linhagem_anterior/susc_17h_calibracao_observacional_forte_somente_revisao/summary.json",
     "outputs_public/reports/SUSC_17H_CALIBRACAO_OBSERVACIONAL_FORTE_SOMENTE_REVISAO.md",
     "schemas/suscetibilidade/susc_17h_calibracao_observacional_schema_v1.json"
   ]

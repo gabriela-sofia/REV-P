@@ -14,7 +14,7 @@ from revp_v1tx_v1ub_tcc_dossier_common import (
     guardrail_row_review, scan_guardrails, evidence_matrix_cells,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 OUT_MTX = _p("REVP_V1TY_OUT_MTX", DATASETS / "protocol_c_final_evidence_matrix_v1ty.csv")
 OUT_SUM = _p("REVP_V1TY_OUT_SUM", DATASETS / "protocol_c_final_evidence_matrix_summary_v1ty.csv")

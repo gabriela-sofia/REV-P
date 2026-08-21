@@ -729,6 +729,6 @@ data: registra fontes externas reais e triagem conservadora de evidencias
 
 
 def add_repo_args(parser: argparse.ArgumentParser) -> None:
-    parser.add_argument("--repo-root", default=str(Path(__file__).resolve().parents[2]))
+    parser.add_argument("--repo-root", default=str(next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())))
     parser.add_argument("--offline", action="store_true")
     parser.add_argument("--force", action="store_true")

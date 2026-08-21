@@ -15,7 +15,7 @@ from revp_v1tx_v1ub_tcc_dossier_common import (
     guardrail_row_review, scan_guardrails, narrative_for_case,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 OUT_NAR = _p("REVP_V1UA_OUT_NAR", DATASETS / "protocol_c_tcc_narrative_draft_v1ua.csv")
 OUT_SUM = _p("REVP_V1UA_OUT_SUM", DATASETS / "protocol_c_tcc_narrative_draft_summary_v1ua.csv")

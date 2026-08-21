@@ -5,7 +5,7 @@ import json
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts" / "ground_truth"))
+sys.path.insert(0, str(next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file()) / "scripts" / "ground_truth"))
 
 from revp_temporal_acquisition_gap_plan_mv1 import GAP_PLAN_COLUMNS, REQUIREMENTS_COLUMNS, execute
 

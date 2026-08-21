@@ -27,7 +27,7 @@ import susc_18c_curitiba_geometria_common as s18c  # noqa: E402
 import susc_18e2_execucao_gee_common as s18e2  # noqa: E402
 from susc_io import ensure_dir, read_csv, read_json, rel, sha256_file, write_csv, write_json, write_markdown  # noqa: E402
 
-OUT_18F = ROOT / "outputs_public" / "data" / "susc_18f_ingestao_validacao_footprint_sar_curitiba"
+OUT_18F = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_18f_ingestao_validacao_footprint_sar_curitiba"
 CARDS = OUT_18F / "cartoes_sar"
 REPORTS = ROOT / "outputs_public" / "reports"
 SCHEMAS = ROOT / "schemas" / "suscetibilidade"

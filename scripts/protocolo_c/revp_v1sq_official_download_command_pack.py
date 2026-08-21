@@ -17,7 +17,7 @@ from revp_v1sg_v1sz_official_download_common import (
     retries,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 CONFIGS = ROOT / "configs"
 
 OUT_PACK = _p("REVP_V1SQ_OUT_PACK", DATASETS / "protocol_c_official_download_command_pack_v1sq.csv")

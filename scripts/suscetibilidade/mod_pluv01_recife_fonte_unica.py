@@ -60,7 +60,7 @@ import susc_firth_shim  # noqa: F401,E402
 from ds03_esquema_alvo import VERSAO  # noqa: E402
 from mod_serra01_ingreme_2features import N_BOOT, SEMENTE, ajustar, padronizar  # noqa: E402
 
-REPO = Path(__file__).resolve().parents[2]
+REPO = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 RUNS = REPO / "local_runs"
 ENTRADA = RUNS / "ds-04-reducao" / "recife.csv"
 OUT = RUNS / "mod-pluv-01"

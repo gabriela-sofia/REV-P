@@ -28,7 +28,7 @@ from revp_v1rg_v1rm_review_response_common import (
     write_schema_safe,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 IN_SAMPLE = _p("REVP_V1RI_IN_SAMPLE", DATASETS / "protocol_c_event_patch_review_sample_v1qv.csv")
 IN_VALIDATION_SUMMARY = _p("REVP_V1RI_IN_VALIDATION_SUMMARY", DATASETS / "protocol_c_review_response_validation_summary_v1rh.csv")

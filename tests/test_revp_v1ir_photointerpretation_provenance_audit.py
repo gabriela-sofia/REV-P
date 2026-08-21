@@ -19,7 +19,7 @@ import csv
 from pathlib import Path
 import sys
 
-REPO_ROOT = Path(__file__).resolve().parents[1]
+REPO_ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 SCRIPTS_DIR = REPO_ROOT / "scripts" / "protocolo_c"
 sys.path.insert(0, str(SCRIPTS_DIR))
 

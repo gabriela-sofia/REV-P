@@ -39,7 +39,7 @@ import sys
 from collections import Counter
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 DATA_ACESSO_WEB = "2026-06-18"
 GUARDRAILS = [
     "REV-P permanece review-only; nenhuma fonte externa vira ground truth operacional nesta passada.",

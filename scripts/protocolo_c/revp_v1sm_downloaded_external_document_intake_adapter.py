@@ -14,7 +14,7 @@ from revp_v1sg_v1sz_official_download_common import (
     hash_short, classify_source_family, infer_region_from_text,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 IN_ORCHESTRATOR = _p("REVP_V1SM_IN_ORCHESTRATOR", DATASETS / "protocol_c_official_download_orchestrator_manifest_v1sl.csv")
 IN_INMET_STATIONS = _p("REVP_V1SM_IN_STATIONS", DATASETS / "protocol_c_inmet_station_candidates_v1si.csv")

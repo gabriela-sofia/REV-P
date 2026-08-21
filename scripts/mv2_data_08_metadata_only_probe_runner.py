@@ -14,7 +14,7 @@ import os
 from pathlib import Path
 from typing import Any
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
+PROJECT_ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 OUT_DIR = PROJECT_ROOT / "outputs_public" / "mv2_data_metadata_only_probe"
 TEMPORAL_PATH = PROJECT_ROOT / "outputs_public" / "mv2_data_temporal_window_promotion" / "mv2_data_06_temporal_window_promotion.csv"
 LINEAGE_PATH = PROJECT_ROOT / "outputs_public" / "mv2_data_source_sensor_lineage_promotion" / "mv2_data_07_sensor_lineage_promotion.csv"

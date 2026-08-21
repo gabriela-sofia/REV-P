@@ -2,7 +2,7 @@
 
 Fontes lidas (todas artefatos versionados do projeto):
   (a) PROJETO/local_runs/recife_modelo_v12_extracao_final/dataset_v12_final.csv
-      REV-P/outputs_public/data/susc_20k_siac156_curitiba_flood_candidates/
+      REV-P/outputs_public/data/linha_causal/susc_20k_siac156_curitiba_flood_candidates/
             registries/v20n_dataset_curitiba_features_v2.csv
       REV-P/local_runs/mod-uk-01-firth/resumo_rnl.json      (UK, 7.476 pontos)
       REV-P/local_runs/mod-serra-01/resultado.json          (CEMS serra/planicie)

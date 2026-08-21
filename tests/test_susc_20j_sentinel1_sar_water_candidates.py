@@ -7,7 +7,7 @@ from pathlib import Path
 import numpy as np
 import pytest
 
-SCRIPT_DIR = Path(__file__).resolve().parents[1] / "outputs_public/data/susc_20j_sentinel1_sar_water_candidates/scripts"
+SCRIPT_DIR = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file()) / "outputs_public/data/linha_causal/susc_20j_sentinel1_sar_water_candidates/scripts"
 sys.path.insert(0, str(SCRIPT_DIR))
 import detect_water_candidates_sar as m  # noqa: E402
 

@@ -15,7 +15,7 @@ import pytest
 import rasterio
 from rasterio.transform import from_origin
 
-SCRIPTS_DIR = Path(__file__).resolve().parents[1] / "outputs_public/data/susc_20k_siac156_curitiba_flood_candidates/scripts"
+SCRIPTS_DIR = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file()) / "outputs_public/data/linha_causal/susc_20k_siac156_curitiba_flood_candidates/scripts"
 sys.path.insert(0, str(SCRIPTS_DIR))
 import extract_flood_complaints_siac156 as extract_mod  # noqa: E402
 import geocode_nominatim as geocode_mod  # noqa: E402

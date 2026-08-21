@@ -10,7 +10,7 @@ from pathlib import Path
 import numpy as np
 import pytest
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 V1HC_DIR = ROOT / "local_runs" / "dino_embeddings" / "v1hc"
 FIGURES_DIR = V1HC_DIR / "figures"
 

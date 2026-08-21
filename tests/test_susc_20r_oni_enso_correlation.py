@@ -10,8 +10,8 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-PKG = ROOT / "outputs_public/data/susc_20k_siac156_curitiba_flood_candidates"
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
+PKG = ROOT / "outputs_public/data/linha_causal/susc_20k_siac156_curitiba_flood_candidates"
 sys.path.insert(0, str(PKG / "scripts"))
 import pipeline_v20r_oni_enso_correlation_curitiba as p20r  # noqa: E402
 

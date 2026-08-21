@@ -11,7 +11,7 @@ import shutil
 from collections import Counter
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 CONFIG_NAME = "v2bc_recife_gis_digitization_workbench_config.json"
 POLICY_COLUMNS = "policy_id geometry_source geometry_role allowed_use not_allowed_use can_feed_v2aw can_feed_v2av can_feed_v2au can_support_digitization can_be_ground_truth blocking_reason notes".split()
 INVENTORY_COLUMNS = "risk_area_id source_file feature_index geometry_type crs area_m2 bbox_minx bbox_miny bbox_maxx bbox_maxy attributes_summary geometry_hash allowed_use blocking_reason notes".split()

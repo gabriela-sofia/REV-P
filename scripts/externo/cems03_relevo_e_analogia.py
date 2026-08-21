@@ -63,7 +63,7 @@ os.environ.setdefault("GDAL_DISABLE_READDIR_ON_OPEN", "EMPTY_DIR")
 os.environ.setdefault("VSI_CACHE", "TRUE")
 # NAO definir CPL_VSIL_CURL_USE_HEAD=NO -- quebra o /vsicurl. Ver aq_chirps3_v2.
 
-REPO = Path(__file__).resolve().parents[2]
+REPO = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 RUNS = REPO / "local_runs"
 INV = RUNS / "n1c-cems" / "activations_raw.json"
 DATASET = RUNS / "ds-01-multirregiao" / "dataset_multirregiao_v1.csv"

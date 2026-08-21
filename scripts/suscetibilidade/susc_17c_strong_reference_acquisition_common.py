@@ -25,7 +25,7 @@ from susc_io import ensure_dir, read_csv, rel, write_csv, write_json, write_mark
 DATASETS = ROOT / "datasets"
 OUT_TABLES = ROOT / "outputs_public" / "tables"
 OUT_SUSC = ROOT / "outputs_public" / "suscetibilidade"
-OUT_DATA = ROOT / "outputs_public" / "data" / "susc_17c_strong_reference_acquisition_canary"
+OUT_DATA = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_17c_strong_reference_acquisition_canary"
 OUT_REPORTS = ROOT / "outputs_public" / "reports"
 SCHEMAS = ROOT / "schemas" / "suscetibilidade"
 
@@ -1113,7 +1113,7 @@ def _status_counts() -> dict:
     status = _run_git(["status", "--short"]).splitlines()
     staged = _run_git(["diff", "--cached", "--name-only"]).splitlines()
     own_prefixes = [
-        "outputs_public/data/susc_17c_strong_reference_acquisition_canary/",
+        "outputs_public/data/linhagem_anterior/susc_17c_strong_reference_acquisition_canary/",
         "outputs_public/reports/SUSC_17C_STRONG_REFERENCE_ACQUISITION_CANARY_REPORT.md",
     ]
     scoped = [line for line in status if not any(prefix in line.replace("\\", "/") for prefix in own_prefixes)]

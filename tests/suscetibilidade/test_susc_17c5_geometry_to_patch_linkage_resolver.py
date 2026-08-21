@@ -9,9 +9,9 @@ import subprocess
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 SCRIPTS = ROOT / "scripts" / "suscetibilidade"
-OUT = ROOT / "outputs_public" / "data" / "susc_17c5_geometry_to_patch_linkage_resolver"
+OUT = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_17c5_geometry_to_patch_linkage_resolver"
 REPORTS = ROOT / "outputs_public" / "reports"
 SCHEMAS = ROOT / "schemas" / "suscetibilidade"
 

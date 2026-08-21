@@ -106,17 +106,17 @@
     ]
   },
   "required_outputs": [
-    "outputs_public/data/susc_17i_ampliacao_regional_amostra_observacional/preflight.json",
-    "outputs_public/data/susc_17i_ampliacao_regional_amostra_observacional/inventario_regional_eventos_observacionais.csv",
-    "outputs_public/data/susc_17i_ampliacao_regional_amostra_observacional/matriz_amostra_observacional_expandida.csv",
-    "outputs_public/data/susc_17i_ampliacao_regional_amostra_observacional/matriz_disponibilidade_features_regionais.csv",
-    "outputs_public/data/susc_17i_ampliacao_regional_amostra_observacional/fila_regional_desbloqueio_observacional.csv",
-    "outputs_public/data/susc_17i_ampliacao_regional_amostra_observacional/gate_ampliacao_regional_observacional.csv",
-    "outputs_public/data/susc_17i_ampliacao_regional_amostra_observacional/gate_prontidao_17b_pos_17i.csv",
-    "outputs_public/data/susc_17i_ampliacao_regional_amostra_observacional/resumo_por_regiao.csv",
-    "outputs_public/data/susc_17i_ampliacao_regional_amostra_observacional/resumo_por_status.csv",
-    "outputs_public/data/susc_17i_ampliacao_regional_amostra_observacional/resumo_por_fenomeno.csv",
-    "outputs_public/data/susc_17i_ampliacao_regional_amostra_observacional/summary.json",
+    "outputs_public/data/linhagem_anterior/susc_17i_ampliacao_regional_amostra_observacional/preflight.json",
+    "outputs_public/data/linhagem_anterior/susc_17i_ampliacao_regional_amostra_observacional/inventario_regional_eventos_observacionais.csv",
+    "outputs_public/data/linhagem_anterior/susc_17i_ampliacao_regional_amostra_observacional/matriz_amostra_observacional_expandida.csv",
+    "outputs_public/data/linhagem_anterior/susc_17i_ampliacao_regional_amostra_observacional/matriz_disponibilidade_features_regionais.csv",
+    "outputs_public/data/linhagem_anterior/susc_17i_ampliacao_regional_amostra_observacional/fila_regional_desbloqueio_observacional.csv",
+    "outputs_public/data/linhagem_anterior/susc_17i_ampliacao_regional_amostra_observacional/gate_ampliacao_regional_observacional.csv",
+    "outputs_public/data/linhagem_anterior/susc_17i_ampliacao_regional_amostra_observacional/gate_prontidao_17b_pos_17i.csv",
+    "outputs_public/data/linhagem_anterior/susc_17i_ampliacao_regional_amostra_observacional/resumo_por_regiao.csv",
+    "outputs_public/data/linhagem_anterior/susc_17i_ampliacao_regional_amostra_observacional/resumo_por_status.csv",
+    "outputs_public/data/linhagem_anterior/susc_17i_ampliacao_regional_amostra_observacional/resumo_por_fenomeno.csv",
+    "outputs_public/data/linhagem_anterior/susc_17i_ampliacao_regional_amostra_observacional/summary.json",
     "outputs_public/reports/SUSC_17I_AMPLIACAO_REGIONAL_AMOSTRA_OBSERVACIONAL.md",
     "schemas/suscetibilidade/susc_17i_ampliacao_regional_schema_v1.json"
   ]

@@ -49,7 +49,7 @@ from susc_io import (  # noqa: E402
 # ---------------------------------------------------------------------------
 # Caminhos
 # ---------------------------------------------------------------------------
-OUT = ROOT / "outputs_public" / "data" / "susc_19d_diagnostico_divergencias_score_v6_review_only"
+OUT = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_19d_diagnostico_divergencias_score_v6_review_only"
 CARDS = OUT / "cartoes_diagnostico"
 REPORTS = ROOT / "outputs_public" / "reports"
 SCHEMAS_DIR = ROOT / "schemas" / "suscetibilidade"
@@ -63,9 +63,9 @@ SCORE_V7 = ROOT / "datasets" / "suscetibilidade" / "susc_score_v7_candidate_by_p
 FORMULA_CONTRACT = ROOT / "outputs_public" / "suscetibilidade" / "susc_17c35_score_v6_formula_contract.json"
 
 # Insumos herdados 19A/19B/19C
-DATA_19A = ROOT / "outputs_public" / "data" / "susc_19a_matriz_multimodal_escalavel_por_patch"
-DATA_19B = ROOT / "outputs_public" / "data" / "susc_19b_auditoria_lacunas_territoriais"
-DATA_19C = ROOT / "outputs_public" / "data" / "susc_19c_avaliacao_observacional_review_only"
+DATA_19A = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_19a_matriz_multimodal_escalavel_por_patch"
+DATA_19B = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_19b_auditoria_lacunas_territoriais"
+DATA_19C = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_19c_avaliacao_observacional_review_only"
 REG_OBS_19C = DATA_19C / "registro_patches_observacionais_19c.csv"
 MISSINGNESS_19B = DATA_19B / "auditoria_missingness_territorial_19b.csv"
 

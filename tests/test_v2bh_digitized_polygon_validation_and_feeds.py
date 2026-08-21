@@ -7,7 +7,7 @@ from pathlib import Path
 
 from shapely.geometry import Polygon, shape
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 sys.path.insert(0, str(ROOT / "scripts"))
 import v2bh_charter758_recife_product_georeferencing_digitization as engine  # noqa: E402
 

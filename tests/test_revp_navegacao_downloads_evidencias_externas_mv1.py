@@ -7,7 +7,7 @@ import importlib.util
 import json
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 SCRIPT = ROOT / "scripts" / "curadoria_externa" / "revp_navegacao_downloads_evidencias_externas_mv1.py"
 
 spec = importlib.util.spec_from_file_location("revp_navegacao_downloads_mv1", SCRIPT)

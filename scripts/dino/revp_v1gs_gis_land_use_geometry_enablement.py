@@ -14,7 +14,7 @@ from pathlib import Path
 from typing import Any
 
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 DEFAULT_OUTPUT_DIR = ROOT / "local_runs" / "dino_embeddings" / "v1gs"
 DEFAULT_V1GQ_SCRIPT = ROOT / "scripts" / "dino" / "revp_v1gq_gis_multicriteria_vulnerability_baseline.py"
 DEFAULT_V1GQ_RERUN_OUTPUT_DIR = ROOT / "local_runs" / "dino_embeddings" / "v1gq_rerun_v1gs"

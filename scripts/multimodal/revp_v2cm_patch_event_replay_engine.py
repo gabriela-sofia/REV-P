@@ -123,7 +123,7 @@ def run(repo_root: Path, force: bool = False) -> int:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--repo-root", default=str(Path(__file__).resolve().parents[2]))
+    parser.add_argument("--repo-root", default=str(next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())))
     parser.add_argument("--force", action="store_true")
     args = parser.parse_args(argv)
     return run(Path(args.repo_root), args.force)

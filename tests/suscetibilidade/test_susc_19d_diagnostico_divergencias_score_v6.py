@@ -13,7 +13,7 @@ from pathlib import Path
 
 import pytest
 
-SCRIPTS = Path(__file__).resolve().parents[2] / "scripts" / "suscetibilidade"
+SCRIPTS = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file()) / "scripts" / "suscetibilidade"
 sys.path.insert(0, str(SCRIPTS))
 
 import susc_19d_diagnostico_score_v6_common as s19d  # noqa: E402

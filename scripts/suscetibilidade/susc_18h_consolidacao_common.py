@@ -33,9 +33,9 @@ from susc_io import (  # noqa: E402
 # ---------------------------------------------------------------------------
 # Caminhos
 # ---------------------------------------------------------------------------
-OUT = ROOT / "outputs_public" / "data" / "susc_18h_consolidacao_mestre_cadeia_observacional"
+OUT = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_18h_consolidacao_mestre_cadeia_observacional"
 REPORTS = ROOT / "outputs_public" / "reports"
-DATA_ROOT = ROOT / "outputs_public" / "data"
+DATA_ROOT = ROOT / "outputs_public" / "data" / "linhagem_anterior"
 SCRIPTS_DIR = ROOT / "scripts" / "suscetibilidade"
 TESTS_DIR = ROOT / "tests" / "suscetibilidade"
 SCHEMAS_DIR = ROOT / "schemas" / "suscetibilidade"
@@ -1045,7 +1045,7 @@ def plano_commit_text(summary: dict, manifesto: list[dict]) -> str:
         "git add scripts/suscetibilidade/susc_18h_consolidacao_common.py",
         "git add schemas/suscetibilidade/susc_18h_consolidacao_mestre_schema_v1.json",
         "git add tests/suscetibilidade/test_susc_18h_consolidacao_mestre_cadeia_observacional.py",
-        "git add outputs_public/data/susc_18h_consolidacao_mestre_cadeia_observacional/",
+        "git add outputs_public/data/linhagem_anterior/susc_18h_consolidacao_mestre_cadeia_observacional/",
         "git add outputs_public/reports/SUSC_18H_CONSOLIDACAO_MESTRE_CADEIA_OBSERVACIONAL.md",
         "git add .gitignore",
     ]

@@ -60,7 +60,7 @@ from ds03_esquema_alvo import (  # noqa: E402
     VARIAVEIS_TERRENO, VERSAO,
 )
 
-REPO = Path(__file__).resolve().parents[2]
+REPO = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 RUNS = REPO / "local_runs"
 RED = RUNS / "ds-04-reducao"
 OUT = RUNS / "ds-05-tabela-unica"

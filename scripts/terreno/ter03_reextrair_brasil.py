@@ -49,7 +49,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-REPO = Path(__file__).resolve().parents[2]
+REPO = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 PROJETO = REPO.parent / "PROJETO"
 RUNS = REPO / "local_runs"
 DERIV = RUNS / "ter-01-cadeia-harmonizada"
@@ -68,7 +68,7 @@ FONTES = {
     },
     "curitiba": {
         "tabela": (REPO / "outputs_public" / "data"
-                   / "susc_20k_siac156_curitiba_flood_candidates" / "registries"
+                   / "linha_causal" / "susc_20k_siac156_curitiba_flood_candidates" / "registries"
                    / "v20n_dataset_curitiba_features_v2.csv"),
         "deriv": DERIV / "curitiba_harmonizado",
         "grupo": "observation_unit_key",

@@ -14,7 +14,7 @@ from revp_v1tx_v1ub_tcc_dossier_common import (
     scan_guardrails, latex_table_row,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 OUT_FRG = _p("REVP_V1TZ_OUT_FRG", DATASETS / "protocol_c_tcc_latex_table_fragments_v1tz.csv")
 OUT_SUM = _p("REVP_V1TZ_OUT_SUM", DATASETS / "protocol_c_tcc_latex_table_fragments_summary_v1tz.csv")

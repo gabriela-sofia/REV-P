@@ -48,7 +48,7 @@ from rasterio.warp import reproject
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from geo_store import ler_bbox  # noqa: E402
 
-REPO = Path(__file__).resolve().parents[2]
+REPO = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 RUNS = REPO / "local_runs"
 STORE = RUNS / "geostore"
 FEAT = RUNS / "aq-features"

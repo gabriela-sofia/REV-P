@@ -43,7 +43,7 @@ from revp_v2fg_dinov2_governance_engine import (  # noqa: E402
     cosine_similarity, parse_embedding_row, region_of_patch, validate_embedding,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 DATASETS = ROOT / "datasets"
 SCHEMAS = DATASETS / "schemas"
 PUBLIC_TABLES = ROOT / "outputs_public" / "tables"

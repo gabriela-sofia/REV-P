@@ -13,7 +13,7 @@ from pathlib import Path
 from typing import Any
 
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 PHASE = "v1fw"
 PHASE_NAME = "DINO_EMBEDDING_EXTRACTION_SCAFFOLD"
 

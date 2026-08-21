@@ -17,7 +17,7 @@ import json
 import sys
 from pathlib import Path
 
-SCRIPTS_DIR = Path(__file__).resolve().parents[1] / "scripts" / "multimodal"
+SCRIPTS_DIR = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file()) / "scripts" / "multimodal"
 sys.path.insert(0, str(SCRIPTS_DIR))
 
 from revp_v2ca_curitiba_event_registry_binding_and_acquisition import (  # noqa: E402

@@ -24,7 +24,7 @@ import json
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 SCHEMA = ROOT / "schemas" / "suscetibilidade" / "susc_06b_baseline_diagnostics_schema_v1.json"
 OUT = ROOT / "outputs_public" / "suscetibilidade"

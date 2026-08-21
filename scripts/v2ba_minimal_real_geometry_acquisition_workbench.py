@@ -16,7 +16,7 @@ except ImportError:
     from v2aw_geometry_source_intake_engine import normalise_crs, parse_geometry
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 MODES = ("source_scan", "ingest", "validate", "replay_ready_check")
 CONFIG_NAME = "v2ba_minimal_real_geometry_acquisition_workbench_config.json"
 

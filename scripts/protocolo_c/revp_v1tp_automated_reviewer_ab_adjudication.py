@@ -20,7 +20,7 @@ from revp_v1tn_v1tw_automated_review_common import (
     next_required_action, classify_case_readiness, build_reviewer_rubric,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 OUT_DEC  = _p("REVP_V1TP_OUT_DEC",  DATASETS / "protocol_c_automated_reviewer_ab_decisions_v1tp.csv")
 OUT_RUB  = _p("REVP_V1TP_OUT_RUB",  DATASETS / "protocol_c_automated_reviewer_ab_rubric_v1tp.csv")

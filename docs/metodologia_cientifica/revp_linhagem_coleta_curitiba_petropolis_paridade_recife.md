@@ -62,7 +62,7 @@ Esta sessão descobriu e validou, com resultado real, um protocolo de 2 vias que
 3. Calcular NDWI `(B3-B8)/(B3+B8)`, MNDWI `(B3-B11)/(B3+B11)` e AWEI_nsh
    `4*(B3-B11) - (0,25*B8 + 2,75*B12)` (Feyisa et al. 2014), e exigir **concordância de 2 dos
    3** cruzando o limiar de mudança pré→pós. Implementado e testado em
-   `outputs_public/data/susc_20h_sentinel2_water_candidates/scripts/detect_water_candidates.py`.
+   `outputs_public/data/linha_causal/susc_20h_sentinel2_water_candidates/scripts/detect_water_candidates.py`.
 4. **Critério físico obrigatório**: só aceitar pixel como candidato se a reflectância
    **absoluta** (não só o índice relativo) for baixa em B08 E B11 no dia do evento (ex.
    `<0,15`) e não era assim antes. Índice relativo sozinho pega nuvem (nuvem sobe em todas as
@@ -75,7 +75,7 @@ Esta sessão descobriu e validou, com resultado real, um protocolo de 2 vias que
 
 Passo novo, criado em SUSC-20H depois do caso Valparaíso. **Todo candidato bruto, venha da Via A
 ou da Via B, passa primeiro por leitura de HAND, TWI e declividade** nos rasters já existentes
-de `outputs_public/data/susc_20g_hand_twi_dinfinity_generico/` (script
+de `outputs_public/data/linha_causal/susc_20g_hand_twi_dinfinity_generico/` (script
 `scripts/read_hand_twi_slope_at_point.py`, rasters em `local_runs/susc_20g_hand_twi_dinfinity_generico/<região>/`).
 Só é adjudicado formalmente o candidato que **não** diverge nos três critérios ao mesmo tempo:
 
@@ -136,7 +136,7 @@ Status anterior (resolvido nesta rodada): o cálculo real de HAND/TWI D-infinity
 de Recife só existia documentado em prosa (`improvement2_hand_twi_dinf_report.md`) — o script
 em si nunca tinha sido salvo, só um amostrador de pontos que lê rasters já prontos.
 
-**Reconstruído e validado**: `outputs_public/data/susc_20g_hand_twi_dinfinity_generico/scripts/`
+**Reconstruído e validado**: `outputs_public/data/linha_causal/susc_20g_hand_twi_dinfinity_generico/scripts/`
 (`compute_hand_twi_dinfinity.py`, `prepare_region_dtm.py`, `compare_rasters.py`) — MDT de
 entrada e diretório de saída como parâmetros, não hardcoded pra região nenhuma. WhiteboxTools
 `fill_depressions_wang_and_liu` → `d_inf_flow_accumulation` → `slope` → `wetness_index` →
@@ -169,7 +169,7 @@ git-ignored, não comitados por regra):
 ### 5.1 MDT verdadeiro de Petrópolis — resolvido (SUSC-20G/2)
 
 A pendência acima foi fechada. Relatório completo:
-`outputs_public/data/susc_20g_hand_twi_dinfinity_generico/reports/susc_20g2_petropolis_mdt_terreno_nu_report.md`.
+`outputs_public/data/linha_causal/susc_20g_hand_twi_dinfinity_generico/reports/susc_20g2_petropolis_mdt_terreno_nu_report.md`.
 
 - **Local, antes de baixar nada**: as 3 cópias do ZIP do SGB/CPRM são o mesmo arquivo (sha256
   idêntico). Achado novo dentro dele: `Hipsometria/hip_pt_utm23/` é grade de **10 m** — mas é a

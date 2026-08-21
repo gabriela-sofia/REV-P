@@ -10,7 +10,7 @@ import math
 import os
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 STAGE = "v2bh_charter758_recife_product_georeferencing_digitization"
 CONFIG_NAME = f"{STAGE}_config.json"
 MODES = ("inspect_product", "detect_cartographic_cues", "prepare_georeferencing",

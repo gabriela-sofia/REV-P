@@ -27,11 +27,11 @@ ROOT = HERE.parents[1]
 import susc_18c_curitiba_geometria_common as s18c  # noqa: E402
 from susc_io import ensure_dir, read_csv, read_json, rel, write_csv, write_json, write_markdown  # noqa: E402
 
-OUT_18A = ROOT / "outputs_public" / "data" / "susc_18a_execucao_referencia_observacional_regional"
-OUT_18B = ROOT / "outputs_public" / "data" / "susc_18b_execucao_geometrias_regionais_separacao_fenomeno"
-OUT_18C = ROOT / "outputs_public" / "data" / "susc_18c_aquisicao_geometria_oficial_curitiba"
-OUT_18D = ROOT / "outputs_public" / "data" / "susc_18d_protocolo_externo_curitiba"
-OUT_DATA = ROOT / "outputs_public" / "data" / "susc_18e_footprint_tecnico_sar_curitiba"
+OUT_18A = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_18a_execucao_referencia_observacional_regional"
+OUT_18B = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_18b_execucao_geometrias_regionais_separacao_fenomeno"
+OUT_18C = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_18c_aquisicao_geometria_oficial_curitiba"
+OUT_18D = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_18d_protocolo_externo_curitiba"
+OUT_DATA = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_18e_footprint_tecnico_sar_curitiba"
 GEE_DIR = OUT_DATA / "pacote_gee"
 CARDS_DIR = OUT_DATA / "cartoes_sar"
 REPORTS = ROOT / "outputs_public" / "reports"

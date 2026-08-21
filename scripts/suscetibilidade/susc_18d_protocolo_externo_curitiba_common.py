@@ -21,8 +21,8 @@ ROOT = HERE.parents[1]
 import susc_18c_curitiba_geometria_common as s18c  # noqa: E402
 from susc_io import ensure_dir, read_csv, read_json, rel, write_csv, write_json, write_markdown  # noqa: E402
 
-OUT_18C = ROOT / "outputs_public" / "data" / "susc_18c_aquisicao_geometria_oficial_curitiba"
-OUT_DATA = ROOT / "outputs_public" / "data" / "susc_18d_protocolo_externo_curitiba"
+OUT_18C = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_18c_aquisicao_geometria_oficial_curitiba"
+OUT_DATA = ROOT / "outputs_public" / "data" / "linhagem_anterior" / "susc_18d_protocolo_externo_curitiba"
 INPUT_DIR = ROOT / "local_runs" / "suscetibilidade" / "18d_resposta_oficial_curitiba"
 DAT_SUSC = ROOT / "datasets" / "suscetibilidade"
 SCORE_V6 = DAT_SUSC / "susc_score_v6_candidate_by_patch_v1.csv"

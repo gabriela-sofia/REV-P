@@ -12,7 +12,7 @@ from pathlib import Path
 
 from rasterio.warp import transform_geom
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 CONFIG_NAME = "v2bd_sentinel_patch_footprint_recovery_config.json"
 REFERENCE_COLUMNS = "reference_id patch_id file_path file_type line_number field_name field_value reference_role contains_spatial_hint contains_asset_hint contains_crs_hint contains_window_hint contains_transform_hint notes".split()
 LINEAGE_COLUMNS = "lineage_id patch_id region city package_id event_id candidate_asset_id asset_file asset_type asset_sensor asset_date asset_band_or_product lineage_source_file lineage_confidence has_direct_link has_indirect_link blocking_reason notes".split()

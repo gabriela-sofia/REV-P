@@ -18,9 +18,9 @@ from pathlib import Path
 
 import pytest
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 DINO_SCRIPTS = ROOT / "scripts" / "dino"
-API_SCRIPTS = ROOT / "outputs_public" / "data" / "susc_20e_api_contrato_inferencia_recife" / "scripts"
+API_SCRIPTS = ROOT / "outputs_public" / "data" / "linha_causal" / "susc_20e_api_contrato_inferencia_recife" / "scripts"
 for _p in (str(DINO_SCRIPTS), str(API_SCRIPTS)):
     if _p not in sys.path:
         sys.path.insert(0, _p)

@@ -14,7 +14,7 @@ from revp_v1sg_v1sz_official_download_common import (
     forbidden_guardrail_scan,
 )
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(_p for _p in (Path(__file__).resolve(), *Path(__file__).resolve().parents) if (_p / ".git").is_dir() and (_p / "environment.yml").is_file())
 
 IN_ENDPOINTS = _p("REVP_V1SO_IN_ENDPOINTS", DATASETS / "protocol_c_official_source_endpoint_summary_v1sg.csv")
 IN_ORCH_SUMMARY = _p("REVP_V1SO_IN_ORCH", DATASETS / "protocol_c_official_download_orchestrator_summary_v1sl.csv")

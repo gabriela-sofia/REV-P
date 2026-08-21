@@ -1,0 +1,54 @@
+{
+  "branch": "marco/reavaliacao-pos-mapbiomas-sensibilidade-territorial",
+  "head": "72dec09",
+  "staged_count": 0,
+  "status_short_count": 197,
+  "entradas_lidas": {
+    "datasets/suscetibilidade/susc_features_by_patch_v1.csv": true,
+    "datasets/suscetibilidade/susc_score_v6_candidate_by_patch_v1.csv": true,
+    "outputs_public/suscetibilidade/susc_17c35_score_v6_formula_contract.json": true,
+    "outputs_public/data/linhagem_anterior/susc_19c_avaliacao_observacional_review_only/registro_patches_observacionais_19c.csv": true,
+    "outputs_public/data/linhagem_anterior/susc_19b_auditoria_lacunas_territoriais/auditoria_missingness_territorial_19b.csv": true
+  },
+  "score_v6_baseline_path": "datasets/suscetibilidade/susc_score_v6_candidate_by_patch_v1.csv",
+  "score_v6_changed": false,
+  "score_v7_created": false,
+  "observados_herdados_19c": [
+    "recife_00019",
+    "recife_00229",
+    "recife_00276",
+    "recife_00299",
+    "recife_00322",
+    "curitiba_01050",
+    "curitiba_01101"
+  ],
+  "observed_recife": [
+    "recife_00019",
+    "recife_00229",
+    "recife_00276",
+    "recife_00299",
+    "recife_00322"
+  ],
+  "observed_curitiba": [
+    "curitiba_01050",
+    "curitiba_01101"
+  ],
+  "background_n": 293,
+  "lacunas_herdadas_19b": {
+    "cobertura_territorial": 0.3333,
+    "features_ausentes": [
+      "MapBiomas_class_majority",
+      "MapBiomas_class_distribution",
+      "exposed_soil_prop",
+      "water_prop",
+      "impervious_proxy"
+    ]
+  },
+  "lacunas_herdadas_19c": {
+    "observed_in_top_30_global": 0,
+    "sample_power": "baixa",
+    "divergencia_forte": "curitiba_01101"
+  },
+  "outputs_ignorados_pelo_git": [],
+  "summary_versionavel": true
+}
