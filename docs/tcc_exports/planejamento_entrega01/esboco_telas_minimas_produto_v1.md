@@ -14,6 +14,14 @@ Três estados possíveis, cada um já implementado no contrato descrito em §II
 ("Serviço e camada de explicação") — este arquivo só torna visual o que o
 texto já declara:
 
+> **Nota de 20/08/2026 — os tres estados deixaram de ser esboco.** O contrato
+> roda em `scripts/servico/svc02_contrato_inferencia.py`, e os tres estados aqui
+> desenhados sao respostas reais gravadas em
+> `local_runs/svc-02-contrato/respostas_demonstracao.json`. Duas diferencas em
+> relacao ao esboco: os portoes sao cinco e nomeados na resposta, e Recife
+> responde `ok` com maturidade `mvp_local` carregando o criterio de leitura que
+> seu modelo nao atinge. Ver `ext_servico_contrato_inferencia_v1.md`.
+
 ## Estado 1 — `ok`
 
 ```

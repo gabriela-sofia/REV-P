@@ -3,6 +3,15 @@
 **Status**: EXPLORATORIO_DIAGNOSTICO_NAO_CANONICO — documento de estudo/resposta, não altera nenhum script, dado ou gate existente.
 **Data**: 2026-07-23
 
+> **Nota de 20/08/2026 — as duas pendencias da secao 5 estao resolvidas.** A
+> semantica do `confidence_interval` foi decidida: bootstrap do preditor linear
+> reamostrando grupos, com as replicas gravadas no artefato servido e a
+> justificativa escrita em `ext_servico_contrato_inferencia_v1.md` §2. O
+> orcamento de EPV do teste A/B com DINO deixou de ser pre-requisito: o DINO foi
+> descartado como feature na Fase 1 e vive como evidencia visual. O contrato que
+> este documento revalidava existe agora como funcao pura e testada em
+> `scripts/servico/`.
+
 ## 1. O que o documento propõe (síntese neutra)
 
 Quem escreveu propõe separar o projeto em camadas — dados físico-hidrológicos (causal) →
