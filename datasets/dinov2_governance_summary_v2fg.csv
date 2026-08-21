@@ -1,0 +1,10 @@
+stat_key,stat_value
+sources,8
+candidates,134
+valid,97
+blocked,37
+regions,3
+region_medoids,3
+ood_threshold_default,0.305554
+territorial_concordance_rate,0.670103
+blocked__DUPLICATA_IDENTICA_DE_PATCH_JA_ACEITO,37

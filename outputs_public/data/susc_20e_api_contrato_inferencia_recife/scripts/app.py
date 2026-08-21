@@ -7,6 +7,13 @@ com as duas decisões já tomadas na Fase 2
 SUSC-20D, já validado); DINO nunca soma ao score, só aparece em
 `evidence.dino_*` quando o índice de patches estiver configurado.
 
+Atualização (v2fg): o DINOv2 passa a ser também uma CAMADA DE GOVERNANÇA
+ATIVA, exposta em `dino_governance` -- validação de domínio (gate OOD),
+medoid territorial mais próximo e evidência de auditoria. Continua fora do
+modelo físico: `score.value`, `score.confidence_interval` e `features_used`
+são idênticos com ou sem a camada. Ver
+`docs/metodologia_cientifica/revp_v2fg_dinov2_camada_governanca_api.md`.
+
 Roda só localmente (uvicorn). Não é deploy, não é infraestrutura
 compartilhada -- é o MVP local descrito na Fase 3, exposto por HTTP em vez de
 chamado direto em Python, para provar o contrato de verdade antes de
@@ -25,7 +32,10 @@ from shapely.geometry import shape
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "susc_20d_motor_inferencia_local_mvp_recife" / "scripts"))
 
-from contract_schema import Evidence, FeatureUsed, ScoreBlock, ScoreRequest, ScoreResponse  # noqa: E402
+import dino_governance_bridge  # noqa: E402
+from contract_schema import (  # noqa: E402
+    DinoGovernance, Evidence, FeatureUsed, ScoreBlock, ScoreRequest, ScoreResponse,
+)
 from engine_bridge import RecifeEngine  # noqa: E402
 from gates import evaluate_gates  # noqa: E402
 from region_registry import REGIONS  # noqa: E402
@@ -45,6 +55,21 @@ def _startup() -> None:
     global _engine, _dino_bboxes, _dino_emb
     _engine = RecifeEngine()
     _dino_bboxes, _dino_emb = load_dino_evidence_index()
+    # Camada de governança visual (v2fg): carregada uma vez, nunca bloqueante.
+    dino_governance_bridge.get_engine(refresh=True)
+
+
+def _governance(req: ScoreRequest, region: str | None,
+                lat: float | None = None, lon: float | None = None) -> DinoGovernance:
+    """Executa a governança DINOv2 e devolve o bloco do contrato.
+
+    Roda em TODOS os caminhos de resposta (inclusive `insufficient_data` e
+    `region_not_supported`) para que nenhum gate fique invisível. O resultado
+    é puramente informativo: não altera `status`, `score` nem `features_used`.
+    """
+    return DinoGovernance(**dino_governance_bridge.evaluate(
+        requested_region=region, visual_patch_id=req.visual_patch_id,
+        lat=lat, lon=lon, dino_bboxes=_dino_bboxes))
 
 
 def _now_iso() -> str:
@@ -96,6 +121,7 @@ def score(req: ScoreRequest) -> ScoreResponse:
             score=ScoreBlock(value=None, confidence_interval=None,
                               model_version=(REGIONS[region].model_version if region else None)),
             features_used=[], evidence=Evidence(observational_points_used=0, sources=[]),
+            dino_governance=_governance(req, region),
             limitations=base_limitations, data_version=DATA_VERSION, generated_at=_now_iso(),
         )
 
@@ -149,11 +175,29 @@ def score(req: ScoreRequest) -> ScoreResponse:
         dino_patch_id=dino_patch_id,
     )
 
+    # Governança visual: roda DEPOIS do score já calculado, sobre o mesmo alvo
+    # geográfico, e não realimenta nada do bloco físico acima.
+    governance = _governance(req, region, lat=target_lat, lon=target_lon)
+    if governance.status == "out_of_domain":
+        base_limitations = [
+            "dinov2_governanca: evidencia visual fora do dominio observado do corpus "
+            f"(cos={governance.cosine_similarity}, limiar={governance.ood_threshold}) -- "
+            "score fisico inalterado, sinalizado para revisao."
+        ] + base_limitations
+    if governance.territorial_match == "mismatch":
+        base_limitations = [
+            "dinov2_governanca: regiao solicitada "
+            f"({governance.requested_region}) diverge da regiao visualmente mais proxima "
+            f"({governance.suggested_region}) -- observacao estrutural para revisao, "
+            "nao invalida o score."
+        ] + base_limitations
+
     return ScoreResponse(
         request_id=req.request_id, status="ok", region_maturity=region_maturity,
         score=ScoreBlock(value=out["score"], confidence_interval=out["confidence_interval"],
                           model_version=REGIONS["recife"].model_version),
         features_used=features_used, evidence=evidence,
+        dino_governance=governance,
         limitations=base_limitations, data_version=DATA_VERSION, generated_at=_now_iso(),
     )
 

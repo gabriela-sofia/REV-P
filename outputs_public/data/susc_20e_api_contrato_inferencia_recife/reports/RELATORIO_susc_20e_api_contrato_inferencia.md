@@ -62,6 +62,33 @@ documentada; chuva: match exato contra 30 pontos reais).
 SUSC-20F: qualquer coordenada dentro da cobertura real do DTM (~21km x 28km, cobre
 essencialmente toda a região de Recife) agora recebe score real sob demanda.
 
+## Atualização -- camada de governança DINOv2 (v2fg)
+
+O contrato ganhou **um** campo novo, `dino_governance`, e nada mais mudou: `score`,
+`features_used` e `evidence` continuam idênticos (teste
+`test_api_score_fisico_nao_muda_com_a_governanca` compara a mesma geometria com e sem
+evidência visual e exige igualdade). O DINOv2 continua fora do modelo de Firth -- agora
+como camada de validação de domínio, similaridade territorial e auditoria.
+
+Estados possíveis de `dino_governance.status`: `in_domain`, `out_of_domain`,
+`no_visual_evidence`, `invalid_embedding`, `governance_unavailable`. Nenhum deles bloqueia
+a inferência; quando o gate OOD dispara ou a região visual diverge da solicitada, a resposta
+ganha uma linha explícita em `limitations` e o score continua sendo entregue.
+
+Validação real rodada nesta sessão (TestClient sobre `app.py`):
+
+| Caso | status | score | `dino_governance` |
+|---|---|---|---|
+| Polígono em Curitiba + `visual_patch_id=CUR_00402` | `insufficient_data` | null | `in_domain`, cos=1.0, `suggested_region=CURITIBA`, `territorial_match=match` |
+| Ponto real positivo de Recife, sem evidência visual | `ok` | 0,7737 CI [0,6692; 0,8718] | `no_visual_evidence` |
+| Mesmo ponto de Recife + `visual_patch_id=CUR_00402` | `ok` | 0,7737 CI [0,6692; 0,8718] (idêntico) | `in_domain`, `territorial_match=mismatch` (RECIFE ≠ CURITIBA) |
+
+O campo opcional `visual_patch_id` no request é apenas uma dica de qual patch do corpus
+DINOv2 representa a requisição; requisições antigas continuam válidas sem ele.
+
+Detalhes de método, corpus, medoids, limiar OOD e limitações:
+`docs/metodologia_cientifica/revp_v2fg_dinov2_camada_governanca_api.md`.
+
 ## Como rodar
 
 ```
