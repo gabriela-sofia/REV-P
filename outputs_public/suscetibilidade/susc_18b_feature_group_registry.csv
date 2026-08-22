@@ -1,9 +1,0 @@
-feature_group_id,feature_group_name,feature_names,allowed_for_unsupervised,allowed_for_supervised_if_labels_exist,allowed_as_target,reason,review_only
-S18B_FG_0001,physical_topography,elevation_mean;slope_mean;HAND_value;TWI_value;TPI_250m_value,true,true,false,features fisicas/topograficas (nativas oficiais / DEM publico canarios),true
-S18B_FG_0002,hydrology_proximity,distance_to_official_drainage_m;distance_to_official_water_m,true,true,false,proximidade a drenagem/agua oficial,true
-S18B_FG_0003,urban_landcover,urban_prop;vegetation_prop;water_prop,true,true,false,cobertura urbana/vegetacao/agua,true
-S18B_FG_0004,spectral_sentinel2,NDVI_mean;NDWI_mean;MNDWI_mean;NDBI_mean;B03_mean;B04_mean;B08_mean;B11_mean,true,true,false,indices + bandas Sentinel-2,true
-S18B_FG_0005,rainfall_chirps,chirps_3d_sum;chirps_7d_sum;chirps_30d_sum,true,true,false,gatilho pluviometrico CHIRPS region-level,true
-S18B_FG_0006,quality_lineage,feature_family_available_count;feature_completeness_ratio;proxy_feature_count;official_feature_count;missing_feature_family_count,true,false,false,"metadados de completude/proxy; auxiliar, nao usar como fenomeno em supervisao",true
-S18B_FG_0007,reference_only,score_v6_reference_value;transparent_index_reference_value;has_official_hydrological_occurrence_anchor,false,false,false,referencias externas review-only; NUNCA feature de modelo nem target,true
-S18B_FG_0008,forbidden_targets,score_v6_candidate;transparent_index_value;occurrence_anchor;canary_membership;control_membership,false,false,false,PROIBIDOS como target: score v6/indice/ocorrencia/canario/controle,true

@@ -1,2 +1,0 @@
-protocol_version: v1un
-required_limitations: [no_coordinates, locality_only, no_overlay, no_ground_reference, no_training_label]

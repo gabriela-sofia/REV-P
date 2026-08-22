@@ -1,4 +1,0 @@
-stage: v2au
-component: license_resolution_matrix
-classes: [EXPLICIT_OPEN, EXPLICIT_RESTRICTED, UNKNOWN, NOT_APPLICABLE]
-unknown_blocks: true

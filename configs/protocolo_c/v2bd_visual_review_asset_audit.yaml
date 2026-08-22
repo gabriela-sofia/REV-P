@@ -1,4 +1,0 @@
-stage: v2bd
-step: audit_visual_review_assets
-visual_review_is_ground_truth: false
-seed_specific_link_required: true

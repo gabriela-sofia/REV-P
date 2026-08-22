@@ -1,6 +1,0 @@
-quality_tier,description,geometry_requirement,temporal_requirement,patch_link_requirement,eligible_for_evaluation,eligible_for_strong_evaluation,eligible_for_calibration,record_count,review_only
-TIER_A_STRONG_GEOMETRY_DATED,"Strong class with fine geometry, explicit event date and patch link",fine_geometry,explicit_date,patch_linked,true,true,true,0,true
-TIER_B_MODERATE_GEOMETRY_PATCH_LINKED,"Strong class with footprint geometry and a resolved patch link, no explicit date",footprint_geometry,not_available,patch_linked,true,true,true,65,true
-TIER_C_COARSE_GEOMETRY_UNLINKED,Strong class with footprint geometry but no resolved patch link yet,footprint_geometry,not_available,not_linked,true,false,false,4,true
-TIER_D_CONTEXT_NO_PATCH_VALIDATION,Context/administrative class that never validates patch-level automatically,coarse_or_textual,any,any,false,false,false,0,true
-TIER_E_INSUFFICIENT,Geometry parse failed or rejected; never enters evaluation or calibration,not_available,not_available,not_linked,false,false,false,6,true

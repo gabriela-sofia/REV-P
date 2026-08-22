@@ -1,4 +1,0 @@
-protocol_version: v1ur
-can_create_ground_reference: false
-can_create_training_label: false
-overlay_allowed: false

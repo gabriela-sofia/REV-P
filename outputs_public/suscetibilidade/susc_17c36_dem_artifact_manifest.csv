@@ -1,2 +1,0 @@
-dem_artifact_manifest_id,source_name,source_authority,artifact_local_path,artifact_type,sha256,size_bytes,crs,resolution_m,bbox,stored_in_outputs_public,raw_heavy,usable_for_hydrologic_grid,review_only
-S17C36_DEM_0001,copernicus_dem_glo30,copernicus_esa_official,local_runs/suscetibilidade/17c36_hydrologic/dem_aoi_window.npy,npy_local_runs,795bea62a649667f518ccd8041d277145e98a7a4d80b0a286e6c361c90265cc1,939008,EPSG:4326,30.62,"-34.97175,-8.11856,-34.88110,-8.01855",false,true,true,true

@@ -1,2 +1,0 @@
-flow_diagnostic_id,domain_id,grid_width,grid_height,cell_count,valid_cells,max_flow_accumulation,flow_acc_p50,flow_acc_p95,flow_acc_p99,edge_effect_risk,sink_fill_status,processing_time_s,memory_estimate_mb,may_still_truncate,review_only
-S17C38_FDIAG_0001,S17C38_DOMAIN_RECIFE_BASIN_V1,346,365,126290,126290,171.0,1.0,13.0,32.0,low_interior_high_at_domain_boundary,priority_flood_applied,3.73,6.1,only_basins_entering_from_outside_domain_edge,true

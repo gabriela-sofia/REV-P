@@ -1,8 +1,0 @@
-required_field,present_in_baseline,present_in_susc03_matrix,status,gap,note
-patch_id,true,true,available,none,Chave primaria do patch.
-regiao,true,true,available,none,Estratificacao regional.
-geometry_or_bbox,false,true,available_in_matrix,not_in_baseline_dataset_join_from_susc03,bbox xmin/ymin/xmax/ymax existe na matriz SUSC-03; juntar por patch_id no overlay.
-score_or_proxy,true,true,available,none,Proxy interno; NUNCA ground truth de evento.
-main_physical_features,true,true,available,none,23 features ready_for_methodology.
-future_documentary_evidence,false,false,missing,external_acquisition_required,Evidencia documental/evento NAO existe ainda; e o objetivo do SUSC-07.
-date_or_period,true,true,weak,reference_date_constant_2022-12-31,Data de referencia constante; periodo de evento real ainda ausente.

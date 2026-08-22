@@ -1,7 +1,0 @@
-temporal_gap_audit_id,artifact_name,contains_event_id,contains_event_period_start,contains_event_period_end,contains_temporal_precision,requires_temporal_backfill,blocking_risk,review_only
-S17C19_GAP_0001,susc_17c6_candidate_patch_grid.csv,true,false,false,false,true,"medio: event_id presente mas periodo ausente, exige join com fonte upstream",true
-S17C19_GAP_0002,susc_17c6_candidate_patch_links.csv,true,false,false,false,true,"medio: event_id presente mas periodo ausente, exige join com fonte upstream",true
-S17C19_GAP_0003,susc_17c7_candidate_patch_feature_inventory.csv,true,false,false,false,true,"medio: event_id presente mas periodo ausente, exige join com fonte upstream",true
-S17C19_GAP_0004,susc_17c9_embedding_tile_requirement_plan.csv,false,false,false,false,true,"alto: sem event_id nem periodo, downstream nao consegue reconstruir janela sensorial",true
-S17C19_GAP_0005,susc_17c17_candidate_patch_aoi_plan.csv,false,false,false,false,true,"alto: sem event_id nem periodo, downstream nao consegue reconstruir janela sensorial",true
-S17C19_GAP_0006,susc_17c18_sensor_aoi_execution_plan.csv,true,true,true,false,false,baixo: event_id e periodo propagados,true

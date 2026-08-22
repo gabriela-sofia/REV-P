@@ -1,8 +1,0 @@
-metric,value,review_only
-total_links,4414,true
-moderate_links,4,true
-observational_evaluation_links,4,true
-links_by_spatial_relation,"{""insufficient_for_patch_link"": 213, ""moderate_street_segment_near_patch"": 4, ""same_neighborhood_context"": 4194, ""same_region_period_context"": 3}",true
-links_by_confidence,"{""moderate"": 4, ""very_weak"": 4410}",true
-allowed_for_training_true,0,true
-can_be_ground_truth_true,0,true

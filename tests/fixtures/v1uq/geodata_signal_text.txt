@@ -1,1 +1,0 @@
-O anexo digital do SIG menciona shapefile, geodados, camada, vetor, mapa e base cartografica.

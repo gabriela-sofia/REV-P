@@ -1,3 +1,0 @@
-blocked_heavy_raster_id,formal_request_id,provider_name,dataset_or_source,requested_or_possible_action,why_blocked,can_be_done_in_future_with_policy,requires_storage_policy,requires_runtime_credentials,requires_patch_aoi,review_only
-S17C16_HEAVY_0001,P1_CHIRPS_PRE_EVENT_WINDOW_REC_2022_05_24_30,CHIRPS/GEE - fonte a confirmar,CHIRPS,download_raster_or_export_precipitation_grid,raster bruto pesado e feature CHIRPS estao fora do escopo do 17C16,true,true,false,true,true
-S17C16_HEAVY_0002,P1_SENTINEL2_TILE_CANDIDATE_GRID,STAC/CDSE/GEE - fonte a confirmar,Sentinel-2/CDSE,download_product_create_tile_or_embedding,"produto Sentinel-2, tile e embedding DINO/SatMAE estao fora do escopo do 17C16",true,true,true,true,true

@@ -1,9 +1,0 @@
-blocker_id,blocker_type,description,blocks_official_use,blocks_17b,review_only
-S18A_BLOCKER_0001,not_ground_truth,feature store review-only; NAO e ground truth,true,true,true
-S18A_BLOCKER_0002,not_training_ready,sem labels; NAO habilita treino supervisionado,true,true,true
-S18A_BLOCKER_0003,not_score_v7,NAO e score v7; flow_acc oficial irrecuperavel (17C39),true,true,true
-S18A_BLOCKER_0004,flow_acc_not_equivalent,flow_acc recomputado NAO equivalente ao oficial; nos oficiais e valor nativo,true,true,true
-S18A_BLOCKER_0005,documentary_anchor_not_label,"ocorrencia oficial e ancora observacional, nao label positivo",true,true,true
-S18A_BLOCKER_0006,control_not_negative_truth,controle de mismatch NAO e negativo verdadeiro; ausencia nao e ausencia real,true,true,true
-S18A_BLOCKER_0007,17b_blocked,17B exige G4_full + ground reference oficial aceito; nao atingido,true,true,true
-S18A_BLOCKER_0008,feature_missingness_explicit,missingness registrada por familia; sem imputacao escondida,true,true,true

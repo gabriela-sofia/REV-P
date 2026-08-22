@@ -1,5 +1,0 @@
-# SUSC-14A flood footprint raw data is heavy public vector data and is NOT versioned.
-# Reproduce it from manifests/suscetibilidade/susc_14a_flood_footprint_manifest_v1.csv.
-*
-!.gitignore
-!README.md

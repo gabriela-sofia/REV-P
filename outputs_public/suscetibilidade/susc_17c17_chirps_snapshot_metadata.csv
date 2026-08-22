@@ -1,3 +1,0 @@
-chirps_snapshot_id,network_snapshot_id,dataset_identified,dataset_reference,metadata_available,temporal_coverage,spatial_resolution,data_type,supports_future_rainfall_trigger,raster_downloaded,feature_extracted,blocking_reason,review_only
-S17C17_CHIRPS_0001,S17C17_SNAP_0001,true,https://www.chc.ucsb.edu/data/chirps,true,daily_dekad_monthly_referenced_on_source_page,0.05_degree_referenced_on_source_page,precipitation_estimate,true,false,false,raster bruto e feature CHIRPS permanecem fora do escopo do 17C17; apenas metadado de catalogo foi capturado,true
-S17C17_CHIRPS_0002,S17C17_SNAP_0002,false,not_registered_in_susc_17c_chain,false,not_available,not_available,not_available,true,false,false,fonte GEE CHIRPS nao registrada nesta cadeia SUSC-17C,true

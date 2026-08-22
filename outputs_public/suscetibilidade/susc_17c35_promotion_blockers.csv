@@ -1,8 +1,0 @@
-blocker_id,blocker_type,description,blocks_full_score_replay,blocks_17b,blocks_score_v7,review_only
-S17C35_BLOCKER_0001,HAND_full_pipeline_missing,HAND full exige pipeline DEM+drenagem hidrologico; so HAND proxy local,true,true,true,true
-S17C35_BLOCKER_0002,topography_features_missing_twi_tpi_flowacc,twi/tpi/flow_acc nao extraidos -> topography_hydrology nao reproduzivel,true,true,true,true
-S17C35_BLOCKER_0003,full_score_replay_blocked,score v6 final bloqueado: componente topografia (peso 0.40) nao reproduzivel,true,true,true,true
-S17C35_BLOCKER_0004,proxy_feature_not_official_equivalent,HAND proxy e OSM proxy nao sao equivalentes oficiais (flaggeados),true,true,true,true
-S17C35_BLOCKER_0005,canary_only_normalization_forbidden,normalizacao canary-only proibida; usada normalizacao populacional oficial,true,true,true,true
-S17C35_BLOCKER_0006,score_v7_blocked,score v7 bloqueado,true,true,true,true
-S17C35_BLOCKER_0007,17b_blocked,17B bloqueado ate G4_full + ground reference aceito,true,true,true,true

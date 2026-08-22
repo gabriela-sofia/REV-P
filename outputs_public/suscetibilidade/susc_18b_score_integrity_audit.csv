@@ -1,3 +1,0 @@
-score_integrity_audit_id,protected_artifact,artifact_type,changed_in_working_tree,used_as,created_new,review_only
-S18B_INTEG_0001,datasets/suscetibilidade/susc_score_v6_candidate_by_patch_v1.csv,score_v6_candidate,false,reference_only_never_target,false,true
-S18B_INTEG_0002,datasets/suscetibilidade/susc_score_v7_candidate_by_patch_v1.csv,score_v7_candidate,false,none,false,true

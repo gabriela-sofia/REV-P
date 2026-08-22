@@ -1,4 +1,0 @@
-regiao,n_patches,pearson_v6_v5,spearman_v6_v5,mean_abs_diff,mean_score_v6,mean_score_v5,metric_basis
-curitiba,100,0.915703,0.946211,0.072526,0.515034,0.57604,review_only_not_validation
-petropolis,100,0.931462,0.890381,0.154988,0.479969,0.593071,review_only_not_validation
-recife,100,0.849544,0.857846,0.065972,0.572674,0.585224,review_only_not_validation

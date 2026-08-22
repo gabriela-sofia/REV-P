@@ -1,4 +1,0 @@
-stage: v2bc
-geometry_missing_penalty: -15
-uncertainty_penalty: -10
-proxy_penalty: -20

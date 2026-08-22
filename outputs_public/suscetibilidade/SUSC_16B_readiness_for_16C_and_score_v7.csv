@@ -1,4 +1,0 @@
-criterion,value,reason,review_only
-ready_for_16C_proxy_calibration_review,true,">=50 eligible links, >=10 eligible footprints, feature contrast and quality audit executed",true
-ready_for_score_v7_candidate,false,default false in SUSC-16B; score/features conflicts or review-only status block automatic v7,true
-score_v7_created,false,"SUSC-16B is evaluation, not calibration",true

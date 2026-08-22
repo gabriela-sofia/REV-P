@@ -1,2 +1,0 @@
-model_metric_id,method,latent_dim,sample_count,reconstruction_mae,reconstruction_rmse,explained_variance_proxy,uses_labels,review_only
-S18C_DAEM_0001,linear_denoising_svd_numpy,5,316,0.190937,0.327919,0.859263,false,true

@@ -1,2 +1,0 @@
-diagnostic_id,official_patch_count,official_min,official_p05,official_median,official_mean,official_p95,official_max,correlation_with_hand,correlation_with_twi,correlation_with_tpi,correlation_with_elevation,correlation_with_slope,correlation_with_distance_to_water,distribution_interpretation,review_only
-S17C39_DIAG_0001,100,0.7253,0.7825,1.6238,1.977,4.2295,4.942,-0.5978,0.806,-0.513,-0.4,-0.5261,-0.0409,consistente_com_area_contribuinte_via_twi (flow_acc e twi compartilham a),true

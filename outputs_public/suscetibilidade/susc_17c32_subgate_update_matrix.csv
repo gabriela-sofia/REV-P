@@ -1,2 +1,0 @@
-subgate_update_id,candidate_patch_id,event_id,G4c_before,G4c_after,G4d_before,G4d_after,G4_full_before,G4_full_after,G5d_before,G5d_after,G5_full_before,G5_full_after,transition_reason,review_only
-S17C32_SGU_0001,S17C6_CANARY_REC_00001,REC_2022_05_24_30,true,true,false,false,false,false,true,true,true,true,G4d permanece bloqueado: enderecos oficiais com numero anonimizado (street-level) e patch candidato (Recife Antigo ~-8.00) distante 9-13 km dos bairros com alagamento documentado; geocoder OSM nao-oficial,true

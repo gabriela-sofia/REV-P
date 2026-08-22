@@ -1,3 +1,0 @@
-download_id,issue_id,official_domain,url_hash,file_type,acquisition_status,byte_count,sha256,raw_storage_policy,private_path_removed
-GAZETTEDL_V1NA_0001,GAZETTEISSUE_V1NA_4604,www.petropolis.rj.gov.br,a83a3fef216db465,UNKNOWN,DOWNLOAD_FAIL,0,,RAW_ONLY_LOCAL_RUNS,true
-GAZETTEDL_V1NA_0002,GAZETTEISSUE_V1NA_4596,www.petropolis.rj.gov.br,28a9108f20521923,PDF,DOWNLOAD_OK,509812,8606ba0c9d513999d3ac76c5,RAW_ONLY_LOCAL_RUNS,true

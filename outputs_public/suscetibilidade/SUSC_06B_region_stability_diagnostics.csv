@@ -1,5 +1,0 @@
-region,n,r2_cv_mean,mae,rmse,status,metric_basis
-curitiba,100,0.9794,0.011,0.0134,FITTED_PROXY_BASELINE_REVIEW_ONLY,proxy_not_event
-petropolis,100,0.9713,0.0123,0.0166,FITTED_PROXY_BASELINE_REVIEW_ONLY,proxy_not_event
-recife,100,0.9732,0.0116,0.0153,FITTED_PROXY_BASELINE_REVIEW_ONLY,proxy_not_event
-ALL_SPREAD,,0.0081,,,regional_stability_status=stable,proxy_not_event

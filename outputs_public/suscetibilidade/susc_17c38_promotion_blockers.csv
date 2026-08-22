@@ -1,8 +1,0 @@
-blocker_id,blocker_type,description,blocks_final_score_replay,blocks_17b,blocks_score_v7,review_only
-S17C38_BLOCKER_0001,flow_acc_still_incompatible,flow_acc incompativel mesmo com dominio basin-aware,true,true,true,true
-S17C38_BLOCKER_0002,flow_acc_basin_domain_still_truncated,bacias entrando pela borda do dominio ainda podem truncar; ou metodo oficial difere,true,true,true,true
-S17C38_BLOCKER_0003,method_equivalence_not_accepted,equivalencia full nao aceita,true,true,true,true
-S17C38_BLOCKER_0004,method_calibration_required,"calibraveis: twi_mean,tpi_250m_mean",true,true,true,true
-S17C38_BLOCKER_0005,score_v6_final_replay_blocked,score final v6 bloqueado ate full equivalence,true,true,true,true
-S17C38_BLOCKER_0006,score_v7_blocked,score v7 bloqueado,true,true,true,true
-S17C38_BLOCKER_0007,17b_blocked,17B bloqueado ate G4_full + ground reference aceito,true,true,true,true

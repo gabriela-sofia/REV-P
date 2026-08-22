@@ -1,8 +1,0 @@
-metric,value,review_only
-occurrences_input_count,4412,true
-reference_features_total,12158,true
-exact_matches_count,0,true
-fuzzy_matches_count,1,true
-ambiguous_matches_count,19,true
-blocked_no_reference_count,66,true
-by_georeferencing_status,"{""blocked_ambiguous_address"": 19, ""blocked_no_official_reference"": 66, ""official_address_point_match"": 1, ""official_neighborhood_only"": 4326}",true

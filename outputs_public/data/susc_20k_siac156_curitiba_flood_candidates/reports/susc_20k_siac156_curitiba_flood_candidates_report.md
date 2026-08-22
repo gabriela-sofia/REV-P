@@ -116,8 +116,8 @@ alagamento superficial por bueiro/sarjeta entupidos (pode ocorrer em cota mais a
 drenagem mapeada, mesmo que a rua realmente tenha alagado). O filtro físico aqui separa os dois,
 não descarta os 17 como "erro de dado" — eles continuam reais enquanto reclamação, só não têm a
 assinatura de inundação fluvial que o modelo físico do projeto está construído pra capturar
-(seção do CLAUDE.md: "o modelo deve refletir relações físicas conhecidas", não aceitar qualquer
-reclamação como prova de inundação-alvo).
+(critério metodológico do projeto: o modelo deve refletir relações físicas conhecidas, e não
+aceitar qualquer reclamação como prova de inundação-alvo).
 
 ## 6. O que isso muda pro N de Curitiba
 

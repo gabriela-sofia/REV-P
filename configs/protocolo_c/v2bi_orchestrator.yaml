@@ -1,4 +1,0 @@
-stage: v2bi
-strictly_additive: true
-offline_deterministic: true
-network_env: V2BI_NETWORK

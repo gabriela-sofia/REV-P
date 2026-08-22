@@ -1,7 +1,0 @@
-metric,value,review_only
-precision_links_total,4412,true
-precision_patch_links,0,true
-unique_patches_observational,0,true
-links_by_spatial_relation,"{""insufficient_for_patch_link"": 4412}",true
-allowed_for_training_true,0,true
-can_be_ground_truth_true,0,true

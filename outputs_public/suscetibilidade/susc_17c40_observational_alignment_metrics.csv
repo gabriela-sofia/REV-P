@@ -1,7 +1,0 @@
-alignment_metric_id,metric_name,metric_value,eligible_rows_count,interpretation,limitations,review_only
-S17C40_ALIGN_0001,canary_median_index,0.705,11,mediana do indice V1 nos canarios,review-only; nao supervisionado,true
-S17C40_ALIGN_0002,control_median_index,0.25587,5,mediana do indice V1 nos controles,controle nao e negativo verdadeiro,true
-S17C40_ALIGN_0003,median_delta,0.44913,16,delta de medianas canario-controle (V1),review-only,true
-S17C40_ALIGN_0004,canary_above_control_median_ratio,1.0,11,fracao de canarios acima da mediana dos controles,review-only,true
-S17C40_ALIGN_0005,variant_agreement_count,3,3,quantas variantes concordam que canario > controle,conclusao mais forte se 3/3,true
-S17C40_ALIGN_0006,component_availability_mean,0.875,16,disponibilidade media de componentes,controles tem menos componentes (topografia/drenagem indisponiveis),true

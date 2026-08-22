@@ -1,5 +1,0 @@
-source_resolution_id,strategy_id,strategy_name,attempted,network_enabled,runtime_enabled,source_resolved,selected_for_computation,resolution_status,blocking_reason,review_only
-S17C25_SRCRES_0001,S17C25_STRAT_0001,chc_ucsb_daily_file_windowed_read,true,true,false,true,true,selected_real_chirps_daily_source,Rota A resolvida: leitura windowed do raster diario CHC/UCSB por AOI,true
-S17C25_SRCRES_0002,S17C25_STRAT_0002,climateserv_or_aoi_timeseries_api,false,false,false,false,false,failed_safe,nao necessaria: Rota A ja resolveu CHIRPS real,true
-S17C25_SRCRES_0003,S17C25_STRAT_0003,gee_chirps_reduce_region,false,false,false,false,false,failed_safe,nao necessaria: Rota A ja resolveu CHIRPS real,true
-S17C25_SRCRES_0004,S17C25_STRAT_0004,local_runs_daily_raster_window_extract,false,false,false,false,false,failed_safe,nao necessaria: Rota A ja resolveu CHIRPS real,true

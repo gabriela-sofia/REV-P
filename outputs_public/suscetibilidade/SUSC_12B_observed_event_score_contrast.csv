@@ -1,4 +1,0 @@
-group,n,mean_score_v6,median_score_v6,min_score_v6,max_score_v6,can_be_ground_truth,allowed_for_training,review_only
-event_patch,9,0.593971,0.670423,0.13627,0.799382,false,false,true
-no_documented_event_control,9,0.721077,0.689425,0.572437,0.909184,false,false,true
-event_minus_control,9,-0.127106,,,,false,false,true

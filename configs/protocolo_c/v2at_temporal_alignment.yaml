@@ -1,4 +1,0 @@
-stage: v2at
-component: temporal_alignment
-temporal_mismatch_blocks: true
-timestamp_shortcuts_forbidden: true

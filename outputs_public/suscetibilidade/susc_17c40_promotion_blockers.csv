@@ -1,9 +1,0 @@
-blocker_id,blocker_type,description,blocks_official_use,blocks_17b,review_only
-S17C40_BLOCKER_0001,not_score_v6,indice transparente NAO e score v6,true,true,true
-S17C40_BLOCKER_0002,not_score_v7,indice transparente NAO e score v7,true,true,true
-S17C40_BLOCKER_0003,flow_acc_replacement_contract_required,flow_acc oficial irrecuperavel; contrato de substituicao review-only,true,true,true
-S17C40_BLOCKER_0004,transparent_index_review_only,indice e review-only; nao benchmark final,true,true,true
-S17C40_BLOCKER_0005,ground_truth_blocked,sem ground truth,true,true,true
-S17C40_BLOCKER_0006,training_blocked,sem treino,true,true,true
-S17C40_BLOCKER_0007,17b_blocked,17B bloqueado ate G4_full + ground reference aceito,true,true,true
-S17C40_BLOCKER_0008,score_v6_replay_abandoned_for_canaries,replay v6 literal abandonado para canarios (flow_acc irrecuperavel),true,true,true

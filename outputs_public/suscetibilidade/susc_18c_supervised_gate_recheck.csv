@@ -1,2 +1,0 @@
-supervised_gate_recheck_id,previous_status_18b,label_contract_training_allowed,supervised_training_allowed_after_18c,supervised_training_executed,supervised_training_ready_pending_approval,blocking_reason,safe_next_step,review_only
-S18C_SGR_0001,blocked_no_ground_reference_labels,false,false,false,false,"0 ground references aceitos (candidatos=11, eventos=0<5, regioes=0<3)",QA + aquisicao de mais eventos/regioes de ground reference oficial,true

@@ -1,4 +1,0 @@
-regiao,n_patches,score_mean,score_min,score_max,class_low,class_medium,class_high,metric_basis
-curitiba,100,0.515034,0.241676,0.883007,32,42,26,deterministic_candidate_review_only
-petropolis,100,0.479969,0.0,0.977677,46,17,37,deterministic_candidate_review_only
-recife,100,0.572674,0.212301,1.0,22,40,38,deterministic_candidate_review_only

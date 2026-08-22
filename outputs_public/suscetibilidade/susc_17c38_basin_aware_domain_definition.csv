@@ -1,2 +1,0 @@
-domain_id,original_bbox,expanded_bbox,buffer_km,resolution_deg,resolution_m_approx,dem_tiles_needed,buffer_reason,single_domain_flow_accumulation,flow_acc_per_patch_window,may_still_truncate_large_basins,review_only
-S17C38_DOMAIN_RECIFE_BASIN_V1,"-35.14209,-8.22710,-34.94446,-8.01367","-35.18746,-8.27233,-34.89909,-7.96843",5.0,0.0008333,92.8,S08_00_W035_00;S08_00_W036_00;S09_00_W035_00;S09_00_W036_00,capturar bacia contribuinte a montante e evitar truncamento do flow accumulation por patch,true,false,true_edge_of_domain_only,true

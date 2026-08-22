@@ -1,15 +1,15 @@
 %% =====================================================================
 %% Documento de Planejamento do Projeto — Entrega 01 (29/08/2026)
 %% Experiência Criativa: Projeto Transformador II — BCC / PUCPR
-%% Autora: Gabriela Sofia
+%% Autoras: Gabriela Sofia, Bárbara Borges, Nicole Guarnieri, Rafaella Guerra
 %% Formatação: IEEEtran conference (padrão do template dos professores)
 %% Compilar: pdflatex main && pdflatex main
-%% Versão: v10 (2026-08-20) — E4 passa a concluída (holdout temporal sobre a
-%% tabela única, MOD-PROSP-02); v9 (2026-08-18) — delta real do planejamento02.pdf contra o v8
-%% real (não a v4 que ele já tinha gerado): gloss em PT-BR de "payload",
-%% reprodutibilidade amarrada ao ambiente do projeto, propósito explícito no
-%% cronograma, parágrafo de integração reordenado. Ver NOTA_versoes.md §12
-%% para o detalhe nota a nota.
+%% Versão: reconciliação de 2026-08-21 entre o rascunho do Overleaf
+%% (planejamento02_2.pdf: autoria em equipe, abertura reescrita, três notas
+%% suas entre colchetes) e o main.tex real do REV-P (v12, 2026-08-20,
+%% commit 5d6008b), que tinha E3, E4, E5 e E6 fechados que o rascunho do
+%% Overleaf ainda descrevia como plano. Ver a mensagem de entrega para a
+%% lista completa do que mudou e o que segue sem resposta sua.
 %% =====================================================================
 \documentclass[conference]{IEEEtran}
 \IEEEoverridecommandlockouts
@@ -43,71 +43,80 @@
 físico-hidrológica: da evidência heterogênea ao serviço de inferência
 auditável}
 
-\author{\IEEEauthorblockN{Gabriela Sofia}
+\author{\IEEEauthorblockN{Gabriela Sofia, Bárbara Borges, Nicole Guarnieri, Rafaella Guerra}
 \IEEEauthorblockA{Experiência Criativa: Projeto Transformador II\\
 Bacharelado em Ciência da Computação --- PUCPR\\
-Turma \textcolor{red}{7A} --- Equipe \textcolor{red}{N}\\
-\{\texttt{gabriela.milani}\}@pucpr.edu.br}}
+Turma 8A --- Equipe 8\\
+\{\texttt{gabriela.milani, barbara.borges, nicole.guarnieri, rafaella.guerra}\}@pucpr.edu.br}}
 
 \maketitle
 
 % =====================================================================
 \section{Descrição do Projeto}
 
-Enchentes, alagamentos e deslizamentos são o desastre de maior recorrência no
-Brasil, e atingem primeiro quem não escolheu onde morar. Relevo que não escoa
-a água e relevo que cede sob ela são duas faces da mesma vulnerabilidade
-física; da hostilidade desse relevo nasce a ocupação urbana precária, e dela,
-a vulnerabilidade social. Entre 2000 e 2018 a população exposta a inundação
+Enchentes são o desastre de maior recorrência no Brasil e afetam, de
+maneira desproporcional, as populações segregadas espacialmente que não
+dispõem de margem de escolha habitacional. Relevo que não escoa a água e
+relevo que cede sob ela são duas faces da mesma vulnerabilidade física; da
+inviabilidade desse relevo nasce a ocupação urbana precária, e dela, a
+vulnerabilidade social. Entre 2000 e 2018 a população exposta a inundação
 cresceu dez vezes acima do previsto, concentrada nessas áreas~\cite{tellman2021};
 no Brasil, mais de 8 milhões de pessoas moram em área de risco de inundação,
-enxurrada ou movimento de massa~\cite{ibge2018risco}. A atenção que um território recebe acompanha
-essa desigualdade, e o dado também: o registro oficial nasce de quem consegue
-reportar e ser atendido --- a ausência não é de quem liga, é de poder público que
-alcance as áreas periféricas. O registro descreve o atendimento prestado, não a
-extensão real da água. Ausência de registro não é ausência de
-evento~\cite{li2022pul,agostini2024}, e é daí que a pesquisa parte, atrás de
-positivos e negativos válidos.
+enxurrada ou movimento de massa~\cite{ibge2018risco}. A atenção que um
+território recebe acompanha essa desigualdade, e o dado também: o registro
+oficial nasce de quem consegue reportar e ser atendido --- a ausência não
+reflete a falta de chamados, mas a lacuna de alcance do poder público e da
+ação governamental no território. A documentação disponível reflete a
+assistência prestada, não a extensão real da água. Ausência de registro não
+é ausência de evento~\cite{li2022pul,agostini2024}.
 
 Neste projeto, suscetibilidade é definida como a predisposição do terreno a
 acumular água sob um dado forçamento de chuva: há enchente quando chega a um
-ponto mais água do que ele consegue escoar ou armazenar. Isso se decompõe em três grandezas. \emph{Quanto chega} é a chuva. \emph{Para onde
-converge} é o índice topográfico de umidade~\cite{beven1979}, que mede quanta
-encosta drena para ali. \emph{Quanto precisa subir para ser alcançado} é
+ponto mais água do que ele consegue escoar ou armazenar. Isso se decompõe em
+três grandezas. \emph{Quanto chega} é a chuva. \emph{Para onde converge} é
+o índice topográfico de umidade~\cite{beven1979}, que mede quanta encosta
+drena para ali. \emph{Quanto precisa subir para ser alcançado} é
 o HAND (\emph{Height Above the Nearest Drainage})~\cite{renno2008}: a altura do ponto acima do curso d'água que o drena, isto
 é, a lâmina que o rio precisa ganhar para alcançá-lo. Ambas exigem saber por
 onde a água desce, e o D-infinity~\cite{tarboton1997} reparte o escoamento de
 cada célula entre direções contínuas, não em uma das oito vizinhas.
 
-O plano se apoia no artigo anterior, que já fixou as decisões que mudaram a
-rota. Variável derivada do rótulo produz circularidade: acurácia balanceada
-cai de 0,8855 para 0,4834 sem elas. Composição estática de imagem orbital não
-carrega assinatura de evento pontual em três tentativas independentes; vira
-evidência de contexto e fila de revisão. A unidade de informação é o evento,
-não o ponto, dissolvendo significância de pseudorreplicação. A definição da
-classe negativa decide o que o modelo aprende: o ajuste de maior desempenho
-próprio é o que menos transfere. A derivação é única entre regiões, na mesma
-resolução para toda a base, mesmo onde custa detalhe que o modelo não usa; e a
-relação terreno--inundação não caduca em 25 anos de janela expansiva, com
-transferência entre classes de relevo.
+O plano se apoia na entrega metodológica desenvolvida previamente,
+organizando os principais conceitos, ferramentas e rotas viáveis. Variável
+derivada do rótulo produz circularidade: acurácia balanceada cai de 0,8855
+para 0,4834 sem elas. Composição estática de imagem orbital não carrega
+assinatura de evento pontual em três tentativas independentes; vira
+evidência de contexto e fila de revisão. O peso do DINOv2 no projeto fica
+assim delimitado: um codificador visual congelado --- nunca ajustado aos
+dados do projeto ---, usado só para medir similaridade entre áreas e
+alimentar essa fila de revisão; as três tentativas de promovê-lo a preditor
+fecharam sem sinal, e essa rota está encerrada como candidata a variável. A
+unidade de informação é o evento, não o ponto, dissolvendo significância de
+pseudorreplicação. A definição da classe negativa decide o que o modelo
+aprende: o ajuste de maior desempenho próprio é o que menos transfere. A
+derivação é única entre regiões, na mesma resolução para toda a base, mesmo
+onde custa detalhe que o modelo não usa; e a relação terreno--inundação não
+caduca em 25 anos de janela expansiva, com transferência entre classes de
+relevo.
 
-A base física já está consolidada: as fontes, antes em cadeias de derivação,
-resoluções e mecanismos distintos --- onde um mesmo nome de coluna podia
-designar variáveis não comensuráveis, sem erro visível, só mapa plausível ---
-foram reduzidas a uma base de conhecimento geoespacial única, com
-proveniência, resolução, mecanismo e unidade de validação declarados por
-registro (E2, Seção~\ref{sec:etapas}). Evoluir, daqui em diante, é ajustar,
-testar e corrigir o modelo sobre o que já existe, rodada a rodada --- não
-reunir mais dado bruto.
+A base física já está consolidada: as fontes, antes em cadeias de
+derivação, resoluções e mecanismos distintos --- onde um mesmo nome de
+coluna podia designar variáveis não comensuráveis, sem erro visível, só
+mapa plausível --- foram reduzidas a uma base de conhecimento geoespacial
+única, com proveniência, resolução, mecanismo e unidade de validação
+declarados por registro (E2, Seção~\ref{sec:etapas}). Evoluir, daqui em
+diante, é ajustar, testar e corrigir o modelo sobre o que já existe, rodada
+a rodada --- não reunir mais dado bruto.
 
-O objetivo é aplicar essa base e a metodologia causal já fixada para decidir,
-por AOI, se o terreno é suscetível a enchente: ajustar o modelo onde existe
-observação declarada e aplicá-lo às regiões brasileiras de mesmas
-características físicas e sem esse registro, entregando o resultado como serviço
-auditável (Fig.~\ref{fig:pipeline}).
+O objetivo é aplicar essa base e a metodologia causal já fixada para
+decidir, por AOI, se o terreno é suscetível a enchente: ajustar o modelo
+onde existe observação declarada e aplicá-lo às regiões brasileiras de
+mesmas características físicas e sem esse registro, entregando o resultado
+como serviço auditável (Fig.~\ref{fig:pipeline}).
 \textbf{Pergunta de pesquisa}: um modelo interpretável de suscetibilidade a
-enchentes, treinado com negativo observado, pode ser aplicado de forma auditável
-a territórios urbanos vulneráveis sem inventário local de eventos?
+enchentes, treinado com negativo observado, pode ser aplicado de forma
+auditável a territórios urbanos vulneráveis sem inventário local de
+eventos?
 
 % ------------------------------ FIGURA 1 ------------------------------
 \begin{figure*}[!t]
@@ -154,7 +163,7 @@ a territórios urbanos vulneráveis sem inventário local de eventos?
 \node[aux] (m4) at (100,-38) {Evidência visual para\\ inspeção humana};
 
 % ---- coluna 4
-\node[prd] (p1) at (144,-4)  {\textbf{Contrato de inferência}\\ \emph{gates}: geometria, CRS, região,\\ modelo, variáveis};
+\node[prd] (p1) at (144,-4)  {\textbf{Contrato de inferência}\\ \emph{gates}: geometria, região,\\ modelo, variáveis, domínio};
 \node[prd] (p2) at (144,-16) {\texttt{ok} $|$ \texttt{insufficient\_data} $|$\\ \texttt{region\_not\_supported}};
 \node[prd] (p3) at (144,-28) {\textbf{Camada de explicação}\\ descreve o \emph{payload}; não calcula,\\ não completa, não decide};
 
@@ -214,9 +223,16 @@ de terreno, reproduzida \emph{bit a bit} contra o raster de referência em Recif
 e em Curitiba --- Petrópolis segue a mesma convenção de derivação, mas sem ponto
 rotulado para comparar; o modelo de Recife, com 278 pontos e fonte de chuva
 única após auditoria de confundimento por proveniência; o conjunto de
-Curitiba, com 1.471 unidades; a tabela única harmonizada das seis fontes, hoje
-com 65.070 pontos elegíveis ao ajuste fluvial, nenhum deles mais em cadeia de
-terreno global; e o motor de inferência exposto por contrato. Externas:
+Curitiba, com 1.471 unidades de validação --- grupos por evento, não pontos
+individuais: é o mesmo princípio de agrupamento que rege toda a validação do
+projeto, declarado adiante nesta seção ---; a tabela única harmonizada das
+seis fontes, hoje com 65.070 pontos elegíveis ao \emph{ajuste fluvial} --- o
+ajuste que estima suscetibilidade a enchente, e não a outro mecanismo, como o
+movimento de massa que também aparece em Petrópolis ---, nenhum deles mais em
+cadeia de terreno global --- ou seja, nenhum depende mais de HAND ou TWI de um
+produto genérico; os quatro já foram rederivados pela mesma cadeia D-infinity
+própria do projeto, o que torna a variável comparável entre fontes; e o motor
+de inferência exposto por contrato. Externas:
 Copernicus EMS, Environment Agency do Reino Unido e, desde que a mesma cadeia
 de derivação de terreno passou a cobri-lo, Sen1Floods11 contribuem ponto ao
 ajuste fluvial; UFO tem a mesma cadeia de terreno, mas segue fora do ajuste
@@ -256,8 +272,12 @@ essência física do fenômeno e a variável mais custosa de medir de forma
 comparável entre fontes --- as datas de evento de Copernicus EMS,
 Sen1Floods11 e UFO estavam presentes em artefato local, não descartadas, só
 em três formatos nunca lidos juntos; recuperadas, a chuva passa de 14\% para
-100\% de cobertura na base harmonizada. Quantas dessas variáveis entram em
-cada ajuste é decisão de E3, não deste plano. A definição de negativo muda o
+99,99\% de cobertura na base harmonizada, de produto único. Mas ela é medida em
+células de $\sim$11\,km enquanto o modelo compara pontos dentro do mesmo
+evento: nas seis fontes a chuva não discrimina nessa escala, e por isso entra
+como forçamento declarado, não como propriedade do lugar que o modelo aprende
+a distinguir. Quantas dessas variáveis entram em cada ajuste é decisão de E3,
+não deste plano. A definição de negativo muda o
 que o modelo aprende: o
 ajuste sobre exclusão tem AUC próprio maior, mas perde 0,159 ao encontrar
 negativo observado, enquanto o inverso não perde nada. E a régua física muda com
@@ -273,7 +293,11 @@ todo escore remonta ao \emph{gate} que o liberou. Quando um \emph{gate} não
 fecha, retorna \texttt{insufficient\_data} em vez de inventar escore; região sem
 modelo responde \texttt{region\_not\_supported}, nunca um escore por analogia. É
 sobre esse \emph{payload} --- a resposta que o contrato já devolveu --- que a
-camada de explicação atua: o padrão de predição seletiva~\cite{mitchell2019}. São
+camada de explicação atua: o padrão de predição seletiva~\cite{mitchell2019}.
+Nessa camada, o DINOv2 entra só como evidência anexada à explicação --- a
+similaridade entre a área consultada e áreas já avaliadas ilustra a resposta
+para quem revisa, mas não é lida pelo contrato: nenhum \emph{gate} a consulta,
+e ela nunca desloca o escore (Fig.~\ref{fig:pipeline}, Limite 1 e Limite 2). São
 cinco \emph{gates} em ordem declarada --- geometria, região, modelo, variáveis e
 domínio ---, e a resposta nomeia o primeiro que não fechou. O de domínio nasceu
 de uma medida: nenhum ponto de Curitiba cai na faixa de elevação que o ajuste
@@ -286,13 +310,12 @@ porque ali não há nenhum ponto rotulado com que verificar depois.
 \texttt{region\_not\_supported} fica para a geometria que não cai em região
 alguma com modelo.
 
-\textbf{Infraestrutura, carga e ajustes de escopo.} O trabalho é individual e não
-requer GPU: o ajuste de Firth leva 0,056\,s e o de um modelo aditivo explicável
-25,3\,s no maior conjunto. O gargalo medido é de carregamento de arquivo e de
+\textbf{Infraestrutura, carga e ajustes de escopo.} O ajuste de Firth leva
+0,056\,s e o de um modelo aditivo explicável 25,3\,s no maior conjunto, sem
+exigir GPU. O gargalo medido é de carregamento de arquivo e de
 versão de biblioteca, não de treino; ambos já resolvidos --- toda fonte de
 imagem reduzida a uma tabela única de pontos (E2) e ambiente Python dedicado
-isolando a incompatibilidade de biblioteca da linha causal. Sem divisão de
-carga entre pessoas, o paralelismo vem da sobreposição de etapas. Duas limitações já forçaram ajuste de escopo: o treino
+isolando a incompatibilidade de biblioteca da linha causal. Duas limitações já forçaram ajuste de escopo: o treino
 sobre \emph{embeddings} foi abandonado após três tentativas, e permanece uma
 fração residual de pontos --- majoritariamente água permanente no Copernicus
 EMS --- cujo HAND ainda vem do produto global por cair fora do raster
@@ -441,8 +464,8 @@ Em E2, fonte não harmonizável no prazo é documentada como descarte e não ent
 o conjunto encolhe, o critério não. Em E4 a regra era publicar o desempenho
 temporal como viesse, mesmo sem superar o acaso; ela foi cumprida onde doeu ---
 o fold mais fraco e o estrato de Curitiba, que não sustenta o teste, estão
-relatados. Em E6, se a explicação divergir do
-\emph{payload}, a camada vira gerador por regras. Nenhuma altera a pergunta de
+relatados. Em E6, a camada de explicação é gerador por regras sobre o \emph{payload}
+já decidido, o que impede divergência por construção. Nenhuma altera a pergunta de
 pesquisa.
 
 % =====================================================================
@@ -457,10 +480,10 @@ real gasto para reduzir seis fontes a uma tabela única ---, e cada intervalo
 carrega o resultado que a etapa correspondente busca (Seção~\ref{sec:etapas}
 declara o \emph{entregável} e a \emph{evidência} de cada uma), não só a data
 da disciplina. O estado da
-arte já está em curso e permanece ativo até a redação. Sendo o trabalho
-individual, as etapas se sobrepõem no tempo em vez de correr em paralelo entre
-pessoas; foram identificadas de antemão sem que a ordem de conclusão seja
-obrigatória --- o que muda de posição é a etapa, nunca o critério de evidência
+arte já está em curso e permanece ativo até a redação. As etapas se sobrepõem
+no tempo em vez de correr estritamente em sequência; foram identificadas de
+antemão sem que a ordem de conclusão seja obrigatória --- o que muda de
+posição é a etapa, nunca o critério de evidência
 que a encerra --- e a distribuição prevê folga porque pesquisa costuma exceder o
 prazo. Os intervalos de 08/09 e 13/10 seguem sem tarefa nova; 24/11 e 01/12 são
 contingência.

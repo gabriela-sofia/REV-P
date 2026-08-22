@@ -1,8 +1,0 @@
-field_name,field_type,description,allowed_values,mandatory,notes
-source_asset_id,string,Identificador único do asset em fonte local/oficial,V1IF_*; V1IH_*; V1II_*,YES,Referência cruzada com consolidação
-event_id,string,Identificador de evento-alvo,PET_2022_02_15; REC_2022_05_24_30; etc,YES,Data ou período de evento
-region,string,Região ou sigla,PET; REC; CTB; etc,YES,Código de região
-source_asset_name,string,Nome do arquivo/recurso em repositório,*.shp; *.geojson; etc,YES,Nome público do asset
-source_asset_type,string,Tipo de dado,VECTOR_SHP; VECTOR_GEOJSON; TABULAR_CSV; etc,YES,Classificação técnica
-ground_truth_status,string,Status como candidato a ground truth,OBSERVED_VECTOR_GROUND_TRUTH_CANDIDATE; BLOCKED_NO_DATE; etc,YES,Resultado da auditoria de gates
-blocking_gate,string,Gate(s) que impedem avanço,gate_01; gate_02; gate_03; etc,NO,Separado por ponto-e-vírgula se múltiplos

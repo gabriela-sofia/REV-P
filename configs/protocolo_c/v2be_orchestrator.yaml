@@ -1,4 +1,0 @@
-stage: v2be
-mode: offline_deterministic
-strictly_additive: true
-expected_pairs: 129

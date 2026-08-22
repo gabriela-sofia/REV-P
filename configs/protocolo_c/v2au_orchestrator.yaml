@@ -1,5 +1,0 @@
-stage: v2au
-component: orchestrator
-offline_deterministic_default: true
-previous_outputs_read_only: true
-git_operations: forbidden

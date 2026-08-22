@@ -1,2 +1,0 @@
-label_contract_execution_id,required_accepted_ground_reference_count,accepted_ground_reference_count,required_event_count,event_count,required_region_count,region_count,temporal_split_possible,negative_sampling_policy_approved,qa_accepted_only,label_contract_training_allowed,blocking_reason,review_only
-S18C_LCE_0001,50,0,5,0,3,0,false,false,true,false,accepted<50;events<5;regions<3;temporal_split_not_possible;negative_policy_not_approved,true

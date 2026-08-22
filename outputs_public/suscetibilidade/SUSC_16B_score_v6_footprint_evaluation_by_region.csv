@@ -1,2 +1,0 @@
-region,event_patch_count,control_patch_count,unique_event_patches,unique_control_patches,mean_score_event,mean_score_control,score_diff_event_minus_control,review_only
-curitiba,65,38,62,38,0.457698,0.608525,-0.150827,true

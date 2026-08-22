@@ -1,5 +1,0 @@
-supervised_harness_id,model_family,implemented,attempted_training,training_allowed,training_executed,blocking_reason,required_label_contract,review_only
-S18B_HARN_0001,logistic_regression,true,false,false,false,"sem labels de ground reference aceitos; harness fail-closed (codigo existe, .fit nao executa)",susc_18b_future_label_contract.json,true
-S18B_HARN_0002,random_forest,true,false,false,false,"sem labels de ground reference aceitos; harness fail-closed (codigo existe, .fit nao executa)",susc_18b_future_label_contract.json,true
-S18B_HARN_0003,gradient_boosting_or_xgboost,true,false,false,false,"sem labels de ground reference aceitos; harness fail-closed (codigo existe, .fit nao executa)",susc_18b_future_label_contract.json,true
-S18B_HARN_0004,linear_svm,true,false,false,false,"sem labels de ground reference aceitos; harness fail-closed (codigo existe, .fit nao executa)",susc_18b_future_label_contract.json,true

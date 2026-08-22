@@ -1,4 +1,0 @@
-stage: v2at
-component: hazard_typing
-ambiguous_hazard_blocks: true
-susceptibility_is_context_only: true

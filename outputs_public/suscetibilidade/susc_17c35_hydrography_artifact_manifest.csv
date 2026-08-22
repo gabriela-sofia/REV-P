@@ -1,2 +1,0 @@
-hydrography_artifact_manifest_id,source,dataset,authority,source_url,light_artifact,sha256,size_bytes,raw_size_bytes,feature_count_total,review_only
-S17C35_HYM_0001,dados_recife_ckan,faixas-marginais-dos-recursos-hidricos,official_municipal,https://dados.recife.pe.gov.br:443/dataset/1bf02d9c-2754-41cc-aede-1ac8e237f166/resource/81310c02-4bb8-4fea-b676-0c42977b4aef/download/faixas-marginais-dos-recursos-hidricos.geojson,faixas_marginais_aoi_light.geojson,98003930a3f168d75b4ed3e4f7750044ccd6454cd954045a9e8bfb046aa0ef47,2939819,3411982,81,true

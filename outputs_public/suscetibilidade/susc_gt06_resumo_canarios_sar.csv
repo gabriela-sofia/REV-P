@@ -1,6 +1,0 @@
-sar_canary_eligibility,count,average_sar_canary_priority_score,selected_for_canary_pack_count,can_prepare_sar_future_count,can_execute_sar_now_count,training_allowed_count,ground_truth_allowed_count,score_v7_candidate_count
-elegivel_canario_sar_prioritario,13,78.15,5,13,0,0,0,0
-elegivel_canario_sar_secundario,2,26.0,0,2,0,0,0,0
-requer_geometria_antes_do_sar,271,31.42,0,271,0,0,0,0
-requer_separacao_fenomenologica,8,27.0,0,0,0,0,0,0
-bloqueado_temporalmente,263,4.2,0,0,0,0,0,0

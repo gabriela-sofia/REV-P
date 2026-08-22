@@ -7,7 +7,7 @@ empty at generation time, so every row in v1qi (asset audit) fails closed with
 local Sentinel filename under the naming convention already used in
 `PROJETO/data/sentinel/` (`patch_<region>_<patch_number>.tif`) and writes a NEW
 linked artifact — it never rewrites v1qh in place (historical outputs are never
-modified; see CLAUDE.md forbidden operations).
+modified).
 
 Boundary: this script only calls `Path.exists()` (a filesystem stat) to report
 `expected_file_found`. It never opens a file, never reads a pixel, and never

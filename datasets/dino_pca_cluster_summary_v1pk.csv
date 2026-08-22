@@ -1,7 +1,0 @@
-stat_key,stat_value
-valid_embeddings,32
-pca_rows_generated,32
-exploratory_clusters_generated,3
-cluster_k,3
-labels_created,0
-pca_cluster_status,PCA_CLUSTER_READY_REVIEW_ONLY

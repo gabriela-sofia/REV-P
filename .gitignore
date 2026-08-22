@@ -186,10 +186,4 @@ local_only/protocolo_c/evidence_staging/**
 local_only/protocolo_c/evidence_reports/**
 # --- END Protocol C Evidence Acquisition ---
 
-# --- Arquivos locais de ferramentas de desenvolvimento (nunca versionar) ---
-CLAUDE.md
-AGENTS.md
-.claude/
-.codex/
-.agents/
-# --- END ferramentas de desenvolvimento ---
+

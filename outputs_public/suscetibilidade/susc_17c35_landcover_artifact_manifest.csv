@@ -1,2 +1,0 @@
-landcover_artifact_manifest_id,source,dataset,authority,source_url,sha256,size_bytes,raw_size_bytes,feature_count_total,legend,review_only
-S17C35_LCM_0001,dados_recife_ckan,cobertura-da-terra,official_municipal,https://dados.recife.pe.gov.br:443/dataset/4eff8deb-49df-47b5-9b6b-096071f309d3/resource/74e613ac-0612-474e-b605-2ce99097c890/download/cobertura-da-terra-recife.geojson,3e33b8b5e3136ed3cb032002573f4f740f42a292b915004f66a5b53e526ad6f1,18710097,18710097,12395,construida=urban;fv=veg;agua=water;areasemcob=bare;areaum=wetland;agrossilvo=veg,true

@@ -1,2 +1,0 @@
-sar_metadata_feasibility_id,candidate_patch_id,event_id,event_period_start,event_period_end,aoi_bbox,pre_event_s1_scene_count,during_or_post_event_s1_scene_count,matching_orbit_available,vv_available,vh_available,metadata_source,metadata_artifact_manifest_id,sar_footprint_generation_feasible,requires_future_raster_processing,review_only
-S17C31_SARF_0001,S17C6_CANARY_REC_00001,REC_2022_05_24_30,2022-05-24,2022-05-30,"-35.05,-8.15,-34.85,-7.95",3,4,true,true,true,asf_sentinel1_grd_metadata,S17C31_ART_0008,true,true,true

@@ -1,4 +1,0 @@
-landcover_attempt_id,source,query,authority,status,failure_reason,review_only
-S17C35_LCA_0001,mapbiomas,mapbiomas recife recorte,official_collection,not_attempted_download_heavy_gee,requires_gee_or_heavy_raster,true
-S17C35_LCA_0002,esa_worldcover,worldcover 2021 recife,official_esa,not_downloaded_cog_heavy,cog_class_extraction_deferred,true
-S17C35_LCA_0003,dados_recife_ckan,cobertura-da-terra download,official_municipal,acquired,,true

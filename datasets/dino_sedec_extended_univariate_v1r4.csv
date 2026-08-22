@@ -1,9 +1,0 @@
-feature,n_pos,n_neg,mean_pos,mean_neg,mannwhitney_U,p_value,rank_biserial_r,expected_sign,direction_observed,significant_p05,is_dino_feature
-elevation_m,56,22,40.7352,27.438,817.5,0.0256,-0.3271,-1,pos>neg,True,False
-slope_deg,56,22,11.3233,12.1915,549.5,0.4636,0.108,-1,pos<neg,False,False
-hand_m_filled,56,22,8.704,6.2061,662.5,0.6069,-0.0755,-1,pos>neg,False,False
-twi,56,22,5.2777,5.1296,652.5,0.6893,-0.0593,1,pos>neg,False,False
-rain_max_24h_chirps,56,22,71.7427,38.7627,848.5,0.01,-0.3774,1,pos>neg,True,False
-rain_decay_index_api_chirps,56,22,55.1392,25.3995,772.5,0.0832,-0.2541,1,pos>neg,False,False
-dino_pca1,56,22,0.0379,-0.0965,686.5,0.4363,-0.1144,0,pos>neg,False,True
-dino_pca2,56,22,-0.0202,0.0515,643.0,0.7682,-0.0438,0,pos<neg,False,True

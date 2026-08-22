@@ -1,2 +1,0 @@
-no_leakage_audit_id,object_id,object_type,uses_sensor_as_event_observation,uses_chirps_as_event_reference,uses_news_as_ground_reference_without_official_support,uses_candidate_as_ground_truth,uses_ground_reference_as_training_label,uses_synthetic_as_real,passes_no_leakage,blocking_reason,review_only
-S17C27_LEAK_0001,S17C27_OEC_0001,observed_event_candidate,false,false,false,false,false,false,true,candidato de evento observado review-only; fonte de referencia nao foi aceita como Ground Reference,true

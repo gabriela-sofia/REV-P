@@ -1,5 +1,0 @@
-stage: v2at
-component: license_crs_audit
-unknown_license_blocks: true
-unknown_crs_blocks_geometric_assertion: true
-crs_may_be_irrelevant_for_non_geometric_measurement: true

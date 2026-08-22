@@ -1,2 +1,0 @@
-status,reason,strong_or_moderate_links,min_required,review_only
-not_enough_observed_events,apenas 0 link(s) forte/moderado com patch resolvido; limiar minimo 10.,0,10,true

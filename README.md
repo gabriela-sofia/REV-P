@@ -13,8 +13,8 @@ O projeto se organiza em três frentes, metodologicamente separadas:
 | Frente | O que é | Onde está |
 |---|---|---|
 | **Linha causal (SUSC-20)** | O produto central: modelo físico-hidrológico causal (Firth), por região, mais a frente externa de validação (UK/Copernicus EMS). É tudo que veio depois da consolidação da entrega científica. | [`outputs_public/data/susc_20*/`](outputs_public/data/), [`scripts/externo/`](scripts/externo/) |
-| **Protocolo C** | Infraestrutura de aquisição e adjudicação de evidência (geometria oficial, série hidrometeorológica, revisão humana) que sustenta o ground truth da linha causal. | [`datasets/protocolo_c/`](datasets/protocolo_c/), [`docs/protocolo_c/`](docs/protocolo_c/) |
-| **Linhagem anterior à consolidação** | Pipeline exploratório pré-causal (SUSC_01–19) e a análise estrutural DINOv2 — mantidos por rastreabilidade, não são o resultado principal. | [`outputs_public/suscetibilidade/`](outputs_public/suscetibilidade/), [`datasets/dino_README.md`](datasets/dino_README.md) |
+| **Protocolo C** | Infraestrutura de aquisição e adjudicação de evidência (geometria oficial, série hidrometeorológica, revisão humana) que sustentou o ground truth da linha causal. Fora da árvore de trabalho desde a curadoria de entrega; recuperável pelo histórico do git. | — |
+| **Linhagem anterior à consolidação** | Pipeline exploratório pré-causal (SUSC_01–19) e a análise estrutural DINOv2 — mantidos por rastreabilidade, não são o resultado principal. | [`outputs_public/data/susc_1*/`](outputs_public/data/), [`scripts/dino/`](scripts/dino/) |
 
 ---
 
@@ -49,17 +49,20 @@ Regressão logística penalizada de Firth é a rota primária (lida bem com even
 
 ```text
 REV-P/
-├── docs/                      # Documentação metodológica e narrativa científica
-├── datasets/                  # Registries e evidência estruturada do Protocolo C
-│   └── suscetibilidade/       # Linhagem anterior à consolidação
+├── docs/
+│   ├── metodologia_cientifica/ # Metodologia, critérios e notas ext_* da linha causal
+│   └── tcc_exports/            # Artigo (planejamento_entrega01) e pôster
 ├── outputs_public/
-│   ├── data/susc_20*/         # Linha causal: eventos, features, modelagem, API (por região)
-│   ├── figures/                # Figuras finais
-│   ├── tables/                 # Tabelas consolidadas citáveis
-│   ├── model/                  # Estado do modelo por região
-│   └── suscetibilidade/       # Linhagem anterior à consolidação
-├── scripts/externo/            # Frente externa UK/Copernicus EMS
-├── tests/                      # Testes automatizados
+│   ├── data/susc_20*/          # Linha causal: eventos, features, modelagem, API (por região)
+│   ├── data/susc_1*/           # Linhagem anterior à consolidação
+│   └── model/                  # Estado do modelo por região
+├── scripts/
+│   ├── suscetibilidade/        # Consolidação e utilitários da suíte de suscetibilidade
+│   ├── externo/                # Frente externa UK/Copernicus EMS
+│   ├── terreno/                # Cadeia de terreno harmonizada
+│   ├── servico/                # Contrato de inferência, model card e grade (E5/E6)
+│   └── dino/                   # Governança DINOv2 (review-only)
+├── tests/                      # Regressão da linha causal
 └── environment.yml             # Ambiente conda da linha causal (Firth)
 ```
 

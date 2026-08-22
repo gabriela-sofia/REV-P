@@ -1,4 +1,0 @@
-top_k,score_threshold,event_hits,event_total,event_hit_rate,control_hits,control_total,control_hit_rate,event_enrichment_ratio,review_only
-top_10,0.801302,0,44,0.0,14,44,0.318182,0.0,true
-top_20,0.698025,17,44,0.386364,22,44,0.5,0.772727,true
-top_30,0.633684,28,44,0.636364,30,44,0.681818,0.933333,true

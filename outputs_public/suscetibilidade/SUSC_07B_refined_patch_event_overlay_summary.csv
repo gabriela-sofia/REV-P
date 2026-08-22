@@ -1,5 +1,0 @@
-region,n_patches,exact_patch_overlap,bbox_overlap,near_patch_buffer_candidate,same_region_period,same_region_only,documentary_context_only,insufficient_for_patch_link,review_only
-curitiba,100,0,0,0,0,0,8,0,true
-petropolis,100,0,0,1,18,1,8,0,true
-recife,100,0,5,3,1,0,4,0,true
-unknown,0,0,0,0,0,0,0,21,true

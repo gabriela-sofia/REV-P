@@ -1,1 +1,0 @@
-event_id,candidate_id,blocker,blocker_status,severity,can_be_resolved_by_programming,can_be_resolved_by_human_review,can_be_resolved_by_formal_request,required_action,notes

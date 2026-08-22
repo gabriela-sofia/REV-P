@@ -1,7 +1,0 @@
-metric,value,review_only
-precision_events_total,4412,true
-calibration_eligible_events,0,true
-by_precision_tier,"{""T5_official_street_segment_candidate"": 31, ""T6_neighborhood_context_only"": 1598, ""T7_rejected_or_non_flood"": 2783}",true
-by_geocoding_method,"{""blocked_missing_official_reference"": 2783, ""neighborhood_context_only"": 1598, ""official_street_segment_candidate"": 31}",true
-allowed_for_training_true,0,true
-can_be_ground_truth_true,0,true

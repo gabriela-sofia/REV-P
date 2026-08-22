@@ -1,2 +1,0 @@
-source_rejection_id,source_id,source_name,source_family,source_quality_class,rejection_reason,review_only
-S17C30_REJECT_0001,no_rejected_source,not_applicable,not_applicable,not_applicable,no_source_rejected_all_classified_A_B_or_D,true

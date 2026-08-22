@@ -1,4 +1,0 @@
-temporal_precision,count,average_temporal_confidence_score,usable_window_count,blocked_window_count,eligible_for_training_count,eligible_for_ground_truth_count,score_v7_candidate_count
-exact_day,185,100.0,185,0,0,0,0
-inferred_from_event_id,109,75.0,109,0,0,0,0
-unknown,263,0.0,0,263,0,0,0

@@ -1,9 +1,0 @@
-science_scope_limit_id,limit_name,limit_description,mitigation_or_note,blocks_scientific_review_only,blocks_training_score_17b,review_only
-S17C23_LIMIT_0001,processing_level_l1c_vs_l2a,cena CDSE canonica e L1C; materializacao Earth Search e L2A,equivalencia de missao/plataforma/data/tile/AOI mantida; diferenca de nivel documentada como limitacao,false,true,true
-S17C23_LIMIT_0002,fallback_not_official_primary,Earth Search/STAC/COG nao e fonte oficial primaria,uso restrito a materializacao sensorial cientifica review-only,false,true,true
-S17C23_LIMIT_0003,no_ground_reference,features sensoriais nao sao Ground Reference,sem geometria de evento observado nem fenomeno confirmado,false,true,true
-S17C23_LIMIT_0004,no_training,features nao alimentam treino,sem label e sem politica de treino,false,true,true
-S17C23_LIMIT_0005,no_score_v7,features nao alimentam score v7,score v7 exige ground reference e politica,false,true,true
-S17C23_LIMIT_0006,no_17b,features nao liberam 17B,17B exige artefato de evento e politica,false,true,true
-S17C23_LIMIT_0007,single_pre_event_scene,uma cena pre-evento canonica por patch,sem serie temporal pre-evento ampla ainda,false,true,true
-S17C23_LIMIT_0008,cloud_cover_high,cobertura de nuvem alta na cena pre-evento,afeta interpretacao espectral; documentado,false,true,true

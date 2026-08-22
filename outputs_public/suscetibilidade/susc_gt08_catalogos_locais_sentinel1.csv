@@ -1,2 +1,0 @@
-catalog_id,path,format,region_hint,scene_count,matches_canary_event,no_download_in_this_milestone,review_only,blocking_reason
-CAT_001,outputs_public/suscetibilidade/susc_17c31_source_artifacts/asf_sentinel1_sentinel1_grd_metadata_recife_event.json,json,recife,7,true,true,true,

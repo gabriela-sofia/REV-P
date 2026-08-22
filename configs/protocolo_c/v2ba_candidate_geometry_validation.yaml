@@ -1,4 +1,0 @@
-stage: v2ba
-require_crs: true
-require_coordinates_within_brazil: true
-can_promote: false

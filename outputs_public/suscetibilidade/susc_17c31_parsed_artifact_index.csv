@@ -1,9 +1,0 @@
-parsed_artifact_id,source_artifact_manifest_id,artifact_type,parse_success,text_extracted,date_mentions,coordinate_mentions,flood_mentions,landslide_mentions,byte_size,review_only
-S17C31_PARSE_0001,S17C31_ART_0001,geojson,true,true,none,true,none,desliz,139712,true
-S17C31_PARSE_0002,S17C31_ART_0002,csv,true,true,none,true,none,desliz,44040,true
-S17C31_PARSE_0003,S17C31_ART_0003,csv,true,true,2022-05-23;2022-05-24;2022-05-25;2022-05-26;2022-05-27;2022-05-28,false,alagad;alagam,desliz;barreira;desabam,151024,true
-S17C31_PARSE_0004,S17C31_ART_0004,csv,true,true,none,true,none,none,2891,true
-S17C31_PARSE_0005,S17C31_ART_0005,html,true,true,2022-05-29;2022-05-30,false,alagam;inunda,desliz;barreira,157072,true
-S17C31_PARSE_0006,S17C31_ART_0006,html,true,true,2022-05-19;2022-05-26;2022-05-30,false,alagam;inunda,desliz;barreira,154783,true
-S17C31_PARSE_0007,S17C31_ART_0007,html,true,true,none,false,none,none,358711,true
-S17C31_PARSE_0008,S17C31_ART_0008,json,true,true,2022-05-16;2022-05-21;2022-05-28;2022-06-02;2022-06-09,true,none,none,12142,true

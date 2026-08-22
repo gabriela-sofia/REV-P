@@ -1,4 +1,0 @@
-stage: v2bd
-step: build_seed_patch_crosswalk
-region_scope_is_patch_link: false
-patch_boundary_is_event_geometry: false

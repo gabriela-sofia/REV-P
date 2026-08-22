@@ -1,9 +1,0 @@
-row_role,audit_type,status,count,review_only
-event_patch,feature_temporal_status,missing_temporal_metadata,40,true
-event_patch,feature_temporal_status,post_event_risk,4,true
-event_patch,temporal_leakage_risk,high,4,true
-event_patch,temporal_leakage_risk,temporal_uncertain,40,true
-control_patch,feature_temporal_status,missing_temporal_metadata,40,true
-control_patch,feature_temporal_status,post_event_risk,4,true
-control_patch,temporal_leakage_risk,high,4,true
-control_patch,temporal_leakage_risk,temporal_uncertain,40,true

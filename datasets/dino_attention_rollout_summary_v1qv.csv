@@ -1,8 +1,0 @@
-stat_key,stat_value
-execution_gate,EXECUTE
-rollouts_rendered,3
-num_layers,12
-num_heads,12
-num_register_tokens,4
-labels_created,0
-final_status,ATTENTION_ROLLOUT_READY_REVIEW_ONLY

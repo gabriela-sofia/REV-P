@@ -1,4 +1,0 @@
-protocol_version: v1uo
-prebuild_only: true
-invent_patch_id_allowed: false
-invent_scene_date_allowed: false

@@ -1,2 +1,0 @@
-update_id,formal_negative_ready_count,formal_negative_candidate_review_count,invalid_negative_absence_assumption_count,insufficient_evidence_count,c4_ready_after_intake,summary_decision,supervised_training_status_after_intake,notes
-C4_NEGATIVE_EVIDENCE_INTAKE_UPDATE_V1JP,0,5,175814,5,false,NEGATIVE_INTAKE_NO_FORMAL_NEGATIVES_FOUND;C4_STILL_BLOCKED,SUPERVISED_TRAINING_BLOCKED_NO_FORMAL_NEGATIVE_LABELS,v1jp nao altera v1jn/v1jo e nao cria label; proxima acao real e revisao manual dos 5 candidatos em revisao.

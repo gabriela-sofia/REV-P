@@ -1,2 +1,0 @@
-change_id,change_type,reason,event_patch_count,control_patch_count,deterministic_decision,can_be_ground_truth,allowed_for_training,review_only
-SUSC12C_NO_V7_0001,no_score_v7_created,low_sample_size_and_review_only_observed_evidence,9,9,keep_score_v6_candidate_no_weight_change,false,false,true

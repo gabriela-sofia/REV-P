@@ -1,2 +1,0 @@
-dem_grid_id,source_artifact_manifest_id,crs,resolution_m,width,height,bbox,nodata_value,valid_cell_count,sink_fill_applied,usable_for_tpi,usable_for_flow_acc,usable_for_twi,usable_for_hand,review_only
-S17C36_GRID_0001,S17C36_DEM_0001,EPSG:4326,30.616,326,360,"-34.97175,-8.11856,-34.88110,-8.01855",-32767,117360,true,true,true,true,true,true

@@ -1,5 +1,0 @@
-calibration_model_id,model_name,input_features,target_feature,trained_on,uses_canaries,uses_event_labels,model_type,review_only
-C01,C01_quantile_mapping_best_variant,best_variant(V17),official_flow_acc_log_mean,100_official_patches,false,false,quantile_mapping,true
-C02,C02_isotonic_monotonic_best_variant,best_variant(V17),official_flow_acc_log_mean,100_official_patches,false,false,isotonic,true
-C03,C03_robust_linear_multi_variant,best_variant(V17);hand;twi;tpi;slope;elevation,official_flow_acc_log_mean,100_official_patches,false,false,robust_linear,true
-C04,C04_rank_based_piecewise_mapping,best_variant(V17),official_flow_acc_log_mean,100_official_patches,false,false,rank_piecewise,true

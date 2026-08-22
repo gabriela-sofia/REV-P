@@ -1,4 +1,0 @@
-stage: v2be
-step: resolve_candidate_seed_asset_links
-requires_human_review: true
-candidate_link_is_truth: false

@@ -1,5 +1,0 @@
-g5_evaluation_id,specific_observed_event_candidate_id,candidate_patch_id,phenomenon_class,hydrological_confirmed,mass_movement_excluded,G5_separacao_fenomeno,blocking_reason,review_only
-S17C28_G5_0001,S17C28_OEC_0001,S17C6_CANARY_REC_00001,MIXED_AMBIGUOUS,true,false,false,fenomeno misto (inundacao + deslizamento): nao separa hidrologico de movimento de massa,true
-S17C28_G5_0002,S17C28_OEC_0002,S17C6_CANARY_REC_00001,MIXED_AMBIGUOUS,true,false,false,fenomeno misto (inundacao + deslizamento): nao separa hidrologico de movimento de massa,true
-S17C28_G5_0003,S17C28_OEC_0003,S17C6_CANARY_REC_00001,MASS_MOVEMENT_CONFIRMED,false,false,false,fenomeno misto (inundacao + deslizamento): nao separa hidrologico de movimento de massa,true
-S17C28_G5_0004,S17C28_OEC_0004,S17C6_CANARY_REC_00001,MASS_MOVEMENT_CONFIRMED,false,false,false,fenomeno misto (inundacao + deslizamento): nao separa hidrologico de movimento de massa,true

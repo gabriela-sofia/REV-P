@@ -1,2 +1,0 @@
-scope,target,target_type,n,backend,metric_basis,r2_in_sample,mae,rmse,r2_cv_mean,r2_cv_std,status
-global,score_evento_enchente_potencial_v5_core,continuous,300,sklearn_spline_fallback,proxy_not_event,0.941,0.0293,0.0363,0.9221,0.0184,FITTED_PROXY_BASELINE_REVIEW_ONLY

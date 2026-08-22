@@ -1,4 +1,0 @@
-score_integrity_audit_id,protected_artifact,artifact_type,changed_in_working_tree,created_new,note,review_only
-S18A_INTEG_0001,datasets/suscetibilidade/susc_score_v6_candidate_by_patch_v1.csv,score_v6_candidate,false,false,score v6 oficial nunca modificado nem substituido,true
-S18A_INTEG_0002,datasets/suscetibilidade/susc_features_by_patch_v1.csv,official_feature_matrix,false,false,matriz oficial apenas lida,true
-S18A_INTEG_0003,datasets/suscetibilidade/susc_score_v7_candidate_by_patch_v1.csv,score_v7_candidate,false,false,score v7 permanece inexistente,true

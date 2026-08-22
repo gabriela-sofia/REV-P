@@ -1,2 +1,0 @@
-source_file,discovery_id,source_format,parse_status,classification_status,n_records,n_coordinates,missing_dependency,requires_manual_review,can_be_ground_truth,allowed_for_training,review_only,notes
-,,,no_files_to_parse,no_observed_events,0,0,,true,false,false,true,diretorio de aquisicao vazio (offline/sem download); rede=False

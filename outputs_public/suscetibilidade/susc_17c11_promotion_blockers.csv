@@ -1,8 +1,0 @@
-blocker_id,scope,blocker_type,description,blocks_submission_now,blocks_17b,blocks_score_v7,review_only
-S17C11_BLOCKER_001,all_requests,manual_verification_required_before_submission,Nenhum canal pode ser usado automaticamente; toda submissao exige revisao humana fora do 17C11.,true,true,true,true
-S17C11_BLOCKER_002,SUSC-17B,not_eligible_for_17b,Descoberta de canal nao equivale a resposta oficial recebida nem evidencia observacional validada.,true,true,true,true
-S17C11_BLOCKER_003,score_v7,score_v7_not_allowed,"Sem treino, labels, ground truth ou score v7 nesta sprint.",true,true,true,true
-S17C11_BLOCKER_004,P1_DEM_HAND_DRAINAGE_COVERAGE_CANDIDATE_GRID,provider_ambiguous_dem_hand_drainage_requires_manual_source_confirmation,Canal permanece pendente ou inexistente; requer decisao humana futura.,true,true,true,true
-S17C11_BLOCKER_005,P1_PET_2024_VALPARAISO_FLORESTA_GEOMETRY,provider_split_between_petropolis_and_drm_rj_requires_manual_confirmation,Canal permanece pendente ou inexistente; requer decisao humana futura.,true,true,true,true
-S17C11_BLOCKER_006,P2_DINO_SATMAE_INPUT_TILE,internal_pipeline_no_external_submission_channel,Canal permanece pendente ou inexistente; requer decisao humana futura.,true,true,true,true
-S17C11_BLOCKER_007,P2_SAR_RUNTIME_OR_EXPORT_PATH,ambiguous_runtime_provider_no_official_channel_found,Canal permanece pendente ou inexistente; requer decisao humana futura.,true,true,true,true

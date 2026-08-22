@@ -1,5 +1,0 @@
-geometry_acquisition_status,count,average_geometry_priority_score,can_advance_to_qa_future_count,can_advance_to_sar_future_count,can_become_positive_strong_after_geometry_and_qa_count,training_allowed_count,ground_truth_allowed_count,score_v7_candidate_count
-geometria_parcial_resolvivel,263,15.51,263,15,263,0,0,0
-geometria_ausente,9,0.0,0,0,2,0,0,0
-requer_footprint_tecnico_futuro,277,5.7,0,277,277,0,0,0
-geometria_rejeitada,8,0.0,0,0,0,0,0,0
