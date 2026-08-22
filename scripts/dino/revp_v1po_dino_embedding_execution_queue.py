@@ -1,8 +1,4 @@
-"""REV-P v1po — DINO embedding execution queue builder.
-
-Builds a prioritized queue from v1pn visual assets and Protocol C v1oz review queue.
-Does NOT execute any embedding. All rows are review-only with explicit anti-label guards.
-"""
+"""REV-P v1po — DINO embedding execution queue builder."""
 from __future__ import annotations
 
 import argparse

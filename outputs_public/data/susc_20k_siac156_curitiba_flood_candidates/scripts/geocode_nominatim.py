@@ -1,26 +1,4 @@
-"""Geocodifica endereços de reclamações SIAC 156 via Nominatim (OpenStreetMap), live, sem
-credencial paga -- mesmo método/mesma régua de confiança já usada e documentada em
-`susc_20a_aquisicao_eventos_reais_recife/reports/relatorio_geocodificacao_sedec.md` (SEDEC
-Recife), reaplicado aqui pra manter a comparação entre regiões consistente.
-
-Query = "{Logradouro}, {Bairro}, Curitiba, PR, Brasil" (uma tentativa; se falhar, tenta sem o
-Logradouro, só bairro -- fallback de bairro-centroide, não fabricação de número).
-
-Camadas de confiança (idênticas ao relatório do Recife):
-  - strong: resultado nível rua (osm class 'highway' ou address contém 'road') dentro da bbox
-  - medium: sem nível de rua, mas achou algo nível bairro/suburb/place dentro da bbox
-  - failed: nenhum resultado dentro da bbox -- NENHUMA coordenada é fabricada
-
-Rate limit: 1.1s entre chamadas (política de uso justo do Nominatim público -- max 1 req/s),
-User-Agent identificado com contato, conforme https://operations.osmfoundation.org/policies/nominatim/.
-
-Cache local em JSON (`--cache`) pra nunca repetir uma consulta já respondida -- mínimo de tráfego
-necessário, e permite retomar uma rodada interrompida sem re-consultar o que já foi resolvido.
-
-Uso:
-    python geocode_nominatim.py --candidates candidatos.csv --out geocoded.csv \
-        --cache cache_nominatim.json --bbox -49.45,-25.65,-49.10,-25.30
-"""
+"""Geocodifica endereços de reclamações SIAC 156 via Nominatim (OpenStreetMap), live, sem"""
 
 from __future__ import annotations
 
@@ -52,8 +30,7 @@ class GeocodeResult:
 
 
 def _atomic_write_json(path: Path | str, data: dict) -> None:
-    """Escreve via arquivo temporário + rename -- evita corromper o cache se o processo for
-    interrompido no meio da escrita (aconteceu com timeout de shell durante a rodada real)."""
+    """Escreve via arquivo temporário + rename -- evita corromper o cache se o processo for"""
     path = Path(path)
     tmp = path.with_suffix(path.suffix + ".tmp")
     tmp.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -80,8 +57,7 @@ def _call_nominatim(query: str, opener: urllib.request.OpenerDirector) -> list[d
 
 
 def classify_result(results: list[dict], bbox: tuple[float, float, float, float]) -> GeocodeResult | None:
-    """Aplica a régua strong/medium a uma lista de resultados já filtrada pra dentro da bbox.
-    Retorna None se nenhum resultado cair dentro da bbox (chamador decide o 'failed')."""
+    """Aplica a régua strong/medium a uma lista de resultados já filtrada pra dentro da bbox."""
     in_bbox = []
     for r in results:
         try:

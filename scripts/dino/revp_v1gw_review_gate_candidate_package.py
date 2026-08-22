@@ -1,20 +1,4 @@
-"""REV-P v1gw: Review gate candidate package.
-
-Formalizes review gate as a methodological stage. Selects candidate
-patches from structural evidence (v1gu) and GIS coverage (v1gv).
-
-When v1gu embeddings are blocked, falls back to manifest-derived candidates
-using geometry status and GIS coverage as selection criteria — with
-explicit documentation of why embedding-based selection is unavailable.
-
-Field mapping:
-  v1fu manifest: canonical_patch_id, region
-  v1gu blocker:  embedding_patch_status_v1gu.csv -> canonical_patch_id, embedding_status
-  v1gv matrix:   evidence_coverage_matrix_v1gv.csv -> canonical_patch_id + indicators
-
-Allowed claims: structural evidence informs candidate selection
-Forbidden: candidates are pre-classified; review assigns labels
-"""
+"""REV-P v1gw: Review gate candidate package."""
 from __future__ import annotations
 
 import argparse
@@ -255,10 +239,7 @@ def load_medoids_from_v1gu(v1gu_path: Path) -> dict[str, dict[str, Any]]:
 
 
 def count_available_indicators(indicators: dict[str, str]) -> tuple[int, int]:
-    """
-    Return (n_available, n_total) for a patch's indicator dict.
-    Only counts non-empty indicator values (other-region columns are blank).
-    """
+    """Return (n_available, n_total) for a patch's indicator dict."""
     available_statuses = {"AVAILABLE", "PARTIAL", "LOCAL_ONLY"}
     meta_keys = {"region", "region_normalized", "n_indicators", "canonical_patch_id"}
     valid = {k: v for k, v in indicators.items()
@@ -325,10 +306,7 @@ def select_review_candidates_fallback(
     coverage: dict[str, dict[str, str]],
     geometry_status: dict[str, str],
 ) -> list[dict[str, Any]]:
-    """
-    Fallback candidate selection when v1gu embeddings are blocked.
-    Uses manifest-level attributes: geometry completeness and GIS coverage.
-    """
+    """Fallback candidate selection when v1gu embeddings are blocked."""
     candidates: dict[str, dict[str, Any]] = {}
 
     # Candidates by geometry completeness

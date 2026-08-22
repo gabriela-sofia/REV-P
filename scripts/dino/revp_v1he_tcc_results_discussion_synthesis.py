@@ -1,20 +1,4 @@
-"""REV-P v1he: TCC Results and Discussion Synthesis Package.
-
-Transforms consolidated scientific evidence from v1gz–v1hd into draft text,
-figure/table captions, and a claim-result-limitation matrix ready for Overleaf.
-
-All text is grounded in actual numbers from local pipeline outputs.
-No new claims are created. All forbidden claims remain blocked.
-
-Outputs (local_runs/tcc_synthesis/v1he/):
-  results_section_draft_v1he.md
-  discussion_section_draft_v1he.md
-  figure_captions_final_v1he.csv
-  table_captions_final_v1he.csv
-  claim_result_limitation_matrix_v1he.csv
-  tcc_results_discussion_summary_v1he.json
-  overleaf_insert_plan_v1he.md
-"""
+"""REV-P v1he: TCC Results and Discussion Synthesis Package."""
 from __future__ import annotations
 
 import csv
@@ -36,9 +20,7 @@ V1HD_DIR = ROOT / "local_runs" / "dino_embeddings" / "v1hd"
 OUT_DIR = ROOT / "local_runs" / "tcc_synthesis" / "v1he"
 
 
-# ---------------------------------------------------------------------------
 # Data loading
-# ---------------------------------------------------------------------------
 
 def _read_csv(path: Path) -> list[dict]:
     if not path.exists():
@@ -130,9 +112,7 @@ class Evidence:
         self.hd_usable = self.hd_summary.get("by_usable_in_discussion", {})
 
 
-# ---------------------------------------------------------------------------
 # Results section draft
-# ---------------------------------------------------------------------------
 
 def build_results_section(ev: Evidence) -> str:
     # Medoid distances
@@ -307,9 +287,7 @@ ou predição de qualquer variável alvo.
 """
 
 
-# ---------------------------------------------------------------------------
 # Discussion section draft
-# ---------------------------------------------------------------------------
 
 def build_discussion_section(ev: Evidence) -> str:
     drift_lines = ""
@@ -527,9 +505,7 @@ essa estrutura pode informar exploratoriamente sobre padrões visuais?".
 """
 
 
-# ---------------------------------------------------------------------------
 # Figure captions
-# ---------------------------------------------------------------------------
 
 FIGURE_CAPTIONS = [
     {
@@ -706,9 +682,7 @@ TABLE_CAPTIONS = [
 ]
 
 
-# ---------------------------------------------------------------------------
 # Claim-result-limitation matrix
-# ---------------------------------------------------------------------------
 
 CLAIM_MATRIX = [
     {
@@ -794,9 +768,7 @@ CLAIM_MATRIX = [
 ]
 
 
-# ---------------------------------------------------------------------------
 # Overleaf insert plan
-# ---------------------------------------------------------------------------
 
 def build_overleaf_plan(ev: Evidence) -> str:
     return f"""# Plano de Inserção no Overleaf — REV-P v1he
@@ -936,9 +908,7 @@ como figuras inline. Contact sheets → Apêndice.
 """
 
 
-# ---------------------------------------------------------------------------
 # Summary JSON
-# ---------------------------------------------------------------------------
 
 def build_summary(ev: Evidence) -> dict:
     ready_for_overleaf = (
@@ -993,9 +963,7 @@ def build_summary(ev: Evidence) -> dict:
     }
 
 
-# ---------------------------------------------------------------------------
 # I/O
-# ---------------------------------------------------------------------------
 
 def write_md(path: Path, content: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -1022,9 +990,7 @@ def write_json(path: Path, data: dict) -> None:
     print(f"[v1he] Written: {path.name}")
 
 
-# ---------------------------------------------------------------------------
 # Main
-# ---------------------------------------------------------------------------
 
 def main() -> int:
     print(f"[v1he] Loading evidence from pipeline outputs...")

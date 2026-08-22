@@ -1,33 +1,4 @@
-"""REV-P v1r5 -- Modelo A (fisico, v12) vs Modelo B (fisico + DINO), no
-dataset mais forte disponivel (dataset_v12_final.csv, n=278, 154 pos/124 neg),
-em vez do recorte de 163 usado em v1r4.
-
-Executa a Fase 1 do PLANO_ACAO_produto_v1.md: refazer o teste A/B com o dado
-mais forte, decidindo se DINO agrega valor incremental ao modelo fisico via
-razao de verossimilhanca entre dois modelos Firth aninhados (nao via DeLong/
-delta-AUC bruto -- ver revp_contrato_inferencia_v0_revalidacao_cientifica.md
-secao 3.2).
-
-Metodologia:
-  1) Join espacial ponto-em-bbox entre os patches Sentinel com embedding DINO
-     real (dataset_recife_sedec_all_embeddings_v1r3.csv, 23 patches) e os
-     pontos de dataset_v12_final.csv que caem dentro dessas bboxes.
-  2) Orcamento de EPV: com o n_neg do subconjunto joined, escolhe o maior
-     numero de features fisicas + componentes DINO tal que
-     n_neg/(n_features_fisicas+n_dino) >= 10 (mesma heuristica ja usada em
-     pipeline_v12_primary.py e revp_v1r4). Prioridade: preservar o maximo de
-     features fisicas, reduzir apenas se o orcamento nao permitir 6+K.
-  3) Modelo A = Firth so com as features fisicas escolhidas.
-     Modelo B = Modelo A + K componentes PCA do DINO (mesmas linhas, mesmo n).
-  4) Razao de verossimilhanca (LRT) entre A e B usando a log-verossimilhanca
-     penalizada de Firth de cada modelo (estatistica = 2*(llB-llA), df=K).
-  5) Delta LOO-AUC (logistic regression L2 padrao, mesma disciplina de
-     pipeline_v12_primary.py) reportado so como descritivo complementar.
-
-Nao cria label. Nao treina nada fora deste teste de comparacao review-only.
-DINO permanece evidencia auxiliar mesmo se o teste indicar valor incremental
-(essa decisao de produto e tomada a parte, nao por este script).
-"""
+"""REV-P v1r5 -- Modelo A (fisico, v12) vs Modelo B (fisico + DINO), no"""
 from __future__ import annotations
 
 import glob
@@ -124,12 +95,7 @@ def build_joined_dataset(in_v12: Path, sentinel_dir: Path) -> list[dict[str, Any
 
 
 def fit_firth(X: np.ndarray, y: np.ndarray, max_iter: int = 200, tol: float = 1e-10) -> dict[str, Any]:
-    """Firth (bias-reduced) penalized logistic regression, fit via modified
-    scores (Heinze & Schemper 2002). X must already include an intercept
-    column. Validated against firthlogist's published v12 coefficients and
-    penalized log-likelihood (matches to >=4 decimals) before use here --
-    see local validation run, not committed as a test fixture since it
-    depends on the private PROJETO v12 CSV."""
+    """Firth (bias-reduced) penalized logistic regression, fit via modified"""
     n, p = X.shape
     beta = np.zeros(p)
     it = 0
@@ -181,9 +147,7 @@ def _loo_auc(X: np.ndarray, y: np.ndarray) -> float:
 
 
 def choose_feature_budget(n_neg: int) -> tuple[list[str], int]:
-    """EPV>=10 on the minority class, preferring the most physical features
-    and, only if the budget forces it, falling back to the strongest-ranked
-    subset. Returns (physical_features_chosen, n_dino_components_chosen)."""
+    """EPV>=10 on the minority class, preferring the most physical features"""
     for dino_k in (2, 1):
         for phys_k in (6, 3, 2, 1):
             phys = (FEATURE_COLS_V12 if phys_k == 6 else FEATURE_RANK_BY_V12_EVIDENCE[:phys_k])

@@ -1,26 +1,4 @@
-"""REV-P v1r6 -- Sensibilidade a pseudorreplicacao do teste A/B v1r5.
-
-v1r5 encontrou LRT significante (p=0.0048) para DINO no Modelo B, mas
-descobriu que dino_pca1/2 sao por-PATCH, nao por-ponto: 109 pontos caem em
-so 23 patches unicos (ate 10 pontos compartilhando o mesmo vetor). Este
-script resolve essa lacuna com dois testes que respeitam explicitamente o
-agrupamento por patch, em vez de assumir 109 observacoes independentes:
-
-  A) Erro-padrao cluster-robusto (sandwich, clusterizado por patch_id) para
-     os coeficientes do Modelo B (fisico + DINO) -- reestima a incerteza dos
-     coeficientes DINO tratando os pontos do mesmo patch como nao-
-     independentes, com correcao de pequena amostra (G clusters).
-     Teste de Wald conjunto cluster-robusto para os 2 componentes DINO
-     (analogo ao LRT de v1r5, mas robusto ao agrupamento).
-  B) Correlacao descritiva por patch (n=23, um valor por patch): Spearman
-     entre dino_pca1/dino_pca2 (fixo por patch) e a fracao de pontos
-     positivos naquele patch -- nao e um teste formal (n pequeno), e
-     reportado so como evidencia adicional.
-
-Nao cria label. Nao treina nada novo. Reusa a mesma matriz joined de v1r5
-(mesmo n=109, mesmos 23 patches, mesma escolha de features pelo orcamento de
-EPV) para que a comparacao entre v1r5 e v1r6 seja direta.
-"""
+"""REV-P v1r6 -- Sensibilidade a pseudorreplicacao do teste A/B v1r5."""
 from __future__ import annotations
 
 import os
@@ -44,13 +22,7 @@ SUM_FIELDS = ["stat_key", "stat_value"]
 
 def cluster_robust_covariance(X: np.ndarray, y: np.ndarray, beta: np.ndarray,
                                cluster_ids: list[str]) -> np.ndarray:
-    """Sandwich (CR0) covariance clustered by cluster_ids, with the standard
-    small-sample correction c = (G/(G-1)) * ((n-1)/(n-p)). Uses the Firth fit
-    (X'WX)^{-1} as the bread and per-cluster summed score residuals
-    (y_i - pi_i) as the meat -- the standard clustered-sandwich construction
-    for a fitted logistic-type model (Firth's small penalty term in the
-    score is not re-included here; it is negligible next to the clustering
-    correction itself, which is the effect being tested)."""
+    """Sandwich (CR0) covariance clustered by cluster_ids, with the standard"""
     eta = X @ beta
     pi = 1.0 / (1.0 + np.exp(-eta))
     w = np.clip(pi * (1 - pi), 1e-12, None)

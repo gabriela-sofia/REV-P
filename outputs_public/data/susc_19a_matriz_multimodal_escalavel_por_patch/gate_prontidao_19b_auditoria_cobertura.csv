@@ -1,5 +1,0 @@
-criterio,valor_observado,limiar,passou,status_19b_alvo,observacao
-matriz_multimodal_pronta,300,>0,true,19B_AUDITORIA_COBERTURA,matriz base para auditoria de cobertura
-missingness_calculada,300,>=0,true,19B_AUDITORIA_COBERTURA,missingness por patch calculada
-familia_maior_lacuna,documental,documentada,true,19B_AUDITORIA_COBERTURA,lacuna territorial documentada
-coverage_nao_e_suscetibilidade,true,true,true,19B_AUDITORIA_COBERTURA,indice de cobertura nao substitui score de suscetibilidade

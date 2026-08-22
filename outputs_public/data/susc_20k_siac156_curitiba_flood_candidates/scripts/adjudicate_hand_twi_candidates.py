@@ -1,30 +1,4 @@
-"""Adjudicação física dos candidatos SIAC 156 geocodificados via HAND/TWI/declividade.
-
-Mesma régua observacional já usada e registrada em
-`susc_20g_hand_twi_dinfinity_generico/registries/v20g_observational_reading_adjudicated_points.csv`
-pros pontos de Juvevê (Curitiba, enchente confirmada -- HAND baixo, TWI acima da mediana, perto
-da drenagem) e Valparaíso (Petrópolis, REBAIXADO -- HAND alto, declividade de encosta, TWI abaixo
-da mediana). Reaplica a mesma leitura (não recalcula raster, não recria pipeline D-infinity --
-os rasters de Curitiba já existem em `local_runs/susc_20g_hand_twi_dinfinity_generico/curitiba/`,
-gerados e validados no SUSC-20G).
-
-Leitura de coerência física, não é feature nem rótulo: não normaliza, não alimenta modelo, não
-compara com ponto negativo. Adiciona ao critério já usado (HAND/TWI/declividade/percentil
-regional) a distância à drenagem extraída (`streams_dinf.tif`), calculada por transformada de
-distância (euclidiana em pixels métricos), igual ao valor já reportado pra Juvevê (135 m) e
-Valparaíso (255 m) -- aqui calculada programaticamente em vez de manual.
-
-Critério de leitura (documentado, não é threshold de modelo):
-  - assinatura_enchente_plausivel: HAND <= percentil 50 regional E declividade <= mediana
-    regional E TWI >= mediana regional -- mesma leitura qualitativa usada em Juvevê.
-  - Não decide adjudicação final sozinho: cada ponto deve ser lido individualmente no relatório,
-    igual ao que foi feito pra Valparaíso (que teve sinal físico contra, mas não foi rejeitado
-    de imediato -- ressalvas documentadas).
-
-Uso:
-    python adjudicate_hand_twi_candidates.py --geocoded candidatos_geocodificados.csv \
-        --raster-dir <dir_com_hand_twi_slope_streams> --out adjudicados.csv
-"""
+"""Adjudicação física dos candidatos SIAC 156 geocodificados via HAND/TWI/declividade."""
 
 from __future__ import annotations
 
@@ -43,9 +17,7 @@ STREAMS_RASTER = "streams_dinf.tif"
 
 
 def _load_regional_stats(raster_dir: Path) -> dict:
-    """Carrega os rasters inteiros uma única vez pra computar percentil regional e mediana --
-    mesmo raciocínio do SUSC-20G (percentil calculado sobre todas as células válidas da região,
-    não um recorte local)."""
+    """Carrega os rasters inteiros uma única vez pra computar percentil regional e mediana --"""
     stats = {}
     arrays = {}
     for key, fname in RASTERS.items():
@@ -63,9 +35,7 @@ def _load_regional_stats(raster_dir: Path) -> dict:
 
 
 def _distance_to_stream_raster(raster_dir: Path) -> tuple[np.ndarray, rasterio.io.DatasetReader]:
-    """Constrói (uma vez) um raster de distância euclidiana métrica até a célula de drenagem
-    extraída mais próxima -- usa scipy.ndimage.distance_transform_edt com `sampling` no tamanho
-    real do pixel, resultado em metros."""
+    """Constrói (uma vez) um raster de distância euclidiana métrica até a célula de drenagem"""
     path = raster_dir / STREAMS_RASTER
     with rasterio.open(path) as src:
         arr = src.read(1)

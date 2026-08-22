@@ -1,23 +1,4 @@
-"""REV-P v1hf: Overleaf-Ready Academic Writing Package.
-
-Transforms consolidated scientific evidence from v1gz–v1hd/v1he into
-complete academic text drafts, a figures/tables index, appendix plan,
-section–artifact crosswalk, and package summary — ready for Overleaf/abnTeX2.
-
-No new technical evidence is created. All claims are read from existing
-pipeline artifacts. Forbidden claims remain blocked throughout.
-
-Outputs (local_runs/overleaf_package/v1hf/):
-  metodologia_overleaf_draft_v1hf.md
-  resultados_overleaf_draft_v1hf.md
-  discussao_overleaf_draft_v1hf.md
-  limitacoes_overleaf_draft_v1hf.md
-  contribuicoes_overleaf_draft_v1hf.md
-  overleaf_figures_tables_index_v1hf.csv
-  appendices_plan_v1hf.md
-  tcc_section_artifact_crosswalk_v1hf.csv
-  overleaf_package_summary_v1hf.json
-"""
+"""REV-P v1hf: Overleaf-Ready Academic Writing Package."""
 from __future__ import annotations
 
 import csv
@@ -29,9 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 PHASE = "v1hf"
 
-# ---------------------------------------------------------------------------
 # Input directories
-# ---------------------------------------------------------------------------
 V1HE_DIR = ROOT / "local_runs" / "tcc_synthesis" / "v1he"
 V1GZ_DIR = ROOT / "local_runs" / "dino_embeddings" / "v1gz"
 V1HA_DIR = ROOT / "local_runs" / "dino_embeddings" / "v1ha"
@@ -42,9 +21,7 @@ DATASETS_DIR = ROOT / "datasets"
 OUT_DIR = ROOT / "local_runs" / "overleaf_package" / "v1hf"
 
 
-# ---------------------------------------------------------------------------
 # Data loading helpers
-# ---------------------------------------------------------------------------
 
 def _read_csv(path: Path) -> list[dict]:
     if not path.exists():
@@ -66,9 +43,7 @@ def _read_text(path: Path) -> str:
     return path.read_text(encoding="utf-8")
 
 
-# ---------------------------------------------------------------------------
 # Evidence container
-# ---------------------------------------------------------------------------
 
 class Evidence:
     """All pipeline evidence loaded from local_runs and docs."""
@@ -153,9 +128,7 @@ class Evidence:
         ]
 
 
-# ---------------------------------------------------------------------------
 # 1. Methodology draft
-# ---------------------------------------------------------------------------
 
 def build_metodologia(ev: Evidence) -> str:
     drift_lines = "\n".join(
@@ -453,9 +426,7 @@ verificação de afirmações na escrita do TCC.
 """
 
 
-# ---------------------------------------------------------------------------
 # 2. Results draft (consolidated from v1he)
-# ---------------------------------------------------------------------------
 
 def build_resultados(ev: Evidence) -> str:
     body = ev.he_results_text.strip() if ev.he_results_text else (
@@ -484,9 +455,7 @@ Para inserção no Overleaf, consultar:
 """
 
 
-# ---------------------------------------------------------------------------
 # 3. Discussion draft (consolidated from v1he)
-# ---------------------------------------------------------------------------
 
 def build_discussao(ev: Evidence) -> str:
     body = ev.he_discussion_text.strip() if ev.he_discussion_text else (
@@ -518,9 +487,7 @@ Antes de inserir no Overleaf, verificar:
 """
 
 
-# ---------------------------------------------------------------------------
 # 4. Limitations section
-# ---------------------------------------------------------------------------
 
 def build_limitacoes(ev: Evidence) -> str:
     return f"""# Limitações
@@ -658,9 +625,7 @@ de que o modelo "entende" imagens Sentinel.
 """
 
 
-# ---------------------------------------------------------------------------
 # 5. Contributions section
-# ---------------------------------------------------------------------------
 
 def build_contribuicoes(ev: Evidence) -> str:
     return f"""# Contribuições
@@ -768,9 +733,7 @@ científica que conecta cada afirmação do texto a um artefato computado local.
 """
 
 
-# ---------------------------------------------------------------------------
 # 6. Figures and Tables index (static + evidence-enriched)
-# ---------------------------------------------------------------------------
 
 FIGURES_TABLES_INDEX: list[dict] = [
     # --- Figures ---
@@ -926,9 +889,7 @@ FIGURES_TABLES_INDEX: list[dict] = [
 ]
 
 
-# ---------------------------------------------------------------------------
 # 7. Appendices plan
-# ---------------------------------------------------------------------------
 
 def build_appendices_plan(ev: Evidence) -> str:
     return f"""# Plano de Apêndices — REV-P v1hf
@@ -1066,9 +1027,7 @@ sem inserir a tabela completa (contém referências a paths locais).
 """
 
 
-# ---------------------------------------------------------------------------
 # 8. Section–Artifact crosswalk (static constant)
-# ---------------------------------------------------------------------------
 
 CROSSWALK: list[dict] = [
     {
@@ -1246,9 +1205,7 @@ CROSSWALK: list[dict] = [
 ]
 
 
-# ---------------------------------------------------------------------------
 # 9. Package summary JSON
-# ---------------------------------------------------------------------------
 
 def build_summary(ev: Evidence, sections_generated: list[str]) -> dict:
     n_crosswalk = len(CROSSWALK)
@@ -1309,9 +1266,7 @@ def build_summary(ev: Evidence, sections_generated: list[str]) -> dict:
     }
 
 
-# ---------------------------------------------------------------------------
 # I/O helpers
-# ---------------------------------------------------------------------------
 
 def write_md(path: Path, content: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -1338,9 +1293,7 @@ def write_json(path: Path, data: dict) -> None:
     print(f"[v1hf] Written: {path.name}")
 
 
-# ---------------------------------------------------------------------------
 # Main
-# ---------------------------------------------------------------------------
 
 def main() -> int:
     print("[v1hf] Loading evidence from pipeline outputs...")

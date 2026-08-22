@@ -1,29 +1,4 @@
-"""REV-P v1r4 — Extended real-vs-real analysis: DINO embeddings joined to the
-163-record primary SEDEC dataset, now with real Sentinel coverage for n=81
-(59 flood_positive + 22 real_clean_sedec_negative — ALL 22 real negatives are
-now covered, after downloading 13 evidence-centered patches this session).
-
-Two SEPARATE, never-mixed analyses (mirrors pipeline_final_v5.py's own
-primary/secondary separation discipline):
-
-  A) Univariate Mann-Whitney screen on the 6 real physical features already
-     used in pipeline_final_v5.py (elevation_m, slope_deg, hand_m_filled, twi,
-     rain_max_24h_chirps, rain_decay_index_api_chirps) PLUS DINO PCA1/PCA2 as
-     two additional candidate features — screened individually, never jammed
-     into one multivariate model together (8 predictors vs 22 minority-class
-     events = 2.75 events/predictor, well below any usable EPV heuristic).
-
-  B) A SEPARATE, clean Firth multivariate model using ONLY DINO PCA1+PCA2
-     (2 predictors vs 22 minority events = 11 events/predictor — meets the
-     conventional >=10 EPV heuristic on its own). This tests whether the
-     auxiliary visual representation alone discriminates real flood-positive
-     from real negative locations, without conflating it with the physical
-     model's already-fragile predictor budget.
-
-No label is created. No training happens against `v5_core` (circular, see
-GAP_estrutural doc). DINO remains auxiliary evidence; physical variables
-remain the causal, primary track — this script never claims otherwise.
-"""
+"""REV-P v1r4 — Extended real-vs-real analysis: DINO embeddings joined to the"""
 from __future__ import annotations
 
 import argparse

@@ -1,6 +1,0 @@
-criterio,valor_observado,limiar,status_19e,observacao
-diagnostico_completo,true,true,19E_PRONTO_COM_RESSALVAS,"inventario, decomposicao, tipologia e hipoteses gerados"
-score_v6_intacto,true,true,19E_PRONTO_COM_RESSALVAS,score_v6 nao alterado
-hipoteses_review_only,true,true,19E_PRONTO_COM_RESSALVAS,hipoteses nao viram score oficial
-lacunas_documentadas,true,true,19E_PRONTO_COM_RESSALVAS,missingness territorial e amostra minima explicitos
-pronto_com_ressalvas,true,true,19E_PRONTO_COM_RESSALVAS,comunicacao cientifica review-only possivel com ressalvas de amostra e missingness

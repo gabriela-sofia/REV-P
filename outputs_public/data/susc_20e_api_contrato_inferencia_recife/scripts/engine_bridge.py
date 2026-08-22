@@ -1,9 +1,4 @@
-"""Ponte pro motor SUSC-20D -- reusa fit_firth/bootstrap/score_point já
-validados (não reimplementa nada de estatística aqui). Precomputa o ponto
-estimado + os 1000 draws de bootstrap UMA VEZ no startup da API (não a cada
-request) -- é a otimização já anotada como necessária em
-`revp_fase2_decisoes_design_contrato.md` seção 1.
-"""
+"""Ponte pro motor SUSC-20D -- reusa fit_firth/bootstrap/score_point já"""
 from __future__ import annotations
 
 import sys
@@ -22,8 +17,7 @@ from susc_20d_score_engine import (  # noqa: E402
 
 
 class RecifeEngine:
-    """Estado precomputado (fit-once) do motor Recife. Instanciar uma vez no
-    startup da API (`app.py`), não por request."""
+    """Estado precomputado (fit-once) do motor Recife. Instanciar uma vez no"""
 
     def __init__(self) -> None:
         self.kept, X, y, self.scaler = load_training_frame()

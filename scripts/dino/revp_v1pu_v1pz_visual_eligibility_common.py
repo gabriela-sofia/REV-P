@@ -1,9 +1,4 @@
-"""Shared helpers for REV-P DINO visual eligibility layer v1pu-v1pz.
-
-Builds a realistic DINO review-only execution queue from committed manifest
-metadata — never from pixel reads, never from scene_date requirements, and
-never creating labels/targets/ground truth.
-"""
+"""Shared helpers for REV-P DINO visual eligibility layer v1pu-v1pz."""
 from __future__ import annotations
 
 import csv
@@ -145,9 +140,7 @@ def classify_dino_eligibility(
     return ("DINO_ELIGIBLE_REVIEW_ONLY", "sentinel_patch_reference_review_only", "")
 
 
-# ---------------------------------------------------------------------------
 # Manifest readers
-# ---------------------------------------------------------------------------
 
 V1FU_MANIFEST = ROOT / "manifests" / "dino_inputs" / \
     "revp_v1fu_dino_sentinel_input_manifest" / "dino_sentinel_input_manifest_v1fu.csv"

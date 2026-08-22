@@ -1,7 +1,4 @@
-"""Valida rain_features_on_demand.py re-buscando a chuva real (Open-Meteo archive)
-pros pontos do v12 cuja fonte original ja era open_meteo_era5_land_archive_api, e
-comparando com os valores ja armazenados em dataset_v12_final.csv.
-"""
+"""Valida rain_features_on_demand.py re-buscando a chuva real (Open-Meteo archive)"""
 from __future__ import annotations
 
 import csv

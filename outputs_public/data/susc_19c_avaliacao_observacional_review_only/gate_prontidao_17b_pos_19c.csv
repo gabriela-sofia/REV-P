@@ -1,6 +1,0 @@
-criterio,valor_observado,limiar,passou,status_17b,observacao
-benchmark_criado,false,false,true,17B_NAO_CRIADO,nenhum benchmark 17B criado
-eventos_distintos,2,>=3,false,17B_NAO_CRIADO,abaixo do minimo de eventos
-regioes,2,>=2,true,17B_NAO_CRIADO,Recife e Curitiba tecnica
-patch_links_fortes,7,>=20,false,17B_NAO_CRIADO,abaixo do minimo de vinculos fortes
-amostra_suficiente,false,true,false,17B_NAO_CRIADO,amostra observacional minima

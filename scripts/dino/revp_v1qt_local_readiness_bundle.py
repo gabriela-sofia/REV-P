@@ -1,8 +1,4 @@
-"""REV-P v1qt — Final local readiness bundle.
-
-Consolidates v1qn-v1qs into a manifest, quality checks, and scientific summary
-for the local DINO execution readiness block.
-"""
+"""REV-P v1qt — Final local readiness bundle."""
 from __future__ import annotations
 
 import argparse

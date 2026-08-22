@@ -1,22 +1,4 @@
-"""REV-P v1r9 (SUSC-22) -- Tarefa 1: auditoria de viabilidade do Clay v1.5 como
-encoder alternativo ao DINOv2 generico nos 52 patches de Recife.
-
-Nao extrai embedding. Nao baixa peso. Nao instala dependencia. Apenas inspeciona
-o que ja existe em disco e confronta com os requisitos publicados do Clay,
-para que a decisao de baixar 1.25-5.16 GB de checkpoint seja tomada por quem
-manda, nao pelo script.
-
-Requisitos do Clay v1.5 conferidos na documentacao oficial (ago/2026):
-  * Entrada = dicionario com `pixels` (B, bandas, H, W), `waves` (comprimento
-    de onda por banda, nm), `gsd`, `time` (semana, hora) e `latlon`.
-  * Normalizacao por sensor: (chip - mean) / std, means/stds em
-    `configs/metadata.yaml`.
-  * Chip de treino 256x256, patch_size=8; encoder ViT dim=1024, depth=24,
-    heads=16 -> embedding de 1024 dims.
-  * Bloco de embedding dinamico condicionado no comprimento de onda: aceita
-    subconjunto de bandas em inferencia.
-  * Checkpoint `v1.5/clay-v1.5.ckpt` (632M params totais, 311M no encoder).
-"""
+"""REV-P v1r9 (SUSC-22) -- Tarefa 1: auditoria de viabilidade do Clay v1.5 como"""
 from __future__ import annotations
 
 import glob

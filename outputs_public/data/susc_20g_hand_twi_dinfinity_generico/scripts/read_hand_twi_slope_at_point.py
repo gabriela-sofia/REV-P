@@ -1,15 +1,4 @@
-"""Leitura observacional de HAND/TWI/declividade no pixel de um ponto lat/lon.
-
-Leitura de coerência física, **não** extração de feature: não escreve dataset, não normaliza,
-não compara com ponto negativo (não existe negativo adjudicado nestas regiões), não alimenta
-modelo. Serve para olhar o valor cru no pixel de um candidato já adjudicado e dizer se ele é
-fisicamente plausível.
-
-Uso:
-    python read_hand_twi_slope_at_point.py --raster-dir <dir_com_hand_twi_slope>
-                                           --lat -22.51625 --lon -43.18828
-                                           [--label "Petropolis/Valparaiso"]
-"""
+"""Leitura observacional de HAND/TWI/declividade no pixel de um ponto lat/lon."""
 
 from __future__ import annotations
 

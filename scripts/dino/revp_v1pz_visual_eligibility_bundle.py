@@ -1,8 +1,4 @@
-"""REV-P v1pz — Visual eligibility bundle.
-
-Consolidates v1pu-v1py into manifest, scientific summary and final doc.
-Status: DINO_VISUAL_QUEUE_READY_REVIEW_ONLY if queue > 0, else FAIL_CLOSED.
-"""
+"""REV-P v1pz — Visual eligibility bundle."""
 from __future__ import annotations
 
 import argparse

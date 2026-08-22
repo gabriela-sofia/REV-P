@@ -54,9 +54,7 @@ PENDING_ISSUES = {
 }
 
 
-# ---------------------------------------------------------------------------
 # Utility
-# ---------------------------------------------------------------------------
 
 def write_csv(path: Path, rows: list[dict[str, Any]], fields: list[str]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -80,9 +78,7 @@ def prepare(path: Path, force: bool) -> None:
     path.mkdir(parents=True, exist_ok=True)
 
 
-# ---------------------------------------------------------------------------
 # Dependency audit
-# ---------------------------------------------------------------------------
 
 def audit_dependencies() -> dict[str, str]:
     results: dict[str, str] = {}
@@ -102,9 +98,7 @@ def geometry_lib_available(deps: dict[str, str]) -> str | None:
     return None
 
 
-# ---------------------------------------------------------------------------
 # Sidecar audit
-# ---------------------------------------------------------------------------
 
 def audit_sidecars(shp_path: Path) -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
@@ -131,9 +125,7 @@ def sidecars_complete(rows: list[dict[str, Any]]) -> bool:
     return all(r["exists"] for r in rows if r["essential"])
 
 
-# ---------------------------------------------------------------------------
 # DBF fallback parser
-# ---------------------------------------------------------------------------
 
 def _parse_dbf_fields(f: Any) -> list[dict[str, Any]]:
     fields: list[dict[str, Any]] = []
@@ -188,9 +180,7 @@ def read_dbf_attributes(dbf_path: Path, class_col: str) -> dict[str, Any]:
         return {"readable": False, "error": str(e)}
 
 
-# ---------------------------------------------------------------------------
 # Geometry reading — pyogrio → geopandas → fiona
-# ---------------------------------------------------------------------------
 
 def _try_pyogrio(shp_path: Path, out_path: Path) -> dict[str, Any]:
     try:
@@ -306,9 +296,7 @@ def attempt_geometry_read(shp_path: Path, out_path: Path,
     }
 
 
-# ---------------------------------------------------------------------------
 # Schema audit
-# ---------------------------------------------------------------------------
 
 def schema_audit(geom_result: dict[str, Any]) -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
@@ -343,9 +331,7 @@ def schema_audit(geom_result: dict[str, Any]) -> list[dict[str, Any]]:
     return rows
 
 
-# ---------------------------------------------------------------------------
 # Spatial extent
-# ---------------------------------------------------------------------------
 
 def spatial_extent_rows(geom_result: dict[str, Any]) -> list[dict[str, Any]]:
     if not geom_result.get("success"):
@@ -362,9 +348,7 @@ def spatial_extent_rows(geom_result: dict[str, Any]) -> list[dict[str, Any]]:
              "lon_max": lon_max, "lat_max": lat_max, "blocker": ""}]
 
 
-# ---------------------------------------------------------------------------
 # Class distribution
-# ---------------------------------------------------------------------------
 
 def class_distribution_rows(geom_result: dict[str, Any],
                               dbf_info: dict[str, Any]) -> list[dict[str, Any]]:
@@ -382,9 +366,7 @@ def class_distribution_rows(geom_result: dict[str, Any],
     return rows
 
 
-# ---------------------------------------------------------------------------
 # v1gq rerun plan
-# ---------------------------------------------------------------------------
 
 def build_v1gq_rerun_plan(geom_result: dict[str, Any],
                             output_dir: Path,
@@ -421,9 +403,7 @@ def build_v1gq_rerun_plan(geom_result: dict[str, Any],
     }
 
 
-# ---------------------------------------------------------------------------
 # v1gq rerun execution
-# ---------------------------------------------------------------------------
 
 def run_v1gq_rerun(rerun_plan: dict[str, Any],
                     gis_root: Path | None,
@@ -493,9 +473,7 @@ def run_v1gq_rerun(rerun_plan: dict[str, Any],
     return base
 
 
-# ---------------------------------------------------------------------------
 # Main audit
-# ---------------------------------------------------------------------------
 
 def run_audit(gis_root: Path | None, output_dir: Path) -> dict[str, Any]:
     ts = datetime.now(timezone.utc).isoformat()
@@ -743,9 +721,7 @@ def run_audit(gis_root: Path | None, output_dir: Path) -> dict[str, Any]:
     }
 
 
-# ---------------------------------------------------------------------------
 # CLI
-# ---------------------------------------------------------------------------
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(

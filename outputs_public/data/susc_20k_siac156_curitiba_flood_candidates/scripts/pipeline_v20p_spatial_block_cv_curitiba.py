@@ -1,34 +1,4 @@
-"""SUSC-20P -- validacao por blocos espaciais (bairro) de Curitiba, rota primaria (5 features).
-
-Motivacao (literatura + achado proprio): o SUSC-20O mostrou que o AUC cai de 0,6459 (LOO-CV
-embaralhado, SUSC-20N) pra 0,5246 (holdout temporal 2026). A literatura de suscetibilidade a
-enchente aponta DUAS fontes possiveis pra esse tipo de colapso, e elas pedem diagnosticos
-diferentes:
-
-  1. Vazamento espacial: autocorrelacao entre unidades do mesmo bairro infla o CV embaralhado
-     porque duas queixas do mesmo bairro (ou proximas) caem uma no treino e outra no teste,
-     entao o modelo "decora" identidade de vizinhanca em vez de aprender fisica de terreno.
-     Estudos que comparam random split vs. spatial block CV relatam AUC 5-15% mais alto sob
-     split aleatorio (ScienceDirect, "Next generation data-driven flood susceptibility
-     modelling with spatial machine learning").
-  2. Deriva temporal/administrativa: o padrao de queixas do SIAC 156 muda ano a ano (ex.: 2025
-     com proporcao de positivos desigual, 2026 e ano parcial sem toda a sazonalidade) --
-     mecanismo distinto de vazamento espacial.
-
-Este script testa a hipotese (1) isoladamente: bloco = bairro (nao interpola coordenada, usa a
-unidade administrativa ja catalogada), nenhum bairro aparece simultaneamente em treino e teste
-de um mesmo fold (GroupKFold, sklearn). Mesma rota causal primaria do SUSC-20N/20M/20O (5
-features, elevation_m fora -- decisao causal documentada em pipeline_v20m_curitiba_primary.py).
-Se o AUC tambem cair sob blocos espaciais, ha vazamento espacial. Se ficar proximo do LOO-CV
-embaralhado (~0,65) e so cair no holdout temporal, o problema e deriva temporal/administrativa,
-nao vazamento espacial.
-
-Reaproveita gate_epv, firth_on_train, univariate_screen_train e temporal_holdout_auc (generica,
-so espera train/test df) de pipeline_v20o_temporal_holdout_curitiba -- nao duplica logica.
-
-Uso:
-    python pipeline_v20p_spatial_block_cv_curitiba.py
-"""
+"""SUSC-20P -- validacao por blocos espaciais (bairro) de Curitiba, rota primaria (5 features)."""
 from __future__ import annotations
 
 import argparse

@@ -1,7 +1,4 @@
-"""REV-P v1qf — DINO execution bridge bundle.
-
-Consolidates v1qa-v1qe into manifest, scientific summary and final doc.
-"""
+"""REV-P v1qf — DINO execution bridge bundle."""
 from __future__ import annotations
 
 import argparse

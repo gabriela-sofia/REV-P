@@ -1,23 +1,4 @@
-"""REV-P v1qx — DINO embedding vs real physical-variable correlation (review-only).
-
-First concrete step toward a multimodal framework: checks whether the DINO
-visual embedding space correlates with REAL, independently measured physical
-variables (elevation, slope) for the subset of Petropolis patches where both
-exist (n=17: real Sentinel imagery in the DINO corpus AND real local
-SGB/CPRM MDE + IBGE BC25 terrain evidence in
-`petropolis_patch_terrain_context_features_v1.csv`).
-
-Methodological boundary (never crossed by this script):
-  * This produces a CORRELATION REPORT, not a model feature. No column here
-    is ever written back as an input to a classifier.
-  * DINO/orbital embeddings remain auxiliary evidence; elevation/slope are the
-    causal physical variables. This script tests whether the auxiliary
-    representation is *consistent with* the causal variables — it never
-    treats the correlation itself as proof of anything, and it never creates
-    a label, target, or ground truth.
-  * n=17 is small. All correlations here are exploratory/directional only,
-    reported with sample size, never with significance-cutoff language.
-"""
+"""REV-P v1qx — DINO embedding vs real physical-variable correlation (review-only)."""
 from __future__ import annotations
 
 import argparse

@@ -1,2 +1,0 @@
-patch_id,regiao,cidade,motivo_exclusao,evidence_type,evidence_tier,status,review_only,ground_truth,eligible_for_training,score_v7_allowed,justificativa_tecnica
-petropolis_00467,petropolis,Petropolis,fenomeno_misto_deslizamento_inundacao_sem_separacao,documentary_context_only,E_contexto_rua_bairro,contextual_bloqueado,true,false,false,false,Petropolis misto/contextual nao entra como observado; permanece bloqueado ate separacao do fenomeno

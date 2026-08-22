@@ -1,4 +1,0 @@
-regiao,n_patches,coverage_territorial_19a,coverage_territorial_19b,coverage_total_19a,coverage_total_19b,territorial_delta,features_que_destravam
-curitiba,100,0.3333,0.3333,0.5589,0.5589,0.0000,MapBiomas_class_majority;exposed_soil_prop;water_prop;impervious_proxy
-petropolis,100,0.3333,0.3333,0.5589,0.5589,0.0000,MapBiomas_class_majority;exposed_soil_prop;water_prop;impervious_proxy
-recife,100,0.3333,0.3333,0.5723,0.5723,0.0000,MapBiomas_class_majority;exposed_soil_prop;water_prop;impervious_proxy

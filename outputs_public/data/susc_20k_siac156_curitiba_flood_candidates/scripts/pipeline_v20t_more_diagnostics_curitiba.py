@@ -1,23 +1,4 @@
-"""SUSC-20T -- mais 3 vertentes testadas (achado real de noticia + 2 tecnicas de literatura).
-
-Continuacao do pedido explicito de esgotar toda alternativa. Tres testes, todos sobre dado ja
-existente (nenhuma aquisicao nova):
-
-1. **Divisao pelo lancamento do CuritibaApp (2026-03-25)** -- achado de noticia real: em
-   25/03/2026 a Prefeitura lancou um app unificado com IA que absorve o 156 gradualmente
-   (bemparana.com.br, curitiba.pr.gov.br). Como isso cai DENTRO da janela de teste jan-jul/2026,
-   testamos se a quebra de AUC se concentra no periodo pos-lancamento.
-2. **`rain_max_24h_chirps` como feature alternativa/adicional** -- coluna ja presente no
-   dataset (nunca usada como feature de modelo), testada como candidata mais simples que os
-   indices de pico/decaimento atuais.
-3. **Treino com peso de recencia (decaimento exponencial)** -- literatura de concept drift
-   (weighted-negative-log-likelihood com meia-vida) recomenda ponderar exemplos recentes mais
-   que antigos em vez de pool flat -- testado como alternativa ao pooling atual (2023-2025
-   com peso igual).
-
-Uso:
-    python pipeline_v20t_more_diagnostics_curitiba.py
-"""
+"""SUSC-20T -- mais 3 vertentes testadas (achado real de noticia + 2 tecnicas de literatura)."""
 from __future__ import annotations
 
 import json
@@ -68,8 +49,7 @@ def rain_max_24h_correlation_by_year(unidades: pd.DataFrame) -> pd.DataFrame:
 
 
 def rain_max_24h_temporal_holdout(df_train: pd.DataFrame, df_test: pd.DataFrame) -> dict:
-    """Substitui os 2 features de chuva atuais por rain_max_24h_chirps (feature bruta ja no
-    dataset, nunca usada como feature de modelo) -- terreno + essa 1 feature de chuva."""
+    """Substitui os 2 features de chuva atuais por rain_max_24h_chirps (feature bruta ja no"""
     feats = ["slope_deg", "hand_m_dinf", "twi_dinf", "rain_max_24h_chirps"]
     return {"feature_cols": feats, **temporal_holdout_auc(df_train, df_test, feats)}
 

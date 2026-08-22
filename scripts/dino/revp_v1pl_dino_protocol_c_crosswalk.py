@@ -1,10 +1,4 @@
-"""REV-P v1pl — DINO ↔ Protocol C crosswalk.
-
-Cross-references the DINO embedding registry with Protocol C observational
-outputs (v1oy decision audit, v1oz DINO review queue, v1ox event-patch linkage,
-v1pf final bundle if present) by patch_id. DINO representation NEVER validates an
-event, creates a label, or trains a model.
-"""
+"""REV-P v1pl — DINO ↔ Protocol C crosswalk."""
 
 from __future__ import annotations
 

@@ -1,9 +1,4 @@
-"""Shared helpers for REV-P DINO execution harness v1pn-v1pt.
-
-Controlled, auditable, fail-closed harness for generating real DINOv2 embeddings.
-NEVER creates labels, training targets, or ground truth. NEVER downloads a model
-unless REVP_DINO_ALLOW_DOWNLOAD=true is explicitly set.
-"""
+"""Shared helpers for REV-P DINO execution harness v1pn-v1pt."""
 from __future__ import annotations
 
 import csv
@@ -88,9 +83,7 @@ def mask_local_path(rel: str) -> str:
     return f"local_only:{path_hash(rel)}"
 
 
-# ---------------------------------------------------------------------------
 # Backend detection
-# ---------------------------------------------------------------------------
 
 def _try_import(name: str) -> tuple[bool, str]:
     try:
@@ -154,9 +147,7 @@ def can_execute_embedding() -> tuple[bool, str]:
     return (info["can_execute"], info["final_status"])
 
 
-# ---------------------------------------------------------------------------
 # Vector row builder (for v1pr output)
-# ---------------------------------------------------------------------------
 
 def build_vector_row_fields() -> list[str]:
     return [
@@ -198,9 +189,7 @@ def make_vector_row(
     }
 
 
-# ---------------------------------------------------------------------------
 # Load smoke embeddings (v1pr → v1ps)
-# ---------------------------------------------------------------------------
 
 def load_smoke_embeddings(registry_path: Path) -> list[dict[str, Any]]:
     """Return valid non-zero 768D embeddings from v1pr feature store."""

@@ -1,24 +1,4 @@
-"""SUSC-20O -- validacao temporal holdout de Curitiba, rota primaria (5 features, SUSC-20N).
-
-LOO-CV e k-fold repetido (SUSC-20M/20N) embaralham unidades no tempo: um ponto de 2023 pode
-cair no fold de teste enquanto um de 2026 treina o modelo, o que superestima capacidade
-preditiva se houver qualquer deriva temporal (mudanca de composicao do SIAC 156, expansao de
-bairro coberto, etc.). Este script testa a alternativa honesta: treina em anos passados, avalia
-em ano nunca visto.
-
-Split: TREINO = 2023-2025 (989 unidades: 318 neg / 671 pos), TESTE = 2026-parcial (282
-unidades: 108 neg / 174 pos, jan-jul). Sem embaralhamento, sem re-sorteio -- e o corte
-cronologico unico que os dados permitem.
-
-Mesma rota primaria do SUSC-20N (5 features, sem elevation_m -- decisao causal, nao
-estatistica, documentada em pipeline_v20m_curitiba_primary.py). EPV checado no TREINO antes de
-ajustar (classe minoritaria = negativo no treino). Scaler ajustado SO no treino (sem vazamento
-pro teste). AUC preditivo = 1 unico corte temporal, nao k-fold -- reportado com cautela (n
-menor, sem repeticao possivel por so haver 1 ano de holdout).
-
-Uso:
-    python pipeline_v20o_temporal_holdout_curitiba.py
-"""
+"""SUSC-20O -- validacao temporal holdout de Curitiba, rota primaria (5 features, SUSC-20N)."""
 from __future__ import annotations
 
 import argparse

@@ -1,19 +1,4 @@
-"""REV-P v1qu — Smoke sample relative-path linker (metadata-only, no pixel reads).
-
-Problem addressed: `dino_smoke_sample_selection_v1qh.csv` selects 32 real patches
-(quota + diversity across CUR/PET/REC) but its `relative_path` column was left
-empty at generation time, so every row in v1qi (asset audit) fails closed with
-`empty_relative_path`. This script resolves, for each smoke row, the expected
-local Sentinel filename under the naming convention already used in
-`PROJETO/data/sentinel/` (`patch_<region>_<patch_number>.tif`) and writes a NEW
-linked artifact — it never rewrites v1qh in place (historical outputs are never
-modified).
-
-Boundary: this script only calls `Path.exists()` (a filesystem stat) to report
-`expected_file_found`. It never opens a file, never reads a pixel, and never
-sets `pixel_read_allowed`/`pixel_read_performed` — those remain the exclusive
-responsibility of v1qi, gated by REVP_DINO_PIXEL_READ_ALLOWED.
-"""
+"""REV-P v1qu — Smoke sample relative-path linker (metadata-only, no pixel reads)."""
 from __future__ import annotations
 
 import argparse

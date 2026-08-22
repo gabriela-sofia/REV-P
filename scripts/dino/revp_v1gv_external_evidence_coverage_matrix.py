@@ -1,25 +1,4 @@
-"""REV-P v1gv: External evidence coverage matrix.
-
-Consolidates GIS and external evidence coverage per patch and region.
-Reads the canonical patch manifest (canonical_patch_id field) and the
-external evidence registry / v1gt overlap audit to populate real statuses.
-
-Field mapping:
-  v1fu manifest: canonical_patch_id, region
-  v1gt overlap audit: patch_id (= canonical_patch_id), coverage_status
-
-Allowed claims: GIS contextualizes territory; GIS is interpretable baseline
-Forbidden: GIS is ground truth; GIS validates DINO; GIS proves vulnerability
-
-Coverage status vocabulary (per indicator per patch):
-  AVAILABLE       – data present, spatially validated for this patch
-  PARTIAL         – data present regionally; patch-level validation pending
-  BBOX_ONLY       – dataset bbox overlaps; no centroid/footprint confirmation
-  BLOCKED         – data exists but blocked (CRS, format, dependency)
-  NOT_ACQUIRED    – source identified; data not yet downloaded
-  LOCAL_ONLY      – data local/private workspace; cannot be versioned
-  MISSING         – source not available or not identified
-"""
+"""REV-P v1gv: External evidence coverage matrix."""
 from __future__ import annotations
 
 import argparse
@@ -309,15 +288,7 @@ LAND_USE_SOURCE_IDS = {"RJ_3303906_USO"}
 
 
 def load_v1gt_land_use_status(v1gt_overlap_path: Path) -> dict[str, str]:
-    """
-    Build per-patch land-use coverage from v1gt overlap audit.
-    Only considers source_ids that represent actual land-use layers.
-    SGB/CPRM hydro and terrain overlaps are excluded — they are not land-use.
-
-    Status mapping:
-      POTENTIALLY_COVERED_BY_CENTROID (from land-use source) -> PARTIAL
-      No land-use source match -> NOT_ACQUIRED
-    """
+    """Build per-patch land-use coverage from v1gt overlap audit."""
     if not v1gt_overlap_path.exists():
         return {}
     rows = read_csv(v1gt_overlap_path)
@@ -344,11 +315,7 @@ def build_coverage_matrix(
     patches: list[dict[str, str]],
     v1gt_land_use: dict[str, str],
 ) -> list[dict[str, Any]]:
-    """
-    Build per-patch coverage matrix rows using real indicator status.
-    Uses canonical_patch_id as the authoritative patch identifier.
-    Integrates v1gt land-use coverage per patch when available.
-    """
+    """Build per-patch coverage matrix rows using real indicator status."""
     rows: list[dict[str, Any]] = []
 
     for patch_row in patches:

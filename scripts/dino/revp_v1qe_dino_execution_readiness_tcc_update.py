@@ -1,8 +1,4 @@
-"""REV-P v1qe — DINO execution readiness TCC update.
-
-Generates TCC-ready tables for execution readiness and safety guardrails.
-Never creates labels, targets, or ground truth.
-"""
+"""REV-P v1qe — DINO execution readiness TCC update."""
 from __future__ import annotations
 
 import argparse

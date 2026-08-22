@@ -1,11 +1,4 @@
-"""REV-P v1pu — Visual asset eligibility audit.
-
-Audits committed manifest references (v1fu Sentinel manifest, v1fm patch
-designation, v1pn inventory, Protocol C outputs) for DINO review-only
-eligibility WITHOUT requiring scene_date confirmation or temporal unlock.
-
-Never reads pixels. Never creates labels/targets/ground truth.
-"""
+"""REV-P v1pu — Visual asset eligibility audit."""
 from __future__ import annotations
 
 import argparse

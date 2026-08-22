@@ -1,9 +1,0 @@
-risco,exemplo_de_frase_errada,correcao,severidade,validator_rule
-overclaim_de_previsao,O REV-P preve enchentes em tempo real.,O REV-P estima suscetibilidade urbana review-only; nao preve enchentes.,alta,previsao_operacional_exige_negacao_na_linha
-ground_truth_falso,Cada patch tem ground truth de enchente.,Nao ha ground truth patch-level; a evidencia e review-only.,alta,ground_truth_patch_exige_negacao_na_linha
-negativo_falso,O background e o conjunto de patches negativos.,O background e unlabeled_background e nunca e negativo.,alta,background_negativo_exige_negacao_na_linha
-sar_como_geometria_oficial,O SAR de Curitiba e a geometria oficial de ocorrencia.,O SAR e footprint pos-evento e nao e geometria oficial.,alta,sar_geometria_oficial_exige_negacao_na_linha
-score_v7_implicito,A nova calibracao (score_v7) ja esta pronta.,O score_v7 nao foi criado e permanece bloqueado.,media,score_v7_created_deve_ser_false
-estatistica_forte_n7,O resultado e estatisticamente significativo.,Com 7 patches nao ha conclusao estatistica forte; leitura exploratoria review-only.,alta,strong_stats_re_bloqueia_texto_publico
-petropolis_promovido,Petropolis e uma regiao observacional avaliada.,"Petropolis e fenomeno misto sem separacao e permanece bloqueado, fora de observado.",media,petropolis_nao_pode_aparecer_como_observado
-missingness_omitido,A cobertura territorial do REV-P e completa.,Falta cobertura territorial (MapBiomas/solo/agua/impervious); missingness explicito.,media,missingness_territorial_deve_aparecer

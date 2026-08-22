@@ -1,10 +1,4 @@
-"""REV-P v1pk — DINO PCA / cluster exploratory layer.
-
-Projects VALID review-only embeddings to 2D (PCA) and assigns exploratory
-clusters. A cluster is NOT a class: `can_be_used_as_class`, `can_create_label`
-and `can_train_model` are always false. With fewer than 2 valid embeddings the
-outputs are empty with header (fail-closed).
-"""
+"""REV-P v1pk — DINO PCA / cluster exploratory layer."""
 
 from __future__ import annotations
 

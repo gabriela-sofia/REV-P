@@ -1,10 +1,4 @@
-"""REV-P v1pi — DINO embedding quality audit.
-
-Audits the v1ph feature store registry. One audit row per embedding with explicit
-boolean checks (dim 768, no NaN/inf, norm > 0, patch_id present, region present,
-not fixture, not duplicate) plus the always-false label/target/training guardrails.
-Empty registry ⇒ empty audit with header (fail-closed).
-"""
+"""REV-P v1pi — DINO embedding quality audit."""
 
 from __future__ import annotations
 

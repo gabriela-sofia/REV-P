@@ -1,20 +1,4 @@
-"""SUSC-20U -- diagnostico de nao-linearidade (GBM raso) sobre as MESMAS 5 features causais.
-
-Todas as vertentes lineares testadas ate aqui (Firth, logistic simples, PU bagging, peso de
-recencia) ficam presas perto de AUC~0,52 no holdout temporal de 2026. Este diagnostico
-pergunta uma coisa distinta: sera que a relacao entre as features fisico-causais e o rotulo e
-NAO-LINEAR (limiares, interacoes), e um modelo linear simplesmente nao consegue captura-la --
-independente de qual seja a causa da mudanca ano-a-ano?
-
-**Isto e um diagnostico, nao uma proposta de rota primaria.** Gradient boosting raso
-(max_depth=2, sem busca de hiperparametro) sobre as MESMAS 5 features causais de sempre
-(nenhuma feature nova, nenhuma orbital/proxy). Nao respeita o mesmo piso de EPV que rege a
-rota Firth -- uma arvore rasa ja tem mais parametros efetivos que 5 coeficientes lineares, e
-isso e uma limitacao real, nao escondida.
-
-Uso:
-    python pipeline_v20u_nonlinear_diagnostic_curitiba.py
-"""
+"""SUSC-20U -- diagnostico de nao-linearidade (GBM raso) sobre as MESMAS 5 features causais."""
 from __future__ import annotations
 
 import json
@@ -89,8 +73,7 @@ def gbm_spatial_block_cv(unidades: pd.DataFrame, feature_cols: list[str],
 
 def gbm_hyperparam_sensitivity(df_train: pd.DataFrame, df_test: pd.DataFrame,
                                 feature_cols: list[str]) -> pd.DataFrame:
-    """Confere se o resultado sobrevive a variacoes razoaveis de hiperparametro (nao foi
-    escolhido por busca -- checa se e fragil a mudanca pequena)."""
+    """Confere se o resultado sobrevive a variacoes razoaveis de hiperparametro (nao foi"""
     dtr = df_train.dropna(subset=feature_cols)
     dte = df_test.dropna(subset=feature_cols)
     Xtr, ytr = dtr[feature_cols].values, dtr["label"].astype(int).values

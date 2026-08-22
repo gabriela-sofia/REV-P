@@ -1,23 +1,4 @@
-"""REV-P v1qz — DINO embeddings joined to real SEDEC Recife records (descriptive only).
-
-Spatial-matches the 163-record primary real-vs-real SEDEC dataset (from
-`recife_modelo_final_v5/pipeline_final_v5.py`, PROJETO) to the 37 real Recife
-Sentinel patches by point-in-bbox containment (SEDEC lat/lon vs. patch raster
-bounds reprojected to WGS84). Only 14/163 records fall inside a patch we have
-Sentinel imagery for (8 unique patches) — this script reports that honestly
-and computes a DESCRIPTIVE-ONLY comparison of DINO embedding structure
-(PCA projection) between label=1 (n=11) and label=0 (n=3).
-
-Methodological boundary (deliberately strict here, stricter than v1qx):
-  * n=3 negatives is far below the >=10 events-per-predictor heuristic that
-    the underlying pipeline_final_v5.py itself already flagged as fragile at
-    n=22. NO p-value, AUC, or coefficient from this script may be read as
-    evidence of anything. Output is descriptive statistics only.
-  * This does NOT retrain or extend the Firth/bootstrap/LOO-AUC model in
-    pipeline_final_v5.py. It is a separate, clearly-labeled diagnostic.
-  * Never creates a label, target, or ground truth. DINO embeddings remain
-    auxiliary/visual evidence, never causal.
-"""
+"""REV-P v1qz — DINO embeddings joined to real SEDEC Recife records (descriptive only)."""
 from __future__ import annotations
 
 import argparse

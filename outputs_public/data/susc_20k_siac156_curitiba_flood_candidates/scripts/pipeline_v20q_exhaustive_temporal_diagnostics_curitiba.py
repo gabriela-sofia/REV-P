@@ -1,35 +1,4 @@
-"""SUSC-20Q -- bateria exaustiva de diagnosticos do colapso de AUC prospectivo em Curitiba.
-
-O SUSC-20O achou AUC caindo de 0,6459 (LOO-CV embaralhado) pra 0,5246 (holdout temporal 2026).
-O SUSC-20P descartou vazamento espacial (spatial block CV = 0,6442, igual ao embaralhado).
-Por pedido explicito (2026-08-02): testar exaustivamente toda vertente que a literatura oferece
-pra diagnosticar a causa remanescente -- uma tarefa de cada vez dentro deste script, cada
-diagnostico independente e reportado separadamente, nenhum vira decisao de metodologia sem
-revisao humana.
-
-Cinco diagnosticos, todos sobre dado ja existente (nenhuma aquisicao nova):
-
-1. Bootstrap CI no AUC do holdout temporal -- a queda de 0,65->0,52 e real ou parcialmente
-   ruido de amostra pequena (n_teste~280)?
-2. Ablacao terreno-so vs. chuva-so sob holdout temporal -- qual grupo de feature carrega o
-   colapso? (terreno = causal/estatico; chuva = pode carregar deriva administrativa)
-3. Walk-forward multi-corte -- o colapso e especifico de 2026 ou aparece em qualquer corte
-   prospectivo? (treino 2023->teste 2024; treino 2023-24->teste 2025; treino 2023-25->teste
-   2026 = SUSC-20O)
-4. Holdout casado por estacao -- treino Jan-Jul de 2023-2025, teste Jan-Jul 2026 (controla
-   sazonalidade isolando de deriva administrativa entre anos)
-5. Estabilidade de coeficiente por ano -- Firth ajustado em cada ano isoladamente, sinal e
-   significancia comparados
-6. Estabilidade de composicao/metadado por ano -- confidence_tier, source_registry, categoria
-   'assunto', negative_source_type, duplicate_group_count e rain_status comparados ano a ano,
-   pra checar se 2026 tem um processo de geracao de dado (nao fisico) visivelmente diferente
-   dos anos que generalizaram bem (2024, 2025 no diagnostico 3)
-
-Reaproveita gate_epv/firth_on_train/temporal_holdout_auc de pipeline_v20o (nao duplica logica).
-
-Uso:
-    python pipeline_v20q_exhaustive_temporal_diagnostics_curitiba.py
-"""
+"""SUSC-20Q -- bateria exaustiva de diagnosticos do colapso de AUC prospectivo em Curitiba."""
 from __future__ import annotations
 
 import argparse
@@ -131,9 +100,7 @@ def walk_forward_cutoffs(unidades: pd.DataFrame, feature_cols: list[str]) -> pd.
 def seasonal_matched_holdout(unidades: pd.DataFrame, feature_cols: list[str],
                               test_year: int = 2026, train_years=(2023, 2024, 2025),
                               months=(1, 7)) -> dict:
-    """Treino = mesma janela Jan-Jul dos anos anteriores; teste = Jan-Jul do ano-alvo.
-    Controla sazonalidade -- se o AUC melhorar bastante vs. o holdout temporal padrao (treino
-    ano-cheio, teste parcial), sazonalidade nao-comparavel era parte real da causa."""
+    """Treino = mesma janela Jan-Jul dos anos anteriores; teste = Jan-Jul do ano-alvo."""
     m_lo, m_hi = months
     janela = unidades[unidades["month"].between(m_lo, m_hi)]
     df_train = janela[janela["year"].isin(train_years)]

@@ -1,19 +1,4 @@
-"""REV-P v1gz: Scientific Evidence Master Audit.
-
-Consolidates v1gu–v1gy into a comprehensive evidence audit:
-- maps each allowed claim to supporting evidence (READY/PARTIAL/BLOCKED)
-- explicitly blocks forbidden claims with technical reasoning
-- audits figure/table quality and captions
-- formalizes review gate as a methodological stage (no labels created)
-- identifies remaining scientific gaps
-- generates readiness matrix for TCC writing
-
-All outputs local-only; no heavy binaries versioned.
-Forbidden claims verified explicitly.
-Corpus constraints (12 patches) documented.
-GIS contextual-only, not ground-truth.
-No predictions, labels, targets, classification, or multimodal claims.
-"""
+"""REV-P v1gz: Scientific Evidence Master Audit."""
 from __future__ import annotations
 
 import argparse

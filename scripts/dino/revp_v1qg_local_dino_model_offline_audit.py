@@ -1,13 +1,4 @@
-"""REV-P v1qg — Local DINOv2 model offline audit.
-
-Audits a locally available DINOv2 (with-registers) model directory WITHOUT
-downloading anything and WITHOUT running inference. Reads config only.
-
-Gates honoured:
-  * REVP_DINO_MODEL_PATH must exist;
-  * REVP_DINO_ALLOW_DOWNLOAD must be false;
-  * HF_HUB_OFFLINE should be 1.
-"""
+"""REV-P v1qg — Local DINOv2 model offline audit."""
 from __future__ import annotations
 
 import argparse

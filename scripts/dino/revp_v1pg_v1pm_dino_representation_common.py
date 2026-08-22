@@ -1,13 +1,4 @@
-"""Shared helpers for REV-P DINO representation layer v1pg-v1pm.
-
-This block builds an auditable, review-only DINO/embedding representation layer
-integrated with Protocol C. DINOv2 embeddings are treated as a self-supervised
-VISUAL/SEMANTIC representation of Sentinel patches — never as a supervised label,
-training target, ground truth, or event validator.
-
-All outputs are review-only, exploratory, contextual, or blocked. This module
-NEVER creates operational labels, training targets, or ground truth.
-"""
+"""Shared helpers for REV-P DINO representation layer v1pg-v1pm."""
 
 from __future__ import annotations
 
@@ -25,9 +16,7 @@ DATASETS = ROOT / "datasets"
 SCHEMAS = DATASETS / "schemas"
 DOCS = ROOT / "docs" / "metodologia_cientifica"
 
-# ---------------------------------------------------------------------------
 # Constants
-# ---------------------------------------------------------------------------
 
 EXPECTED_DINO_DIM = 768
 
@@ -86,9 +75,7 @@ REGION_ALIASES: dict[str, str] = {
 }
 
 
-# ---------------------------------------------------------------------------
 # CSV / JSON IO
-# ---------------------------------------------------------------------------
 
 def write_csv(path: Path, rows: list[dict[str, Any]], fields: list[str]) -> None:
     """Write CSV; always writes the header row even when ``rows`` is empty."""
@@ -142,9 +129,7 @@ def write_doc(path: Path, title: str, paragraphs: list[str]) -> None:
     )
 
 
-# ---------------------------------------------------------------------------
 # Paths / hashing
-# ---------------------------------------------------------------------------
 
 def sanitized_rel_path(path: Path, base: Path = ROOT) -> str:
     """Return a POSIX relative path, never an absolute/private Windows path."""
@@ -173,9 +158,7 @@ def normalize_region(raw: str) -> str:
     return REGION_ALIASES.get(key, (raw or "").strip().upper() or "UNKNOWN")
 
 
-# ---------------------------------------------------------------------------
 # Embedding parsing — supports many on-disk shapes
-# ---------------------------------------------------------------------------
 
 _NUM_RE = re.compile(r"[-+]?\d*\.?\d+(?:[eE][-+]?\d+)?")
 _DIM_COL_RE = re.compile(r"^(?:dim_|f|embedding_|emb_|v|feat_)(\d+)$")
@@ -212,15 +195,7 @@ def parse_embedding_from_text(text: str) -> list[float] | None:
 
 
 def parse_embedding_from_row(row: dict[str, Any]) -> list[float] | None:
-    """Extract an embedding vector from one CSV/JSON row in any supported shape.
-
-    Supported shapes:
-      * ``embedding`` / ``vector`` / ``features`` column holding a JSON or
-        string list;
-      * indexed columns ``dim_0..dim_767`` / ``f0..f767`` /
-        ``embedding_0..embedding_767`` (and a few aliases);
-      * a flat row of exactly EXPECTED_DINO_DIM numeric columns.
-    """
+    """Extract an embedding vector from one CSV/JSON row in any supported shape."""
     if not isinstance(row, dict):
         return None
 
@@ -260,9 +235,7 @@ def parse_embedding_from_row(row: dict[str, Any]) -> list[float] | None:
     return None
 
 
-# ---------------------------------------------------------------------------
 # Vector validation & metrics
-# ---------------------------------------------------------------------------
 
 def vector_stats(vec: list[float]) -> dict[str, Any]:
     n = len(vec)
@@ -315,9 +288,7 @@ def euclidean_distance(a: list[float], b: list[float]) -> float:
     return math.sqrt(sum((x - y) ** 2 for x, y in zip(a, b)))
 
 
-# ---------------------------------------------------------------------------
 # PCA (numpy with pure-python fallback)
-# ---------------------------------------------------------------------------
 
 def pca_2d(vectors: list[list[float]]) -> tuple[list[tuple[float, float]], tuple[float, float]]:
     """Project vectors to 2D. Returns (coords, (evr_x, evr_y))."""
@@ -386,9 +357,7 @@ def _pca_2d_pure(vectors: list[list[float]]) -> tuple[list[tuple[float, float]],
     return (coords, (l1 / total, l2 / total))
 
 
-# ---------------------------------------------------------------------------
 # Deterministic k-means (numpy with pure-python fallback)
-# ---------------------------------------------------------------------------
 
 def kmeans_simple(vectors: list[list[float]], k: int, iters: int = 25) -> list[int]:
     """Deterministic k-means. Seeds with evenly spaced points; no randomness."""
@@ -444,9 +413,7 @@ def _kmeans_pure(vectors: list[list[float]], k: int, iters: int) -> list[int]:
     return labels
 
 
-# ---------------------------------------------------------------------------
 # Fixture / synthetic detection
-# ---------------------------------------------------------------------------
 
 def is_fixture_or_synthetic(text: str) -> bool:
     low = (text or "").lower()
@@ -457,9 +424,7 @@ def is_fixture_patch(patch_id: str) -> bool:
     return bool(FIXTURE_PATCH_RE.match((patch_id or "").strip().upper()))
 
 
-# ---------------------------------------------------------------------------
 # Guardrails
-# ---------------------------------------------------------------------------
 
 def assert_no_forbidden_true(rows: list[dict[str, Any]], label: str) -> None:
     for i, row in enumerate(rows):
@@ -486,17 +451,10 @@ def require_no_abs_paths(rows: list[dict[str, Any]], label: str) -> None:
                 raise ValueError(f"Absolute path in {label} row {i} field '{k}': {v!r}")
 
 
-# ---------------------------------------------------------------------------
 # Shared analysis loader — re-parses VALID vectors for v1pj/v1pk/v1pl
-# ---------------------------------------------------------------------------
 
 def load_valid_embeddings(root: Path, discovery_path: Path, registry_path: Path) -> list[dict[str, Any]]:
-    """Re-parse VALID, non-duplicate embedding vectors for downstream analysis.
-
-    Joins re-parsed source vectors to the v1ph registry by vector sha256, keeping
-    only rows the registry marks ``VALID_REVIEW_ONLY`` and not duplicate. Returns
-    dicts with keys: embedding_id, patch_id, alias, region, vector.
-    """
+    """Re-parse VALID, non-duplicate embedding vectors for downstream analysis."""
     registry = read_csv(registry_path)
     valid_sha: dict[str, dict[str, str]] = {}
     for r in registry:
@@ -533,9 +491,7 @@ def load_valid_embeddings(root: Path, discovery_path: Path, registry_path: Path)
     return out
 
 
-# ---------------------------------------------------------------------------
 # Env-overridable path helper
-# ---------------------------------------------------------------------------
 
 def _p(env: str, default: Path) -> Path:
     return Path(os.environ[env]) if env in os.environ else default

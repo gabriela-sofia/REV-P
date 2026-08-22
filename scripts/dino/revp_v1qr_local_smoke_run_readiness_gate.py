@@ -1,8 +1,4 @@
-"""REV-P v1qr — Local smoke run readiness gate.
-
-Consolidates v1qn/v1qo/v1qg/v1qi to decide if real smoke embedding can run.
-Does NOT trigger any embedding execution.
-"""
+"""REV-P v1qr — Local smoke run readiness gate."""
 from __future__ import annotations
 
 import argparse

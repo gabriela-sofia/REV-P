@@ -1,9 +1,4 @@
-"""REV-P v1pn — Patch visual asset inventory (metadata-only).
-
-Scans known repo directories for image files eligible for DINO embedding.
-Reads ONLY metadata (path, name, size, extension) — NEVER opens pixels.
-Masks local_runs/ paths. Filters fixtures/synthetic.
-"""
+"""REV-P v1pn — Patch visual asset inventory (metadata-only)."""
 from __future__ import annotations
 
 import argparse

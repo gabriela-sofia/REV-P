@@ -1,13 +1,4 @@
-"""SUSC-20F -- chuva sob demanda via Open-Meteo ERA5-Land archive API (publica, sem
-autenticacao). Mesma formula exata do `fetch_rain_leadA_positives.py` (SUSC-20B):
-14 dias de lookback terminando no dia anterior a `end_date`, rain_max_24h = maximo
-diario da janela, rain_decay_index_api = indice de precipitacao antecedente com
-decaimento exponencial k=0.85.
-
-Depois aplica a ortogonalizacao JA TREINADA (beta/intercept da fonte
-`open_meteo_era5_land_archive_api`, `v12_orthogonalization_stats.json`, SUSC-20C) --
-nao reajusta nada, so aplica a formula linear ja fitada aos 97 pontos dessa fonte.
-"""
+"""SUSC-20F -- chuva sob demanda via Open-Meteo ERA5-Land archive API (publica, sem"""
 from __future__ import annotations
 
 from datetime import date, timedelta
@@ -26,9 +17,7 @@ ORTHO_INTERCEPT = 2.3942
 
 
 def fetch_rain_window(lat: float, lon: float, end_date: date) -> Optional[dict]:
-    """Retorna {rain_max_24h, rain_decay_index_api, n_days_found} pra janela de 14
-    dias terminando no dia anterior a end_date, ou None se a API falhar ou nenhum
-    dia real for encontrado (fail-closed, nunca inventa chuva)."""
+    """Retorna {rain_max_24h, rain_decay_index_api, n_days_found} pra janela de 14"""
     start = end_date - timedelta(days=LOOKBACK_DAYS)
     last = end_date - timedelta(days=1)
     url = (
@@ -67,9 +56,7 @@ def fetch_rain_window(lat: float, lon: float, end_date: date) -> Optional[dict]:
 
 
 def rain_features_for_query(lat: float, lon: float, end_date: date) -> Optional[dict]:
-    """Feature completo pronto pro motor: rain_decay_index_api_chirps +
-    rain_peak_residual_orthogonalized (usando os coeficientes ja treinados da fonte
-    open_meteo_era5_land_archive_api)."""
+    """Feature completo pronto pro motor: rain_decay_index_api_chirps +"""
     base = fetch_rain_window(lat, lon, end_date)
     if base is None:
         return None

@@ -1,47 +1,4 @@
-"""SUSC-20L -- engenharia de features fisico-hidrologicas para os pontos SIAC 156 de
-Curitiba (positivos v20k2 + negativos v20k3), espelhando o metodo ja validado do
-dataset v12 de Recife (SUSC-20B).
-
-Schema-alvo (identico ao `dataset_eventos_features_v12_final.csv`):
-    elevation_m, slope_deg, hand_m_dinf, twi_dinf,
-    rain_max_24h_chirps, rain_decay_index_api_chirps,
-    mapbiomas_class_2023, rain_data_source,
-    rain_peak_residual_orthogonalized
-
-Equivalencias de fonte por etapa (o que e identico a Recife e o que e o analogo local):
-
-  terreno   -- AMOSTRAGEM de raster ja processado, nao recalculo. Recife amostrou os
-               rasters D-infinity derivados do DTM PE3D 1m (EPSG:31985); Curitiba
-               amostra os rasters D-infinity de SUSC-20G derivados do MDT SGB/CPRM 10m
-               (EPSG:31982). Mesmo pipeline WhiteboxTools 2.4.0, mesmas regras de
-               NODATA do `read_hand_twi_slope_at_point.py` (SUSC-20G).
-  chuva     -- Open-Meteo ERA5-Land archive API, MESMA formula de
-               `fetch_rain_leadA_positives.py` (SUSC-20B): janela de 14 dias terminando
-               no dia ANTERIOR ao evento (nunca inclui o dia do evento),
-               rain_max_24h = maximo diario da janela, indice API com decaimento
-               k=0.85. Os nomes de coluna com sufixo `_chirps` sao legado do v12 de
-               Recife (la 181 pontos vieram de CHIRPS e 97 de Open-Meteo); a coluna
-               `rain_data_source` e quem diz a fonte real. Curitiba tem fonte unica:
-               `open_meteo_era5_land_archive_api`.
-               Divergencia declarada: timezone `America/Sao_Paulo` em vez de
-               `America/Recife` (fuso local correto de cada regiao; ambos UTC-3 sem
-               horario de verao no periodo coberto, entao os cortes diarios coincidem).
-  mapbiomas -- MapBiomas Colecao 9, banda `classification_2023`, escala 30 m, mesmo
-               asset publico ja usado em SUSC-19B/19F.
-  ortogon.  -- `orthogonalize_per_source`, logica identica a `build_v12_dataset.py`,
-               refitada nos pontos de Curitiba (nao herda beta/intercept de Recife --
-               sao regioes e regimes de chuva distintos).
-
-Fail-closed em toda etapa: valor ausente vira NaN + coluna `*_status` explicita.
-Nada e imputado, interpolado ou preenchido com media.
-
-Cache: as respostas da API de chuva e do Earth Engine sao gravadas em `--cache-dir`
-(dentro de `local_runs/`, git-ignored) para retomada sem repetir chamada de rede.
-
-Uso:
-    python build_v20l_curitiba_features.py                 # roda tudo
-    python build_v20l_curitiba_features.py --skip-rain     # so terreno + mapbiomas
-"""
+"""SUSC-20L -- engenharia de features fisico-hidrologicas para os pontos SIAC 156 de"""
 
 from __future__ import annotations
 
@@ -93,9 +50,7 @@ MAPBIOMAS_BAND = "classification_2023"
 MAPBIOMAS_SCALE = 30
 
 
-# ---------------------------------------------------------------------------
 # entrada
-# ---------------------------------------------------------------------------
 def load_points(pos_csv: Path = POS_CSV, neg_csv: Path = NEG_CSV) -> pd.DataFrame:
     pos = pd.read_csv(pos_csv, encoding="utf-8")
     neg = pd.read_csv(neg_csv, encoding="utf-8")
@@ -114,9 +69,7 @@ def load_points(pos_csv: Path = POS_CSV, neg_csv: Path = NEG_CSV) -> pd.DataFram
     return df
 
 
-# ---------------------------------------------------------------------------
 # 1. terreno
-# ---------------------------------------------------------------------------
 def _invalid(value: float, nodata) -> bool:
     return (not np.isfinite(value)) or value <= -32767 or (nodata is not None and value == nodata)
 
@@ -154,12 +107,9 @@ def extract_terrain(df: pd.DataFrame, raster_dir: Path) -> pd.DataFrame:
     return out
 
 
-# ---------------------------------------------------------------------------
 # 2. chuva
-# ---------------------------------------------------------------------------
 def _archive_request(lats, lons, start: date, end: date) -> list[dict]:
-    """Requisicao (possivelmente multi-ponto) ao archive. Retorna uma entrada por
-    coordenada, na ordem pedida."""
+    """Requisicao (possivelmente multi-ponto) ao archive. Retorna uma entrada por"""
     url = (f"{ARCHIVE_URL}?latitude={','.join(f'{v}' for v in lats)}"
            f"&longitude={','.join(f'{v}' for v in lons)}"
            f"&start_date={start.isoformat()}&end_date={end.isoformat()}"
@@ -214,21 +164,7 @@ def rain_window_features(series: dict, event_date: date) -> dict:
 
 
 def extract_rain(df: pd.DataFrame, cache_dir: Path, batch: int = 100, sleep_s: float = 0.5) -> pd.DataFrame:
-    """Duas passadas, para nao repetir a mesma serie centenas de vezes:
-
-    A) descoberta de celula -- requisicao curta (2 dias) em lote pras 848 coordenadas
-       unicas; a API devolve o centro da celula de grade que efetivamente atende cada
-       coordenada. Coordenadas que caem na mesma celula compartilham exatamente a mesma
-       serie de precipitacao.
-    B) serie completa -- uma requisicao por CELULA distinta, cobrindo todo o span de
-       datas necessario, feita no centro da celula.
-
-    Duas propriedades tornam isso identico a pedir a janela isolada ponto a ponto (como
-    o script de Recife faz): (i) a soma diaria de uma data nao depende do intervalo
-    requisitado; (ii) o centro da celula resolve para ela mesma (verificado por assert).
-    A cadeia inteira ainda e checada de ponta a ponta por `qa_rain_window_equivalence`,
-    que refaz a requisicao isolada nas coordenadas ORIGINAIS de uma amostra.
-    """
+    """Duas passadas, para nao repetir a mesma serie centenas de vezes:"""
     cell_path = cache_dir / "rain_cell_map.json"
     series_path = cache_dir / "rain_cell_series.json"
     cell_map = json.loads(cell_path.read_text()) if cell_path.exists() else {}
@@ -295,8 +231,7 @@ def extract_rain(df: pd.DataFrame, cache_dir: Path, batch: int = 100, sleep_s: f
 
 def qa_rain_window_equivalence(df: pd.DataFrame, feats: pd.DataFrame, cache_dir: Path,
                                n_sample: int = 20, seed: int = 20260731) -> dict:
-    """Refaz a requisicao ISOLADA de 14 dias (exatamente como o script de Recife faz)
-    para uma amostra e confere que bate com o valor recortado do span longo."""
+    """Refaz a requisicao ISOLADA de 14 dias (exatamente como o script de Recife faz)"""
     rng = np.random.default_rng(seed)
     ok_idx = feats.index[feats["rain_status"].isin(["OK", "JANELA_PARCIAL"])]
     sample = rng.choice(ok_idx, size=min(n_sample, len(ok_idx)), replace=False)
@@ -317,9 +252,7 @@ def qa_rain_window_equivalence(df: pd.DataFrame, feats: pd.DataFrame, cache_dir:
     return report
 
 
-# ---------------------------------------------------------------------------
 # 3. mapbiomas
-# ---------------------------------------------------------------------------
 def extract_mapbiomas(df: pd.DataFrame, cache_dir: Path, chunk: int = 400) -> pd.DataFrame:
     import ee
 
@@ -360,9 +293,7 @@ def extract_mapbiomas(df: pd.DataFrame, cache_dir: Path, chunk: int = 400) -> pd
     return out
 
 
-# ---------------------------------------------------------------------------
 # 4. ortogonalizacao (logica identica a build_v12_dataset.py, SUSC-20B)
-# ---------------------------------------------------------------------------
 def orthogonalize_single(d: pd.DataFrame):
     x = d["rain_decay_index_api_chirps"].values.reshape(-1, 1)
     y = d["rain_max_24h_chirps"].values
@@ -390,7 +321,6 @@ def orthogonalize_per_source(df: pd.DataFrame):
     return df, reports
 
 
-# ---------------------------------------------------------------------------
 def main(argv=None) -> int:
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("--raster-dir", default=str(DEFAULT_RASTER_DIR))

@@ -1,9 +1,4 @@
-"""Comparação pixel a pixel entre dois rasters de mesma grade.
-
-Usado pela validação de regressão do script D-infinity contra os rasters já existentes do
-v12 de Recife. Não faz reamostragem nem reprojeção de propósito: se a grade não bate, é erro,
-não algo a corrigir silenciosamente.
-"""
+"""Comparação pixel a pixel entre dois rasters de mesma grade."""
 
 from __future__ import annotations
 

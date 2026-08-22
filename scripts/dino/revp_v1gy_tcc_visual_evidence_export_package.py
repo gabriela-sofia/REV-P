@@ -1,15 +1,4 @@
-"""REV-P v1gy: TCC visual evidence export package.
-
-Reads local outputs from v1gu/v1gv/v1gw/v1gx and produces:
-- publication-ready figures (PNG, matplotlib)
-- clean CSV tables for LaTeX conversion
-- artifact manifest with status, captions, and limitations
-- summary JSON with counts and guardrail confirmation
-
-Forbidden outputs: labels, targets, predictions, ground-truth claims,
-clustering-as-class, GIS-as-ground-truth, multimodal, heavy binaries in git.
-All outputs go to local_runs/tcc_figures/v1gy/.
-"""
+"""REV-P v1gy: TCC visual evidence export package."""
 from __future__ import annotations
 
 import argparse
@@ -63,9 +52,7 @@ REGION_DISPLAY = {
 }
 
 
-# ---------------------------------------------------------------------------
 # I/O helpers
-# ---------------------------------------------------------------------------
 
 def read_csv(path: Path) -> list[dict[str, str]]:
     if not path.exists():
@@ -101,9 +88,7 @@ def rel(path: Path) -> str:
         return str(path)
 
 
-# ---------------------------------------------------------------------------
 # Caption validation
-# ---------------------------------------------------------------------------
 
 def check_caption(caption: str) -> list[str]:
     import re
@@ -114,9 +99,7 @@ def check_caption(caption: str) -> list[str]:
     ]
 
 
-# ---------------------------------------------------------------------------
 # Figure generators
-# ---------------------------------------------------------------------------
 
 def _patch_region(patch_id: str, reg_data: dict[str, Any]) -> str:
     for region, info in reg_data.get("centroids", {}).items():
@@ -455,9 +438,7 @@ def generate_external_evidence_coverage(
     return "READY"
 
 
-# ---------------------------------------------------------------------------
 # Table generators
-# ---------------------------------------------------------------------------
 
 def build_table_embedding_corpus_summary(reg_data: dict[str, Any]) -> list[dict[str, Any]]:
     rows = []
@@ -557,9 +538,7 @@ def build_table_figures_manifest(v1gx_dir: Path) -> list[dict[str, Any]]:
     return rows
 
 
-# ---------------------------------------------------------------------------
 # Manifest builder
-# ---------------------------------------------------------------------------
 
 def build_manifest(figure_statuses: dict[str, str]) -> list[dict[str, Any]]:
     entries = [
@@ -761,9 +740,7 @@ def build_manifest(figure_statuses: dict[str, str]) -> list[dict[str, Any]]:
     return entries
 
 
-# ---------------------------------------------------------------------------
 # Main run
-# ---------------------------------------------------------------------------
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(

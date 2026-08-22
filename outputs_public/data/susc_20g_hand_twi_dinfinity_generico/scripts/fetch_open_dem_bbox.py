@@ -1,16 +1,4 @@
-"""Baixa apenas a janela de uma bbox a partir de um DEM aberto publicado como COG.
-
-Motivo de existir: os DEMs globais são publicados em tiles de 1°×1° (~50 MB cada). Ler o COG
-remoto por `/vsicurl` e recortar a bbox na leitura traz só os blocos necessários — mínimo de
-dado necessário, sem baixar tile inteiro.
-
-Sem credencial, sem token: só funciona com bucket/HTTP público. Se a fonte exigir login, o
-script falha alto em vez de tentar contornar.
-
-Uso:
-    python fetch_open_dem_bbox.py --url <cog_url> --bbox lon_min,lat_min,lon_max,lat_max
-                                  --out <saida.tif> [--dst-crs EPSG:31984] [--dst-res 30.0]
-"""
+"""Baixa apenas a janela de uma bbox a partir de um DEM aberto publicado como COG."""
 
 from __future__ import annotations
 

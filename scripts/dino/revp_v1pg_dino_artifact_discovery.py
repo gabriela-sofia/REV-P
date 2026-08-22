@@ -1,10 +1,4 @@
-"""REV-P v1pg — DINO artifact discovery (metadata-only).
-
-Scans repository directories for DINO/embedding-related artifacts using term
-matching on file names and CSV headers. Reads metadata only (name, size, header
-terms) — never reads embedding pixels or raster data. Emits relative POSIX
-paths and a path hash, never absolute/private paths.
-"""
+"""REV-P v1pg — DINO artifact discovery (metadata-only)."""
 
 from __future__ import annotations
 

@@ -1,37 +1,4 @@
-"""Minera candidatos a ponto negativo do SIAC 156 (Curitiba) -- espelha
-`build_recife_negative_candidates.py` + a correção de pareamento geográfico do v9
-(`build_v9_bairro_matched_new_negatives.py`) aplicada desde o início, não como remendo
-posterior (o v8 de Recife cometeu esse erro e teve que ser corrigido depois -- aqui já nasce
-pareado).
-
-Segue as 5 condições de
-`docs/metodologia_cientifica/revp_criterio_ponto_negativo_recife_e_replicacao_curitiba_petropolis.md`:
-  1. presença de outro fenômeno real (categoria do `negative_categories_curitiba.py`, nunca
-     ausência de registro de enchente)
-  2. categoria causalmente independente de chuva (documentada por item, não herdada de Recife)
-  3. coordenada auditável (geocodificação Nominatim strong/medium -- feita em etapa separada,
-     `geocode_nominatim.py`, já validada nesta rodada)
-  4. data real da ocorrência (campo `DataCriacao` da fonte, nunca sintética)
-  5. pareamento geográfico: bairro do negativo tem que ter positivo real (aplicado aqui já na
-     mineração, usando o dataset de positivos fechado desta rodada)
-
-Amostragem determinística por ano (mesmo espírito do v8/v9 de Recife: hash estável, não
-depende de semente aleatória) -- evita reprocessar um arquivo de 700k+ linhas inteiro sem
-limite quando o pool de candidatos válidos é muito maior que o necessário.
-
-Correção SUSC-20N: `rank_key` usava `str(csv_path)` no hash, então a amostra dependia do
-caminho de execução (mesmo arquivo, diretório diferente = amostra diferente) -- descoberto
-quando a rodada de reforço de negativo (--max-por-ano 120) não reproduziu como superconjunto
-da rodada anterior (--max-por-ano 40). Corrigido para usar `source_year` (derivado do próprio
-registro) em vez do path; a amostra agora é estável entre máquinas e diretórios de execução.
-Ver `test_rank_key_is_independent_of_csv_path` e
-`susc_20n_reforco_negativos_retest_epv_report.md` seção 2.
-
-Uso:
-    python mine_negative_candidates_siac156.py --csv ano1.csv ano2.csv ... \
-        --positivos dataset_positivos_curitiba_v1.csv --out negativos_brutos.csv \
-        --max-por-ano 400
-"""
+"""Minera candidatos a ponto negativo do SIAC 156 (Curitiba) -- espelha"""
 
 from __future__ import annotations
 

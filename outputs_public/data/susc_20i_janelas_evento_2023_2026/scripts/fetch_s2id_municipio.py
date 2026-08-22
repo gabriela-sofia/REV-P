@@ -1,18 +1,4 @@
-"""Consulta o S2ID (Danos Informados) por UF e intervalo de anos, isolando um município
-pelo **código IBGE**, e não pelo nome.
-
-Por que pelo código: o CSV do S2ID vem em latin-1 com o nome acentuado ("Petrópolis"). Casar
-por substring sem acento ("Petropolis") devolve **zero** silenciosamente — falso negativo que
-passa por "não houve evento". O código IBGE aparece no campo `Protocolo`
-(`RJ-F-3303906-13120-20250405`) e não tem esse problema.
-
-Fonte pública, sem login. Adaptado de `s2id_danos_uf.py` (linhagem Petrópolis/COBRADE), que
-consultava um ano por vez: janelas maiores que 1 ano com as 65 tipologias fazem o servidor
-devolver HTML em vez de CSV, então cada ano continua sendo uma requisição.
-
-Uso:
-    python fetch_s2id_municipio.py --uf PR --ibge 4106902 --de 2023 --ate 2026 --outdir <dir>
-"""
+"""Consulta o S2ID (Danos Informados) por UF e intervalo de anos, isolando um município"""
 
 from __future__ import annotations
 

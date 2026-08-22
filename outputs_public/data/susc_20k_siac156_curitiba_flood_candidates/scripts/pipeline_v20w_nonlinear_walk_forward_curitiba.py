@@ -1,16 +1,4 @@
-"""SUSC-20W -- walk-forward multi-corte pra 4 classes de modelo (nao so 2026), Curitiba.
-
-Checagem de robustez essencial antes de acreditar no achado do SUSC-20U/20V: sera que a
-vantagem dos modelos nao-lineares sobre o linear e especifica de 2026 (o que sugeriria que o
-modelo flexivel esta explorando algum ruido especifico daquele conjunto de teste, nao
-estrutura real), ou aparece em TODOS os cortes prospectivos (2023->2024, 2023-24->2025,
-2023-25->2026)? Se for so em 2026, o achado fica sob suspeita de overfitting ao teste. Se
-aparecer nos 3 cortes, fortalece a leitura de que existe nao-linearidade real nas features,
-independente do problema de deriva de 2026 ja diagnosticado (SUSC-20Q/20R/20S/20T).
-
-Uso:
-    python pipeline_v20w_nonlinear_walk_forward_curitiba.py
-"""
+"""SUSC-20W -- walk-forward multi-corte pra 4 classes de modelo (nao so 2026), Curitiba."""
 from __future__ import annotations
 
 import json

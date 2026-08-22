@@ -1,46 +1,4 @@
-"""Via C — candidatos a lâmina d'água a partir de retroespalhamento SAR (Sentinel-1 GRD, VV/VH).
-
-Motivação real (linhagem Petrópolis, evento 05/04/2025): três referências ópticas
-independentes (16/02, 28/11/2024, 03/03/2025), todas comparadas contra as duas únicas cenas
-Sentinel-2 utilizáveis pós-evento (07/04 e 09/04, d+2 e d+4), deram resultado nulo no corredor
-real dos rios (Quitandinha/Piabanha) depois de normalizar por z-score contra o deslocamento
-sistemático da cena. Terreno de serra drena rápido — é fisicamente plausível que a água já
-tivesse recuado antes da primeira imagem óptica sem nuvem disponível. SAR não depende de nuvem
-e pode captar o evento mais perto do pico (aqui: 2 dias antes via 03/04, ou o dia core do
-evento se houver revisita mais próxima).
-
-Física do método (não um score, é o mecanismo de espalhamento):
-água parada é uma superfície especular — reflete a maior parte da energia de radar pra longe do
-sensor, não de volta — por isso aparece **escura** (retroespalhamento baixo) em VV/VH, ao
-contrário de terreno rugoso/vegetação, que espalha de volta e aparece claro. Um pixel que
-"escurece" entre antes e depois é candidato a alagamento novo.
-
-Limiares usados (literatura real, não inventados):
-- **Retroespalhamento absoluto baixo em VV no dia do evento** (`< -17 dB`, faixa comumente usada
-  pra água lisa em VV — ver referências do sistema operacional DLR/Copernicus EMS baseado em
-  Martinis & Twele).
-- **Queda de retroespalhamento (BCR, backscatter change ratio) entre antes e depois**: inundação
-  tipicamente produz queda de **3 a 8 dB** em relação ao solo seco antes do evento (ver Twele et
-  al. 2016; revisão em Clement et al. 2018, *J. Flood Risk Management*, DOI:10.1111/jfr3.12303).
-  Usamos 3 dB como limiar mínimo, o extremo mais conservador da faixa publicada.
-- VV é preferido (mais sensível à especularidade da água), mas é suscetível a falso-negativo por
-  vento/chuva que rugosifica a superfície — por isso VH entra como corroboração opcional, não
-  substituto: some ao voto de consenso quando disponível.
-
-Cadeia de decisão:
-1. Gate físico obrigatório: `VV_depois_dB < vv_water_max` **e** `VV_antes_dB >= vv_water_max`
-   (água nova, não já presente antes — mesma lógica do filtro óptico do v14/Via B).
-2. Queda de retroespalhamento: `VV_antes_dB - VV_depois_dB > min_drop_db`.
-3. Se VH disponível, mesma checagem em VH conta como voto extra (consenso, não obrigatório).
-4. Agregação vetorizada em clusters (scipy.ndimage, mesmo padrão corrigido do Via B).
-
-Nenhum valor calculado aqui vira feature de modelo — são portas de detecção (regra fixa do
-projeto).
-
-Uso:
-    python detect_water_candidates_sar.py --before-dir <dir_pre> --after-dir <dir_pos>
-                                          --out-csv <candidatos.csv> [--corridor-mask <npy>]
-"""
+"""Via C — candidatos a lâmina d'água a partir de retroespalhamento SAR (Sentinel-1 GRD, VV/VH)."""
 
 from __future__ import annotations
 
@@ -84,13 +42,7 @@ class SarDetectionResult:
 
 
 def to_db(arr: np.ndarray) -> np.ndarray:
-    """Converte sigma0 linear pra dB se necessario; detecta automaticamente pela faixa de valor.
-
-    Export 'Raw' do Copernicus Browser pra Sentinel-1 GRD normalmente vem em potencia linear
-    (sigma0), sempre positiva, tipicamente < 5. Retroespalhamento em dB e sempre negativo pra
-    a maioria da cena (terra seca ja fica em torno de -10 a -15 dB). Se ja houver valor negativo
-    real na cena, assumimos que ja esta em dB.
-    """
+    """Converte sigma0 linear pra dB se necessario; detecta automaticamente pela faixa de valor."""
     finite = arr[np.isfinite(arr)]
     if finite.size == 0:
         return arr

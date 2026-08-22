@@ -1,3 +1,0 @@
-# card 05 impacto 17b
-
-Status 17B: `17B_APROXIMACAO_COM_EVIDENCIA_TECNICA_CURITIBA`. Sem benchmark 17B.

@@ -1,5 +1,0 @@
-criterio,valor_observado,limiar,passou,status_19c_alvo,observacao
-matriz_multimodal_disponivel,300,>0,true,19C_AVALIACAO_OBSERVACIONAL_REVIEW_ONLY,matriz 19B por patch
-cobertura_documentada,true,true,true,19C_AVALIACAO_OBSERVACIONAL_REVIEW_ONLY,cobertura antes/depois registrada
-territorial_em_fila,5,>=1,true,19C_AVALIACAO_OBSERVACIONAL_REVIEW_ONLY,"territorial encaminhado, nao bloqueia avaliacao observacional review-only"
-coverage_nao_e_suscetibilidade,true,true,true,19C_AVALIACAO_OBSERVACIONAL_REVIEW_ONLY,indice de cobertura nao e score de suscetibilidade

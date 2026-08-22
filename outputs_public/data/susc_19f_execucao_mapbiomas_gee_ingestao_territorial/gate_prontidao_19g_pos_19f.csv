@@ -1,4 +1,0 @@
-criterio,valor_observado,limiar,status_19g,observacao
-territorial_preenchido,300,==300,19G_PRONTO_APOS_TERRITORIAL,features territoriais reais ingeridas
-score_v6_intacto,true,true,19G_PRONTO_APOS_TERRITORIAL,baseline preservado
-sem_score_novo,true,true,19G_PRONTO_APOS_TERRITORIAL,nenhum score novo criado em 19F

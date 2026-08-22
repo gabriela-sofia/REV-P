@@ -1,8 +1,4 @@
-"""Schema de entrada/saída -- implementa literalmente o rascunho v0 do
-contrato de inferência (`txtpragab.docx`, extraído em
-`revp_fase2_decisoes_design_contrato.md`), com os dois pontos que a Fase 2
-já decidiu (CI = bootstrap preditivo; DINO nunca soma ao score).
-"""
+"""Schema de entrada/saída -- implementa literalmente o rascunho v0 do"""
 from __future__ import annotations
 
 from typing import Literal

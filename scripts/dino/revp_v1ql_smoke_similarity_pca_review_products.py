@@ -1,13 +1,4 @@
-"""REV-P v1ql — Smoke similarity / PCA review products.
-
-Generates review-only exploratory products from the consolidated smoke
-representation (v1qk): top-k cosine neighbors, a bounded long-form similarity
-matrix, a 2D PCA projection, and deterministic exploratory clusters (n>=4).
-
-Explicitly: clusters are NOT classes; similarity does NOT validate an event;
-PCA does NOT validate an event. Nothing here becomes a label or target.
-Fail-closed (headers only) when fewer than 2 valid vectors are available.
-"""
+"""REV-P v1ql — Smoke similarity / PCA review products."""
 from __future__ import annotations
 
 import argparse

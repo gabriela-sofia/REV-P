@@ -1,3 +1,0 @@
-regiao,observados,score_medio_observado,score_medio_background,top30_regional,patches_low,principal_divergencia,status_regional
-recife,5,0.6287,0.5697,2,0,hidrologia_e_chuva,recife_forte_review_only
-curitiba,2,0.5137,0.5151,1,1,hidrologia_chuva_e_um_patch_low_score,curitiba_tecnica_sar_com_divergencia_forte

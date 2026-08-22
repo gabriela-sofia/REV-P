@@ -1,17 +1,4 @@
-"""Shared helpers for REV-P DINO smoke embedding pipeline v1qg-v1qm.
-
-Transforms the review-only DINO visual queue (v1qa) into an effectively
-executable smoke pipeline for real 768D DINOv2 embeddings — strictly
-fail-closed, offline, and review-only.
-
-Methodological boundary (never crossed by this module):
-  * Generating an embedding does NOT confirm an event.
-  * Generating an embedding does NOT confirm a scene_date.
-  * Similarity / PCA / clusters are NOT classes.
-  * No vector becomes a label, target, or ground truth.
-DINO is a self-supervised VISUAL representation used for review prioritization,
-never for operational validation.
-"""
+"""Shared helpers for REV-P DINO smoke embedding pipeline v1qg-v1qm."""
 from __future__ import annotations
 
 import json
@@ -64,9 +51,7 @@ SMOKE_FORBIDDEN_FIELDS = (
 LOCAL_RUNS_PREFIX = ("local_runs/", "local_runs\\")
 
 
-# ---------------------------------------------------------------------------
 # Env helpers
-# ---------------------------------------------------------------------------
 
 def env_true(name: str, default: bool = False) -> bool:
     raw = os.environ.get(name)
@@ -86,9 +71,7 @@ def env_int(name: str, default: int) -> int:
         return default
 
 
-# ---------------------------------------------------------------------------
 # JSON / path masking / file hashing
-# ---------------------------------------------------------------------------
 
 def write_json(path: Path, payload: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -118,9 +101,7 @@ def file_sha256_short(path: Path, n: int = 16) -> str:
         return ""
 
 
-# ---------------------------------------------------------------------------
 # Local asset resolution
-# ---------------------------------------------------------------------------
 
 def asset_candidate_roots() -> list[Path]:
     """Candidate roots from env, in priority order. Missing env ⇒ skipped."""
@@ -135,11 +116,7 @@ def asset_candidate_roots() -> list[Path]:
 
 def resolve_local_asset(relative_path: str,
                         candidate_roots: list[Path] | None = None) -> Path | None:
-    """Resolve a relative asset path against candidate roots; first hit wins.
-
-    Never returns a path outside a candidate root. Returns None if nothing
-    resolves to an existing file (fail-closed at the caller).
-    """
+    """Resolve a relative asset path against candidate roots; first hit wins."""
     rel = (relative_path or "").strip()
     if not rel:
         return None
@@ -161,9 +138,7 @@ def resolve_local_asset(relative_path: str,
     return None
 
 
-# ---------------------------------------------------------------------------
 # Model probe (offline, never loads weights for inference)
-# ---------------------------------------------------------------------------
 
 def expected_embedding_dim(model_name_or_config: Any) -> int:
     """Expected hidden size. Reads config.json hidden_size when available."""
@@ -196,11 +171,7 @@ def _detect_arch(cfg: dict[str, Any]) -> tuple[bool, bool, str]:
 
 
 def safe_model_probe(model_path: str | None) -> dict[str, Any]:
-    """Audit a local model directory offline. Never downloads. Never infers.
-
-    Loads only config (via transformers AutoConfig when present, else config.json)
-    to read hidden_size. Weights are checked for presence only.
-    """
+    """Audit a local model directory offline. Never downloads. Never infers."""
     allow_download = env_true("REVP_DINO_ALLOW_DOWNLOAD", False)
     offline = env_str("HF_HUB_OFFLINE", "") == "1"
 
@@ -281,9 +252,7 @@ def safe_model_probe(model_path: str | None) -> dict[str, Any]:
     return info
 
 
-# ---------------------------------------------------------------------------
 # 768D vector columns
-# ---------------------------------------------------------------------------
 
 def embedding_columns(dim: int = EXPECTED_DINO_DIM) -> list[str]:
     return [f"embedding_{i:03d}" for i in range(dim)]
@@ -306,10 +275,7 @@ def write_vector_csv_row(base: dict[str, Any], vec: list[float],
 
 
 def read_embedding_rows(path: Path) -> list[dict[str, Any]]:
-    """Read a feature-store CSV and parse the embedding vector from each row.
-
-    Returns dicts: {meta: original row dict, vector: list[float]|None}.
-    """
+    """Read a feature-store CSV and parse the embedding vector from each row."""
     rows = read_csv(path)
     out: list[dict[str, Any]] = []
     for r in rows:
@@ -318,9 +284,7 @@ def read_embedding_rows(path: Path) -> list[dict[str, Any]]:
     return out
 
 
-# ---------------------------------------------------------------------------
 # PCA / clustering (review-only, never a class)
-# ---------------------------------------------------------------------------
 
 def pca_2d_review(vectors: list[list[float]]) -> tuple[list[tuple[float, float]],
                                                        tuple[float, float], str]:
@@ -352,9 +316,7 @@ def exploratory_clusters(vectors: list[list[float]], k: int = 3) -> list[int]:
     return kmeans_simple(vectors, min(k, len(vectors)))
 
 
-# ---------------------------------------------------------------------------
 # Queue / backend / manifest readers
-# ---------------------------------------------------------------------------
 
 _V1QA_QUEUE = _p("REVP_DINO_SMOKE_QUEUE",
                  DATASETS / "dino_execution_queue_from_visual_expansion_v1qa.csv")
@@ -375,9 +337,7 @@ def read_manifest(rel_default: str, env: str) -> list[dict[str, str]]:
     return read_csv(_p(env, DATASETS / rel_default))
 
 
-# ---------------------------------------------------------------------------
 # Identity normalization & guardrails
-# ---------------------------------------------------------------------------
 
 def normalize_identity(row: dict[str, str]) -> tuple[str, str, str]:
     """Return (patch_id, alias, region) normalized from a queue row."""

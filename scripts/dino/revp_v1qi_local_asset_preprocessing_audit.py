@@ -1,10 +1,4 @@
-"""REV-P v1qi — Local asset availability and preprocessing audit.
-
-For each smoke sample row, resolves the local visual/TIF file using env roots
-and records availability + minimal metadata. Pixels are read ONLY when
-REVP_DINO_PIXEL_READ_ALLOWED=true. No image or pixel array is ever saved.
-Absolute paths are never written.
-"""
+"""REV-P v1qi — Local asset availability and preprocessing audit."""
 from __future__ import annotations
 
 import argparse

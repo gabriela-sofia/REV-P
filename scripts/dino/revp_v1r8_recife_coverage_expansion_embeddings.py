@@ -1,37 +1,4 @@
-"""REV-P v1r8 (SUSC-21b) -- Extracao de embedding DINOv2 para os patches de
-Recife que JA TEM asset visual local mas nunca tiveram embedding rodado.
-
-Diagnostico que motivou esta etapa (Tarefa 1 do SUSC-21b)
----------------------------------------------------------
-O corpus visual de Recife em disco tem 52 patches
-(`patches/thumbnails/recife/*__rgb_preview.png`, 256x256 RGB, git-ignored):
-39 da grade oficial + 13 REC_NEG de evidencia negativa. Destes, apenas 23
-tinham embedding (v1r3). Os outros 29 nunca foram processados -- e o asset
-deles ja esta em disco, no MESMO formato e na MESMA raiz que alimentou os 23
-originais (conferido contra `dino_local_asset_preprocessing_audit_v1qi.csv`:
-`recife_00183` bate em dimensao 256x256, tamanho 111850 bytes e
-sha256 curto f4bd7de0c36d6076). Portanto a ampliacao de cobertura NAO exige
-baixar nada e NAO exige regerar preview.
-
-Cuidado explicito com troca silenciosa de modalidade
-----------------------------------------------------
-Existe em `PROJETO/patches/thumbnails/recife/` um preview homonimo de 64x64
-gerado por `generate_stacks.py` -- asset DIFERENTE do que o pipeline DINO
-consumiu. Este script le exclusivamente a raiz de 256x256 e recusa qualquer
-arquivo cuja dimensao nao bata com a auditada em v1qi.
-
-Portao de reproducao (obrigatorio, fail-closed)
------------------------------------------------
-Antes de extrair qualquer vetor novo, o script RE-EXTRAI os embeddings de
-patches que ja existem em v1r3 e compara com os vetores publicados. Se o
-encoder local, o processador de imagem ou o pos-processamento divergirem, os
-vetores novos nao seriam comparaveis com os antigos e toda a analise ampliada
-estaria contaminada -- nesse caso o script sai FAIL_CLOSED sem escrever
-expansao. Mesma disciplina que v1r5 usou para validar o Firth reimplementado
-contra os coeficientes ja publicados.
-
-Nao cria label. Nao treina nada. Nao baixa imagem. Nao gera imagem.
-"""
+"""REV-P v1r8 (SUSC-21b) -- Extracao de embedding DINOv2 para os patches de"""
 from __future__ import annotations
 
 import glob

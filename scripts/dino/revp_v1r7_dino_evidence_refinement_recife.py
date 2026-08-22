@@ -1,86 +1,4 @@
-"""REV-P v1r7 (SUSC-21) -- Refinamento de EVIDENCIA nos 23 patches de Recife
-com embedding DINOv2 real, inspirado no refinamento self-supervised de label do
-H2O-Net (Akiva et al., WACV 2021, arXiv:2010.05309).
-
-MUDANCA DE PAPEL, NAO REABERTURA DE DECISAO
--------------------------------------------
-Em 25/07/2026 (commit 4dafb8c, v1r5/v1r6) o teste A/B DINO x v12 foi fechado:
-o ganho aparente (LRT p=0.0048) nao sobreviveu ao erro-padrao cluster-robusto
-por patch (Wald conjunto p=0.1752), porque 109 pontos vinham de apenas 23
-patches. DINO NAO e feature do modelo causal. Isso NAO e revisitado aqui.
-Aqui o DINO muda de papel: sai de "candidato a feature" e entra como
-"evidencia a ser refinada" -- ordenacao de fila de revisao humana, nunca label,
-nunca feature, nunca treino.
-
-O QUE O H2O-NET FAZ (secao 3.4, "Refiner/Self-Supervision")
------------------------------------------------------------
-1. Aplica dois limiares, phi_H e phi_L, sobre o MNDWI para obter conjuntos de
-   pixels de ALTA CONFIANCA de agua (P_w) e de nao-agua (P_w_barra).
-2. Constroi mapas de distancia D_w e D_wbar: para cada pixel (x,y), a MENOR
-   distancia euclidiana no espaco de COORDENADA DE IMAGEM ate um ponto semente
-   daquela classe.
-3. "Adaptive distance map" D_a = escolhe dinamicamente o mapa da classe com
-   MAIOR densidade de sementes, normalizado para valores altos = classe
-   positiva; isso corrige o desbalanceamento de densidade tipico de cheias.
-4. D_a e concatenado ao MNDWI (entrada de 2 canais) num refiner CNN leve,
-   treinado SO nos pixels semente (a perda IGNORA todo pixel fora de
-   P_w U P_w_barra) e depois usado para PREVER os pixels ignorados,
-   gerando pseudo-mascara que supervisiona a rede de segmentacao.
-
-ONDE A ANALOGIA FUNCIONA E ONDE ELA QUEBRA (decisao de adaptacao)
------------------------------------------------------------------
-FUNCIONA (mantido aqui):
-  * Estrutura de duas sementes com limiares alto/baixo sobre um indicador
-    continuo, e um terceiro conjunto explicitamente NAO-RESOLVIDO ("ignorado").
-  * Score assinado (proximidade ao positivo MENOS proximidade ao negativo),
-    que e o que o mapa adaptativo normalizado codifica. Ranquear so por
-    similaridade ao positivo seria confundido por patches genericamente
-    proximos de tudo.
-  * Escolha adaptativa pela classe mais densa quando os conjuntos semente
-    tem tamanhos muito diferentes.
-
-QUEBRA (adaptado ou descartado, com justificativa):
-  a) ESPACO DA DISTANCIA. No H2O-Net a distancia e GEOMETRICA, em coordenada
-     de pixel dentro de UMA imagem, e o vies indutivo que a torna valida e a
-     CONTIGUIDADE ESPACIAL da agua: pixel vizinho de agua tende a ser agua.
-     Aqui a unidade nao e pixel, e o patch georreferenciado inteiro, e nao
-     existe semente intra-patch. Contiguidade espacial entre patches NAO e
-     vies indutivo util: e CONFUNDIDOR (patches vizinhos compartilham cena,
-     data e bairro). Por isso a distancia foi trocada para o espaco de
-     EMBEDDING (cosseno em 768D, vetores ja L2-normalizados), e a
-     contiguidade geografica virou item obrigatorio de QA (teste de
-     confundimento), nao ingrediente do metodo.
-  b) QUALIDADE DA SEMENTE. As sementes do H2O-Net vem de um indice ruidoso
-     (MNDWI limiarizado) da MESMA modalidade que se quer refinar. Aqui as
-     sementes vem do v12 causalmente validado (SEDEC), fonte administrativa
-     independente do sinal orbital. Isso e uma semente mais forte, e mantem
-     orbital como auxiliar: o dado causal define a semente, o orbital so
-     ordena a fila.
-  c) REFINER CNN E PSEUDO-MASCARA: DESCARTADOS. O passo final do H2O-Net
-     GERA pseudo-label e treina uma rede supervisionada com ela. Isso e
-     exatamente o que o projeto proibe. O pipeline para no ranqueamento.
-     Nenhum patch nao-resolvido recebe classe.
-
-PRE-REGISTRO (fixado ANTES de rodar; sensibilidades declaradas junto)
----------------------------------------------------------------------
-  * Unidade de analise: patch (n=23). Ponto nunca e unidade, para nao repetir
-    a pseudorreplicacao de v1r5.
-  * frac_positive(patch) = pontos v12 com label=1 / pontos v12 no patch.
-  * Semente positiva S_H: frac_positive >= PHI_H (0.75) e n_pontos >= MIN_SUPPORT (2).
-  * Semente negativa S_L: frac_positive <= PHI_L (0.25) e n_pontos >= MIN_SUPPORT (2).
-  * Alvos de refinamento: todo patch fora de S_H U S_L (analogo aos pixels
-    ignorados pela perda do refiner).
-  * refinement_score(t) = mean_cos(t, S_H) - mean_cos(t, S_L).
-  * Sensibilidade obrigatoria: MIN_SUPPORT=1 (sem exigencia de suporte).
-  * Criterio de utilidade declarado ANTES: o refinamento so e reportado como
-    util se (i) o teste de permutacao da separacao semente-a-semente der
-    p < 0.05 E (ii) o ranking nao for explicado por adjacencia geografica,
-    proveniencia do patch ou n de pontos. Se falhar, o resultado nulo e o
-    resultado -- o metodo nao e ajustado ate "funcionar".
-
-Nao cria label. Nao treina classificador. Nao baixa imagem. Nao extrai
-embedding novo. Le apenas os 23 embeddings DINO ja existentes (v1r3) e o v12.
-"""
+"""REV-P v1r7 (SUSC-21) -- Refinamento de EVIDENCIA nos 23 patches de Recife"""
 from __future__ import annotations
 
 import glob
@@ -146,9 +64,7 @@ BOUNDARY_FIELDS = [
 ]
 
 
-# ---------------------------------------------------------------------------
 # Inputs
-# ---------------------------------------------------------------------------
 
 def _patch_geometry_wgs84(sentinel_dir: Path) -> dict[str, tuple[float, float, float, float]]:
     """bbox (lon_min, lat_min, lon_max, lat_max) per patch, same parsing as v1r5."""
@@ -191,9 +107,7 @@ def _join_points_to_patches(in_v12: Path, bboxes: dict[str, tuple[float, float, 
     return joined
 
 
-# ---------------------------------------------------------------------------
 # Statistics helpers (no new dependency beyond numpy/scipy already in use)
-# ---------------------------------------------------------------------------
 
 def _spearman(a: np.ndarray, b: np.ndarray) -> tuple[float, float]:
     rho, p, _ = _spearman_n(a, b)
@@ -201,9 +115,7 @@ def _spearman(a: np.ndarray, b: np.ndarray) -> tuple[float, float]:
 
 
 def _spearman_n(a: np.ndarray, b: np.ndarray) -> tuple[float, float, int]:
-    """Spearman plus the number of pairs actually used. Patches without any
-    v12 point carry NaN, so the effective n is smaller than len(a) -- report
-    the used n, never the nominal one."""
+    """Spearman plus the number of pairs actually used. Patches without any"""
     from scipy import stats
     mask = np.isfinite(a) & np.isfinite(b)
     if mask.sum() < 4:
@@ -221,17 +133,14 @@ def _haversine_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
 
 
 def _seed_separation(sim: np.ndarray, idx_h: list[int], idx_l: list[int]) -> float:
-    """Mean within-H cosine minus mean H-to-L cosine. Higher = the embedding
-    space groups high-evidence patches apart from low-evidence patches."""
+    """Mean within-H cosine minus mean H-to-L cosine. Higher = the embedding"""
     def _mean_pairs(ii: list[int], jj: list[int], same: bool) -> float:
         vals = [sim[i, j] for i in ii for j in jj if not (same and i == j)]
         return float(np.mean(vals)) if vals else float("nan")
     return _mean_pairs(idx_h, idx_h, True) - _mean_pairs(idx_h, idx_l, False)
 
 
-# ---------------------------------------------------------------------------
 # Main
-# ---------------------------------------------------------------------------
 
 def _fail_closed(reason: str, detail: str) -> None:
     write_csv(OUT_SCORES, [], SCORE_FIELDS)

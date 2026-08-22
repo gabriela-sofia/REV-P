@@ -1,4 +1,0 @@
-regiao,observed_patches,score_medio_observado,score_medio_background,topk_resultado,status_regional
-recife,5,0.6287,0.5697,2/5_em_top30_regional,recife_review_only_com_amostra_pequena
-curitiba,2,0.5137,0.5151,1/2_em_top30_regional,curitiba_tecnica_sar_com_amostra_minima
-petropolis,0,NA,0.4800,sem_observados,petropolis_excluido_por_fenomeno_misto

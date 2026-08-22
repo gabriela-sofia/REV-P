@@ -1,9 +1,4 @@
-"""REV-P v1pr — Import smoke embeddings into feature store.
-
-Reads v1pq results, validates vectors, builds a feature store compatible with
-v1ph/v1pm. Does NOT overwrite v1ph. Output is a separate file.
-Only real 768D VALID_REVIEW_ONLY embeddings are imported.
-"""
+"""REV-P v1pr — Import smoke embeddings into feature store."""
 from __future__ import annotations
 
 import argparse

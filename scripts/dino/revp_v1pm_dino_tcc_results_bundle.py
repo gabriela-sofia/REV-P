@@ -1,10 +1,4 @@
-"""REV-P v1pm — DINO TCC results bundle.
-
-Consolidates v1pg-v1pl into TCC-ready tables, a manifest and a scientific
-summary. Does not recompute analyses — reads their outputs and re-frames them
-for writing. Final DINO status is READY_REVIEW_ONLY only if valid embeddings
-exist, otherwise NOT_FOUND_FAIL_CLOSED.
-"""
+"""REV-P v1pm — DINO TCC results bundle."""
 
 from __future__ import annotations
 

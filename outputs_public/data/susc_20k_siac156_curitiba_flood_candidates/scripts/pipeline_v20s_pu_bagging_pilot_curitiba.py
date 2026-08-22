@@ -1,39 +1,4 @@
-"""SUSC-20S -- piloto de redesenho de amostragem negativa via PU bagging, Curitiba.
-
-Segunda vertente da revisao de literatura de 2026-08-02 (a primeira, ONI/ENOS, foi testada no
-SUSC-20R e REFUTADA pelo dado real). Ataca o confundimento estrutural ja documentado desde o
-SUSC-20K/20N: "negativo" em Curitiba e uma queixa nao-hidrologica numa data arbitraria, nao uma
-confirmacao de ausencia de enchente naquele local/data -- literatura chama isso de
-"case-control sampling with contaminated controls" (PBLC, Land 2022, DOI 10.3390/land11111971;
-mesma linguagem usada nas nossas proprias limitacoes documentadas).
-
-Metodo escolhido: **PU bagging** (Mordelet & Vert, "A bagging SVM to learn from positive and
-unlabeled examples", arXiv:1010.0772) -- NAO o modelo bayesiano espacial de sub-reporte
-(Agostini/Pierson/Garg, AAAI-24). Justificativa da escolha, registrada explicitamente porque e
-uma decisao de metodologia, nao um detalhe: o modelo bayesiano espacial suaviza risco por
-correlacao espacial entre queixas, o que criaria uma superficie continua derivada da propria
-densidade de queixa -- proximo demais de um "score/proxy derivado do label" (proibido pelas
-regras fixas do projeto: "nunca usar scores, thresholds, proxies ou variaveis derivadas do
-label como features", "o modelo NAO deve descobrir enchentes"). PU bagging nao inventa nenhuma
-variavel nova nem suaviza no espaco -- so muda como o classificador trata o rotulo "negativo"
-(de "confirmado ausente" pra "nao confirmado", tratado como nao-confiavel em vez de verdade),
-usando as MESMAS 5 features fisico-causais de sempre. Mais alinhado as regras fixas do projeto.
-
-Receita (Mordelet & Vert): positivos ficam fixos em toda bag (rotulo confiavel); a cada bag,
-reamostra com reposicao do pool "nao-rotulado" (nosso atual "negativo") um subconjunto do
-mesmo tamanho dos positivos; ajusta um classificador; agrega a predicao media dos pontos
-nao-rotulados que ficaram de fora daquela bag (out-of-bag) ao longo de todas as bags.
-
-Escopo desta rodada -- **piloto, nao substitui a rota primaria**: só Curitiba, reaproveita as
-MESMAS baterias de validacao ja commitadas (holdout temporal SUSC-20O, spatial block CV
-SUSC-20P) trocando so o classificador, pra comparar lado a lado se PU bagging melhora
-generalizacao prospectiva especificamente (o problema real diagnosticado). Recife nao e tocado
-nesta rodada -- mudanca de metodologia usada em produção em outra regiao exige decisao humana
-separada.
-
-Uso:
-    python pipeline_v20s_pu_bagging_pilot_curitiba.py
-"""
+"""SUSC-20S -- piloto de redesenho de amostragem negativa via PU bagging, Curitiba."""
 from __future__ import annotations
 
 import argparse
@@ -60,9 +25,7 @@ BAG_SEED = 20260802
 
 def pu_bagging_fit_predict(Xtr_std: np.ndarray, ytr: np.ndarray, Xte_std: np.ndarray,
                             n_bags: int = N_BAGS, seed: int = BAG_SEED) -> np.ndarray:
-    """Ajusta n_bags classificadores (positivos fixos + reamostra de nao-rotulados do mesmo
-    tamanho dos positivos), retorna a predicao MEDIA no conjunto de teste (nunca usado pra
-    ajustar nada -- so recebe a media das n_bags predicoes)."""
+    """Ajusta n_bags classificadores (positivos fixos + reamostra de nao-rotulados do mesmo"""
     rng = np.random.default_rng(seed)
     pos_idx = np.where(ytr == 1)[0]
     unl_idx = np.where(ytr == 0)[0]

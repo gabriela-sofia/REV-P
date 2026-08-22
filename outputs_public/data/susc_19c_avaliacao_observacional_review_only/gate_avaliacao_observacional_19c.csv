@@ -1,7 +1,0 @@
-criterio,valor_observado,limiar,passou,status,observacao
-observados_registrados,7,==7,true,19C_AVALIACAO_PARCIAL_COM_AMOSTRA_MINIMA,Recife 5 + Curitiba 2
-petropolis_excluido,true,true,true,19C_AVALIACAO_PARCIAL_COM_AMOSTRA_MINIMA,Petropolis misto fora de observado
-background_nao_e_negativo,true,true,true,19C_AVALIACAO_PARCIAL_COM_AMOSTRA_MINIMA,universo e unlabeled_background
-hit_rate_exploratorio,true,true,true,19C_AVALIACAO_PARCIAL_COM_AMOSTRA_MINIMA,"metrica review-only, nao benchmark"
-amostra_pequena,7,<30,true,19C_AVALIACAO_PARCIAL_COM_AMOSTRA_MINIMA,"potencia amostral baixa, sem conclusao estatistica forte"
-score_v6_intacto,true,true,true,19C_AVALIACAO_PARCIAL_COM_AMOSTRA_MINIMA,score_v6 nao alterado

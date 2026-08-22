@@ -1,20 +1,4 @@
-"""REV-P v1qv — DINOv2 attention rollout visualizer (real, review-only).
-
-Extracts REAL self-attention weights (CLS -> patch tokens) from the local
-DINOv2-with-registers checkpoint on real Sentinel RGB-preview patches, averages
-them across heads and layers via attention rollout, and renders a heatmap
-overlay PNG. This is a pure interpretability aid ("what does DINO attend to in
-this patch?") — it never confirms an event, never creates a label, and never
-feeds back into training. Same fail-closed gate family as v1qg/v1qi/v1qj:
-requires REVP_DINO_DRY_RUN=false, REVP_DINO_PIXEL_READ_ALLOWED=true and an
-offline local model directory. Default is dry-run.
-
-Rollout method (Abnar & Zuidema, 2020): at each layer, average attention
-heads, add the identity (residual) connection, row-normalize, then multiply
-layer matrices together from the first to the last layer. The CLS row of the
-resulting matrix, restricted to patch-token columns (register tokens and CLS
-itself excluded), is the attention map.
-"""
+"""REV-P v1qv — DINOv2 attention rollout visualizer (real, review-only)."""
 from __future__ import annotations
 
 import argparse
@@ -64,11 +48,7 @@ def _gate_status() -> tuple[str, dict[str, Any]]:
 
 
 def _rollout(attentions: list[Any]) -> Any:
-    """Attention rollout across layers (Abnar & Zuidema, 2020).
-
-    ``attentions``: list of tensors, one per layer, shape (1, heads, N, N).
-    Returns the rolled-out (N, N) matrix.
-    """
+    """Attention rollout across layers (Abnar & Zuidema, 2020)."""
     import torch
     result = None
     for attn in attentions:

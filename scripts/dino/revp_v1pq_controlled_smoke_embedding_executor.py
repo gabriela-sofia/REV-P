@@ -1,13 +1,4 @@
-"""REV-P v1pq — Controlled smoke embedding executor.
-
-Executes embedding only if:
-  - v1pp says backend/model available
-  - REVP_DINO_DRY_RUN != true (default: true → dry run)
-  - REVP_DINO_ALLOW_DOWNLOAD != true (default: false)
-
-Never trains. Never creates labels. Never creates ground truth.
-Embeddings are 768D review-only vectors.
-"""
+"""REV-P v1pq — Controlled smoke embedding executor."""
 from __future__ import annotations
 
 import argparse

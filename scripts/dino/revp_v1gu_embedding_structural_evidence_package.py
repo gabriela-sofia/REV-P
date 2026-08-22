@@ -1,17 +1,4 @@
-"""REV-P v1gu: Embedding structural evidence package.
-
-Extracts structural evidence from DINO embeddings (v1fx/v1fz outputs).
-When embeddings are unavailable, emits an explicit blocker document
-instead of producing silent empty outputs.
-
-Field mapping (v1fu manifest):
-  canonical_patch_id  -> patch identifier (authoritative)
-  region              -> Curitiba | Petrópolis | Recife
-  asset_path_reference -> relative path to TIF (not to embedding)
-
-Allowed claims: structural coherence, stability, exploratory similarity
-Forbidden: prediction, classification, real-world risk, ground truth
-"""
+"""REV-P v1gu: Embedding structural evidence package."""
 from __future__ import annotations
 
 import argparse
@@ -169,12 +156,7 @@ def find_npz_for_patch(
     patch_id: str,
     corpus_index: dict[str, Path] | None = None,
 ) -> Path | None:
-    """Search for a .npz file for patch_id.
-
-    Priority:
-    1. Corpus manifest index (v1ge/v1fx/v1fz manifests, authoritative)
-    2. Filesystem scan of EMBEDDING_SEARCH_DIRS by filename stem
-    """
+    """Search for a .npz file for patch_id."""
     if corpus_index and patch_id in corpus_index:
         return corpus_index[patch_id]
     stems_to_try = [
@@ -193,16 +175,7 @@ def find_npz_for_patch(
 
 
 def load_corpus_manifest_index() -> tuple[dict[str, Path], list[dict[str, Any]]]:
-    """
-    Build a corpus index from v1ge/v1fx/v1fz execution manifests.
-
-    Each manifest CSV has: patch_id (= canonical_patch_id), embedding_path (relative),
-    success (SUCCESS | FAILED | SKIPPED_EXISTING).
-
-    Returns:
-        index: canonical_patch_id -> absolute npz Path (only files that exist on disk)
-        audit: per-manifest audit records for blocker document
-    """
+    """Build a corpus index from v1ge/v1fx/v1fz execution manifests."""
     index: dict[str, Path] = {}
     audit: list[dict[str, Any]] = []
 
@@ -244,14 +217,7 @@ def load_embeddings_from_manifest(
     manifest: list[dict[str, str]],
     corpus_index: dict[str, Path] | None = None,
 ) -> tuple[dict[str, np.ndarray], list[str]]:
-    """
-    Attempt to load embeddings for each patch in the manifest.
-    Returns (embeddings dict, list of patch_ids with missing embeddings).
-    Uses canonical_patch_id as the authoritative patch identifier.
-
-    Tries corpus manifest index first (v1ge/v1fx/v1fz), then filesystem scan.
-    NPZ key priority: cls_embedding > patch_mean_embedding > embedding > arr_0
-    """
+    """Attempt to load embeddings for each patch in the manifest."""
     embeddings: dict[str, np.ndarray] = {}
     missing: list[str] = []
 
@@ -288,10 +254,7 @@ def build_blocker_document(
     output_dir: Path,
     corpus_audit: list[dict[str, Any]] | None = None,
 ) -> None:
-    """
-    Generate an explicit blocker document when embeddings are unavailable.
-    Includes full audit trail of corpus manifests checked and paths searched.
-    """
+    """Generate an explicit blocker document when embeddings are unavailable."""
     patch_ids = [r.get(FIELD_PATCH_ID, "") for r in manifest if r.get(FIELD_PATCH_ID)]
     regions_count: dict[str, int] = defaultdict(int)
     for r in manifest:

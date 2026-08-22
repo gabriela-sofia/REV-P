@@ -1,14 +1,4 @@
-"""Gates obrigatórios antes de qualquer inferência -- implementa a auditoria
-gate-a-gate já decidida em `revp_fase2_decisoes_design_contrato.md`.
-
-Atualização (SUSC-20F): o gate de features físicas agora tenta, nesta ordem,
-(1) ponto(s) já conhecido(s) do v12 dentro da geometria (caminho rápido, com
-rótulo histórico de contexto) e, se nenhum existir, (2) cálculo real sob
-demanda (terreno amostrado de raster + chuva ao vivo) se o centróide da
-geometria cair dentro da cobertura real do DTM merged -- ver
-`susc_20f_pipeline_geoprocessamento_sob_demanda_recife/`. Fora dessa
-cobertura: `insufficient_data` honesto, sem inventar.
-"""
+"""Gates obrigatórios antes de qualquer inferência -- implementa a auditoria"""
 from __future__ import annotations
 
 import sys
@@ -62,11 +52,7 @@ def gate_model_valid_for_region(region: str) -> tuple[bool, str]:
 def gate_physical_features_available(
     region: str, geom, known_points: list[dict], end_date: date,
 ) -> tuple[bool, str, list[dict], dict | None]:
-    """DEM/HAND/TWI/chuva. Caminho 1 (rápido): ponto(s) conhecido(s) do v12
-    dentro da geometria. Caminho 2 (SUSC-20F): se nenhum ponto conhecido
-    casar, tenta cálculo real sob demanda no centróide da geometria --
-    terreno amostrado de raster + chuva ao vivo (Open-Meteo). Retorna
-    (ok, motivo, pontos_conhecidos_casados, features_computadas_sob_demanda)."""
+    """DEM/HAND/TWI/chuva. Caminho 1 (rápido): ponto(s) conhecido(s) do v12"""
     matched = [p for p in known_points if geom.contains(shape({
         "type": "Point", "coordinates": [float(p["lon"]), float(p["lat"])]}))]
     if matched:
@@ -85,11 +71,7 @@ def gate_physical_features_available(
 
 
 def evaluate_gates(geojson: dict, crs: str, known_points: list[dict], end_date: date | None = None) -> dict:
-    """Avalia todos os gates em ordem. Retorna dict com status final,
-    region_maturity, region (ou None), pontos casados, features computadas sob
-    demanda (ou None), e lista de motivos de bloqueio (vazia se tudo passou).
-    `end_date` (default: hoje) delimita a janela de chuva pro cálculo sob
-    demanda -- ver `susc_20f_pipeline_geoprocessamento_sob_demanda_recife/`."""
+    """Avalia todos os gates em ordem. Retorna dict com status final,"""
     if end_date is None:
         end_date = date.today()
     blockers: list[str] = []

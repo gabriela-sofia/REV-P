@@ -1,32 +1,4 @@
-"""SUSC-20D -- Motor de inferencia local (MVP, Recife), sem servidor ainda.
-
-Executa a Fase 3 do PLANO_ACAO_produto_v1.md: prova que o "motor cientifico"
-roda ponta-a-ponta antes de gastar esforco em API/backend/interface.
-
-O que este modulo faz, na ordem exata pedida pelo plano:
-  1) Le os coeficientes Firth JA TREINADOS do v12 (SUSC-20C,
-     `primaria_v12_firth_multivariate_coefs.csv`) -- nao retreina nada.
-  2) Para cada patch_id/point_id conhecido (dos 278 pontos do v12), calcula
-     score = sigmoid(x_padronizado . beta) com esses coeficientes fixos.
-  3) Intervalo de confianca do score via bootstrap preditivo (decisao da
-     Fase 2, `revp_fase2_decisoes_design_contrato.md`): reamostra o dataset
-     de treino N=1000 vezes (mesmo desenho de SUSC-20C: estratificado por
-     classe, mesma seed 20260723), reajusta Firth em cada reamostra, projeta
-     o score para ESTE ponto em cada reamostra, e toma percentis 2.5/97.5.
-     A reamostragem bootstrap e validada ANTES de uso: reproduz os
-     percentis publicados em `primaria_v12_bootstrap_coefs.csv`.
-  4) Quais features mais pesaram: contribuicao = beta_padronizado *
-     x_padronizado, ranqueada por magnitude absoluta.
-  5) Evidencia DINO (opcional, nunca somada ao score): se o ponto cai num
-     patch Sentinel com embedding DINO real, anexa patch_id + vetor PCA
-     como evidencia visual auxiliar.
-  6) Limitacoes explicitas sempre presentes na saida.
-
-Nao cria label. Nao treina nada novo (Firth e refeito somente dentro do
-procedimento de bootstrap ja documentado, nunca com features/metodologia
-novas). DINO nunca e somado ao score (Fase 1 -- decisao ja tomada com prova:
-ver `revp_fase1_conclusao_dino_ab_test.md`).
-"""
+"""SUSC-20D -- Motor de inferencia local (MVP, Recife), sem servidor ainda."""
 from __future__ import annotations
 
 import csv
@@ -67,10 +39,7 @@ def read_csv(path: Path) -> list[dict[str, str]]:
 
 
 def fit_firth(X: np.ndarray, y: np.ndarray, max_iter: int = 200, tol: float = 1e-10) -> dict[str, Any]:
-    """Firth penalized logistic regression via modified scores (Heinze &
-    Schemper 2002). X must include an intercept column. Validated
-    (see `validate_susc_20d.py`) to reproduce the published SUSC-20C
-    coefficients and penalized log-likelihood to >=4 decimals."""
+    """Firth penalized logistic regression via modified scores (Heinze &"""
     n, p = X.shape
     beta = np.zeros(p)
     it = 0
@@ -120,9 +89,7 @@ def load_training_frame() -> tuple[list[dict[str, Any]], np.ndarray, np.ndarray,
 
 def bootstrap_projection_draws(X: np.ndarray, y: np.ndarray, n_boot: int = N_BOOT,
                                 seed: int = SEED) -> np.ndarray:
-    """Returns an (n_boot, p) array of standardized-space beta draws
-    (intercept + FEATURE_COLS), same resampling scheme as SUSC-20C
-    (stratified by class, with replacement)."""
+    """Returns an (n_boot, p) array of standardized-space beta draws"""
     pos_idx = np.where(y == 1)[0]
     neg_idx = np.where(y == 0)[0]
     rng = np.random.default_rng(seed)
@@ -170,9 +137,7 @@ def _parse_embedding(row: dict[str, str]) -> list[float] | None:
 
 
 def load_dino_evidence_index() -> tuple[dict[str, tuple[float, float, float, float]], dict[str, list[float]]]:
-    """Best-effort, optional. Returns (bboxes, embeddings). Empty dicts if
-    the private Sentinel patch directory is not configured -- DINO evidence
-    is auxiliary, never required for the score to be produced."""
+    """Best-effort, optional. Returns (bboxes, embeddings). Empty dicts if"""
     sentinel_dir_raw = os.environ.get("REVP_SUSC20D_SENTINEL_DIR", "")
     emb_csv_raw = os.environ.get(
         "REVP_SUSC20D_DINO_EMB",

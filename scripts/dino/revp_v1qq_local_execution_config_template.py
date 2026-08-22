@@ -1,8 +1,4 @@
-"""REV-P v1qq — Local execution configuration template.
-
-Generates safe, versionable configuration templates for real DINO smoke
-embedding execution. Templates use placeholders — no real absolute paths.
-"""
+"""REV-P v1qq — Local execution configuration template."""
 from __future__ import annotations
 
 import argparse

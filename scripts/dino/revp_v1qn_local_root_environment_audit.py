@@ -1,9 +1,4 @@
-"""REV-P v1qn — Local root environment audit.
-
-Audits configured env roots and the local DINOv2 model directory without
-reading pixels or downloading anything. Reports which roots exist, how many
-candidate image files each contains, and whether the model directory looks valid.
-"""
+"""REV-P v1qn — Local root environment audit."""
 from __future__ import annotations
 
 import argparse

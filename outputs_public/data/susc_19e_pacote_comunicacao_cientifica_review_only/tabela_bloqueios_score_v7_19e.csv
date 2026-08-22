@@ -1,6 +1,0 @@
-bloqueio,descricao,origem,status_score_v7
-amostra_minima,apenas 7 patches observacionais; 0 no top-30 global,19C,SCORE_V7_BLOQUEADO_POR_AMOSTRA
-missingness_territorial,faltam MapBiomas/solo exposto/agua/impervious nos 300 patches,19B,SCORE_V7_BLOQUEADO_POR_MISSINGNESS_TERRITORIAL
-ausencia_benchmark,sem benchmark 17B supervisionado ou observacional consolidado,19D,SCORE_V7_BLOQUEADO_POR_AUSENCIA_BENCHMARK
-geometria_oficial_curitiba,Curitiba so tem SAR pos-evento; sem geometria oficial de ocorrencia,18D/18H,SCORE_V7_NAO_AUTORIZADO
-fenomeno_misto_petropolis,Petropolis misto deslizamento/inundacao sem separacao,18H/19C,SCORE_V7_NAO_AUTORIZADO

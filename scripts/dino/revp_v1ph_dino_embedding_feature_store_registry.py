@@ -1,9 +1,4 @@
-"""REV-P v1ph — DINO embedding feature store registry.
-
-Builds a registry of REAL embedding vectors discovered by v1pg. Never invents a
-vector: if no real embedding is parsed, the registry CSV is written empty with
-its header (fail-closed). DINO label/training/target flags are always false.
-"""
+"""REV-P v1ph — DINO embedding feature store registry."""
 
 from __future__ import annotations
 

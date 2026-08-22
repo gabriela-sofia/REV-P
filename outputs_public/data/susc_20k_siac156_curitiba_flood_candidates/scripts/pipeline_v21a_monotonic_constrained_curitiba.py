@@ -1,29 +1,4 @@
-"""SUSC-21A -- GBM com restricao monotonica causal, Curitiba. Nova vertente (fora da familia GAM).
-
-A serie SUSC-20U-20Z estabeleceu: (1) existe nao-linearidade real e generalizavel (GBM
-irrestrito bate o linear em quase todo corte temporal); (2) GAM aditivo/tensor fecha ~77% do
-gap de interpretabilidade mas nao o gap inteiro, e a vertente GAM esta exaurida.
-
-Esta e uma vertente DIFERENTE, nao uma continuacao do GAM: em vez de tentar TRADUZIR a
-nao-linearidade do GBM irrestrito pra um termo interpretavel depois de ajustado, restringe o
-proprio GBM a NUNCA violar o sinal causal ja estabelecido (SUSC-20M/20N), usando
-`monotonic_cst` do HistGradientBoostingClassifier (sklearn >=0.23): a relacao entre cada
-feature e o log-odds de risco e forcada a ser monotonica na direcao fisica conhecida
-(slope_deg e hand_m_dinf decrescentes -- mais declividade/mais distancia da drenagem, menos
-risco; twi_dinf, rain_peak_residual_orthogonalized, rain_decay_index_api_chirps crescentes).
-
-Isso opera diretamente o mandato do projeto -- "o modelo NAO deve descobrir enchentes; deve
-refletir relacoes fisicas conhecidas" -- de um jeito que nem o linear nem o GBM irrestrito
-fazem sozinhos: o linear so permite 1 taxa constante por feature (nao captura limiar/forma);
-o GBM irrestrito captura qualquer forma, inclusive uma que contraria o sinal causal
-(caso do twi_dinf, documentado como anomalia no SUSC-20V/20Y). O GBM monotonico fica no meio:
-tao flexivel quanto o GBM em FORMA (limiares, platos, taxas variaveis), mas nunca pode
-inverter DIRECAO -- e portanto, por construcao, nunca produz uma curva anomala como a do
-twi_dinf.
-
-Uso:
-    python pipeline_v21a_monotonic_constrained_curitiba.py
-"""
+"""SUSC-21A -- GBM com restricao monotonica causal, Curitiba. Nova vertente (fora da familia GAM)."""
 from __future__ import annotations
 
 import json
@@ -113,8 +88,7 @@ def hgb_hyperparam_sensitivity(df_train: pd.DataFrame, df_test: pd.DataFrame,
 
 def monotonic_pd_check(clf: HistGradientBoostingClassifier, df_ref: pd.DataFrame,
                         feature_cols: list[str], grid_resolution: int = 20) -> pd.DataFrame:
-    """Confirma que a partial dependence realmente sai monotonica na direcao esperada --
-    sanity check da restricao (nao so confianca cega no parametro)."""
+    """Confirma que a partial dependence realmente sai monotonica na direcao esperada --"""
     rows = []
     for i, feat in enumerate(feature_cols):
         pd_result = partial_dependence(clf, df_ref[feature_cols], [i], grid_resolution=grid_resolution,

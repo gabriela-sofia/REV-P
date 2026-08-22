@@ -1,20 +1,4 @@
-"""Monta o dataset final de pontos positivos de Curitiba a partir do SIAC 156 -- mesma regra de
-aceitação do dataset v12 de Recife (`dataset_eventos_features_v12_final.csv`): geocodificação
-strong OU medium entra em bloco como positivo, sem segunda camada de verificação manual
-individual (essa é a regra real usada em Recife -- ver
-`PROJETO/local_runs/treino_exploratorio_diagnostico_v2/_scratch/stage1_build_points_v2.py:124`,
-comentário "Recife POSITIVES: same geocoded points as v1 (unchanged)").
-
-Cada linha carrega proveniência completa (`qa_record_id`, `source_year`, `data_criacao`,
-`assunto`/`subdivisao`, `confidence_tier`, `nominatim_display_name`, `nominatim_osm_id`) e um
-campo explícito `occurrence_phenomenon` confirmando exclusão de deslizamento (mesma prática do
-GeoJSON final de Recife).
-
-`failed` nunca entra -- nenhuma coordenada fabricada.
-
-Uso:
-    python build_final_dataset.py --geocoded geocodificado_full.csv --out dataset_positivos_v1.csv
-"""
+"""Monta o dataset final de pontos positivos de Curitiba a partir do SIAC 156 -- mesma regra de"""
 
 from __future__ import annotations
 

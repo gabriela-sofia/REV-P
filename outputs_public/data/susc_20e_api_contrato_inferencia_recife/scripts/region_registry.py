@@ -1,15 +1,4 @@
-"""Registro de regiões suportadas -- reflete o que o projeto REALMENTE tem,
-nao uma promessa. Ver PLANO_ACAO_produto_v1.md secao 4 e
-revp_fase2_decisoes_design_contrato.md gate #8.
-
-Formalizacao (revp_proxima_linhagem_programacao_pos_api.md etapa 2): o
-registro agora valida a si mesmo -- uma regiao nao pode reportar
-`region_maturity="available"` sem `model_version` associado. A violacao
-falha na propria construcao do registro (Pydantic), nao so em teste.
-O JSON Schema gerado a partir deste modelo fica versionado em
-`../schemas/region_registry_schema_v1.json` (ver
-`generate_schema_file()` / `tests/test_susc_20e_region_registry_schema.py`).
-"""
+"""Registro de regiões suportadas -- reflete o que o projeto REALMENTE tem,"""
 from __future__ import annotations
 
 import json
@@ -469,8 +458,7 @@ REGIONS: dict[str, RegionInfo] = {
 
 
 def find_region_for_bbox(lon_min: float, lat_min: float, lon_max: float, lat_max: float) -> str | None:
-    """Retorna o nome da região cuja bbox intersecta a geometria de entrada, ou
-    None se nenhuma região conhecida for tocada (region_not_supported)."""
+    """Retorna o nome da região cuja bbox intersecta a geometria de entrada, ou"""
     for name, info in REGIONS.items():
         rxmin, rymin, rxmax, rymax = info.bbox_wgs84
         if lon_min <= rxmax and lon_max >= rxmin and lat_min <= rymax and lat_max >= rymin:
@@ -479,8 +467,7 @@ def find_region_for_bbox(lon_min: float, lat_min: float, lon_max: float, lat_max
 
 
 def registry_as_dict() -> dict:
-    """Serializa o registro atual (schema_version + regiões) para uso por
-    consumidores não-Python (ex.: futura interface web, etapa 10 do roadmap)."""
+    """Serializa o registro atual (schema_version + regiões) para uso por"""
     return {
         "schema_version": SCHEMA_VERSION,
         "regions": {name: info.model_dump() for name, info in REGIONS.items()},
@@ -488,10 +475,7 @@ def registry_as_dict() -> dict:
 
 
 def generate_schema_file(path: Path | None = None) -> Path:
-    """Escreve o JSON Schema formal de `RegionInfo` em disco (versionado por
-    `SCHEMA_VERSION`). Usado por `tests/test_susc_20e_region_registry_schema.py`
-    para garantir que o schema versionado no repo está sincronizado com o
-    modelo Pydantic que efetivamente valida o registro."""
+    """Escreve o JSON Schema formal de `RegionInfo` em disco (versionado por"""
     if path is None:
         path = Path(__file__).resolve().parents[1] / "schemas" / "region_registry_schema_v1.json"
     schema = {"schema_version": SCHEMA_VERSION, **RegionInfo.model_json_schema()}

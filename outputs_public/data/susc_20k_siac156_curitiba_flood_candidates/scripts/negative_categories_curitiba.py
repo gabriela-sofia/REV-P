@@ -1,17 +1,4 @@
-"""Lista de categorias do SIAC 156 tratadas como negativo causalmente independente de chuva, em
-Curitiba especificamente -- NÃO herdada da lista de Recife por conveniência (regra V3 de
-`docs/metodologia_cientifica/revp_criterio_ponto_negativo_recife_e_replicacao_curitiba_petropolis.md`
-seção 4.1: "não copiar a lista de Recife -- cada categoria precisa de justificativa causal
-própria para a cidade").
-
-Critério (mesmo das 5 condições do documento, seção 3): presença de OUTRO fenômeno real,
-datado e localizado, categoricamente distinto de chuva/drenagem/enchente -- nunca ausência de
-registro de enchente.
-
-Cada entrada documenta o motivo. Formato: allowlist explícita (Assunto, Subdivisao) -- mais
-conservador que uma blocklist, porque qualquer categoria não listada fica de fora por padrão,
-em vez de entrar por omissão.
-"""
+"""Lista de categorias do SIAC 156 tratadas como negativo causalmente independente de chuva, em"""
 
 from __future__ import annotations
 

@@ -1,8 +1,4 @@
-"""Valida terrain_features_on_demand.py reamostrando os 278 pontos do v12 e
-comparando com os valores ja armazenados em dataset_v12_final.csv (que vieram da
-MESMA extracao original). Isto prova que a amostragem sob demanda reproduz
-exatamente o que treinou o modelo -- nao um pipeline paralelo divergente.
-"""
+"""Valida terrain_features_on_demand.py reamostrando os 278 pontos do v12 e"""
 from __future__ import annotations
 
 import csv

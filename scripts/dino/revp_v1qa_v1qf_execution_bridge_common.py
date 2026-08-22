@@ -1,9 +1,4 @@
-"""Shared helpers for REV-P DINO execution bridge v1qa-v1qf.
-
-Connects the expanded visual queue (v1pw) to the execution harness (v1pq).
-Never creates labels, targets, ground truth, or training data.
-Never downloads models. Never runs inference.
-"""
+"""Shared helpers for REV-P DINO execution bridge v1qa-v1qf."""
 from __future__ import annotations
 
 import os

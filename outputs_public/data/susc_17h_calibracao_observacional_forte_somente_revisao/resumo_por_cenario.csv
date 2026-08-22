@@ -1,7 +1,0 @@
-cenario,indice_medio,classe_predominante,mudanca_media_vs_base
-cenario_base_v6_compativel,0.4236,low,0.0000
-cenario_sem_documental_penalizante,0.4069,low,-0.0166
-cenario_gatilho_chuva_reforcado,0.4167,low,-0.0069
-cenario_umidade_espectral_reforcada,0.4471,medium,0.0236
-cenario_fisico_dominante,0.4017,low,-0.0219
-cenario_urbano_espectral_reforcado,0.4327,low,0.0092

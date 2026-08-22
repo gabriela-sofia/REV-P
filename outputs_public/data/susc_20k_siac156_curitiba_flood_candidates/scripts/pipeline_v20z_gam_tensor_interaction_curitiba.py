@@ -1,21 +1,4 @@
-"""SUSC-20Z -- GAM aditivo + interacao tensor-spline (2D), Curitiba. Fecha a vertente GAM.
-
-O SUSC-20Y (GAM aditivo puro, sem termo cruzado) fechou 77% do gap pro GBM (0,0593 -> 0,0138)
-mas nao o gap inteiro -- leitura registrada la: "resta um residuo que so interacao real entre
-features explicaria... um GLM aditivo, por mais flexivel que seja a curva de cada feature, nao
-consegue capturar por definicao" (limitacao #3 do relatorio SUSC-20Y, explicitamente listada
-como proxima tentativa: "uma superficie de spline 2D (nao tentada)").
-
-Este script fecha essa lacuna: adiciona um termo de interacao tensor-spline (produto tensorial
-das bases de spline de duas features, igual ao te() do mgcv/R) ao MESMO GAM aditivo do
-SUSC-20Y, pros mesmos 3 pares testados no SUSC-20X (rain_decay x hand, rain_peak x hand,
-rain_decay x rain_peak). Se isso fechar o gap pro GBM, confirma que o residuo e interacao
-2D genuina. Se nao fechar, sugere que o GBM usa estrutura de ordem >2 (3+ features) ou splits
-regionais que nem tensor-spline 2D replica -- e aí a vertente GAM esta genuinamente esgotada.
-
-Uso:
-    python pipeline_v20z_gam_tensor_interaction_curitiba.py
-"""
+"""SUSC-20Z -- GAM aditivo + interacao tensor-spline (2D), Curitiba. Fecha a vertente GAM."""
 from __future__ import annotations
 
 import json
@@ -76,8 +59,7 @@ def fit_tensor_spline_pair(df_train: pd.DataFrame, f1: str, f2: str,
 
 def tensor_basis(df: pd.DataFrame, f1: str, f2: str, sp1: SplineTransformer,
                   sp2: SplineTransformer) -> np.ndarray:
-    """Produto tensorial das bases de spline de f1 e f2 -- 1 coluna por combinacao de funcao
-    base de f1 x funcao base de f2 (igual ao termo te(f1, f2) do mgcv/R)."""
+    """Produto tensorial das bases de spline de f1 e f2 -- 1 coluna por combinacao de funcao"""
     b1 = sp1.transform(df[[f1]].values)  # (n, k1)
     b2 = sp2.transform(df[[f2]].values)  # (n, k2)
     n = b1.shape[0]
@@ -131,8 +113,7 @@ def run_all_pair_configs(df_train: pd.DataFrame, df_test: pd.DataFrame) -> pd.Da
 
 
 def tensor_hyperparam_sensitivity(df_train: pd.DataFrame, df_test: pd.DataFrame) -> pd.DataFrame:
-    """Sensibilidade do melhor par (definido depois de rodar run_all_pair_configs) a
-    n_knots/degree do tensor -- evita cherry-pick de 1 config so."""
+    """Sensibilidade do melhor par (definido depois de rodar run_all_pair_configs) a"""
     rows = []
     for tensor_n_knots in (3, 4, 5):
         for tensor_degree in (1, 2, 3):

@@ -1,8 +1,4 @@
-"""REV-P v1py — DINO visual queue TCC update.
-
-Generates TCC-ready tables for visual asset eligibility and expanded review queue.
-Never creates labels, targets, or ground truth.
-"""
+"""REV-P v1py — DINO visual queue TCC update."""
 from __future__ import annotations
 
 import argparse

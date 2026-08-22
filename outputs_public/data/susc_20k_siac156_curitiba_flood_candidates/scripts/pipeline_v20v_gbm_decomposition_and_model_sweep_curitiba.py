@@ -1,27 +1,4 @@
-"""SUSC-20V -- decomposicao do GBM (partial dependence) + varredura de mais classes de modelo.
-
-Pedido explicito (2026-08-02): testar tudo, inclusive fora das regras atuais de
-interpretabilidade, pra ver se ALGUMA classe de modelo recupera sinal prospectivo real em
-2026. Este script faz duas coisas:
-
-1. **Decompoe** o achado do SUSC-20U (GBM raso, AUC holdout=0,5888, IC exclui acaso) via
-   partial dependence (sklearn, sem instalar nada novo -- shap/xgboost nao instalaram no
-   sandbox por timeout de rede, documentado como limitacao, nao contornado por workaround
-   arriscado) -- pra entender QUAL relacao (limiar, direcao) o modelo nao-linear capturou por
-   feature, e se isso e fisicamente interpretavel mesmo sem ser um coeficiente causal formal.
-2. **Varre mais classes de modelo** nas MESMAS 5 features causais, sem filtro de
-   interpretabilidade (SVM-RBF, MLP raso, ExtraTrees, AdaBoost) -- todas ja disponiveis no
-   sklearn, nenhuma instalacao nova. Objetivo: mapear se o sinal do SUSC-20U e um achado do
-   GBM especificamente ou de nao-linearidade em geral.
-
-Regra que NAO foi relaxada, mesmo com o pedido de testar tudo: nenhuma feature nova
-derivada do label, nenhum score/proxy definido a partir da propria ocorrencia de queixa --
-isso invalidaria a validacao (vazamento), nao e uma questao de estilo/interpretabilidade, e
-foi mantido como piso de validade cientifica, nao de preferencia.
-
-Uso:
-    python pipeline_v20v_gbm_decomposition_and_model_sweep_curitiba.py
-"""
+"""SUSC-20V -- decomposicao do GBM (partial dependence) + varredura de mais classes de modelo."""
 from __future__ import annotations
 
 import json

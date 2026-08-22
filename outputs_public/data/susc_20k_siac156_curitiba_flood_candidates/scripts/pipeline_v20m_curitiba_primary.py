@@ -1,51 +1,4 @@
-"""SUSC-20M -- modelagem e validacao estatistica de Curitiba (SIAC 156), espelhando o
-`pipeline_v12_primary.py` de Recife (SUSC-20C): screening univariado (Mann-Whitney),
-Firth penalized logistic regression multivariada, bootstrap estratificado N=1000 (CIs e
-taxa de sign-flip) e AUC preditivo (LOO-CV + 5-fold repetido 50x). Mesma sequencia, mesmas
-funcoes, mesmos parametros.
-
-Duas divergencias em relacao a Recife, ambas decididas e documentadas antes de rodar:
-
-1. UNIDADE DE ANALISE = (lat, lon, event_date), nao linha do registry. Os registries
-   v20k2/v20k3 repetem a mesma ocorrencia quando o SIAC 156 a categorizou duas vezes
-   (ex.: "Drenagem/Alagamentos" + "Protecao ao cidadao - GM/Enchentes"). Essas linhas tem
-   feature identica bit a bit -- conta-las como observacoes independentes e
-   pseudo-replicacao. 1357 linhas -> 1148 unidades (1045 pos / 103 neg).
-
-2. 5 FEATURES, nao 6 -- `elevation_m` cortada. Razao fisica, nao conveniencia estatistica:
-   Curitiba esta num planalto (todos os 1357 pontos entre 850 e 1100 m); a elevacao absoluta
-   ali carrega identidade de sub-bacia, nao exposicao local a alagamento. HAND ja e a versao
-   causalmente correta da mesma ideia ("altura acima do dreno mais proximo"), e mede o que
-   `elevation_m` so aproxima. O v12 de Recife corrobora: la `elevation_m` saiu com sinal
-   INVERTIDO em relacao ao esperado (coef +0.2662 onde a fisica pede negativo, p=0.374),
-   problema ja diagnosticado como confundimento de amostragem em
-   `task2_elevacao_crs_investigacao_v9.md`.
-   Consequencia no gate EPV (piso 20, revp_revisao_literatura_alinhamento_metodos_v1.md):
-   classe minoritaria = negativo, n=103 -> EPV = 103/6 = 17,17 (REPROVA) e 103/5 = 20,60
-   (PASSA). O gate foi checado ANTES do modelo multivariado.
-
-   ATUALIZACAO SUSC-20N (N de negativo ampliado, n=423): a EPV com 6 features passa
-   folgada (70,5). Isso NAO reabre a decisao acima -- o corte de `elevation_m` continua
-   sendo primario porque o argumento e causal (confundimento com identidade de
-   sub-bacia/bairro), nao estatistico, e a EPV nunca foi a razao de fundo, so a
-   confirmacao formal. Reintroduzir `elevation_m` com N maior (sensibilidade S1, secao
-   abaixo) da coeficiente com sinal "correto" (-0.1686, p=0.036, IC fora de zero) mas
-   contribuicao preditiva NULA (LOO-AUC 0.6453 vs 0.6459 sem ela, delta -0.0006) -- ou
-   seja, nao ha ganho que justifique reabrir uma decisao causal por causa de um numero
-   estatistico. Sinal "correto" tambem nao refuta confundimento: bairro mais alto pode
-   so registrar menos queixa por composicao socioeconomica, nao por exposicao fisica
-   real. Fica como sensibilidade, nao vira primario, ate haver argumento causal novo
-   (decisao humana, nao automatica -- regra fixa do projeto).
-
-Alem do modelo primario, roda duas sensibilidades explicitamente rotuladas como
-NAO-PRIMARIAS: (S1) as 6 features originais -- reprovava a EPV em n=103 (SUSC-20M),
-passa folgada em n=423 (SUSC-20N) mas segue fora do primario pelo motivo causal acima;
-(S2) as linhas com pseudo-replicacao (1357 no SUSC-20M, 1680 no SUSC-20N), so para medir
-o efeito da unidade de analise.
-
-Uso:
-    python pipeline_v20m_curitiba_primary.py
-"""
+"""SUSC-20M -- modelagem e validacao estatistica de Curitiba (SIAC 156), espelhando o"""
 
 from __future__ import annotations
 
@@ -88,10 +41,7 @@ EXPECTED_SIGN = {"elevation_m": -1, "slope_deg": -1, "hand_m_dinf": -1, "twi_din
 
 
 def _firth_cls():
-    """FirthLogisticRegression com o shim para a API privada `_validate_data`, removida do
-    scikit-learn em 1.6. A equivalencia foi verificada reproduzindo os coeficientes,
-    p-valores e ICs publicados do v12 de Recife bit a bit (diferenca maxima 0.0) --
-    ver `qa_reproducao_recife_v12` neste mesmo script."""
+    """FirthLogisticRegression com o shim para a API privada `_validate_data`, removida do"""
     from firthlogist import FirthLogisticRegression
     from sklearn.utils.validation import validate_data
 
@@ -101,9 +51,7 @@ def _firth_cls():
     return FirthLogisticRegression
 
 
-# ---------------------------------------------------------------------------
 # etapas (identicas a pipeline_v12_primary.py)
-# ---------------------------------------------------------------------------
 def univariate_screen(df, feature_cols):
     rows = []
     for feat in feature_cols:
@@ -217,11 +165,8 @@ def predictive_auc(df, feature_cols, k=5, n_repeats=50, seed=SEED):
             "skf_auc_min": round(float(reps_auc.min()), 4), "skf_auc_max": round(float(reps_auc.max()), 4)}
 
 
-# ---------------------------------------------------------------------------
 def qa_reproducao_recife_v12() -> dict:
-    """Prova que o ambiente (numpy 2.x / sklearn 1.8 / shim de _validate_data) devolve o
-    MESMO resultado publicado do v12 de Recife. Se isto divergir, nenhum numero de Curitiba
-    abaixo e comparavel com o de Recife."""
+    """Prova que o ambiente (numpy 2.x / sklearn 1.8 / shim de _validate_data) devolve o"""
     rec = ROOT / "outputs_public/data/susc_20a_aquisicao_eventos_reais_recife/dataset/dataset_eventos_features_v12_final.csv"
     pub = ROOT / "outputs_public/data/susc_20c_modelagem_validacao_estatistica_rigorosa_recife/results/primaria_v12_firth_multivariate_coefs.csv"
     if not (rec.exists() and pub.exists()):

@@ -1,2 +1,0 @@
-candidate_event_id,cidade,data_evento,fonte,autoridade_fonte,classe_fenomeno,possui_geometria,status_referencia_observacional,proxima_acao,justificativa_tecnica
-S17C_REF_0059,Petropolis,2024-03-21..2024-03-28,Chuvas do fim de março de 2024,official,inundacao_alagamento_enxurrada,false,evidencia_contextual,obter geometria oficial de ocorrencia ou footprint tecnico datado,inundacao datada separada dos demais fenomenos; segue como evidencia contextual review-only ate obter geometria de ocorrencia

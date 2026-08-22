@@ -1,8 +1,4 @@
-"""REV-P v1qs — TCC local readiness update.
-
-Generates TCC-ready tables describing the local execution readiness status
-of the DINO smoke pipeline. Encodes the mandatory methodological phrase.
-"""
+"""REV-P v1qs — TCC local readiness update."""
 from __future__ import annotations
 
 import argparse

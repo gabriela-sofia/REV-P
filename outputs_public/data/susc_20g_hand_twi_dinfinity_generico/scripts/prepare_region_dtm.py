@@ -1,19 +1,4 @@
-"""Prepara o MDT/MDE de uma região como GeoTIFF pronto para o pipeline D-infinity.
-
-Entrada: qualquer raster legível pelo GDAL — inclusive grade Esri ArcInfo Binary Grid (`AIG`),
-que é o formato entregue pelo SGB/CPRM para Curitiba e Petrópolis.
-
-O que faz (e só isso):
-  - lê a grade nativa;
-  - opcionalmente reamostra para uma resolução alvo (`average` ao reduzir, `bilinear` ao
-    ampliar — ampliar é registrado como aviso no manifesto, porque não cria informação);
-  - opcionalmente reetiqueta o CRS quando a fonte traz apenas um Transverse Mercator genérico
-    sem código EPSG (o WKT original é preservado no manifesto);
-  - escreve GeoTIFF float32 com nodata explícito.
-
-Não recorta, não preenche buraco, não suaviza: qualquer diferença de conteúdo em relação à
-fonte vem só da reamostragem pedida.
-"""
+"""Prepara o MDT/MDE de uma região como GeoTIFF pronto para o pipeline D-infinity."""
 
 from __future__ import annotations
 

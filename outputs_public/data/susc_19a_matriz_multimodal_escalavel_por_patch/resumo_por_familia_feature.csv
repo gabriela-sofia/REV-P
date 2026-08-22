@@ -1,7 +1,0 @@
-familia,n_features_esperadas,n_features_presentes,n_features_ausentes,cobertura_media,principal_lacuna
-fisica_topografica,7,7,0,1.0000,nenhuma
-territorial,6,2,4,0.3333,MapBiomas_class_majority;exposed_soil_prop;water_prop;impervious_proxy
-espectral,4,4,0,1.0000,AWEI e NDMI nao materializados (opcionais)
-chuva,4,4,0,1.0000,nenhuma
-documental,1,1,0,0.0200,documentacao so em Recife e contexto misto em Petropolis
-observacional,1,1,0,0.0267,evidencia observacional so em Recife e SAR de Curitiba

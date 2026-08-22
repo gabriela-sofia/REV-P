@@ -1,16 +1,4 @@
-"""REV-P v1qj — Controlled real smoke embedding executor (fail-closed).
-
-Executes REAL 768D DINOv2 embeddings ONLY when every gate passes:
-  * v1qg local model audit ready (config + weights, offline, no download);
-  * v1qi assets resolved / preprocessing ready;
-  * REVP_DINO_DRY_RUN=false;
-  * REVP_DINO_PIXEL_READ_ALLOWED=true;
-  * HF_HUB_OFFLINE=1, REVP_DINO_ALLOW_DOWNLOAD=false.
-
-Default is dry-run. On any failed gate, writes empty/fail-closed outputs with
-the correct status. Never downloads, never trains, never creates labels.
-Vectors are review-only visual descriptors.
-"""
+"""REV-P v1qj — Controlled real smoke embedding executor (fail-closed)."""
 from __future__ import annotations
 
 import argparse

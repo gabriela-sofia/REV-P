@@ -1,2 +1,0 @@
-linha_id,arquivo_origem,candidate_event_id,data_evento,tipo_fenomeno,geometry_id,status_ingestao,status_geometria,patch_links,patch_links_fortes,ground_truth,eligible_for_training,score_v7_allowed,review_only,justificativa_tecnica
-S18D_MAT_0001,not_available,S17C_REF_0060,2022-01-15..2022-01-16,flood_inundation_alagamento,not_available,aguardando_resposta,ausente,0,0,false,false,false,true,nenhum arquivo oficial recebido; nenhuma geometria foi inferida

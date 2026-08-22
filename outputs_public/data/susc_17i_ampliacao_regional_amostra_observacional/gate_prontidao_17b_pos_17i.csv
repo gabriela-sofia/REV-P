@@ -1,9 +1,0 @@
-criterio,valor_observado,limiar,passou,observacao
-minimo_3_eventos_distintos,1,3,false,apenas eventos com geometria forte
-minimo_2_regioes,3,2,true,regioes com evidencia observacional
-minimo_20_vinculos_fortes,5,20,false,vinculos patch fortes aceitos
-1_evento_por_regiao_com_data_e_geometria,1,2,false,somente Recife com data e geometria fortes
-separacao_temporal_possivel,false,true,false,amostra forte de um unico evento
-controles_nao_supervisionados,true,true,true,controles seguem nao supervisionados
-ground_truth_false,0,0,true,sem ground truth
-trainable_false,0,0,true,sem treino

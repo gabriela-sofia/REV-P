@@ -1,8 +1,4 @@
-"""REV-P v1qd — Executor compatibility patch report.
-
-Verifies that v1pq can consume the v1qa expanded queue via REVP_V1PQ_QUEUE_PATH.
-Reports what changes were made and verifies backward compatibility.
-"""
+"""REV-P v1qd — Executor compatibility patch report."""
 from __future__ import annotations
 
 import argparse

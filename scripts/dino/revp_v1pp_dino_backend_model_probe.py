@@ -1,8 +1,4 @@
-"""REV-P v1pp — DINO backend/model availability probe.
-
-Detects local Python environment without downloading anything by default.
-REVP_DINO_ALLOW_DOWNLOAD=false (default). Fail-closed if no local model.
-"""
+"""REV-P v1pp — DINO backend/model availability probe."""
 from __future__ import annotations
 
 import argparse

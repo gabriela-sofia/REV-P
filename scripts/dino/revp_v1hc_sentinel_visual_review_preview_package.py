@@ -1,21 +1,4 @@
-"""REV-P v1hc: Sentinel Visual Review Preview Package.
-
-Generates visual previews (RGB + NDVI) for all 47 review gate candidates from
-v1hb, using the original Sentinel TIF files supplied via --sentinel-root or REVP_SENTINEL_ROOT.
-Outputs individual patch previews and category contact sheets for review-only use.
-
-No labels, classes, ground truth or operational claims are created.
-All outputs go to local_runs/ — never committed to git.
-TIF source paths are never stored in versionable output files.
-
-Usage:
-    python revp_v1hc_sentinel_visual_review_preview_package.py --sentinel-root /path/to/sentinel
-
-    Or via environment variable:
-        REVP_SENTINEL_ROOT=/path/to/sentinel python revp_v1hc_...py
-
-    If neither is provided, all candidates are marked BLOCKED_SENTINEL_ROOT_NOT_CONFIGURED.
-"""
+"""REV-P v1hc: Sentinel Visual Review Preview Package."""
 from __future__ import annotations
 
 import argparse
@@ -249,13 +232,7 @@ def build_contact_sheet(
 
 
 def _get_sentinel_root(cli_root: str | None = None) -> tuple[Path | None, str]:
-    """Resolve Sentinel data root without hardcoding private paths.
-
-    Priority:
-    1. CLI argument ``--sentinel-root``
-    2. Environment variable ``REVP_SENTINEL_ROOT``
-    3. None → all candidates marked BLOCKED_SENTINEL_ROOT_NOT_CONFIGURED
-    """
+    """Resolve Sentinel data root without hardcoding private paths."""
     candidates = [cli_root, os.environ.get("REVP_SENTINEL_ROOT")]
     for c in candidates:
         if c:

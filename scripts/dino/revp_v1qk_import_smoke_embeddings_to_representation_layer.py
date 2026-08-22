@@ -1,9 +1,4 @@
-"""REV-P v1qk — Import smoke embeddings into the representation layer.
-
-Reads the v1qj feature store, validates all 768D vectors, deduplicates by
-(patch_id, path_hash, model_path_hash), and writes a consolidated review-only
-representation feature store. Never mixes with labels. Never calls C3/C4.
-"""
+"""REV-P v1qk — Import smoke embeddings into the representation layer."""
 from __future__ import annotations
 
 import argparse

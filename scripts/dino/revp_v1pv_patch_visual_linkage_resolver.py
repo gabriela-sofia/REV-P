@@ -1,9 +1,4 @@
-"""REV-P v1pv — Patch visual linkage resolver.
-
-Links visual asset references (from v1pu audit) to patch_id/alias/region.
-Does NOT require scene_date. Does NOT require temporal unlock. Metadata-only.
-Never creates labels, targets, or ground truth.
-"""
+"""REV-P v1pv — Patch visual linkage resolver."""
 from __future__ import annotations
 
 import argparse

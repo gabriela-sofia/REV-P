@@ -1,30 +1,4 @@
-"""SUSC-20R -- correlacao entre indice ONI real (ENOS) e o colapso de AUC prospectivo 2026.
-
-O SUSC-20Q levantou, sem testar, a hipotese de que uma anomalia hidrometeorologica real (fase
-ENOS) explicaria por que 2026 especificamente quebra a relacao chuva<->queixa que sustentava o
-modelo em 2023-2025. A revisao de literatura de 2026-08-02 achou a Nota Tecnica SIMEPAR
-(2026-06-11, fonte primaria) confirmando El Nino se formando no Parana a partir do inverno 2026
--- mas notou que a linha do tempo bruta do ONI nao parecia dar um corte limpo (2023 foi ele
-mesmo ano de El Nino forte e generalizou bem no walk-forward).
-
-Este script formaliza esse teste: usa o indice ONI real (Oceanic Nino Index, NOAA/CPC via
-Golden Gate Weather Services -- tabela publica, medias moveis de 3 meses de anomalia de TSM na
-regiao Nino 3.4), extrai a media Jan-Jul (JFM..MJJ, mesma janela do holdout casado por estacao
-do SUSC-20Q) por ano, e compara com o AUC de teste do walk-forward (SUSC-20Q diagnostico 3) e a
-magnitude do coeficiente de chuva por ano (SUSC-20Q diagnostico 5).
-
-FONTE DO DADO ONI (hardcoded, com citacao -- serie pequena e publica, mesma categoria de uso do
-Open-Meteo/CHIRPS ja em producao no projeto, nao e novo tipo de aquisicao):
-Golden Gate Weather Services, "El Nino and La Nina Years and Intensities" (Jan Null, CCM),
-https://ggweather.com/enso/oni.htm -- baseado no Oceanic Nino Index (ONI) v5 do NOAA/CPC
-(https://origin.cpc.ncep.noaa.gov/products/analysis_monitoring/ensostuff/ONI_v5.php).
-Consultado 2026-08-02, tabela publicada "atualizada ate dezembro de 2025" -- **nao existe valor
-numerico publicado de ONI pra jan-jul/2026 nesta fonte**; isso e documentado como limitacao
-explicita, nao preenchido com estimativa.
-
-Uso:
-    python pipeline_v20r_oni_enso_correlation_curitiba.py
-"""
+"""SUSC-20R -- correlacao entre indice ONI real (ENOS) e o colapso de AUC prospectivo 2026."""
 from __future__ import annotations
 
 import json

@@ -1,10 +1,4 @@
-"""REV-P v1pj — DINO similarity neighbor graph.
-
-Computes top-k cosine neighbors and a long-form similarity matrix over VALID
-review-only embeddings. Similarity is an exploratory visual/semantic coherence
-signal — it NEVER infers same-event, creates labels, or trains models. If fewer
-than 2 valid embeddings exist, outputs are empty with header (fail-closed).
-"""
+"""REV-P v1pj — DINO similarity neighbor graph."""
 
 from __future__ import annotations
 

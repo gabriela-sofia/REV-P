@@ -1,11 +1,4 @@
-"""REV-P v1qh — DINO smoke sample selector.
-
-Selects a small stratified smoke sample (16-32 patches) from the v1qa expanded
-visual queue for review-only DINO embeddings.
-
-Does NOT require scene_date. Does NOT require temporal unlock. Blocks
-fixture/test/synthetic rows. Never creates labels/targets/ground truth.
-"""
+"""REV-P v1qh — DINO smoke sample selector."""
 from __future__ import annotations
 
 import argparse

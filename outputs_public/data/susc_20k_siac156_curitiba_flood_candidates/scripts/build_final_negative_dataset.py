@@ -1,31 +1,4 @@
-"""SUSC-20N -- monta o dataset final de pontos NEGATIVOS de Curitiba a partir dos candidatos
-geocodificados, aplicando a checagem de colisao espacial contra os positivos.
-
-Existe porque o `build_final_dataset.py` so monta positivos (label=1); a etapa equivalente do
-SUSC-20K3 foi executada mas nao ficou versionada como script. As regras aqui sao as
-documentadas em `susc_20k2_k3_replica_completa_metodo_recife_report.md` secao 7.3:
-
-  - aceite em bloco `strong` OU `medium` (`failed` nunca entra -- coordenada nunca e fabricada);
-  - remocao por colisao espacial: candidato a menos de 30 m de QUALQUER positivo e descartado
-    (mesma rua tem reclamacao de enchente E de outra categoria -> o ponto nao e negativo limpo).
-    Raio de 30 m, mesmo criterio de Recife;
-  - `negative_source_type = siac156_curitiba_non_hydrological_category_v1`;
-  - `event_date` = data real da ocorrencia nao-hidrologica do proprio registro, nunca sintetica.
-
-Uniao com uma geracao anterior (`--existentes`): linhas ja presentes no dataset negativo
-anterior sao carregadas VERBATIM (mesmo `point_id`, mesma proveniencia) e candidatos novos que
-repitam a chave (logradouro, bairro, data) sao descartados. Isso preserva continuidade de id
-entre rodadas -- necessario porque a amostragem deterministica de
-`mine_negative_candidates_siac156.py` usa `stable_rank(str(csv_path), ...)`, que depende do
-caminho passado na linha de comando e portanto NAO reproduz a mesma amostra entre sessoes com
-diretorios diferentes. Duas geracoes = uniao de dois sorteios do mesmo pool sob os mesmos
-criterios, nao um superconjunto.
-
-Uso:
-    python build_final_negative_dataset.py --geocoded geocodificados.csv \
-        --positivos dataset_positivos.csv --existentes dataset_negativos_v1.csv \
-        --out dataset_negativos_v2.csv
-"""
+"""SUSC-20N -- monta o dataset final de pontos NEGATIVOS de Curitiba a partir dos candidatos"""
 
 from __future__ import annotations
 
@@ -55,9 +28,7 @@ def haversine_m(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
 
 
 def negative_point_id(logradouro: str, bairro: str, data_criacao: str) -> str:
-    """Id derivado da chave do registro. O esquema exato da geracao anterior (SUSC-20K3) nao
-    ficou documentado e nao e recuperavel do hash; ids antigos sao preservados verbatim pela
-    uniao, e so pontos NOVOS recebem id por este esquema."""
+    """Id derivado da chave do registro. O esquema exato da geracao anterior (SUSC-20K3) nao"""
     key = f"{logradouro}|{bairro}|{data_criacao}"
     return "CUR_SIAC156_NEG_" + hashlib.sha1(key.encode("utf-8")).hexdigest()[:16]
 

@@ -1,15 +1,4 @@
-"""REV-P v1gx: TCC figures and tables export plan.
-
-Organizes results into TCC-ready artifacts:
-- inventory of required figures
-- inventory of required tables
-- mapping file-source → TCC section
-- status per artifact: READY, NEEDS_LOCAL_OUTPUT, NEEDS_MANUAL_REVIEW, BLOCKED
-- no complex figure generation; clear blocking when data unavailable
-
-Allowed claims: documentation of what is ready vs blocked
-Forbidden: over-committing to figures/tables without data; false readiness claims
-"""
+"""REV-P v1gx: TCC figures and tables export plan."""
 from __future__ import annotations
 
 import argparse

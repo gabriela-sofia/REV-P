@@ -1,6 +1,0 @@
-criterio,valor_observado,limiar,status_19e,observacao
-narrativa_consolidada,true,true,19E_COMUNICACAO_PRONTA_COM_RESSALVAS,"sintese, metodologia e resultados gerados"
-claims_policy_definida,true,true,19E_COMUNICACAO_PRONTA_COM_RESSALVAS,permitidos e proibidos explicitos
-glossario_completo,true,true,19E_COMUNICACAO_PRONTA_COM_RESSALVAS,22 termos metodologicos
-score_v6_intacto,true,true,19E_COMUNICACAO_PRONTA_COM_RESSALVAS,score_v6 nao alterado
-ressalvas_amostra_e_missingness,true,true,19E_COMUNICACAO_PRONTA_COM_RESSALVAS,amostra minima e missingness territorial explicitos

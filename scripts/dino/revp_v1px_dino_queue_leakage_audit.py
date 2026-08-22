@@ -1,9 +1,4 @@
-"""REV-P v1px — DINO queue leakage audit.
-
-Audits the expanded queue and all v1pu-v1pw outputs for guardrail violations.
-Checks: no label/train/target true, no fixture, no abs path, no local_runs
-exposed, no C3+/C4 created, no scene_date misuse, blocked rows have reason.
-"""
+"""REV-P v1px — DINO queue leakage audit."""
 from __future__ import annotations
 
 import argparse

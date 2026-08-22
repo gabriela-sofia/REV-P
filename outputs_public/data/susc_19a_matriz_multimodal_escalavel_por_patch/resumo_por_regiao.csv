@@ -1,4 +1,0 @@
-regiao,n_patches,coverage_fisico_medio,coverage_territorial_medio,coverage_espectral_medio,coverage_chuva_medio,coverage_documental_medio,coverage_observacional_medio,coverage_total_medio,patches_com_evidencia_observacional
-recife,100,1.0000,0.3333,1.0000,1.0000,0.0500,0.0500,0.5722,5
-curitiba,100,1.0000,0.3333,1.0000,1.0000,0.0000,0.0200,0.5589,2
-petropolis,100,1.0000,0.3333,1.0000,1.0000,0.0100,0.0100,0.5589,1

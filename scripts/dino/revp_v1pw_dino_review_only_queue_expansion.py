@@ -1,9 +1,4 @@
-"""REV-P v1pw — DINO review-only execution queue expansion.
-
-Builds expanded DINO execution queue from v1pv linkage registry, prioritizing
-Protocol C patches (v1oz), then Sentinel TIF references, then other eligible.
-Never executes embedding. Never creates labels/targets/ground truth.
-"""
+"""REV-P v1pw — DINO review-only execution queue expansion."""
 from __future__ import annotations
 
 import argparse

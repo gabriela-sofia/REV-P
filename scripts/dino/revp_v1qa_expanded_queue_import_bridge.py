@@ -1,9 +1,4 @@
-"""REV-P v1qa — Expanded queue import bridge.
-
-Converts v1pw expanded visual queue to executor-compatible format.
-Preserves priority/reason/linkage_confidence. All items remain review-only.
-Never executes embedding. Never creates labels/targets/ground truth.
-"""
+"""REV-P v1qa — Expanded queue import bridge."""
 from __future__ import annotations
 
 import argparse

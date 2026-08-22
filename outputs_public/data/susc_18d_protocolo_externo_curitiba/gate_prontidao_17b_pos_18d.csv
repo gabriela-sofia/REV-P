@@ -1,6 +1,0 @@
-criterio,valor_observado,limiar,passou,observacao
-segunda_regiao_com_overlay,false,true,false,Curitiba ainda depende de resposta oficial
-benchmark_17b_criado,false,false,true,nenhum benchmark criado
-ground_truth_zero,0,0,true,sem ground truth
-trainable_zero,0,0,true,sem treino
-score_v7_zero,0,0,true,sem score_v7

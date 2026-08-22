@@ -1,29 +1,4 @@
-"""QA/deduplicação dos registros hidrológicos do SIAC 156 -- Etapa 2, espelha
-`PROJETO/scripts/external_validation/qa_recife_seced_geocoding_ready_records_v1.py` (SEDEC
-Recife), adaptada ao schema mais limpo do SIAC 156 (categoria já vem estruturada em
-`Assunto`/`Subdivisao`, sem mistura de texto livre; `Logradouro` sem número de casa por
-desenho do sistema, não por mascaramento -- diferença real registrada no relatório).
-
-Entrada: CSV bruto de `extract_flood_complaints_siac156.py` filtrado por toda a base (não só
-janelas de evento) -- ver `mine_all_years_siac156.py`.
-
-Critérios (mesmo espírito do Recife, adaptado):
-  - `qa_record_id`: hash estável de (source_file, row_index, logradouro, bairro) -- rastreável.
-  - `duplicate_group_count`: registros com mesma chave (logradouro normalizado + bairro + data +
-    assunto+subdivisao) viram grupo de duplicata -- mesmo pedido reenviado ou re-triado pelo
-    sistema.
-  - `bairro_reconhecido`: contra a lista real de bairros observados no ano inteiro (não só nas
-    linhas de enchente) -- 75 bairros distintos no ano de 2025, que bate com a contagem oficial
-    de bairros de Curitiba.
-  - `rua_generica_ou_vazia`: string de logradouro vazia, só dígitos, ou comprimento <= 3.
-  - `qa_decision`: `ready_for_geocoding` (bairro reconhecido, rua não genérica, endereço
-    presente) | `needs_manual_cleanup` (bairro fora da lista OU rua genérica/curta) |
-    `reject` (sem logradouro nem bairro -- não geocodificável de jeito nenhum).
-
-Uso:
-    python qa_dedup_siac156.py --raw candidatos_todos_anos.csv --bairros-referencia bairros.json \
-        --out qa_registro.csv
-"""
+"""QA/deduplicação dos registros hidrológicos do SIAC 156 -- Etapa 2, espelha"""
 
 from __future__ import annotations
 

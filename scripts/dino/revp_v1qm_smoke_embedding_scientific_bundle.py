@@ -1,8 +1,4 @@
-"""REV-P v1qm — Final smoke embedding scientific bundle.
-
-Consolidates v1qg-v1ql into an artifact manifest, quality checks, a scientific
-summary and a TCC results table. Encodes the mandatory methodological boundary.
-"""
+"""REV-P v1qm — Final smoke embedding scientific bundle."""
 from __future__ import annotations
 
 import argparse

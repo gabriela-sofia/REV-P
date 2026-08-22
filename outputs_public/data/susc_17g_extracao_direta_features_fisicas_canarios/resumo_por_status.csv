@@ -1,7 +1,0 @@
-dimensao,categoria,quantidade
-feature_source_mode,direta_por_dem_e_hidrografia_local,5
-extracao,diretas_completas,5
-extracao,diretas_parciais,0
-extracao,fila_insumo_externo_alta,0
-calibracao,forte_review_only_possivel,5
-calibracao,exploratoria_com_features_diretas,5

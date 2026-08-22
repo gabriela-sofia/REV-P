@@ -1,8 +1,4 @@
-"""REV-P v1qc — DINO dry-run execution package.
-
-Generates a reproducible execution package: item list, PowerShell commands,
-env vars, and safety limits. Never runs model. Never downloads. Never infers.
-"""
+"""REV-P v1qc — DINO dry-run execution package."""
 from __future__ import annotations
 
 import argparse

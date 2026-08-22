@@ -1,9 +1,4 @@
-"""Shared helpers for REV-P DINO local readiness block v1qn-v1qt.
-
-Transforms the review-only DINO queue (v1qa/v1qh) into a locally executable
-smoke package. Never reads pixels by default. Never downloads. Never trains.
-No vector becomes a label, target, or ground truth.
-"""
+"""Shared helpers for REV-P DINO local readiness block v1qn-v1qt."""
 from __future__ import annotations
 
 import csv
@@ -55,9 +50,7 @@ IMAGE_EXTS = {".tif", ".tiff", ".png", ".jpg", ".jpeg", ".webp"}
 ABS_PATH_RE = re.compile(r"(?<![A-Za-z])[A-Za-z]:[\\/]")
 
 
-# ---------------------------------------------------------------------------
 # Env helpers
-# ---------------------------------------------------------------------------
 
 def env_str(name: str, default: str = "") -> str:
     return os.environ.get(name, default)
@@ -101,9 +94,7 @@ def model_env() -> dict[str, str]:
     }
 
 
-# ---------------------------------------------------------------------------
 # Path utilities
-# ---------------------------------------------------------------------------
 
 def write_json(path: Path, payload: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -135,9 +126,7 @@ def file_sha256_short(path: Path, n: int = 16) -> str:
         return ""
 
 
-# ---------------------------------------------------------------------------
 # Manifest / queue readers
-# ---------------------------------------------------------------------------
 
 _V1QH = _p("REVP_V1QN_IN_SMOKE",
             DATASETS / "dino_smoke_sample_selection_v1qh.csv")
@@ -169,9 +158,7 @@ def read_v1fm_designation(path: Path | None = None) -> list[dict[str, str]]:
     return read_csv(path or _V1FM)
 
 
-# ---------------------------------------------------------------------------
 # Identity normalization
-# ---------------------------------------------------------------------------
 
 def normalize_patch(row: dict[str, str]) -> tuple[str, str, str]:
     pid = (row.get("patch_id", "") or row.get("canonical_patch_id", "") or "UNKNOWN").strip().upper()
@@ -180,9 +167,7 @@ def normalize_patch(row: dict[str, str]) -> tuple[str, str, str]:
     return pid, alias, region
 
 
-# ---------------------------------------------------------------------------
 # Local asset resolution
-# ---------------------------------------------------------------------------
 
 def candidate_roots(extra: dict[str, Path] | None = None) -> list[tuple[str, Path]]:
     """Return [(env_name, root_path)] from env + extra, ordered by priority."""
@@ -223,10 +208,7 @@ def _iter_candidates(root: Path, exts: set[str] | None = None) -> list[Path]:
 
 def _match_score(candidate: Path, rel: str, filename: str, patch_id: str,
                  alias: str) -> tuple[str, float]:
-    """Score a candidate file against target identifiers.
-
-    Returns (match_type, confidence) where higher confidence is better.
-    """
+    """Score a candidate file against target identifiers."""
     name = candidate.name
     stem = candidate.stem.lower()
     rel_norm = rel.replace("\\", "/").lower() if rel else ""
@@ -308,9 +290,7 @@ def ranked_candidates(smoke_rows: list[dict[str, str]],
     return out
 
 
-# ---------------------------------------------------------------------------
 # Row-level guardrail
-# ---------------------------------------------------------------------------
 
 def guardrail_row_ok(row: dict[str, Any]) -> tuple[bool, str]:
     for f in READINESS_FORBIDDEN_FIELDS:

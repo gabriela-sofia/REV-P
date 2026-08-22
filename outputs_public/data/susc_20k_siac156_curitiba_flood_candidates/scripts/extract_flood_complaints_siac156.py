@@ -1,23 +1,4 @@
-"""Extrai reclamações de enchente/alagamento do SIAC 156 (Curitiba) pra uma janela de evento.
-
-Motivo de existir: SIAC 156 é o registro administrativo de atendimento ao cidadão de Curitiba
-(Central 156) -- estrutura equivalente ao SEDEC de Recife (assunto categorizado, endereço de
-rua, data), mas nunca minerado nessa direção antes (ver
-docs/metodologia_cientifica/revp_linhagem_coleta_curitiba_petropolis_paridade_recife.md).
-Fonte: https://dadosabertos.curitiba.pr.gov.br/conjuntodado/detalhe/?chave=0d5a7b06-3940-4be9-876e-bc8f23e96530
-
-Cada arquivo diário do portal é um extrato acumulado (mês corrente até a data do arquivo, não só
-o dia), separador ';', encoding UTF-8 com BOM. Colunas: Tipo;Orgao;DataCriacao;Assunto;
-Subdivisao;Situacao;Logradouro;Bairro;Regional;DataResposta;Origem.
-
-Este script SÓ filtra e organiza -- não geocodifica, não adjudica fisicamente. Um candidato aqui
-não é um ponto adjudicado (mesma régua do SUSC-20A): precisa passar por geocodificação real e
-depois pela leitura HAND/TWI/declividade antes de virar candidato positivo.
-
-Uso:
-    python extract_flood_complaints_siac156.py --csv arq1.csv arq2.csv \
-        --events eventos.csv --out candidatos.csv
-"""
+"""Extrai reclamações de enchente/alagamento do SIAC 156 (Curitiba) pra uma janela de evento."""
 
 from __future__ import annotations
 
@@ -32,8 +13,7 @@ FLOOD_KEYWORDS = ("alagam", "enchente", "enxurrada", "transbord", "inund")
 
 
 def normalize(text: str | None) -> str:
-    """Maiúsculas, sem acento, sem espaço nas pontas -- pra comparação robusta a variação de
-    digitação (o CSV real tem 'CAJURU'/'Cajuru', 'ANIBAL'/'ANÍBAL' etc.)."""
+    """Maiúsculas, sem acento, sem espaço nas pontas -- pra comparação robusta a variação de"""
     if not text:
         return ""
     decomposed = unicodedata.normalize("NFKD", text)
@@ -73,10 +53,7 @@ def load_events(path: Path | str) -> list[EventWindow]:
 
 
 def extract_candidates(csv_paths: list[Path | str], events: list[EventWindow]) -> list[dict]:
-    """Varre os CSVs do SIAC 156 e retorna linhas flood-related cuja DataCriacao bate com
-    alguma das janelas de evento pedidas. Cada linha de saída marca se o Bairro está na lista
-    esperada da notícia/registro v20i (`bairro_esperado`) -- não descarta os que não batem,
-    só sinaliza, porque a lista de bairros do v20i não é exaustiva."""
+    """Varre os CSVs do SIAC 156 e retorna linhas flood-related cuja DataCriacao bate com"""
     by_date = {ev.event_date_ddmmyyyy: ev for ev in events}
     seen = set()  # dedupe entre arquivos sobrepostos (extratos acumulados se repetem)
     out: list[dict] = []

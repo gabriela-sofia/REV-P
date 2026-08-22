@@ -1,9 +1,0 @@
-criterio,valor_observado,limiar,passou,observacao
-geometria_oficial_de_ocorrencia_encontrada,false,true,false,ponto/poligono/bbox/footprint oficial de ocorrencia
-patch_link_forte_criado,0,>=1,false,overlay forte com patch oficial
-features_diretas_disponiveis,false,true,false,fisico/espectral/chuva por patch
-curitiba_segunda_regiao_forte,false,true,false,referencia forte somente revisao em Curitiba
-ground_truth_zero,0,0,true,sem ground truth
-trainable_zero,0,0,true,sem treino
-score_v7_zero,0,0,true,sem score_v7
-score_v6_intacto,true,true,true,score_v6 nunca alterado

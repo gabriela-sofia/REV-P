@@ -1,3 +1,0 @@
-audit_id,arquivo,tipo,tamanho_bytes,origem,contem_curitiba,contem_sentinel1,contem_vv_vh,contem_pre,contem_pos,raster_local,utilizavel,motivo_uso_ou_bloqueio
-S18E_SAR_AUD_0001,not_available,not_available,0,varredura_local_repositorio,false,false,false,false,false,false,false,nenhum candidato local SAR/raster localizado
-S18E_SAR_AUD_SUMMARY,not_available,summary,0,susc_18e,false,false,false,false,false,false,false,nao ha par raster Sentinel-1 local pre/pos suficiente; pacote GEE/ASF/Copernicus deve ser executado fora do repositorio

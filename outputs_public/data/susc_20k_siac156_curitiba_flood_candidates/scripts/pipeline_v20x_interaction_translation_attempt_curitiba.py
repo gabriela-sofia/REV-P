@@ -1,23 +1,4 @@
-"""SUSC-20X -- tentativa de traduzir a nao-linearidade do GBM pra termo interpretavel, Curitiba.
-
-Pergunta desta rodada: o sinal nao-linear achado no SUSC-20U/20V/20W pode ser capturado por um
-termo explicito e interpretavel (interacao produto ou indicador de limiar) dentro do MESMO
-modelo linear (Firth/logistic), preservando coeficiente + p-valor + IC? Se sim, resolveria a
-tensao entre performance e interpretabilidade sem abrir mao da rota causal.
-
-Duas famílias de termo testadas, escolhidas a partir da propria partial dependence do GBM
-(SUSC-20V/20W):
-
-1. **Interacao produto** (par de features padronizadas multiplicadas) -- forma classica de
-   capturar interacao linear-por-partes num GLM.
-2. **Indicador de limiar** -- threshold binario no ponto onde a partial dependence do GBM
-   mostra o salto mais acentuado (ex.: hand_m_dinf<4m, onde a PD cai de 0,84 pra -0,05;
-   rain_decay_index_api_chirps>20, onde a PD sobe de -0,62 pra +0,44; ambos lidos
-   diretamente da grade de partial dependence, nao escolhidos por busca).
-
-Uso:
-    python pipeline_v20x_interaction_translation_attempt_curitiba.py
-"""
+"""SUSC-20X -- tentativa de traduzir a nao-linearidade do GBM pra termo interpretavel, Curitiba."""
 from __future__ import annotations
 
 import json

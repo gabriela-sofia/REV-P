@@ -1,11 +1,4 @@
-"""REV-P v1ps — Smoke embedding review products.
-
-Generates similarity neighbors, PCA projection, exploratory cluster, and
-Protocol C crosswalk from v1pr smoke feature store. If fewer than 2 valid
-embeddings exist, all outputs are empty with header (fail-closed).
-Does NOT alter v1pj/v1pk/v1pl originals.
-Cluster ≠ class. Neighbor ≠ event. PCA ≠ validation. DINO ≠ event validator.
-"""
+"""REV-P v1ps — Smoke embedding review products."""
 from __future__ import annotations
 
 import argparse

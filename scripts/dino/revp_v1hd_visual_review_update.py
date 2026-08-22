@@ -1,25 +1,4 @@
-"""REV-P v1hd: Visual-Assisted Interpretation Update.
-
-Reprocesses the 47 review gate candidates from v1hb using actual image
-statistics computed from the Sentinel TIF files (when available via
---sentinel-root or REVP_SENTINEL_ROOT), or from the PNG previews generated
-in v1hc. Generates conservative, descriptive visual_pattern_notes without
-creating labels, classes, predictions or ground-truth claims.
-
-Usage:
-    python revp_v1hd_visual_review_update_update.py --sentinel-root /path/to/sentinel
-    REVP_SENTINEL_ROOT=/path/to/sentinel python revp_v1hd_visual_review_update_update.py
-
-If neither is provided, all candidates are marked VISUAL_INTERPRETATION_MODE=MANUAL_REQUIRED.
-
-Methodological constraints (enforced in all code paths):
-  - No labels created
-  - No targets created
-  - No predictions made
-  - No ground truth established
-  - All observations are descriptive/statistical only
-  - Review-only annotation
-"""
+"""REV-P v1hd: Visual-Assisted Interpretation Update."""
 from __future__ import annotations
 
 import argparse
@@ -72,9 +51,7 @@ FORBIDDEN_TERMS = {
 }
 
 
-# ---------------------------------------------------------------------------
 # Data structures
-# ---------------------------------------------------------------------------
 
 class CandidateRecord(NamedTuple):
     review_item_id: str
@@ -100,9 +77,7 @@ class ImageStats(NamedTuple):
     n_pixels: int
 
 
-# ---------------------------------------------------------------------------
 # Sentinel root resolution
-# ---------------------------------------------------------------------------
 
 def _get_sentinel_root(cli_root: str | None = None) -> Path | None:
     for candidate in [cli_root, os.environ.get("REVP_SENTINEL_ROOT")]:
@@ -122,9 +97,7 @@ def _resolve_tif(patch_id: str, region: str, sentinel_root: Path) -> Path | None
     return tif if tif.exists() else None
 
 
-# ---------------------------------------------------------------------------
 # Image statistics computation
-# ---------------------------------------------------------------------------
 
 def _normalize_band(arr: np.ndarray, p_low: float = 2.0, p_high: float = 98.0) -> np.ndarray:
     valid = arr[arr > 0]
@@ -172,11 +145,7 @@ def compute_stats_from_tif(tif_path: Path) -> ImageStats | None:
 
 
 def stats_to_visual_notes(stats: ImageStats, patch_id: str, category: str) -> str:
-    """Generate conservative descriptive text from image statistics.
-
-    Never infers hydrological events, risk, or labels.
-    Uses 'aparente', 'possível', 'padrão consistente com' framing throughout.
-    """
+    """Generate conservative descriptive text from image statistics."""
     notes: list[str] = []
 
     # Brightness / reflectance level
@@ -260,12 +229,7 @@ def stats_to_uncertainty(
     patch_id: str,
     prior_uncertainty: str,
 ) -> str:
-    """Update uncertainty level based on statistical evidence quality.
-
-    Can lower from high→medium if patch is in corpus and statistics are clear.
-    Never lowers from medium→low based on statistics alone.
-    Never raises uncertainty based on statistics.
-    """
+    """Update uncertainty level based on statistical evidence quality."""
     if prior_uncertainty == "low":
         return "low"
     if patch_id not in V1GU_CORPUS:
@@ -287,12 +251,7 @@ def stats_to_usable(
     prior_usable: str,
     preview_status: str,
 ) -> str:
-    """Update usability for TCC discussion.
-
-    - Patches with preview GENERATED → at least 'conditional'
-    - Patches without preview → keep prior value
-    - Medoids/outliers already 'conditional' → keep
-    """
+    """Update usability for TCC discussion."""
     if preview_status != "GENERATED":
         return prior_usable
     if prior_usable == "no":
@@ -340,9 +299,7 @@ def stats_to_discussion_note(
     )
 
 
-# ---------------------------------------------------------------------------
 # Load input data
-# ---------------------------------------------------------------------------
 
 def load_candidates() -> list[CandidateRecord]:
     manifest = V1HB_DIR / "review_gate_execution_manifest_v1hb.csv"
@@ -389,9 +346,7 @@ def load_candidates() -> list[CandidateRecord]:
     return records
 
 
-# ---------------------------------------------------------------------------
 # Build outputs
-# ---------------------------------------------------------------------------
 
 def process_candidates(
     records: list[CandidateRecord],
@@ -723,9 +678,7 @@ def build_synthesis(rows: list[dict], summary: dict) -> str:
     return "\n".join(lines)
 
 
-# ---------------------------------------------------------------------------
 # I/O utilities
-# ---------------------------------------------------------------------------
 
 def write_csv(path: Path, rows: list[dict]) -> None:
     if not rows:
@@ -752,9 +705,7 @@ def write_md(path: Path, content: str) -> None:
     print(f"[v1hd] Written: {path.name} ({len(content)} chars)")
 
 
-# ---------------------------------------------------------------------------
 # CLI
-# ---------------------------------------------------------------------------
 
 def _parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(

@@ -1,7 +1,0 @@
-from __future__ import annotations
-
-import susc_17c5_patch_grid_expansion_common as s17c5
-
-
-if __name__ == "__main__":
-    raise SystemExit(s17c5.validate())

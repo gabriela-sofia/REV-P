@@ -90,9 +90,7 @@ EXPANSION_CANDIDATES: list[dict[str, str]] = [
 ]
 
 
-# ---------------------------------------------------------------------------
 # Utility
-# ---------------------------------------------------------------------------
 
 def write_csv(path: Path, rows: list[dict[str, Any]], fields: list[str]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -128,9 +126,7 @@ def read_csv_file(path: Path) -> list[dict[str, str]]:
         return list(csv.DictReader(f))
 
 
-# ---------------------------------------------------------------------------
 # Patch loading — normalizes to unified schema
-# ---------------------------------------------------------------------------
 
 def load_patches(scope: str, gis_root: Path | None) -> list[dict[str, Any]]:
     if scope == "dino-corpus":
@@ -161,9 +157,7 @@ def load_patches(scope: str, gis_root: Path | None) -> list[dict[str, Any]]:
         return patches
 
 
-# ---------------------------------------------------------------------------
 # TIF bounds
-# ---------------------------------------------------------------------------
 
 def get_patch_bounds_wgs84(tif_path: str) -> tuple[float, float, float, float] | None:
     if not tif_path:
@@ -187,9 +181,7 @@ def patch_centroid(bounds: tuple[float, float, float, float]) -> tuple[float, fl
     return lon, lat
 
 
-# ---------------------------------------------------------------------------
 # Source inventory
-# ---------------------------------------------------------------------------
 
 def load_known_sources() -> list[dict[str, Any]]:
     sources = []
@@ -212,9 +204,7 @@ def load_known_sources() -> list[dict[str, Any]]:
     return sources
 
 
-# ---------------------------------------------------------------------------
 # Coverage geometry
-# ---------------------------------------------------------------------------
 
 def bbox_overlaps(
     lon_min_a: float, lat_min_a: float, lon_max_a: float, lat_max_a: float,
@@ -257,9 +247,7 @@ def centroid_in_source_geojson(cx: float, cy: float, geojson_path: Path) -> dict
         return {"found": False, "reason": str(e)[:120]}
 
 
-# ---------------------------------------------------------------------------
 # Per-patch assessment
-# ---------------------------------------------------------------------------
 
 def assess_patch(patch: dict[str, Any],
                  sources: list[dict[str, Any]]) -> dict[str, Any]:
@@ -333,9 +321,7 @@ def assess_patch(patch: dict[str, Any],
     return base
 
 
-# ---------------------------------------------------------------------------
 # Region and gap summaries
-# ---------------------------------------------------------------------------
 
 def region_summary(patch_rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     from collections import defaultdict
@@ -386,9 +372,7 @@ def coverage_gap_rows(patch_rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return gaps
 
 
-# ---------------------------------------------------------------------------
 # Main audit
-# ---------------------------------------------------------------------------
 
 def run_audit(scope: str, gis_root: Path | None,
               output_dir: Path) -> dict[str, Any]:
@@ -527,9 +511,7 @@ def run_audit(scope: str, gis_root: Path | None,
     }
 
 
-# ---------------------------------------------------------------------------
 # CLI
-# ---------------------------------------------------------------------------
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(

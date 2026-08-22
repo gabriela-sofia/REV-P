@@ -1,17 +1,4 @@
-"""SUSC-20E -- API local do contrato de inferência (Fase 5 do
-PLANO_ACAO_produto_v1.md), só depois de 1-3 terem números reais (já têm).
-
-Implementa o rascunho v0 do contrato (`txtpragab.docx` / `contract_schema.py`)
-com as duas decisões já tomadas na Fase 2
-(`revp_fase2_decisoes_design_contrato.md`): CI = bootstrap preditivo (motor
-SUSC-20D, já validado); DINO nunca soma ao score, só aparece em
-`evidence.dino_*` quando o índice de patches estiver configurado.
-
-Roda só localmente (uvicorn). Não é deploy, não é infraestrutura
-compartilhada -- é o MVP local descrito na Fase 3, exposto por HTTP em vez de
-chamado direto em Python, para provar o contrato de verdade antes de
-qualquer decisão de hospedagem real.
-"""
+"""SUSC-20E -- API local do contrato de inferência (Fase 5 do"""
 from __future__ import annotations
 
 import os

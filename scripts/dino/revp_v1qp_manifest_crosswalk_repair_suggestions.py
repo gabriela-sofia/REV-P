@@ -1,8 +1,4 @@
-"""REV-P v1qp — Manifest crosswalk repair suggestions.
-
-Compares v1fu, v1fm, v1qa, v1qh and v1qo to identify desalignments and
-suggest repairs. Does NOT edit existing manifests. Read-only analysis.
-"""
+"""REV-P v1qp — Manifest crosswalk repair suggestions."""
 from __future__ import annotations
 
 import argparse

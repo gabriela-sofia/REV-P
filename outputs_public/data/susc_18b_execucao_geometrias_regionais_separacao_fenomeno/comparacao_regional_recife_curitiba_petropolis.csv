@@ -1,8 +1,0 @@
-dimensao,recife,curitiba,petropolis,observacao
-eventos_fortes,5,0,0,referencias fortes somente revisao
-eventos_parciais,0,2,0,inundacao datada oficial sem geometria
-patch_links_fortes,5,0,0,vinculos fortes review-only
-features_completas,5,0,0,vinculos com fisico+espectral+chuva locais
-fenomenos_bloqueados,0,7,29,bloqueados por fenomeno misto/deslizamento
-lacuna_principal,ampliar para uma segunda regiao/evento forte,"geometria oficial de ocorrencia (evento datado, sem geometria)",separacao de fenomeno por ocorrencia e geometria (predominio misto/deslizamento),principal bloqueio por regiao
-distancia_ate_17b,contribui com 1 evento/1 regiao/5 vinculos fortes,falta geometria de ocorrencia + overlay de patch para virar forte,falta separar inundacao e obter geometria antes de qualquer vinculo forte,"17B exige 3 eventos, 2 regioes, 20 vinculos fortes"

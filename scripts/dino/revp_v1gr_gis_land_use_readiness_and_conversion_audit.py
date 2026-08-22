@@ -113,9 +113,7 @@ CLASS_MAPPING_ROWS = [
 ]
 
 
-# ---------------------------------------------------------------------------
 # Utility
-# ---------------------------------------------------------------------------
 
 def write_csv(path: Path, rows: list[dict[str, Any]], fields: list[str]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -139,9 +137,7 @@ def prepare(path: Path, force: bool) -> None:
     path.mkdir(parents=True, exist_ok=True)
 
 
-# ---------------------------------------------------------------------------
 # Dependency audit
-# ---------------------------------------------------------------------------
 
 def audit_dependencies() -> dict[str, str]:
     results: dict[str, str] = {}
@@ -158,9 +154,7 @@ def conversion_possible(deps: dict[str, str]) -> bool:
     return any(deps.get(d) == "AVAILABLE" for d in CONVERSION_DEPS)
 
 
-# ---------------------------------------------------------------------------
 # DBF parser — pure Python, reads attribute table without fiona
-# ---------------------------------------------------------------------------
 
 def parse_dbf(dbf_path: Path) -> dict[str, Any]:
     try:
@@ -251,9 +245,7 @@ def extract_unique_classes(dbf_path: Path, class_col: str) -> list[str]:
         return []
 
 
-# ---------------------------------------------------------------------------
 # File inventory
-# ---------------------------------------------------------------------------
 
 def file_matches_land_use(name: str) -> bool:
     name_l = name.lower()
@@ -293,9 +285,7 @@ def inventory_land_use_files(search_roots: list[Path]) -> list[dict[str, Any]]:
     return found
 
 
-# ---------------------------------------------------------------------------
 # Region assessment
-# ---------------------------------------------------------------------------
 
 def _region_key(region: str) -> str:
     import unicodedata
@@ -381,9 +371,7 @@ def assess_region(region: str, gis_root: Path | None,
     }
 
 
-# ---------------------------------------------------------------------------
 # Conversion plan and attempt
-# ---------------------------------------------------------------------------
 
 def build_conversion_plan(region_coverage: list[dict[str, Any]],
                            deps: dict[str, str],
@@ -492,9 +480,7 @@ def attempt_conversion(plan: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return results
 
 
-# ---------------------------------------------------------------------------
 # Class mapping
-# ---------------------------------------------------------------------------
 
 def build_class_mapping_table() -> list[dict[str, Any]]:
     return [dict(row) for row in CLASS_MAPPING_ROWS]
@@ -510,9 +496,7 @@ def map_class_to_score(class_value: str) -> str | int:
     return "REVIEW"
 
 
-# ---------------------------------------------------------------------------
 # V1GQ readiness
-# ---------------------------------------------------------------------------
 
 def compute_v1gq_readiness(region_coverage: list[dict[str, Any]]) -> str:
     statuses = [r["coverage_status"] for r in region_coverage]
@@ -525,9 +509,7 @@ def compute_v1gq_readiness(region_coverage: list[dict[str, Any]]) -> str:
     return "BLOCKED"
 
 
-# ---------------------------------------------------------------------------
 # Main audit function
-# ---------------------------------------------------------------------------
 
 def run_audit(gis_root: Path | None, output_dir: Path) -> dict[str, Any]:
     ts = datetime.now(timezone.utc).isoformat()
@@ -726,9 +708,7 @@ def run_audit(gis_root: Path | None, output_dir: Path) -> dict[str, Any]:
     }
 
 
-# ---------------------------------------------------------------------------
 # CLI
-# ---------------------------------------------------------------------------
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(

@@ -1,8 +1,4 @@
-"""REV-P v1qo — Smoke asset local reconciliation.
-
-Tries to match each smoke sample row (v1qh) to a real local file using
-configured env roots. Produces ranked candidates. Never reads pixels.
-"""
+"""REV-P v1qo — Smoke asset local reconciliation."""
 from __future__ import annotations
 
 import argparse

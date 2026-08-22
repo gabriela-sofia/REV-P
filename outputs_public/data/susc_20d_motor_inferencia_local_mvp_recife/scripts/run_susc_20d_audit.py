@@ -1,12 +1,4 @@
-"""SUSC-20D -- roda o motor de inferencia (susc_20d_score_engine.py) nos 269
-pontos completos do v12 e audita a saida contra os rotulos reais.
-
-Isto NAO treina nada novo: e uma auditoria de que o motor, alimentado com os
-coeficientes ja treinados e o procedimento de bootstrap ja documentado,
-reproduz uma saida coerente com o que o SUSC-20C ja publicou. Nao e
-validacao preditiva nova (isso ja existe: LOO-AUC=0.6781 held-out); e uma
-checagem de integridade ponta-a-ponta do motor em si.
-"""
+"""SUSC-20D -- roda o motor de inferencia (susc_20d_score_engine.py) nos 269"""
 from __future__ import annotations
 
 import json

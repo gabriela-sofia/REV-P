@@ -1,10 +1,4 @@
-"""SUSC-20F -- combina terreno (amostragem real de raster) + chuva (Open-Meteo ao
-vivo) num vetor de 6 features compativel com FEATURE_COLS do motor SUSC-20D, para
-QUALQUER lat/lon dentro da cobertura real (nao so os 269 pontos conhecidos).
-
-Fail-closed em cada etapa: se terreno OU chuva falharem, retorna None (nunca
-preenche com placeholder/media/interpolacao).
-"""
+"""SUSC-20F -- combina terreno (amostragem real de raster) + chuva (Open-Meteo ao"""
 from __future__ import annotations
 
 from datetime import date
@@ -18,9 +12,7 @@ FEATURE_COLS = ["elevation_m", "slope_deg", "hand_m_dinf", "twi_dinf",
 
 
 def compute_features_on_demand(lat: float, lon: float, end_date: date) -> Optional[dict]:
-    """Retorna {feature: valor} pros 6 FEATURE_COLS, mais metadados de proveniencia,
-    ou None se terreno OU chuva nao puderem ser calculados com dado real (nunca
-    inventa)."""
+    """Retorna {feature: valor} pros 6 FEATURE_COLS, mais metadados de proveniencia,"""
     terrain = sample_terrain_features(lat, lon)
     if terrain is None:
         return None

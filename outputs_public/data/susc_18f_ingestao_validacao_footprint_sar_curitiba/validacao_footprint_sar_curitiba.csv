@@ -1,2 +1,0 @@
-validation_id,candidate_event_id,geometry_id,status_validacao,patch_stats_disponivel,footprint_vetorial_disponivel,flood_mask_disponivel,feature_count,cobre_aoi,ground_truth,eligible_for_training,score_v7_allowed,review_only,justificativa_tecnica
-S18F_VAL_0001,S17C_REF_0060,not_available,footprint_tecnico_parcial_por_patch_stats,true,false,false,0,false,false,false,false,true,sem vetor local valido; patch_stats real permite referencia tecnica parcial sem overlay geometrico

@@ -1,27 +1,4 @@
-"""HAND e TWI por D-infinity (Tarboton 1997) via WhiteboxTools — unidade genérica.
-
-Reconstrói, como script parametrizável e testável, a sequência de chamadas que gerou
-`hand_dinf.tif`/`twi_dinf.tif` do modelo v12 de Recife e que até aqui só existia descrita em
-prosa em `improvement2_hand_twi_dinf_report.md` (PROJETO/local_runs/recife_modelo_v7_otimizado).
-
-Sequência (idêntica à documentada no relatório do v7/v12):
-  1. fill_depressions_wang_and_liu (Wang & Liu 2006, fix_flats=True)
-  2. d_inf_flow_accumulation  out_type="cells"  -> acumulação para extração de drenagem
-  3. d_inf_flow_accumulation  out_type="sca"    -> área de contribuição específica para o TWI
-  4. slope (graus) sobre o MDT preenchido
-  5. limiar de drenagem = percentil P da distribuição de acumulação em "cells"
-     sobre as células válidas do MDT de entrada (P=98 no v12 de Recife)
-  6. extract_streams(acumulação_cells, limiar) -> rede de drenagem
-  7. elevation_above_stream(MDT preenchido, drenagem) -> HAND
-  8. wetness_index(sca, slope)                        -> TWI
-
-Nenhum caminho é fixo no código: o MDT de entrada e o diretório de saída são parâmetros.
-
-Uso:
-    python compute_hand_twi_dinfinity.py --dtm <entrada.tif> --outdir <dir_saida>
-                                         [--stream-percentile 98.0] [--valid-min -1000.0]
-                                         [--region-label recife]
-"""
+"""HAND e TWI por D-infinity (Tarboton 1997) via WhiteboxTools — unidade genérica."""
 
 from __future__ import annotations
 

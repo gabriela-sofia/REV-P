@@ -1,28 +1,4 @@
-"""REV-P v1r8b (SUSC-21b) -- Re-execucao do refinamento de evidencia do v1r7
-sobre a cobertura ampliada de Recife (23 -> 52 patches com embedding real).
-
-Este script NAO reimplementa o metodo. Ele funde os dois arquivos de embedding
-ja versionados (v1r3 + a expansao v1r8) num insumo unico e chama o
-`run()` do proprio `revp_v1r7_dino_evidence_refinement_recife.py`, com os
-mesmos limiares pre-registrados. Manter o codigo do metodo intocado e o que
-torna o v1r7 e o v1r8b comparaveis lado a lado: a unica coisa que muda entre
-as duas rodadas e o numero de patches com embedding.
-
-PRE-REGISTRO (identico ao v1r7, fixado antes desta rodada)
------------------------------------------------------------
-  * phi_H = 0.75, phi_L = 0.25, suporte minimo = 2 pontos v12 por patch.
-  * Unidade de analise = patch. Score assinado
-    mean_cos(t, sementes positivas) - mean_cos(t, sementes negativas).
-  * Bateria de QA identica: permutacao (exata quando o numero de particoes
-    permitir, Monte Carlo com N >= 20000 sempre), confundidores (adjacencia
-    geografica, proveniencia do patch, n de pontos), leave-one-seed-out,
-    redundancia com as 6 features causais sob Bonferroni.
-  * Criterio de utilidade identico: so emite fila ORDENADA se a permutacao
-    der p < 0.05 E nenhum confundidor for significativo. Resultado nulo com
-    mais poder e confirmacao, nao falha -- e nao autoriza mexer em limiar.
-
-Nao cria label. Nao treina classificador. Nao baixa nem gera imagem.
-"""
+"""REV-P v1r8b (SUSC-21b) -- Re-execucao do refinamento de evidencia do v1r7"""
 from __future__ import annotations
 
 import csv

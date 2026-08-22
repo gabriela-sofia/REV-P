@@ -1,12 +1,4 @@
-"""REV-P v1hb: Review Gate Execution Package.
-
-Transforms v1gw candidates into an executable, auditable review package.
-Organizes 47 candidates, generates annotation templates, and prepares
-discussion inputs — all review-only, no labels or classes created.
-
-Review is interpretative: visual inspection + structural evidence
-interpretation, NOT validation or classification.
-"""
+"""REV-P v1hb: Review Gate Execution Package."""
 from __future__ import annotations
 
 import argparse

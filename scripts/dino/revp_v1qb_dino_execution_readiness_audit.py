@@ -1,8 +1,4 @@
-"""REV-P v1qb — DINO execution readiness audit.
-
-Crosses v1qa queue with v1pp backend probe to audit readiness for dry-run
-and real execution. Never executes embeddings. Never creates labels/targets.
-"""
+"""REV-P v1qb — DINO execution readiness audit."""
 from __future__ import annotations
 
 import argparse

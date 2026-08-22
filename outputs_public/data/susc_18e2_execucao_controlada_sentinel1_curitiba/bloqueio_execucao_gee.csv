@@ -1,2 +1,0 @@
-bloqueio_id,etapa,tipo_bloqueio,detalhe_tecnico,comando_testado,resultado_obtido,acao_corretiva_exata,reexecutavel_apos_correcao
-not_available,execucao,not_available,nenhum bloqueio terminal registrado,python scripts\suscetibilidade\run_susc_18e2_gee_sentinel1_curitiba.py,18E2_TAREFAS_GEE_INICIADAS_AGUARDANDO_CONCLUSAO,aguardar conclusao dos exports se houver tarefas pendentes,true

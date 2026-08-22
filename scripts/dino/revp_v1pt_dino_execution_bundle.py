@@ -1,8 +1,4 @@
-"""REV-P v1pt — DINO execution bundle.
-
-Consolidates v1pn-v1ps into manifest, QC, scientific summary and final doc.
-Does not recompute — reads outputs of prior stages.
-"""
+"""REV-P v1pt — DINO execution bundle."""
 from __future__ import annotations
 
 import argparse

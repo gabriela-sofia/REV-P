@@ -1,7 +1,0 @@
-criterio,valor_observado,limiar,passou,status,observacao
-vetor_compacto_valido,true,true,true,18G_REFERENCIA_TECNICA_SAR_FORTE_COM_OVERLAY,vetor compacto local valido
-numero_feicoes,2,<=5000,true,18G_REFERENCIA_TECNICA_SAR_FORTE_COM_OVERLAY,limite de seguranca
-overlays_tecnicos,2,>=1,true,18G_REFERENCIA_TECNICA_SAR_FORTE_COM_OVERLAY,overlay tecnico com patches CUR
-patch_stats_real,43,43,true,18G_REFERENCIA_TECNICA_SAR_FORTE_COM_OVERLAY,patch_stats real herdado do 18F
-ground_truth_zero,0,0,true,18G_REFERENCIA_TECNICA_SAR_FORTE_COM_OVERLAY,sem ground truth
-score_v7_zero,0,0,true,18G_REFERENCIA_TECNICA_SAR_FORTE_COM_OVERLAY,sem score_v7

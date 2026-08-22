@@ -1,7 +1,0 @@
-criterio,valor_observado,limiar,passou,status_19f,observacao
-csv_real_recuperado,true,true,true,19F_TERRITORIAL_PREENCHIDO_MAPBIOMAS_GEE,CSV leve do MapBiomas recuperado localmente
-patches_preenchidos,300,==300,true,19F_TERRITORIAL_PREENCHIDO_MAPBIOMAS_GEE,features territoriais reais por patch
-mapbiomas_nao_e_ground_truth,true,true,true,19F_TERRITORIAL_PREENCHIDO_MAPBIOMAS_GEE,uso do solo nao vira ground truth
-coverage_nao_e_suscetibilidade,true,true,true,19F_TERRITORIAL_PREENCHIDO_MAPBIOMAS_GEE,coverage_score e completude
-score_v6_intacto,true,true,true,19F_TERRITORIAL_PREENCHIDO_MAPBIOMAS_GEE,score_v6 permanece baseline oficial
-sem_valor_inventado,true,true,true,19F_TERRITORIAL_PREENCHIDO_MAPBIOMAS_GEE,features vazias quando nao ha CSV real

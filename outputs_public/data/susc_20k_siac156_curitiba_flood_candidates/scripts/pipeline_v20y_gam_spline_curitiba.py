@@ -1,28 +1,4 @@
-"""SUSC-20Y -- GAM aditivo com B-splines por feature, Curitiba.
-
-O SUSC-20X mostrou que interacao produto e limiar binario (termos simples num GLM) nao
-recuperam o sinal nao-linear do GBM (AUC holdout 2026: GBM 0,5888 vs melhor tentativa
-interpretavel 0,5295). A limitacao levantada no relatorio do SUSC-20X aponta pra proxima
-tentativa natural: GAM (generalized additive model) com spline por feature, que capturaria a
-FORMA real da partial dependence -- nao so um produto ou um corte -- mantendo a propriedade que
-importa pra interpretabilidade causal: o modelo continua ADITIVO (sem interacao entre
-features), entao o efeito de cada feature isolada e recuperavel diretamente (soma da base de
-spline daquela feature vezes seu proprio coeficiente), sem precisar de partial_dependence pra
-"congelar" as outras -- ja vem congelado pela propria forma aditiva do modelo.
-
-Isso e estritamente mais forte que o SUSC-20X: em vez de 1 termo de interacao ou 1 limiar por
-par, cada feature ganha uma curva de efeito flexivel (spline cubica, poucos nos), mas sem
-NENHUMA interacao entre pares de features -- ou seja, se o achado do SUSC-20U/20V (GBM) depende
-de interacao real entre features (nao so de forma nao-linear em cada uma isoladamente), o GAM
-aditivo tambem vai falhar em recuperar o patamar do GBM. Isso e o proprio teste: se o GAM
-recuperar o sinal, a nao-linearidade e por-feature (boa noticia, interpretavel). Se nao
-recuperar, reforca a leitura do SUSC-20X de que ha interacao de ordem mais alta.
-
-Nenhuma variavel nova, nenhum dado novo -- mesmas 5 features causais primarias (SUSC-20N/20O).
-
-Uso:
-    python pipeline_v20y_gam_spline_curitiba.py
-"""
+"""SUSC-20Y -- GAM aditivo com B-splines por feature, Curitiba."""
 from __future__ import annotations
 
 import argparse
@@ -55,8 +31,7 @@ DEFAULT_C = 1.0
 
 def fit_gam(df_train: pd.DataFrame, feature_cols: list[str], n_knots: int = DEFAULT_N_KNOTS,
             degree: int = DEFAULT_DEGREE, C: float = DEFAULT_C):
-    """Ajusta 1 SplineTransformer por feature (independentes) + LogisticRegression aditiva
-    sobre a base concatenada. Aditivo por construcao: nao ha termo cruzado entre features."""
+    """Ajusta 1 SplineTransformer por feature (independentes) + LogisticRegression aditiva"""
     splines: dict[str, SplineTransformer] = {}
     parts = []
     for feat in feature_cols:
@@ -123,8 +98,7 @@ def gam_hyperparam_sensitivity(df_train: pd.DataFrame, df_test: pd.DataFrame,
 def additive_effect_curves(splines: dict[str, SplineTransformer], clf: LogisticRegression,
                             feature_cols: list[str], df_ref: pd.DataFrame,
                             grid_resolution: int = 30) -> pd.DataFrame:
-    """Curva de efeito aditivo isolado por feature: spline(x) . coef_dessa_feature.
-    Nao precisa congelar as outras features (o modelo ja e aditivo por construcao)."""
+    """Curva de efeito aditivo isolado por feature: spline(x) . coef_dessa_feature."""
     offsets = []
     pos = 0
     for feat in feature_cols:
