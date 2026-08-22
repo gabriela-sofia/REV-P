@@ -78,7 +78,6 @@ REGION_ALIASES: dict[str, str] = {
 # CSV / JSON IO
 
 def write_csv(path: Path, rows: list[dict[str, Any]], fields: list[str]) -> None:
-    """Write CSV; always writes the header row even when ``rows`` is empty."""
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8", newline="") as fh:
         writer = csv.DictWriter(fh, fieldnames=fields)
@@ -132,7 +131,6 @@ def write_doc(path: Path, title: str, paragraphs: list[str]) -> None:
 # Paths / hashing
 
 def sanitized_rel_path(path: Path, base: Path = ROOT) -> str:
-    """Return a POSIX relative path, never an absolute/private Windows path."""
     try:
         rel = path.resolve().relative_to(base.resolve())
         return rel.as_posix()
@@ -173,7 +171,6 @@ def _to_float_list(seq: Any) -> list[float] | None:
 
 
 def parse_embedding_from_text(text: str) -> list[float] | None:
-    """Parse a JSON list or a bracket/comma/space separated numeric string."""
     if text is None:
         return None
     s = str(text).strip()
@@ -195,7 +192,6 @@ def parse_embedding_from_text(text: str) -> list[float] | None:
 
 
 def parse_embedding_from_row(row: dict[str, Any]) -> list[float] | None:
-    """Extract an embedding vector from one CSV/JSON row in any supported shape."""
     if not isinstance(row, dict):
         return None
 
@@ -256,7 +252,6 @@ def vector_stats(vec: list[float]) -> dict[str, Any]:
 
 
 def validate_vector(vec: list[float] | None, expected_dim: int = EXPECTED_DINO_DIM) -> tuple[str, str]:
-    """Return (embedding_status, blocked_reason). Empty reason ⇒ valid."""
     if vec is None:
         return ("BLOCKED_NO_EMBEDDING", "no_embedding_vector_found")
     st = vector_stats(vec)
@@ -291,7 +286,6 @@ def euclidean_distance(a: list[float], b: list[float]) -> float:
 # PCA (numpy with pure-python fallback)
 
 def pca_2d(vectors: list[list[float]]) -> tuple[list[tuple[float, float]], tuple[float, float]]:
-    """Project vectors to 2D. Returns (coords, (evr_x, evr_y))."""
     n = len(vectors)
     if n == 0:
         return ([], (0.0, 0.0))
@@ -360,7 +354,6 @@ def _pca_2d_pure(vectors: list[list[float]]) -> tuple[list[tuple[float, float]],
 # Deterministic k-means (numpy with pure-python fallback)
 
 def kmeans_simple(vectors: list[list[float]], k: int, iters: int = 25) -> list[int]:
-    """Deterministic k-means. Seeds with evenly spaced points; no randomness."""
     n = len(vectors)
     if n == 0 or k <= 0:
         return []
@@ -454,7 +447,6 @@ def require_no_abs_paths(rows: list[dict[str, Any]], label: str) -> None:
 # Shared analysis loader — re-parses VALID vectors for v1pj/v1pk/v1pl
 
 def load_valid_embeddings(root: Path, discovery_path: Path, registry_path: Path) -> list[dict[str, Any]]:
-    """Re-parse VALID, non-duplicate embedding vectors for downstream analysis."""
     registry = read_csv(registry_path)
     valid_sha: dict[str, dict[str, str]] = {}
     for r in registry:
@@ -498,12 +490,10 @@ def _p(env: str, default: Path) -> Path:
 
 
 def source_root() -> Path:
-    """Root used to resolve embedding source artifact paths (test-overridable)."""
     return Path(os.environ["REVP_DINO_SOURCE_ROOT"]) if "REVP_DINO_SOURCE_ROOT" in os.environ else ROOT
 
 
 def _f(value: float, nd: int = 6) -> str:
-    """Format a float for CSV; NaN/inf rendered as explicit tokens."""
     if value is None:
         return ""
     if isinstance(value, float):

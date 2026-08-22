@@ -41,7 +41,6 @@ EXPECTED_SIGN = {"elevation_m": -1, "slope_deg": -1, "hand_m_dinf": -1, "twi_din
 
 
 def _firth_cls():
-    """FirthLogisticRegression com o shim para a API privada `_validate_data`, removida do"""
     from firthlogist import FirthLogisticRegression
     from sklearn.utils.validation import validate_data
 
@@ -166,7 +165,6 @@ def predictive_auc(df, feature_cols, k=5, n_repeats=50, seed=SEED):
 
 
 def qa_reproducao_recife_v12() -> dict:
-    """Prova que o ambiente (numpy 2.x / sklearn 1.8 / shim de _validate_data) devolve o"""
     rec = ROOT / "outputs_public/data/susc_20a_aquisicao_eventos_reais_recife/dataset/dataset_eventos_features_v12_final.csv"
     pub = ROOT / "outputs_public/data/susc_20c_modelagem_validacao_estatistica_rigorosa_recife/results/primaria_v12_firth_multivariate_coefs.csv"
     if not (rec.exists() and pub.exists()):

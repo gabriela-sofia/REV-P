@@ -109,7 +109,6 @@ def extract_terrain(df: pd.DataFrame, raster_dir: Path) -> pd.DataFrame:
 
 # 2. chuva
 def _archive_request(lats, lons, start: date, end: date) -> list[dict]:
-    """Requisicao (possivelmente multi-ponto) ao archive. Retorna uma entrada por"""
     url = (f"{ARCHIVE_URL}?latitude={','.join(f'{v}' for v in lats)}"
            f"&longitude={','.join(f'{v}' for v in lons)}"
            f"&start_date={start.isoformat()}&end_date={end.isoformat()}"
@@ -144,7 +143,6 @@ def fetch_daily_series(lat: float, lon: float, start: date, end: date) -> dict:
 
 
 def rain_window_features(series: dict, event_date: date) -> dict:
-    """Formula literal de fetch_rain_leadA_positives.py (SUSC-20B)."""
     ordered = [series.get((event_date - timedelta(days=k)).isoformat()) for k in range(LOOKBACK_DAYS, 0, -1)]
     arr = np.array([np.nan if v is None else float(v) for v in ordered], dtype=float)
     n_found = int(np.sum(~np.isnan(arr)))
@@ -164,7 +162,6 @@ def rain_window_features(series: dict, event_date: date) -> dict:
 
 
 def extract_rain(df: pd.DataFrame, cache_dir: Path, batch: int = 100, sleep_s: float = 0.5) -> pd.DataFrame:
-    """Duas passadas, para nao repetir a mesma serie centenas de vezes:"""
     cell_path = cache_dir / "rain_cell_map.json"
     series_path = cache_dir / "rain_cell_series.json"
     cell_map = json.loads(cell_path.read_text()) if cell_path.exists() else {}
@@ -231,7 +228,6 @@ def extract_rain(df: pd.DataFrame, cache_dir: Path, batch: int = 100, sleep_s: f
 
 def qa_rain_window_equivalence(df: pd.DataFrame, feats: pd.DataFrame, cache_dir: Path,
                                n_sample: int = 20, seed: int = 20260731) -> dict:
-    """Refaz a requisicao ISOLADA de 14 dias (exatamente como o script de Recife faz)"""
     rng = np.random.default_rng(seed)
     ok_idx = feats.index[feats["rain_status"].isin(["OK", "JANELA_PARCIAL"])]
     sample = rng.choice(ok_idx, size=min(n_sample, len(ok_idx)), replace=False)

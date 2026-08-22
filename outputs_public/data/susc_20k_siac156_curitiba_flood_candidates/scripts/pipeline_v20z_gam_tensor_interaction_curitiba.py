@@ -59,7 +59,6 @@ def fit_tensor_spline_pair(df_train: pd.DataFrame, f1: str, f2: str,
 
 def tensor_basis(df: pd.DataFrame, f1: str, f2: str, sp1: SplineTransformer,
                   sp2: SplineTransformer) -> np.ndarray:
-    """Produto tensorial das bases de spline de f1 e f2 -- 1 coluna por combinacao de funcao"""
     b1 = sp1.transform(df[[f1]].values)  # (n, k1)
     b2 = sp2.transform(df[[f2]].values)  # (n, k2)
     n = b1.shape[0]
@@ -113,7 +112,6 @@ def run_all_pair_configs(df_train: pd.DataFrame, df_test: pd.DataFrame) -> pd.Da
 
 
 def tensor_hyperparam_sensitivity(df_train: pd.DataFrame, df_test: pd.DataFrame) -> pd.DataFrame:
-    """Sensibilidade do melhor par (definido depois de rodar run_all_pair_configs) a"""
     rows = []
     for tensor_n_knots in (3, 4, 5):
         for tensor_degree in (1, 2, 3):

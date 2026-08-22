@@ -52,7 +52,6 @@ def gate_model_valid_for_region(region: str) -> tuple[bool, str]:
 def gate_physical_features_available(
     region: str, geom, known_points: list[dict], end_date: date,
 ) -> tuple[bool, str, list[dict], dict | None]:
-    """DEM/HAND/TWI/chuva. Caminho 1 (rápido): ponto(s) conhecido(s) do v12"""
     matched = [p for p in known_points if geom.contains(shape({
         "type": "Point", "coordinates": [float(p["lon"]), float(p["lat"])]}))]
     if matched:
@@ -71,7 +70,6 @@ def gate_physical_features_available(
 
 
 def evaluate_gates(geojson: dict, crs: str, known_points: list[dict], end_date: date | None = None) -> dict:
-    """Avalia todos os gates em ordem. Retorna dict com status final,"""
     if end_date is None:
         end_date = date.today()
     blockers: list[str] = []

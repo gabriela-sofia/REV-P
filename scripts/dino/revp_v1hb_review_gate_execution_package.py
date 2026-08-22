@@ -93,12 +93,10 @@ def prepare_output_dir(path: Path, force: bool) -> None:
 
 
 def load_candidates() -> list[dict[str, str]]:
-    """Load 47 candidates from v1gw."""
     return read_csv(V1GW_DIR / "review_candidates_v1gw.csv")
 
 
 def load_embedding_evidence() -> dict[str, Any]:
-    """Load v1gu evidence (medoids, outliers, neighbors)."""
     summary = read_json(V1GU_DIR / "embedding_regional_summary_v1gu.json")
     return {
         "medoids_outliers": summary.get("medoids_and_outliers", {}),
@@ -108,7 +106,6 @@ def load_embedding_evidence() -> dict[str, Any]:
 
 
 def load_gis_evidence() -> dict[str, str]:
-    """Load v1gv GIS coverage matrix."""
     matrix = read_csv(V1GV_DIR / "evidence_coverage_matrix_v1gv.csv")
     return {row["canonical_patch_id"]: row for row in matrix if "canonical_patch_id" in row}
 
@@ -118,7 +115,6 @@ def build_execution_manifest(
     embedding_evidence: dict[str, Any],
     gis_evidence: dict[str, str],
 ) -> list[dict[str, object]]:
-    """Build detailed execution manifest per candidate."""
     rows: list[dict[str, object]] = []
 
     for idx, candidate in enumerate(candidates, 1):
@@ -160,7 +156,6 @@ def build_execution_manifest(
 
 
 def build_annotation_template() -> list[dict[str, str]]:
-    """Build annotation template for manual review."""
     # Template has placeholder rows for each review item
     # Reviewer fills in the blanks
     template = []
@@ -201,7 +196,6 @@ def build_annotation_template() -> list[dict[str, str]]:
 
 
 def build_category_summary(candidates: list[dict[str, str]]) -> list[dict[str, object]]:
-    """Summarize candidates by category."""
     category_counts: dict[str, int] = defaultdict(int)
     category_patches: dict[str, list[str]] = defaultdict(list)
     category_regions: dict[str, set[str]] = defaultdict(set)
@@ -233,7 +227,6 @@ def build_category_summary(candidates: list[dict[str, str]]) -> list[dict[str, o
 
 
 def get_category_focus(category: str) -> str:
-    """Get suggested review focus per category."""
     focus_map = {
         "medoid_regional": "Central representative: how typical is this for the region?",
         "outlier_structural": "Structural outlier: what makes it structurally different?",
@@ -251,7 +244,6 @@ def build_discussion_inputs(
     candidates: list[dict[str, str]],
     embedding_evidence: dict[str, Any],
 ) -> list[dict[str, str]]:
-    """Build table of findings ready for TCC Discussion."""
     rows: list[dict[str, str]] = []
 
     # Group by region and category
@@ -280,7 +272,6 @@ def build_discussion_inputs(
 
 
 def build_protocol_document() -> str:
-    """Build review gate protocol documentation."""
     return """# Review Gate Protocol — REV-P v1hb
 
 ## Propósito

@@ -46,7 +46,6 @@ def _read_text(path: Path) -> str:
 # Evidence container
 
 class Evidence:
-    """All pipeline evidence loaded from local_runs and docs."""
 
     def __init__(self) -> None:
         # v1he

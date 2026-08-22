@@ -42,7 +42,6 @@ SUM_FIELDS = ["stat_key", "stat_value"]
 
 
 def _numeric_suffix(patch_id: str) -> str:
-    """Extract the trailing digit run from a patch_id like CUR_00038 -> 00038."""
     digits = "".join(ch for ch in patch_id if ch.isdigit())
     return digits[-5:] if len(digits) >= 5 else digits.zfill(5)
 

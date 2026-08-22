@@ -12,7 +12,6 @@ FEATURE_COLS = ["elevation_m", "slope_deg", "hand_m_dinf", "twi_dinf",
 
 
 def compute_features_on_demand(lat: float, lon: float, end_date: date) -> Optional[dict]:
-    """Retorna {feature: valor} pros 6 FEATURE_COLS, mais metadados de proveniencia,"""
     terrain = sample_terrain_features(lat, lon)
     if terrain is None:
         return None

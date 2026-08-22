@@ -60,17 +60,14 @@ def _safe_ratio(num: np.ndarray, den: np.ndarray) -> np.ndarray:
 
 
 def ndwi(b03: np.ndarray, b08: np.ndarray) -> np.ndarray:
-    """McFeeters 1996."""
     return _safe_ratio(b03 - b08, b03 + b08)
 
 
 def mndwi(b03: np.ndarray, b11: np.ndarray) -> np.ndarray:
-    """Xu 2006."""
     return _safe_ratio(b03 - b11, b03 + b11)
 
 
 def awei_nsh(b03: np.ndarray, b08: np.ndarray, b11: np.ndarray, b12: np.ndarray) -> np.ndarray:
-    """AWEI sem sombra, Feyisa et al. 2014 (doi:10.1016/j.rse.2013.08.029)."""
     return 4.0 * (b03 - b11) - (0.25 * b08 + 2.75 * b12)
 
 
@@ -79,14 +76,12 @@ def physical_water_gate(
     b08_before: np.ndarray, b11_before: np.ndarray,
     nir_swir_max: float = NIR_SWIR_MAX,
 ) -> np.ndarray:
-    """Reflectância absoluta baixa em NIR e SWIR no dia do evento, e não antes."""
     dark_after = (b08_after < nir_swir_max) & (b11_after < nir_swir_max)
     dark_before = (b08_before < nir_swir_max) & (b11_before < nir_swir_max)
     return dark_after & ~dark_before
 
 
 def consensus_mask(index_changes: dict[str, tuple[np.ndarray, float]], required: int = CONSENSUS_REQUIRED):
-    """Conta quantos índices subiram mais que o próprio limiar; devolve (máscara, contagem)."""
     votes = None
     for _, (delta, threshold) in index_changes.items():
         v = (delta > threshold) & np.isfinite(delta)
@@ -103,7 +98,6 @@ def detect_water_candidates(
     transform=None,
     crs=None,
 ) -> DetectionResult:
-    """Aplica filtro físico + consenso de índices e agrega em clusters."""
     cfg = config or DetectionConfig()
     for required in ("B03", "B08", "B11"):
         for name, d in (("antes", bands_before), ("depois", bands_after)):
@@ -201,7 +195,6 @@ def detect_water_candidates(
 
 
 def resolve_band_files(directory: Path | str) -> dict[str, Path]:
-    """Casa arquivos da pasta com B03/B08/B11/B12 pelo nome."""
     directory = Path(directory)
     found: dict[str, Path] = {}
     for path in sorted(directory.iterdir()):
@@ -214,7 +207,6 @@ def resolve_band_files(directory: Path | str) -> dict[str, Path]:
 
 
 def load_bands(directory: Path | str, scale: str | float = "auto"):
-    """Lê as bandas de uma pasta; devolve (dict de arrays, transform, crs)."""
     files = resolve_band_files(directory)
     if not files:
         raise FileNotFoundError(f"nenhum GeoTIFF de banda reconhecido em {directory}")

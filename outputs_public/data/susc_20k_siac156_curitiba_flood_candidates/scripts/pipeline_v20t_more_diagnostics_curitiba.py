@@ -49,7 +49,6 @@ def rain_max_24h_correlation_by_year(unidades: pd.DataFrame) -> pd.DataFrame:
 
 
 def rain_max_24h_temporal_holdout(df_train: pd.DataFrame, df_test: pd.DataFrame) -> dict:
-    """Substitui os 2 features de chuva atuais por rain_max_24h_chirps (feature bruta ja no"""
     feats = ["slope_deg", "hand_m_dinf", "twi_dinf", "rain_max_24h_chirps"]
     return {"feature_cols": feats, **temporal_holdout_auc(df_train, df_test, feats)}
 

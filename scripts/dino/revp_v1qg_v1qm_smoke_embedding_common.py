@@ -80,14 +80,12 @@ def write_json(path: Path, payload: Any) -> None:
 
 
 def mask_local(rel: str) -> str:
-    """Mask a local_runs path; otherwise return the relative path untouched."""
     if any(str(rel).startswith(p) for p in LOCAL_RUNS_PREFIX):
         return f"local_only:{path_hash(rel)}"
     return rel
 
 
 def file_sha256_short(path: Path, n: int = 16) -> str:
-    """sha256 of a local file (short). Empty string if missing/unreadable."""
     import hashlib
     try:
         if not path.exists() or not path.is_file():
@@ -104,7 +102,6 @@ def file_sha256_short(path: Path, n: int = 16) -> str:
 # Local asset resolution
 
 def asset_candidate_roots() -> list[Path]:
-    """Candidate roots from env, in priority order. Missing env ⇒ skipped."""
     roots: list[Path] = []
     for name in ("REVP_SENTINEL_LOCAL_ROOT", "REVP_DINO_VISUAL_ROOT",
                  "REVP_DINO_ASSET_ROOT", "REVP_DINO_SOURCE_ROOT"):
@@ -116,7 +113,6 @@ def asset_candidate_roots() -> list[Path]:
 
 def resolve_local_asset(relative_path: str,
                         candidate_roots: list[Path] | None = None) -> Path | None:
-    """Resolve a relative asset path against candidate roots; first hit wins."""
     rel = (relative_path or "").strip()
     if not rel:
         return None
@@ -141,7 +137,6 @@ def resolve_local_asset(relative_path: str,
 # Model probe (offline, never loads weights for inference)
 
 def expected_embedding_dim(model_name_or_config: Any) -> int:
-    """Expected hidden size. Reads config.json hidden_size when available."""
     default = EXPECTED_DINO_DIM
     if isinstance(model_name_or_config, dict):
         try:
@@ -161,7 +156,6 @@ def expected_embedding_dim(model_name_or_config: Any) -> int:
 
 
 def _detect_arch(cfg: dict[str, Any]) -> tuple[bool, bool, str]:
-    """Return (is_dinov2, is_dinov2_with_registers, model_type)."""
     blob = json.dumps(cfg, default=str).lower() if isinstance(cfg, dict) else ""
     model_type = str(cfg.get("model_type", "")).lower() if isinstance(cfg, dict) else ""
     is_v2 = "dinov2" in blob or "dinov2" in model_type
@@ -171,7 +165,6 @@ def _detect_arch(cfg: dict[str, Any]) -> tuple[bool, bool, str]:
 
 
 def safe_model_probe(model_path: str | None) -> dict[str, Any]:
-    """Audit a local model directory offline. Never downloads. Never infers."""
     allow_download = env_true("REVP_DINO_ALLOW_DOWNLOAD", False)
     offline = env_str("HF_HUB_OFFLINE", "") == "1"
 
@@ -268,14 +261,12 @@ def vector_to_columns(vec: list[float], dim: int = EXPECTED_DINO_DIM) -> dict[st
 
 def write_vector_csv_row(base: dict[str, Any], vec: list[float],
                          dim: int = EXPECTED_DINO_DIM) -> dict[str, Any]:
-    """Merge metadata with embedding_000..embedding_{dim-1} columns."""
     row = dict(base)
     row.update(vector_to_columns(vec, dim))
     return row
 
 
 def read_embedding_rows(path: Path) -> list[dict[str, Any]]:
-    """Read a feature-store CSV and parse the embedding vector from each row."""
     rows = read_csv(path)
     out: list[dict[str, Any]] = []
     for r in rows:
@@ -288,7 +279,6 @@ def read_embedding_rows(path: Path) -> list[dict[str, Any]]:
 
 def pca_2d_review(vectors: list[list[float]]) -> tuple[list[tuple[float, float]],
                                                        tuple[float, float], str]:
-    """PCA to 2D. sklearn when available, numpy fallback. Fail-closed if n<2."""
     n = len(vectors)
     if n < 2:
         return ([], (0.0, 0.0), "PCA_FAIL_CLOSED_N_LT_2")
@@ -310,7 +300,6 @@ def pca_2d_review(vectors: list[list[float]]) -> tuple[list[tuple[float, float]]
 
 
 def exploratory_clusters(vectors: list[list[float]], k: int = 3) -> list[int]:
-    """Deterministic exploratory clusters. NEVER a class. Empty if n<4."""
     if len(vectors) < 4:
         return []
     return kmeans_simple(vectors, min(k, len(vectors)))
@@ -340,7 +329,6 @@ def read_manifest(rel_default: str, env: str) -> list[dict[str, str]]:
 # Identity normalization & guardrails
 
 def normalize_identity(row: dict[str, str]) -> tuple[str, str, str]:
-    """Return (patch_id, alias, region) normalized from a queue row."""
     patch = (row.get("patch_id", "") or "UNKNOWN_PATCH").strip().upper()
     alias = (row.get("alias", "") or patch).strip()
     region = normalize_region(row.get("region", ""))
@@ -348,7 +336,6 @@ def normalize_identity(row: dict[str, str]) -> tuple[str, str, str]:
 
 
 def guardrail_ok(row: dict[str, Any]) -> tuple[bool, str]:
-    """Return (ok, blocked_reason). ok=False ⇒ guardrail/label violation."""
     for f in ("can_create_label", "can_train_model", "target_created",
               "ground_truth", "cluster_is_label", "similarity_validates_event",
               "pca_validates_event"):

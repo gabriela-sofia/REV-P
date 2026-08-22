@@ -42,7 +42,6 @@ class SarDetectionResult:
 
 
 def to_db(arr: np.ndarray) -> np.ndarray:
-    """Converte sigma0 linear pra dB se necessario; detecta automaticamente pela faixa de valor."""
     finite = arr[np.isfinite(arr)]
     if finite.size == 0:
         return arr

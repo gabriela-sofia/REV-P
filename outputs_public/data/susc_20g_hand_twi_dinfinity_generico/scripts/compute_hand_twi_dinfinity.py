@@ -29,7 +29,6 @@ OUTPUT_NAMES = {
 
 @dataclass
 class DinfResult:
-    """Caminhos gerados e números reais da execução (vão para o manifesto)."""
 
     region_label: str
     dtm_input: str
@@ -78,7 +77,6 @@ def compute_hand_twi_dinf(
     valid_min: float = VALID_MIN_V12,
     region_label: str = "unlabeled",
 ) -> DinfResult:
-    """Roda o encadeamento D-infinity completo sobre `dtm_path`, escrevendo em `outdir`."""
     dtm_path = Path(dtm_path).resolve()
     outdir = Path(outdir).resolve()
     if not dtm_path.exists():

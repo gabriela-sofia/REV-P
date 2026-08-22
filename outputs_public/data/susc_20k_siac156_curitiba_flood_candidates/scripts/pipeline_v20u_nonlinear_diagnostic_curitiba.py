@@ -73,7 +73,6 @@ def gbm_spatial_block_cv(unidades: pd.DataFrame, feature_cols: list[str],
 
 def gbm_hyperparam_sensitivity(df_train: pd.DataFrame, df_test: pd.DataFrame,
                                 feature_cols: list[str]) -> pd.DataFrame:
-    """Confere se o resultado sobrevive a variacoes razoaveis de hiperparametro (nao foi"""
     dtr = df_train.dropna(subset=feature_cols)
     dte = df_test.dropna(subset=feature_cols)
     Xtr, ytr = dtr[feature_cols].values, dtr["label"].astype(int).values

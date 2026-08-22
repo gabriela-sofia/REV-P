@@ -287,7 +287,6 @@ def prepare_output_dir(path: Path, force: bool, resume: bool) -> None:
 
 
 def export_figures_plan(output_dir: Path) -> None:
-    """Export figures export plan as CSV and JSON."""
     rows = [
         {
             "figure_id": fig["figure_id"],
@@ -313,7 +312,6 @@ def export_figures_plan(output_dir: Path) -> None:
 
 
 def export_tables_plan(output_dir: Path) -> None:
-    """Export tables export plan as CSV and JSON."""
     rows = [
         {
             "table_id": tbl["table_id"],
@@ -339,7 +337,6 @@ def export_tables_plan(output_dir: Path) -> None:
 
 
 def export_summary(output_dir: Path) -> None:
-    """Export readiness summary."""
     fig_ready = sum(1 for f in TCC_FIGURES if f["status"] == "READY")
     fig_local = sum(1 for f in TCC_FIGURES if f["status"] == "NEEDS_LOCAL_OUTPUT")
     fig_review = sum(1 for f in TCC_FIGURES if f["status"] == "NEEDS_MANUAL_REVIEW")
@@ -379,7 +376,6 @@ def export_summary(output_dir: Path) -> None:
 
 
 def run_export_plan(args: argparse.Namespace) -> int:
-    """Main export plan generation pipeline."""
     print(f"[{PHASE}] Starting TCC figures and tables export plan generation...")
 
     output_dir = Path(args.output_dir)

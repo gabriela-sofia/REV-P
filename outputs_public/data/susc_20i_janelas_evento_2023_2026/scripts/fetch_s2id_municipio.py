@@ -17,7 +17,6 @@ IBGE_CONHECIDOS = {"3303906": "Petropolis", "4106902": "Curitiba", "2611606": "R
 
 
 def baixar_ano(uf: str, ano: int, timeout: int = 300) -> bytes:
-    """Devolve o CSV bruto de Danos Informados da UF no ano, com as 65 tipologias COBRADE."""
     jar = http.cookiejar.CookieJar()
     opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(jar))
     opener.addheaders = [("User-Agent", "revp-s2id-probe/2")]
@@ -66,7 +65,6 @@ def filtrar_municipio(regs: list[dict], ibge: str) -> list[dict]:
 
 
 def data_do_protocolo(protocolo: str) -> str:
-    """`RJ-F-3303906-13120-20250405` -> `2025-04-05`."""
     bruto = protocolo[-8:]
     return f"{bruto[:4]}-{bruto[4:6]}-{bruto[6:]}"
 

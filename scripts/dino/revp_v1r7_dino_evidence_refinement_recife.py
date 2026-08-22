@@ -67,7 +67,6 @@ BOUNDARY_FIELDS = [
 # Inputs
 
 def _patch_geometry_wgs84(sentinel_dir: Path) -> dict[str, tuple[float, float, float, float]]:
-    """bbox (lon_min, lat_min, lon_max, lat_max) per patch, same parsing as v1r5."""
     import rasterio
     from rasterio.warp import transform_bounds
     out: dict[str, tuple[float, float, float, float]] = {}
@@ -82,7 +81,6 @@ def _patch_geometry_wgs84(sentinel_dir: Path) -> dict[str, tuple[float, float, f
 
 def _join_points_to_patches(in_v12: Path, bboxes: dict[str, tuple[float, float, float, float]],
                             patch_ids: set[str]) -> list[dict[str, Any]]:
-    """Point-in-bbox join, identical rule to v1r5 (first bbox hit wins)."""
     joined: list[dict[str, Any]] = []
     for r in read_csv(in_v12):
         try:
@@ -115,7 +113,6 @@ def _spearman(a: np.ndarray, b: np.ndarray) -> tuple[float, float]:
 
 
 def _spearman_n(a: np.ndarray, b: np.ndarray) -> tuple[float, float, int]:
-    """Spearman plus the number of pairs actually used. Patches without any"""
     from scipy import stats
     mask = np.isfinite(a) & np.isfinite(b)
     if mask.sum() < 4:
@@ -133,7 +130,6 @@ def _haversine_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
 
 
 def _seed_separation(sim: np.ndarray, idx_h: list[int], idx_l: list[int]) -> float:
-    """Mean within-H cosine minus mean H-to-L cosine. Higher = the embedding"""
     def _mean_pairs(ii: list[int], jj: list[int], same: bool) -> float:
         vals = [sim[i, j] for i in ii for j in jj if not (same and i == j)]
         return float(np.mean(vals)) if vals else float("nan")

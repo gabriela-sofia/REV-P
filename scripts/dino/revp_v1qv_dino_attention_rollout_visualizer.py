@@ -48,7 +48,6 @@ def _gate_status() -> tuple[str, dict[str, Any]]:
 
 
 def _rollout(attentions: list[Any]) -> Any:
-    """Attention rollout across layers (Abnar & Zuidema, 2020)."""
     import torch
     result = None
     for attn in attentions:

@@ -39,7 +39,6 @@ def read_csv(path: Path) -> list[dict[str, str]]:
 
 
 def fit_firth(X: np.ndarray, y: np.ndarray, max_iter: int = 200, tol: float = 1e-10) -> dict[str, Any]:
-    """Firth penalized logistic regression via modified scores (Heinze &"""
     n, p = X.shape
     beta = np.zeros(p)
     it = 0
@@ -89,7 +88,6 @@ def load_training_frame() -> tuple[list[dict[str, Any]], np.ndarray, np.ndarray,
 
 def bootstrap_projection_draws(X: np.ndarray, y: np.ndarray, n_boot: int = N_BOOT,
                                 seed: int = SEED) -> np.ndarray:
-    """Returns an (n_boot, p) array of standardized-space beta draws"""
     pos_idx = np.where(y == 1)[0]
     neg_idx = np.where(y == 0)[0]
     rng = np.random.default_rng(seed)
@@ -137,7 +135,6 @@ def _parse_embedding(row: dict[str, str]) -> list[float] | None:
 
 
 def load_dino_evidence_index() -> tuple[dict[str, tuple[float, float, float, float]], dict[str, list[float]]]:
-    """Best-effort, optional. Returns (bboxes, embeddings). Empty dicts if"""
     sentinel_dir_raw = os.environ.get("REVP_SUSC20D_SENTINEL_DIR", "")
     emb_csv_raw = os.environ.get(
         "REVP_SUSC20D_DINO_EMB",

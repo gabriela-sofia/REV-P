@@ -33,7 +33,6 @@ SUM_FIELDS = ["stat_key", "stat_value"]
 
 
 def _audit_from_v1fu() -> list[dict[str, Any]]:
-    """Build audit rows from committed v1fu Sentinel manifest (primary source)."""
     rows: list[dict[str, Any]] = []
     v1oz_patches = {
         r.get("patch_id", "").strip().upper()
@@ -92,7 +91,6 @@ def _audit_from_v1fu() -> list[dict[str, Any]]:
 
 
 def _audit_from_v1fm() -> list[dict[str, Any]]:
-    """Supplement with v1fm patch designation entries."""
     rows: list[dict[str, Any]] = []
     v1fu_pids = {r.get("canonical_patch_id", "").strip().upper() for r in read_v1fu_manifest()}
     for i, r in enumerate(read_v1fm_designation(), 1):

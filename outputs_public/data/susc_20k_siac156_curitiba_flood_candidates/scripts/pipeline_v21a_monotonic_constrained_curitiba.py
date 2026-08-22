@@ -88,7 +88,6 @@ def hgb_hyperparam_sensitivity(df_train: pd.DataFrame, df_test: pd.DataFrame,
 
 def monotonic_pd_check(clf: HistGradientBoostingClassifier, df_ref: pd.DataFrame,
                         feature_cols: list[str], grid_resolution: int = 20) -> pd.DataFrame:
-    """Confirma que a partial dependence realmente sai monotonica na direcao esperada --"""
     rows = []
     for i, feat in enumerate(feature_cols):
         pd_result = partial_dependence(clf, df_ref[feature_cols], [i], grid_resolution=grid_resolution,

@@ -30,7 +30,6 @@ class GeocodeResult:
 
 
 def _atomic_write_json(path: Path | str, data: dict) -> None:
-    """Escreve via arquivo temporário + rename -- evita corromper o cache se o processo for"""
     path = Path(path)
     tmp = path.with_suffix(path.suffix + ".tmp")
     tmp.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -57,7 +56,6 @@ def _call_nominatim(query: str, opener: urllib.request.OpenerDirector) -> list[d
 
 
 def classify_result(results: list[dict], bbox: tuple[float, float, float, float]) -> GeocodeResult | None:
-    """Aplica a régua strong/medium a uma lista de resultados já filtrada pra dentro da bbox."""
     in_bbox = []
     for r in results:
         try:

@@ -58,7 +58,6 @@ def _load_model(model_path: str) -> Any | None:
 
 
 def _embed(bundle: Any, img_path: Path) -> tuple[list[float] | None, tuple[int, int]]:
-    """Identical to the v1qj executor: CLS token of last_hidden_state, L2-normalized."""
     from PIL import Image
     import torch
     processor, model = bundle

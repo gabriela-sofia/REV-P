@@ -46,7 +46,6 @@ SUM_FIELDS = ["stat_key", "stat_value"]
 
 
 def _load_model(info: dict[str, Any]) -> Any | None:
-    """Load model from local path or name. Never downloads if allow_download=False."""
     if not info["can_execute"]:
         return None
     allow_dl = info["allow_download"]
@@ -69,7 +68,6 @@ def _load_model(info: dict[str, Any]) -> Any | None:
 
 
 def _embed_image(model_bundle: Any, img_path: Path) -> list[float] | None:
-    """Generate 768D embedding from image file. Returns None on error."""
     try:
         from PIL import Image
         import torch

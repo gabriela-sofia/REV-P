@@ -23,7 +23,6 @@ def normalize(text: str | None) -> str:
 
 
 def stable_rank(*parts: str) -> int:
-    """Hash estável -- usado pra ordenação determinística sem depender de seed aleatória."""
     return int(hashlib.sha256("|".join(parts).encode("utf-8")).hexdigest()[:8], 16)
 
 

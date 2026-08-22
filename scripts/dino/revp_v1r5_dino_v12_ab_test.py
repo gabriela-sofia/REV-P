@@ -95,7 +95,6 @@ def build_joined_dataset(in_v12: Path, sentinel_dir: Path) -> list[dict[str, Any
 
 
 def fit_firth(X: np.ndarray, y: np.ndarray, max_iter: int = 200, tol: float = 1e-10) -> dict[str, Any]:
-    """Firth (bias-reduced) penalized logistic regression, fit via modified"""
     n, p = X.shape
     beta = np.zeros(p)
     it = 0
@@ -147,7 +146,6 @@ def _loo_auc(X: np.ndarray, y: np.ndarray) -> float:
 
 
 def choose_feature_budget(n_neg: int) -> tuple[list[str], int]:
-    """EPV>=10 on the minority class, preferring the most physical features"""
     for dino_k in (2, 1):
         for phys_k in (6, 3, 2, 1):
             phys = (FEATURE_COLS_V12 if phys_k == 6 else FEATURE_RANK_BY_V12_EVIDENCE[:phys_k])

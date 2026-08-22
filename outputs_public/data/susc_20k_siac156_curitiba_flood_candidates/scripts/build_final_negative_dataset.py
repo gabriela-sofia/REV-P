@@ -28,7 +28,6 @@ def haversine_m(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
 
 
 def negative_point_id(logradouro: str, bairro: str, data_criacao: str) -> str:
-    """Id derivado da chave do registro. O esquema exato da geracao anterior (SUSC-20K3) nao"""
     key = f"{logradouro}|{bairro}|{data_criacao}"
     return "CUR_SIAC156_NEG_" + hashlib.sha1(key.encode("utf-8")).hexdigest()[:16]
 

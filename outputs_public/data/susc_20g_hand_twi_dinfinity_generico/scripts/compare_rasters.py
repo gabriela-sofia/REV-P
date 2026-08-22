@@ -26,7 +26,6 @@ def _finite_mask(arr: np.ndarray, nodata) -> np.ndarray:
 
 
 def compare_rasters(path_a: Path | str, path_b: Path | str, label: str = "") -> dict:
-    """Estatísticas de diferença entre `path_a` (gerado) e `path_b` (referência)."""
     a, a_nd, a_tr, a_crs = _read(Path(path_a))
     b, b_nd, b_tr, b_crs = _read(Path(path_b))
 

@@ -288,7 +288,6 @@ LAND_USE_SOURCE_IDS = {"RJ_3303906_USO"}
 
 
 def load_v1gt_land_use_status(v1gt_overlap_path: Path) -> dict[str, str]:
-    """Build per-patch land-use coverage from v1gt overlap audit."""
     if not v1gt_overlap_path.exists():
         return {}
     rows = read_csv(v1gt_overlap_path)
@@ -315,7 +314,6 @@ def build_coverage_matrix(
     patches: list[dict[str, str]],
     v1gt_land_use: dict[str, str],
 ) -> list[dict[str, Any]]:
-    """Build per-patch coverage matrix rows using real indicator status."""
     rows: list[dict[str, Any]] = []
 
     for patch_row in patches:
@@ -353,7 +351,6 @@ def build_coverage_matrix(
 def aggregate_by_region(
     matrix_rows: list[dict[str, Any]],
 ) -> dict[str, dict[str, Any]]:
-    """Aggregate coverage counts per region × indicator."""
     by_region: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for row in matrix_rows:
         by_region[row["region_normalized"]].append(row)

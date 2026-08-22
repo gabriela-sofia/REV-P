@@ -17,7 +17,6 @@ STREAMS_RASTER = "streams_dinf.tif"
 
 
 def _load_regional_stats(raster_dir: Path) -> dict:
-    """Carrega os rasters inteiros uma única vez pra computar percentil regional e mediana --"""
     stats = {}
     arrays = {}
     for key, fname in RASTERS.items():
@@ -35,7 +34,6 @@ def _load_regional_stats(raster_dir: Path) -> dict:
 
 
 def _distance_to_stream_raster(raster_dir: Path) -> tuple[np.ndarray, rasterio.io.DatasetReader]:
-    """Constrói (uma vez) um raster de distância euclidiana métrica até a célula de drenagem"""
     path = raster_dir / STREAMS_RASTER
     with rasterio.open(path) as src:
         arr = src.read(1)

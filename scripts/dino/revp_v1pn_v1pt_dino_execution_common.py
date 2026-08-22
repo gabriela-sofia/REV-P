@@ -63,7 +63,6 @@ _YEAR_RE = re.compile(r"(20\d{2})")
 
 
 def normalize_patch_from_name(name: str) -> tuple[str, str, str]:
-    """Infer (patch_id, alias, region) from file name heuristics."""
     stem = Path(name).stem
     region = ""
     m = _REGION_NAME_RE.search(stem)
@@ -95,7 +94,6 @@ def _try_import(name: str) -> tuple[bool, str]:
 
 
 def probe_backend() -> dict[str, Any]:
-    """Detect available Python backends. Never downloads anything."""
     numpy_ok, numpy_ver = _try_import("numpy")
     pil_ok, pil_ver = (False, "not_installed")
     try:
@@ -192,7 +190,6 @@ def make_vector_row(
 # Load smoke embeddings (v1pr → v1ps)
 
 def load_smoke_embeddings(registry_path: Path) -> list[dict[str, Any]]:
-    """Return valid non-zero 768D embeddings from v1pr feature store."""
     from revp_v1pg_v1pm_dino_representation_common import read_csv as _read_csv
     from revp_v1pg_v1pm_dino_representation_common import parse_embedding_from_row
     rows = _read_csv(registry_path)

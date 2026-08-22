@@ -32,7 +32,6 @@ _RASTER_EXT = {".tif", ".tiff"}
 
 
 def _read_metadata(path: Path, ext: str) -> tuple[dict[str, Any], str]:
-    """Read minimal metadata without persisting pixels. Returns (meta, note)."""
     meta: dict[str, Any] = {
         "image_width": "", "image_height": "", "image_channels": "",
         "raster_bands": "", "dtype": "",

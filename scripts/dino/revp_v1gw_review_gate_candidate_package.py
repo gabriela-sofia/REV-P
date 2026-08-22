@@ -208,7 +208,6 @@ def prepare_output_dir(path: Path, force: bool, resume: bool) -> None:
 
 
 def load_geometry_status(patch_extent_path: Path) -> dict[str, str]:
-    """Load geometry_status per canonical_patch_id from v1gt patch extent."""
     if not patch_extent_path.exists():
         return {}
     rows = read_csv(patch_extent_path)
@@ -217,7 +216,6 @@ def load_geometry_status(patch_extent_path: Path) -> dict[str, str]:
 
 
 def load_coverage_matrix(v1gv_path: Path) -> dict[str, dict[str, str]]:
-    """Load coverage matrix: canonical_patch_id -> {indicator: status}."""
     if not v1gv_path.exists():
         return {}
     rows = read_csv(v1gv_path)
@@ -231,7 +229,6 @@ def load_coverage_matrix(v1gv_path: Path) -> dict[str, dict[str, str]]:
 
 
 def load_medoids_from_v1gu(v1gu_path: Path) -> dict[str, dict[str, Any]]:
-    """Load medoids and outliers from v1gu regional summary (when available)."""
     if not v1gu_path.exists():
         return {}
     data = read_json(v1gu_path)
@@ -239,7 +236,6 @@ def load_medoids_from_v1gu(v1gu_path: Path) -> dict[str, dict[str, Any]]:
 
 
 def count_available_indicators(indicators: dict[str, str]) -> tuple[int, int]:
-    """Return (n_available, n_total) for a patch's indicator dict."""
     available_statuses = {"AVAILABLE", "PARTIAL", "LOCAL_ONLY"}
     meta_keys = {"region", "region_normalized", "n_indicators", "canonical_patch_id"}
     valid = {k: v for k, v in indicators.items()
@@ -255,7 +251,6 @@ def select_review_candidates_with_embeddings(
     coverage: dict[str, dict[str, str]],
     geometry_status: dict[str, str],
 ) -> list[dict[str, Any]]:
-    """Select candidates using embedding evidence (v1gu available)."""
     candidates: dict[str, dict[str, Any]] = {}
 
     for region, med_info in medoids.items():
@@ -306,7 +301,6 @@ def select_review_candidates_fallback(
     coverage: dict[str, dict[str, str]],
     geometry_status: dict[str, str],
 ) -> list[dict[str, Any]]:
-    """Fallback candidate selection when v1gu embeddings are blocked."""
     candidates: dict[str, dict[str, Any]] = {}
 
     # Candidates by geometry completeness

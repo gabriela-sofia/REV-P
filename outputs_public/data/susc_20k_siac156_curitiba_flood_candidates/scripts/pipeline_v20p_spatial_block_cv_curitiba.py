@@ -25,7 +25,6 @@ N_SPLITS = 5
 
 
 def spatial_block_folds(unidades: pd.DataFrame, n_splits: int = N_SPLITS) -> list[dict]:
-    """GroupKFold por bairro -- nenhum bairro aparece em treino e teste do mesmo fold."""
     gkf = GroupKFold(n_splits=n_splits)
     groups = unidades["bairro"].values
     folds = []

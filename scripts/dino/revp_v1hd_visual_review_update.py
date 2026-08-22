@@ -145,7 +145,6 @@ def compute_stats_from_tif(tif_path: Path) -> ImageStats | None:
 
 
 def stats_to_visual_notes(stats: ImageStats, patch_id: str, category: str) -> str:
-    """Generate conservative descriptive text from image statistics."""
     notes: list[str] = []
 
     # Brightness / reflectance level
@@ -229,7 +228,6 @@ def stats_to_uncertainty(
     patch_id: str,
     prior_uncertainty: str,
 ) -> str:
-    """Update uncertainty level based on statistical evidence quality."""
     if prior_uncertainty == "low":
         return "low"
     if patch_id not in V1GU_CORPUS:
@@ -251,7 +249,6 @@ def stats_to_usable(
     prior_usable: str,
     preview_status: str,
 ) -> str:
-    """Update usability for TCC discussion."""
     if preview_status != "GENERATED":
         return prior_usable
     if prior_usable == "no":
@@ -352,7 +349,6 @@ def process_candidates(
     records: list[CandidateRecord],
     sentinel_root: Path | None,
 ) -> tuple[list[dict], list[dict]]:
-    """Return (annotation_rows, examples_rows)."""
     annotation_rows = []
 
     for rec in records:
@@ -435,7 +431,6 @@ def process_candidates(
 
 
 def _select_tcc_examples(rows: list[dict]) -> list[dict]:
-    """Select one example from each key category for TCC Discussion."""
     examples = []
     seen_types: set[str] = set()
 

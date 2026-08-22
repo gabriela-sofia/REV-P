@@ -153,7 +153,6 @@ def prepare_output_dir(path: Path, force: bool) -> None:
 
 
 def audit_v1gu_evidence() -> dict[str, Any]:
-    """Audit v1gu embedding structural evidence."""
     result = {
         "exists": V1GU_DIR.exists(),
         "files_found": [],
@@ -196,7 +195,6 @@ def audit_v1gu_evidence() -> dict[str, Any]:
 
 
 def audit_v1gv_evidence() -> dict[str, Any]:
-    """Audit v1gv external evidence (GIS) coverage."""
     result = {
         "exists": V1GV_DIR.exists(),
         "files_found": [],
@@ -246,7 +244,6 @@ def audit_v1gv_evidence() -> dict[str, Any]:
 
 
 def audit_v1gw_review_gate() -> dict[str, Any]:
-    """Audit v1gw review gate formalization."""
     result = {
         "exists": V1GW_DIR.exists(),
         "files_found": [],
@@ -300,7 +297,6 @@ def audit_v1gw_review_gate() -> dict[str, Any]:
 
 
 def audit_v1ha_robustness() -> dict[str, Any]:
-    """Audit v1ha perturbation robustness."""
     result = {
         "exists": V1HA_DIR.exists(),
         "files_found": [],
@@ -348,7 +344,6 @@ def audit_v1ha_robustness() -> dict[str, Any]:
 
 
 def audit_v1gy_figures_tables() -> dict[str, Any]:
-    """Audit v1gy TCC figures and tables."""
     result = {
         "exists": V1GY_DIR.exists(),
         "figures_found": [],
@@ -395,7 +390,6 @@ def audit_v1gy_figures_tables() -> dict[str, Any]:
 
 
 def build_claim_evidence_matrix() -> list[dict[str, object]]:
-    """Build claim → evidence crosswalk."""
     rows: list[dict[str, object]] = []
 
     for claim_id, claim_info in ALLOWED_CLAIMS.items():
@@ -430,7 +424,6 @@ def build_evidence_strength_matrix(
     v1gy: dict[str, Any],
     v1ha: dict[str, Any],
 ) -> list[dict[str, object]]:
-    """Build evidence strength by claim."""
     rows: list[dict[str, object]] = []
 
     claims_status = {
@@ -461,7 +454,6 @@ def build_evidence_strength_matrix(
 
 
 def build_scientific_gaps() -> list[dict[str, object]]:
-    """Identify remaining scientific gaps and their nature."""
     rows: list[dict[str, object]] = [
         {
             "gap_id": "gap_001",
@@ -508,7 +500,6 @@ def build_scientific_gaps() -> list[dict[str, object]]:
 
 
 def build_tcc_readiness_matrix() -> list[dict[str, object]]:
-    """Build readiness matrix for TCC sections."""
     rows: list[dict[str, object]] = [
         {
             "tcc_section": "1. Introdução",
@@ -587,7 +578,6 @@ def build_summary_json(
     v1gy: dict[str, Any],
     v1ha: dict[str, Any],
 ) -> dict[str, Any]:
-    """Build overall summary."""
     return {
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "phase": PHASE,

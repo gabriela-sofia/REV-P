@@ -37,7 +37,6 @@ def _read_json(path: Path) -> dict:
 
 
 class Evidence:
-    """Container for all pipeline evidence loaded from local_runs."""
 
     def __init__(self) -> None:
         # v1gz

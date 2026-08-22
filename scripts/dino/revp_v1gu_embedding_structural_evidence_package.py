@@ -156,7 +156,6 @@ def find_npz_for_patch(
     patch_id: str,
     corpus_index: dict[str, Path] | None = None,
 ) -> Path | None:
-    """Search for a .npz file for patch_id."""
     if corpus_index and patch_id in corpus_index:
         return corpus_index[patch_id]
     stems_to_try = [
@@ -175,7 +174,6 @@ def find_npz_for_patch(
 
 
 def load_corpus_manifest_index() -> tuple[dict[str, Path], list[dict[str, Any]]]:
-    """Build a corpus index from v1ge/v1fx/v1fz execution manifests."""
     index: dict[str, Path] = {}
     audit: list[dict[str, Any]] = []
 
@@ -217,7 +215,6 @@ def load_embeddings_from_manifest(
     manifest: list[dict[str, str]],
     corpus_index: dict[str, Path] | None = None,
 ) -> tuple[dict[str, np.ndarray], list[str]]:
-    """Attempt to load embeddings for each patch in the manifest."""
     embeddings: dict[str, np.ndarray] = {}
     missing: list[str] = []
 
@@ -254,7 +251,6 @@ def build_blocker_document(
     output_dir: Path,
     corpus_audit: list[dict[str, Any]] | None = None,
 ) -> None:
-    """Generate an explicit blocker document when embeddings are unavailable."""
     patch_ids = [r.get(FIELD_PATCH_ID, "") for r in manifest if r.get(FIELD_PATCH_ID)]
     regions_count: dict[str, int] = defaultdict(int)
     for r in manifest:

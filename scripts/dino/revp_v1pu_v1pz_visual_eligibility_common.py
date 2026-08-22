@@ -70,7 +70,6 @@ _REGION_RAW = {"curitiba": "CURITIBA", "recife": "RECIFE",
 
 
 def infer_patch_from_path(path_str: str) -> tuple[str, str, str]:
-    """Return (canonical_patch_id, alias, region) from path string. Empty if unknown."""
     s = path_str.replace("\\", "/")
     # Try canonical first
     m = PATCH_RE_CANONICAL.search(s)
@@ -123,7 +122,6 @@ def classify_dino_eligibility(
     is_fixture: bool,
     has_label: bool = False,
 ) -> tuple[str, str, str]:
-    """Return (eligibility_status, eligibility_reason, blocked_reason)."""
     if is_fixture:
         return ("DINO_BLOCKED_FIXTURE", "", "fixture_or_synthetic")
     if has_label:

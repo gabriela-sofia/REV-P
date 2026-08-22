@@ -25,7 +25,6 @@ BAG_SEED = 20260802
 
 def pu_bagging_fit_predict(Xtr_std: np.ndarray, ytr: np.ndarray, Xte_std: np.ndarray,
                             n_bags: int = N_BAGS, seed: int = BAG_SEED) -> np.ndarray:
-    """Ajusta n_bags classificadores (positivos fixos + reamostra de nao-rotulados do mesmo"""
     rng = np.random.default_rng(seed)
     pos_idx = np.where(ytr == 1)[0]
     unl_idx = np.where(ytr == 0)[0]

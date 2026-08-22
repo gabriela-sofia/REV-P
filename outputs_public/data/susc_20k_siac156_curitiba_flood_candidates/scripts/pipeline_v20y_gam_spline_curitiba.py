@@ -31,7 +31,6 @@ DEFAULT_C = 1.0
 
 def fit_gam(df_train: pd.DataFrame, feature_cols: list[str], n_knots: int = DEFAULT_N_KNOTS,
             degree: int = DEFAULT_DEGREE, C: float = DEFAULT_C):
-    """Ajusta 1 SplineTransformer por feature (independentes) + LogisticRegression aditiva"""
     splines: dict[str, SplineTransformer] = {}
     parts = []
     for feat in feature_cols:
@@ -98,7 +97,6 @@ def gam_hyperparam_sensitivity(df_train: pd.DataFrame, df_test: pd.DataFrame,
 def additive_effect_curves(splines: dict[str, SplineTransformer], clf: LogisticRegression,
                             feature_cols: list[str], df_ref: pd.DataFrame,
                             grid_resolution: int = 30) -> pd.DataFrame:
-    """Curva de efeito aditivo isolado por feature: spline(x) . coef_dessa_feature."""
     offsets = []
     pos = 0
     for feat in feature_cols:

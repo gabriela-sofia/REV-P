@@ -35,7 +35,6 @@ BOOT_SEED = 20260802
 def bootstrap_holdout_auc_ci(df_train: pd.DataFrame, df_test: pd.DataFrame,
                               feature_cols: list[str], n_boot: int = N_BOOT,
                               seed: int = BOOT_SEED) -> dict:
-    """Ajusta 1x no treino, bootstrap-resample do teste (com reposicao) pra CI do AUC."""
     dtr = df_train.dropna(subset=feature_cols)
     dte = df_test.dropna(subset=feature_cols).reset_index(drop=True)
     Xtr, ytr = dtr[feature_cols].values, dtr["label"].astype(int).values
@@ -100,7 +99,6 @@ def walk_forward_cutoffs(unidades: pd.DataFrame, feature_cols: list[str]) -> pd.
 def seasonal_matched_holdout(unidades: pd.DataFrame, feature_cols: list[str],
                               test_year: int = 2026, train_years=(2023, 2024, 2025),
                               months=(1, 7)) -> dict:
-    """Treino = mesma janela Jan-Jul dos anos anteriores; teste = Jan-Jul do ano-alvo."""
     m_lo, m_hi = months
     janela = unidades[unidades["month"].between(m_lo, m_hi)]
     df_train = janela[janela["year"].isin(train_years)]

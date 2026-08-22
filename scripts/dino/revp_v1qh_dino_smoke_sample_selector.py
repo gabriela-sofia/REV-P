@@ -30,7 +30,6 @@ _CONF_RANK = {"HIGH": 0, "MEDIUM": 1, "MED": 1, "LOW": 2, "": 3}
 
 
 def _region_token(region: str) -> str:
-    """Short token used to match REVP_DINO_SMOKE_REGIONS values."""
     r = (region or "").upper()
     if r.startswith("REC"):
         return "REC"

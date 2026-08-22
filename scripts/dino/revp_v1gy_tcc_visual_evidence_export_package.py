@@ -120,7 +120,6 @@ def generate_similarity_heatmap(
     reg_data: dict[str, Any],
     output_path: Path,
 ) -> str:
-    """12x12 cosine similarity heatmap. Returns status string."""
     try:
         import matplotlib
         matplotlib.use("Agg")
@@ -193,7 +192,6 @@ def generate_neighbor_network(
     reg_data: dict[str, Any],
     output_path: Path,
 ) -> str:
-    """Nearest-neighbor graph by patch. Returns status string."""
     try:
         import matplotlib
         matplotlib.use("Agg")
@@ -269,7 +267,6 @@ def generate_intra_inter_rate(
     reg_data: dict[str, Any],
     output_path: Path,
 ) -> str:
-    """Bar chart of intra vs inter region neighbor rate."""
     try:
         import matplotlib
         matplotlib.use("Agg")
@@ -318,7 +315,6 @@ def generate_review_category_figure(
     meta: dict[str, Any],
     output_path: Path,
 ) -> str:
-    """Bar chart of review candidate categories."""
     try:
         import matplotlib
         matplotlib.use("Agg")
@@ -364,7 +360,6 @@ def generate_external_evidence_coverage(
     regional_summary: list[dict[str, str]],
     output_path: Path,
 ) -> str:
-    """Stacked bar of coverage status per indicator per region."""
     try:
         import matplotlib
         matplotlib.use("Agg")

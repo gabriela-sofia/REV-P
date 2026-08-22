@@ -232,7 +232,6 @@ def build_contact_sheet(
 
 
 def _get_sentinel_root(cli_root: str | None = None) -> tuple[Path | None, str]:
-    """Resolve Sentinel data root without hardcoding private paths."""
     candidates = [cli_root, os.environ.get("REVP_SENTINEL_ROOT")]
     for c in candidates:
         if c:

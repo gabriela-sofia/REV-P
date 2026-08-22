@@ -17,7 +17,6 @@ from susc_20d_score_engine import (  # noqa: E402
 
 
 class RecifeEngine:
-    """Estado precomputado (fit-once) do motor Recife. Instanciar uma vez no"""
 
     def __init__(self) -> None:
         self.kept, X, y, self.scaler = load_training_frame()

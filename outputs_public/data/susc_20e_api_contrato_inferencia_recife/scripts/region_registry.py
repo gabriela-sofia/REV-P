@@ -458,7 +458,6 @@ REGIONS: dict[str, RegionInfo] = {
 
 
 def find_region_for_bbox(lon_min: float, lat_min: float, lon_max: float, lat_max: float) -> str | None:
-    """Retorna o nome da região cuja bbox intersecta a geometria de entrada, ou"""
     for name, info in REGIONS.items():
         rxmin, rymin, rxmax, rymax = info.bbox_wgs84
         if lon_min <= rxmax and lon_max >= rxmin and lat_min <= rymax and lat_max >= rymin:
@@ -467,7 +466,6 @@ def find_region_for_bbox(lon_min: float, lat_min: float, lon_max: float, lat_max
 
 
 def registry_as_dict() -> dict:
-    """Serializa o registro atual (schema_version + regiões) para uso por"""
     return {
         "schema_version": SCHEMA_VERSION,
         "regions": {name: info.model_dump() for name, info in REGIONS.items()},
@@ -475,7 +473,6 @@ def registry_as_dict() -> dict:
 
 
 def generate_schema_file(path: Path | None = None) -> Path:
-    """Escreve o JSON Schema formal de `RegionInfo` em disco (versionado por"""
     if path is None:
         path = Path(__file__).resolve().parents[1] / "schemas" / "region_registry_schema_v1.json"
     schema = {"schema_version": SCHEMA_VERSION, **RegionInfo.model_json_schema()}

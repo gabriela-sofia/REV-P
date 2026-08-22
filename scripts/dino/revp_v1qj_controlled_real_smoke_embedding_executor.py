@@ -46,7 +46,6 @@ SUM_FIELDS = ["stat_key", "stat_value"]
 
 
 def _gate_status() -> tuple[str, dict[str, Any]]:
-    """Evaluate all gates. Returns (gate_status, context)."""
     dry_run = env_true("REVP_DINO_DRY_RUN", True)
     pixel_allowed = env_true("REVP_DINO_PIXEL_READ_ALLOWED", False)
     allow_dl = env_true("REVP_DINO_ALLOW_DOWNLOAD", False)
@@ -113,7 +112,6 @@ def _embed(bundle: Any, img_path: Path, l2: bool) -> list[float] | None:
 
 
 def _resolved_paths() -> dict[str, Path]:
-    """Map smoke_id -> resolved local Path from v1qi audit (ready rows only)."""
     from revp_v1qg_v1qm_smoke_embedding_common import resolve_local_asset
     out: dict[str, Path] = {}
     for r in read_csv(IN_ASSET):

@@ -22,7 +22,6 @@ SUM_FIELDS = ["stat_key", "stat_value"]
 
 def cluster_robust_covariance(X: np.ndarray, y: np.ndarray, beta: np.ndarray,
                                cluster_ids: list[str]) -> np.ndarray:
-    """Sandwich (CR0) covariance clustered by cluster_ids, with the standard"""
     eta = X @ beta
     pi = 1.0 / (1.0 + np.exp(-eta))
     w = np.clip(pi * (1 - pi), 1e-12, None)

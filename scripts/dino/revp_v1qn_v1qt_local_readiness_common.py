@@ -71,7 +71,6 @@ def env_int(name: str, default: int) -> int:
 
 
 def local_roots() -> dict[str, Path]:
-    """Return {env_name: path} for configured local root env vars (existing only)."""
     names = ("REVP_SENTINEL_LOCAL_ROOT", "REVP_DINO_VISUAL_ROOT",
              "REVP_DINO_ASSET_ROOT", "REVP_DINO_SOURCE_ROOT")
     out: dict[str, Path] = {}
@@ -103,7 +102,6 @@ def write_json(path: Path, payload: Any) -> None:
 
 
 def mask_abs(val: str) -> str:
-    """Replace absolute path with a masked token (never written to versionable CSV)."""
     if ABS_PATH_RE.search(val):
         return f"masked_abs:{path_hash(val)}"
     return val
@@ -170,7 +168,6 @@ def normalize_patch(row: dict[str, str]) -> tuple[str, str, str]:
 # Local asset resolution
 
 def candidate_roots(extra: dict[str, Path] | None = None) -> list[tuple[str, Path]]:
-    """Return [(env_name, root_path)] from env + extra, ordered by priority."""
     order = ("REVP_SENTINEL_LOCAL_ROOT", "REVP_DINO_VISUAL_ROOT",
              "REVP_DINO_ASSET_ROOT", "REVP_DINO_SOURCE_ROOT")
     roots: list[tuple[str, Path]] = []
@@ -188,7 +185,6 @@ def candidate_roots(extra: dict[str, Path] | None = None) -> list[tuple[str, Pat
 
 
 def _iter_candidates(root: Path, exts: set[str] | None = None) -> list[Path]:
-    """List image-like files under root (non-recursive first, then recursive)."""
     target_exts = exts or IMAGE_EXTS
     files: list[Path] = []
     try:
@@ -208,7 +204,6 @@ def _iter_candidates(root: Path, exts: set[str] | None = None) -> list[Path]:
 
 def _match_score(candidate: Path, rel: str, filename: str, patch_id: str,
                  alias: str) -> tuple[str, float]:
-    """Score a candidate file against target identifiers."""
     name = candidate.name
     stem = candidate.stem.lower()
     rel_norm = rel.replace("\\", "/").lower() if rel else ""
@@ -241,7 +236,6 @@ def _match_score(candidate: Path, rel: str, filename: str, patch_id: str,
 
 def resolve_candidate(rel: str, filename: str, patch_id: str, alias: str,
                       roots: list[tuple[str, Path]]) -> list[dict[str, Any]]:
-    """Return ranked candidate dicts for a single smoke item."""
     candidates: list[dict[str, Any]] = []
     seen: set[str] = set()
     for env_name, root in roots:
@@ -279,7 +273,6 @@ def resolve_candidate(rel: str, filename: str, patch_id: str, alias: str,
 
 def ranked_candidates(smoke_rows: list[dict[str, str]],
                       roots: list[tuple[str, Path]]) -> dict[str, list[dict[str, Any]]]:
-    """Map smoke_id → ranked candidates for each row."""
     out: dict[str, list[dict[str, Any]]] = {}
     for r in smoke_rows:
         pid, alias, _ = normalize_patch(r)

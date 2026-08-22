@@ -65,7 +65,6 @@ def dedup_queue(items: list[dict[str, str]]) -> list[dict[str, str]]:
 
 
 def validate_queue_item(r: dict[str, str]) -> tuple[bool, str]:
-    """Return (valid, blocked_reason). valid=True means safe to queue."""
     if r.get("can_create_label", "false") == "true":
         return (False, "guardrail_can_create_label_true")
     if r.get("can_train_model", "false") == "true":
@@ -88,7 +87,6 @@ def mask_local(rel: str) -> str:
 
 
 def make_powershell_command(cmd_type: str, params: dict[str, str]) -> tuple[str, str]:
-    """Return (powershell_command, safety_note) for a given command type."""
     if cmd_type == "set_model_path":
         mp = params.get("model_path", "<path_to_local_dino_model>")
         return (

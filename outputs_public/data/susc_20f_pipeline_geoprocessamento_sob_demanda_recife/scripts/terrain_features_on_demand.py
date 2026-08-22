@@ -28,7 +28,6 @@ _transformer_to_31985 = Transformer.from_crs("EPSG:4326", "EPSG:31985", always_x
 
 
 def sample_terrain_features(lat: float, lon: float) -> Optional[dict]:
-    """Retorna {elevation_m, slope_deg, hand_m_dinf, twi_dinf} reais amostrados dos"""
     raster_dir = _raster_dir()
     if raster_dir is None:
         return None
@@ -52,5 +51,4 @@ def sample_terrain_features(lat: float, lon: float) -> Optional[dict]:
 
 
 def coverage_bbox_wgs84() -> tuple[float, float, float, float]:
-    """Bbox real (lon_min, lat_min, lon_max, lat_max) da cobertura DTM, reprojetado"""
     return (-35.032950343243996, -8.167561668035802, -34.84255396733535, -7.9156195118262955)

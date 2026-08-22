@@ -13,7 +13,6 @@ FLOOD_KEYWORDS = ("alagam", "enchente", "enxurrada", "transbord", "inund")
 
 
 def normalize(text: str | None) -> str:
-    """Maiúsculas, sem acento, sem espaço nas pontas -- pra comparação robusta a variação de"""
     if not text:
         return ""
     decomposed = unicodedata.normalize("NFKD", text)
@@ -35,7 +34,6 @@ class EventWindow:
 
 
 def load_events(path: Path | str) -> list[EventWindow]:
-    """Lê CSV de janelas de evento: window_id,event_date_ddmmyyyy,bairros (';'-separado)."""
     events = []
     with open(path, encoding="utf-8-sig", newline="") as f:
         for row in csv.DictReader(f):
@@ -53,7 +51,6 @@ def load_events(path: Path | str) -> list[EventWindow]:
 
 
 def extract_candidates(csv_paths: list[Path | str], events: list[EventWindow]) -> list[dict]:
-    """Varre os CSVs do SIAC 156 e retorna linhas flood-related cuja DataCriacao bate com"""
     by_date = {ev.event_date_ddmmyyyy: ev for ev in events}
     seen = set()  # dedupe entre arquivos sobrepostos (extratos acumulados se repetem)
     out: list[dict] = []
